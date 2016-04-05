@@ -1,0 +1,43 @@
+{:site-title         "λ ryan . λ himmelwright . net"
+ :author             "Ryan Himmelwright"
+ :description        "Software Developer, Computer Science Masters Student, and Linux Enthusiast"
+
+ :github_username    "himmAllRight"
+ :hackerrank_username "himmAllRight"
+ :linkedin_username   "ryan-himmelwright-b3891774"
+ :twitter_username    "himmAllRight17"
+ :email-addr          "ryan.himmelwright@gmail.com"
+
+;; :site-url           "http://ryan.himmelwright.net"  ;; Production
+;; :site-url           "http://home.himmelwright.net"  ;; Testing
+ :site-url           "http://localhost:3000"         ;; Local Test
+
+ :post-root          "posts"
+ :page-root          "pages"
+ :post-root-uri      "posts"
+ :page-root-uri      "pages"
+ :tag-root-uri       "tags-output"
+ :author-root-uri    "authors-output"
+ :blog-prefix        "/"
+ :rss-name           "feed.xml"
+ :rss-filters        ["cryogen"]
+ :recent-posts       3
+ :post-date-format   "yyyy-MM-dd"
+ 
+ :sass-src           nil
+ :sass-dest          nil
+ :theme              "ryan1"
+ :resources          ["img"]
+ :keep-files         [".git"]
+ :disqus?            true
+ :disqus-shortname   "himmAllRight-test"  ;; testing  disqus
+;;:disqus-shortname   "himmAllRight"
+ :ignored-files      [#"\.#.*" #".*\.swp$"]
+ :posts-per-page     5
+ :blocks-per-preview 2
+ :links              false
+ :previews?          true
+ :clean-urls?        true}
+
+
+

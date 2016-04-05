@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>λ ryan . λ himmelwright . net: 25 Days of C</title>
+    <link rel="canonical" href="http://localhost:3000/posts/2015-12-24-25-days-of-c/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link href="/css/screen.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+	<div class="navbar-header">
+	  
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">λ ryan . λ himmelwright . net</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li ><a href="/">Home</a></li>
+            
+            <li
+               >
+              <a href="/pages/about/">About</a>
+            </li>
+            
+            <li
+               >
+              <a href="/pages/homelab/">Homelab</a>
+            </li>
+            
+	    <li
+               ><a href="/archives/">Archives</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+
+
+    <div class="container">
+
+          <div id="sidebar">
+	    <div id="sidebar-info">
+	      <h3>Ryan Himmelwright</h3>
+	      <img src=http://localhost:3000/img/avatar.jpg width= 100%>
+
+
+	      Software Developer, Computer Science Masters Student, and Linux Enthusiast
+
+	      <div id="sidebar-icons">
+		<!-- Github -->
+		<a href="https://www.github.com/himmAllRight"
+		   title="himmAllRight on GitHub"
+		   target="_blank"><img src=http://localhost:3000/img/icons/Github.png width=30px></a>
+
+		<!-- HackerRank -->
+		<a href="https://www.hackerrank.com/himmAllRight"
+		   title="himmAllRight on HackerRank "
+		   target="_blank"><img src=http://localhost:3000/img/icons/hackerrank.png width=30px></a>
+
+		<!-- Linkedin -->
+		<a href="https://www.linkedin.com/in/ryan-himmelwright-b3891774"
+		   title="Ryan Himmelwright on Linkedin"
+		   target="_blank"><img src=http://localhost:3000/img/icons/Linkedin.png
+					width=30px></a>
+
+		<!-- Twitter -->
+		<a href="https://www.twitter.com/himmAllRight17"
+		   title="himmAllRight17 on Twitter "
+		   target="_blank"><img src=http://localhost:3000/img/icons/Twitter.png
+					width=30px></a>
+
+		<!-- Email
+		<a href="mailto:ryan.himmelwright@gmail.com"
+		   title="Email me at ryan.himmelwright@gmail.com"
+		   target="_blank"><img src=http://localhost:3000/img/icons/email.png width=30px></a>
+		-->
+
+		<a href="mailto:ryan.himmelwright@gmail.com"
+		   title="Email me at ryan.himmelwright@gmail.com"
+		   target="_blank">
+		  
+		  <img src=http://localhost:3000/img/icons/email.png id="email1" width="30" height="30" alt="email" usemap="#socialiconmap">
+		  <map name="socialiconmap">
+		    <area shape="poly" coords="..." alt="mail"
+			  onmouseover="document.getElementById('image1').src=http://localhost:3000/img/icons/email_orange.png" 
+			  onmouseout="document.getElementById('image1').src='image1.png'"/>
+		  </map>
+
+		  
+		</a>
+
+	      </div>
+	    </div>
+
+	    <div id="sidebar-links">
+	      
+	      
+              
+              <div id="recent">
+		<h3>Recent Posts</h3>
+		<ul>
+                  
+                  <li><a href="/posts/2016-03-13-back-on-arch/">Back On Arch, After Frantic Distro-hopping</a></li>
+                  
+                  <li><a href="/posts/2016-01-06-how-i-asked-my-groomsmen/">How I asked my Groomsmen</a></li>
+                  
+                  <li><a href="/posts/2015-12-24-25-days-of-c/">25 Days of C</a></li>
+                  
+		</ul>
+              </div>
+              
+              
+              <div id="tags">
+		<h3>Tags</h3>
+		<ul>
+                  
+                  <a href="/tags-output/Arch Linux/">[Arch Linux]</a> 
+                  
+                  <a href="/tags-output/Linux/">[Linux]</a> 
+                  
+                  <a href="/tags-output/Wedding/">[Wedding]</a> 
+                  
+                  <a href="/tags-output/Programming/">[Programming]</a> 
+                  
+                  <a href="/tags-output/C/">[C]</a> 
+                  
+		</ul>
+              </div>
+              
+	    </div>
+        </div>
+    
+
+
+
+
+          <div id="content">
+            
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">December 24, 2015</div>
+        
+    </div>
+    <h2>25 Days of C</h2>
+</div>
+<div>
+    
+    <h2></h2>As I continue to learn more and more programming languages, I am somewhat ashamed to admit that I have yet to learn C. However, it is not because I am trying to avoid it.<h2><a name="the&#95;reason"></a>The Reason</h2>C is one of the top languages I wish to know, and know well. C is the backbone for so much code, especially in the Linux ecosphere that it is almost imperative for one to at least understand it. I keep trying to poke my head into open source projects, and so many of them are built or based on C (especially when looking at projects more at the distro and distro applications level).<p>Also, this spring I will start working on my CS MS degree, and while I think the first course I take will be theory based, I know several other courses that will require it (ex: computer architecture and compilers). Being comfortable with C will allow me to focus on the topics, and not on the syntax.</p><p>I have some experience with C++ from my software engineering course I took during undergrad, but that is about it. My goal however is to understand just plain C, which will hopefully make implementing other C-based languages such as C++ a bit easier. My ultimate goal is to eventually have C be one of my top 3 languages (I'm thinking LISP, C, and maybe python or ruby. I know. I'm old school.).</p><h2><a name="the&#95;plan"></a>The Plan</h2><p>In the last few weeks, I have set up and started looking at <a href='http://c.learncodethehardway.org/book/'>Learn C the Hard Way</a>. I read the first section or two, but haven't been consistent with working through it.</p><p>Now that it is December, I thought I should maybe start a new monthly challenge, or even a "12/25 days till something". I was thinking about things I've been trying to constantly work on the last few months, and C popped into my head. Learn C the Hard Way fits particularly well because it is broken down nicely into small segments that I can maybe commit to being able to finish 1 per day.</p><p>I have to look ahead a bit to see if this challenge is doable, but i think that as of now, the plan is to try to complete at least 1 (I can work ahead if I want to) segment of the book a day for the month of December. I am also going to allow myself the ability to "pre-cache" segments ahead of time so that I don't have to pull away and work on it during the holidays if I don't want to.</p><p>Overall, I think this is a good plan that should allow me to start getting some C experience under my belt. I'll be sure to update in the future with how it goes.</p><h2><a name="update"></a>Update</h2><p>So, now that I have made it a good bit through the month, I must admit that I have not adhered to this challenge very strictly. I have done many of the exercises, but I have fallen somewhat behind. Basically, I accomplished a bunch of other things and let this challenge slide. I will continue to work on it, but I haven't been able to keep with with the one exercise per day rate. Oh well.</p>
+</div>
+
+<div id="post-tags">
+    <b>Tags: </b>
+    
+    <a href="/tags-output/C/">C</a>
+    
+    <a href="/tags-output/Programming/">Programming</a>
+    
+</div>
+
+
+    <div id="prev-next">
+        
+        <a href="/posts/2016-01-06-how-i-asked-my-groomsmen/">&laquo; How I asked my Groomsmen</a>
+        
+        
+    </div>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//himmAllRight-test.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    
+
+
+</div>
+
+          </div>
+
+
+    </div>
+      <footer>Copyright &copy;  <a href="mailto: ryan.himmelwright@gmail.com">Ryan Himmelwright</a>
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="/js/highlight.pack.js" type="text/javascript"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
