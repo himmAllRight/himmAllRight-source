@@ -191,6 +191,7 @@ footer {
 
 #prev-next {
     padding: 15px 0;
+    margin-bottom: 50px;
 }
 
 .post-header {
@@ -201,7 +202,7 @@ footer {
 }
 
 #post-body a {
-	color: #c64c0f;
+    color: #c64c0f;
 }
 
 #post-meta {
