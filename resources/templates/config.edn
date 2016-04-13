@@ -1,4 +1,4 @@
-{:site-title         "λ ryan . λ himmelwright . net"
+{:site-title         "λ ryan . himmelwright . net"
  :author             "Ryan Himmelwright"
  :description        "Software Developer, Computer Science Masters Student, and Linux Enthusiast"
 
@@ -32,7 +32,7 @@
  :disqus-shortname   "himmAllRight-test"  ;; testing  disqus
 ;;:disqus-shortname   "himmAllRight"
  :ignored-files      [#"\.#.*" #".*\.swp$"]
- :posts-per-page     5
+ :posts-per-page     3
  :blocks-per-preview 2
  :links              false
  :previews?          true

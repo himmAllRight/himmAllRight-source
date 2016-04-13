@@ -1,5 +1,5 @@
 {:title "Using Cryogen for Website"
- :date "2016-04-03"
+ :date "2016-04-13"
  :layout :post
  :author "Ryan Himmelwright"
 ;; :draft true
@@ -85,4 +85,34 @@ different clojure projects, I found [cryogen](http://cryogenweb.org/).
 
 ![Cryogen logo](../../img/posts/using-cryogen-for-website/cryogen.png)
 
+[Cryogen](http://cryogenweb.org/) is a static website generator
+written in the [Clojure](https://clojure.org/) programming language.
+If you already have [Leiningen](http://leiningen.org/) installed
+(which if you're using Clojure, you should), starting a new Cryogen
+application is as easy as entering `lein new cryogen project-name`
+command into a terminal. Once the project is created, you can `cd`
+into the directory and run `lein ring server` and clojure will start
+up a local webserver of the project (by default on port 3000). This
+can be used to see changes live. Cryogen has a rather large, but
+simple [directory structure](http://cryogenweb.org/docs/structure.html) that is used to
+organize the project. Coming from Jekyll, this takes a bit of getting
+used to, but I think it helps keep everything organized once you learn
+it.
 
+The one thing I _really_ like about Cryogen is the fact
+that... well... it's clojure. This means that things can feel more
+"lisp-y" from time to time. For example, in Jekyll, the preferences
+and configuration of the website are kept inside a yaml configuration
+file. Similarly, the meta data and information for a page or blog post
+are defined in a very specific yaml header at the top of the markdown
+files. Cryogen has a very similar setup, except that instead of yaml
+headers, cryogen simply uses a p-list for it's
+[configuration setup](http://cryogenweb.org/docs/configuration.html). I just change
+the keywords in the list at the top of each post to change it's
+information. It is also very flexable and I was easily able to figure
+out how to add and use my own configurations. For anyone that programs
+in Clojure or LISP in general, the configuration in Cryogen is very intuitive.
+
+-- Add Para about customizing the css --
+
+-- Add Conclusion Para --
