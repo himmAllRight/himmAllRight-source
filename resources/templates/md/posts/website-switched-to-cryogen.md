@@ -86,15 +86,17 @@ different clojure projects, I found [cryogen](http://cryogenweb.org/).
 ![Cryogen logo](../../img/posts/using-cryogen-for-website/cryogen.png)
 
 [Cryogen](http://cryogenweb.org/) is a static website generator
-written in the [Clojure](https://clojure.org/) programming language.
-If you already have [Leiningen](http://leiningen.org/) installed
-(which if you're using Clojure, you should), starting a new Cryogen
-application is as easy as entering `lein new cryogen project-name`
-command into a terminal. Once the project is created, you can `cd`
-into the directory and run `lein ring server` and clojure will start
-up a local webserver of the project (by default on port 3000). This
-can be used to see changes live. Cryogen has a rather large, but
-simple [directory structure](http://cryogenweb.org/docs/structure.html) that is used to
+written in [Clojure](https://clojure.org/).  If you already have
+[Leiningen](http://leiningen.org/) installed (which if using Clojure,
+you should), starting a new Cryogen application is as easy as entering
+`lein new cryogen project-name` into a terminal. Once the project is
+created, you can `cd` into the directory and run `lein ring
+server`. Clojure will then fire up a local webserver of the compiled
+project (by default on port 3000). Whenever a change made to a project
+file is saved, the cryogen server re-compiles the project and updates
+the webserver. As a result, makes it easy to edit see changes
+live. Cryogen has a rather large, but simple [directory
+structure](http://cryogenweb.org/docs/structure.html) that is used to
 organize the project. Coming from Jekyll, this takes a bit of getting
 used to, but I think it helps keep everything organized once you learn
 it.
@@ -103,16 +105,33 @@ The one thing I _really_ like about Cryogen is the fact
 that... well... it's clojure. This means that things can feel more
 "lisp-y" from time to time. For example, in Jekyll, the preferences
 and configuration of the website are kept inside a yaml configuration
-file. Similarly, the meta data and information for a page or blog post
+file. Similarly, the meta-data and information for a page or blog post
 are defined in a very specific yaml header at the top of the markdown
-files. Cryogen has a very similar setup, except that instead of yaml
+files. Cryogen follows a similar concept, except instead of yaml
 headers, cryogen simply uses a p-list for it's
-[configuration setup](http://cryogenweb.org/docs/configuration.html). I just change
-the keywords in the list at the top of each post to change it's
-information. It is also very flexable and I was easily able to figure
-out how to add and use my own configurations. For anyone that programs
-in Clojure or LISP in general, the configuration in Cryogen is very intuitive.
+[configuration setup](http://cryogenweb.org/docs/configuration.html).
 
--- Add Para about customizing the css --
+To change a post's information (ex: title, author, date), simply
+change the keywords in the list at the top of the post's markdown
+file. The flexability of setup also means that figuring out show to
+setup use my own configuration was a breeze. For programmers that have
+previously used Clojure or LISP in general, the configuration in
+Cryogen is very intuitive and very natural.
 
--- Add Conclusion Para --
+The only _downside_ (sort of) I have experienced while using Cryogen
+is that being a smaller community, there isn't much out there in terms
+of templetes and themes (at least that I was able to find). So, while
+I was able to easily setup an amazing looking website using Jekyll (by
+using someone else's theme), I am forced to be a bit more hands on
+using cryogen. Initially, I thought this was a negative, but after
+spending some time hacking away at the theme and cleaning off my rusty
+css/html skills, I think I have the site looking _good enough_ for
+now. As a bonus, I am starting to re-learn web design. However, I am
+_slowly_ catching up, so "modern" design features like mobil support
+might not happen right away. It's not the best looking site, but I
+like and and think it gives off a personal touch, which I guess is
+good in a personal website. 
+
+That's about it. That's why my site suddenly looked different one
+weekend. I look forward to using both Clojure and Cryogen more for not
+only this website, but other personal projects as well.
