@@ -6,12 +6,12 @@
  :tags ["Website" "Cryogen" "Clojure"]}
 
 Ever since resurrecting my personal website, I have experimented with several
-static website generators. Thus far, I have used
+static website generators. Thus far, I have tried
 [org-page](https://github.com/kelvinh/org-page),
-[Jekyll](http://jekyllrb.com/) (_several_ times), and even made (sort of)
+[Jekyll](http://jekyllrb.com/) (_several_ times), and even (almost) made 
 [my own emacs org-page solution](https://github.com/himmAllRight/ryBlog/blob/master/org-blog.el). Now that I have
-started using [clojure](http://clojure.org/), I have come across
-[cryogen](http://cryogenweb.org/). As you might have guessed, this site is now
+started using the [clojure](http://clojure.org/) programming language, I have come across
+[cryogen](http://cryogenweb.org/). As you may have already guessed, this site is now
 being generated using cryogen.
 
 <!-- more -->
@@ -22,29 +22,30 @@ being generated using cryogen.
 ![emacs logo](../../img/posts/using-cryogen-for-website/Emacs-icon.png)
 ![org-mode unicorn](../../img/posts/using-cryogen-for-website/org-mode-unicorn.png)
 
-When I revitalized my personal website, my obsession with
+About a year ago, obsession with
 [emacs](https://www.gnu.org/software/emacs/) (and more importantly,
 org-mode) eventually led me to try out
-[org-page](https://github.com/kelvinh/org-page). The idea of writting
-web pages and blog posts in .org files was _very_ appealing. Overall,
-org-page was nice, but I found the documentation and support to be
-lacking. It seemed to be more of a [personal
+[org-page](https://github.com/kelvinh/org-page) while revitalizing my
+personal website. The idea of writting web page content in .org files
+was _very_ appealing and I wanted to gain a bit more experience
+writting emacs lisp, so it seemed like a good choice. Overall,
+org-page was a good learning experience, but I found the documentation
+and support to be lacking. It seemed to be more of a [personal
 project](http://kelvinh.github.io/), rather than a fully supported
-framework. while I know [other people](http://cmacr.ae/) were able
-to get it working, org-page simply wasn't working for me.
+framework. while I know [other people](http://cmacr.ae/) were able to
+get it working, org-page simply wasn't working for me.
 
 
 For over a year now, I have used org-mode at work each week to track
-my time and take notes. I then export the org files to html, creating
-a full index of my work notes/logs. After digging deeper to figure out
-how org-page worked, and realized it was just a fancy wrapper around
-the org-project functions I already used. So, I decided to implment
+my hours and to take notes. I can then export the org files to html, creating
+a full index of my work notes/logs. After digging deeper into org-page, realized it was just a fancy wrapper around
+the org-project functions I used at work. So, I decided to implment
 [my own emacs org-page solution](https://github.com/himmAllRight/ryBlog/blob/master/org-blog.el)
 (well, _half_ implement. I guess I never fully finished it...). While
-creating my own solution helped me learn more about org-page (which
+creating my own solution helped me learn even more about org-mode (which
 helped with my work notes), I ultimately abandoned this method for my
 personal website. Using my own solution quickly became a pain
-because any computer I wanted to generate and publish the site from
+because any computer I wanted use to generate and publish the site
 had to have a _.emacs_ file set up _just right_ to work.
 
 
