@@ -6,9 +6,18 @@
 
 This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations), as well as network diagrams of our current setup.
 
+## Network
+### Network Diagram
+
+![Himmelwright Network](../../img/homelab/NetworkDiagram.png)
+
+## Computers
+
 ### Ryan (Me)
 
 ![Ryan's Desk](../../img/homelab/alakazam.jpg)
+
+![Ryan's Workstation](../../img/homelab/workstation1.jpg)
 
 
 #### Alakazam (Main Workstation Laptop)
@@ -22,7 +31,7 @@ This is a page where I maintain the status of the computers in my “Homelab”.
     17.3” 1920x1080 Display (Also usually connected to 2x 23.6” 1920x1080 Monitors)
     Arch Linux OS
 
-#### Abra (Portable Laptop)
+#### Abra (Portable Laptop) -- BROKEN
 
     Asus X201E-DH01 (Ubuntu Version)
     Intel Celeron 847 [1.1 Ghz, 2M Cache, 2 Cores, 2 Threads]
@@ -60,10 +69,22 @@ This is a page where I maintain the status of the computers in my “Homelab”.
     Intel Xeon E3-1225 v3 [3.2 GHz (3.6 GHz Turbo), 8M Cache, 4 Cores, 4 Threads]
     20 GB ECC RAM
     250 GB Samsung EVO SSD (OS Partition + LVM partion for VM Volumes)
-    2 x 1TB WD 7200 RPM HDD (Storage)
-    Fedora Server 23 OS
+    2 x 1TB WD 7200 RPM HDD (Storage) (Hotswap)
+    2 x 3TB TOSHIBA 7200 RPM HDD (ZFS Mirror Storage) (Hotswap)
+    Proxmox VE 4.2
 
-#### Charmander (Rebecca’s Gaming Computer/ Additional Node)
+    Ninetales KVM VMs:
+    Gentoo - Gentoo - Vm to play with Gentoo Linux
+
+    Ninetales LXC Containers:
+    Diglet - Arch Linux - Minecraft Server
+    Staryu - Arch Linux - Plex Server
+    Meowth - Arch Linux - IRC Chat / Remote Website Writting
+    Grimer - Ubuntu 14.04 - Pi-hole, a network-wide ad blocker
+    
+
+
+#### Charmander (Test Server / Rebecca’s Gaming Computer)
 
     My old desktop (first computer build)
     Intel i7-930 [2.8 GHz (3.06 GHz Turbo), 8M Cache, 4 Cores, 8 Threads]
