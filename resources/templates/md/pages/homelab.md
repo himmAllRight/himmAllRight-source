@@ -74,14 +74,15 @@ This is a page where I maintain the status of the computers in my “Homelab”.
     Proxmox VE 4.2
 
     Ninetales KVM VMs:
-    Gentoo - Gentoo - Vm to play with Gentoo Linux
+    Gentoo  - Gentoo  - Vm to play with Gentoo Linux
+    test-vm - Various - VM used to test out differnt distros
 
     Ninetales LXC Containers:
-    Diglet - Arch Linux - Minecraft Server
-    Staryu - Arch Linux - Plex Server
-    Meowth - Arch Linux - IRC Chat / Remote Website Writting
-    Grimer - Ubuntu 14.04 - Pi-hole, a network-wide ad blocker
-    
+    Diglet  (50)  - Arch Linux   - Minecraft Server
+    Staryu  (120) - Arch Linux   - Plex Server
+    Meowth  (52)  - Arch Linux   - IRC Chat / Remote Website Writting
+    Tangela (114) - Centos 7     - Nginx for Port and Subdomain Proxy
+    Geodude (74)  - Ubuntu 16.04 - Gitlab Server
 
 
 #### Charmander (Test Server / Rebecca’s Gaming Computer)
