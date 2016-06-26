@@ -8,9 +8,9 @@
  :twitter_username    "himmAllRight17"
  :email-addr          "ryan.himmelwright@gmail.com"
 
- :site-url           "http://ryan.himmelwright.net"  ;; Production
+;; :site-url           "http://ryan.himmelwright.net"  ;; Production
 ;; :site-url           "http://home.himmelwright.net"  ;; Testing
-;; :site-url           "http://localhost:3000"         ;; Local Test
+    :site-url           "http://localhost:3000"         ;; Local Test
 
  :post-root          "posts"
  :page-root          "pages"
