@@ -2,7 +2,7 @@
  :date "2016-06-26"
  :layout :post
  :author "Ryan Himmelwright"
- :tags ["Linux" "Arch Linux"]}
+ :tags ["Linux" "Arch Linux" "KDE"]}
 
 After watching the continued development of the Plasma 5 desktop
 environment from a distance, I determined I needed to give it another
