@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Trying out snapd on Arch Linux"
-:date "2016-07-12"
+:date "2016-07-17"
 :author "Ryan Himmelwright"
 :tags ["Linux" "Arch Linux" "snapd"]
 ;:draft? true
