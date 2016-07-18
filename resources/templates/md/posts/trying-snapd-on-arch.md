@@ -21,7 +21,7 @@ Linux. So, installing snapd was as easy as running:
 
 Now, I use pacaur so that I can install packages from Arch Linux's
 main repos, as well as the AUR. However, because snapd has actually
-been moved to the community repos, you can install it wtih vanella
+been moved to the community repos, you can install it with vanilla
 pacman, without aur support.
 
 `sudo pacman -S snapd`
@@ -56,7 +56,7 @@ Just like in any standard package manager search, the potential
 matches were returned, along with a version number, the developer
 name, and a summary.
 
-Snap has serveral other commands. To see a full list of available snap
+Snap has several other commands. To see a full list of available snap
 commands and a description for each one, just type:
 
 `sudo snap help`
@@ -72,7 +72,7 @@ Telegram snap (I heard there was, so it was a good bet). I ran
 
 ![Snap telegram](../../img/posts/arch-snaps/snap-telegram-install.png)
 
-I choose the laste one, and installed it using the command 
+I choose the last one, and installed it using the command 
 `sudo snap install telegram-serguisens`. A progress bar tracked the download of
 the snap, and then the installation. That was it. To my delight,
 within a few seconds the Ubuntu `snap` application had downloaded the
@@ -83,7 +83,7 @@ telegram snap, and installed it on my _arch linux_ box, without any issue.
 ![Snap Help](../../img/posts/arch-snaps/snap-telegram-menu.png)
 
 Well... _almost_ without any issues. The one problem I did have was
-after installing the telegram snap, the excutable wasn't in my path so
+after installing the telegram snap, the executable wasn't in my path so
 I couldn't start it from my launcher or even a terminal. I think this
 was actually because snapd wasn't setup fully. I rebooted my computer
 and telegram now launches just fine. The snap is even identified with
@@ -94,7 +94,7 @@ actual snap, and not another Telegram install.
 
 ![Snap Help](../../img/posts/arch-snaps/snap-telegram.png)
 
-While the fact that snaps are easy to package and instal for
+While the fact that snaps are easy to package and install for
 developers and users alike, I think my favorite feature was something
 that I didn't even think about prior to trying it out, and I might not
 of realized had I installed snapd on another computer...
@@ -107,9 +107,9 @@ this is because the aur build pulls down the telegram .deb package and
 then has to extract and compile it in order to install it on
 Arch. This little computer doesn't like that. The snap however, seems
 to of just download and installed itself. It hardly pegged my CPU at
-all. If this is true, snaps might have an aditional usecase on weaker
+all. If this is true, snaps might have an additional use-case on weaker
 hardware, like my netbook. (yes, I know snaps might have a bigger disk
-footprint, but honestly that tradeoff is fine with me)
+footprint, but honestly that trade-off is fine with me)
 
 I think the universal application frameworks are a great idea that is
 very much needed on Linux. Snapd is very promising and I look forward
