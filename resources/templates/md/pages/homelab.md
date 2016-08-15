@@ -29,7 +29,18 @@ This is a page where I maintain the status of the computers in my “Homelab”.
     120 GB Samsung EVO SSD
     1 TB 7200 RPM HDD
     17.3” 1920x1080 Display (Also usually connected to 2x 23.6” 1920x1080 Monitors)
-    Arch Linux OS
+    Arch Linux & Korora 24 OS
+	
+#### Kadabra (Portable Laptop) 
+
+    Lenovo x230
+    Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
+    8 GB RAM
+    120 GB SSD
+    12.5" HD LED 1366x768 Display
+    9-Cell Battery
+    Korora 24 OS
+
 
 #### Abra (Portable Laptop) -- BROKEN
 
