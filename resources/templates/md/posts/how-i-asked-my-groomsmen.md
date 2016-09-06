@@ -47,7 +47,7 @@ When the reader scanned the QR code, it opened up a list of instructions on thei
 
 
 1. Find your computer.
-2. Go to [http://ryan.himmelwright.net/message/]("http://ryan.himmelwright.net/message/") and follow the instructions.
+2. Go to [http://ryan.himmelwright.net/message/]("http://ryan.himmelwright.net/message/") and follow the instructions. NO LONGER ACTIVE.
 3. Text Me
 
 
@@ -230,3 +230,6 @@ After putting up with my ranting, I finally posted the message asking the guys t
 About 2 days after we mailed out the letters, all of then intended groomsmen had messaged me back, confirming that they would be my groomsmen. I also think they enjoyed my methods of asking.
 
 I guess I was successful in asking everyone in a very "Ryan-like" fashion.
+
+
+**UPDATE**: The [source code repo](https://github.com/himmAllRight/groomsmen-ask) for this little project is now publically available on my [Github Page](https://github.com/himmAllRight).
