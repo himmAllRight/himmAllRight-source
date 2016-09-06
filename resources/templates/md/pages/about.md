@@ -11,7 +11,7 @@ of [emacs](https://www.gnu.org/software/emacs/) and work with it full screen.
 Outside of work, I am an avid Linux user and love learning about
 computers and open source technologies. I majored in
 Neuroscience with a minor in Computer Science at [Lafayette College](https://www.lafayette.edu/). I am largely a self-taught learner and continue to study computer
-science and IT topics by working on on [personal projects](https://gitrhub.com/himmAllRight), my [homelab](homelab.md), and training to earn certificates like the [RHCSA](https://www.redhat.com/en/services/certification/rhcsa).
+science and IT topics by working on on [personal projects](https://github.com/himmAllRight?tab=repositories), my [homelab](http://ryan.himmelwright.net/pages/homelab/), and training to earn certificates like the [RHCSA](https://www.redhat.com/en/services/certification/rhcsa).
 
 Outside of technology, I love music, reading, hiking, and swimming (I competitively
 swam through college).  I have a fiancee named Rebecca who is a second
