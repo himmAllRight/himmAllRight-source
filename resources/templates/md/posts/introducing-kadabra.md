@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Introducing Kadabra - My New, Used x230"
-:date "2016-11-28"
+:date "2016-11-29"
 :author "Ryan Himmelwright"
 :tags ["Linux" "Korora" "Thinkpad"]
 ;:draft? true
@@ -15,7 +15,7 @@ mobile pc setup.
 
 <!-- more -->
 
-### Considerations 
+### Other Considerations 
 ![Asus x201e](../../img/posts/introducing-kadabra/asus_x201e.png)
 
 I've been keeping an eye open for a new mobile computer for over a
