@@ -6,7 +6,7 @@
 I am a 25 year-old back-end software developer working in Walpole MA,
 at a company that primarily develops in [Allegro Common Lisp](http://franz.com/products/allegro-common-lisp/). I spend
 most of my days writing LISP code, so naturally I am also a big fan
-of [emacs](https://www.gnu.org/software/emacs/) and work with it full screen.
+of [emacs](https://www.gnu.org/software/emacs/) and work with it full screen. 
 
 Outside of work, I am an avid Linux user and love learning about
 computers and open source technologies. I majored in
