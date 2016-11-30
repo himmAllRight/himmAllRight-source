@@ -33,7 +33,7 @@ the other sub $300 options had.
 ### Used Thinkpads
 
 When I intensified my search, I started to consider other
-options. There is one alternative is very popular among Linux users,
+options. There is one alternative that is very popular among Linux users,
 but I always seem to forget about it when looking for a new
 device. That option of course, is buying a used Thinkpad and installing
 Linux on it. This appeared to be an ideal time to try it out. I
@@ -55,7 +55,7 @@ eventually decided on the x230 because the main use of this laptop would be port
 
 ### This Particular Thinkpad x230 ...
 ![Kadabra](../../img/posts/introducing-kadabra/kadabra2.jpg)
-I found my used x230 on Amazon, for about $185. The vendor had a good enough 
+I found my used x230 on Amazon, for about $185. The vendor an acceptable 
 rating, and the specs were good for the price:
 - Intel i5-3320M
 - 4 GB RAM
@@ -111,11 +111,14 @@ a second drive several times now to try out different distros on the
   solid, the screen does have a bit of flex when pressed.
 - **Resolution** - I really hate 1366x768 on laptops. I don't need 1920x1080, which would be very tiny on a 12.5" screen. 1600x900 however...
 - **Track pad (but honestly who cares)** - The track-pad isn't great. In fact, it can be downright annoying. The bottom of the track-pad curves around the edge of computer, which looks nice, but rubs against my stomach when I am working with the laptop on my lap. This causes the cursor to fly around and do everything but what I want it to do. This would be a much bigger issue on other laptops, but with how much I use the track point, I really don't care. I usually just disable the track-pad all together.
-- **Speakers aren't great (but again, not a bit deal)** - The speakers are very quiet and don't sound very good. This isn't a huge deal for me because being my mobile computer, I am using headphone 99% of the time. Still, it would be nice if when I occasionally share a video with someone they could actually hear it.
+- **Speakers aren't great (but again, not a bit deal)** - The speakers are very quiet and don't
+  sound very good. This isn't a huge deal for me because being my mobile computer, I am using
+  headphones 99% of the time. Still, it would be nice if when I occasionally share a video with someone they could actually hear it.
 
 ### Conclusions
 ![Kadabra](../../img/posts/introducing-kadabra/kadabra.jpg)
-I have had Kadabra for several months now and still love it. I use it at work daily. It is a perfect mix of being portable while still having enough power to accomplish whatever I want to work on. I still prefer to vote with my wallet by purchasing from a vendors like [System76](http://www.system76.com) when possible, but buying used business hardware, such as thinkpads, is a very affordable alternative. I have no regrets buying my used x230. It is infinitely better than my other options at that price point.
+I have had Kadabra for several months now and still love it. I use it at work daily (to listen to
+music, podcasts, and to have a _linux_ computer available to me at all times in a Windows office). It is a perfect mix of being portable while still having enough power to accomplish whatever I want to work on. I still prefer to vote with my wallet by purchasing from a vendors like [System76](http://www.system76.com) when possible, but buying used business hardware, such as thinkpads, is a very affordable alternative. I have no regrets buying my used x230. It is infinitely better than my other options at that price point.
 
 ### Update
 _I have taken so long to publish this post, I am actually now using Arch Linux on Kadabra. It also runs great :)_
