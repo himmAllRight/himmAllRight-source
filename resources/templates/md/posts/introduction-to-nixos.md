@@ -20,6 +20,8 @@ Before diving into NixOS, it is probably a good idea to first take some time and
 
 #### Functional Package Building
 
+![Nix packages are hashed and stored in the Nix Store](../../img/posts/introduction-to-nixos/firefox-hash.png)
+
 Nix packages are built using the Nix expressions, which is a simple
 pure, lazy, functional language (You can evel install a repl of
 it. Just use the nix command `nix-env -i nix-repl` to install it). A
@@ -60,9 +62,10 @@ Because
 
 #### Atomic Upgrades and Rollbacks
 
-	
+
 
 ### What is NixOS?
 
 ### Why use a Declarative Functional Operating System?
 
+![Changes are automatically saved and can be rolled back to](../../img/posts/introduction-to-nixos/list-generations.png)
