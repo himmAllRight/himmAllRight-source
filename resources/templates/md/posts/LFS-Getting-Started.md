@@ -24,13 +24,13 @@ I am going to setup a KVM virtual machine using Virt Manager for my host system,
 
 <center>![Adding LFS hd](../../img/posts/LFS-intro/HD-add.png)</center>
 
-After the VM finished installing, I shutdown the system and added a virtual drive. This will be the virtual drive that I build the entire LFS system in. I then started up my VM again and confirmed that everything installed correcly. I also installed and enabled openssh so that I could just ssh into the system from my desktop if I didn't feel like working inside the VM's GUI.
+After the VM finished installing, I shutdown the system and added a virtual drive. This will be the virtual drive that I build the entire LFS system in. I then started up my VM again and confirmed that everything installed correctly. I also installed and enabled openssh so that I could just ssh into the system from my desktop if I didn't feel like working inside the VM's GUI.
 
 ### Setting up the Host Environment
 #### Checking Required Packages
 ![Adding LFS hd](../../img/posts/LFS-intro/environment-check-pre.png)
 
-Now that the host system is setup, we need to ensure we have a proper host environment to build everything. Luckilly, LFS provides us with a nice script that we can copy and paste into a terminal, and it will let us know what required packages and programs we do not have installed. Make sure to run it as either root, or using sudo. When I ran the script, there were a few missing packages that I had to install:
+Now that the host system is setup, we need to ensure we have a proper host environment to build everything. Luckily, LFS provides us with a nice script that we can copy and paste into a terminal, and it will let us know what required packages and programs we do not have installed. Make sure to run it as either root, or using sudo. When I ran the script, there were a few missing packages that I had to install:
 
 - bison
 - gawk
@@ -45,5 +45,21 @@ After installing those few packages and changing the symlink, I the check script
 #### Checking Libraries
 ![Adding LFS hd](../../img/posts/LFS-intro/library-check.png)
 
-After verifing that our host system has all the required packages, we have to check that several libraries are consistent. Again, LFS provides us with a simple script that lets us know if we are good. When I ran it, the three libraries were not found. However, the books states that all the files should either be absent or present. If one or two are there and the others missing, that is a problem. So my system was okay.
+After verifying that our host system has all the required packages, we have to check that several libraries are consistent. Again, LFS provides us with a simple script that lets us know if we are good. When I ran it, the three libraries were not found. However, the books states that all the files should either be absent or present. If one or two are there and the others missing, that is a problem. So my system was okay.
 
+### Formatting the LFS Disk
+If you haven't formatted the disk to be used for LFS, now is the time to do it. I added a disk through the Virt Manager settings, which doesn't format it, so that must be done. 
+
+![Adding LFS hd](../../img/posts/LFS-intro/disks.png)
+
+I first used `lsblk` to confirm the disk name. In my case it was the `/dev/sdb` disk.
+
+![Adding LFS hd](../../img/posts/LFS-intro/mkfs.png)
+
+After getting your disk's path, it is time to partition. I decided to partition it as the basic, but very solid ext4 file system using the following command:
+
+`mkfs.ext4 -v /dev/sdX`
+
+Remember to use sudo if you are not root, and replace the /dev/sdX with whatever path you found in the step above (For example, I did `/sudo mkfs.ext4 -v /dev/sdb`). The `-v` isn't required, but I like to see the output. Lastly, note that you can use the `-U` flag to specify a UUID instead of the file path.
+
+The next few preparatory steps before starting to build LFS must be done each time you boot into your host machine, so I think I am going to break that into a separate post. That way, it can be more easily referenced. Stay Tuned!
