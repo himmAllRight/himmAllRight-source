@@ -74,28 +74,32 @@ Mac OS
 [![Lack Rack](../../img/homelab/rack.jpg)](../../img/homelab/rack.jpg)
 
 #### Ninetales (VM Host / Home Server)
+```
+Lenovo ThinkServer 440
+Intel Xeon E3-1225 v3 [3.2 GHz (3.6 GHz Turbo), 8M Cache, 4 Cores, 4 Threads]
+20 GB ECC RAM
+250 GB Samsung EVO SSD (OS Partition + LVM partion for VM Volumes)
+2 x 1TB WD 7200 RPM HDD (ZFS Mirror, for Backups) (Hotswap)
+2 x 3TB TOSHIBA 7200 RPM HDD (ZFS Mirror, for Storage) (Hotswap)
+Proxmox VE 4.4
+```
 
-    Lenovo ThinkServer 440
-    Intel Xeon E3-1225 v3 [3.2 GHz (3.6 GHz Turbo), 8M Cache, 4 Cores, 4 Threads]
-    20 GB ECC RAM
-    250 GB Samsung EVO SSD (OS Partition + LVM partion for VM Volumes)
-    2 x 1TB WD 7200 RPM HDD (ZFS Mirror, for Backups) (Hotswap)
-    2 x 3TB TOSHIBA 7200 RPM HDD (ZFS Mirror, for Storage) (Hotswap)
-    Proxmox VE 4.4
+##### Ninetales KVM VMs:
+```	
+Gentoo  - Gentoo     - Vm to play with Gentoo Linux
+Vomonat - Kali Linux - Used for learning PenTesting techniques
+test-vm - Various    - VM used to test out differnt distros
+```
 
-    Ninetales KVM VMs:
-    Gentoo  - Gentoo     - Vm to play with Gentoo Linux
-	Vomonat - Kali Linux - Used for learning PenTesting techniques
-    test-vm - Various    - VM used to test out differnt distros
-
-    Ninetales LXC Containers:
-    Diglet  (50)  - Arch Linux   - Minecraft Server
-    Staryu  (120) - Arch Linux   - Plex Server
-    Meowth  (52)  - Arch Linux   - Remote Website Writting/ Other
-	Kakuna  (14)  - Ubuntu 16.04 - Experimenting with Ledger syncing methods
-    Tangela (114) - Centos 7     - Nginx for Port and Subdomain Proxy
-    Geodude (74)  - Ubuntu 16.04 - Gitlab Server
-
+##### Ninetales LXC Containers:
+```	
+Diglet  (50)  - Arch Linux   - Minecraft Server
+Staryu  (120) - Arch Linux   - Plex Server
+Meowth  (52)  - Arch Linux   - Remote Website Writting/ Other
+Kakuna  (14)  - Ubuntu 16.04 - Experimenting with Ledger syncing methods
+Tangela (114) - Centos 7     - Nginx for Port and Subdomain Proxy
+Geodude (74)  - Ubuntu 16.04 - Gitlab Server
+```
 
 #### Charmander (Test Server / Rebecca’s Gaming Computer)
 
