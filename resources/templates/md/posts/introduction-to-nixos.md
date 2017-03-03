@@ -3,7 +3,7 @@
 :date "2016-12-16"
 :author "Ryan Himmelwright"
 :tags ["Linux" "NixOS" "Functional"]
-;:draft? true
+:draft? true
 }
 
 If someone were to ask my what my top three interests in computing right now I think I would say (in no particular order): 1) Functional Programming and Languages 2) Linux Operating Systems and related technology, and lastly, 3) Large distributed computing systems (with an specific interest in build systems)

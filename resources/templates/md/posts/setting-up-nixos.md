@@ -3,7 +3,7 @@
 :date "2016-12-18"
 :author "Ryan Himmelwright"
 :tags ["Linux" "NixOS" "Functional"]
-;:draft? true
+:draft? true
 }
 
 ### Installing NixOS
