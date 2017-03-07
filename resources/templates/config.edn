@@ -32,7 +32,7 @@
 ;; :disqus-shortname   "himmAllRight-test"  ;; testing  disqus
 :disqus-shortname   "himmAllRight"
  :ignored-files      [#"\.#.*" #".*\.swp$"]
- :posts-per-page     3
+ :posts-per-page     5
  :blocks-per-preview 2
  :links              false
  :previews?          true
