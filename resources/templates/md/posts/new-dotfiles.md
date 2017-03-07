@@ -2,8 +2,8 @@
 :title  "My New Dotfiles Management - Using GNU Stow"
 :date "2017-03-07"
 :author "Ryan Himmelwright"
-:tags ["Linux" "Korora" "Thinkpad"]
-;:draft? true
+:tags ["Linux" "dotfiles"] 
+:draft? false
 }
 
 
