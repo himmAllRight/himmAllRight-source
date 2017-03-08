@@ -2,6 +2,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Alegreya';
 }
 
+h2 a {
+    color: #444444;
+}
+
 body {
     color: #333;
     background-color: #555;
