@@ -3,7 +3,7 @@
 :date "2017-03-09"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
-;:draft? true
+:draft? true
 }
 
 During the Linux From Scratch process, there may be times when the build environment (computer, VM, chroot, whatever) must be restarted. If so, there are a few steps in the setup phase that have to be re-initialized. This post goes through those steps.
