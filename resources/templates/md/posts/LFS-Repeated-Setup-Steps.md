@@ -31,3 +31,13 @@ To check that the variable set correctly, just printed it out using echo (this s
 There are several ways to ensure that the *$LFS* variable. The book recommends editing the *.bash-profile* in both the home and */root/.bash_profile*, by adding the export command explained in the section above. This way every time the build machine is reset, simply logging into the system (which loads *bash*, assuming it's the default), will export the *$LFS* variable.
 
 ### Mounting the LFS Partition
+
+<center>[![Setting the LFS variable](../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png)](../../img/posts/LFS-Repeated-Setup-Steps/writting-script.gif)
+
+*(Click image to see animation)*
+
+
+
+<img src="../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png" name="pic" onclick="swap()"> 
+
+</center>
