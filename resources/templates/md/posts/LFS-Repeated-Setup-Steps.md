@@ -3,7 +3,7 @@
 :date "2017-03-09"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
-:draft? true
+:draft? flase
 }
 
 During the Linux From Scratch process, there may be times when the build environment (computer, VM, chroot, whatever) must be restarted. If so, there are a few steps in the setup phase that have to be re-initialized. This post goes through those steps.
@@ -26,3 +26,8 @@ To check that the variable set correctly, just printed it out using echo (this s
 
 
 \* *Note: All of these commands should be run under the lfs user created in [the last LFS post](../LFS-Getting-Started/), since that is the user account LFS will be built from.*
+
+### Ensuring the $LFS Variable is *Always* Set
+There are several ways to ensure that the *$LFS* variable. The book recommends editing the *.bash-profile* in both the home and */root/.bash_profile*, by adding the export command explained in the section above. This way every time the build machine is reset, simply logging into the system (which loads *bash*, assuming it's the default), will export the *$LFS* variable.
+
+### Mounting the LFS Partition
