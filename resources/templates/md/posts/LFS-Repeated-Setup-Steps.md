@@ -36,8 +36,7 @@ There are several ways to ensure that the *$LFS* variable. The book recommends e
 
 *(Click image to see animation)*
 
-
-
-<img src="../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png" name="pic" onclick="swap()"> 
+<img src="../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png" name="pic" onclick=swap("../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.gif")> 
 
 </center>
+
