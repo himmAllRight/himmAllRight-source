@@ -25,8 +25,6 @@ To check that the variable set correctly, just print it out using echo (if succe
 `echo $LFS`
 
 
-\* *Note: All of these commands should be run from the <b>lfs</b> user created in [the previous LFS post](../LFS-Getting-Started/), as that is the user account LFS will be built from.*
-
 ### Ensuring the $LFS Variable is *Always* Set
 There are several ways to ensure that the *$LFS* variable is always loaded during login. One method the book recommends is to edit the *.bash-profile* found in both *~* and */root, by appending the export command defined above to them. This way every time the build machine resets, simply logging into the system (which loads *bash*, assuming it is the default), will export the *$LFS* variable.
 
@@ -43,8 +41,6 @@ After creating the directories, I mounted them with the command:
 
 `sudo mount ext4 /dev/sdb`
 
-
-(*In Ubuntu I could only mount the drive as root, so I did it from my <b>ryan</b> account, which has sudo privileges.*)
 
 If multiple partitions are being used for the LFS build (*such as a separate `/home` partition*), they should also be mounted at this time.
 
