@@ -1,18 +1,18 @@
 {:layout :post
 :title  "Linux from Scratch - Repeated Setup Steps"
-:date "2017-03-09"
+:date "2017-03-13"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
-:draft? true
+:draft? false
 }
 
-During the Linux From Scratch process, there may be times when the build environment (computer, VM, chroot, whatever) must be restarted. If so, there are a few steps in the setup phase that have to be re-initialized. This post goes through those steps.
+During the Linux From Scratch process, there may be times when the build environment (computer, VM, chroot, whatever) must be restarted. If so, there are a few steps from the setup phase that have to be re-initialized. This post maps out those steps.
 
 <!-- more -->
 
 
 ### Setting The $LFS Variable
-After the virtual disk for my LFS build, I needed to define where I wanted to eventually mount it. This location is important, because it will also be the path that the $LFS variable is set to. The $LFS variable is used throughout the book, to easily point to where the LFS system is being built.
+After setting up the virtual disk for my LFS build, I needed to define where I wanted to eventually mount it. This location is important, because it is the path that the $LFS variable is set to. The $LFS variable is used throughout the book, to easily point to where the LFS system is being built.
 
 <center>[![Setting the LFS variable](../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png)](../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png)</center>
 
@@ -20,32 +20,39 @@ To set the #LFS variable, I ran the following command: *
 
 `export LFS=/mnt/lfs`
 
-To check that the variable set correctly, just printed it out using echo (this should print out the path that was specified).
+To check that the variable set correctly, just print it out using echo (if successful, the path that was specified should print out).
 
 `echo $LFS`
 
 
-\* *Note: All of these commands should be run under the lfs user created in [the previous LFS post](../LFS-Getting-Started/), since that is the user account LFS will be built from.*
+\* *Note: All of these commands should be run from the <b>lfs</b> user created in [the previous LFS post](../LFS-Getting-Started/), as that is the user account LFS will be built from.*
 
 ### Ensuring the $LFS Variable is *Always* Set
-There are several ways to ensure that the *$LFS* variable. The book recommends editing the *.bash-profile* in both the home and */root/.bash_profile*, by adding the export command explained in the section above. This way every time the build machine is reset, simply logging into the system (which loads *bash*, assuming it's the default), will export the *$LFS* variable.
+There are several ways to ensure that the *$LFS* variable is always loaded during login. One method the book recommends is to edit the *.bash-profile* found in both *~* and */root, by appending the export command defined above to them. This way every time the build machine resets, simply logging into the system (which loads *bash*, assuming it is the default), will export the *$LFS* variable.
+
 
 ### Mounting the LFS Partition(s)
-After setting the *$LFS* variable, I had to actually mount my LFS drive/partition to that location. I first ensured that the directory actually existed by running:
+
+After setting the *$LFS* variable, I could finally mount my LFS drive/partition to that location. First, I ensured that the directory existed by running:
 
 `mkdir -pv $LFS`
 
-*Note: In this command, the -v again means verbose, so a message will be printed for each directory created. The -p flag is for --parents, and will allow mkdir to also make parent directories, as needed. So, if `/mnt/` does not already exist, will be created along with `/mnt/lfs`.*
+*Note: In this command, the -v again means verbose, so a message will be printed for each directory created. The -p flag is for --parents, and will instruct "mkdir" to also make parent directories, as needed. So, if `/mnt/` does not already exist, will be created along with `/mnt/lfs`.*
 
-After making the directories, I mounted them with the command:
+After creating the directories, I mounted them with the command:
 
 `sudo mount ext4 /dev/sdb`
 
-*In Ubuntu I could only mount the drive as root, so I did it from my <b>ryan</b> account, which has sudo privileges.*
 
-If you are using multiple partitions for LFS (*ex: a separate `/home` partition*), they should also be mounted at this time.
+(*In Ubuntu I could only mount the drive as root, so I did it from my <b>ryan</b> account, which has sudo privileges.*)
 
-After mounting my partition, the LFS book recommended that I check that the partition was not mounted with restrictive permissions. After running the `mount` again, but this time without any parameters, I was able to see and confirm that the partition was not mounted with restrictive permissions, such as `nosuid` or `nodev`. If either of these options are set, the partition needs to be remounted.
+If multiple partitions are being used for the LFS build (*such as a separate `/home` partition*), they should also be mounted at this time.
+
+<center>
+<img src="../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png" name="pic" onclick=swap("../../img/posts/LFS-Repeated-Setup-Steps/mount-check.gif")> 
+</center>
+
+After mounting my partition, the LFS book recommended that I check that the partition was not mounted with restrictive permissions. To do this, I ran the `mount` command again, but this time without any parameters. From the output, I was able to see and confirm that the partition was not mounted with restrictive permissions, such as `nosuid` or `nodev`. If either of these options are set, the partition should be remounted.
 
 Lastly, if a *swap* partition is being used, do not forget to enable it using `swapon`:
 
@@ -53,10 +60,7 @@ Lastly, if a *swap* partition is being used, do not forget to enable it using `s
 
 
 ### Conclusion
-Remember, whenever the LFS host system is restarted, these steps must be completed upon logging into the rebooted system. If steps were taking to *always* complete these steps, even during reboot (such as adding the *$LFS* variable to the bash profile, or mounting the partitions in the *fstab* file), still check to make sure they *actually* set as  intended. This can prevent several headaches down the road.
+Remember, if the LFS host system is restarted for any reason, these steps must be completed upon logging into the rebooted system. Even if measures were taking to *always* complete these steps (such as adding the *$LFS* variable to the bash profile, or mounting the partitions via the *fstab* file), it is still a good idea to check and make sure that they *actually* initialized as  intended. This can prevent several headaches down the road.
 
 
-<img src="../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var-play.png" name="pic" onclick=swap("../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.gif")> 
-
-</center>
 
