@@ -45,7 +45,7 @@ After creating the directories, I mounted them with the command:
 If multiple partitions are being used for the LFS build (*such as a separate `/home` partition*), they should also be mounted at this time.
 
 <center>
-<img src="../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png" name="pic" onclick=swap("../../img/posts/LFS-Repeated-Setup-Steps/mount-check.gif")> 
+<img src="../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Repeated-Setup-Steps/mount-check.gif'" onmouseout="this.src='../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png'")> 
 </center>
 
 After mounting my partition, the LFS book recommended that I check that the partition was not mounted with restrictive permissions. To do this, I ran the `mount` command again, but this time without any parameters. From the output, I was able to see and confirm that the partition was not mounted with restrictive permissions, such as `nosuid` or `nodev`. If either of these options are set, the partition should be remounted.

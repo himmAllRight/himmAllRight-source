@@ -28,7 +28,7 @@ The LFS wanted this directory to be writable, and sticky. A "Sticky" directory a
 
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png" name="pic" onclick=swap("../../img/posts/LFS-Final-Preparation-Steps/wget-sources.gif")> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png'"> 
 </center>
 
 To download all of the source packages at once, I first download [the LFS wget list](http://www.linuxfromscratch.org/lfs/view/stable-systemd/wget-list):
@@ -44,7 +44,7 @@ It should take a few minutes to download everything (or longer if on a poor conn
 
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png" name="pic" onclick=swap("../../img/posts/LFS-Final-Preparation-Steps/sources-md5.gif")> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png'"> 
 </center>
 
 
