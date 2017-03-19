@@ -15,12 +15,14 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 
 ### Ryan (Me)
 
-[![Ryan's Desk](../../img/homelab/alakazam_desk.jpg)](../../img/homelab/alakazam_desk.jpg)
-My Workstation Desk
-
 [![Ryan's Workstation](../../img/homelab/alakazam.jpg)](../../img/homelab/alakazam.jpg)
-My Main Computer Setup (Alakazam)
+*My Main Computer Setup (Alakazam)*
 
+[![Ryan's Desk - Chair](../../img/homelab/alakazam_chair.jpg)](../../img/homelab/alakazam_chair.jpg)
+*My Workstation Area*
+
+[![Ryan's Desk](../../img/homelab/alakazam_desk.jpg)](../../img/homelab/alakazam_desk.jpg)
+*My Workstation Standing Desk*
 
 #### Alakazam (Main Workstation Laptop)
 ```

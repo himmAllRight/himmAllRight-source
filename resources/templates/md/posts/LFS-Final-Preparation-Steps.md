@@ -3,7 +3,7 @@
 :date "2017-03-16"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
-:draft? false
+:draft? true
 }
 
 
