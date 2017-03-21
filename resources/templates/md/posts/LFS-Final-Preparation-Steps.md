@@ -1,9 +1,9 @@
 {:layout :post
 :title  "Linux from Scratch - Final Preparation Steps"
-:date "2017-03-16"
+:date "2017-03-21"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
-:draft? true
+:draft? False
 }
 
 
@@ -124,3 +124,53 @@ su - lfs
 *Note: the "-" tells su to start a login shell, rather than a non-login shell. This mostly ensures that various files are read at login to setup environment variable and other profiles.*
 
 ### Setting up the Build Environment
+Now with the *lfs* user created, we need to setup a proper working environment. To do this, we will edit the `.bash_profile` and `.bashrc` files. 
+
+##### Creating .bash_profile
+
+<center>
+<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png'"> 
+</center>
+
+When logging in as the *lfs* user, the shell first reads the `/etc/profile` of the host, followed by the `.bash_profile`. So, lets start with the `.bash_profile`. Create/open `.bash_profile` and add the following line to it:
+
+```
+exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
+``` 
+
+This line replaces the running shell with a new one that contains a completely empty environment, except the *HOME*, *TERM*, *PS1* variables. This ensures that there are no stray environment variables, that may interfere with the build environment.
+
+##### Creating .bashrc
+
+<center>
+<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png'"> 
+</center>
+
+The new instance of this the shell is a non-login shell, so it does not read `/etc/profile` or `.bash_profile` files. However, it does read the `.bashrc, so lets go ahead and create that. Open `~/.bashrc` and add the following lines:
+
+```
+set +h
+umask 022
+LFS=/mnt/lfs
+LC_ALL=POSIX
+LFS_TGT=$(uname -m)-lfs-linux-gnu
+PATH=/tools/bin:/bin:/usr/bin
+export LFS LC_ALL LFS_TGT PATH
+
+```
+
+The `set +h` line turns off bash's hash function. This is normally a usefully feature, as it essentially caches the path-names of executables. Removing this will ensure that the newly compiled tools will always be found by the shell once they are available, because the shell will have to re-search the *PATH* each time. Similarly, placing `/tools/bin` ahead of the standard `/bin:/usr/bin` *PATH* *(line 6)*, also helps to ensure that all the programs in chapter 5 are immediately picked up by the shell after installation. These two techniques will hopefully prevent the risk of using old programs from the host instead of the newly compiled ones.
+
+The `umask 022` line sets the [umask](https://en.wikipedia.org/wiki/Umask) to 022, which ensures that created files and directories are only writable by their owner, but are readable and executable by anyone.
+
+The `LFS=/mnt/lfs` line should look familar, as it sets the `LFS` variable to our LFS mount point.
+
+Lastly, setting the `LC_ALL` variable to `POSIX` or `C` ensures that everything will work as expected in the *chroot* environments (regarding localization settings).
+
+To enable this new environment we've setup, source the user-profile:
+
+```
+source ~/.bash_profile
+```
+
+Congratulations! We are now ready to start compiling some code in the next post!
