@@ -39,7 +39,7 @@ After setting the *$LFS* variable, I could finally mount my LFS drive/partition 
 
 After creating the directories, I mounted them with the command:
 
-`sudo mount -v -t ext4 /dev/sdb`
+`sudo mount -v -t ext4 /dev/sdb $LFS`
 
 
 If multiple partitions are being used for the LFS build (*such as a separate `/home` partition*), they should also be mounted at this time.
