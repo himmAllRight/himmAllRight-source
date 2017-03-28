@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Linux from Scratch - SBUs and Binutils"
-:date "2017-03-26"
+:date "2017-03-28"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
 :draft? false
@@ -15,7 +15,10 @@ When completing LFS, people commonly want to know how long it will take to compi
 
 An SBU is the amount of time it takes to compile a standard package. Each package in the LFS book has a SBU value, so that compilation times can be gauged. So, if The first package to be compiled in the book (and in this post), is Binutils, so that is the package which SBUs are set against. For example, if it took 10 minutes to build Binutils on your machine, then for you, 1 SBU = 10 minutes. So, this means if a 4.5 SBU package is being compiled on that machine, it can be expected to take ~45 minutes to build.
 
-##### Note about parallel make
+#### SBU Accuracy
+SBUs are not completely accurate, because there are still many factors that differ between setups. They should be used as an estimate at best, but remember that they could be off by dozens of minutes in worst-case scenarios.
+
+For example, machines with multiple cores can run a "parallel make" by providing the `-j` makeflag, as in `make -j 4`. This allows the package to be compiled using multiple cores, potentially speeding up the build process significantly. However, due to how compilation jobs have to be divided for parallel builds, SBUs are even harder to predict and may be even more sporadic. Just remember that. Also, if you ever run into a problem during a build step, it is a good idea to first retry it with a single processor build. If this doesn't fix the issue itself, the error message can at least be properly analyzed.
 
 ### Building Notes
 
