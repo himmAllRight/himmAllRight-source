@@ -22,4 +22,9 @@ For example, machines with multiple cores can run a "parallel make" by providing
 
 ### Building Notes
 
+
+
 ### Building BinUtils
+It is important that Binutils is built first. This is mostly because when Glibc and GCC are built, they perform various tests on the linker and assembler to figure out which of their features to enable.
+
+To start building BinUtils, first move to the sources directory (`$LFS/sources`) and extract the package.
