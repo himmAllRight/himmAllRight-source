@@ -22,6 +22,10 @@ For example, machines with multiple cores can run a "parallel make" by providing
 
 ### My Encountered Issues with tar...
 
+![Tar issues](../../img/posts/LFS-SBUs-Binutils/tar-error.png)
+ 
+ 
+ 
 ### Building Notes?
 
 
@@ -29,8 +33,21 @@ For example, machines with multiple cores can run a "parallel make" by providing
 ### Building BinUtils
 It is important that Binutils is built first. This is mostly because when Glibc and GCC are built, they perform various tests on the linker and assembler to figure out which of their features to enable.
 
-To start building BinUtils, first move to the sources directory (`$LFS/sources`) and extract the package.
+To start building BinUtils, first move to the sources directory (`$LFS/sources`) and extract the package with:
+
+```
+tar xfjv binutils-2.27.tar.bz2
+```
+*Note: You're version might be different*
 
 <center>
 <img src="../../img/posts/LFS-SBUs-Binutils/tar-binutils.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.png'"> 
 </center>
+
+
+The Binutils documentation recommends building it in a dedicated `build` directory, so lets go ahead and make and enter that:
+
+```
+mkdir build
+cd build
+```
