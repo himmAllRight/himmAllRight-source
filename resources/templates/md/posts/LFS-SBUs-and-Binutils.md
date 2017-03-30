@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Linux from Scratch - SBUs and Binutils"
-:date "2017-03-28"
+:date "2017-03-31"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
 :draft? false
@@ -20,7 +20,9 @@ SBUs are not completely accurate, because there are still many factors that diff
 
 For example, machines with multiple cores can run a "parallel make" by providing the `-j` makeflag, as in `make -j 4`. This allows the package to be compiled using multiple cores, potentially speeding up the build process significantly. However, due to how compilation jobs have to be divided for parallel builds, SBUs are even harder to predict and may be even more sporadic. Just remember that. Also, if you ever run into a problem during a build step, it is a good idea to first retry it with a single processor build. If this doesn't fix the issue itself, the error message can at least be properly analyzed.
 
-### Building Notes
+### My Encountered Issues with tar...
+
+### Building Notes?
 
 
 
@@ -28,3 +30,7 @@ For example, machines with multiple cores can run a "parallel make" by providing
 It is important that Binutils is built first. This is mostly because when Glibc and GCC are built, they perform various tests on the linker and assembler to figure out which of their features to enable.
 
 To start building BinUtils, first move to the sources directory (`$LFS/sources`) and extract the package.
+
+<center>
+<img src="../../img/posts/LFS-SBUs-Binutils/tar-binutils.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.png'"> 
+</center>
