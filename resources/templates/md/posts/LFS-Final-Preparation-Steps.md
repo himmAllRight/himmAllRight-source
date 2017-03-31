@@ -88,6 +88,8 @@ ln -sv $LFS/tools /
 
 This enables the tool-chain to be compiled so that it always refers to `/tools`, which ensures that the compiler, assembler, and linker will work in both the first, and second steps of the LFS build.
 
+**Update:** *I did this step wrong the first time (I think it failed), and encountered errors later when trying to run tar. If you encounter issues as well, jump to [my next post](../LFS-SBUs-and-Binutils/) to see how I resolved these issues*
+
 ### Adding the LFS User
 Running a system as root is a dangerous. Running the wrong command can completely obliterate a system, and having a typo bork the LFS build, or even the host system, would be horrific. To prevent this, the book recommends creating an unprivileged user to build the packages from. To do so, first create an *lfs* group and then create + add a *lfs* user to it using the commands (as root, ironic for this section...):
 
