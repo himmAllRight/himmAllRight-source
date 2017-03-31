@@ -24,8 +24,27 @@ For example, machines with multiple cores can run a "parallel make" by providing
 
 ![Tar issues](../../img/posts/LFS-SBUs-Binutils/tar-error.png)
  
- 
- 
+The first time I attempted to build binutils, I encountered a few errors. The jist of it was that I could not untar the package correctly, at least from my *lfs* account. When I would switch to the *root* or even *ryan* user accounts, everything worked fine. Running tar on *lfs* returned the error:
+
+```
+tar (child): bzip2: Cannot exec: Too many levels of symbolic links
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+```
+I searched around but most of the advice didn't help my problem. Most of it was indicating that my /usr/bin/bzip2 might be a symlink and should be altered. But that wasn't the case. However, I did try something that illuminated the issue: I removed the `/tools/bin` from the begging of the `path` variable, defiend in the *lfs* `.bashrc` file. That temporarily fixed my issues. So I knew it was with the symlink I setup in [the previous LFS post](../LFS-Final-Preparation-Steps), specifically the `ln -sv $LFS/tools /` command -- it must have failed and I wasn't paying attention.
+
+Now that I was knew what the problem was, I was able to fix it by running the following commands (some of them might need to be run from a *root/sudo* account):
+
+```
+rm -rf $LFS/tools
+rm -rf /tools
+mkdir -pv $LFS/tools
+ln -sv $LFS/tools /
+```
+
+These commands remove and reset the `tools` symlinks. I then made sure to re-add `/tools/bin` to the begging of the `path` var in the *lfs* `.bashrc`. Problem fixed!
+
 ### Building Notes?
 
 
