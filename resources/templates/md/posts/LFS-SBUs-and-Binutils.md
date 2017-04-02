@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Linux from Scratch - SBUs and Binutils"
-:date "2017-03-31"
+:date "2017-04-02"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
 :draft? false
@@ -69,4 +69,38 @@ The Binutils documentation recommends building it in a dedicated `build` directo
 ```
 mkdir build
 cd build
+```
+
+Now it is time to build. Normally, this would be best done by sequentially performing a series of *configure*, *make*, and *make install* commands, but for this compilation, we want to get an accurate reading on how long it takes (to record our SBU time). So, I put all of the commands into a bash script, so that I could execute the script, and easily time the whole process using the unix `time` command. So for the script, I just wrote all of the commands in one file (`build-binutils.sh`):
+
+
+
+```
+#!/bin/bash
+
+../configure --prefix=/tools            \
+             --with-sysroot=$LFS        \
+             --with-lib-path=/tools/lib \
+             --target=$LFS_TGT          \
+             --disable-nls              \
+             --disable-werror
+make
+
+case $(uname -m) in
+  x86_64) mkdir -v /tools/lib && ln -sv lib /tools/lib64 ;;
+esac
+
+make install
+```
+
+Then, to runs the script, first make it executable, 
+
+```
+chmod +x build-binutils.sh
+```
+
+Then time and execute the script: 
+
+```
+time ./build-binutils.sh
 ```
