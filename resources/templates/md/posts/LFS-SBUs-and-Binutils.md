@@ -70,7 +70,7 @@ The Binutils documentation recommends building it in a dedicated `build` directo
 mkdir build
 cd build
 ```
-
+#### Making a Build Script
 Now it is time to build. Normally, this would be best done by sequentially performing a series of *configure*, *make*, and *make install* commands, but for this compilation, we want to get an accurate reading on how long it takes (to record our SBU time). So, I put all of the commands into a bash script, so that I could execute the script, and easily time the whole process using the unix `time` command. So for the script, I just wrote all of the commands in one file (`build-binutils.sh`):
 
 
@@ -104,3 +104,15 @@ Then time and execute the script:
 ```
 time ./build-binutils.sh
 ```
+
+
+<center>
+<img src="../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png'"> 
+</center>
+
+
+#### Checking the Build
+
+<center>
+<img src="../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png'"> 
+</center>
