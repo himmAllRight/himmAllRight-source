@@ -45,9 +45,6 @@ ln -sv $LFS/tools /
 
 These commands remove and reset the `tools` symlinks. I then made sure to re-add `/tools/bin` to the begging of the `path` var in the *lfs* `.bashrc`. Problem fixed!
 
-### Building Notes?
-
-
 
 ### Building BinUtils
 It is important that Binutils is built first. This is mostly because when Glibc and GCC are built, they perform various tests on the linker and assembler to figure out which of their features to enable.
@@ -93,13 +90,13 @@ esac
 make install
 ```
 
-Then, to runs the script, first make it executable, 
+To runs the script, first make it executable, 
 
 ```
 chmod +x build-binutils.sh
 ```
 
-Then time and execute the script: 
+Finally, time and execute the script: 
 
 ```
 time ./build-binutils.sh
@@ -110,9 +107,21 @@ time ./build-binutils.sh
 <img src="../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png'"> 
 </center>
 
+When the script completes running, the time it took to run it will be printed out. Congraguations, this is the SBU for your system!
+
+Once I had my standard single-thread SBU value, I wanted to do a run with the `-j4` make flag for comparison. To "reset", I deleted the contents of the `binutils/build/` directory, as well as `$LFS/tools/`. I then edited my `build-binutils.sh` script to do a parallell compile by changing `make` line to `make -j4`. Then I simply re-ran the script with `time`. *Note: This is not described anywhere in the offical documentation, but is just my best guess at what to do for a re-run of binutils. I very well may be missing steps. However, remember LFS is a learning experience*!
 
 #### Checking the Build
 
 <center>
 <img src="../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png'"> 
 </center>
+
+After the build is complete, it is a good idea to run the tests, *especially* for binutils. In this case, it is accomplished using one of the make commands:
+
+```
+make -k check
+```
+
+### Building the Tools From Here on Out...
+For the sake of time, I will not be writting posts detailing the build process for each of the remaining packages in Chapter 5. I might keep a little log about how each of the builds go and post it, but I am unsure. If I encounter any major snags along the way, I will also write a post detailing them. Otherwise, with any luck, I'm going to keep compiling and see you in Chapter 6!
