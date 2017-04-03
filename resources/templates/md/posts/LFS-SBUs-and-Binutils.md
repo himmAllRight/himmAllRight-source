@@ -90,6 +90,17 @@ esac
 make install
 ```
 
+In the configure step, the various options mean the following:
+
+- `--prefix=/tools`: Configures the build to install the Binutils programs to the /tools directory
+- `--with-sysroot=$LFS`: For cross compilation, tells the build system to look in our $LFS directory for the target system libraries as needed.
+- `--with-lib-path=/tools/lib`: configures the library path that the linker should be configured to use.
+- `--target=$LFS_TGT`: the machine description in the `LFS_TGT` variable is slightly different than the value returned by the *config.guess* script, so this option will tell the *configure* script to adjust Binuti's build system for building the cross linker.
+- `disable-nls`: disables the internationalization, as it is not needed for the temporary tools.
+- `disable-werror`: Prevents the build from stopping in the event that there are warnings from the host's compilier.
+
+The `case` statement creates a symlink to ensure the sanity of the toolchain, if building on a *x86_64* architecture.
+
 To runs the script, first make it executable, 
 
 ```
