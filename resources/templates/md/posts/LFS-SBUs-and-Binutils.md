@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Linux from Scratch - SBUs and Binutils"
-:date "2017-04-02"
+:date "2017-04-04"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
 :draft? false
