@@ -29,7 +29,7 @@ For example, systems with multiple cores can run "parallel make" using the `-j` 
 
 ![Tar issues](../../img/posts/LFS-SBUs-Binutils/tar-error.png)
  
-The first time I attempted to build binutils, I encountered a few errors. The jist of it was that I could not untar the package correctly, at least from my *lfs* account. When I would switch to the *root* or even *ryan* user accounts, everything worked fine. Running tar on *lfs* returned the error:
+The first time I attempted to make binutils, I encountered a few errors. The gist of it was that I was not able untar the package correctly, at least from the *lfs* user. Everything worked fine from the *root* or even *ryan* user accounts, but running tar on *lfs* returned the following error:
 
 ```
 tar (child): bzip2: Cannot exec: Too many levels of symbolic links
@@ -37,7 +37,7 @@ tar (child): Error is not recoverable: exiting now
 tar: Child returned status 2
 tar: Error is not recoverable: exiting now
 ```
-I searched around but most of the advice didn't help my problem. Most of it was indicating that my /usr/bin/bzip2 might be a symlink and should be altered. But that wasn't the case. However, I did try something that illuminated the issue: I removed the `/tools/bin` from the begging of the `path` variable, defiend in the *lfs* `.bashrc` file. That temporarily fixed my issues. So I knew it was with the symlink I setup in [the previous LFS post](../LFS-Final-Preparation-Steps), specifically the `ln -sv $LFS/tools /` command -- it must have failed and I wasn't paying attention.
+I searched around but much of the initial advice didn't help my problem. It often indicated that my /usr/bin/bzip2 might be a symlink and should be altered. That wasn't the case. Then tried something that illuminated the issue: I removed the `/tools/bin` from the begging of the `path` variable (defiend in the *lfs* `.bashrc` file). That temporarily fixed the issues. So I knew the problem was related to the symlink I setup in [the previous LFS post](../LFS-Final-Preparation-Steps), specifically the `ln -sv $LFS/tools /` command. It must have failed and I wasn't paying attention.
 
 Now that I was knew what the problem was, I was able to fix it by running the following commands (some of them might need to be run from a *root/sudo* account):
 
@@ -48,13 +48,13 @@ mkdir -pv $LFS/tools
 ln -sv $LFS/tools /
 ```
 
-These commands remove and reset the `tools` symlinks. I then made sure to re-add `/tools/bin` to the begging of the `path` var in the *lfs* `.bashrc`. Problem fixed!
+These commands remove and reset the `tools` symlinks. I then made sure to re-add `/tools/bin` to the begging of the `path` var in the *lfs* `.bashrc` and test it. Problem fixed!
 
 
 ### Building BinUtils
-It is important that Binutils is built first. This is mostly because when Glibc and GCC are built, they perform various tests on the linker and assembler to figure out which of their features to enable.
+It is important that Binutils is built first in the process. This is mostly because when Glibc and GCC are built, they perform various tests on the linker and assembler to figure out which of their own features to enable.
 
-To start building BinUtils, first move to the sources directory (`$LFS/sources`) and extract the package with:
+To start building BinUtils, move to the sources directory (`$LFS/sources`) and extract the package with (If you encounter issues, see section above):
 
 ```
 tar xfjv binutils-2.27.tar.bz2
@@ -66,7 +66,7 @@ tar xfjv binutils-2.27.tar.bz2
 </center>
 
 
-The Binutils documentation recommends building it in a dedicated `build` directory, so lets go ahead and make and enter that:
+The Binutils documentation recommends building it in a dedicated `build` directory, so lets go ahead and make, then enter, that directory:
 
 ```
 mkdir build
