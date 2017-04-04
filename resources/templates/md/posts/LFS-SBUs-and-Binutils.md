@@ -6,7 +6,7 @@
 :draft? false
 }
 
-Well, after all of the preparation, we are ready to start compiling some packages. This post won't go into compiling all the packages, but it will detail the first compilation of [Binutils](https://www.gnu.org/software/binutils/), which is one of the most important packages to compile. Why is compiling Binutils so crucial? It determines the SBU time for your build system. What's an SBU? Read on to find out!
+Well, after all of the preparation, we are ready to start compiling packages. This post cover compiling all the packages, but it will detail the first build of [Binutils](https://www.gnu.org/software/binutils/), which is argueably the most important package to compile. Why is Binutils so crucial? It determines the SBU time for your build system. What's an SBU? Read on to find out!
 
 <!-- more -->
 
@@ -14,14 +14,16 @@ Well, after all of the preparation, we are ready to start compiling some package
 
 ![SBU Table](../../img/posts/LFS-SBUs-Binutils/SBU-table.png)
 
-When completing LFS, people commonly want to know how long it will take to compile the packages. Unfortunately, build times are very much dependent on the power and configuration of the system the packages are being compiled on. Some packages may only take a few minutes on a powerful workstation, but hours on an aged laptop. While we cannot say how long a specific build will take on any device, we can normalize how long each package build takes comparatively to each other. This normalization is done using Stand Build Units, or SBUs.
+*A table of package SBUs and their predicted build time*
 
-An SBU is the amount of time it takes to compile a standard package. Each package in the LFS book has a SBU value, so that compilation times can be gauged. So, if The first package to be compiled in the book (and in this post), is Binutils, so that is the package which SBUs are set against. For example, if it took 10 minutes to build Binutils on your machine, then for you, 1 SBU = 10 minutes. So, this means if a 4.5 SBU package is being compiled on that machine, it can be expected to take ~45 minutes to build.
+When completing LFS, people commonly want to know how long it will take to compile each package. Unfortunately, build times are very much dependent on the power and configuration of the system the packages are being compiled on. Some packages may take a few minutes on a powerful workstation, but hours on an aged laptop. While it cannot be said how long a specific build will take on any device, we can normalize how long each package build takes comparatively to each other. This normalization is done using Stand Build Units, or SBUs.
+
+A SBU is the unit of time measurement it takes to make and install a standard package. Each package in the LFS book has a SBU value, so that build times can be gauged. So, if The first package to be constructed in the book (and in this post), is Binutils, so that is the package which SBUs are normalized to. For example, if it took 10 minutes to build Binutils on your machine, then 1 SBU = 10 minutes for that machine. This means a 4.5 SBU package can be expected to take ~45 minutes to build.
 
 #### SBU Accuracy
-SBUs are not completely accurate, because there are still many factors that differ between setups. They should be used as an estimate at best, but remember that they could be off by dozens of minutes in worst-case scenarios.
+SBUs are not completely accurate, and should be used as an estimate at best. Due to the many factors that may differ between setups, SBUs can be off by dozens of minutes in worst-case scenarios. Certain make options might also throw the system off.
 
-For example, machines with multiple cores can run a "parallel make" by providing the `-j` makeflag, as in `make -j 4`. This allows the package to be compiled using multiple cores, potentially speeding up the build process significantly. However, due to how compilation jobs have to be divided for parallel builds, SBUs are even harder to predict and may be even more sporadic. Just remember that. Also, if you ever run into a problem during a build step, it is a good idea to first retry it with a single processor build. If this doesn't fix the issue itself, the error message can at least be properly analyzed.
+For example, systems with multiple cores can run "parallel make" using the `-j` makeflag, as in `make -j4`. This tell *make* to compiled the package using multiple cores. Parallel compilation has the potential to speed up the build process significantly. However, due to how compilation jobs are divided for parallel builds, SBUs are even harder to predict and may be even more sporadic. Just remember that and don't expect too much SBU accuracy when using `make -j`. Also, if you ever run into a problem during a build step, it is a good idea to first retry with a single processor build. If this doesn't fix the issue itself, the error message can at least be more easily analyzed.
 
 ### My Encountered Issues with tar...
 
