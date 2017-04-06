@@ -26,6 +26,9 @@ a:hover {
 }
 
 .container {
+    display: grid;
+    grid-template-columns: 0.25fr 1px 0.75fr;
+    grid-template-rows: auto;
     max-width: 1000px;
     min-height: 870px;
     height: 100%;
@@ -148,8 +151,8 @@ a:hover {
 
 #content {
     /*    visibility: hidden;*/
-    grid-column-start: 2;
-    gird-column-end: 3;
+    grid-column-start: 3;
+    gird-column-end: 4;
     position: relative;
     padding-bottom: 60px;
     color: #000;
