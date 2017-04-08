@@ -11,7 +11,7 @@ body {
     background-position: center;
     background-size: cover;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 16px 
 }
 
 a {
@@ -100,6 +100,8 @@ a:hover {
     background-color: rgba(34, 34, 34, 0.9);
     border-radius: 3px;
     box-shadow: 0 0 0 0,0 6px 12px rgba(34,34,34,0.1);
+
+    color: #fff;
 }
 
 #content img {
@@ -131,7 +133,14 @@ footer {
 
 #post-meta {
     font-size: 14px;
-    color: rgba(0,0,0,0.4)
+    /* color: rgba(0,0,0,0.4) */
+    color: #ccc;
+}
+#preview-meta {
+    font-size: 14px;
+    font-weight: bold;
+    /* color: rgba(0,0,0,0.4) */
+    color: #ccc;
 }
 
 #page-header {
