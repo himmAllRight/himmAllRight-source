@@ -118,6 +118,7 @@ footer {
 
 #post-tags {
     margin-top: 30px;
+    font-weight: bold;
 }
 
 #prev-next {
@@ -164,7 +165,9 @@ code {
 }
 
 pre, code, .hljs {
-    background-color: #f7f9fd;
+    /* background-color: #f7f9fd; */
+    background-color: #191919;
+    color: #ffffff;
 }
 
 @media (min-width: 768px) {
