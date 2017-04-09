@@ -3,6 +3,8 @@
  :page-index 1
  :navbar? true}
 
+<img src="../../img/avatar.jpg" style="width: 40%; float: left; margin: 0px 10px 0px 10px; border= 3px solid #000;"/)
+
 I am a 25 year-old back-end software developer working in Walpole MA, at a company that primarily develops in [Allegro Common Lisp](http://franz.com/products/allegro-common-lisp/). I spend most of my days writing LISP code, so naturally, I am also a big fan of [emacs](https://www.gnu.org/software/emacs/) and spend my working hours with it full screen (which also helps me forget I'm in Windows). 
 
 Outside of work, I am an avid Linux user that loves learning about
@@ -23,3 +25,4 @@ Feel free to contact me using any of the methods below.
 * IRC: I'm often on geekshed and freenode channels as `himmAllRight`
 
 * Telegram: `@himmAllRight`
+ 
