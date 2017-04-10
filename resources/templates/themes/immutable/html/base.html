@@ -11,6 +11,26 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
     {% style "css/screen.css" %}
+
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.ryan.himmelwright.net"]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//cloud.himmelwright.net/piwik/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//cloud.himmelwright.net/piwik/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
 </head>
 <body>
 
@@ -52,7 +72,7 @@
                         <li><a href="https://www.instagram.com/himmelwr/">Instagram</a></li>
                         <li><a href="https://twitter.com/himmAllRight17">Twitter</a></li>
                                {% if latest-posts|not-empty %}
-                        <!-- <li class="divider"></li> -->
+                        <li class="divider"></li>
                         <li class="dropdown-header">Recent Posts</li>
                         {% for post in latest-posts %}
                         <li><a href="{{post.uri}}">{{post.title}}</a></li>
@@ -63,7 +83,7 @@
                         <li class="divider"></li>
                         <li class="dropdown-header">Tags</li>
                         {% for tag in tags %}
-                        <li><a href="{{tag.uri}}">{{tag.name}}</a></li>
+                        <li><a href="{{tag.uri}}"><b>[{{tag.name}}]</b></a></li>
                         {% endfor %}
                         {% endif %}
                     </ul>
@@ -86,7 +106,7 @@
         </div>
     </div>
     <footer>Copyright &copy; {{today|date:yyyy}} {{author}}
-        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+        <p style="text-align: center;">Generated using <a href="http://cryogenweb.org">Cryogen</a></p></footer>
 </div>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
