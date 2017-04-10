@@ -56,7 +56,7 @@
                 </li>
                 {% endfor %}
                 <li
-                {% if archives %} class="active" {% endif %}><a href="{{archives-uri}}">Archives</a></li>
+                {% if archives %} class="active" {% endif %}><a href="{{archives-url}}">Archives</a></li>
                 <li><a href="{{rss-uri}}">RSS</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -67,10 +67,10 @@
                              {% endfor %}
                            -->
                         <li class="dropdown-header">Links</li>
-                        <li><a href="https://github.com/himmAllRight">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/ryan-himmelwright-b3891774/">LinkedIn</a></li>
-                        <li><a href="https://www.instagram.com/himmelwr/">Instagram</a></li>
-                        <li><a href="https://twitter.com/himmAllRight17">Twitter</a></li>
+                        <li><a href="https://github.com/himmAllRight"><img src={{site-url}}/img/icons/Github.png width="30px">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/ryan-himmelwright-b3891774/"><img src={{site-url}}/img/icons/Linkedin.png width="30px">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/himmelwr/"><img src={{site-url}}/img/icons/Instagram.png width="30px">Instagram</a></li>
+                        <li><a href="https://twitter.com/himmAllRight17"><img src={{site-url}}/img/icons/Twitter.png width="30px">Twitter</a></li>
                                {% if latest-posts|not-empty %}
                         <li class="divider"></li>
                         <li class="dropdown-header">Recent Posts</li>
