@@ -25,7 +25,7 @@
  :post-date-format   "yyyy-MM-dd"
  :sass-src           nil
  :sass-dest          nil
- :theme              "ryan1"
+ :theme              "immutable"
  :resources          ["img"]
  :keep-files         [".git"]
  :disqus?            true
