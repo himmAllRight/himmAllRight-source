@@ -109,6 +109,13 @@ a:hover {
     height: auto;
 }
 
+#caption {
+    font-size: 13px;
+    font-style: italic;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
 footer {
     font-size: 14px;
     text-align: center;
