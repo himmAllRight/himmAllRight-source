@@ -13,25 +13,35 @@ When I first started using [Cryogen](http://cryogenweb.org) to generate this web
 While possibly could still look dated (I hope I'm at least getting better...), it addresses my of the issues I had with my *ryan1* theme. I will explain and give some examples of these improvements below:
 
 [![Homepage with old ryan1 Theme](../../img/posts/New-Theme-Immutable/ryan1-home.png)](../../img/posts/New-Theme-Immutable/ryan1-home.png)
-*Homepage with the old Theme*
+<div id="caption">Homepage with the old Theme</div>
 
 [![Homepage with Immutable Theme](../../img/posts/New-Theme-Immutable/immutable-home.png)](../../img/posts/New-Theme-Immutable/immutable-home.png)
-*Homepage with the new Immutable Theme*
+<div id="caption">Homepage with the new Immutable Theme</div>
 
 
 ### Removed Sidebar
 
 [<img src="../../img/posts/New-Theme-Immutable/sidebar-changes.png">](../../img/posts/New-Theme-Immutable/sidebar-changes.png)
-*The sidebar components have been distributed to other parts of the site*
+<div id="caption">The sidebar components have been distributed to other parts of the site</div>
 
 I have to be honest here... I sort of still planned on keeping the side bar when I started to build the theme. I liked how it held all of my links (Github, LinkedIn, etc), the recent posts and tags in one, easy to find location. I also liked having my avatar picture in the side bar to make the site more personable. After working on the base of the theme however, I realized it might be better off without it. I've relocated the items to other locations of the site. The majority of the links have been relocated to the drop-down menu (icon images included :D ), and I was at least able to add my picture to the [About Page](../../pages/about/).
 
 I might reinstate a sidebar in the future, but only if it looks *good* and I can add it *correctly*. The way I implemented the old sidebar is actually what caused many of the issues prompting this new theme, and I do not want to bring back those problems.
 
-### Removed Bad Footer
+### Removed the Bad Footer
+[<img src="../../img/posts/New-Theme-Immutable/ryan1-bad-footer.png">](../../img/posts/New-Theme-Immutable/ryan1-bad-footer.png)
+<div id="caption">Bad Footer Placements</div>
+
+One of the issues created by the sidebar and my poor css floats, was the footer. One pages where the main content section was large enough, it consisted as a dark gray bar along the bottom of the page, and looked fine. However, when viewing a page with a small content section, such as the *About* page, the footer would rise up and behind the sidebar, looking terrible. It was something that bothered me every time I saw it, and was probably an easy fix, but I never felt like sitting down to fix it.
+
+[<img src="../../img/posts/New-Theme-Immutable/immutable-footer.png">](../../img/posts/New-Theme-Immutable/immutable-footer.png)
+<div id="caption">New Footer</div>
+
+Luckily in the *Immutable* theme, I have fixed the footer. I also have removed the gray bar, because I think it would just clutter up the page more. The background looks great, and the text is clear over it. I really just need a small copyright statement and I like having the [Cryogen](http://cryogenweb.org) shout-out here. So that's all I have for the footer.
 
 ### Mobile Support
 
 ### Mobile Navigation
 
 ### Continued Work
+The theme's name might be *immutable*, but work on it isn't. There are still several things I plan on tweaking over time.
