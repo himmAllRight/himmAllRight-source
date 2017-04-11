@@ -19,7 +19,7 @@ While possibly could still look dated (I hope I'm at least getting better...), i
 <div id="caption">Homepage with the new Immutable Theme</div>
 
 
-### Removed Sidebar
+### Removed the Sidebar & Dispersed Its Contents
 
 [<img src="../../img/posts/New-Theme-Immutable/sidebar-changes.png">](../../img/posts/New-Theme-Immutable/sidebar-changes.png)
 <div id="caption">The sidebar components have been distributed to other parts of the site</div>
@@ -40,8 +40,14 @@ One of the issues created by the sidebar and my poor css floats, was the footer.
 Luckily in the *Immutable* theme, I have fixed the footer. I also have removed the gray bar, because I think it would just clutter up the page more. The background looks great, and the text is clear over it. I really just need a small copyright statement and I like having the [Cryogen](http://cryogenweb.org) shout-out here. So that's all I have for the footer.
 
 ### Mobile Support
+[<img src="../../img/posts/New-Theme-Immutable/mobile-changes.png">](../../img/posts/New-Theme-Immutable/mobile-changes.png)
+<div id="caption">Mobile viewing the homepage and a post, on both the old theme and Immutable</div>
+My biggest reason for making the new theme was that viewing the website on a mobile device was a poor experience. By poor experience, I mean it was basically unusable. Again, because I had the sidebar setup poorly, it remained on the side... even on mobile. This meant there was not enough room for the actual main content section, and pages/posts were a skinny line of text down the side of the phone. Don't get me started  on how images were displayed. 
+
 
 ### Mobile Navigation
+[<img src="../../img/posts/New-Theme-Immutable/mobile-menu.png">](../../img/posts/New-Theme-Immutable/mobile-menu.png)
+<div id="caption">Main navigation drop-down and the extended drop-down menu on mobile</div>
 
 ### Continued Work
-The theme's name might be *immutable*, but work on it isn't. There are still several things I plan on tweaking over time.
+The theme's name might be *immutable*, but work on it isn't. There are still several things I plan on tweaking over time. 
