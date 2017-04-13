@@ -1,18 +1,18 @@
 {:layout :post
-:title  "ZFS Backups to an External Drive with LUKS"
+:title  "ZFS Snapshot Backups to an External Drive with LUKS"
 :date "2017-04-14"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "ZFS" "Linux"]
 :draft? false
 }
 
-***Screenshot of current zfs Pools list?***
-
-***Picture of Ninetale's Drive Caddies?***
-
 I have had [my server](../../pages/homelab/) running [zfs](https://en.wikipedia.org/wiki/ZFS) data pools to store my data for some time now. However, I am ashamed to admit that I do not have a *true* backup system in place. I attempted to setup this system in the past, but had an issue and let it drift to the side. That changes now.
 
 <!-- more -->
+
+***Screenshot of current zfs Pools list?***
+
+***Picture of Ninetale's Drive Caddies?***
 
 Currently, my server is configured with 2 main zfs mirrored pools.  The first one, `Data`, is a 2.72 TB usable pool housed on 2 x 3TB hard drives,  and contains all of my wife's and my data, organized into sub-catigory pools (ex: `Data/Music`, `Data/Pictures`, `Data/ryan`, etc). The second, `Backups`, is a 928 GB usable pool on the 2 x 1TB hard drives from my old desktop. It stores the automatic backups of some of the VMs and LXC containers on the server.
 
