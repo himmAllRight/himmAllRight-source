@@ -12,9 +12,13 @@ I have released the 1.0 Beta version for a personal project of mine, the **L**ed
 
 ## What is LIA?
 
+![Credit Card Statement CSV](../../img/posts/LIA-1-0-Beta-Released/creditCardDownload.png)
+
 A while ago, I learned about [Ledger](http://www.ledger-cli.org), the command line double-entry accounting application, and wanted to start keeping tack of our finances with it. I wanted easily import our bank and credit card statements into ledger journals, and then use ledger to analyze the finances. However, there was one issue. While there are several other great ledger convert/import options out there, many were more complicated than what I was looking for. So...I decided to write my own tool. 
 
-![Credit Card Statement CSV](../../img/posts/LIA-1-0-Beta-Released/creditCardDownload.png)
+![Example Ledger Journal File](../../img/posts/LIA-1-0-Beta-Released/ledger-journal.png)
+
+*Example Ledger Journal File*
 
 When I started writing LIA, I just wanted a python script that could help me convert the contents of a .csv file into a ledger-journal formatted file (without any of the fancy features. Just the basics). I thought it was a simple task that should only take me a few hours. And it did. I wrote the the first basic implementation of LIA on a Sunday afternoon. However, while coding that bare-bones version, I realized while it *technically worked*, it would not be enjoyable to use, and therefore I would never use it. So I decided to expand it into something more than a script.
 
