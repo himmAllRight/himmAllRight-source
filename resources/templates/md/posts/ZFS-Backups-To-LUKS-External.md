@@ -10,6 +10,8 @@ I have had [my server](../../pages/homelab/) running [zfs](https://en.wikipedia.
 
 <!-- more -->
 
+![Server and External Drives](../../img/posts/ZFS-Backups-To-LUKS-External/drives.png")
+
 ***Screenshot of current zfs Pools list?***
 
 ***Picture of Ninetale's Drive Caddies?***
