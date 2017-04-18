@@ -3,7 +3,7 @@
 :date "2017-04-15"
 :author "Ryan Himmelwright"
 :tags ["Linux" "LFS"]
-:draft? false
+:draft? true
 }
 
 This is just a simple update that I have completed the remainder of Chapter five. Despite how much later this is being posted from [my last LFS post](../LFS-SBUs-and-Binutils/), the remainder of the chapter was rather easy and uneventful. Just like this post.

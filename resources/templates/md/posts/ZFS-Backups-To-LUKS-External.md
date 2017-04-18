@@ -3,7 +3,7 @@
 :date "2017-04-14"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "ZFS" "Linux"]
-:draft? false
+:draft? true
 }
 
 I have had [my server](../../pages/homelab/) running [zfs](https://en.wikipedia.org/wiki/ZFS) data pools to store my data for some time now. However, I am ashamed to admit that I do not have a *true* backup system in place. I attempted to setup this system in the past, but had an issue and let it drift to the side. That changes now.
