@@ -25,4 +25,6 @@ Feel free to contact me using any of the methods below.
 * IRC: I'm often on geekshed and freenode channels as `himmAllRight`
 
 * Telegram: `@himmAllRight`
+
+* Mastodon: [himmAllRight@mastadon.rocks](https://mastodon.rocks/@himmAllRight)
  
