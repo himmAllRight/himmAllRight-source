@@ -7,6 +7,7 @@
 }
 
 I have released the 1.0 Beta version for a personal project of mine: the **L**edger **I**mport **A**ssistant, or [LIA](https://github.com/himmALlRight/LIA/). This post will talk briefly about the background of LIA, what it does, and explain the beta release. 
+
 <!-- more -->
 
 ## What is LIA?
