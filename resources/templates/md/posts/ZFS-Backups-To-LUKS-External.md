@@ -29,5 +29,12 @@ My plan is to setup a zfs pool on the external drive so, that I can send bi-week
 The first time I did this, it had only copied my `Data` snapshot, and not any of the children ones (`Data/Music`, `Data/Pictures`, etc). After some digging around in the docs and online I found that I needed to add the `-R` to my `zfs send` command.
 
 ### Incremental Backups
+note: So I got this working. The first thing was that I remembered that the `zfs send` `-i` (and `-I`) tag needs two items following it: the starting snapshot, and the one it is increment to.
+
+The second issue I got was that it said my destination had been changed since last snapshot. I looked this up and sometimes just looking around the pool can change files, so I set my backup pool to be read only. Not sure if this will help in the future or not, but we'll see.
+
+```sudo zfs set readonly=on externalBackup```
+
+I still had the error, so I added the `-F` flag to the `zfs recv` command. We'll see if that works. I also thought about rolling back to the snapshot, and then copying which is likely a safer method. I'll let this finish and then write about it...
 
 ### Summary
