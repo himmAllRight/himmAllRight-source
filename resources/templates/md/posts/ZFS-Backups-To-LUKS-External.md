@@ -1,9 +1,9 @@
 {:layout :post
 :title  "ZFS Snapshot Backups to an External Drive with LUKS"
-:date "2017-04-14"
+:date "2017-04-19"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "ZFS" "Linux"]
-:draft? true
+:draft? false
 }
 
 I have had [my server](../../pages/homelab/) running [zfs](https://en.wikipedia.org/wiki/ZFS) data pools to store my data for some time now. However, I am ashamed to admit that I do not have a *true* backup system in place. I attempted to setup this system in the past, but had an issue and let it drift to the side. That changes now.
@@ -24,7 +24,32 @@ My plan is to setup a zfs pool on the external drive so, that I can send bi-week
 
 ### Setting up LUKS
 
+[LUKS](https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md) (Linux Unified Key Setup) is the standard for Linux disk encryption. I will use it to encrypt the external drive, and then present the LUKS mapper devices to ZFS as a block device. To do this, we need to first install `cryptsetup` with `sudo apt-get install cryptsetup` (Assuming you are on a Debian-based operating system). Once that is installed, we can setup LUKS on the drive.
+
+The cryptsetup tool has a plethora of settings and options. After researching around, I decided use the options the author of [this post](http://www.makethenmakeinstall.com/2014/10/zfs-on-linux-with-luks-encrypted-disks/) used, because they did something very similar to what I want to do. I setup LUKS on my external drive using the following command:
+
+
+```
+cryptsetup luksFormat --cipher aes-xts-plain64 --key-size 512 --iter-time 10000 --use-random -y /dev/sdf
+```
+`--cipher aex-xts-plain64`and `--key-size 512` refer to the algorithm and key size used to encrypt the data. In general, the larger the key, the harder the encryption is to crack.
+
+`--iter-time 10000` and `--use-random -y` are additional precautions to make it more difficult to crack the encryption. The `--iter-time 10000` means it will spend at least 10 seconds processing the passphrase each time the disk is unlocked. This makes it much harder to brute-force the passphrase. 
+
+Once the device is encrypted, we need to unlock it and map it as a device. This is done using the command:
+
+```
+sudo cryptsetup luksOpen /dev/sdf sdf-enc
+```
+
+`/dev/sdf` is the external disk, and `sdf-enc` is whatever you want to name the unlocked device. This is the name that what will be used to when referring to the unlocked device. Now that the drive is encrypted and unlocked, it's time for some ZFS.
+
+### Creating a ZFS Pool
+
+
 ### Taking & Sending a Snapshot
+
+![Taking a ZFS snapshot](../../img/posts/ZFS-Backups-To-LUKS-External/snapshot.gif)
 
 The first time I did this, it had only copied my `Data` snapshot, and not any of the children ones (`Data/Music`, `Data/Pictures`, etc). After some digging around in the docs and online I found that I needed to add the `-R` to my `zfs send` command.
 
