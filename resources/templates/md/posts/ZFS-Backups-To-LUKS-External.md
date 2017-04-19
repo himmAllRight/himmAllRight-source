@@ -118,4 +118,6 @@ I am not sure if this will mitigate this problem in the future, but time will te
 
 I still had the error when sending, so I added the `-F` flag to the `zfs recv` command. I am not sure if this was the *best* solution, but it seemed to be okay. I also thought about rolling back to the snapshot, and then copying which is likely a safer method (if you don't mind losing the "changes" on the destination pool).
 
+### Safely Closing and Removing the External Drive
+
 ### Summary
