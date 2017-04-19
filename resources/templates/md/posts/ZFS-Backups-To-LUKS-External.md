@@ -120,4 +120,13 @@ I still had the error when sending, so I added the `-F` flag to the `zfs recv` c
 
 ### Safely Closing and Removing the External Drive
 
+![Exporting the zpool](../../img/posts/ZFS-Backups-To-LUKS-External/export-zpool.gif)
+
+When the incremental backup has finished transferring, the external drive can be removed. The sequence of steps to do this are 1) export the zpool 2) close the LUKS device, and 3) unplug the drive. To export the zpool:
+
+
+```
+sudo zpool export externalBackup
+```
+
 ### Summary
