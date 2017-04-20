@@ -11,7 +11,7 @@ I have had [my server](../../pages/homelab/) running [zfs](https://en.wikipedia.
 <!-- more -->
 
 ![Server and External Drives](../../img/posts/ZFS-Backups-To-LUKS-External/drives.png")
-<div id="caption">Server and External Drives</div>
+<div id="caption">My server hot-swap drive bays and external backup drive</div>
 
 
 Currently, my server is configured with 2 main zfs mirrored pools.  The first one, `Data`, is a 2.72 TB usable pool housed on 2 x 3TB hard drives,  and contains all of my wife's and my data, organized into sub-catigory pools (ex: `Data/Music`, `Data/Pictures`, `Data/ryan`, etc). The second, `Backups`, is a 928 GB usable pool on the 2 x 1TB hard drives from my old desktop. It stores the automatic backups of some of the VMs and LXC containers on the server.
@@ -107,7 +107,7 @@ sudo zfs send -R -i Data@DataBackupBase Data@DataBackup20170418 | sudo zfs recv 
 
 Notice that I specify *two* snapshots in the send command, to define the range of differences to send. 
 
-##### A Minor Issue
+#### A Minor Issue
 When I first tried sending my incremental backup, I had a minor issue. ZFS gave me an error saying that my destination had been changed since last snapshot (meaning the base snapshot on the externalBackup pool). I looked this up online and it appears that sometimes, just looking around the pool can change files. Some people recommended setting the destination pool to read-only, so I did it to my backup pool:
 
 ```
@@ -120,13 +120,17 @@ I still had the error when sending, so I added the `-F` flag to the `zfs recv` c
 
 ### Safely Closing and Removing the External Drive
 
-![Exporting the zpool](../../img/posts/ZFS-Backups-To-LUKS-External/export-zpool.gif)
+![Exporting the zpool](../../img/posts/ZFS-Backups-To-LUKS-External/export-drive.gif)
+<div id="caption">Exporting the zpool and closing the LUKS device</div>
 
-When the incremental backup has finished transferring, the external drive can be removed. The sequence of steps to do this are 1) export the zpool 2) close the LUKS device, and 3) unplug the drive. To export the zpool:
+When the incremental backups finishes transferring, the external drive can be removed. The sequence of steps to do this are 1) export the zpool 2) close the LUKS device, and 3) unplug the drive. To export the zpool and close the LUKS device I used the commands:
 
 
 ```
 sudo zpool export externalBackup
+sudo cryptSetup luksClose sdf-enc
 ```
+
+After that, I was able to unplug the external drive, and store it in a safe location, until I need to backup data to it again.
 
 ### Summary
