@@ -1,6 +1,6 @@
 {:layout :post
 :title  "ZFS Snapshot Backups to an External Drive with LUKS"
-:date "2017-04-19"
+:date "2017-04-20"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "ZFS" "Linux"]
 :draft? false
