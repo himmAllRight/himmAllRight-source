@@ -4,7 +4,7 @@
 :date "2017-04-29"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Pi" "Cluster" "Docker" "Linux"]
-:draft? trueXSXS
+:draft? true
 }
 
 I have been meaning to setup something on my pi cluster. 
