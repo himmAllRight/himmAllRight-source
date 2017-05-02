@@ -27,5 +27,13 @@ The one issues I have with my Banana Pi compared to the Raspberry Pis, is that i
 ## Management
 ### Ansible?
 
+-- added `ryan` user on rpis, gave sudo permissions      
+
+-- setup ssh keys
+
+-- install python on rpis (bpi was okay)
+
+-- install on host (was already on solus)
+
 
 ## Glusterfs?
