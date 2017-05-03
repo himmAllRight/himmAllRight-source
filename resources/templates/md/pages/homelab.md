@@ -24,6 +24,7 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 [![Ryan's Desk](../../img/homelab/alakazam_desk.jpg)](../../img/homelab/alakazam_desk.jpg)
 *My Workstation Standing Desk*
 
+<a name="alakazam"></a>
 #### Alakazam (Main Workstation Laptop)
 ```
 System76 Bonobo Extreme
@@ -47,7 +48,7 @@ Blue Yeti Microphone - Backout Edition
 Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
-
+<a name="kadabra"></a>
 #### Kadabra (Portable Laptop) 
 ```
 Lenovo x230
@@ -72,9 +73,11 @@ Intel i5 (1.4 GHz (2.7 GHz Turbo), 3M Cache, 2 Cores, 2 Threads) ?
 Mac OS
 ```
 
+<a name="servers"></a>
 ### Servers
 [![Lack Rack](../../img/homelab/rack.jpg)](../../img/homelab/rack.jpg)
 
+<a name="ninetales"></a>
 #### Ninetales (VM Host / Home Server)
 ```
 Lenovo ThinkServer 440
@@ -116,7 +119,7 @@ Geodude (74)  - Ubuntu 16.04 - Gitlab Server
 
 #### Xbox One
 
-
+<a name="cluster"></a>
 ### PI Cluster
 [![PI Cluster](../../img/homelab/pi-cluster.png)](../../img/homelab/pi-cluster.png)
 

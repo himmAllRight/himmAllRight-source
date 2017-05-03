@@ -6,7 +6,7 @@
 :draft? false
 }
 
-I have been using [ZFS](https://en.wikipedia.org/wiki/ZFS) data pools to store data on [my server](../../pages/homelab/) for some time now. As great as that is, I am ashamed to admit that I have not had a *true* backup system in place (raid/mirrors are not backup). I have a backup solution that I have attempted in the past, but ran into an issue and let it drift to the side. That changes now. It's time to revisit my solution, and complete it to the end.
+I have been using [ZFS](https://en.wikipedia.org/wiki/ZFS) data pools to store data on [my server](../../pages/homelab/#ninetales) for some time now. As great as that is, I am ashamed to admit that I have not had a *true* backup system in place (raid/mirrors are not backup). I have a backup solution that I have attempted in the past, but ran into an issue and let it drift to the side. That changes now. It's time to revisit my solution, and complete it to the end.
 
 <!-- more -->
 
