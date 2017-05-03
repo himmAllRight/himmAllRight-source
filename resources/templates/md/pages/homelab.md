@@ -126,6 +126,7 @@ Raspberry Pi 3
 ARM v8 CPU (1.2 GHz, 4 Cores, 4 Threads)
 1 GB RAM
 MicroSD card for HD
+Ubuntu 16.04 ARM
 ```
 
 #### Node 2
@@ -134,6 +135,7 @@ Raspberry Pi 2
 ARM Coretx-A7 (900 MHz, 4 Cores, 4 Threads)
 1 GB RAM
 MicroSD card for HD
+Ubuntu 16.04 ARM
 ```
 #### Node 3
 ```
@@ -142,6 +144,7 @@ A20 ARM Cortex-A7 Dual Core (2 Cores, 2 Threads)
 1 GB RAM
 10/100/1000 Ethernet
 MicroSD card for HD
+Armbian (Ubuntu 16.04 version)
 ```
 
 
