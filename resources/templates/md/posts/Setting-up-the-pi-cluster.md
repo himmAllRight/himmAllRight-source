@@ -10,7 +10,7 @@ I have a Raspberry Pi 2 and Raspberry Pi 3, and a Banana Pi. Some time ago, I co
 
 <!-- more -->
 
-## Obtaining the OS Images
+# Setting up the OS Images
 Before doing anything with the hardware, I had to setup the "hard drives" (micro SD cards) of the pi's so they could boot. 
 
 ### Ubuntu for Raspberry PI
@@ -28,11 +28,26 @@ xzcat ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz   | sudo dd bs=4M of=
 
 The one issue that I have with my Banana Pi compared to the Raspberry Pis, is that it commonly supported. It is hard to find a bananna pi specific image, and the raspberry pi ones usually do not work. For example, while Canonical linked to Raspberry Pi images, it did not mention the banana pie.  This is where [Armbian](https://www.armbian.com/) comes in.
 
-Armbian is a lightweight Debian and Ubuntu based distribution, that provides builds for various ARM devices. Thus the name, *ARM-bian*. One of these many supported devices... is the [banana pi](https://www.armbian.com/banana-pi/).
+Armbian is a lightweight Debian and Ubuntu based distribution, that provides builds for various ARM devices. Thus the name, *ARM-bian*. One of these many supported devices... is the [banana pi](https://www.armbian.com/banana-pi/). I downloaded the Ubuntu 16.04 Server flavor of Armbian for the Banana PI, and copied it to my micro SD card with the command:
 
-### Imaging the Disks
+```
+sudo dd if=Armbian_5.25_Bananapi_Ubuntu_xenial_next_4.9.7.img  of=/dev/mmcblk0 bs=1M
+```
 
 ### Hardware Setup
+After the operating system images have been copied the SD cards, the hardware can be setup. I started by inserting the SD cards into the PIs, being careful to use the correct card with each device. Unlike the Raspberry PIs, the Bananna PI uses a normal SD card instead of a microSD, so I just left it in the converter I used to connect it to my computer when imaging.
+
+After adding the "hard drives", I connected each PI's ethernet port to my network switch. In the future, I'd like to get the cluster it's own mini switch so that I can have the nodes on their own private network, linked to my main network. For now, this works.
+
+Lastly, plug in the power connectors. Pi devices can be very finicky when not properly powered, so it is a good idea to use an USB charging device. I have had trouble in the past with my devices not working correctly due to power (especially the bpi), and I knew it would be an even greater problem with the cluster because I planned to connect a HD to the bpi with a SATA connector. So, I picked up an [Anker Power Port 5](https://www.amazon.com/Anker-Charger-PowerPort-Multi-Port-Samsung/dp/B00VH8ZW02/ref=sr_1_1?ie=UTF8&qid=1493860165&sr=8-1&keywords=Anker+power+port+5) and it has been working great.
+
+Lastly, once nice feature of the banana pi is that it has a 1 GB ethernet port, *and* a SATA connector with power. So, to get this functionality, and most out of the bpi, I ordered [the appropriate SATA connector](https://www.amazon.com/JBtek-Connectors-Banana-Supply-Terminals/dp/B00ZP0L0VS/ref=sr_1_1?ie=UTF8&qid=1493860481&sr=8-1&keywords=banana+pi+sata) off amazon for a few bucks. When it arrived, I connected it to the SATA and SATA power ports on the pi, and then to an old 300GB laptop HD I had laying around (it was the drive that came with [kadabra](../introducing-kadabra/)). After the drive was connected, running `lsblk` on the bpi showed a `/dev/sda`device, in addition to the typical `mmcblk0` microSD device. I then mounted the drive to a folder using the following command to test it out:
+
+```
+sudo mount /dev/sda1 Data
+```
+
+After mounting the drive, I was able to browse the contents of all the crap that was still on it. The combination of the GB network and the addition of the HD makes the bpi a great little storage node, which is how I intend to use it.
 
 ### Bootup and Connecting via SSH
 
