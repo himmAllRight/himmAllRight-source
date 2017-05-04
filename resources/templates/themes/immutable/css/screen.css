@@ -187,6 +187,7 @@ pre, code, .hljs {
     /* background-color: #f7f9fd; */
     background-color: #191919;
     color: #ffffff;
+    font-family: Hack, monospace;
 }
 
 @media (min-width: 768px) {
