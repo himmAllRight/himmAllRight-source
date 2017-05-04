@@ -54,7 +54,26 @@ After mounting the drive, I was able to browse the contents of all the crap that
 
 ### Bootup and Connecting via SSH
 
+When the Pis are plugged in, they should automatically boot up. In order to connect to them, I found their IPs from my main computer using `nmap`:
+
+```
+sudo nmap -sP 192.168.1.0/24
+```
+<div id="caption">This command may differ depending on your network setup</div>
+
+The Raspberry PIs have `(Raspberry Pi Foundation)` in the MAC address lines, and my Banana Pi had `bananapi` in the host name. Once I have the IP addresses, I can ssh in using the default usernames and passwords for the images (user/pass should be listed on the sites). After logging in for the first time, each PI prompted prompted me to change the password.
+
 ### Adding A Sudo User
 
+When connecting to remote devices, I don't like to be logged in as root, so the first thing I did was to setup a sudo account on the two Raspberry Pis (Armbian actually prompted me through these steps the first time I logged into the Banana pi. Kudos to them).
 
+To add the user, set it's password (important), and then add it to the sudo group, I used the following commands:
 
+```
+useradd -m -s /bin/bash ryan
+passwd ryan
+usermod -a -G sudo ryan
+```
+<div id="caption">Yes, I know I can add the user to the sudo group in the `useradd` command., but I prefer to do it with `usermod`. Personal Preference.</div>
+
+That's it. At this point, all of my the PIs are minimally set up accessible. The next steps include updating packages, setting up ssh keys, and configuring .... [Ansible](https://www.ansible.com). But that will all be in the *next post*.
