@@ -35,6 +35,9 @@ sudo dd if=Armbian_5.25_Bananapi_Ubuntu_xenial_next_4.9.7.img  of=/dev/mmcblk0 b
 ```
 
 ### Hardware Setup
+
+<img src="../../img/posts/Setting-Up-Pi-Cluster/pi-cluster.png" style="width: 40%; float: right; margin: 0px 10px 0px 10px;"/>
+
 After the operating system images have been copied the SD cards, the hardware can be setup. I started by inserting the SD cards into the PIs, being careful to use the correct card with each device. Unlike the Raspberry PIs, the Bananna PI uses a normal SD card instead of a microSD, so I just left it in the converter I used to connect it to my computer when imaging.
 
 After adding the "hard drives", I connected each PI's ethernet port to my network switch. In the future, I'd like to get the cluster it's own mini switch so that I can have the nodes on their own private network, linked to my main network. For now, this works.
