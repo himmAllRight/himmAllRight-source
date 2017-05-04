@@ -15,9 +15,12 @@ Before doing anything with the hardware, I had to setup the "hard drives" (micro
 
 ### Ubuntu for Raspberry PI
 
+<img src="../../img/posts/Setting-Up-Pi-Cluster/ubuntu-logo.jpg" style="width: 200px%; float: right; margin: 0px 10px 0px 10px;"/>
+
 After mucking around with Rapsbian and Hypriot for a bit, I decided to just go with just a plain Ubuntu image for the Raspberry Pis. I didn't have anything against these specific OSes, but I am mostly setting up this cluster to simulate what I would do on a real system. For me, that often means using a straight OS like Ubuntu.
 
 Luckily, Canonical makes specific [Ubuntu ARM images](https://wiki.ubuntu.com/ARM/RaspberryPi) for the Raspberry Pi's. I download the 16.04 server version for both the [raspberry pi 2](http://cdimage.ubuntu.com/ubuntu/releases/16.04/release/ubuntu-16.04.2-preinstalled-server-armhf+raspi2.img.xz) and [raspberry pi 3](http://www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz). Writting these images is slightly different from other ISOs I've used in the past. It still uses `dd`, but the image is piped through `xzcat`. I imaged the rpi 2 & 3 SD cards using the following commands, respectively:
+
 
 ```
 xzcat ubuntu-16.04.2-preinstalled-server-armhf+raspi2.img.xz | sudo dd bs=4M of=/dev/mmcblk0
