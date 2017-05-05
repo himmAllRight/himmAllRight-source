@@ -1,5 +1,5 @@
 {:layout :post
-:title  "Setting Up the Pi Cluster"
+:title  "Setting Up My Pi Cluster"
 :date "2017-05-05"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Linux" "Cluster" "Pi" "Devops"]
