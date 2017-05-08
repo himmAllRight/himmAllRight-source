@@ -7,7 +7,7 @@
 }
 
 
-Now that the *repeated* setup steps have been defined in [my previous LFS post](../LFS-Repeated=Setup-Steps/), there are a *few* more preparation steps to complete in order to start building the LFS system. I promise... we will start compiling soon. If all goes well, this should be the last preparation post.
+Now that the *repeated* setup steps have been defined in [my previous LFS post](http://ryan.himmelwright.net/posts/LFS-Repeated-Setup-Steps/), there are a *few* more preparation steps to complete in order to start building the LFS system. I promise... we will start compiling soon. If all goes well, this should be the last preparation post.
 
 <!-- more -->
 
