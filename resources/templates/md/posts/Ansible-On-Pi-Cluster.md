@@ -10,11 +10,12 @@ In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-clust
 
 <!-- more -->
 
+## Ansible
+Ansible is an open source configuration management and automation system, written in Python, and backed by [Red Hat](http://www.redhat.com) 
+
+
 
 ## Notes for post:
-
-Ansible is a configuration management and automation system, backed by [Red Hat](http://www.redhat.com)
-
 -- added `ryan` user on rpis, gave sudo permissions     
 	- Made ryan able to use sudo without password by adding `ryan ALL=(ALL) NOPASSWD: ALL` to the bottom of my `visudo` file.
 
