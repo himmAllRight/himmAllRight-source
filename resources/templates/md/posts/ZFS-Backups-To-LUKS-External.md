@@ -139,9 +139,23 @@ sudo cryptSetup luksClose sdf-enc
 
 After that, I was able to unplug the external drive, and store it in a safe location, until I need to backup data to it again.
 
-#### Opening and Importing zpool for Recurring Backups
+### Opening and Importing zpool for Recurring Backups
+Lastly, there are a few steps to take when reconnecting the drive to run a daily/monthly/weekly (whatever) backup. First, the drive must be decrypted and mounted, using the same command as above: 
 
+```
+sudo cryptSetup luksOpen /dev/sdf sdf-enc
+```
 
+Next, the zpool on the drive must be imported so that it can be used from the main system. Like exporting the pool, the command is simple:
+
+```
+sudo zpool import externalBackup
+```
+
+That's it. Now the steps detailing taking snapshots and sending incremental backups can be repeated.
 
 ### Summary
 I am happy with this solution for now. It allows me to leverage ZFS a bit more, and become more familiar with it. The biggest issue I will likely face is space on the external drive. Luckily, ZFS makes it easy to delete old snapshots. In the future, I might also consider using an online backup solution like [Tarsnap](https://www.tarsnap.com/), but I need to find a cost-effective one first. I'll be sure to update as I continue to expand my backup solution.
+
+
+<div id="post-meta" style="float: right;">Post Updated 05/12/2017</a>

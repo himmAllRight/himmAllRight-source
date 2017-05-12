@@ -11,7 +11,7 @@ In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-clust
 <!-- more -->
 
 ## Ansible
-Ansible is an open source configuration management and automation system, written in Python, and backed by [Red Hat](http://www.redhat.com) 
+Ansible is an open source configuration management and automation system, written in Python, and backed by [Red Hat](http://www.redhat.com). It allows management of groups of computers through the use of modules, standalone units of work (ex: apt, ping, rpm, etc). Ansible is scriptable, via playbooks, a YAML file that can define a set of tasks to orchestrate on a single or group of computers. 
 
 
 
