@@ -43,6 +43,16 @@ Afterwards, if done correctly, a password should no longer be required when sshi
 **GIF ANIMATION OF SSHING INTO NODE**
 
 
+### Other Methods for Key Setup
+Just as a note, there are other real nice ways to transfer ssh keys between servers. I know on some distributions, such as CentOS, there is a script called NAME that can be installed, and it can setup keys with the single command:
+
+```
+ssh-copy
+```
+
+This scrip is considered old by some, which is why it is not included in the distribution I use (Solus), so be aware of that. If it's available to you though, you might as well use it.
+
+
 ## Install packages
 
 
