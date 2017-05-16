@@ -11,8 +11,39 @@ In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-clust
 <!-- more -->
 
 ## Ansible
-Ansible is an open source configuration management and automation system, written in Python, and backed by [Red Hat](http://www.redhat.com). It allows management of groups of computers through the use of modules, standalone units of work (ex: apt, ping, rpm, etc). Ansible is scriptable, via playbooks, a YAML file that can define a set of tasks to orchestrate on a single or group of computers. 
+Ansible is an open source configuration management and automation system, written in Python, and backed by [Red Hat](http://www.redhat.com). It allows management of groups of computers through the use of modules, standalone units of work (ex: apt, ping, rpm, etc). Ansible is scriptable using playbooks, YAML files that define a set of tasks to orchestrate on a single or group of computers. These scripts can be edited and version controlled, creating a simple [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code) setup.
 
+## Adding an User Accounts
+
+
+
+## Setup SSH Keys
+Ansible's default communication method is ssh, so the first thing I did was to configure ssh keys between the systems. To do this, I sent my already generated keys to the pis:
+
+```
+scp ~/.ssh/id_rsa.pub pi0:~/.ssh/alakazam_id.pub
+scp ~/.ssh/id_rsa.pub pi1:~/.ssh/alakazam_id.pub
+scp ~/.ssh/id_rsa.pub bpi:~/.ssh/alakazam_id.pub
+```
+
+*Note: If keys are not already generated, they can be created using the command:*
+
+```
+ssh-keygen
+```
+
+With my [main computer](../../pages/homelab/#alakazam)'s keys on each node, I added the key to each of the pi's `authorized_keys` file by sshing into the pi and running the command:
+
+```
+cat ~/.ssh/alakazam_id.pub >> ~/.ssh/authorized_keys
+```
+
+Afterwards, if done correctly, a password should no longer be required when sshing to the pis.
+
+**GIF ANIMATION OF SSHING INTO NODE**
+
+
+## Install packages
 
 
 ## Notes for post:
