@@ -62,7 +62,24 @@ Afterwards, if done correctly, a password should no longer be required when sshi
 ### Optional SSH Stuff...
 
 #### Key Only Login
-To help secure access to the PIs, I configured sshd to disable password logins, and only allow connections from approved keys, now that those are setup. This makes it a little harder to anyone without a key to get into the cluster nodes. 
+To help secure access to the PIs, I configured sshd to disable password logins, and only allow connections from approved keys, now that those are setup. To disable password authentication, I opened the `/etc/ssh/sshd_config` file, found the `PasswordAuthentication yes` line, uncommented it, and changed the `yes`, to a `no`.
+
+While I was in the `sshd_config` files, I also set `PermitRootLogin` to `no`, for good measure.
+
+I then reset the `sshd` service:
+
+```
+sudo systemctl restart sshd
+```
+
+Afterwards, I was unable to login to the PIs from a computer with unauthorized ssh keys.
+
+**GIF OF FAILED LOGIN**
+
+But, I was still able to loging from the authorized computer.
+
+**GIF OF SUCCESSFULL LOGIN**
+
 
 #### Other Methods for Key Setup
 Just as a note, there are other real nice ways to transfer ssh keys between servers. I know on some distributions, such as CentOS, there is a script called NAME that can be installed, and it can setup keys with the single command:
@@ -74,7 +91,17 @@ ssh-copy
 This scrip is considered old by some, which is why it is not included in the distribution I use (Solus), so be aware of that. If it's available to you though, you might as well use it.
 
 
-## Install packages
+## Install Python
+
+
+## Install Ansible
+
+I have a confession. You know how I was being fun and cheery by anthropomorphisizing ansible, saying that it was *"happy"* or *"frusterated"* during the previous steps? That wasn't true. Ansible wasn't installed yet. *So... to install Ansible...*
+
+```
+sudo eopkg it ansible
+```
+Again, this might be `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distrobution you are using.
 
 
 ## Notes for post:
