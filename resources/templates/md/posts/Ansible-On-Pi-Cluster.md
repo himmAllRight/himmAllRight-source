@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Configuring Ansible on the Pi Cluster"
-:date "2017-05-10"
+:date "2017-05-17"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Cluster" "Pi" "DevOps" "Ansible"]
 :draft? false
@@ -13,12 +13,28 @@ In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-clust
 ## Ansible
 Ansible is an open source configuration management and automation system, written in Python, and backed by [Red Hat](http://www.redhat.com). It allows management of groups of computers through the use of modules, standalone units of work (ex: apt, ping, rpm, etc). Ansible is scriptable using playbooks, YAML files that define a set of tasks to orchestrate on a single or group of computers. These scripts can be edited and version controlled, creating a simple [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code) setup.
 
-## Adding an User Accounts
+## Setting up the User Account
+Ansible exectute commands on the PIs, from user-accounts (ryan) that I setup in the last post. Many of these commands will require Root privledges. While I setup sudo and added the accounts to the `sudo` group in the last post.... it requires a password. Ansible doesn't like this, so I had to edit the sudo configuration so that users in the `sudo` could run `sudo` commands with out a password. To do this, I opened the `sudoers` file:
+
+
+```
+sudo visudo
+```
+
+and added the following line to the end of the file:
+
+```
+ryan  ALL=(ALL:ALL) NOPASSWD: ALL
+```
+
+I repeated this on each of the nodes. I was now longer promted for a password when running `sudo` commands, and Ansible was happy.
 
 
 
 ## Setup SSH Keys
-Ansible's default communication method is ssh, so the first thing I did was to configure ssh keys between the systems. To do this, I sent my already generated keys to the pis:
+Well... Ansible was *almost* happy. 
+
+Ansible's default communication method is ssh, and by default, `ssh` prompts me for passwords to loging, which Ansible did not like. Ansible *really* hates passwords. So, I had to configure ssh to use keys. Honestly, this is proabaly a good step to do regardless, now that the ryan account no longer needs a password when running `sudo`. To do this, I sent the already generated public key on my [main computer](../../pages/homelab/#alakazam), to the pis:
 
 ```
 scp ~/.ssh/id_rsa.pub pi0:~/.ssh/alakazam_id.pub
@@ -32,7 +48,7 @@ scp ~/.ssh/id_rsa.pub bpi:~/.ssh/alakazam_id.pub
 ssh-keygen
 ```
 
-With my [main computer](../../pages/homelab/#alakazam)'s keys on each node, I added the key to each of the pi's `authorized_keys` file by sshing into the pi and running the command:
+With Alakazam's public key on each node, I appended it to each of the pi's `authorized_keys` file by sshing into the pi and running the command:
 
 ```
 cat ~/.ssh/alakazam_id.pub >> ~/.ssh/authorized_keys
@@ -43,7 +59,12 @@ Afterwards, if done correctly, a password should no longer be required when sshi
 **GIF ANIMATION OF SSHING INTO NODE**
 
 
-### Other Methods for Key Setup
+### Optional SSH Stuff...
+
+#### Key Only Login
+To help secure access to the PIs, I configured sshd to disable password logins, and only allow connections from approved keys, now that those are setup. This makes it a little harder to anyone without a key to get into the cluster nodes. 
+
+#### Other Methods for Key Setup
 Just as a note, there are other real nice ways to transfer ssh keys between servers. I know on some distributions, such as CentOS, there is a script called NAME that can be installed, and it can setup keys with the single command:
 
 ```
