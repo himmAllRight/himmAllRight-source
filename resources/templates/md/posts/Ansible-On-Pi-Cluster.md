@@ -2,7 +2,7 @@
 :title  "Configuring Ansible on the Pi Cluster"
 :date "2017-05-17"
 :author "Ryan Himmelwright"
-:tags ["Homelab" "Cluster" "Pi" "DevOps" "Ansible"]
+:tags ["Homelab" "Cluster" "Pi" "DevOps" "Ansible" "SSH"]
 :draft? false
 }
 
