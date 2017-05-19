@@ -74,11 +74,11 @@ sudo systemctl restart sshd
 
 Afterwards, I was unable to login to the PIs from a computer with unauthorized ssh keys.
 
-![Unable to login to PIs without Key](../../img/posts/setting-up-ansible-pi-cluster/blocked-ssh-attempt.gif)
+<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/blocked-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'"> 
 
 But, I was still able to loging from the authorized computer.
 
-![Able to login to PIs with key](../../img/posts/setting-up-ansible-pi-cluster/accepted-ssh-attempt.gif)
+<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/accepted-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'"> 
 
 
 #### Other Methods for Key Setup
