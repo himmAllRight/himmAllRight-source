@@ -11,6 +11,9 @@ In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-clust
 <!-- more -->
 
 ## Ansible
+
+<img src="../../img/posts/setting-up-ansible-pi-cluster/ansible-logo.png" style="width: 150px; float: left; margin: 0px 15px 5px 5px;"/)
+
 Ansible is an open source configuration management and automation system, written in Python, and backed by [Red Hat](http://www.redhat.com). It allows management of groups of computers through the use of modules, standalone units of work (ex: apt, ping, rpm, etc). Ansible is scriptable using playbooks, YAML files that define a set of tasks to orchestrate on a single or group of computers. These scripts can be edited and version controlled, creating a simple [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code) setup.
 
 ## Setting up the User Account
@@ -68,25 +71,21 @@ But, I was still able to loging from the authorized computer.
 <img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/accepted-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'"> 
 
 
-#### Other Methods for Key Setup
-
-
-
 ## Install Python
+The last issue Ansible complained about was that it needed python installed on the Pis. Like everything else, the Bananna Pi already had this setup, but I had to install it on the two Raspberry Pis. It was simple enough:
 
+```
+sudo apt-get install python
+```
 
 ## Install Ansible
 
-I have a confession. You know how I was being fun and cheery by anthropomorphisizing ansible, saying that it was *"happy"* or *"frusterated"* during the previous steps? That wasn't true. Ansible wasn't installed yet. *So... to install Ansible...*
+I have a confession. You know how I have been fun and cheery by anthropomorphisizing Ansible, saying that it was *"happy"* or *"frusterated"* during the previous steps? That wasn't true. I made it up. Ansible wasn't actually installed yet. *So... to install Ansible...*
 
 ```
 sudo eopkg it ansible
 ```
-Again, this might be `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distrobution you are using.
 
+I used `eopkg` because I am running Solus. You might use `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distrobution you are using.
 
-## Notes for post:
-
--- install python on rpis (bpi was okay)
-
--- install on host (was already on solus)
+That's all for setting up Ansible. I'll cut it off here and in the next post, I'll walk through the steps on how to get Ansible to be useful.
