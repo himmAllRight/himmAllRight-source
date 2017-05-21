@@ -2,11 +2,11 @@
 :title  "Configuring Ansible on the Pi Cluster"
 :date "2017-05-17"
 :author "Ryan Himmelwright"
-:tags ["Homelab" "Cluster" "Pi" "DevOps" "Ansible"]
+:tags ["Homelab" "Cluster" "Pi" "DevOps" "Ansible" "ssh"]
 :draft? false
 }
 
-In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-cluster/), I setup my [pi cluster](http://ryan.himmelwright.net/pages/homelab/#cluster) and installed the variations of Ubuntu 16.04 Server on each of them. With the cluster setup, I needed an easy way to interact and maintain the systems. This is where [Ansible](https://www.ansible.com/) comes in.
+In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-cluster/), I pieced together my [pi cluster](http://ryan.himmelwright.net/pages/homelab/#cluster), and installed variations of Ubuntu 16.04 Server on each of its nodes. With the cluster built, I quickly needed an easy way to maintain and interact with the system as a whole. This, is where [Ansible](https://www.ansible.com/) comes in. In this post, I will walk through the steps I took to setup Ansible on my Cluster.
 
 <!-- more -->
 
@@ -14,10 +14,10 @@ In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-clust
 
 <img src="../../img/posts/setting-up-ansible-pi-cluster/ansible-logo.png" style="width: 150px; float: left; margin: 0px 15px 5px 5px;"/)
 
-Ansible is an open source configuration management and automation system, written in Python, and backed by [Red Hat](http://www.redhat.com). It allows management of groups of computers through the use of modules, standalone units of work (ex: apt, ping, rpm, etc). Ansible is scriptable using playbooks, YAML files that define a set of tasks to orchestrate on a single or group of computers. These scripts can be edited and version controlled, creating a simple [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code) setup.
+Ansible is an open source, configuration management and automation system. It is written in Python, and financially backed by [Red Hat](http://www.redhat.com). It simplifies the management of groups of computers, through the use of modules (standalone units of work. for example, apt, ping, rpm, etc). Ansible is script-able using simple YAML files, known as playbooks, that define a set of orchestration tasks for one or many computers. These scripts can be edited and version controlled, creating a simple [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code) setup.
 
 ## Setting up the User Account
-Ansible exectute commands on the PIs, from user-accounts (ryan) that I setup in the last post. Many of these commands will require Root privledges. While I setup sudo and added the accounts to the `sudo` group in the last post.... it requires a password. Ansible doesn't like this, so I had to edit the sudo configuration so that users in the `sudo` could run `sudo` commands with out a password. To do this, I opened the `sudoers` file:
+When Ansible executes commands on the PIs, it will do so from the user-account (ryan) that I setup in the last post. However, many of these commands will require Root privledges. While I previously setup sudo and added the `ryan` account to the `sudo` group ... it required that I manually enter my password. Ansible did not like this, so I had to update the sudo configuration to allow the `ryan` account to run `sudo` commands with out a password. To do this, I opened the `sudoers` file:
 
 
 ```
@@ -30,12 +30,12 @@ and added the following line to the end of the file:
 ryan  ALL=(ALL:ALL) NOPASSWD: ALL
 ```
 
-I repeated this on each of the nodes. I was now longer promted for a password when running `sudo` commands, and Ansible was happy.
+I repeated this on each of the nodes, and afterwards was no longer promted for a password when running `sudo` commands. This made Ansible happy.
 
 
 
 ## Setup SSH Keys
-Well... Ansible was *almost* happy. 
+Well... *almost* happy. 
 
 Ansible's default communication method is ssh, and by default, `ssh` prompts me for passwords to loging, which Ansible did not like. Ansible *really* hates passwords. So, I had to configure ssh to use keys. Honestly, this is proabaly a good step to do regardless, now that the ryan account no longer needs a password when running `sudo`. To do this, I sent the already generated public key on my [main computer](../../pages/homelab/#alakazam), to the pis, and appended it to each of their `authorized_keys` file. This can all be done using a magical pipe command:
 
