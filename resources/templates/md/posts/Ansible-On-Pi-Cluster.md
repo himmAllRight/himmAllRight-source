@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Configuring Ansible on the Pi Cluster"
-:date "2017-05-17"
+:date "2017-05-21"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Cluster" "Pi" "DevOps" "Ansible" "SSH"]
 :draft? false
@@ -37,7 +37,7 @@ I repeated this on each of the nodes, and afterwards was no longer promted for a
 ## Setup SSH Keys
 Well... *almost* happy. 
 
-Ansible's default communication method is ssh, and by default, `ssh` prompts me for passwords to loging, which Ansible did not like. Ansible *really* hates passwords. So, I had to configure ssh to use keys. Honestly, this is proabaly a good step to do regardless, now that the ryan account no longer needs a password when running `sudo`. To do this, I sent the already generated public key on my [main computer](../../pages/homelab/#alakazam), to the pis, and appended it to each of their `authorized_keys` file. This can all be done using a magical pipe command:
+Ansible's main method of communication is via ssh, which by default, prompts me for a password when connecting. Ansible *really* hates passwords. So, I had to configure ssh to use keys instead. Honestly, this is proabaly a good step to do regardless, now that the `ryan` account no longer uses a password when running `sudo`. To setup key-based logins, I appended the contents of my [main computer](../../pages/homelab/#alakazam)'s ssh public key*, to each pi's `authorized_keys` file. This can all be done using a magic one-line pipe command (x3, one for each pi):
 
 ```
 cat ~/.ssh/id_rsa.pub | ssh pi0 "cat >> ~/.ssh/authorized_keys"
@@ -45,18 +45,18 @@ cat ~/.ssh/id_rsa.pub | ssh pi1 "cat >> ~/.ssh/authorized_keys"
 cat ~/.ssh/id_rsa.pub | ssh bpi "cat >> ~/.ssh/authorized_keys"
 ```
 
-*Note: If keys are not already generated, they can be created using the command:*
+*\*Note: If keys are not already generated, they can be created using the command:*
 
 ```
 ssh-keygen
 ```
 
 #### Key Only Login
-To help secure access to the PIs, I configured sshd to disable password logins, and only allow connections from approved keys, now that those are setup. To disable password authentication, I opened the `/etc/ssh/sshd_config` file, found the `PasswordAuthentication yes` line, uncommented it, and changed the `yes`, to a `no`.
+To help secure access to the PIs (and to get on Ansible's good side), I configured sshd to disable password logins, and only allow connections from clients with approved keys. To disable password authentication, I opened the `/etc/ssh/sshd_config` file, found the line containing `# PasswordAuthentication yes`, changed the `yes` to a `no`, and unncommented it by removing the `#`.
 
-While I was in the `sshd_config` files, I also set `PermitRootLogin` to `no`, for good measure.
+While I was in the `sshd_config` file, I also set `PermitRootLogin` to `no`, for good measure.
 
-I then reset the `sshd` service:
+Lastly, I reset the `sshd` service and repeated the steps for each pi:
 
 ```
 sudo systemctl restart sshd
@@ -80,12 +80,12 @@ sudo apt-get install python
 
 ## Install Ansible
 
-I have a confession. You know how I have been fun and cheery by anthropomorphisizing Ansible, saying that it was *"happy"* or *"frusterated"* during the previous steps? That wasn't true. I made it up. Ansible wasn't actually installed yet. *So... to install Ansible...*
+I have a confession. So, you know how I have been fun and cheery by anthropomorphisizing Ansible, saying that it was *"happy"* or *"frusterated"* during the previous steps? That wasn't true. I made it up. Ansible wasn't *actually* installed yet. *So... to install Ansible...*
 
 ```
 sudo eopkg it ansible
 ```
 
-I used `eopkg` because I am running Solus. You might use `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distrobution you are using.
+I used `eopkg` because I am currently running [Solus](https://solus-project.com). You might use `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distro you are using.
 
-That's all for setting up Ansible. I'll cut it off here and in the next post, I'll walk through the steps on how to get Ansible to be useful.
+That's all for *setting up* Ansible. I'll cut this post off here, but in the next post, I'll walk through the steps on how to get Ansible to be useful.
