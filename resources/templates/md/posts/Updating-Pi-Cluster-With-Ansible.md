@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Updating the Pi Cluster with Ansible"
-:date "2017-05-23"
+:date "2017-05-24"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Cluster" "Pi" "DevOps" "Ansible"]
 :draft? false
@@ -73,9 +73,16 @@ ansible cluster -m ping
 This should work, assuming the steps of [the last post](../Ansible-On-Pi-Cluster) were done correctly. If not, double check that post and make sure everything checks out.
 
 ### Playbooks
+After confirming that the hosts file is properly working, we can start digging into playbooks. Playbooks are the language system that Ansible utilizes to configure, deploy, and orcistrate systems. They can describe ways in which systems should be configured (ex: enable ssh), or outline a set of steps for an IT task (ex: running updates, restarting a server). As stated in the [playbook documentation](https://docs.ansible.com/ansible/playbooks.html):
+
+<div id="post-quote">
+*"If Ansible modules are the tools in your workshop, playbooks are your instruction manuals, and your inventory of hosts are your raw material."*
+</div>
+
+The first and most important thing when creating a new playbook, is setting up the header. The header consists of three `-`'s at the top of the file. Without, the playbook will not function correctly.
 
 ### Apt Module
 
-#### ModuleS
+#### Modules
 
 ### Update Cluster Playbook

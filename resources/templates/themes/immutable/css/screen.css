@@ -150,6 +150,15 @@ footer {
     color: #fff;
 }
 
+#post-quote {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    /* color: rgba(0,0,0,0.4) */
+    color: #ddd;
+    padding-top: 5px; */
+}
+
 #post-meta {
     font-size: 14px;
     /* color: rgba(0,0,0,0.4) */
