@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Updating the Pi Cluster with Ansible"
-:date "2017-05-24"
+:date "2017-05-25"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Cluster" "Pi" "DevOps" "Ansible"]
 :draft? false
