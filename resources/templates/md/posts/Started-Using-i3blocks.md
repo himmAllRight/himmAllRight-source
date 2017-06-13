@@ -25,9 +25,16 @@ When I first configured i3 seceral years ago, I used i3status because it was eas
 The first bar I saw and tried was [polybar](https://github.com/jaagr/polybar). I started with it because some of the examples or it are really awesome. It is a bar that looks very modern and has an infinate number of features. I got it setup and was able to use the example bar just fine. However, when I started to configure my own, I started to run into issues with it being able to detect my workspaces and other elements. After some frustration, I put it aside for a bit and decided to see what else is out there.
 
 ## i3blocks
-Next, I found [i3blocks](https://github.com/vivien/i3blocks).
+Next, I learned of [i3blocks](https://github.com/vivien/i3blocks). It appeared to have everything I wanted for by status bar, but yet was simple and respected the [i3bar protocol](https://i3wm.org/docs/i3bar-protocol.html). So I tried it out.
 
 ### Downloading from the Repos
+Just like installing any other package on Linux, I decided to first check to see it it was in the [Solus Repos](https://dev.solus-project.com/):
+
+```
+sudo eopkg sr i3block
+```
+
+and it was, so I installed it from there.
 
 ### Finding a Git Repos
 
