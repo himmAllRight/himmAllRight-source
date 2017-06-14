@@ -36,6 +36,7 @@ looking at the ubiquiti APs, and I'm hoping the edgerouter should pair rather
 seemlessly with it. 
 
 ![Ubiquity Edgerouter-x](../../img/posts/upgrading-to-ubiquiti-edgerouter/edgerouter-x.png)
+![Ubiquity Access Point Lite](../../img/posts/upgrading-to-ubiquiti-edgerouter/ap-ac-lite.png)
 
 From what I've read, the edgerouter is a great router with an okay firewall, and
 pfsense is mostly a firewall that does routing. So, if I want to dig more into
