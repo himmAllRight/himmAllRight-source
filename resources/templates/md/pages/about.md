@@ -18,10 +18,6 @@ Feel free to contact me using any of the methods below.
 ### Contact
 - Email: [ryan.himmelwright@gmail.com](mailto:ryan.himmelwright@gmail.com)
 
-- Keybase: [himmAllRight](https://keybase.io/himmallright)
-
-* PGP: `0254 C562 9660 8588`
-
 * IRC: I'm often on geekshed and freenode channels as `himmAllRight`
 
 * Telegram: `@himmAllRight`

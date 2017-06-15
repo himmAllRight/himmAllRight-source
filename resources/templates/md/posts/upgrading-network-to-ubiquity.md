@@ -3,7 +3,7 @@
 :date "2017-06-15"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Network" "ubiquiti" "wifi"]
-:draft? false
+:draft? true
 }
 
 While I was away for a week to attend my College Swim team Reunion, and my
