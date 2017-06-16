@@ -3,7 +3,7 @@
 :date "2017-06-08"
 :author "Ryan Himmelwright"
 :tags ["Linux" "i3" "customization" "Solus"]
-:draft? true
+:draft? false
 }
 
 The last couple of weeks I have shifted back to using the i3 window mangers. When I first fired it up again, my fingers danced across the keyboard, remembering all of the personalized keybindings I have cultivated in my i3 configuration over the years. It is a simple, beautiful setup... except for one part. My i3status bar was looking rather blaned and dated, expecially comparted some of the i3 setups posted by all the cool kids over at [/r/unixporn](https://www.reddit.com/r/unixporn/). So, I decided it was time for a refreash.
@@ -34,11 +34,26 @@ Just like installing any other package on Linux, I decided to first check to see
 sudo eopkg sr i3block
 ```
 
-and it was, so I installed it from there.
+and it was, so I installed it from there, and started learning how to setup my configuration.
+
+### Fonts
+
+![A Very Small Sampling of the Awesome Fonts](../../img/posts/starting-i3/awesome-font.png)
+<div id="caption">A *Very Small* Sampling of the Awesome Fonts</div>
+
+The first hurdle I had when I first launched i3blocks was that I did not have the fonts which the default configuration used installed on my computer. I removed the special fonts from the config, just to check that everything was working. But what's the fun in that? One of the biggest reasons I was upgrading my i3bar was to have cool modern font icons! So, I found the [font awesome](http://fontawesome.io/) package in the Solus repos and installed it.
+
+```
+sudo eopkg it font-awesome-ttf
+```
+
+With the awesome fonts at my disposal, I had a plethora of icon images to use.
 
 ### Finding a Git Repos
+While researching how to configure i3blocks, I started finding several different github repos and forks of the project. Some of the forks seemed to have additional modules that my repo version did not have. So, I downloaded [this one](https://github.com/Anachron/i3blocks) to try out. I linked my i3 configuration point to this build instead, and started to setup my own modules.
 
 ### Forking my own for Solus Tweaks
+
 
 ## Conclusion
 
