@@ -1,16 +1,24 @@
-Recently I've been trying to figure out ways to gain some linux system
-administration experience. Open source is great, and there is an endless amount
-of projects and groups to become involved with, but it is usually not
-administration type tasks. I can develop for projects, and plan to. But I am
-looking for some sysadmin experience because that is harder to get on my own
-(unlike programming or developing).
+{:layout :post
+:title  "Starting to Get Involved with Fedora Infrastructure"
+:date "2017-06-21"
+:author "Ryan Himmelwright"
+:tags ["Linux" "Fedora" "SysAdmin"]
+:draft? false
+}
 
-One nice thing about the [Fedora Project](https://fedoraproject.org) is that
-they make it *really* easy to join, and have an
-entire [website](https://fedoraproject.org/wiki/Join) dedicated to guiding new
-members through the process. One thing I particularly like about the Fedora
-Project's join page is that they break it down into groups... and have
-an [infrastructure group](https://fedoraproject.org/wiki/Infrastructure). 
+
+Recently I've been trying to figure out ways to gain some linux system
+administration experience, which is hard to do on my own. So, I've turned to
+open source. There is an endless amount of projects and ways to contribute to
+them. However, while I can easily find ways to contribute code, it can be harder
+to find administration type tasks to work on. This is why I love
+the [Fedora Project](https://fedoraproject.org). They make it *real* easy
+to [get involved](https://fedoraproject.org/wiki/Join), and break down the
+project into several groups, including.... the [infrastructure team](https://fedoraproject.org/wiki/Infrastructure).
+
+<!-- more -->
+
+<img src="../../img/posts/getting-involved-with-fedora-infra/fedora-logo.png" style="width: 35%; float: right; margin: 0px 0px 0px 0px;"/)
 
 I have tried getting involved with the infrastructure group in the past, but
 never really got anywhere. I think it is about time I try again, hopefully
