@@ -21,12 +21,20 @@ project into several groups, including.... the [infrastructure team](https://fed
 <img src="../../img/posts/getting-involved-with-fedora-infra/fedora-logo.png" style="width: 35%; float: right; margin: 0px 0px 0px 0px;"/)
 
 I have tried getting involved with the infrastructure group in the past, but
-never really got anywhere. I think it is about time I try again, hopefully
-getting further this time. 
+never really got anywhere. Admittedly, this had nothing to do with the project,
+but rather my failure to reach out to the team members and get started. I think
+it is about time I try again, hopefully getting further this time.
+
+## Account Re-Setup
 
 -- Spent some more time setting up for joining fedoraproject. I added the ssh
 key from my VM on kadabra. I will figure out how to move that key to other
 machines. 
+
+## Work Environment Setup
+
+
+## Starting Involvement
 
 Also hung out in chatroom a little bit.
 
