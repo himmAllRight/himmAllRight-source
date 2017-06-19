@@ -15,3 +15,16 @@ an [infrastructure group](https://fedoraproject.org/wiki/Infrastructure).
 I have tried getting involved with the infrastructure group in the past, but
 never really got anywhere. I think it is about time I try again, hopefully
 getting further this time. 
+
+This morning I went through and finished most of the sign up stuff. I then asked
+about the apprentice group in the IRC and someone helped me look for an issue to
+work on. We
+found [issue 6087](https://pagure.io/fedora-infrastructure/issue/6087) and I
+commented that I would look into it. They did the first part and it needs to be
+added to ansible, which I guess I will try to do. No one has replied.
+Regardless, I also figured out where all the infrastructure notes were and
+started to read through them to learn how everything is setup. 
+
+This seems really cool and I think that if I am able to actually get involved
+with this, I could learn a lot real fast. More importantly, I would finally
+learn some of the stuff I need to if I want to do administration. 
