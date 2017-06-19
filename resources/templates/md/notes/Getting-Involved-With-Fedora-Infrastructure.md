@@ -16,6 +16,12 @@ I have tried getting involved with the infrastructure group in the past, but
 never really got anywhere. I think it is about time I try again, hopefully
 getting further this time. 
 
+-- Spent some more time setting up for joining fedoraproject. I added the ssh
+key from my VM on kadabra. I will figure out how to move that key to other
+machines. 
+
+Also hung out in chatroom a little bit.
+
 This morning I went through and finished most of the sign up stuff. I then asked
 about the apprentice group in the IRC and someone helped me look for an issue to
 work on. We
