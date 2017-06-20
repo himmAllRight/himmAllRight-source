@@ -10,3 +10,6 @@ So I finally upgraded my phone. I have been using my HTC One M7 since my Junior 
 
 <--! more -->
 
+## Issues
+### Data Setup
+Had troubble setting up the data connection, although I don't know if I should blame the phone, the ting setup, or both. Likely both
