@@ -1,9 +1,9 @@
 {:layout :post
 :title  "Refreshing my i3 setup with i3blocks"
-:date "2017-06-08"
+:date "2017-06-21"
 :author "Ryan Himmelwright"
 :tags ["Linux" "i3" "customization" "Solus"]
-:draft? true
+:draft? false
 }
 
 The last couple of weeks I have shifted back to using the i3 window mangers. When I first fired it up again, my fingers danced across the keyboard, remembering all of the personalized keybindings I have cultivated in my i3 configuration over the years. It is a simple, beautiful setup... except for one part. My i3status bar was looking rather blaned and dated, expecially comparted some of the i3 setups posted by all the cool kids over at [/r/unixporn](https://www.reddit.com/r/unixporn/). So, I decided it was time for a refreash.
@@ -47,13 +47,19 @@ The first hurdle I had when I first launched i3blocks was that I did not have th
 sudo eopkg it font-awesome-ttf
 ```
 
-With the awesome fonts at my disposal, I had a plethora of icon images to use.
+With the awesome fonts at my disposal, I had a plethora of icon images to use. So I went through and picked out icons for each of the browser tabs, and status markers.
 
 ### Finding a Git Repos
-While researching how to configure i3blocks, I started finding several different github repos and forks of the project. Some of the forks seemed to have additional modules that my repo version did not have. So, I downloaded [this one](https://github.com/Anachron/i3blocks) to try out. I linked my i3 configuration point to this build instead, and started to setup my own modules.
+
+![The example polybar](../../img/posts/starting-i3/i3block-new-repo-examples.png)
+<div id="caption">Example of Modules in new i3-block repo</div>
+
+While researching how to configure i3blocks, I started finding several different github repos and forks of the project. Some of the forks seemed to have additional modules that my repo version did not have. So, I downloaded and built [this one](https://github.com/Anachron/i3blocks) to try out. I configured i3 to point to the new build instead, and started to setup my own modules.
 
 ### Forking my own for Solus Tweaks
+As I was configuring the individual models, I noticed that many of them didn't work by default on my computers. I dug deeper by going looking at the scripts that the modules refer to, and noticed that many of them were trying to querry the data from applications that are not used in Solus. For example, the 
 
+### Color Update for i3 & rofi
 
 ## Conclusion
 

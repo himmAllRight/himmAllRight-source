@@ -3,7 +3,7 @@
 :date "2017-06-21"
 :author "Ryan Himmelwright"
 :tags ["Linux" "Fedora" "SysAdmin"]
-:draft? false
+:draft? true
 }
 
 
