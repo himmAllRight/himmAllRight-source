@@ -33,20 +33,23 @@ trying to reassign IPs to devices, and then doesn't seem to understand how to
 accept their requests afterwards). Thus, the more *temporary* this solution is,
 the better.
 
-
-If I am revisiting our network setup, I want to do it *correctly* this time, and
-split out the router from the wireless access point using *good* hardware and
-software. So my plan is, to get an ubiquity edgerouter-x, and pair it with an ubiquiti
+If I am revisiting our network setup, I want to do it *correctly* this time,
+splitting out the router from the wireless access point using *good* hardware and
+software. My plan is to get an ubiquity edgerouter-x, and pair it with an ubiquiti
 wireless access point.
 
-My original plan was to build a small pfsense box to user for the router, but
+<center>
+<img src="../../img/posts/upgrading-to-ubiquiti-edgerouter/edgerouter-x.png"
+alt="Ubiquity Edgerouter-x" width="45%">
+<img src="../../img/posts/upgrading-to-ubiquiti-edgerouter/ap-ac-lite.png" alt="Ubiquity Access Point Lite" width="45%">
+</center>
+<div id="caption">The edgerouter-x (right) and an Ubiquity access point lite (right)</div>
+
+My original plan was to build a small pfsense box to use as a router, but
 after digging a little deeper and doing some research, I saw that the edgerouter
 should more than meet my needs and is a great start to the upgrade. I was always
 looking at the ubiquiti APs, and I'm hoping the edgerouter should pair rather
 seemlessly with it. 
-
-![Ubiquity Edgerouter-x](../../img/posts/upgrading-to-ubiquiti-edgerouter/edgerouter-x.png)
-![Ubiquity Access Point Lite](../../img/posts/upgrading-to-ubiquiti-edgerouter/ap-ac-lite.png)
 
 From what I've read, the edgerouter is a great router with an okay firewall, and
 pfsense is mostly a firewall that does routing. So, if I want to dig more into
