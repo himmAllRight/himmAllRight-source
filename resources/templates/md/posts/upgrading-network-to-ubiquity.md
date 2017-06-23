@@ -1,27 +1,37 @@
 {:layout :post
 :title  "Upgrading Home Network to Ubiquity Edgerouter and AP"
-:date "2017-06-15"
+:date "2017-06-23"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Network" "ubiquiti" "wifi"]
-:draft? true
+:draft? false
 }
 
-While I was away for a week to attend my College Swim team Reunion, and my
-Brother's high school graduation, the router Rebecca and I were using died. When
-I returned, I setup our old router as a *temporary* fix. It is terrible. So, I
-have started researching what I should upgrade our network with. This time
-around, I am doing it the correct way.
+While I was away for a week to attend my college swim team reunion, and my
+brother's high school graduation, the router Rebecca and I were using died. When
+I returned, I setup our old router as a *temporary* fix. It was terrible. So, I
+have started researching how I should upgrade our network. This time
+around, I am doing it correct way.
 
 <!-- more -->
 
-It
-was a Lynksys WRT 1900. When I got home, I setup our old router as a temporary
-fix. It's a very basic Lynksys E1200. After using it for a day, I remember why I
-hated it so much. It is terribly slow, and seems to stop working each day (I
-think it is something with DHCP. It keeps trying to reassign ips to devices, and
-then doesn't seem to understand how to accept their requests after. It's a
-stupid piece of shit.), requiring me to unplug and replug it daily. So
-obviously, the more *temporary* this solution, the better.
+<center>
+<img src="../../img/posts/upgrading-to-ubiquiti-edgerouter/linksys-WRT1900.png"
+width= 45%>
+<img src="../../img/posts/upgrading-to-ubiquiti-edgerouter/linksys-E1200.png"
+width= 45%>
+</center>
+<div id="caption">The Linksys WRT-1900 that died (left), and the terrible
+backup Linksys E1200 (right)</div>
+
+
+The router that died was a Linksys WRT 1900. When I got home, I setup our old
+router as a temporary fix. It's a very basic Linksys E1200. After using it for
+just a few hours, I remember why I hated it so much. It is turtle slow, and
+seems to stop working each day, requiring me to
+unplug and replug it daily (I think it is something with DHCP. It keeps
+trying to reassign IPs to devices, and then doesn't seem to understand how to
+accept their requests afterwards). Thus, the more *temporary* this solution is,
+the better.
 
 
 If I am revisiting our network setup, I want to do it *correctly* this time, and
