@@ -1,5 +1,5 @@
 {:layout :post
-:title  "Upgrading Home Network to Ubiquity Edgerouter and AP"
+:title  "Upgrading Home Network to Ubiquiti Edgerouter and AP"
 :date "2017-06-23"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Network" "ubiquiti" "wifi"]
