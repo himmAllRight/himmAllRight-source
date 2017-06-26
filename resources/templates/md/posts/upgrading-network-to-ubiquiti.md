@@ -6,11 +6,11 @@
 :draft? false
 }
 
-While I was away for a week to attend my college swim team reunion, and my
-brother's high school graduation, the router Rebecca and I were using died. When
-I returned, I setup our old router as a *temporary* fix. It was terrible. So, I
-have started researching how I should upgrade our network. This time
-around, I am doing it correct way.
+A few weeks ago, I was away for a week to attend my college swim team reunion,
+and my brother's high school graduation. While I was away, the router Rebecca
+and I were using decided to die (of course). When I returned, I setup our old
+router as a *temporary* fix. It was terrible. So, I began research on how
+I should upgrade our network. This time around, I am doing it correct way.
 
 <!-- more -->
 
