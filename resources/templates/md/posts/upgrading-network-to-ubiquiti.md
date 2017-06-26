@@ -6,11 +6,12 @@
 :draft? false
 }
 
-A few weeks ago, I was away for a week to attend my college swim team reunion,
-and my brother's high school graduation. While I was away, the router Rebecca
-and I were using decided to die (of course). When I returned, I setup our old
-router as a *temporary* fix. It was terrible. So, I began research on how
-I should upgrade our network. This time around, I am doing it correct way.
+A few weeks ago, I went back to Pennsylvania a week to attend my college swim
+team reunion, and my brother's high school graduation. While I was away, the
+router Rebecca and I were using decided to die (of course). When I returned, I
+setup our old router as a *temporary* fix. It was terrible. So, I began research
+on how I should upgrade our network. This time around, I am doing it the
+*correct* way.
 
 <!-- more -->
 
@@ -26,16 +27,16 @@ backup Linksys E1200 (right)</div>
 
 The router that died was a Linksys WRT 1900. When I got home, I setup our old
 router as a temporary fix. It's a very basic Linksys E1200. After using it for
-just a few hours, I remember why I hated it so much. It is turtle slow, and
-seems to stop working each day, requiring me to
-unplug and replug it daily (I think it is something with DHCP. It keeps
+just a few hours, I remembered why I hated it so much. It is turtle slow, and
+seems to stop working each day or so, requiring me to
+unplug and re-plug it daily (I think it is something with DHCP. It keeps
 trying to reassign IPs to devices, and then doesn't seem to understand how to
-accept their requests afterwards). Thus, the more *temporary* this solution is,
+accept their requests afterwards). Thus, the more *temporary* this solution was,
 the better.
 
 If I am revisiting our network setup, I want to do it *correctly* this time,
 splitting out the router from the wireless access point using *good* hardware and
-software. My plan is to get an ubiquity edgerouter-x, and pair it with an ubiquiti
+software. My plan is to get an ubiquity edge-router-x, and pair it with an ubiquiti
 wireless access point.
 
 <center>
@@ -45,14 +46,14 @@ alt="Ubiquity Edgerouter-x" width="45%">
 </center>
 <div id="caption">The edgerouter-x (right) and an Ubiquity access point lite (right)</div>
 
-My original plan was to build a small pfsense box to use as a router, but
-after digging a little deeper and doing some research, I saw that the edgerouter
-should more than meet my needs and is a great start to the upgrade. I was always
-looking at the ubiquiti APs, and I'm hoping the edgerouter should pair rather
-seemlessly with it. 
+My original plan was to build a small pfsense box to use as a router, but after
+digging a little deeper and doing some research, I saw that the edgerouter would
+more than meet my needs and is a great start to a network upgrade. For the
+wireless access point, I was always considering at the Ubiquiti UniFi ones, and
+I hoped the edgerouter would pair rather seemlessly with it.
 
-From what I've read, the edgerouter is a great router with an okay firewall, and
-pfsense is mostly a firewall that does routing. So, if I want to dig more into
+From what I've read, the edgerouter is a great router with an okay firewall, while
+pfsense is an amazing firewall that does routing. So, if I want to dig more into
 pfsense in the future, I still could by setting up a firewall box to place in
 front of the router.
 
@@ -62,4 +63,7 @@ Modem --> pfsense --> edgerouter-x -> devices
 
 I think I've made my decision and will purchase the items once I am cleared to
 do so.
+
+<div id="caption">Update (06/24/2017): I have followed through with this purchase, and the items arrived from
+Amazon. Expect a post or two about my experience setting them up</div>
 
