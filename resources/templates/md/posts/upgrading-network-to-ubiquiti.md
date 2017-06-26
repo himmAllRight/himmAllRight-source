@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Home Network Ubiquiti Upgrade"
-:date "2017-06-23"
+:date "2017-06-26"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Network" "ubiquiti" "wifi"]
 :draft? false
@@ -64,6 +64,8 @@ Modem --> pfsense --> EdgeRouter-x -> devices
 So... I think I've finalized my decision and will purchase the items soon. I
 will update when I get them.
 
-<div id="caption">Update (06/24/2017): I have followed through with this purchase, and the items arrived from
-Amazon. Expect a post or two about my experience setting them up</div>
+<div id="caption">Update (06/24/2017): I have followed through with this
+purchase, and the items arrived from Amazon. Expect a post or two about my
+experience setting them up (and yes, I added this update before actually
+publishing this post)</div>
 
