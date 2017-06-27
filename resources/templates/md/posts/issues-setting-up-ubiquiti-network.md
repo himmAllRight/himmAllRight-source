@@ -13,7 +13,13 @@ a lot :). The basic setup of it all seems to be running great and I am excited
 to dig deeper into it all. I'm just going to quickly jot down the major issues I
 had so that I can remember then when I go to write about them.
 
+<!-- more -->
+
 ## Trouble connecting to edgerouter-x 
+<img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/wrong-router-connection.png" width="90%">
+<div id="caption">During initial setup, I was connecting the router wrong</div>
+
+
 I had the internet connected to eth0, and I was connecting my computer to
 eth1. During the initial setup though, you need to connect the laptop/computer
 directly to eth0, and configure the laptop to have some static ip (ex:
@@ -26,6 +32,7 @@ AP because I wasn't sure if it could power both. But then I found a guide and it
 confirmed that I could. Once I swapped that that all around, I was able to go
 into the router configuration and enable the POE for eth4, and the AP lit up.
 
+<p>
 ```
 Modem  --
         |
@@ -33,7 +40,8 @@ Modem  --
         |
 Power  --
 ```
-Digram describing the correct link up
+<div id="caption">Digram describing the correct link up</div>
+</p>
 
 
 ## Issues linking/configuring the AP
