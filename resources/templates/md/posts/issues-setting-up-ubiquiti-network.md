@@ -1,3 +1,11 @@
+{:layout :post
+:title  "Encountered Issues Setting Up Ubiquiti Network"
+:date "2017-06-28"
+:author "Ryan Himmelwright"
+:tags ["Homelab" "Network" "ubiquiti" "wifi"]
+:draft? false
+}
+
 So today I setup the ubiquiti network. It actually ended up taking the majority
 of my day, but that is because I ran into a few issues. Unfortunately these
 issues were mostly due to me just being stupid. It was a good day and I learned
@@ -52,4 +60,4 @@ server so I can always connect to it when needed.
 
 
 
-That's it for now on notes. I'll eventually clean this up into a quick post ;)
+That's it for now on notes. I'll eventually clean this up into a quick post 
