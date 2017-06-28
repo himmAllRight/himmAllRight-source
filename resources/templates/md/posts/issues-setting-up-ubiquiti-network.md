@@ -6,24 +6,34 @@
 :draft? false
 }
 
-So today I setup the ubiquiti network. It actually ended up taking the majority
-of my day, but that is because I ran into a few issues. Unfortunately these
-issues were mostly due to me just being stupid. It was a good day and I learned
-a lot :). The basic setup of it all seems to be running great and I am excited
-to dig deeper into it all. I'm just going to quickly jot down the major issues I
-had so that I can remember then when I go to write about them.
+This past weekend, I setup the ubiquiti network. It actually ended up taking a
+good portion of Sunday, but that is because I ran into a few issues.
+Fortunately/Unfortunately these issues were mostly due to it being my first time
+configuring this type of setup, so there was a lot of trial and error. The basic
+setup of is now all configuring and running great. It was a good day and I
+learned a lot :). In fact, I am confident that if I had to start over from
+scratch, the process would take me about 10-15 minutes. Just to be sure, I'm
+just going to quickly jot down the major pain points I had during my first time
+setup.
 
 <!-- more -->
 
-## Trouble connecting to edgerouter-x 
+## Trouble Connecting to EdgeRouter-x for Initial Setup
 <img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/wrong-router-connection.png" width="90%">
 <div id="caption">During initial setup, I was connecting the router wrong</div>
 
+The edgerouter needs to be directly connected to a computer during initial setup
+so that the EdgeOS configuration screen can be accessed. The instructions stated
+to connect and ethernet cable from my laptop to the `eth0/POE` port on the
+edgerouter, but I guess I didn't believe it.
 
-I had the internet connected to eth0, and I was connecting my computer to
-eth1. During the initial setup though, you need to connect the laptop/computer
-directly to eth0, and configure the laptop to have some static ip (ex:
-192.168.1.2). Then I was able to connect.
+
+Instead, I plugged the ethernet cable from modem into `eth0`, and I was connected
+my computer to `eth1`. That didn't work. However, once I properly connected the
+devices, and manually set a static IP on my laptop (ex: `192.168.1.2`), I was
+able to access the configuration page in my browser via `https://192.168.1.1`
+(don't for get the *s* in *https*). Lesson Learned: manuals are (*usually*) not
+out to get you.
 
 ## Issues connecting AP/POE
 I mostly messed this up because I wasn't paying attention and was plugging
