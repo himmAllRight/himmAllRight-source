@@ -36,11 +36,12 @@ able to access the configuration page in my browser via `https://192.168.1.1`
 out to get you.
 
 ## Issues connecting AP/POE
-I mostly messed this up because I wasn't paying attention and was plugging
-them in wrong. I also tried to have the POE adaptor between the router and the
-AP because I wasn't sure if it could power both. But then I found a guide and it
-confirmed that I could. Once I swapped that that all around, I was able to go
-into the router configuration and enable the POE for eth4, and the AP lit up.
+This was not actually an issue I encountered, but rather me not being sure what
+the best way to setup the [POE](https://en.wikipedia.org/wiki/Power_over_Ethernet) 
+was. At first, I had the POE adaptor connected between the edgerouter and the
+AP, because I wasn't sure if it could power both devices with it. I eventually 
+found a 
+[great guide](https://www.youtube.com/watch?v=f7FeYsJqotc&list=PLDBkup9c8YMgZaE50hAjP7rbbVriTlyQf&index=1)  that confirmed that I could.
 
 <p>
 ```
@@ -53,6 +54,9 @@ Power  --
 <div id="caption">Digram describing the correct link up</div>
 </p>
 
+Once I swapped that that all around, I just had to go into the router
+configuration and enable the POE for eth4, and the AP lit up, indicating that it
+was connected and being powered.
 
 ## Issues linking/configuring the AP
 This was the one I had the biggest issue with. I knew I had to setup the
