@@ -19,7 +19,9 @@ setup.
 <!-- more -->
 
 ## Trouble Connecting to EdgeRouter-x for Initial Setup
+<center>
 <img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/wrong-router-connection.png" width="90%">
+</center>
 <div id="caption">During initial setup, I was connecting the router wrong</div>
 
 The edgerouter needs to be directly connected to a computer during initial setup
@@ -72,6 +74,12 @@ needed to change my inform URL, but that wasn't helping.
 Eventually, I realized it was likely due to the 192.168.122.* ip that the VMs
 are assigned. I realized it earlier, but didn't want to admit that was the
 issue...
+
+<center>
+<img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/ubuntu.png" width="45%">
+<img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/venomoth.png" width="35%">
+</center>
+<div id="caption">I spun up a new Ubuntu VM (Venomoth) to host the Ubifi controller</div>
 
 By this point, I also had learned that the software, is more of a server program
 than desktop application on Ubuntu, so I decided to spin up a VM on my server
