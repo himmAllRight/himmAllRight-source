@@ -1,41 +1,40 @@
 {:layout :post
 :title  "Encountered Issues Setting Up Ubiquiti Network"
-:date "2017-06-28"
+:date "2017-06-29"
 :author "Ryan Himmelwright"
 :tags ["Homelab" "Network" "ubiquiti" "wifi"]
 :draft? false
 }
 
-This past weekend, I setup the ubiquiti network. It actually ended up taking a
-good portion of Sunday, but that is because I ran into a few issues.
-Fortunately/Unfortunately these issues were mostly due to it being my first time
+This past weekend, I setup my new ubiquiti network. It actually took up a good
+portion of Sunday, because I ran into a few minor issues.
+Fortunately/Unfortunately, these issues were mostly because it my first time
 configuring this type of setup, so there was a lot of trial and error. The basic
-setup of is now all configuring and running great. It was a good day and I
+setup is now all configuring and has been running great. It was a good day and I
 learned a lot :). In fact, I am confident that if I had to start over from
 scratch, the process would take me about 10-15 minutes. Just to be sure, I'm
-just going to quickly jot down the major pain points I had during my first time
+just going to quickly jot down the major pain points I had during the initial
 setup.
 
 <!-- more -->
 
-## Trouble Connecting to EdgeRouter-x for Initial Setup
+## Trouble Connecting to the EdgeRouter-x for Initial Setup
 <center>
 <img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/wrong-router-connection.png" width="90%">
 </center>
 <div id="caption">During initial setup, I was connecting the router wrong</div>
 
-The edgerouter needs to be directly connected to a computer during initial setup
-so that the EdgeOS configuration screen can be accessed. The instructions stated
-to connect and ethernet cable from my laptop to the `eth0/POE` port on the
-edgerouter, but I guess I didn't believe it.
+The edgerouter needs to be directly connected to a computer during its initial
+setup, so that the EdgeOS configuration screen can be accessed. The
+instructions clearly stated to connect and ethernet cable from my laptop to the
+`eth0/POE` port on the edgerouter, but I guess I didn't believe them.
 
 
-Instead, I plugged the ethernet cable from modem into `eth0`, and I was connected
-my computer to `eth1`. That didn't work. However, once I properly connected the
-devices, and manually set a static IP on my laptop (ex: `192.168.1.2`), I was
-able to access the configuration page in my browser via `https://192.168.1.1`
-(don't for get the *s* in *https*). Lesson Learned: manuals are (*usually*) not
-out to get you.
+Instead, I plugged the ethernet cable from my modem into `eth0`, and my computer
+to `eth1`. That didn't work. However, once I *properly* connected the devices (and
+manually set a static IP on my laptop, `192.168.1.2` for example), I was able to access
+the configuration page in my browser via `https://192.168.1.1` (don't forget
+the *s* in *https*). Lesson Learned: manuals are (*usually*) not out to get you.
 
 ## Issues connecting AP/POE
 This was not actually an issue I encountered, but rather me not being sure what
@@ -61,19 +60,16 @@ configuration and enable the POE for eth4, and the AP lit up, indicating that it
 was connected and being powered.
 
 ## Issues linking/configuring the AP
-This was the one I had the biggest issue with. I knew I had to setup the
-configuration software, but it was only set for Ubuntu, and I have been running
-Solus. So, I spun up a few VMs to try it out. However, I was being dumb and over
-looked the fact that they are on a different subnet. I assumed because I was
-connecting to them from my host, that was connected directly to the switch It
-should be okay, and that the VM should be able to see the AP because it could
-see everything else on the network. However... the AP couldn't see the VM which
-was the issue, as the AP wasn't being detected. I went on a trail thinking I
-needed to change my inform URL, but that wasn't helping.
-
-Eventually, I realized it was likely due to the 192.168.122.* ip that the VMs
-are assigned. I realized it earlier, but didn't want to admit that was the
-issue...
+This was the I spent the most time on. I knew I had to setup the configuration
+software, but the Linux binary was a .deb, and I have been running Solus. So, I
+spun up a few VMs on my laptop to try it out, because I didn't feel like
+packaging it up for Solus yet, and I thought it was a normal GUI application.
+However, I over looked the fact that my laptop VMs default to a different
+subnet. I was hoping that because the VM's network was routed through my laptop,
+which was connected directly to the edgerouter, it would still be able to see
+the access point. However... the AP couldn't see the VM which was the issue. The
+AP wasn't being detected. Eventually, I admitted it was likely due to the
+192.168.122.* ip that the VM was assigned.
 
 <center>
 <img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/ubuntu.png" width="45%">
@@ -81,13 +77,15 @@ issue...
 </center>
 <div id="caption">I spun up a new Ubuntu VM (Venomoth) to host the Ubifi controller</div>
 
-By this point, I also had learned that the software, is more of a server program
-than desktop application on Ubuntu, so I decided to spin up a VM on my server
-for it. I thought this might fix my issue because those VMs automatically get
-configured on the correct subnet, and I didn't feel like editing my laptop VM.
-This made more sense too, because I can run the AP controller as full time
-server so I can always connect to it when needed.
+By this point, I also had learned that the software is more of a server service,
+than a GUI desktop application. So, I decided spinning up a dedicated VM on my
+server to host the wifi controller might be worth it. Virtual machines on my
+server automatically get configured on the main subnet, so it also fixed my
+issue. This setup made more sense anyway, because now I can always connect to
+the AP controller, just like my router's settings webUI.
 
 
-
-That's it for now on notes. I'll eventually clean this up into a quick post 
+That's it for setup "*issues*". There were no *major* issues, just little
+confusions for a Ubiquiti/POE first-timer. Like I stated earlier, I am sure I
+could redo the setup in about 15 minutes with now issues... 10 now that I
+recorded everything in the post!
