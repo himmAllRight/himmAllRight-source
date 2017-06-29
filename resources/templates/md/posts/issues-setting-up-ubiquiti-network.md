@@ -36,13 +36,14 @@ manually set a static IP on my laptop, `192.168.1.2` for example), I was able to
 the configuration page in my browser via `https://192.168.1.1` (don't forget
 the *s* in *https*). Lesson Learned: manuals are (*usually*) not out to get you.
 
-## Issues connecting AP/POE
-This was not actually an issue I encountered, but rather me not being sure what
-the best way to setup the [POE](https://en.wikipedia.org/wiki/Power_over_Ethernet) 
-was. At first, I had the POE adaptor connected between the edgerouter and the
-AP, because I wasn't sure if it could power both devices with it. I eventually 
-found a 
-[great guide](https://www.youtube.com/watch?v=f7FeYsJqotc&list=PLDBkup9c8YMgZaE50hAjP7rbbVriTlyQf&index=1)  that confirmed that I could.
+## Setting up POE and Connecting the AP 
+This was not actually an issue I encountered, but rather a confusion. I was unsure what the best setup for 
+the [POE](https://en.wikipedia.org/wiki/Power_over_Ethernet) hardware was. At 
+first, I had the POE adaptor connected between the edgerouter and the AP, 
+because I wasn't sure if it could optimally power both devices. I found 
+an 
+[informative guide](https://www.youtube.com/watch?v=f7FeYsJqotc&list=PLDBkup9c8YMgZaE50hAjP7rbbVriTlyQf&index=1) that 
+indicated the POE adaptor could indeed power both.
 
 <p>
 ```
@@ -55,9 +56,9 @@ Power  --
 <div id="caption">Digram describing the correct link up</div>
 </p>
 
-Once I swapped that that all around, I just had to go into the router
-configuration and enable the POE for eth4, and the AP lit up, indicating that it
-was connected and being powered.
+Once I swapped the cables all around, I just had to go into the router
+configuration and enable the POE for eth4. Once POE was enabled, the AP lit up,
+indicating that it was connected and powered.
 
 ## Issues linking/configuring the AP
 This was the I spent the most time on. I knew I had to setup the configuration
