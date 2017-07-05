@@ -31,3 +31,17 @@ IDK... I have to see. Also need to get remote Virt-manager working....
 
 
 I'll think about all of this...
+
+
+Well... I did it. I switched to Fedora on Alakazam yesterday. I went with the Fedora 25 KDE spin
+and did all of the hoops to get that up and going. Not only am I getting used to Fedora gain, but
+I am also finding myself having to get used to the KDE environment again... it does seem different
+that other Plasma setups I've used in the past...
+
+I am actually writting this ssh'd into Alakazam from Kadabra because it has none of it's apps...
+because I am actually in a live environment of the Fedora 25 KDE spin here as well. I am doing it on
+my test SSD, but will likely switch over to my perminent drive soon. I wanted to leave Solus on it,
+but the network stuff kept dropping after suspend, as in it didn't even display available wireless
+connections. Not good.
+
+The update is done so I'm going to restart and get this running.
