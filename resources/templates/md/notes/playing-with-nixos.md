@@ -12,3 +12,6 @@ might be a contender for my proxmox replacement I want to do. If not, Centos7
 (or even Debian) are my fallbacks.
 
 Nixos would be cool though....
+
+
+Welp... I installed it on Kadabra. Working my way though this...
