@@ -20,6 +20,11 @@ This step that should really be done is to setup ssh key authentication. If you
 don't know how to do this, I included a small ssh key how-to [here](../Ansible-On-Pi-Cluster#ssh) in [a previous post](../Ansible-On-Pi-Cluster). Many of the git guides out there call for creating up a `git` user and setting up ssh keys for that user. This is a good idea if multiple people need access to the git repo, but for my purposes, I am the only one ever accessing it (Which is a good thing, since it's my password vault). So I just used 
 
 ### Creating Server Repo
+<center>
+<img src="../../img/posts/creating-remote-git-repo/init-bare-repo.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/init-bare-repo.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/init-bare-repo.png'"> 
+</center>
+<div id="caption">Creating the remote git repo</div>
+
 
 `mkdir ~/test-repo.git`
 
@@ -28,3 +33,4 @@ don't know how to do this, I included a small ssh key how-to [here](../Ansible-O
 ### Pointing Local Repo to Server
 
 `username@hostname:reponame`
+
