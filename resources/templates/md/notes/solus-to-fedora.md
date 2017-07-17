@@ -58,3 +58,5 @@ wifi stuff is due to Intel. Also, I've been experimenting with nixos again... so
 So I am about to do my first Kernel update since being on Fedora again (on
 Alakazam). We'll see how the video drives stuff is... To note, I am still on 25
 so it hopefully won't be too bad...
+
+No issues whatsover :)
