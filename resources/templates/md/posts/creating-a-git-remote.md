@@ -6,15 +6,21 @@
 :draft? false
 }
 
-I've been meaning to move my password-store repo to be just a simple self hosted
-on. I don't need gitlab for all that. For as simple as the basic solution is,
-all the guides I saw online went above and beyond what to do. It's like, 2 steps
-so I'll quickly post them here.
+For over a year or so, I have been using a
+self-hosted [Gitlab](https://about.gitlab.com/) to host all of my private repos.
+For a few months now, I have been meaning to move Gitlab repos to bare, minimal
+ones, hosted directly on a server. The majority of my code/configs are hosted
+publicly on [my Github](https://github.com/himmAllRight) page, and it really
+doesn't make sense to maintain a full Gitlab instance for the few (like...2)
+private repositories I keep. Switching git repos to bare ones right on the serve
+is actually fairly simple. For such a simple process, all the guides I saw
+online went way above and beyond what I needed. So, here are the *two* steps I
+did to migrate my repos.
 
 <!-- more -->
 
 ### SSH Keys
-The first (somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt you for the password of whichever user the git repo is hosted under. When using a git service (ex: Github or Gitlab), this often is often unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you
+The first (and somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt you for the password of whichever user the git repo is hosted under. When using a git service (ex: Github or Gitlab), this often is often unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you
 do not know how to configure ssh keys, I included a small ssh key how-to [here](../Ansible-On-Pi-Cluster#ssh) in [a previous post](../Ansible-On-Pi-Cluster). Many of the git guides out there call for creating up a `git` user and setting up ssh keys for that user. This is a good idea if multiple people need access to the git repo, but for my purposes, I am the only one ever accessing it (Which is a good thing, since it's my password vault). 
 
 ### Creating Server Repo
