@@ -38,6 +38,12 @@ This will initialize the repository inside that directory. The `git init` comman
 
 
 ### Pointing Local Repo to Server
+
+<center>
+<img src="../../img/posts/creating-remote-git-repo/point-to-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.png'"> 
+</center>
+<div id="caption">Pointing a working repo to the new remote</div>
+
 Once the remote repo is initalized, we can point an existing git repository on the local machiene to it. To do this, enter the directory of the git repository, and edit the config the (`.git/config`). To redirect the repo to point to the new remote, edit the `url` line to the location of the repo:
 
 `username@hostname:reponame`
@@ -47,6 +53,25 @@ cd Server-Node-Files
 vim ./git/config
 ```
 
+After pointing to the new remote, feel free to push the content to it: (Only push everything (*) if that is desired)
 
+```
+git add *
+git commit -m "First push to new Remote"
+git push origin master
+```
 
+And that's it.
 
+### Cloning Repo
+
+<center>
+<img src="../../img/posts/creating-remote-git-repo/clone-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.png'"> 
+</center>
+<div id="caption">Clone the Remote to a Local Dir</div>
+
+If the remote is for a new repository, it can be cloned down to the local working directory:
+
+```
+git clone cloud.himmelwright.net
+```
