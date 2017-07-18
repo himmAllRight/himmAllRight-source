@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Creating a git Repo Remote"
-:date "2017-07-10"
+:date "2017-07-18"
 :author "Ryan Himmelwright"
 :tags ["git" "Linux" "dev"]
 :draft? false
@@ -12,8 +12,6 @@ all the guides I saw online went above and beyond what to do. It's like, 2 steps
 so I'll quickly post them here.
 
 <!-- more -->
-
-Body
 
 ### SSH Keys
 The first (somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt you for the password of whichever user the git repo is hosted under. When using a git service (ex: Github or Gitlab), this often is often unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you
@@ -40,7 +38,15 @@ This will initialize the repository inside that directory. The `git init` comman
 
 
 ### Pointing Local Repo to Server
-Once
+Once the remote repo is initalized, we can point an existing git repository on the local machiene to it. To do this, enter the directory of the git repository, and edit the config the (`.git/config`). To redirect the repo to point to the new remote, edit the `url` line to the location of the repo:
 
 `username@hostname:reponame`
+
+```
+cd Server-Node-Files
+vim ./git/config
+```
+
+
+
 
