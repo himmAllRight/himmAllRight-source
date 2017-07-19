@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Creating a git Repo Remote"
-:date "2017-07-18"
+:date "2017-07-19"
 :author "Ryan Himmelwright"
 :tags ["git" "Linux" "dev"]
 :draft? false
@@ -30,7 +30,7 @@ do not know how to configure ssh keys, I included a small ssh key how-to [here](
 </center>
 <div id="caption">Creating the remote git repo</div>
 
-Once ssh authentication is configured, ssh into the remote server to host the git repository. Creating the actual repo is very simple. First, make a directory for the repo (convention is REPO-NAME.git). Next, jump into the created directory (`cd`) and run the command `git init --bare`. The to full sequence I used:
+Once ssh authentication is configured, ssh into the remote server that will host the git repository. Creating the remote repo is very simple. First, make a directory for the repo (the normal convention uses a `.git` ending: `REPO-NAME.git`). Next, jump into the created directory (`cd`) and run the command `git init --bare`.
 
 ```
 mkdir REPO-NAME.git
@@ -39,18 +39,32 @@ git init --bare
 ```
 
 
-This will initialize the repository inside that directory. The `git init` command is used to create any git repository. The `--bare` option tells git to treat it as a bare repository. Bare repositories contain no working or checked out copy of the source files. Thus, plain `git init` command creates a *working* repo, while `git init --bare` is used to create a *sharing(server) repo*. The working repositories of many developers can be synced to the server repo. Setting up a remote sharing repo is what this post is all about.
+This will initialize the repository inside that directory. The `git init` command is used to create a git repository. The `--bare` option flag tells git to treat it as a bare repository. Bare repositories do not contain a working or checked out copy of the source files. Thus, the plain `git init` command creates a *working* repo, while `git init --bare` is used to create a *sharing(server) repo*. This allows the working repositories of many developers to be synced with the server repo. 
 
+
+### Cloning Repo
+
+<center>
+<img src="../../img/posts/creating-remote-git-repo/clone-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.png'"> 
+</center>
+<div id="caption">Clone the Remote to a Local Dir</div>
+
+If the remote git repository is a totally new repository, it can be cloned down to a working directory one a developer machine fairly easily:
+
+```
+git clone cloud.himmelwright.net
+```
 
 
 ### Pointing Local Repo to Server
+
 
 <center>
 <img src="../../img/posts/creating-remote-git-repo/point-to-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.png'"> 
 </center>
 <div id="caption">Pointing a working repo to the new remote</div>
 
-Once the remote repo is initalized, we can point an existing git repository on the local machiene to it. To do this, enter the directory of the git repository, and edit the config the (`.git/config`). To redirect the repo to point to the new remote, edit the `url` line to the location of the repo:
+However, In my case, I already had an existing working repository that I wanted to sync with the new remote shared repo. With the remote repo initialized, I wanted to point my existing git repository on the local machine to it. To do this, enter the directory of the git repository, and edit the config the (`.git/config`). To redirect the repo to point to the new remote, edit the `url` line to the location of the repo:
 
 `username@hostname:reponame`
 
@@ -67,17 +81,5 @@ git commit -m "First push to new Remote"
 git push origin master
 ```
 
-And that's it.
+And that's it. Enjoy spinning up your own personal git repositories! 
 
-### Cloning Repo
-
-<center>
-<img src="../../img/posts/creating-remote-git-repo/clone-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.png'"> 
-</center>
-<div id="caption">Clone the Remote to a Local Dir</div>
-
-If the remote is for a new repository, it can be cloned down to the local working directory:
-
-```
-git clone cloud.himmelwright.net
-```
