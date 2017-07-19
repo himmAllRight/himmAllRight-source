@@ -20,8 +20,8 @@ did to migrate my repos.
 <!-- more -->
 
 ### SSH Keys
-The first (and somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt you for the password of whichever user the git repo is hosted under. When using a git service (ex: Github or Gitlab), this often is often unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you
-do not know how to configure ssh keys, I included a small ssh key how-to [here](../Ansible-On-Pi-Cluster#ssh) in [a previous post](../Ansible-On-Pi-Cluster). Many of the git guides out there call for creating up a `git` user and setting up ssh keys for that user. This is a good idea if multiple people need access to the git repo, but for my purposes, I am the only one ever accessing it (Which is a good thing, since it's my password vault). 
+The first (and somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt for the password of the repo's host user . When using a git service (ex: Github or Gitlab), this usually unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you
+do not know how to configure ssh keys, I included a small ssh key how-to [here](../Ansible-On-Pi-Cluster#ssh) in [a previous post](../Ansible-On-Pi-Cluster). Many of the git guides out there call for creating a `git` user and setting up ssh keys with that user. This is a great idea if multiple people need access to the git repo. However, for my purposes I will be the only one accessing it (which in my case is a good thing). 
 
 ### Creating Server Repo
 
