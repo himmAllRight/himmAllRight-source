@@ -1,8 +1,15 @@
-So I have been debating if I might switch back to fedora on my computers for a bit..
+{:layout :post
+:title  "Migrating from Solus to Fedora for a bit"
+:date "2017-07-19"
+:author "Ryan Himmelwright"
+:tags ["Linux" "Fedora"]
+:draft? false
+}
 
-I have a few reasons which I will record here, and if I do decide to move along,
+For awhile, I had been debating the idea of switching back to fedora, at least on my [main computer](../../pages/homelab/#alakazam). Let me state this right up front: I am still *very* satisfied with Solus, and even want to still contribute. I have a few reasons which I will record here, and if I do decide to move along,
 I will also plan out what I will do here. 
 
+<!-- more -->
 
 ### Why Switch
 Main reasons are it just might make sense for what I am trying to do on my
