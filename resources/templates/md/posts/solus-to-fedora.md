@@ -1,31 +1,48 @@
 {:layout :post
 :title  "Migrating from Solus to Fedora for a bit"
-:date "2017-07-19"
+:date "2017-07-21"
 :author "Ryan Himmelwright"
 :tags ["Linux" "Fedora"]
 :draft? false
 }
 
-For awhile, I had been debating the idea of switching back to fedora, at least on my [main computer](../../pages/homelab/#alakazam). Let me state this right up front: I am still *very* satisfied with Solus, and even want to still contribute. I have a few reasons which I will record here, and if I do decide to move along,
-I will also plan out what I will do here. 
+For awhile, I had been debating the idea of switching back to fedora, at least on my [main computer](../../pages/homelab/#alakazam). Let me state this right up front: I am still *very* satisfied with Solus, and even want to still contribute to the project. However, there are a few reasons why Solus isn't the best fit for my needs right now, and I will highlight them below.
 
 <!-- more -->
 
 ### Why Switch
+On the [Solus Project homepage](https://solus-project.com), it states right away that "Solus is an operating system that is designed for **home computing**." While I am talking about my *home* computer, the tasks I am doing with it do not fall into your standard *home computing* use. Recently, the top computing activities I've been doing are:
+
+- Writting (okay... but still)
+- Running *lots* of VMs
+- Trying various Server Technologies
+  - ZFS
+  - KVM
+  - Containerization (LXC, Docker, ...)
+  - Ansible and other automation tools
+  - Etc.
+- Learning about Clustering
+  - OpenMP
+  - High Availability
+- Trying to get involved with some other Open Source Projects
+  - Fedora (Infrastructure, Dev)
+  - NixOS
+
+As you can see, many of the activities I'm doing aren't desktop based, but 
+really *server* based. And Solus is *not* a server distribution, as it doesn't 
+*try* to be one.
+
 Main reasons are it just might make sense for what I am trying to do on my
 computers these days. Solus is great for our standard desktop user or even Dev.
 I'm reall not full using that workflow right now though. The main things I've
 been doing are:
 
-- Writting
-- Running VMs
-- Trying Server stuff
-  - ZFS
-  - KVM
-  - ETC
-- Trying to get involve with Fedora for Sysadmin experience
 
-#### Solus is still great
+
+Additionally, I've been eyeing up the Plasma desktop, and wanted to try that out again (Solus doesn't currently support Plasma... *yet*).
+
+### Solus is still great
+
 Solus is a great desktop OS, but I am trying to get more experience with server
 type distros... which makes me think working in a Fedora environment and using
 that to build up to also switching my Server to CentOS might be a better deal
