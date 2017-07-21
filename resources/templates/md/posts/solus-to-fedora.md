@@ -67,6 +67,11 @@ I'll think about all of this...
 
 ### The Switch
 
+<center>
+<img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/fedora25.png"  width=85%>
+</center>
+<div id="caption">Screenfetch on my new Fedora Install</div>
+
 Well... I did it. I switched to Fedora on Alakazam yesterday. I went with the Fedora 25 KDE spin
 and did all of the hoops to get that up and going. Not only am I getting used to Fedora gain, but
 I am also finding myself having to get used to the KDE environment again... it does seem different
