@@ -11,6 +11,12 @@ For awhile, I had been debating the idea of switching back to fedora, at least o
 <!-- more -->
 
 ### Why Switch
+<center>
+<img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/logos.png"  width=85%>
+</center>
+<div id="caption">The Solus (Left) and Fedora (right) Project Logos</div>
+
+
 On the [Solus Project homepage](https://solus-project.com), it states right away that "Solus is an operating system that is designed for **home computing**." While I am talking about my *home* computer, the tasks I am doing with it do not fall into your standard *home computing* use. Recently, the top computing activities I've been doing are:
 
 - Writting (okay... but still)
@@ -60,6 +66,7 @@ IDK... I have to see. Also need to get remote Virt-manager working....
 I'll think about all of this...
 
 ### The Switch
+
 Well... I did it. I switched to Fedora on Alakazam yesterday. I went with the Fedora 25 KDE spin
 and did all of the hoops to get that up and going. Not only am I getting used to Fedora gain, but
 I am also finding myself having to get used to the KDE environment again... it does seem different
