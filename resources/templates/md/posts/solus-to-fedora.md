@@ -91,8 +91,24 @@ wifi stuff is due to Intel. Also, I've been experimenting with nixos again... so
 
 
 ### Update
+
+#### Kernel Upgrade
 So I am about to do my first Kernel update since being on Fedora again (on
 Alakazam). We'll see how the video drives stuff is... To note, I am still on 25
 so it hopefully won't be too bad...
 
 No issues whatsover :)
+
+#### Upgrade to Fedora 26
+<center>
+<img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/fedora26-upgrade.png"  width=85%>
+</center>
+<div id="caption">I upgrade my Fedora 25 Plasma Install to Fedora 26</div>
+I just upgraded Alakazam from Fedora 25 KDE, to Fedora 26 this morning. I couldn't really get the
+graphical installer to start, but that could be because I have several desktop environments setup
+(Plasma & Gnome), so it was confused. 
+
+I just did the upgrade using the command line dnf upgrade tool like I normally use, and it worked
+wondefully. It even looks like my nvidia drivers and everything stayed and were configured correctly
+after rebooting. The only difference is I don't seem to have the same Plasma animations I had
+before, but that is fine. 
