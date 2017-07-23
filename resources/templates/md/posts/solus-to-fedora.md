@@ -6,7 +6,7 @@
 :draft? false
 }
 
-For awhile, I had been debating the idea of switching back to fedora, at least on my [main computer](../../pages/homelab/#alakazam). Let me state this right up front: I am still *very* satisfied with Solus, and even want to still contribute to the project. However, there are a few reasons why Solus isn't the best fit for my needs right now, and I will highlight them below.
+For awhile now, I have been debating the idea of switching back to Fedora (from Solus). Well, at least on my [main computer](../../pages/homelab/#alakazam). First, let me state this right up front: I am still *very* satisfied with Solus. I think it is one of the best current Linux distros, and I want to still contribute to the project. However, there are a few reasons why Solus isn't the best fit for my needs right now, and I will highlight them below.
 
 <!-- more -->
 
