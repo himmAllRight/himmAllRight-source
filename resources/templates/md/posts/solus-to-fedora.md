@@ -17,53 +17,33 @@ For awhile now, I have been debating the idea of switching back to Fedora (from 
 <div id="caption">The Solus (Left) and Fedora (right) Project Logos</div>
 
 
-On the [Solus Project homepage](https://solus-project.com), it states right away that "Solus is an operating system that is designed for **home computing**." While I am talking about my *home* computer, the tasks I am doing with it do not fall into your standard *home computing* use. Recently, the top computing activities I've been doing are:
+On the [Solus Project homepage](https://solus-project.com), it is stated, right away, that "Solus is an operating system that is designed for **home computing**." While I have been using Solus for my my *home* computing, the computing tasks I've focused on recently do not fall into the category of standard *home computing* use. Recently, my main top computing activities and goals are:
 
-- Writting (okay... but still)
-- Running *lots* of VMs
+- Writing (okay... but still)
+- Running all sorts of VMs
 - Trying various Server Technologies
   - ZFS
   - KVM
-  - Containerization (LXC, Docker, ...)
+  - Containerization Technologies (LXC, Docker, ...)
   - Ansible and other automation tools
   - Etc.
 - Learning about Clustering
   - OpenMP
   - High Availability
+  - Distributed File systems
 - Trying to get involved with some other Open Source Projects
   - Fedora (Infrastructure, Dev)
   - NixOS
 
-As you can see, many of the activities I'm doing aren't desktop based, but 
-really *server* based. And Solus is *not* a server distribution, as it doesn't 
-*try* to be one.
+As you can see, many of the above items are not desktop based, but really
+*server* based operations. Solus is *not* a server distribution, as it doesn't
+*try* to be one. Which is a good thing for desktop use. It is focused on its
+audience. I am just not that audience right now.
 
-Main reasons are it just might make sense for what I am trying to do on my
-computers these days. Solus is great for our standard desktop user or even Dev.
-I'm reall not full using that workflow right now though. The main things I've
-been doing are:
+Additionally, one of my goals for the near future is to transform my long-time Proxmox server into a [CentOS](https://www.centos.org/) box. Using Fedora on my main workstation does help me get accustom to that environment, and test ideas out before I plan the big move.
 
+Lastly, I had been eyeing up the Plasma desktop, and wanted to try that out again. At the time of writing, Solus doesn't fully support the Plasma desktop (yet). However, Fedora *does* have a [KDE Plasma Desktop Spin](https://spins.fedoraproject.org/kde/).
 
-
-Additionally, I've been eyeing up the Plasma desktop, and wanted to try that out again (Solus doesn't currently support Plasma... *yet*).
-
-### Solus is still great
-
-Solus is a great desktop OS, but I am trying to get more experience with server
-type distros... which makes me think working in a Fedora environment and using
-that to build up to also switching my Server to CentOS might be a better deal
-for me... for now.
-
-The main issue is that I still do want to be a part of the Solus community and
-Dev there...
-
-Maybe I could switch Alakazam to Fedora, and keep Kadabra on Solus, with the
-Fedora dev VM?
-
-IDK... I have to see. Also need to get remote Virt-manager working....
-
-
-I'll think about all of this...
 
 ### The Switch
 
@@ -72,6 +52,7 @@ I'll think about all of this...
 </center>
 <div id="caption">Screenfetch on my new Fedora Install</div>
 
+```
 Well... I did it. I switched to Fedora on Alakazam yesterday. I went with the Fedora 25 KDE spin
 and did all of the hoops to get that up and going. Not only am I getting used to Fedora gain, but
 I am also finding myself having to get used to the KDE environment again... it does seem different
@@ -88,22 +69,29 @@ The update is done so I'm going to restart and get this running.
 Alakazam is doing well on Fedora. I've been enjoying it a bit and think I might
 stay on it. I am not sure about Kadabra's fate though. I am pretty sure that the
 wifi stuff is due to Intel. Also, I've been experimenting with nixos again... so there's that...
+```
 
 
-### Update
+### Updates
+
+I did some update that I thought *might* cause issues and made sure to log the results. The first was the first time I updated the kernel, and the second was actually upgrading from Fedora 25 to 26. Both updates went very smoothly without any issues:
 
 #### Kernel Upgrade
+```
 So I am about to do my first Kernel update since being on Fedora again (on
 Alakazam). We'll see how the video drives stuff is... To note, I am still on 25
 so it hopefully won't be too bad...
 
 No issues whatsover :)
+```
 
 #### Upgrade to Fedora 26
 <center>
 <img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/fedora26-upgrade.png"  width=85%>
 </center>
 <div id="caption">I upgrade my Fedora 25 Plasma Install to Fedora 26</div>
+
+```
 I just upgraded Alakazam from Fedora 25 KDE, to Fedora 26 this morning. I couldn't really get the
 graphical installer to start, but that could be because I have several desktop environments setup
 (Plasma & Gnome), so it was confused. 
@@ -112,3 +100,6 @@ I just did the upgrade using the command line dnf upgrade tool like I normally u
 wondefully. It even looks like my nvidia drivers and everything stayed and were configured correctly
 after rebooting. The only difference is I don't seem to have the same Plasma animations I had
 before, but that is fine. 
+```
+
+
