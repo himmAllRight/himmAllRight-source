@@ -9,6 +9,7 @@ In the last few weeks, I have started my CS masters classes, and needed to setup
 
 <!--more-->
 
+<a name="fedora"></a>
 ## From Fedora...
 ![Fedora](../../img/back-on-arch/fedora-logo.png)
 
@@ -16,6 +17,7 @@ When I started my journey, I had Fedora on both of my computers. I really like t
 
 There is one remaining big issue I had while running Fedora on my main computer. Nvidia drivers. They are just a pain to maintain, and kept breaking my system during updates. I know the [RPM Fusion Repos](http://rpmfusion.org/) are supposed to help, but they just aren't there yet. With my classes starting, I needed something that was a bit more stable (and would hopefully support installing VMWare Workstation 9).
 
+<a name="ubuntu"></a>
 ## The 'Easy Stability' of Ubuntu-based? 
 ![Ubuntu Mate](../../img/back-on-arch/ubuntu-mate-logo.png)
 
@@ -23,6 +25,7 @@ Guided by desires to have a "stable" distro, I decided that the *obvious* answer
 
 After I got it installed, I was able to install the nvidia drivers, but I had other random issues here and there. I also tried installing VMWare, but had issues at every step. To be completely honest, I really wasn't feeling using an Ubuntu distro on alakazam. If I was going to be replacing Fedora, I wanted to make up for it by using something that gave me more power (I've started to get the itch to try out Gentoo again. Spoiler, I am not using Gentoo. At least until my class is over...). While Ubuntu could easily support my needs being the well supported and advanced distro that it is ... I craved something else.
 
+<a name="opensuse"></a>
 ## Leaping to Suse?
 ![OpenSuse Linux](../../img/back-on-arch/opensuse-logo.png)
 
@@ -30,6 +33,7 @@ During my last few months on Fedora, I took notice of another rpm distro that wa
 
 Leap was a solid and extensive distribution. Ultimately though, that was the biggest qualm I had with it: there was a lot going on. I did not know what many of the pre-installed configuration tools were. Normally, I am fine with learning new tools, but I wanted a distribution that I could set up and get to work. OpenSuse had _too many_ "toys" already in it. I would not be able to resist spending hours learning everything. Ironically, my other complaint was that some of the applications I _did_ want, were not easily available. Often, they were not included in the default repositories, and while many application websites will provide a *.deb download, *.rpms are a bit more scarce. I know there is the wonderful [openSuse Build Service](https://build.opensuse.org/), but like [Fedora's copr build system](https://copr.fedorainfracloud.org/), I often found it to be hit or miss. Both do a good job at addressing a major issue in their respective distributions, but neither isn't quite to the level of ... well, the [AUR](https://aur.archlinux.org/).
 
+<a name="antegeros"></a>
 ## Antegeros
 ![Antegeros Linux](../../img/back-on-arch/antergos-logo.png)
 
@@ -39,6 +43,7 @@ Unfortunately, the "simplicity" of Antergos (which is sort of the antithesis to 
 
 After a few days of fighting with Antegeros, I decided to just bite the bullet and install Vanilla Arch. I still think Antegros is a great distribution that works for a bunch of people. It is great for users that want to experience the power of arch Linux, without having to go through all the overhead. Antegeros is actually how I started to learn Arch Linux. Nowadays though, I seem to prefer _simplicity_ of vanilla Arch. 
 
+<a name="arch"></a>
 ## All Roads Lead to Arch
 ![Arch Linux](../../img/back-on-arch/arch-logo.png)
 
