@@ -52,38 +52,43 @@ Lastly, I had been eyeing up the Plasma desktop, and wanted to try that out agai
 </center>
 <div id="caption">Screenfetch on my new Fedora Install</div>
 
-```
-Well... I did it. I switched to Fedora on Alakazam yesterday. I went with the Fedora 25 KDE spin
-and did all of the hoops to get that up and going. Not only am I getting used to Fedora gain, but
-I am also finding myself having to get used to the KDE environment again... it does seem different
-that other Plasma setups I've used in the past...
+I eventually (and somewhat sporadically), made the switch to Fedora. I switched
+the week before the 26 release, so I decided to start with 25, and then upgrade
+later (although I did test out 26 on my other laptop). This let me ensure that
+the 26 issues were ironed out before upgrading. I also got to test out the `dnf`
+system upgrade process. I recorded *post-switch* notes during the last few weeks
+to document how everything went.
 
-I am actually writting this ssh'd into Alakazam from Kadabra because it has none of it's apps...
-because I am actually in a live environment of the Fedora 25 KDE spin here as well. I am doing it on
-my test SSD, but will likely switch over to my perminent drive soon. I wanted to leave Solus on it,
-but the network stuff kept dropping after suspend, as in it didn't even display available wireless
-connections. Not good.
+>"Well... I did it. I switched to Fedora on Alakazam yesterday. I went with the
+>Fedora 25 KDE spin and did all of the hoops to get that up and going. Not only
+>is it taking some time to get used to Fedora again, but I am needing to
+>reacquaint myself with the KDE environment... it does seem different that other
+>Plasma setups I've used in the past... But I like it."
 
-The update is done so I'm going to restart and get this running.
+But I got used to it in no time:
 
-Alakazam is doing well on Fedora. I've been enjoying it a bit and think I might
-stay on it. I am not sure about Kadabra's fate though. I am pretty sure that the
-wifi stuff is due to Intel. Also, I've been experimenting with nixos again... so there's that...
-```
+>Alakazam is doing well on Fedora. I've been enjoying it and think I will stay on
+>it.
 
 
 ### Updates
 
-I did some update that I thought *might* cause issues and made sure to log the results. The first was the first time I updated the kernel, and the second was actually upgrading from Fedora 25 to 26. Both updates went very smoothly without any issues:
+I ran some updates that I thought *might* be problematic, based
+on [previous issues](../back-on-arch/#fedora) I've encountered with Fedora. I
+made sure to note the results as well. The first notable update was from the
+first time I updated the kernel, and the second was  upgrading from
+Fedora 25 to 26. Both updates went very smoothly without any issues:
 
 #### Kernel Upgrade
-```
-So I am about to do my first Kernel update since being on Fedora again (on
-Alakazam). We'll see how the video drives stuff is... To note, I am still on 25
-so it hopefully won't be too bad...
 
-No issues whatsover :)
-```
+>So I am about to do my first Kernel update since being on Fedora again (on
+>Alakazam). We'll see how the video driver stuff is... To note, I am still on 25
+>so it hopefully won't be too bad...
+
+*...reboot...*
+
+>No issues whatsover :)
+
 
 #### Upgrade to Fedora 26
 <center>
@@ -91,15 +96,19 @@ No issues whatsover :)
 </center>
 <div id="caption">I upgrade my Fedora 25 Plasma Install to Fedora 26</div>
 
-```
-I just upgraded Alakazam from Fedora 25 KDE, to Fedora 26 this morning. I couldn't really get the
-graphical installer to start, but that could be because I have several desktop environments setup
-(Plasma & Gnome), so it was confused. 
+Other than some odd issues with the GUI tool, the upgrade from 25 to 26 was 
+smooth and uneventful.
 
-I just did the upgrade using the command line dnf upgrade tool like I normally use, and it worked
-wondefully. It even looks like my nvidia drivers and everything stayed and were configured correctly
-after rebooting. The only difference is I don't seem to have the same Plasma animations I had
-before, but that is fine. 
-```
+>I just upgraded Alakazam from Fedora 25 KDE, to Fedora 26 this morning. I couldn't really get the
+>graphical installer to start, but that could be because I have several desktop environments setup
+>(Plasma & Gnome), so it was confused. 
+
+>I just did the upgrade using the command line dnf upgrade tool like I normally use, and it worked
+>wondefully. It even looks like my nvidia drivers and everything stayed and were configured correctly
+>after rebooting. The only difference is I don't seem to have the same Plasma animations I had
+>before, but that is fine. 
 
 
+So that it. Those are my reasons for switching (for now), and the results of my
+switch. I am still happy with Fedora at least on Alakazam, and will likely
+remain on it until I have a convincing reason to leave it.
