@@ -1,8 +1,8 @@
 {:layout :post
 :title  "Migrating from Solus to Fedora for now"
-:date "2017-07-21"
+:date "2017-07-25"
 :author "Ryan Himmelwright"
-:tags ["Linux" "Fedora"]
+:tags ["Linux" "Fedora" "KDE" "Solus"]
 :draft? false
 }
 
@@ -87,7 +87,7 @@ Fedora 25 to 26. Both updates went very smoothly without any issues:
 
 *...reboot...*
 
->No issues whatsover :)
+>No issues whatsoever :)
 
 
 #### Upgrade to Fedora 26
