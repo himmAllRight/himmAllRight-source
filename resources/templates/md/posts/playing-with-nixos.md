@@ -1,3 +1,13 @@
+{:layout :post
+:title  "Playing with nixOS"
+:date "2017-07-27"
+:author "Ryan Himmelwright"
+:tags ["Linux" "NixOS" "KDE"]
+:draft? false
+}
+
+
+
 So in my quest to get wifi working on Kadabra, I started playing with nixos again...
 
 
