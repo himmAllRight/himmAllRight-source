@@ -30,3 +30,28 @@ I then walked through the [test your install](https://golang.org/doc/install#tes
 
 ## First Steps
 After confirming my install, I went back and looked at the [Learning Go section](https://golang.org/doc/#learning) of the documentation. The first item was [A Tour of Go](https://tour.golang.org/welcome/1) so I started there (Although I am really interested to eventually get to the [effective go](https://golang.org/doc/effective_go.html) documentation)
+
+
+### Interesting things
+- `gofmt` tool looks neat. I'm picky about propery layout so I like this.
+- "naked" returns. You can name return values, and a "return" without arguments returns these values. As the point out, this should only be done for small functions, and I can see why (I'm thinking lambda style functions...)
+
+example:
+```
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}
+```
+### Notes
+#### Variables
+- Types come after variable names
+- `var` used to declare variables, at package and function level
+- Inside a function, can use short assignment `:=` instead (ex: `k := 3`)
+
+#### Basic Types
+
+#### Constants
+- Declared with the `const` keyword
+- Cannot be declared with `:=`
