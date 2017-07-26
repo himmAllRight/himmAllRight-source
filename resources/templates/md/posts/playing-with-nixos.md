@@ -3,13 +3,30 @@
 :date "2017-07-27"
 :author "Ryan Himmelwright"
 :tags ["Linux" "NixOS" "KDE"]
-:draft? false
+:draft? true
 }
 
 
 
 So in my quest to get wifi working on Kadabra, I started playing with nixos again...
 
+<!-- more -->
+
+### Reasons for Trying again
+
+
+#### Declarative, Functional System
+
+#### ZFS support
+
+#### Server use?
+
+### Issues
+
+#### Virtual Machine Support
+Things like virt-manager just don't seem to be working well for me.
+
+#### Anything outside the box
 
 This time I have future potential sights in mind... Apparently nixos runs great with zfs on linux...
 
