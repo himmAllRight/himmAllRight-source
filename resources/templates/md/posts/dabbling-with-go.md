@@ -63,12 +63,15 @@ I played around with the language a little bit. It really is easy to pick up the
 ```
 package main
 
-import "fmt"
-import "runtime"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
 	fmt.Printf("hello, world\n")
 	getOS()
+	fmt.Printf("\n") // I know this is dumb
 
 	x, y := 74, 83
 	sum := sumInts(x, y)
@@ -93,7 +96,7 @@ func factorial(n int) int {
 
 func getOS() {
 	os := runtime.GOOS
-	fmt.Printf("OS: %v\n", os)
+	fmt.Printf("OS: %v\n", os) // impure
 }
 
 ```
