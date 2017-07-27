@@ -52,6 +52,48 @@ func split(sum int) (x, y int) {
 
 #### Basic Types
 
+
 #### Constants
 - Declared with the `const` keyword
 - Cannot be declared with `:=`
+
+### Playing
+I played around with the language a little bit. It really is easy to pick up the basics and get going...
+
+```
+package main
+
+import "fmt"
+import "runtime"
+
+func main() {
+	fmt.Printf("hello, world\n")
+	getOS()
+
+	x, y := 74, 83
+	sum := sumInts(x, y)
+	fsum := factorial(sum)
+
+	fmt.Printf("sum: %v\n", sum)
+	fmt.Printf("Factorial of sum(%v): %v\n", sum, fsum)
+}
+
+func sumInts(x int, y int) int {
+	sum := x + y
+	return sum
+}
+
+func factorial(n int) int {
+	if n <= 1 {
+		return 1
+	} else {
+		return n + factorial(n-1)
+	}
+}
+
+func getOS() {
+	os := runtime.GOOS
+	fmt.Printf("OS: %v\n", os)
+}
+
+```
