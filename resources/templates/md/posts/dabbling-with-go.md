@@ -6,9 +6,13 @@
 :draft? false
 }
 
+After spending so much of my dedicated learning time messing with system activities like [setting up a new home network](../issues-setting-up-ubiquiti-network/), [configuring git servers](../creating-a-git-remote/), and [switching my OS](../solus-to-fedora/), I have to itch to do a little bit home programming. Maybe even dabble with a new language I've been eyeing up. After very little internal debate, I decided to just [Gopher](https://golang.org) it (I'm so sorry).
+
+<!-- more -->
+
 ## What is GO
 
-Wed 26 Jul 2017 06:26:10 AM EDT
+
 ## Reasons
 I've wanted to try [GO](https://golang.org/) as I find it to be an interesting potential language for myself. I thought about trying go in the past, but ultimately ended up trying out [rust](https://www.rust-lang.org/en-US/) first. Rust is a great language, although it can be quite complicated to learn. Go on the otherhand, is apparently a bit simplier and quick to grasp. When the Solus project announced that it was a language they are trying to fully support and use for build tools, my interest was peaked higher, but I was busy on other projects at the time. This week, Ikey made a patreon post talking about the new repo manager he's been writting... in go. So, my interest is yet again peaked.
 
