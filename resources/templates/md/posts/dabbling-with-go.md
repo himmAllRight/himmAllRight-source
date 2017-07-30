@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Dabbling with GOlang"
-:date "2017-07-27"
+:date "2017-07-29"
 :author "Ryan Himmelwright"
 :tags ["Dev" "GO"]
 :draft? false
@@ -11,9 +11,19 @@ After spending so much of my dedicated learning time messing with system activit
 <!-- more -->
 
 ## What is GO
+<img src="../../img/posts/dabbling-with-go/gopher.png" style="width: 30%; float: right; margin: 0px 10px 0px 10px;"/)
+
+Go (also known as golang) is an open source programming language developed by a team at Google (Robert Griesemer, Rob Pike, and Ken Thompson) in 2007.Being distributed under a [BSD-like license](https://golang.org/LICENSE), Go is also developed by community developers all over the world. 
 
 
-## Reasons
+Like C, it is a statically typed and compiled language. Unlike C however, Go includes garbage collection and memory safety features, as well as other design that are more reminiscent of dynamic languages like python (ex: type inference and package `import` statements). Lastly, go implements '[goroutines](https://tour.golang.org/concurrency/1)', which are a light-weight "threads", used for its concurrent programming implementation, making it an extremely relevant language for modern computing.
+
+The Go project sums all of this up much nicer than I have on their [documentation page](https://golang.org/doc/):
+
+> The Go programming language is an open source project to make programmers more productive.
+>Go is expressive, concise, clean, and efficient. Its concurrency mechanisms make it easy to write programs that get the most out of multicore and networked machines, while its novel type system enables flexible and modular program construction. Go compiles quickly to machine code yet has the convenience of garbage collection and the power of run-time reflection. It's a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language. 
+
+## Reasons to Try
 I've wanted to try [GO](https://golang.org/) as I find it to be an interesting potential language for myself. I thought about trying go in the past, but ultimately ended up trying out [rust](https://www.rust-lang.org/en-US/) first. Rust is a great language, although it can be quite complicated to learn. Go on the otherhand, is apparently a bit simplier and quick to grasp. When the Solus project announced that it was a language they are trying to fully support and use for build tools, my interest was peaked higher, but I was busy on other projects at the time. This week, Ikey made a patreon post talking about the new repo manager he's been writting... in go. So, my interest is yet again peaked.
 
 ## Installing
