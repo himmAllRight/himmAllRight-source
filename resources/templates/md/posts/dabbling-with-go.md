@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Dabbling with GO"
-:date "2017-07-29"
+:date "2017-07-30"
 :author "Ryan Himmelwright"
 :tags ["Dev" "GO" "Programming"]
 :draft? false
@@ -30,11 +30,13 @@ I've wanted to try [GO](https://golang.org/) for a long time now. A couple of mo
 When the Solus team [announced](https://solus-project.com/forums/viewtopic.php?f=13&t=2634) that it making Go a first class language of the project, my interest peaked higher. [Solbuild](https://github.com/solus-project/solbuild), the Solus package build system was written in Go. In the announcement, the project stated that they intentded to use Go for building tools. True to that statement, this past week, Ikey (the creator of Solus) published a patreon post detailing the new repo manager ([ferryd](https://github.com/solus-project/ferryd)) he's been working on... again in Go. Time for me to give it a Go (again, very sorry).
 
 
-## Installing
+## Installing Go
 
-I first went to the golan [install page](https://golang.org/doc/install) to figure out if there was any odd things to install. It didn't appear so. I should also point out that if you just want to try out go, they have an little embded GO editor on the homepage of the website. Beyond that, they have an amazing [Go tour](https://tour.golang.org/welcome/1) that can be completed entirely in a web browser. After playing online for a bit, I decided I wanted to install it on my system.
+I first went to the Go [install page](https://golang.org/doc/install) to figure out if there were any odd components to install. It didn't appear so. 
 
-I was on my NixOS laptop at the itme, so I installed go with the command: 
+*Note:* Before going any further, I should point out that if you just want to *try* go, there is little embded GO editor/compilier on the homepage of the website. Beyond that, they have an amazing [Go tour](https://tour.golang.org/welcome/1) that also has an embeded programming environment, and can be completed entirely in a web browser.
+
+After playing with the online editor online for a bit, I decided that I wanted to install Go on my system. I was on my NixOS laptop at the itme, so I installed go with the command: 
 
 ```
 nix-env -i go
@@ -48,13 +50,14 @@ sudo dnf install golang
 
 *(... and then when I jumped back to Solus on Alakazam, it was `sudo eopkg it golang`... but more on that later...)*
 
-I then walked through the [test your install](https://golang.org/doc/install#testing) steps, and built a simple "hello world" app to make sure it was working properly. This was especially important, given that I was on nixOS which can sometimes be picky with system paths and such. Luckily, everything worked fine. If I continue down the go path, I might write a "Getting" started post detailing how to setup a proper Go environment on Linux.
+Next, I walked through the [test your install](https://golang.org/doc/install#testing) steps, building a simple "hello world" app to make sure everything was working properly. This was especially important, given that I was on nixOS, which can sometimes be picky with system paths and environment variables. Luckily, everything worked fine. If I continue down the go path, I might write a "Getting started" post to detail how to setup a proper Go environment on Linux.
 
 
 ## First Steps
-After confirming my install, I went back and looked at the [Learning Go section](https://golang.org/doc/#learning) of the documentation. The first item was [A Tour of Go](https://tour.golang.org/welcome/1) so I started there (Although I am really interested to eventually get to the [effective go](https://golang.org/doc/effective_go.html) documentation).
 
-After working on the tutorial for awhile, I started around with the language own.  Below is a snippet of code I wrote while fooling around. It really is easy to pick up the basics and get going. I am excited to learn more.
+After confirming my install, I went back and continued on [A Tour of Go](https://tour.golang.org/welcome/1) to better learn the language. I am interested to eventually read the [effective go](https://golang.org/doc/effective_go.html) documentation. It will be interesting to simply *read* the correct style and conventions for the language, instead of trudging through a holly war to find answers.
+
+After working on the tutorial for awhile, I started playing around with the language on my own.  Below is a snippet of code I wrote while fooling around. It's nothing fancy. I was impressed though with how easy it was to pick up the basics and get going. I am excited to learn more.
 
 ```
 package main
