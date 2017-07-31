@@ -6,7 +6,7 @@
 :draft? false
 }
 
-After spending most of this month's dedicated learning time working on [system](../solus-to-fedora/), [server](../creating-a-git-remote/), and [network](../issues-setting-up-ubiquiti-network/) activities,  I have been itching to start some home programming again. To motivate myself, I even considered dabbling with a new programming language... and with very little internal debate, I decided to just [Gopher](https://golang.org) it (I'm so sorry).
+After spending most of this month's dedicated learning time working on [system](http://ryan.himmelwright.net/posts/solus-to-fedora/), [server](http://ryan.himmelwright.net/posts/creating-a-git-remote/), and [network](http://ryan.himmelwright.net/posts/issues-setting-up-ubiquiti-network/) activities,  I have been itching to start some home programming again. To motivate myself, I even considered dabbling with a new programming language... and with very little internal debate, I decided to just [Gopher](https://golang.org) it (I'm so sorry).
 
 <!-- more -->
 
@@ -23,6 +23,7 @@ Like the programming language itself, the Go project summarizes all of this in a
 > The Go programming language is an open source project to make programmers more productive.
 >Go is expressive, concise, clean, and efficient. Its concurrency mechanisms make it easy to write programs that get the most out of multicore and networked machines, while its novel type system enables flexible and modular program construction. Go compiles quickly to machine code yet has the convenience of garbage collection and the power of run-time reflection. It's a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language. 
 
+<a name="motivation"></a>
 ## Motivation
 
 I've wanted to try [Go](https://golang.org/) for a long time now. A couple of months ago, I was trying to decide if I should pursue learning Rust or Go. At the time, I ultimately ended up experimenting with [Rust](https://www.rust-lang.org/en-US/). I was toying with the idea of creating an experimental lisp, and Rust's feature set makes it great language for writing compilers and interpreters. However, while Rust is a great language, it can be quite complicated to learn. Go on the other hand, is apparently simpler and quick to grasp, which is [why it was created](https://golang.org/doc/faq#creating_a_new_language) in the first place.
