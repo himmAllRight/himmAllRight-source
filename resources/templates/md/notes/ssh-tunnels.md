@@ -1,0 +1,6 @@
+I think I will write a quick post about using reverse ssh tunnels. They were always hard to grasp, but now I have them down and use them to connect to my home network. 
+
+I want to do some research to see if this method is actually secure, and how it compares to having open ports/port forwarding. As I start to experiment with my tunnel app, I might include that as well...
+
+
+Doing some reading, it looks like the golang ssh libraries do not do hostkey checking at this time? At least according to [this article](https://bridge.grumpy-troll.org/2017/04/golang-ssh-security/). That might dampening the security aspects of using Go for the tunnel...
