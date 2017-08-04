@@ -1,0 +1,3 @@
+Created my AWS Free account. Going to start learning some of this stuff over the next year :)
+
+Signed up. I'll start by going through Videos I guess...
