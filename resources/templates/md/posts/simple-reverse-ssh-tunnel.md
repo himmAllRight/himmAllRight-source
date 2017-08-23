@@ -12,8 +12,20 @@ This past week, I was on vacation with my family. While I didn't work a *ton* on
 
 ### SSH Tunnels
 
+As I've discussed in a [previous post](http://ryan.himmelwright.net/posts/Ansible-On-Pi-Cluster/#ssh), [Secure Shells (ssh)](https://en.wikipedia.org/wiki/Secure_Shell) are a 
+
 ### Reverse Tunnels
 
+
 ### Creating The Tunnel
+
+```
+ssh -R remoteport:localhost:localport host
+```
+
+```
+ssh -R 19999:localhost:22 meowth
+```
+
 
 ### Connecting
