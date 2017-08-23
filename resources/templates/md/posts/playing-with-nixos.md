@@ -42,3 +42,22 @@ Nixos would be cool though....
 
 
 Welp... I installed it on Kadabra. Working my way though this...
+
+#### Update
+
+I think I am putting Solus on Kadabra too. Nixos was fun, but I don't think now
+is the time for it on my Desktop OS. The zfs stuff worked nice, but I had to be
+carefull about messing up my system. I acidently had an issue where my nixos
+config was linked to a pool and I had boot issues.
+
+I was also never able to successfully get VMs running. I always hit some sort of
+issue. Lastly, the final issue I had was paths and packaging were a pain. 
+
+I still think nixos is great, and I will likely use it for simple server VMs.
+Webservers would be perfect with this. I also do think it could be my
+workstation OS one day, once I learn a little more about. Unfortunately, right
+now it doesn't appear that there is enough documentation or community for that
+to be easy to do. The project could deff use a boost in that department.
+
+Welp, I'm off to reformat this computer. I may still turn this into a "my test
+run with nixos" post or something.
