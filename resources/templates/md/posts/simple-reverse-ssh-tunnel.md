@@ -1,6 +1,6 @@
 {:layout :post
 :title  "Simple Reverse SSH Tunnels"
-:date "2017-08-22"
+:date "2017-08-24"
 :author "Ryan Himmelwright"
 :tags ["Linux" "SSH" "Homelab" "Network"]
 :draft? false
@@ -36,7 +36,7 @@ ssh -R 19999:localhost:22 meowth
 
 ### Connecting
 
-After setting up the tunnel, the initializing computer can be accessed *from the server* with:
+After setting up the tunnel, the initializing computer can be accessed *from the server* by ssh'ing to the *remote-port* redefined above, of *localhost*:
 
 ```
 ssh -p 19999 localhost
