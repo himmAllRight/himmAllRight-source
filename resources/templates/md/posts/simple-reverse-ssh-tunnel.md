@@ -1,26 +1,26 @@
 {:layout :post
 :title  "Simple Reverse SSH Tunnels"
-:date "2017-08-24"
+:date "2017-08-26"
 :author "Ryan Himmelwright"
 :tags ["Linux" "SSH" "Homelab" "Network"]
 :draft? false
 }
 
-This past week, I was on vacation with my family. While I didn't work a *ton* on personal projects, I was able to start up work on my [TunelBeacon](https://github.com/himmAllRight/TunnelBeacon) project again. I will write a full post about that project when I am further along. But basically, it will be a simple GUI to create reverse ssh tunnels, that I can have family and friends startup to provide me support access when they need help. Reverse SSH tunnels are *very* useful and simple to setup, but can be a bit tricky to figure out at first. So, here's a brief and simple guide on how to easily create reverse tunnels.
+Last week, I was on vacation with my family. While I didn't work a *ton* on personal projects, I was at least able to spend some time on my [TunelBeacon](https://github.com/himmAllRight/TunnelBeacon) project again. I will write a dedicated post about that project down the road when I am further along. Basically, it will be a simple GUI to create reverse ssh tunnels, that family and friends can startup in order grant me temporary access to their computer when they need support. Reverse SSH tunnels are *very* useful and simple to setup, but can be a bit tricky to figure out at first. So, here's a brief and simple guide on how to easily create reverse tunnels.
 
 <!-- more -->
 
 ### SSH Tunnels
 
-A secured shell (SSH) tunnel is an encrypted tunnel, created through a ssh tunnel protocol connection. It can be thought of as a pipe between two computers that data travels through. The pipe is secured, and people outside the pipe can only see that data packages is traveling through it, but cannot read the actual contents of the package. SSH tunnels are used to securely connect between devices, as well as forward ports between devices. For example, if I am hosting a website on port 8081 of my internally networked laptop, and I want some friends to temporarily look at it on my private server, I can just forward my port to one on the public server with an ssh tunnel.
+A secured shell (SSH) tunnel is an encrypted tunnel, created with a connection using the ssh protocol. It can be thought of as a pipe between two computers that data travels through. Being encrypted, people outside the pipe can only see that data packages are traveling through it, but cannot read the actual contents of the package. SSH tunnels are used to securely connect between devices, as well as forward ports between devices. For example, if I am working on a website hosted on port 3000 of my internally networked laptop, I can use a ssh tunnel to forward that port to one on a public server so that friends can view the website.
 
 
 
 ### Reverse Tunnels
 
-Reverse tunnels are just like normal ssh tunnels except... well... in reverse. This means I can connect to a remote computer, and have *its* port tunneled to *me*, which can be very handy. I, along with many others, use this mostly for a particular use case: providing easy temporarily ssh access to computers behind a network and/or firewall. 
+Reverse tunnels are just like normal ssh tunnels except... well... in reverse. This means that I can connect to a remote computer, and have *its* port tunneled to *me*, which can be very handy. This is largely used for one particular usecase: providing easy, temporarily, ssh access to computers behind a network and/or firewall. 
 
-To make all of this (hopefully) easier to understand, I have drafted up a few diagrams. For the example, lets say I want my internet server to be able to ssh to my laptop. Unless I set up my router to forward ssh traffic to my laptop, I cannot do this. Additionally, I might be at a friends house, office, or other public place where I don't have access to the router controls. So, my laptop doesn't have a public IP, but my server *does*.
+To make all of this (hopefully) easier to understand, I have drafted up a few diagrams. For the example, lets say I am away and my wife wants me to fix something on her laptop. Unless I have her *properly* configure the router to forward ssh traffic to her laptop, I normally cannot do this. Additionally, she might be at a friends house, office, or other public place where there is no access to the router controls (well, she *shouldn't*). So, her laptop doesn't have a direct public IP address, but our server *does*.
 
 ![Computer behind firewall](../../img/posts/simple-reverse-ssh-tunnel/network-diagram.png)
 <div id="caption">Two computers (at least one without a direct public IP), both with access to a cloud server with a public IP</div>
