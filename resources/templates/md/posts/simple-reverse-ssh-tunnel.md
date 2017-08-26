@@ -18,15 +18,20 @@ A secured shell (SSH) tunnel is an encrypted tunnel, created through a ssh tunne
 
 ### Reverse Tunnels
 
-Reverse tunnels are just like normal ssh tunnels except... well... in reverse. This means I can connect to a remote computer, and have *its* port tunneled to *me*, which can be very handy. I, along with many others, use this mostly for a particular use case: providing easy temporarily ssh access to computers behind a network and/or firewall. For example, lets say I want my internet server to be able to ssh to my laptop. Unless I set up my router to forward ssh traffic to my laptop, I cannot do this. Additionally, I might be at a friends house, office, or other public place where I don't have access to the router controls. So, my laptop doesn't have a public IP, but my server *does*. I can initiate a reverse tunnel from the laptop, which lets the server know how to find the laptop. Once tunneled, I can ssh to a specified local port on the server, and it will tunnel me to the laptop
+Reverse tunnels are just like normal ssh tunnels except... well... in reverse. This means I can connect to a remote computer, and have *its* port tunneled to *me*, which can be very handy. I, along with many others, use this mostly for a particular use case: providing easy temporarily ssh access to computers behind a network and/or firewall. 
 
-#### Diagram Example
+To make all of this (hopefully) easier to understand, I have drafted up a few diagrams. For the example, lets say I want my internet server to be able to ssh to my laptop. Unless I set up my router to forward ssh traffic to my laptop, I cannot do this. Additionally, I might be at a friends house, office, or other public place where I don't have access to the router controls. So, my laptop doesn't have a public IP, but my server *does*.
 
 ![Computer behind firewall](../../img/posts/simple-reverse-ssh-tunnel/network-diagram.png)
 <div id="caption">Two computers (at least one without a direct public IP), both with access to a cloud server with a public IP</div>
 
+Because I can connect to the public cloud server, I can initiate a reverse tunnel from the laptop, to that server. The tunnel directly connects the two computers.
+
 ![Computer behind firewall](../../img/posts/simple-reverse-ssh-tunnel/ssh-tunnel.png)
 <div id="caption">The hidden computer create a reverse ssh tunnel to the cloud server.</div>
+
+Once the tunnel is started, I can ssh first to the server from my computer. From the server, I can then ssh again to a specified local port on the server, and it will tunnel me directly to the laptop. This will give me a command prompt as if I was setting with an open terminal at that computer.
+
 
 ![Computer behind firewall](../../img/posts/simple-reverse-ssh-tunnel/connect-through-tunnel.png)
 <div id="caption">With the reverse tunnel setup, the first computer can ssh to the second via the cloud server and tunnel connection.</div>
