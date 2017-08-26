@@ -25,26 +25,29 @@ To make all of this (hopefully) easier to understand, I have drafted up a few di
 ![Computer behind firewall](../../img/posts/simple-reverse-ssh-tunnel/network-diagram.png)
 <div id="caption">Two computers (at least one without a direct public IP), both with access to a cloud server with a public IP</div>
 
-Because I can connect to the public cloud server, I can initiate a reverse tunnel from the laptop, to that server. The tunnel directly connects the two computers.
+Because my wife can connect to the public cloud server, she can initiate a reverse tunnel from her laptop, with the server. The tunnel directly connects the server to her laptop.
 
 ![Computer behind firewall](../../img/posts/simple-reverse-ssh-tunnel/ssh-tunnel.png)
-<div id="caption">The hidden computer create a reverse ssh tunnel to the cloud server.</div>
+<div id="caption">The laptop computer creates a reverse ssh tunnel to the cloud server.</div>
 
-Once the tunnel is started, I can ssh first to the server from my computer. From the server, I can then ssh again to a specified local port on the server, and it will tunnel me directly to the laptop. This will give me a command prompt as if I was setting with an open terminal at that computer.
+On my end, I first ssh to the server from my computer. Once the tunnel is started, I can then ssh again to a specified local port on the server, and it will tunnel me directly to her laptop. This will give me a command prompt as if I was sitting with an open terminal at her computer.
 
 
 ![Computer behind firewall](../../img/posts/simple-reverse-ssh-tunnel/connect-through-tunnel.png)
 <div id="caption">With the reverse tunnel setup, the first computer can ssh to the second via the cloud server and tunnel connection.</div>
 
+When I am done working, my wife can close the tunnel, and I will no longer be able to access her computer.
 
 
 ### Creating The Reverse Tunnel
 
-To create a reverse tunnel, use the `-R` flag. After the flag, provide what I call the "path" of the tunnel. So, the server's port where the tunnel will be found, the host of that port (I almost always use `localhost`), and the port to be tunneled. Lastly, make sure to specify the *IP* or *hostname* of the remote computer just like in a typical plain `ssh hostname`.
+SSH tunnels can be initiated on linux easily from the command line (assuming ssh is setup and properly configured). To create a reverse tunnel, use the `-R` flag. After the flag, provide what I call the "path" of the tunnel. So, the server's port where the tunnel will be found, the host of that port (I almost always use `localhost`), and the port to be tunneled. Lastly, make sure to specify the *IP* or *hostname* of the remote computer just like in a typical plain `ssh hostname`.
 
 ```
-ssh -R remoteport:localhost:localport host
+ssh -R remote-port:localhost:local-port host
 ```
+
+Example:
 
 ```
 ssh -R 19999:localhost:22 meowth
@@ -64,8 +67,8 @@ This should start an ssh session to the initializing computer. In my example, th
 
 ### Tunnel Beacon Idea
 
-SSH tunnels are a really fascinating and useful piece of technology. The ssh protocol makes modern computing much more secure, and easier to manage multiple computers. While it is already widely used everywhere, I think there are still many places where it can be applied. 
+SSH tunnels are a fascinating and useful piece of technology. The ssh protocol makes modern computing much more secure, and easier to manage multiple computers. While ssh tunnels are already widely utilized, I think there are still many applications where it the technology can be applied. 
 
-For example, I mentioned in the intro post about my project, [TunelBeacon](https://github.com/himmAllRight/TunnelBeacon). TunnelBeacon will be a very simple GUI application used to initiate a tunnel from a computer, specifically to receive support. For example, if my wife or any of our parents switch to Linux in the future, we could configure TunnelBeacon on their computer. Then, if they need help they can just open it and hit a button, which will initiate a reverse tunnel to a predefined secure server (or AWS spun up... I have ideas). From there, I can remote into their computer no matter what network they are on (as long as ssh isn't blocked). No finding the public IP, no redirecting router ports, just hitting a button and letting me know.
+For example, I mentioned in the intro post about my small project, [TunelBeacon](https://github.com/himmAllRight/TunnelBeacon). TunnelBeacon will be a very simple GUI application used to initiate a tunnel from a computer, specifically to receive support. For example, if my wife or any of our parents switch to Linux in the future, we could configure TunnelBeacon on their computer. Then, if they need help they can just open it and hit a button, which will initiate a reverse tunnel to a predefined secure server (or spin up an AWS/DO server... I have ideas). From there, I can remote into their computer no matter what network they are on (as long as ssh isn't blocked). No headache from having them find their public IP, no redirecting router ports, just hitting a button.
 
-So, that's reverse tunnels in a nutshell. With any luck, I should be posting more about them as I progress with TunnelBeacon. As always, I will also post progress on that project as I move along. Have fun tunneling!
+So, that's reverse tunnels in a nutshell. With any luck, I should be posting more about them as I progress with TunnelBeacon. Have fun tunneling!
