@@ -65,10 +65,10 @@ ssh -p 19999 localhost
 This should start an ssh session to the initializing computer. In my example, this is the laptop.
 
 
-### Tunnel Beacon Idea
+### Tunnel Beacon
 
 SSH tunnels are a fascinating and useful piece of technology. The ssh protocol makes modern computing much more secure, and easier to manage multiple computers. While ssh tunnels are already widely utilized, I think there are still many applications where it the technology can be applied. 
 
-For example, I mentioned in the intro post about my small project, [TunelBeacon](https://github.com/himmAllRight/TunnelBeacon). TunnelBeacon will be a very simple GUI application used to initiate a tunnel from a computer, specifically to receive support. For example, if my wife or any of our parents switch to Linux in the future, we could configure TunnelBeacon on their computer. Then, if they need help they can just open it and hit a button, which will initiate a reverse tunnel to a predefined secure server (or spin up an AWS/DO server... I have ideas). From there, I can remote into their computer no matter what network they are on (as long as ssh isn't blocked). No headache from having them find their public IP, no redirecting router ports, just hitting a button.
+For example, I mentioned in the intro post about my small project, [TunelBeacon](https://github.com/himmAllRight/TunnelBeacon) (*Note: this is by no means ready. I've just started playing with it*). TunnelBeacon will be a very simple GUI application used to initiate a tunnel from a computer, specifically to receive support. For example, if my wife or any of our parents switch to Linux in the future, we could configure TunnelBeacon on their computer. Then, if they need help they can just open it and hit a button, which will initiate a reverse tunnel to a predefined secure server (or spin up an AWS/DO server... I have ideas). From there, I can remote into their computer no matter what network they are on (as long as ssh isn't blocked). No headache from having them find their public IP, no redirecting router ports, just hitting a button.
 
 So, that's reverse tunnels in a nutshell. With any luck, I should be posting more about them as I progress with TunnelBeacon. Have fun tunneling!
