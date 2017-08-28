@@ -4,17 +4,18 @@
  :author "Ryan Himmelwright"
  :tags ["Website" "Hugo" "Go"]}
  
- While I have loved using cryogen for over a year and a half now, I thikng I have started to make the transition to using another static website generator for this website, specifically Hugo. This post will detail why I am switching, what I have done so far, and what still needs to be completed before moving the site over.
+ While I have loved using [cryogen](http://cryogenweb.org) for over a year and a half now, I thinking I have started to make the transition to using another static website generator for this website, specifically [Hugo](https://gohugo.io). This post will detail why I am switching, what I have done so far, and what still needs to be completed before moving the site over.
  
 <!-- more -->
  
 ### From Cryogen to Hugo
 
+My departure from Cryogen really has nothing to do with the project itself. It is a fine product and I think many more people should use it than currently are. It is a fine example of what [clojure](https://clojure.org/) can do. Recently though, I've been itching to switch up my website's theme a bit. While I enjoy the [Immutable Theme](../New-Theme-Immutable/) I created a couple months ago, it isn't quite doing what I want. I love dark themes but, the type of posts I've been creating really don't look good with them. I like to add diagrams and graphs, which usually have a white background. While diagram posts look wonder full in themes with a white background, they look like garbage in a dark theme. This difference was glaring when switching between my markdown editor's preview window (default white theme), and my website's live preview while writing my [reverse tunnels](../simple-reverse-ssh-tunnel/) post last week.
 
-
-
+Similar to the logic I used earlier this month when [switching back to Solus](../back-to-solus/), I thought that if I was going to scrap my theme and start from scratch, it might be worthwhile to check out different website generator. I have been keeping an eye on the various site generators, but the one I've been considering (and even dabbled with a bit last month), has been [Hugo](https://gohugo.io). So, I've started to *play* with it.
 ### What I've Done So Far
 
+So far, my experience with Hugo has been great. So great in fact, that I have decided to start the process to transport my website from cryogen to hugo. Here is what I've done:
 
 ##### - Installed & Setup a test Hugo site
 
@@ -121,8 +122,13 @@ I love this feature, and want all of the post header images of my site to have b
 
 ### What Needs to be Done
 
-##### Create Single Pages (About/Homelab)
+This post has turned out to be a giant monster, so I'll be brief here and turn these sub-sections into a quick list.
 
-##### Check how the posts display
+* **Create Single Pages (About/Homelab)** - I still need to figure out and create my website's single pages. These include my *About Me* and *Homelab* pages. The content of those pages is also slipping out of date... but I won't let that hold me up from switching the site over.
 
-##### Small tweaks
+* **Check how the posts display** - I need to go through the posts and make sure they are displaying content correctly. I'll check that links work, images aren't massive, code syntax languages are set, etc. This actually shouldn't be as bad as it sounds because I've done much of it already.
+
+* **Small tweaks** - There are bound to be a few tweaks here or there that I'll notice and want to changed (*example from above: I've already added the post summaries to the home page post list*). One item that comes to mind is adding *next* and *previous* post markers at the bottom of each post. Again, I won't let that hold me up though.
+
+
+Well, that is about it. I'll work now on editing and publishing this post, and with any luck, the website should switch over to the Hugo generated one within a few days. I hope you enjoy it!
