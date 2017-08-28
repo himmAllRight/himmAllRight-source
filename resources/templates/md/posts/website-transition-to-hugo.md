@@ -44,12 +44,12 @@ hugo serve -D
 
 ##### - Setup a Theme and started tweaking it
 
-With the hugo site generated, I wanted to get a theme going. After sampling a handfull of demo's from hugo's [theme page](https://gohugo.io/themes/), I decided on the [startbootstrap-clean-theme](). I've seen it used on other sites before, and I think is a common one on other site generators. However, it is a nice and simple there, that is white-background based like I wanted. Additionally, I love having header images for posts, and I can photo's I've taken to personalize the site a bit more.
+With the hugo site generated, I wanted to get a theme going. After sampling a handfull of demo's from hugo's [theme page](https://gohugo.io/themes/), I decided on the [startbootstrap-clean-theme](https://themes.gohugo.io/startbootstrap-clean-blog/). I've seen it used on other sites before, and I think is a common one on other site generators. However, it is a nice and simple there, that is white-background based like I wanted. Additionally, I love having header images for posts, and I can photo's I've taken to personalize the site a bit more.
 
 To get the them, I cloned it down from git:
 
 ```
-git clone ...
+git clone git@github.com:humboldtux/startbootstrap-clean-blog.git
 ```
 
 *Note: with this particular theme, there are an abundant amount of features, so it is a good idea to copy their example config.toml. This is one reason why I started with the theme right off the bat.*
