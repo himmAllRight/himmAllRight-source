@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/post/</link>
+    <description>Recent content in Posts on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Reverse SSH Tunnels</title>
+      <link>http://ryan.himmelwright.net/post/simple-reverse-ssh-tunnel/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/simple-reverse-ssh-tunnel/</guid>
+      <description>Last week, I was on vacation with my family. While I didn&amp;rsquo;t work a ton on personal projects, I was at least able to spend some time on my TunelBeacon project again. I will write a dedicated post about that project down the road when I am further along. Basically, it will be a simple GUI to create reverse ssh tunnels, that family and friends can startup in order grant me temporary access to their computer when they need support.</description>
+    </item>
+    
+    <item>
+      <title>Back to Solus</title>
+      <link>http://ryan.himmelwright.net/post/back-to-solus/</link>
+      <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/back-to-solus/</guid>
+      <description>Well, that was faster than I expected. This past weekend, I wiped the Fedora installation on my main computer, and replaced it with Solus. My Fedora install broke, and I needed to use a Fedora Live CD to fix it. I thought that if I had to use a live CD to fix the issue, I might as well just do a clean install. With the idea of a clean install in my head&amp;hellip; I thought (possibly influenced by my recent motivation to play with Go), that I might as well do the clean install with Solus&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Dabbling with GO</title>
+      <link>http://ryan.himmelwright.net/post/dabbling-with-go/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/dabbling-with-go/</guid>
+      <description>After spending most of this month&amp;rsquo;s dedicated learning time working on system, server, and network activities, I have been itching to start some home programming again. To motivate myself, I even considered dabbling with a new programming language&amp;hellip; and with very little internal debate, I decided to just Gopher it (I&amp;rsquo;m so sorry).
+What is GO? Go (sometimes referred to as &amp;ldquo;golang&amp;rdquo;) is an open source programming language, developed in 2007 by a team at Google (Robert Griesemer, Rob Pike, and Ken Thompson).</description>
+    </item>
+    
+    <item>
+      <title>Migrating from Solus to Fedora for now</title>
+      <link>http://ryan.himmelwright.net/post/solus-to-fedora/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/solus-to-fedora/</guid>
+      <description>For awhile, I have been debating the idea of switching back to Fedora (from Solus). At least on my main computer. First, let me state this right up front: I am still very satisfied with Solus. I think it is one of the best current Linux distros, and I want to still contribute to the project. However, there are a few reasons why Solus isn&amp;rsquo;t the best fit for my needs right now, and I will highlight them below.</description>
+    </item>
+    
+    <item>
+      <title>Creating a git Repo Remote</title>
+      <link>http://ryan.himmelwright.net/post/creating-a-git-remote/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/creating-a-git-remote/</guid>
+      <description>For over a year or so, I have been using a self-hosted Gitlab to host all of my private repos. For a few months now, I have been meaning to migrate my Gitlab repos to bare, minimal ones, hosted directly on a server. The majority of my code/configs are hosted publicly on my Github page, and it really doesn&amp;rsquo;t make sense to maintain a full Gitlab instance for the few (like&amp;hellip;2) private repositories that I keep.</description>
+    </item>
+    
+    <item>
+      <title>Encountered Issues Setting Up Ubiquiti Network</title>
+      <link>http://ryan.himmelwright.net/post/issues-setting-up-ubiquiti-network/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/issues-setting-up-ubiquiti-network/</guid>
+      <description>This past weekend, I setup my new ubiquiti network. It actually took up a good portion of Sunday, because I ran into a few minor issues. Fortunately/Unfortunately, these issues were mostly because it my first time configuring this type of setup, and there was a lot of trial and error. The basic network is now all configured and has been running great. It was a good day and I learned a lot :).</description>
+    </item>
+    
+    <item>
+      <title>Home Network Ubiquiti Upgrade</title>
+      <link>http://ryan.himmelwright.net/post/upgrading-network-to-ubiquiti/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/upgrading-network-to-ubiquiti/</guid>
+      <description>A few weeks ago, I went back to Pennsylvania for a week to attend my college swim team reunion, and my brother&amp;rsquo;s high school graduation. While I was away, the wifi-router Rebecca and I were using decided to die (of course). When I returned, I setup our old router as a temporary fix. It was terrible. So, I began researching how I should upgrade our network. This time around, I am doing this correctly.</description>
+    </item>
+    
+    <item>
+      <title>Refreshing my i3 setup with i3blocks</title>
+      <link>http://ryan.himmelwright.net/post/started-using-i3blocks/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/started-using-i3blocks/</guid>
+      <description>The last couple of weeks I have shifted back to using the i3 window mangers. When I fired it up, my fingers danced across the keyboard, remembering all of the personalized keybindings I have cultivated in my i3 configuration over the years. It is a simple, beautiful setup&amp;hellip; well, beautiful minus one of the components. My i3status bar was looking rather bland and dated, especially compared some of the i3 setups posted by all the cool kids over at /r/unixporn.</description>
+    </item>
+    
+    <item>
+      <title>Exporting Proxmox VMs</title>
+      <link>http://ryan.himmelwright.net/post/exporting-proxmox-vms/</link>
+      <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/exporting-proxmox-vms/</guid>
+      <description>For a long time I have been thinking about replacing my server&amp;rsquo;s proxmox install with vanilla Debian or CentOS, mostly for learning purposes. I would first setup zfs on the new system and import my existing data pools. Then, I would use either a system like ovrit or just plain kvm/lxc to run my VMs and containers. In order to do this though&amp;hellip; I have to first figure out how export my containers and VMs running in Proxmox.</description>
+    </item>
+    
+    <item>
+      <title>Updating the Pi Cluster with Ansible</title>
+      <link>http://ryan.himmelwright.net/post/updating-pi-cluster-with-ansible/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/updating-pi-cluster-with-ansible/</guid>
+      <description>With Ansible configured on the Pi cluster, it is time to have it do something useful. When working with a clustered system, even the simplest tasks become tedious and time consuming. For example, updating the system. While I could manually update each of the 3 pi nodes, it is not scalable to 10 or 30 nodes, let alone hundreds or thousands. Tools like Ansible, make doing tasks such a supdating clustered systems, trivial again.</description>
+    </item>
+    
+    <item>
+      <title>Configuring Ansible on the Pi Cluster</title>
+      <link>http://ryan.himmelwright.net/post/ansible-on-pi-cluster/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/ansible-on-pi-cluster/</guid>
+      <description>In my previous post, I pieced together my pi cluster, and installed variations of Ubuntu 16.04 Server on each of its nodes. With the cluster built, I quickly needed an easy way to maintain and interact with the system as a whole. This, is where Ansible comes in. In this post, I will walk through the steps I took to setup Ansible on my Cluster.
+Ansible Ansible is an open source, configuration management and automation system.</description>
+    </item>
+    
+    <item>
+      <title>Setting Up My Pi Cluster</title>
+      <link>http://ryan.himmelwright.net/post/setting-up-the-pi-cluster/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/setting-up-the-pi-cluster/</guid>
+      <description>I have a Raspberry Pi 2, a Raspberry Pi 3, and a Banana Pi. A while ago, I constructed a small tower to house my pi devices. Since then, I have additionally acquired a power source, and some CAT6 cable to connect them all up to a switch. I hope to use the Pis as a mini clustered environment, where I can learn (and play) with some of the &amp;ldquo;Devops&amp;rdquo; technologies/techniques out there.</description>
+    </item>
+    
+    <item>
+      <title>ZFS Snapshot Backups to an External Drive with LUKS</title>
+      <link>http://ryan.himmelwright.net/post/zfs-backups-to-luks-external/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/zfs-backups-to-luks-external/</guid>
+      <description>I have been using ZFS data pools to store data on my server for some time now. As great as that is, I am ashamed to admit that I have not had a true backup system in place (raid/mirrors are not backup). I have a backup solution that I have attempted in the past, but ran into an issue and let it drift to the side. That changes now. It&amp;rsquo;s time to revisit my solution, and complete it to the end.</description>
+    </item>
+    
+    <item>
+      <title>New Website Theme: Immutable</title>
+      <link>http://ryan.himmelwright.net/post/new-theme-immutable/</link>
+      <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/new-theme-immutable/</guid>
+      <description>When I first started using Cryogen to generate this website, I wanted to create a personalized theme. This desire led me to hack a the default theme into a mutant, which I boringly named &amp;ldquo;ryan1&amp;rdquo; (I anticipated it to be temporary). It looked like a relic, designed from when I first learned how to make a web page&amp;hellip; the early 2000&amp;rsquo;s. Like many all websites from that time, it was not mobile friendly.</description>
+    </item>
+    
+    <item>
+      <title>Linux from Scratch - SBUs and Binutils</title>
+      <link>http://ryan.himmelwright.net/post/lfs-sbus-and-binutils/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/lfs-sbus-and-binutils/</guid>
+      <description>Well, after all of the preparation, we are ready to start compiling packages. This post cover compiling all the packages, but it will detail the first build of Binutils, which is arguably the most important package to compile. Why is Binutils so crucial? It determines the SBU time for your build system. What&amp;rsquo;s an SBU? Read on to find out!
+SBUs A table of package SBUs and their predicted build time</description>
+    </item>
+    
+    <item>
+      <title>Linux from Scratch - Final Preparation Steps</title>
+      <link>http://ryan.himmelwright.net/post/lfs-final-preparation-steps/</link>
+      <pubDate>Tue, 21 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/lfs-final-preparation-steps/</guid>
+      <description>Now that the repeated setup steps have been defined in my previous LFS post, there are a few more preparation steps to complete in order to start building the LFS system. I promise&amp;hellip; we will start compiling soon. If all goes well, this should be the last preparation post.
+Downloading Sources When it comes down to it, Linux from scratch is just a bunch of packages, and the Linux kernel, all compiled from source and linked together.</description>
+    </item>
+    
+    <item>
+      <title>Linux from Scratch - Repeated Setup Steps</title>
+      <link>http://ryan.himmelwright.net/post/lfs-repeated-setup-steps/</link>
+      <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/lfs-repeated-setup-steps/</guid>
+      <description>During the Linux From Scratch process, there may be times when the build environment (computer, VM, chroot, whatever) must be restarted. If so, there are a few steps from the setup phase that have to be re-initialized. This post maps out those steps.
+Setting The $LFS Variable After setting up the virtual disk for my LFS build, I needed to define where I wanted to eventually mount it. This location is important, because it is the path that the $LFS variable is set to.</description>
+    </item>
+    
+    <item>
+      <title>My New Dotfiles Management - Using GNU Stow</title>
+      <link>http://ryan.himmelwright.net/post/new-dotfiles/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/new-dotfiles/</guid>
+      <description>I have maintained a &amp;ldquo;dotfiles&amp;rdquo; repository since I made my github account in 2013. However, overtime it became more of a post-apocalyptic wasteland, cluttered with remnants of obsolete configurations and scraps of scripts. It was no longer the pristine, culled, collection that I desired. I also did not have an efficient method of easily linking the files on a new system. I had to manually make symlinks for each dotfile.</description>
+    </item>
+    
+    <item>
+      <title>Linux from Scratch - Getting Started</title>
+      <link>http://ryan.himmelwright.net/post/lfs-getting-started/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/lfs-getting-started/</guid>
+      <description>When I started using Arch Linux a while back, I learn about some of the internals of Linux quickly. Ever since then, I have considered building a Linux From Scratch by following the guidelines outlined in the book. Based on my experience with Arch Linux, I&amp;rsquo;m sure that compiling a system from scratch will continue to teach me about Linux at a much deeper level.
+Getting Started First, it should be known that this process follows a book that is freely available at www.</description>
+    </item>
+    
+    <item>
+      <title>Introducing Kadabra - My New, Used x230</title>
+      <link>http://ryan.himmelwright.net/post/introducing-kadabra/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/introducing-kadabra/</guid>
+      <description>As I start to do more with a computer on the go, the netbooks I previously used just are not cutting it anymore. They were great for minimal use, but couldn&amp;rsquo;t run VMs, over-heated, and didn&amp;rsquo;t have great battery life. Now that I am going to libraries and other locations to work on personal and open source projects, I really needed a better mobile pc setup.
+Other Considerations I had been keeping an eye open for a new mobile computer for well over a year to find out what is out there.</description>
+    </item>
+    
+    <item>
+      <title>Trying out snapd on Arch Linux</title>
+      <link>http://ryan.himmelwright.net/post/snapd-on-arch/</link>
+      <pubDate>Sun, 17 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/snapd-on-arch/</guid>
+      <description>The past few weeks I have been listening to all of the buzz about Ubuntu &amp;ldquo;snaps&amp;rdquo;, but I just recently decided to try this new technology out.
+Snapd Install and Setup I decided to install snapd on my small netbook (Abra), which is running Arch Linux. So, installing snapd was as easy as running:
+pacaur -S snapd
+Now, I use pacaur so that I can install packages from Arch Linux&amp;rsquo;s main repos, as well as the AUR.</description>
+    </item>
+    
+    <item>
+      <title>Trying Out the Plasma 5 Desktop Environment</title>
+      <link>http://ryan.himmelwright.net/post/trying-out-plasma5/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/trying-out-plasma5/</guid>
+      <description>After watching the continued development of the Plasma 5 desktop environment from a distance, I determined I needed to give it another try. It was just before version 5.6 was released, and the project appeared to be finding it&amp;rsquo;s stride. Right up front, I want to come clean and admit that I have never really liked the KDE/Plasma desktop environment (more on that below). However, with that said&amp;hellip; I am still using the plasma desktop on my main computer (months later, and haven&amp;rsquo;t aborted yet**&amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>Using Cryogen for Website</title>
+      <link>http://ryan.himmelwright.net/post/website-switched-to-cryogen/</link>
+      <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/website-switched-to-cryogen/</guid>
+      <description>Ever since resurrecting my personal website, I have experimented with several static website generators. Thus far, I have tried org-page, Jekyll (several times), and even (almost) made my own emacs org-page solution. Now that I have started using the clojure programming language, I have come across cryogen. As you may have already guessed, this site is now being generated using cryogen.
+Emacs/org-mode Solutions About a year ago, obsession with emacs (and more importantly, org-mode) eventually led me to try out org-page while revitalizing my personal website.</description>
+    </item>
+    
+    <item>
+      <title>Back On Arch, After Frantic Distro-hopping</title>
+      <link>http://ryan.himmelwright.net/post/back-on-arch/</link>
+      <pubDate>Sun, 13 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/back-on-arch/</guid>
+      <description>&lt;p&gt;In the last few weeks, I have started my CS masters classes, and needed to setup a productive work environment on my portable laptop (&lt;a href=&#34;../../homelab&#34;&gt;abra&lt;/a&gt;). Also, while I love Fedora, the Nvidia stuff was being a pain on my main computer (&lt;a href=&#34;../../homelab&#34;&gt;alakazam&lt;/a&gt;), and I was looking for a replacement there as well. So, after a long, drawn out battle trying nearly all of my favorite Linux distros, I have found myself once again using &lt;a href=&#34;https://www.archlinux.org/&#34;&gt;Arch Linux&lt;/a&gt; on both of my personal computers.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How I asked my Groomsmen</title>
+      <link>http://ryan.himmelwright.net/post/how-i-asked-my-groomsmen/</link>
+      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/how-i-asked-my-groomsmen/</guid>
+      <description>&lt;p&gt;Over the last few months Rebecca (my Fiancee) and I have continued making progress on all the little tasks that we have to complete before our wedding. One of these tasks is asking our intended bridesmaids/groomsmen to be in the wedding.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>25 Days of C</title>
+      <link>http://ryan.himmelwright.net/post/25-days-of-c/</link>
+      <pubDate>Thu, 24 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/25-days-of-c/</guid>
+      <description>As I continue to learn more and more programming languages, I am somewhat ashamed to admit that I have yet to learn C. However, it is not because I am trying to avoid it.
+The Reason C is one of the top languages I wish to know, and know well. C is the backbone for so much code, especially in the Linux ecosphere that it is almost imperative for one to at least understand it.</description>
+    </item>
+    
+  </channel>
+</rss>

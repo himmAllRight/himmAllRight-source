@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>New Website Theme: Immutable -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/header-images/red-leaf.jpg')">
+      
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>New Website Theme: Immutable</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 4 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Tue, Apr 11, 2017
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/website">website</a>, <a href="http://ryan.himmelwright.net/tags/cryogen">cryogen</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>When I first started using <a href="http://cryogenweb.org">Cryogen</a> to generate this website, I wanted to create a personalized theme. This desire led me to hack a the default theme into a mutant, which I boringly named &ldquo;<i>ryan1</i>&rdquo; (I anticipated it to be temporary). It looked like a relic, designed from when I first learned how to make a web page&hellip; the early 2000&rsquo;s. Like <del>many</del> all websites from that time, it was not mobile friendly. I hope to change all of that, by introducing my new website theme: <b><i>Immutable</i></b>.</p>
+
+<!-- more -->
+
+<p><img alt="Homepage with old ryan1 Theme" src="../../img/posts/New-Theme-Immutable/ryan1-home.png" width=100%>
+<em>Homepage with the old Theme</em></p>
+
+<p><img alt="Homepage with Immutable Theme" src="../../img/posts/New-Theme-Immutable/immutable-home.png" width=100%>
+<em>Homepage with the new Immutable Theme</em></p>
+
+<p>While it may possibly still look dated (I wouldn&rsquo;t know, I&rsquo;m a backend dev), it addresses several of the issues I had with the <em>ryan1</em> theme. Here are a few examples of these improvements:</p>
+
+<h3 id="removed-the-sidebar-dispersed-its-contents">Removed the Sidebar &amp; Dispersed Its Contents</h3>
+
+<p><img src="../../img/posts/New-Theme-Immutable/sidebar-changes.png" width=100%>
+<em>The sidebar components have been distributed to other parts of the site</em></p>
+
+<p>I have to be honest here&hellip; I originally planned on keeping the side bar when I started to build the theme. I liked how it held all of my links (Github, LinkedIn, etc), recent posts, and tags in one, easy to find, location. I also liked having my avatar picture in the side bar. I felt it made the site more personable (or maybe I&rsquo;m just egotistical). After working on the base of the theme however, I realized the site might be better off without it. I&rsquo;ve relocated the items to other locations of the site. The majority of the links have been relocated to the drop-down menu (more on that  below), and I at least added my picture to the <a href="../../pages/about/">About Page</a>.</p>
+
+<p>I might reinstate a sidebar in the future, but only if it looks <em>good</em> and I can add it <em>correctly</em>. The way I implemented the old sidebar caused many of the issues prompting this new theme, and I do not want to bring back those problems.</p>
+
+<h3 id="removed-the-bad-footer">Removed the Bad Footer</h3>
+
+<p><img src="../../img/posts/New-Theme-Immutable/ryan1-bad-footer.png" width=100%>
+<em>Bad Footer Placements</em></p>
+
+<p>One of the issues created by the sidebar and my poor css floats, was the footer. On pages with a large enough the main content, it looked fine, consisting of a dark gray bar <em>along the bottom of the page</em> . However, when viewing a page with a small content section, such as the <em>About</em> page, the footer would rise up behind the sidebar. It looked terrible.</p>
+
+<p><img src="../../img/posts/New-Theme-Immutable/immutable-footer.png" width=100%>
+<em>New Footer</em></p>
+
+<p>In the <em>Immutable</em> theme, I have fixed the footer and removed the gray bar. The background looks great, and the text is clearly visible over it, making the bar no longer required. I like minimal footers. I only need a small copyright statement, and I enjoy having a <a href="http://cryogenweb.org">Cryogen</a> shout-out here. So that&rsquo;s all I have.</p>
+
+<h3 id="mobile-support">Mobile Support</h3>
+
+<p><img src="../../img/posts/New-Theme-Immutable/mobile-changes.png" width=100%>
+<div id="caption">Mobile viewing the homepage and a post, on both the old theme and Immutable</div></p>
+
+<p>The biggest reason for making the new theme was that viewing the website on a mobile device was a poor experience&hellip; unusable even. Again, because I implemented the sidebar poorly, it always remained on the side. Even on a narrow mobile screen. There was not enough room for the actual main content section, and pages/posts consisted of a skinny line of text down the side of the phone. Images&hellip; well, don&rsquo;t get me started on how well images were displayed. <em>Immutable</em> solves these issues. The main content window takes up the majority of the screen, allowing for easy content reading.</p>
+
+<h3 id="mobile-navigation">Mobile Navigation</h3>
+
+<p><img src="../../img/posts/New-Theme-Immutable/mobile-menu.png">
+<div id="caption">Main navigation drop-down and the extended drop-down menu on mobile</div></p>
+
+<p>In addition to better viewing, site navigation has also been improved on mobile. When I say <em>improved</em>, I of course mean <em>added</em>, as is was sort-of non-existent before. In <em>ryan1</em> there was an drop-down menu icon, but when it was tapped&hellip; nothing happened. At all. Now, there is an icon that drops down a site navigation menu when tapped. At the bottom of the navigation items, there is a <em>more</em> tab. When clicked, it extends the menu to also include my contact links (Github, LinkedIn, etc.), recent posts, and the list of post tag links.</p>
+
+<h3 id="continued-work">Continued Work</h3>
+
+<p>While its name is <em>immutable</em>, the actual theme itself is not (bad joke). There are a few things I plan on tweaking over time. For example, I don&rsquo;t love the fonts and spacing and I will continue to improve them. I also want to edit the <code>code</code> colors. I did a quick edit of the colors so that they worked with the theme, but they not what I ultimately want. I use the code segments a lot on this site, so it is important that they look nice.</p>
+
+<p>Well, that is it. I finally got around to making a new theme, and plan to make it even better over time. I hope you enjoy, even on a phone ;).</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+

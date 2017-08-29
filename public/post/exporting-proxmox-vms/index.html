@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Exporting Proxmox VMs -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Exporting Proxmox VMs</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 3 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Fri, Jun 16, 2017
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/linux">linux</a>, <a href="http://ryan.himmelwright.net/tags/proxmox">proxmox</a>, <a href="http://ryan.himmelwright.net/tags/kvm">kvm</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>For a long time I have been thinking about replacing my server&rsquo;s proxmox install with vanilla Debian or CentOS, mostly for learning purposes. I would first setup zfs on the new system and import my existing data pools. Then, I would use either a system like ovrit or just plain kvm/lxc to run my VMs and containers. In order to do this though&hellip; I have to first figure out how export my containers and VMs running in Proxmox. As it turns out&hellip; exporting the VMs wasn&rsquo;t very hard&hellip;</p>
+
+<!-- more -->
+
+<h2 id="exporting-proxmox-vm-disk">Exporting Proxmox VM Disk</h2>
+
+<p><center>
+<img src="../../img/posts/exporting-proxmox-vms/proxmox-logo.png" alt="Proxmox logo" />
+</center></p>
+
+<p>My Proxmox VMs are setup on an LVM virtual group, with each virtual drive being a lvm volume passed to the VM. So, I wanted to be able to extract these disks to something I could more easily transfer. I ended up converting the lvm volumes to qcow2 images because it was easy and I&rsquo;ve actually experienced okay performance with qcow2 on my workstations. Additionally, qcow2 being a single file, is easy to move around and I can always convert them to something else on the final system. To export one of the VMs, I ran the command:</p>
+
+<pre><code>qemu-img convert -O qcow2 /dev/pve/vm-108-disk-1 /Data/freebsd-vm.qcow2
+</code></pre>
+
+<p>That was it. It took a few minutes to finish, but honestly that is all I had to do (I&rsquo;m sure I should of taken a snapshot or something then copy that, but this seemed to work fine). When it completed, I copied the image down to my desktop and decided to test it out with virt-manager.</p>
+
+<h2 id="importing-the-image-to-virt-manager">Importing the image to Virt-Manager</h2>
+
+<p>I opened up virt-manager and selected the button to create a new VM. At the first prompt, instead of selecting my usual &ldquo;Local install media (ISO image or CDROM)&rdquo; option, I choose to &ldquo;Import an existing disk image&rdquo;.</p>
+
+<p><center>
+<img src="../../img/posts/exporting-proxmox-vms/import-image.png" alt="Proxmox logo" />
+</center></p>
+
+<p>At the second menu, I opened up the browse menu to see my already configured locations. From there, I found where I had saved the converted qcow2 image, and selected it.</p>
+
+<p><center>
+<img src="../../img/posts/exporting-proxmox-vms/select-qcow2-image.png" alt="Proxmox logo" />
+</center></p>
+
+<p>Next, I continued setting up the virtual specs (CPU, RAM, etc.) for the machine just as I would with any other VM setup. When I was done, I started the VM and FreeBSD booted right up. I logged in and compared the installed applications and files with the still running proxmox VM. They were identical.</p>
+
+<p>That&rsquo;s all I really have for this post. It was extremely simple to export the VMs. I know I&rsquo;m not fully done yet and still have to import the VMs to the final system, but I&rsquo;ll save that for a later post. Right now&hellip; I have quite a few VM images to convert, so I might as well get started.</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+

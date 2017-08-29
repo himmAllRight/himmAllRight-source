@@ -1,0 +1,55 @@
+baseurl = "http://ryan.himmelwright.net"
+#baseurl = ""
+publishDir = "../himmAllRight.github.io/"
+title = "λ ryan. himmelwright. net"
+canonifyurls = true
+paginate = 1000
+theme = "ryan-clean-blog"
+languageCode = "en-us"
+copyright = "Copyright © Ryan Himmelwright. Site created with Hugo"
+googleAnalytics = "UA-123-45" # delete or comment to disable Google Analytics JS generation
+disqusShortname = "himmAllRight" #delete or comment to disable Disqus comments
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+
+[author]
+  name = "Ryan Himmelwright"
+
+[params]
+  DateForm = "Mon, Jan 2, 2006"
+  # Description = "Your site description"
+  Author = "Ryan Himmelwright"
+  email = "ryan@himmelwright.net"
+  postSummariesFrontPage = 5 
+  showReadTime = true 
+
+[[params.social]]
+  title = "github"
+  url = "https://github.com/himmAllRight"
+[[params.social]]
+  title = "linkedin"
+  url = "https://www.linkedin.com/in/ryan-himmelwright-b3891774/"
+[[params.social]]
+  title = "instagram"
+  url = "https://www.instagram.com/himmelwr/"
+[[params.social]]
+  title = "twitter"
+  url = "https://twitter.com/himmAllRight17"
+
+
+[[menu.main]]
+  name = "home"
+  url = "/"
+  weight = -200
+
+[[menu.main]]
+  name = "Archives"
+  url = "/post/"
+  weight = -80
+
+[[menu.main]]
+  name = "RSS"
+  url = "/post/index.xml"
+  weight = 0

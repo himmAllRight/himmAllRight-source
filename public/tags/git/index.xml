@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/git/</link>
+    <description>Recent content in Git on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Wed, 19 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a git Repo Remote</title>
+      <link>http://ryan.himmelwright.net/post/creating-a-git-remote/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/creating-a-git-remote/</guid>
+      <description>For over a year or so, I have been using a self-hosted Gitlab to host all of my private repos. For a few months now, I have been meaning to migrate my Gitlab repos to bare, minimal ones, hosted directly on a server. The majority of my code/configs are hosted publicly on my Github page, and it really doesn&amp;rsquo;t make sense to maintain a full Gitlab instance for the few (like&amp;hellip;2) private repositories that I keep.</description>
+    </item>
+    
+  </channel>
+</rss>

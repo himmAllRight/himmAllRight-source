@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Refreshing my i3 setup with i3blocks -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Refreshing my i3 setup with i3blocks</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 7 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Thu, Jun 22, 2017
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/linux">linux</a>, <a href="http://ryan.himmelwright.net/tags/i3">i3</a>, <a href="http://ryan.himmelwright.net/tags/customization">customization</a>, <a href="http://ryan.himmelwright.net/tags/solus">solus</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>The last couple of weeks I have shifted back to using the i3 window mangers. When I fired it up, my fingers danced across the keyboard, remembering all of the personalized keybindings I have cultivated in my i3 configuration over the years. It is a simple, beautiful setup&hellip; well, beautiful minus one of the components. My i3status bar was looking rather bland and dated, especially compared some of the i3 setups posted by all the cool kids over at <a href="https://www.reddit.com/r/unixporn/">/r/unixporn</a>. I decided it was time for a refresh.</p>
+
+<!-- more -->
+
+<h2 id="i3status">i3status</h2>
+
+<p><img src="../../img/posts/starting-i3/i3status.png" alt="One of my simple i3status setups" />
+<div id="caption">One of my simple i3status setups</div></p>
+
+<p>When I first configured i3 several years ago, I used i3status because it was easy to use with i3 and did everything by default. Over time, I learned how to create and modify <a href="https://github.com/himmAllRight/dotfiles/blob/master/i3/.config/i3/i3status.conf">my own .i3status.conf</a> so that I could get it to play nice with un-standerd configurations (ex: <code>/Data</code> partitions and such). While i3status served me well for many years, using the same-old setup has become boring. I started noticing several other nice looking status bar tools being used in i3 setups, and wanted to try them out.</p>
+
+<h2 id="polybar">Polybar</h2>
+
+<p><img src="../../img/posts/starting-i3/polybar.png" alt="The example polybar" />
+<div id="caption">The example polybar</div></p>
+
+<p>The first bar I saw and tried was <a href="https://github.com/jaagr/polybar">polybar</a>. I started with it because some of the examples look awesome. It looks very modern and has an infinite number of features. I set it up and was able to use the example bar just fine. However, when I started to customize my own, I started to run into a few issues. The biggest issue was polybar not detecting my work-space names, along with other elements. Additionally, due to the support for several window managers, the example configuration file seemed cluttered, and I was never sure what I could edit, and what I should delete. After some frustration, I decided put it aside for now. I might come back to it one day when I&rsquo;m bored.</p>
+
+<h2 id="i3blocks">i3blocks</h2>
+
+<p>Next, I learned of <a href="https://github.com/vivien/i3blocks">i3blocks</a>. It appeared to have everything I wanted in a status bar, yet remained simple, respecting the <a href="https://i3wm.org/docs/i3bar-protocol.html">i3bar protocol</a>. So I gave it a whirl.</p>
+
+<h3 id="downloading-from-the-repos">Downloading from the Repos</h3>
+
+<p>Just like installing any other package on Linux, I decided to first check to see it it was in the <a href="https://dev.solus-project.com/">Solus Repos</a>:</p>
+
+<pre><code>sudo eopkg sr i3block
+</code></pre>
+
+<p>It was. So, I installed it (<code>sudo eopkg it i3blocks</code>) and started learning how to setup my configuration.</p>
+
+<h3 id="fonts">Fonts</h3>
+
+<p><img src="../../img/posts/starting-i3/awesome-font.png" alt="A Very Small Sampling of the Awesome Fonts" />
+<div id="caption">A <em>Very Small</em> Sampling of the Awesome Fonts</div></p>
+
+<p>The first hurdle I came across when first launching i3blocks was that I did not have all the fonts used in the default configuration installed. I temporarily removed the special fonts from the config, just so I could check that everything was working. But what&rsquo;s the fun in that? One of the biggest reasons I wanted to redo my bar was to have cool modern icon fonts! So, I found the <a href="http://fontawesome.io/">font awesome</a> package in the Solus repos and installed it.</p>
+
+<pre><code>sudo eopkg it font-awesome-ttf
+</code></pre>
+
+<p>With the awesome fonts at my disposal, I had a plethora of icons to use. So I went through and picked out icons for each of the work-space tabs and status markers.</p>
+
+<h3 id="finding-git-repos">Finding Git Repos</h3>
+
+<p><img src="../../img/posts/starting-i3/i3block-new-repo-examples.png" alt="The example polybar" />
+<div id="caption">Example of Modules in new i3-block repo</div></p>
+
+<p>While researching how to configure i3blocks, I started encountering several different GitHub repos and forks of the project. Some forks seemed to have additional modules that my repo version didn&rsquo;t. I downloaded and built <a href="https://github.com/Anachron/i3blocks">this one</a> to try out. I then configured i3 to point to the new build instead, and got started setting up my own blocks.</p>
+
+<h3 id="forking-my-own-for-solus-tweaks">Forking my own for Solus Tweaks</h3>
+
+<p>As I was configuring the individual blocks, I noticed that many of them didn&rsquo;t work by default on my computers. I dug deeper by opening up and peeking at the actual bash scripts blocks refer to. I noticed that many of them were trying to query data from applications that are <em>not</em> used in Solus. For example, the <code>battery</code> block didn&rsquo;t work for me because it relied on <code>acpi</code>, which, while often used in Arch Linux for battery information (I use it myself when on arch) is not packaged in Solus. Instead, Solus relies on <code>upower</code>. To fix my issues, I cobbled together my own <code>battery</code> bash script, that queried battery information using <code>upower</code> instead. Note, the <code>BATTERY_ICON</code> uses the battery fonts (which likely won&rsquo;t show in the browser). Unless it is charging&hellip; then it uses a lightning bolt :) .</p>
+
+<pre><code>#!/bin/bash
+
+BATTERY=0
+BATTERY_STATE=$(echo &quot;${BATTERY_INFO}&quot; | upower -i $(upower -e | grep 'BAT') | grep -E &quot;state|to\ full&quot; | awk '{print $2}')
+BATTERY_POWER=$(echo &quot;${BATTERY_INFO}&quot; | upower -i $(upower -e | grep 'BAT') | grep -E &quot;percentage&quot; | awk '{print $2}' | tr -d '%')
+URGENT_VALUE=10
+
+if [[ &quot;${BATTERY_POWER}&quot; -gt 87 ]]; then
+    BATTERY_ICON=&quot;&quot;
+elif [[ &quot;${BATTERY_POWER}&quot; -gt 63 ]]; then
+     BATTERY_ICON=&quot;&quot;
+elif [[ &quot;${BATTERY_POWER}&quot; -gt 38 ]]; then
+     BATTERY_ICON=&quot;&quot;
+elif [[ &quot;${BATTERY_POWER}&quot; -gt 13 ]]; then
+     BATTERY_ICON=&quot;&quot;
+elif [[ &quot;${BATTERY_POWER}&quot; -le 13 ]]; then
+     BATTERY_ICON=&quot;&quot;
+else
+    BATTERY_ICON=&quot;&quot;
+fi
+
+
+if [[ &quot;${BATTERY_STATE}&quot; = &quot;discharging&quot; ]]; then
+    echo &quot;${BATTERY_ICON} ${BATTERY_POWER}%&quot;
+    echo &quot;${BATTERY_ICON} ${BATTERY_POWER}%&quot;
+    echo &quot;&quot;
+else
+    echo &quot; ${BATTERY_POWER}%&quot;
+    echo &quot; ${BATTERY_POWER}%&quot;
+    echo &quot;&quot;
+fi
+
+if [[ &quot;${BATTERY_POWER}&quot; -le &quot;${URGENT_VALUE}&quot; ]]; then
+  exit 33
+fi
+</code></pre>
+
+<p>Over the past few weeks, it seems to work well enough. As I continued to <em>tweak</em>, or downright <em>create</em> blocks to work well in Solus, I eventually decided that it might be a good idea to just <a href="https://github.com/himmAllRight/i3blocks">create my own fork</a> of the repo. This way, I can have my own i3blocks repo that works well with Solus. I noticed that the implementation of <code>i3blocks</code> found in the Solus repos is also using non-Solus items for it&rsquo;s scripts (ex: acpi for the battery). Maybe one of these days I&rsquo;ll jump into irc and see how people feel about swapping in mine instead (or at least one that works better in Solus)&hellip;</p>
+
+<h3 id="color-update-for-i3-rofi">Color Update for i3 &amp; rofi</h3>
+
+<p><img src="../../img/posts/starting-i3/rofi-run.png" alt="New Color Scheme for rofi launcher" />
+<div id="caption">New color scheme for rofi launcher</div></p>
+
+<p>When I started using i3 several years ago, I used <a href="http://tools.suckless.org/dmenu/">dmenu</a> as my launcher (it&rsquo;s the launcher used in <a href="http://dwm.suckless.org/">dwm</a>, another tiling window manager I used to use). I eventually switched to <a href="https://davedavenport.github.io/rofi/">rofi</a> after seeing it used in some very nice window manager setups (sound familiar?). However, I always used the plain default theme and never bothered to improve it. With all the work I did making i3bars look nice, I thought I should at least make rofi match. Making the color theme wasn&rsquo;t nearly as hard as I anticipated it to be. That&rsquo;s mostly because I found and used the <a href="https://davedavenport.github.io/rofi/p11-Generator.html">rofi theme generator</a>.</p>
+
+<p><center>
+<img src="../../img/posts/starting-i3/rofi-window.png" alt="New rofi window switcher" />
+</center>
+<div id="caption">Newly configured rofi window switcher</div></p>
+
+<p>While touching up rofi, I learned it can also switch through already opened windows (Previously, I  only used it to launch new programs). I really liked that in my new i3 setup, it also displayed the work-spaces, icon font and all. I immediately bound it to my Super+Tab key for easy use.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><video width=100% controls>
+  <source src="../../img/posts/starting-i3/i3-gaps-demo.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<div id="caption">Little video demoing my new i3gaps setup with i3blocks</div></p>
+
+<p>Thus far, I have been very satisfied with my current i3 setup. Replacing i3status with i3blocks, combined with adding small improvements, for example, the awesome fonts, really helped to enhance the look and feel of my i3 configuration. Additionally, ROFI much better now that it matches everything.</p>
+
+<p>I am glad to be using i3 again. It is so efficient to use and I love flying around the work-spaces and windows. It is particularly useful on <a href="../../pages/homelab/#kadabra">kedabra&rsquo;s</a> 12&rdquo; screen, as it utilizes all of the limited resolution. If you have never used a tiling window manager in Linux, I strongly suggest you give it a shot. It can take some time to get up and going the first time, but once a custom configuration is built, it always feels like home.</p>
+
+<p>To show off my new i3 setup with i3bars, I&rsquo;ve posted a small video at the top of this section. Enjoy!</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+

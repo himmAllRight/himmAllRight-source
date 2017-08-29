@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creating a git Repo Remote -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Creating a git Repo Remote</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 3 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Wed, Jul 19, 2017
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/git">git</a>, <a href="http://ryan.himmelwright.net/tags/linux">linux</a>, <a href="http://ryan.himmelwright.net/tags/dev">dev</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>For over a year or so, I have been using a
+self-hosted <a href="https://about.gitlab.com/">Gitlab</a> to host all of my private repos.
+For a few months now, I have been meaning to migrate my Gitlab repos to bare, minimal
+ones, hosted directly on a server. The majority of my code/configs are hosted
+publicly on <a href="https://github.com/himmAllRight">my Github</a> page, and it really
+doesn&rsquo;t make sense to maintain a full Gitlab instance for the few (like&hellip;2)
+private repositories that I keep. Moving the git repos to new ones right on the server
+is actually fairly simple. For such a simple process, all the guides I saw
+online went way above and beyond what I needed. So, here are the <em>two</em> steps I
+did to migrate my repos.</p>
+
+<!-- more -->
+
+<h3 id="ssh-keys">SSH Keys</h3>
+
+<p>The <em>pre</em> (and somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt for the password of the repo&rsquo;s host user . When using a git service (ex: Github or Gitlab), this is usually unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you
+do not know how to configure ssh keys, I included a small ssh key how-to <a href="../Ansible-On-Pi-Cluster#ssh">here</a> in <a href="../Ansible-On-Pi-Cluster">a previous post</a>. Many of the git guides out there call for creating a <code>git</code> user and setting up ssh keys with that user. This is a great idea if multiple people need access to the git repo. However, for my purposes I will use my username, as I will be the only one accessing it (which in my case is a good thing).</p>
+
+<h3 id="creating-server-repo">Creating Server Repo</h3>
+
+<p><center>
+<img src="../../img/posts/creating-remote-git-repo/init-bare-repo.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/init-bare-repo.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/init-bare-repo.png'">
+</center>
+<div id="caption">Creating the remote git repo</div></p>
+
+<p>Once ssh authentication is configured, ssh into the remote server that will host the git repository. Creating the remote repo is a simple process. First, make a directory for the repo (the normal convention is to use a <code>.git</code> ending: <code>REPO-NAME.git</code>). Next, jump into the created directory (<code>cd</code>) and run the command <code>git init --bare</code>.</p>
+
+<pre><code>mkdir REPO-NAME.git
+cd REPO-NAME.git
+git init --bare
+</code></pre>
+
+<p>This will initialize the repository inside that directory. The <code>git init</code> command is used to create a git repository. The <code>--bare</code> option flag tells git to treat it as a bare repository. Bare repositories do not contain a working or checked out copy of the source files. Thus, the plain <code>git init</code> command creates a <em>working</em> repo, while <code>git init --bare</code> is used to create a <em>sharing(server) repo</em>. This allows the working repositories of many developers to be synced with the server repo.</p>
+
+<h3 id="cloning-repo">Cloning Repo</h3>
+
+<p><center>
+<img src="../../img/posts/creating-remote-git-repo/clone-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.png'">
+</center>
+<div id="caption">Clone the Remote to a Local Dir</div></p>
+
+<p>If the remote git repository is a totally new repository, it can be cloned down to a working directory on a developer machine fairly easily:</p>
+
+<pre><code>git clone user@hostname:REPONAME.git
+</code></pre>
+
+<h3 id="pointing-local-repo-to-server">Pointing Local Repo to Server</h3>
+
+<p><center>
+<img src="../../img/posts/creating-remote-git-repo/point-to-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.png'">
+</center>
+<div id="caption">Pointing a working repo to the new remote</div></p>
+
+<p>However, I already had an existing working repository that I wanted to sync with the new remote shared repo. With the remote repo initialized, I wanted to point my existing git repository on the local machine to it. To do this, enter the directory of the git repository, and edit the config the (<code>.git/config</code>). To redirect the repo to point to the new remote, edit the <code>url</code> line to the location of the repo:</p>
+
+<p><code>username@hostname:reponame</code></p>
+
+<pre><code>cd Server-Node-Files
+vim ./git/config
+</code></pre>
+
+<p>After pointing to the new remote, feel free to push the content to it: (Only push everything (*) if it is desired)</p>
+
+<pre><code>git add *
+git commit -m &quot;First push to new Remote&quot;
+git push origin master
+</code></pre>
+
+<p>And that&rsquo;s it. Enjoy spinning up and using your own personal git repositories!</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/arch-linux/</link>
+    <description>Recent content in Arch Linux on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Sun, 17 Jul 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/arch-linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trying out snapd on Arch Linux</title>
+      <link>http://ryan.himmelwright.net/post/snapd-on-arch/</link>
+      <pubDate>Sun, 17 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/snapd-on-arch/</guid>
+      <description>The past few weeks I have been listening to all of the buzz about Ubuntu &amp;ldquo;snaps&amp;rdquo;, but I just recently decided to try this new technology out.
+Snapd Install and Setup I decided to install snapd on my small netbook (Abra), which is running Arch Linux. So, installing snapd was as easy as running:
+pacaur -S snapd
+Now, I use pacaur so that I can install packages from Arch Linux&amp;rsquo;s main repos, as well as the AUR.</description>
+    </item>
+    
+    <item>
+      <title>Trying Out the Plasma 5 Desktop Environment</title>
+      <link>http://ryan.himmelwright.net/post/trying-out-plasma5/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/trying-out-plasma5/</guid>
+      <description>After watching the continued development of the Plasma 5 desktop environment from a distance, I determined I needed to give it another try. It was just before version 5.6 was released, and the project appeared to be finding it&amp;rsquo;s stride. Right up front, I want to come clean and admit that I have never really liked the KDE/Plasma desktop environment (more on that below). However, with that said&amp;hellip; I am still using the plasma desktop on my main computer (months later, and haven&amp;rsquo;t aborted yet**&amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>Back On Arch, After Frantic Distro-hopping</title>
+      <link>http://ryan.himmelwright.net/post/back-on-arch/</link>
+      <pubDate>Sun, 13 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/back-on-arch/</guid>
+      <description>&lt;p&gt;In the last few weeks, I have started my CS masters classes, and needed to setup a productive work environment on my portable laptop (&lt;a href=&#34;../../homelab&#34;&gt;abra&lt;/a&gt;). Also, while I love Fedora, the Nvidia stuff was being a pain on my main computer (&lt;a href=&#34;../../homelab&#34;&gt;alakazam&lt;/a&gt;), and I was looking for a replacement there as well. So, after a long, drawn out battle trying nearly all of my favorite Linux distros, I have found myself once again using &lt;a href=&#34;https://www.archlinux.org/&#34;&gt;Arch Linux&lt;/a&gt; on both of my personal computers.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

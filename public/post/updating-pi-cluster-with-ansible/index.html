@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Updating the Pi Cluster with Ansible -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Updating the Pi Cluster with Ansible</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 6 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Thu, May 25, 2017
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/homelab">homelab</a>, <a href="http://ryan.himmelwright.net/tags/cluster">cluster</a>, <a href="http://ryan.himmelwright.net/tags/pi">pi</a>, <a href="http://ryan.himmelwright.net/tags/devops">devops</a>, <a href="http://ryan.himmelwright.net/tags/ansible">ansible</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>With Ansible configured on the Pi cluster, it is time to have it do something useful. When working with a clustered system, even the simplest tasks become tedious and time consuming. For example, updating the system. While I could manually update each of the 3 pi nodes, it is not scalable to 10 or 30 nodes, let alone hundreds or thousands. Tools like Ansible, make doing tasks such a supdating clustered systems, trivial again. In this post, I will walk through setting up an Ansible playbook to update my Pi cluster.</p>
+
+<!-- more -->
+
+<h3 id="hosts-file">Hosts File</h3>
+
+<p>The first task when using Ansible is to setup the <code>hosts</code> file. No, not the normal <code>/etc/hosts</code> file, but the <em>other</em> one <em>just</em> for Ansible, which can be found at <code>/etc/ansible/hosts</code>. Configuring the Ansible hosts file is fairly straightforward. Groups of computers are defined using <code>[brackets]</code>, with computer ip/hostnames of the group are listed below. For example:</p>
+
+<p>A nice feature of group definitions is that hierical structures can be constructed using the <code>:child</code> suffix in order to create groups of groups. For example, for my <a href="../../pages/homelab">homelab</a>, I like to make an ansible hosts file that splits out my servers based on their distribution, and then group those by their packaging type. This makes it easier for me to do generic updates, which is what I mostly use ansible for (at this point). So, for example:</p>
+
+<pre><code>[ubuntu]
+mrmime
+geodude
+
+[debian]
+ninetales
+
+[fedora]
+fedora-test
+
+[centos]
+tangels
+
+[arch]
+meowth
+staryu
+diglet
+
+[deb:children]
+ubuntu
+debian
+
+[rpm:children]
+fedora
+centos
+
+</code></pre>
+
+<p>For use with the cluster, I kept it simple, although I did opt to create rpi/bpi subgroups:</p>
+
+<pre><code>[cluster:children]
+rpis
+bpis
+
+[rpis]
+pi0
+pi1
+
+[bpis]
+bpi
+</code></pre>
+
+<h3 id="ping-hosts">Ping Hosts</h3>
+
+<p>Once the hosts file is setup, it can be tested using the <code>ping</code> module. I tested my <code>cluser</code> group, as well as the <code>rpis</code> and <code>bpis</code> subgroups.</p>
+
+<pre><code>ansible rpis -m ping
+ansible bpis -m ping
+ansible cluster -m ping
+</code></pre>
+
+<p>Assuming the steps of <a href="../Ansible-On-Pi-Cluster">the last post</a> were done correctly, this should work. If not, double check that post and make sure everything looks correct.</p>
+
+<h3 id="playbooks">Playbooks</h3>
+
+<p>After confirming that the hosts file is properly configured, I started to dig into playbooks. Playbooks are Ansible&rsquo;s scripting system used to configure, deploy, and orcistrate systems. They can describe ways in which systems should be configured (ex: enable ssh), or outline a set of steps for an IT task (ex: running updates, restarting a server). As stated in the <a href="https://docs.ansible.com/ansible/playbooks.html">playbook documentation</a>:</p>
+
+<div id="post-quote">
+*"If Ansible modules are the tools in your workshop, playbooks are your instruction manuals, and your inventory of hosts are your raw material."*
+</div>
+
+<p>Playbook files are expressed using <a href="https://docs.ansible.com/ansible/YAMLSyntax.html">YAML syntax</a>, which is easy to read, but still powerful. The first step when creating a new playbook, being a YAML file, is to set the header and footer. The header consists of three <code>-</code>&rsquo;s at the top of the file, and the footer ends the file with three periods (<code>.</code>). This indicates the start and end of the document.</p>
+
+<p>When writing a playbook to update the pi cluster, I first needed to declare what systems the playbook is used with. To do that, I used the <code>hosts</code> key, and provided it with the <code>cluster</code> group name, which is defined in my <code>/etc/ansible/hosts</code> file, as the value.</p>
+
+<pre><code>---
+- hosts: cluster
+
+...
+</code></pre>
+
+<p>After the hosts are defined, modules can be added to update the nodes. To list the tasks, I used the <code>taks:</code> key, with the same indentation as the <code>hosts:</code> keyword. Instead of using a single value, I provided the <code>tasks:</code> keyword with a list of things to do. The first task I want to do when updating the nodes is to check that they running and connected. This can be accomplised with the <a href="https://docs.ansible.com/ansible/ping_module.html">ping module</a> that I used earlier in the post. The ping module will try to connect to each node, verify that a usable python is installed, and return <code>pong</code> upon success. To add the module, I added <code>- ping: ~</code>, indented, to the line below <code>tasks:</code>:</p>
+
+<pre><code>---
+- hosts: cluster
+
+  tasks:
+    - ping: ~
+</code></pre>
+
+<h3 id="apt-module">Apt Module</h3>
+
+<p>After defining the ping module, I started to get a bit fancier. Well&hellip; a little bit fancier. Each node in my pi cluster is running some verison of Ubuntu, which uses apt as it&rsquo;s package manager. If I wanted to ssh into each node and update them manually, the steps I would follow would be to 1) run the command <code>sudo apt-get update</code> to update the repository cache, and 2) run <code>sudo apt-get upgrade</code> to actually install the updates. To recreate these commands in the playbook, I used the <a href="https://docs.ansible.com/ansible/apt_module.html">apt module</a>. To start with updating the repository cache, I added the following lines to my playbook:</p>
+
+<pre><code>- name: Update APT package manager repositories cache
+  become: true
+  apt:
+    update_cache: yes
+</code></pre>
+
+<p>The <code>name:</code> defines the name of the task, and is the text printed out to the console when executing this step of the playbook. Setting the <a href="https://docs.ansible.com/ansible/become.html"><code>become</code></a> key to <code>true</code> tells Ansible to run the command with privilege escalation (sudo). Lastly, the remaining two lines run the <code>update_cache:</code> functionality of the apt module.</p>
+
+<p>With the repositories updated on each node, I can have ansible run the updates by adding the following lines to the playbook (after the cache update ones):</p>
+
+<pre><code>- name: Upgrade installed packages
+  become: true
+  apt:
+    upgrade: dist
+</code></pre>
+
+<p>This set of commands is very similar to the last group. The <code>name:</code> again provides a description of what the task is doing, and privilege escalation is used again via <code>become: true</code>. The only difference is that the apt module is using the <code>upgrade: dist</code> command instead. This will run the updates for any installed packages on the system.</p>
+
+<h3 id="update-cluster-playbook">Update Cluster Playbook</h3>
+
+<p>I then had a completed playbook to update the pi cluster:</p>
+
+<pre><code>---
+- hosts: cluster
+
+  tasks:
+    - ping: ~
+
+    - name: Update APT package manager repositories cache
+      become: true
+      apt:
+        update_cache: yes
+
+    - name: Upgrade installed packages
+      become: true
+      apt:
+        upgrade: dist
+...
+
+</code></pre>
+
+<p>The last step is to test it out! Playbooks can be executed using the <code>ansible-playbook</code> command:</p>
+
+<pre><code>ansible-playbook update-cluster.yml
+</code></pre>
+
+<p>When running the playbook, ansible will first attempt to gather facts about each node, and then begin to run each of the tasks defined in the playbook. At each step, it will print out the <code>name</code> of each task, followed by the status/result for each node. When it completes, all the nodes in the cluster should be updated. Now you can update three+ computers with a single command! Enjoy!</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+

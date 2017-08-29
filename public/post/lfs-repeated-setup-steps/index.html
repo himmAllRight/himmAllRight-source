@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Linux from Scratch - Repeated Setup Steps -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Linux from Scratch - Repeated Setup Steps</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 3 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Mon, Mar 13, 2017
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/linux">linux</a>, <a href="http://ryan.himmelwright.net/tags/lfs">lfs</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>During the Linux From Scratch process, there may be times when the build environment (computer, VM, chroot, whatever) must be restarted. If so, there are a few steps from the setup phase that have to be re-initialized. This post maps out those steps.</p>
+
+<!-- more -->
+
+<h3 id="setting-the-lfs-variable">Setting The $LFS Variable</h3>
+
+<p>After setting up the virtual disk for my LFS build, I needed to define where I wanted to eventually mount it. This location is important, because it is the path that the $LFS variable is set to. The $LFS variable is used throughout the book, to easily point to where the LFS system is being built.</p>
+
+<p><center><a href="../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png"><img src="../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png" alt="Setting the LFS variable" /></a></center></p>
+
+<p>To set the #LFS variable, I ran the following command: *</p>
+
+<p><code>export LFS=/mnt/lfs</code></p>
+
+<p>To check that the variable set correctly, just print it out using echo (if successful, the path that was specified should print out).</p>
+
+<p><code>echo $LFS</code></p>
+
+<h3 id="ensuring-the-lfs-variable-is-always-set">Ensuring the $LFS Variable is <em>Always</em> Set</h3>
+
+<p>There are several ways to ensure that the <em>$LFS</em> variable is always loaded during login. One method the book recommends is to edit the <em>.bash-profile</em> found in both <em>~</em> and */root, by appending the export command defined above to them. This way every time the build machine resets, simply logging into the system (which loads <em>bash</em>, assuming it is the default), will export the <em>$LFS</em> variable.</p>
+
+<h3 id="mounting-the-lfs-partition-s">Mounting the LFS Partition(s)</h3>
+
+<p>After setting the <em>$LFS</em> variable, I could finally mount my LFS drive/partition to that location. First, I ensured that the directory existed by running:</p>
+
+<p><code>mkdir -pv $LFS</code></p>
+
+<p><em>Note: In this command, the -v again means verbose, so a message will be printed for each directory created. The -p flag is for &ndash;parents, and will instruct &ldquo;mkdir&rdquo; to also make parent directories, as needed. So, if <code>/mnt/</code> does not already exist, will be created along with <code>/mnt/lfs</code>.</em></p>
+
+<p>After creating the directories, I mounted them with the command:</p>
+
+<p><code>sudo mount -v -t ext4 /dev/sdb $LFS</code></p>
+
+<p>If multiple partitions are being used for the LFS build (<em>such as a separate <code>/home</code> partition</em>), they should also be mounted at this time.</p>
+
+<p><center>
+<img src="../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Repeated-Setup-Steps/mount-check.gif'" onmouseout="this.src='../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png'")>
+</center></p>
+
+<p>After mounting my partition, the LFS book recommended that I check that the partition was not mounted with restrictive permissions. To do this, I ran the <code>mount</code> command again, but this time without any parameters. From the output, I was able to see and confirm that the partition was not mounted with restrictive permissions, such as <code>nosuid</code> or <code>nodev</code>. If either of these options are set, the partition should be remounted.</p>
+
+<p>Lastly, if a <em>swap</em> partition is being used, do not forget to enable it using <code>swapon</code>:</p>
+
+<p><code>swapon -v /dev/xxx</code>  (with <em>xxx</em> the name of the swap partition)</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Remember, if the LFS host system is restarted for any reason, these steps must be completed upon logging into the rebooted system. Even if measures were taking to <em>always</em> complete these steps (such as adding the <em>$LFS</em> variable to the bash profile, or mounting the partitions via the <em>fstab</em> file), it is still a good idea to check and make sure that they <em>actually</em> initialized as  intended. This can prevent several headaches down the road.</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+
