@@ -1,0 +1,10 @@
+{{ if .Site.Params.ShowReadTime }}
+  A {{ .ReadingTime }} minute read,
+{{ end }}
+Posted by <a href="#">{{ .Site.Params.Author }}</a> on {{ dateFormat .Site.Params.DateForm .Date }}
+<!-- Not using Categories at this time
+<br />
+{{ partial "categories.html" .}}
+-->
+<br />
+{{ partial "tags.html" .}}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pi on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/pi/</link>
+    <description>Recent content in Pi on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Thu, 25 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Updating the Pi Cluster with Ansible</title>
+      <link>http://ryan.himmelwright.net/post/updating-pi-cluster-with-ansible/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/updating-pi-cluster-with-ansible/</guid>
+      <description>With Ansible configured on the Pi cluster, it is time to have it do something useful. When working with a clustered system, even the simplest tasks become tedious and time consuming. For example, updating the system. While I could manually update each of the 3 pi nodes, it is not scalable to 10 or 30 nodes, let alone hundreds or thousands. Tools like Ansible, make doing tasks such a supdating clustered systems, trivial again.</description>
+    </item>
+    
+    <item>
+      <title>Configuring Ansible on the Pi Cluster</title>
+      <link>http://ryan.himmelwright.net/post/ansible-on-pi-cluster/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/ansible-on-pi-cluster/</guid>
+      <description>In my previous post, I pieced together my pi cluster, and installed variations of Ubuntu 16.04 Server on each of its nodes. With the cluster built, I quickly needed an easy way to maintain and interact with the system as a whole. This, is where Ansible comes in. In this post, I will walk through the steps I took to setup Ansible on my Cluster.
+Ansible Ansible is an open source, configuration management and automation system.</description>
+    </item>
+    
+    <item>
+      <title>Setting Up My Pi Cluster</title>
+      <link>http://ryan.himmelwright.net/post/setting-up-the-pi-cluster/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/setting-up-the-pi-cluster/</guid>
+      <description>I have a Raspberry Pi 2, a Raspberry Pi 3, and a Banana Pi. A while ago, I constructed a small tower to house my pi devices. Since then, I have additionally acquired a power source, and some CAT6 cable to connect them all up to a switch. I hope to use the Pis as a mini clustered environment, where I can learn (and play) with some of the &amp;ldquo;Devops&amp;rdquo; technologies/techniques out there.</description>
+    </item>
+    
+  </channel>
+</rss>

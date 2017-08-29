@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Back On Arch, After Frantic Distro-hopping -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Back On Arch, After Frantic Distro-hopping</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 8 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Sun, Mar 13, 2016
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/linux">linux</a>, <a href="http://ryan.himmelwright.net/tags/arch-linux">arch linux</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <p>In the last few weeks, I have started my CS masters classes, and needed to setup a productive work environment on my portable laptop (<a href="../../homelab">abra</a>). Also, while I love Fedora, the Nvidia stuff was being a pain on my main computer (<a href="../../homelab">alakazam</a>), and I was looking for a replacement there as well. So, after a long, drawn out battle trying nearly all of my favorite Linux distros, I have found myself once again using <a href="https://www.archlinux.org/">Arch Linux</a> on both of my personal computers.</p>
+
+<p></p>
+
+<p><a name="fedora"></a></p>
+
+<h2 id="from-fedora">From Fedora&hellip;</h2>
+
+<p><img src="../../img/back-on-arch/fedora-logo.png" alt="Fedora" /></p>
+
+<p>When I started my journey, I had Fedora on both of my computers. I really like the <a href="https://www.getfedora.org">Fedora Project</a> and I think Fedora is a great distribution with a lot of innovative new features. I seems that the Fedora Project is aiming to be the Linux Distro for developers, and I feel that they are really starting to hit that target.</p>
+
+<p>There is one remaining big issue I had while running Fedora on my main computer. Nvidia drivers. They are just a pain to maintain, and kept breaking my system during updates. I know the <a href="http://rpmfusion.org/">RPM Fusion Repos</a> are supposed to help, but they just aren&rsquo;t there yet. With my classes starting, I needed something that was a bit more stable (and would hopefully support installing VMWare Workstation 9).</p>
+
+<p><a name="ubuntu"></a></p>
+
+<h2 id="the-easy-stability-of-ubuntu-based">The &lsquo;Easy Stability&rsquo; of Ubuntu-based?</h2>
+
+<p><img src="../../img/back-on-arch/ubuntu-mate-logo.png" alt="Ubuntu Mate" /></p>
+
+<p>Guided by desires to have a &ldquo;stable&rdquo; distro, I decided that the <em>obvious</em> answer would be to use an <a href="http://www.ubuntu.com/">Ubuntu</a>-based distro. So, I went with <a href="https://ubuntu-mate.org/">Ubuntu Mate</a>, based on the <em>awesome</em> work the team has done recently. I&rsquo;ve used Ubuntu Mate in the past on several different computers, and in fact, still have it running on <a href="../../homelab/">charmander</a>. I had some issues installing Ubuntu Mate on alakazam for some reason, but using a simple <code>nomodeset</code> at boot seemed work.</p>
+
+<p>After I got it installed, I was able to install the nvidia drivers, but I had other random issues here and there. I also tried installing VMWare, but had issues at every step. To be completely honest, I really wasn&rsquo;t feeling using an Ubuntu distro on alakazam. If I was going to be replacing Fedora, I wanted to make up for it by using something that gave me more power (I&rsquo;ve started to get the itch to try out Gentoo again. Spoiler, I am not using Gentoo. At least until my class is over&hellip;). While Ubuntu could easily support my needs being the well supported and advanced distro that it is &hellip; I craved something else.</p>
+
+<p><a name="opensuse"></a></p>
+
+<h2 id="leaping-to-suse">Leaping to Suse?</h2>
+
+<p><img src="../../img/back-on-arch/opensuse-logo.png" alt="OpenSuse Linux" /></p>
+
+<p>During my last few months on Fedora, I took notice of another rpm distro that was  making noise in the Linux community: <a href="https://www.opensuse.org/">OpenSuse</a>. Specifically, the new <a href="https://software.opensuse.org/421/en">OpenSuse Leap</a> piqued my interest. I had played with it in a VM a few days earlier and liked what I saw. The OpenSuse installer along with the YaST configuration tool makes it <em>stupid easy</em> to setup powerful and advanced features in Linux. Want to setup a KVM virtualization environment or a samba share? You basically just have to click a button. Testing out <a href="https://en.opensuse.org/Portal:Snapper">Snapper</a> was also slick. I wish more distributions would start to include tools like snapper, built in.</p>
+
+<p>Leap was a solid and extensive distribution. Ultimately though, that was the biggest qualm I had with it: there was a lot going on. I did not know what many of the pre-installed configuration tools were. Normally, I am fine with learning new tools, but I wanted a distribution that I could set up and get to work. OpenSuse had <em>too many</em> &ldquo;toys&rdquo; already in it. I would not be able to resist spending hours learning everything. Ironically, my other complaint was that some of the applications I <em>did</em> want, were not easily available. Often, they were not included in the default repositories, and while many application websites will provide a *.deb download, *.rpms are a bit more scarce. I know there is the wonderful <a href="https://build.opensuse.org/">openSuse Build Service</a>, but like <a href="https://copr.fedorainfracloud.org/">Fedora&rsquo;s copr build system</a>, I often found it to be hit or miss. Both do a good job at addressing a major issue in their respective distributions, but neither isn&rsquo;t quite to the level of &hellip; well, the <a href="https://aur.archlinux.org/">AUR</a>.</p>
+
+<p><a name="antegeros"></a></p>
+
+<h2 id="antegeros">Antegeros</h2>
+
+<p><img src="../../img/back-on-arch/antergos-logo.png" alt="Antegeros Linux" /></p>
+
+<p>Which brings me to <a href="https://antergos.com/">Antergos</a>. By this point, I was no longer able to hide the fact that I was starting to severely miss many features a distribution like <a href="https://www.archlinux.org/">Arch Linux</a> provides. I love that you can easily customize just about <em>anything</em>. I also appreciate that if I want to try something new, 99% of the time the latest version is already in the official repos or the <a href="https://aur.archlinux.org/">AUR</a>. Additionally, when I am trying a new application, or customizing my setup, the <a href="https://wiki.archlinux.org/">Arch Wiki</a> has some of <em>the best documentation</em> in the Linux ecosystem. However, I wanted something that I could just install and have working. I didn&rsquo;t feel like going through a full vanilla Arch install. So I installed Antergos. Antergos has a simple but thorough installer that pulls down all the latest packages during the installation. This leaves the user with an up-to-date and <em>gorgeous</em> setup after installation.</p>
+
+<p>Unfortunately, the &ldquo;simplicity&rdquo; of Antergos (which is sort of the antithesis to the definition of <em>simplicity</em> in <a href="https://wiki.archlinux.org/index.php/Arch_Linux#Simplicity">The Arch Way</a>) always seems to bite me in the end. Eventually, <em>something</em> breaks, and I have a hard time figuring out <em>what</em>. While it might be a pain to install <em>everything</em> in vanilla Arch, the user <em>&ldquo;has a much fuller understanding of his or her system</em>&rdquo; as a result. A few years ago, when I first started using Arch, I thought this argument just stupid gray beard nonsense. Now, I appreciate the benefits of this sentiment, and even agree with it (I&rsquo;ve also learned to <a href="https://github.com/himmAllRight/dotfiles/blob/master/archInstallScript.sh">script</a> my post install process, so it is less of a pain :P).</p>
+
+<p>After a few days of fighting with Antegeros, I decided to just bite the bullet and install Vanilla Arch. I still think Antegros is a great distribution that works for a bunch of people. It is great for users that want to experience the power of arch Linux, without having to go through all the overhead. Antegeros is actually how I started to learn Arch Linux. Nowadays though, I seem to prefer <em>simplicity</em> of vanilla Arch.</p>
+
+<p><a name="arch"></a></p>
+
+<h2 id="all-roads-lead-to-arch">All Roads Lead to Arch</h2>
+
+<p><img alt="Arch Linux" src="../../img/back-on-arch/arch-logo.png" width=100%></p>
+
+<p>I have been running Arch on both of my personal laptops for several weeks now. Arch doesn&rsquo;t magically solve all of my issues, but it makes <em>fixing</em> them much easier. If something isn&rsquo;t working, the combination of the wiki and the community make the problem <em>much</em> more approachable. Additionally, the rolling release model appears to mitigate bug-related issues, instead of cause them. For example, I installed Arch on alakazam first, but left Ubuntu Mate on abra (my portable laptop). I did this because my school has a weird network setup that is often difficult to connect to. After searching for hours, I determined that my issues under Ubuntu were caused by a known, but unfixed, bug in my version of network manager. I did not feel like dealing with this, so I installed arch. My internet at school works works fine now. I was able to use the wiki to properly configure my settings, and I was good to go. (Side-note: I never fully got VMWare 9 to work properly on any of my distros, but I came closest with Arch.)</p>
+
+<p><img alt="Abra with Arch and Awesome WM" src="../../img/back-on-arch/abra-screen.png" width=100%>
+<em>Abra running Arch Linux with the <a href="http://awesome.naquadah.org/">Awesome</a> window manager</em></p>
+
+<p>Being back on arch has been great. I love using tiling window managers like i3, dwm, xmonad, stumpwm, and awesome. While this this is possible on all distributions, it is much easier on arch. Starting with a blank slate, and (again) having the wiki makes setting up alternative desktop environments and window managers a breeze. I now have a <em>very</em> productive work environment that is tailored to my needs. While Arch Linux might not be a traditional &ldquo;stable&rdquo; distribution, I have found it to be much more durable for my use-case.</p>
+
+<p>I am planning to stay on Arch for awhile. That being said, I really did enjoy all the other distributions I tried out. Each one seems to be carving out a niche in the Linux environment:</p>
+
+<ul>
+<li><p>Fedora is becoming a great distribution for Linux developers. In fact, I still have Fedora 23 (Server Edition) running on my home server. Assuming that the upgrade to 24 goes smoothly (my upgrade from 22 -&gt; 23 went great, thanks to <a href="https://fedoraproject.org/wiki/Features/DNF">dnf</a>), I see no reason to switch.</p></li>
+
+<li><p>OpenSuse Leap is a solid distribution that is great for power users that want a turn-key distribution with all the bells and whistles. I think it is especially geared toward people with system administration backgrounds.</p></li>
+
+<li><p>Ubuntu Mate is really the best distribution out there for people that want a classic feeling Linux environment, with a modern flair. It is what Ubuntu would be if it never left gnome 2. It is also great for low resource hardware, particularly boards like the <a href="https://www.raspberrypi.org/">raspberry pi</a>.</p></li>
+
+<li><p>Antegros is fantastic for Arch users that hate the Arch install. It is also great for people that want to move to Arch, but aren&rsquo;t yet comfortable with tools like pacman.</p></li>
+</ul>
+
+<p>It is great to see all the distributions finally finding their groove. This isn&rsquo;t something I could say about Linux 2 years ago. As I have already stated, I plan to stay on Arch Linux for the time being, but I am very excited to continue trying out the new releases of the all distributions listed above. With so many great options, it really is a great time to be a Linux user :) .</p>
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+

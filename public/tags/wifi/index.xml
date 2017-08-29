@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wifi on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/wifi/</link>
+    <description>Recent content in Wifi on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Thu, 29 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Encountered Issues Setting Up Ubiquiti Network</title>
+      <link>http://ryan.himmelwright.net/post/issues-setting-up-ubiquiti-network/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/issues-setting-up-ubiquiti-network/</guid>
+      <description>This past weekend, I setup my new ubiquiti network. It actually took up a good portion of Sunday, because I ran into a few minor issues. Fortunately/Unfortunately, these issues were mostly because it my first time configuring this type of setup, and there was a lot of trial and error. The basic network is now all configured and has been running great. It was a good day and I learned a lot :).</description>
+    </item>
+    
+    <item>
+      <title>Home Network Ubiquiti Upgrade</title>
+      <link>http://ryan.himmelwright.net/post/upgrading-network-to-ubiquiti/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/upgrading-network-to-ubiquiti/</guid>
+      <description>A few weeks ago, I went back to Pennsylvania for a week to attend my college swim team reunion, and my brother&amp;rsquo;s high school graduation. While I was away, the wifi-router Rebecca and I were using decided to die (of course). When I returned, I setup our old router as a temporary fix. It was terrible. So, I began researching how I should upgrade our network. This time around, I am doing this correctly.</description>
+    </item>
+    
+  </channel>
+</rss>

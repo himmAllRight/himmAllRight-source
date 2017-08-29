@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lfs on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/lfs/</link>
+    <description>Recent content in Lfs on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Tue, 04 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux from Scratch - SBUs and Binutils</title>
+      <link>http://ryan.himmelwright.net/post/lfs-sbus-and-binutils/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/lfs-sbus-and-binutils/</guid>
+      <description>Well, after all of the preparation, we are ready to start compiling packages. This post cover compiling all the packages, but it will detail the first build of Binutils, which is arguably the most important package to compile. Why is Binutils so crucial? It determines the SBU time for your build system. What&amp;rsquo;s an SBU? Read on to find out!
+SBUs A table of package SBUs and their predicted build time</description>
+    </item>
+    
+    <item>
+      <title>Linux from Scratch - Final Preparation Steps</title>
+      <link>http://ryan.himmelwright.net/post/lfs-final-preparation-steps/</link>
+      <pubDate>Tue, 21 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/lfs-final-preparation-steps/</guid>
+      <description>Now that the repeated setup steps have been defined in my previous LFS post, there are a few more preparation steps to complete in order to start building the LFS system. I promise&amp;hellip; we will start compiling soon. If all goes well, this should be the last preparation post.
+Downloading Sources When it comes down to it, Linux from scratch is just a bunch of packages, and the Linux kernel, all compiled from source and linked together.</description>
+    </item>
+    
+    <item>
+      <title>Linux from Scratch - Repeated Setup Steps</title>
+      <link>http://ryan.himmelwright.net/post/lfs-repeated-setup-steps/</link>
+      <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/lfs-repeated-setup-steps/</guid>
+      <description>During the Linux From Scratch process, there may be times when the build environment (computer, VM, chroot, whatever) must be restarted. If so, there are a few steps from the setup phase that have to be re-initialized. This post maps out those steps.
+Setting The $LFS Variable After setting up the virtual disk for my LFS build, I needed to define where I wanted to eventually mount it. This location is important, because it is the path that the $LFS variable is set to.</description>
+    </item>
+    
+    <item>
+      <title>Linux from Scratch - Getting Started</title>
+      <link>http://ryan.himmelwright.net/post/lfs-getting-started/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/lfs-getting-started/</guid>
+      <description>When I started using Arch Linux a while back, I learn about some of the internals of Linux quickly. Ever since then, I have considered building a Linux From Scratch by following the guidelines outlined in the book. Based on my experience with Arch Linux, I&amp;rsquo;m sure that compiling a system from scratch will continue to teach me about Linux at a much deeper level.
+Getting Started First, it should be known that this process follows a book that is freely available at www.</description>
+    </item>
+    
+  </channel>
+</rss>

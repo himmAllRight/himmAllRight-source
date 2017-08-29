@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Linux from Scratch - SBUs and Binutils -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Linux from Scratch - SBUs and Binutils</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 7 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Tue, Apr 4, 2017
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/linux">linux</a>, <a href="http://ryan.himmelwright.net/tags/lfs">lfs</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>Well, after all of the preparation, we are ready to start compiling packages. This post cover compiling all the packages, but it will detail the first build of <a href="https://www.gnu.org/software/binutils/">Binutils</a>, which is arguably the most important package to compile. Why is Binutils so crucial? It determines the SBU time for your build system. What&rsquo;s an SBU? Read on to find out!</p>
+
+<!-- more -->
+
+<h3 id="sbus">SBUs</h3>
+
+<p><img src="../../img/posts/LFS-SBUs-Binutils/SBU-table.png" alt="SBU Table" /></p>
+
+<p><em>A table of package SBUs and their predicted build time</em></p>
+
+<p>When completing LFS, people commonly want to know how long it will take to compile each package. Unfortunately, build times are very much dependent on the power and configuration of the system the packages are being compiled on. Some packages may take a few minutes on a powerful workstation, but hours on an aged laptop. While it cannot be said how long a specific build will take on any device, we can normalize how long each package build takes comparatively to each other. This normalization is done using Stand Build Units, or SBUs.</p>
+
+<p>A SBU is the unit of time measurement it takes to make and install a standard package. Each package in the LFS book has a SBU value, so that build times can be gauged. So, if The first package to be constructed in the book (and in this post), is Binutils, so that is the package which SBUs are normalized to. For example, if it took 10 minutes to build Binutils on your machine, then 1 SBU = 10 minutes for that machine. This means a 4.5 SBU package can be expected to take ~45 minutes to build.</p>
+
+<h4 id="sbu-accuracy">SBU Accuracy</h4>
+
+<p>SBUs are not completely accurate, and should be used as an estimate at best. Due to the many factors that may differ between setups, SBUs can be off by dozens of minutes in worst-case scenarios. Certain make options might also throw the system off.</p>
+
+<p>For example, systems with multiple cores can run &ldquo;parallel make&rdquo; using the <code>-j</code> make-flag, as in <code>make -j4</code>. This tell <em>make</em> to compiled the package using multiple cores. Parallel compilation has the potential to speed up the build process significantly. However, due to how compilation jobs are divided for parallel builds, SBUs are even harder to predict and may be even more sporadic. Just remember that and don&rsquo;t expect too much SBU accuracy when using <code>make -j</code>. Also, if you ever run into a problem during a build step, it is a good idea to first retry with a single processor build. If this does not fix the issue itself, the error message can at least be more easily analyzed.</p>
+
+<h3 id="my-encountered-issues-with-tar">My Encountered Issues with tar&hellip;</h3>
+
+<p><img src="../../img/posts/LFS-SBUs-Binutils/tar-error.png" alt="Tar issues" /></p>
+
+<p>The first time I attempted to make binutils, I encountered a few errors. The gist of it was that I was not able untar the package correctly, at least from the <em>lfs</em> user. Everything worked fine from the <em>root</em> or even <em>ryan</em> user accounts, but running tar on <em>lfs</em> returned the following error:</p>
+
+<pre><code>tar (child): bzip2: Cannot exec: Too many levels of symbolic links
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+</code></pre>
+
+<p>I searched around but much of the initial advice didn&rsquo;t help my problem. It often indicated that my /usr/bin/bzip2 might be a symlink and should be altered. That wasn&rsquo;t the case. Then tried something that illuminated the issue: I removed the <code>/tools/bin</code> from the begging of the <code>path</code> variable (defined in the <em>lfs</em> <code>.bashrc</code> file). That temporarily fixed the issues. So I knew the problem was related to the symlink I setup in <a href="../LFS-Final-Preparation-Steps">the previous LFS post</a>, specifically the <code>ln -sv $LFS/tools /</code> command. It must have failed and I wasn&rsquo;t paying attention.</p>
+
+<p>Now that I was knew what the problem was, I was able to fix it by running the following commands (some of them might need to be run from a <em>root/sudo</em> account):</p>
+
+<pre><code>rm -rf $LFS/tools
+rm -rf /tools
+mkdir -pv $LFS/tools
+ln -sv $LFS/tools /
+</code></pre>
+
+<p>These commands remove and reset the <code>tools</code> symlinks. I then made sure to re-add <code>/tools/bin</code> to the begging of the <code>path</code> var in the <em>lfs</em> <code>.bashrc</code> and test it. Problem fixed!</p>
+
+<h3 id="extracting-binutils">Extracting BinUtils</h3>
+
+<p><center>
+<img src="../../img/posts/LFS-SBUs-Binutils/tar-binutils.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.png'">
+</center></p>
+
+<p>It is important that Binutils is built first in the process. This is mostly because when Glibc and GCC are built, they perform various tests on the linker and assembler to figure out which of their own features to enable.</p>
+
+<p>To start building BinUtils, move to the sources directory (<code>$LFS/sources</code>) and extract the package with (If you encounter issues, see section above):</p>
+
+<pre><code>tar xfjv binutils-2.27.tar.bz2
+</code></pre>
+
+<p><em>Note: You&rsquo;re version might be different</em></p>
+
+<p>The Binutils documentation recommends building it in a dedicated <code>build</code> directory, so lets go ahead and make, then enter, that directory:</p>
+
+<pre><code>mkdir build
+cd build
+</code></pre>
+
+<h3 id="making-executing-a-build-script">Making &amp; Executing a Build Script</h3>
+
+<p><center>
+<img src="../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png'">
+</center></p>
+
+<p>Now it is time to build. Normally, this would best be done by sequentially performing a series of <em>configure</em>, <em>make</em>, and <em>make install</em> commands, but for the first binutils compilation, we want to get an accurate reading on how long it takes (to determine our SBU time). To accomplish this easily, I put all of the commands into a bash script. This way, I could execute the script, and easily time the whole process using the <code>time</code> utility. To create the script, I wrote the following commands into a file (<code>build-binutils.sh</code>):</p>
+
+<pre><code>#!/bin/bash
+
+../configure --prefix=/tools            \
+             --with-sysroot=$LFS        \
+             --with-lib-path=/tools/lib \
+             --target=$LFS_TGT          \
+             --disable-nls              \
+             --disable-werror
+make
+
+case $(uname -m) in
+  x86_64) mkdir -v /tools/lib &amp;&amp; ln -sv lib /tools/lib64 ;;
+esac
+
+make install
+</code></pre>
+
+<p>The various options of the <code>configure</code> command mean the following:</p>
+
+<ul>
+<li><code>--prefix=/tools</code>: Configures the build to install the Binutils programs to the /tools directory</li>
+<li><code>--with-sysroot=$LFS</code>: For cross compilation, tells the build system to look in our $LFS directory for the target system libraries, as needed.</li>
+<li><code>--with-lib-path=/tools/lib</code>: configures the library path that the linker should be configured to use.</li>
+<li><code>--target=$LFS_TGT</code>: the machine description in the <code>LFS_TGT</code> variable is slightly different than the value returned by the <em>config.guess</em> script, so this option will tell the <em>configure</em> script to adjust Binutil&rsquo;s build system for building the cross linker.</li>
+<li><code>disable-nls</code>: disables the internationalization, as it is not needed for the temporary tools.</li>
+<li><code>disable-werror</code>: Prevents the build from stopping in the event that there are warnings from the host&rsquo;s compilier.</li>
+</ul>
+
+<p>Also, the <code>case</code> statement creates a symlink to ensure the sanity of the tool chain, if building on a <em>x86_64</em> architecture.</p>
+
+<p>To runs the script, first make it executable,</p>
+
+<pre><code>chmod +x build-binutils.sh
+</code></pre>
+
+<p>Finally, time and execute the script:</p>
+
+<pre><code>time ./build-binutils.sh
+</code></pre>
+
+<p>When the script completes, the time it took to run it will be printed out. Congratulations, this is the SBU for your system!</p>
+
+<p>Once I had my standard single-thread SBU value, I wanted to do a run with the <code>-j4</code> make flag for comparison. To &ldquo;reset&rdquo;, I deleted the contents of the <code>binutils/build/</code> directory, as well as <code>$LFS/tools/</code>. I then edited my <code>build-binutils.sh</code> script to do a parallel compile by changing <code>make</code> line to <code>make -j4</code>. I then re-ran the script with <code>time</code>. <em>Note: This is not described anywhere in the official documentation, but is just my best guess at what to do for a re-run of binutils. I very well may be missing steps. However, remember LFS is a learning experience, so we will find out</em>!</p>
+
+<h3 id="checking-the-build">Checking the Build</h3>
+
+<p><center>
+<img src="../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png'">
+</center></p>
+
+<p>After the build is complete, it is a good idea to run the tests, <em>especially</em> for binutils. In this case, use the make command:</p>
+
+<pre><code>make -k check
+</code></pre>
+
+<h3 id="building-the-chapter-5-tools-from-here-on-out">Building the Chapter 5 Tools From Here on Out&hellip;</h3>
+
+<p>For the sake of time, I will not be writing posts detailing the build process for each of the remaining packages in Chapter 5. I might keep a little log about how each of the builds went and post it, but I am unsure. If I encounter any major snags along the way, I will be sure to write a post detailing them. Otherwise, with any luck, my plan is to keep compiling and see you in Chapter 6!</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+

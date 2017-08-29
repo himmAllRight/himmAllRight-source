@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryogen on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/cryogen/</link>
+    <description>Recent content in Cryogen on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Tue, 11 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/cryogen/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Website Theme: Immutable</title>
+      <link>http://ryan.himmelwright.net/post/new-theme-immutable/</link>
+      <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/new-theme-immutable/</guid>
+      <description>When I first started using Cryogen to generate this website, I wanted to create a personalized theme. This desire led me to hack a the default theme into a mutant, which I boringly named &amp;ldquo;ryan1&amp;rdquo; (I anticipated it to be temporary). It looked like a relic, designed from when I first learned how to make a web page&amp;hellip; the early 2000&amp;rsquo;s. Like many all websites from that time, it was not mobile friendly.</description>
+    </item>
+    
+    <item>
+      <title>Using Cryogen for Website</title>
+      <link>http://ryan.himmelwright.net/post/website-switched-to-cryogen/</link>
+      <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/website-switched-to-cryogen/</guid>
+      <description>Ever since resurrecting my personal website, I have experimented with several static website generators. Thus far, I have tried org-page, Jekyll (several times), and even (almost) made my own emacs org-page solution. Now that I have started using the clojure programming language, I have come across cryogen. As you may have already guessed, this site is now being generated using cryogen.
+Emacs/org-mode Solutions About a year ago, obsession with emacs (and more importantly, org-mode) eventually led me to try out org-page while revitalizing my personal website.</description>
+    </item>
+    
+  </channel>
+</rss>

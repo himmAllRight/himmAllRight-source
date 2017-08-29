@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Setting Up My Pi Cluster -- ryan. himmelwright. net</title>
+
+    
+
+    
+    <link href="http://ryan.himmelwright.net/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="http://ryan.himmelwright.net/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ryan.himmelwright.net">ryan. himmelwright. net</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://ryan.himmelwright.net/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://ryan.himmelwright.net/img/header-images/cluster-boards.jpg')">
+      
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Setting Up My Pi Cluster</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+  A 5 minute read,
+
+Posted by <a href="#">Ryan Himmelwright</a> on Fri, May 5, 2017
+
+<br />
+Tags <a href="http://ryan.himmelwright.net/tags/homelab">homelab</a>, <a href="http://ryan.himmelwright.net/tags/linux">linux</a>, <a href="http://ryan.himmelwright.net/tags/cluster">cluster</a>, <a href="http://ryan.himmelwright.net/tags/pi">pi</a>, <a href="http://ryan.himmelwright.net/tags/devops">devops</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>I have a Raspberry Pi 2, a Raspberry Pi 3, and a Banana Pi. A while ago, I constructed a small tower to house my pi devices. Since then, I have additionally acquired a power source, and some CAT6 cable to connect them all up to a switch. I hope to use the Pis as a mini clustered environment, where I can learn (and play) with some of the &ldquo;Devops&rdquo; technologies/techniques out there. This post will briefly explain the initial setup of <a href="../../pages/homelab/#cluster">my cluster</a>.</p>
+
+<!-- more -->
+
+<h1 id="setting-up-the-os-images">Setting up the OS Images</h1>
+
+<p>Before doing anything with the hardware, I had to setup the pi &ldquo;hard drives&rdquo; (micro SD cards), so they could boot.</p>
+
+<h3 id="ubuntu-for-raspberry-pi">Ubuntu for Raspberry PI</h3>
+
+<p><img src="../../img/posts/Setting-Up-Pi-Cluster/ubuntu-logo.jpg" style="width: 200px%; float: right; margin: 0px 10px 0px 10px;"/></p>
+
+<p>After mucking around with Rapsbian and Hypriot one Sunday, I decided to just go with a plain Ubuntu image for the Raspberry Pis. I don&rsquo;t have anything against these specific OSes, but I am mostly setting up this cluster to simulate what I would do on a &ldquo;real&rdquo; system. For me, that often means using a straight OS like Ubuntu.</p>
+
+<p>Luckily, Canonical makes special <a href="https://wiki.ubuntu.com/ARM/RaspberryPi">Ubuntu ARM images</a>, specifically for the Raspberry Pi. I download the 16.04 server version for both the <a href="http://cdimage.ubuntu.com/ubuntu/releases/16.04/release/ubuntu-16.04.2-preinstalled-server-armhf+raspi2.img.xz">raspberry pi 2</a> and <a href="http://www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz">raspberry pi 3</a>. The process to write these images to the microSD card differs slightly from ones I&rsquo;ve used in the past. It still uses <code>dd</code>, but the image is first piped through <code>xzcat</code>, as such:</p>
+
+<pre><code>xzcat ubuntu-16.04.2-preinstalled-server-armhf+raspi2.img.xz | sudo dd bs=4M of=/dev/mmcblk0
+xzcat ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz   | sudo dd bs=4M of=/dev/mmcblk0
+</code></pre>
+
+<h3 id="armbian">Armbian</h3>
+
+<p>The one issue that I have with the Banana Pi compared to the Raspberry Pi, is that it is commonly not supported. It can be hard to find a bananna pi specific image, and the raspberry pi ones usually do not work. For example, while Canonical linked to Raspberry Pi images, it did not mention the banana pie.  This is where <a href="https://www.armbian.com/">Armbian</a> comes in.</p>
+
+<p>Armbian is a lightweight Debian and Ubuntu based distribution, that provides builds for various ARM devices. Thus the name, <em>ARM-bian</em>. One of these many supported devices&hellip; is the <a href="https://www.armbian.com/banana-pi/">banana pi</a>. I downloaded the Ubuntu 16.04 Server flavor of Armbian for the Banana PI, and copied it to my micro SD card with the command:</p>
+
+<pre><code>sudo dd if=Armbian_5.25_Bananapi_Ubuntu_xenial_next_4.9.7.img  of=/dev/mmcblk0 bs=1M
+</code></pre>
+
+<h3 id="hardware-setup">Hardware Setup</h3>
+
+<p><img src="../../img/posts/Setting-Up-Pi-Cluster/pi-cluster.png" style="width: 40%; float: right; margin: 0px 10px 0px 10px;"/></p>
+
+<p>After the operating system images have been copied the SD cards, the hardware can be setup. I started by inserting the microSD cards into the PIs, being careful to use the correct card with each device. Unlike the Raspberry PIs, the Bananna PI uses a normal SD card instead of a microSD, so I just left it in the converter card I used to connect it to my computer when imaging.</p>
+
+<p>After adding the &ldquo;hard drives&rdquo;, I connected each PI to my network switch, via Ethernet. In the future, I would like to put the cluster on it&rsquo;s own mini (managed?) switch so that I can have the nodes on their own private network, but connected to my main network. For now, this works.</p>
+
+<p>Lastly, plug in the power connectors. Pi devices can be very finicky when not properly powered, so it is a good idea to use an capable USB charging device. I have had trouble in the past with my devices not working correctly due to insufficient power (especially the bpi). I knew this problem would be an even more pronounced with the cluster because I planned to connect a HD to the bpi with a SATA connector. So, I picked up an <a href="https://www.amazon.com/Anker-Charger-PowerPort-Multi-Port-Samsung/dp/B00VH8ZW02/ref=sr_1_1?ie=UTF8&amp;qid=1493860165&amp;sr=8-1&amp;keywords=Anker+power+port+5">Anker Power Port 5</a> and it has been working great.</p>
+
+<p>Lastly, two nice features of the banana pi is that it has a 1 GB ethernet port, <em>and</em> a SATA connector with power. So, to utilize this functionality, and get the most out of the bpi, I ordered <a href="https://www.amazon.com/JBtek-Connectors-Banana-Supply-Terminals/dp/B00ZP0L0VS/ref=sr_1_1?ie=UTF8&amp;qid=1493860481&amp;sr=8-1&amp;keywords=banana+pi+sata">the appropriate SATA connector</a> from amazon for a few bucks. When it arrived, I connected it to the SATA and SATA power ports on the pi, and then to an old 300GB laptop HD I had laying around (it was the drive that came with <a href="../introducing-kadabra/">kadabra</a>). After the drive was connected, running <code>lsblk</code> on the bpi automatically showed a <code>/dev/sda</code> device, in addition to the typical <code>mmcblk0</code> microSD device. I  mounted the drive to a folder using the following command to test it out:</p>
+
+<pre><code>sudo mount /dev/sda1 Data
+</code></pre>
+
+<p>With the hard drive mounted, I was able to browse its contents and see of all the crap still on it. The combination of the GB network and large HD makes the bpi a great little storage node, which is how I intend to use it.</p>
+
+<h3 id="bootup-and-connecting-via-ssh">Bootup and Connecting via SSH</h3>
+
+<p>When the Pis are plugged in, they should automatically boot up. In order to connect to them, I found their IPs from my main computer using <code>nmap</code>:</p>
+
+<pre><code>sudo nmap -sP 192.168.1.0/24
+</code></pre>
+
+<div id="caption">This command may differ depending on your network setup</div>
+
+<p>The Raspberry PIs have <code>(Raspberry Pi Foundation)</code> in the MAC address lines, and my Banana Pi had <code>bananapi</code> in the host name. Once I had the IP addresses, I could ssh in using the default usernames and passwords for the images (the user/pass should be listed on the sites). After logging in for the first time, each PI prompted me to change the password (as it should).</p>
+
+<h3 id="adding-a-sudo-user">Adding A Sudo User</h3>
+
+<p>When connecting to remote devices, I don&rsquo;t like to be logged in as root, so the first thing I did was setup my user account with sudo privileges, on the two Raspberry Pis (Armbian actually prompted me through these steps the first time I logged into the Banana pi. Kudos to them).</p>
+
+<p>To add the user, set it&rsquo;s password (important), and then add it to the sudo group, I used the following commands:</p>
+
+<pre><code>useradd -m -s /bin/bash ryan
+passwd ryan
+usermod -a -G sudo ryan
+</code></pre>
+
+<div id="caption">Yes, I know I can add the user to the sudo group in the `useradd` command, but I prefer to do it with `usermod`. Personal Preference.</div>
+
+<p>That&rsquo;s it. At this point, all of my the PIs are minimally set up accessible. The next steps include updating packages, setting up ssh keys, and configuring &hellip;. <a href="https://www.ansible.com">Ansible</a>. But that will all be in the <em>next post</em>. See you then!</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:ryan@himmelwright.net">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/himmAllRight17">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/himmAllRight">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">Code released under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://ryan.himmelwright.net/js/jquery.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/bootstrap.min.js"></script>
+
+    
+    <script src="http://ryan.himmelwright.net/js/clean-blog.js"></script>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
+

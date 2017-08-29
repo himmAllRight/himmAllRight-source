@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/ssh/</link>
+    <description>Recent content in Ssh on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Reverse SSH Tunnels</title>
+      <link>http://ryan.himmelwright.net/post/simple-reverse-ssh-tunnel/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/simple-reverse-ssh-tunnel/</guid>
+      <description>Last week, I was on vacation with my family. While I didn&amp;rsquo;t work a ton on personal projects, I was at least able to spend some time on my TunelBeacon project again. I will write a dedicated post about that project down the road when I am further along. Basically, it will be a simple GUI to create reverse ssh tunnels, that family and friends can startup in order grant me temporary access to their computer when they need support.</description>
+    </item>
+    
+    <item>
+      <title>Configuring Ansible on the Pi Cluster</title>
+      <link>http://ryan.himmelwright.net/post/ansible-on-pi-cluster/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/ansible-on-pi-cluster/</guid>
+      <description>In my previous post, I pieced together my pi cluster, and installed variations of Ubuntu 16.04 Server on each of its nodes. With the cluster built, I quickly needed an easy way to maintain and interact with the system as a whole. This, is where Ansible comes in. In this post, I will walk through the steps I took to setup Ansible on my Cluster.
+Ansible Ansible is an open source, configuration management and automation system.</description>
+    </item>
+    
+  </channel>
+</rss>

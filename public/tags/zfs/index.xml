@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zfs on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/zfs/</link>
+    <description>Recent content in Zfs on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Thu, 20 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/zfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ZFS Snapshot Backups to an External Drive with LUKS</title>
+      <link>http://ryan.himmelwright.net/post/zfs-backups-to-luks-external/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/zfs-backups-to-luks-external/</guid>
+      <description>I have been using ZFS data pools to store data on my server for some time now. As great as that is, I am ashamed to admit that I have not had a true backup system in place (raid/mirrors are not backup). I have a backup solution that I have attempted in the past, but ran into an issue and let it drift to the side. That changes now. It&amp;rsquo;s time to revisit my solution, and complete it to the end.</description>
+    </item>
+    
+  </channel>
+</rss>

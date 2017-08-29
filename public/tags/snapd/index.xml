@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snapd on ryan. himmelwright. net</title>
+    <link>http://ryan.himmelwright.net/tags/snapd/</link>
+    <description>Recent content in Snapd on ryan. himmelwright. net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Code released under the Apache 2.0 license.</copyright>
+    <lastBuildDate>Sun, 17 Jul 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ryan.himmelwright.net/tags/snapd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trying out snapd on Arch Linux</title>
+      <link>http://ryan.himmelwright.net/post/snapd-on-arch/</link>
+      <pubDate>Sun, 17 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ryan.himmelwright.net/post/snapd-on-arch/</guid>
+      <description>The past few weeks I have been listening to all of the buzz about Ubuntu &amp;ldquo;snaps&amp;rdquo;, but I just recently decided to try this new technology out.
+Snapd Install and Setup I decided to install snapd on my small netbook (Abra), which is running Arch Linux. So, installing snapd was as easy as running:
+pacaur -S snapd
+Now, I use pacaur so that I can install packages from Arch Linux&amp;rsquo;s main repos, as well as the AUR.</description>
+    </item>
+    
+  </channel>
+</rss>
