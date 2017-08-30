@@ -1,14 +1,12 @@
 ---
 title: "Homelab"
-date: 2017-08-28T10:44:34-04:00
-draft: true
+date: 2017-08-30T05:44:01-04:00
 type: homelab
 layout: homelab-page
 menu: 
   main:
     weight: -100
 image: img/header-images/alakazam.jpg
-
 ---
 
 This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations), as well as network diagrams of our current setup.
