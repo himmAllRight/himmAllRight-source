@@ -2,8 +2,8 @@
 title = "Transitioning Website to Hugo"
 date = "2017-08-27"
 author = "Ryan Himmelwright"
-image = "img/header-images/st-lucia-cannon.jpg"
-tags  = ["Website", "Hugo", "Go",]
+image = "img/header-images/st-lucia-fort1.jpg"
+tags  = ["Website", "Hugo", "Cryogen", "Go",]
 +++
  
  While I have loved using [Cryogen](http://cryogenweb.org) to create this website for over a year and a half now, I have started the transition to using another static website generator. Specifically, I have been experimenting with [Hugo](https://gohugo.io). This post will detail why I am switching, what I have ported over thus far, and what still needs to be completed before generating the official site with hugo.
