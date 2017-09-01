@@ -43,3 +43,27 @@ This is how both the `Home` and `Archives` links have both already been added to
 
 #### Small tweaks
 
+**Next/Prev Posts**
+
+I added some code between the  `{{ .Content }}` and `{{ partial "coments,html" .}}` tags of my theme's `/layout/post/single.html` file. I made a line with `if` statements to mark the "Next Post" and "Prev Posts". Then on a second line, I put the actual links using `with` statements. Both of these utilized the `.NextInSection` and `.PrevInSection` variables.
+
+```html
+<!-- Next Post/ Previous Post Labels -->
+{{ if .NextInSection }}
+    <div style="float: left;">Next Post:</div>
+{{ end }}
+{{ if .PrevInSection }}
+     <div style="float: right;">Prev Post:</div>
+{{ end }}
+
+<br>
+
+<!-- Next Post/ Previous Post Links -->
+{{ with .NextInSection }}
+    <a href="{{ .Permalink }}" style="float: left;">{{ .Title }}</a>
+{{ end }}
+{{ with .PrevInSection }}
+    <a href="{{ .Permalink }}" style="float: right;">{{ .Title }}</a>
+{{ end }}
+
+```
