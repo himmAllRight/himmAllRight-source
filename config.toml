@@ -19,7 +19,7 @@ PygmentsStyle = "monokai"
 
 [params]
   DateForm = "Mon, Jan 2, 2006"
-  # Description = "Your site description"
+  #Description = "Software Developer, Open Source and Linux Enthusiast"
   Author = "Ryan Himmelwright"
   email = "ryan@himmelwright.net"
   postSummariesFrontPage = 5 
