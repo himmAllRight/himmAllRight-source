@@ -19,8 +19,8 @@ being generated using cryogen.
 
 ## Emacs/org-mode Solutions
 
-![emacs logo](../../img/posts/using-cryogen-for-website/Emacs-icon.png)
-![org-mode unicorn](../../img/posts/using-cryogen-for-website/org-mode-unicorn.png)
+<img alt="emacs logo" src="../../img/posts/using-cryogen-for-website/Emacs-icon.png" width=30%>
+<img alt="org-mode unicorn" src="../../img/posts/using-cryogen-for-website/org-mode-unicorn.png" width=30%>
 
 About a year ago, obsession with
 [emacs](https://www.gnu.org/software/emacs/) (and more importantly,

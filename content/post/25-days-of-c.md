@@ -6,7 +6,7 @@ tags = ["Programming", "C",]
 
 As I continue to learn more and more programming languages, I am somewhat ashamed to admit that I have yet to learn C. However, it is not because I am trying to avoid it.
 
-<!-- more -->
+<!--more-->
 
 ## The Reason
 C is one of the top languages I wish to know, and know well. C is the backbone for so much code, especially in the Linux ecosphere that it is almost imperative for one to at least understand it. I keep trying to poke my head into open source projects, and so many of them are built or based on C (especially when looking at projects more at the distro and distro applications level).
