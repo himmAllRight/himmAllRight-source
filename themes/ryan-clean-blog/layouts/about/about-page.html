@@ -10,9 +10,10 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <h1>{{ .Title }}</h1>
-                    <h2 class="subheading">{{ .Description }}</h2>
+                    <h2 class="subheading"></h2>
                     <span class="meta">
-                        {{ partial "meta.html" .}}
+                        <!-- {{ partial "meta.html" .}} -->
+                        Last Updated by {{ .Site.Params.Author }} on {{ dateFormat .Site.Params.Dateform .Date }}.
                     </span>
                 </div>
             </div>
