@@ -1,7 +1,16 @@
 {{ if .Site.Params.ShowReadTime }}
-  A {{ .ReadingTime }} minute read,
+    A {{ .ReadingTime }} minute read,
 {{ end }}
 Posted by <a href="#">{{ .Site.Params.Author }}</a> on {{ dateFormat .Site.Params.DateForm .Date }}
+
+<!-- If lastmod param provided, display update date -->
+{{ if (not (eq .Date .Lastmod))  }}
+    <br>
+    Updated:  {{ dateFormat .Site.Params.DateForm .Lastmod }}
+{{ end }}
+
+
+
 <!-- Not using Categories at this time
 <br />
 {{ partial "categories.html" .}}
