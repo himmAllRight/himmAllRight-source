@@ -1,24 +1,25 @@
 +++
-title = "Refreshing my i3 setup with i3blocks"
-date = "2017-06-22"
+title  = "Refreshing my i3 setup with i3blocks"
+date   = "2017-06-22"
 author = "Ryan Himmelwright"
-tags = ["Linux", "i3", "customization", "Solus",]
+image   = "img/posts/starting-i3/rofi-window-header.png"
+tags   = ["Linux", "i3", "customization", "Solus",]
 +++
 
 The last couple of weeks I have shifted back to using the i3 window mangers. When I fired it up, my fingers danced across the keyboard, remembering all of the personalized keybindings I have cultivated in my i3 configuration over the years. It is a simple, beautiful setup... well, beautiful minus one of the components. My i3status bar was looking rather bland and dated, especially compared some of the i3 setups posted by all the cool kids over at [/r/unixporn](https://www.reddit.com/r/unixporn/). I decided it was time for a refresh.
 
-<!-- more -->
+<!--more-->
 
 ## i3status
 
-![One of my simple i3status setups](../../img/posts/starting-i3/i3status.png)
+<img alt="One of my simple i3status setups" src="../../img/posts/starting-i3/i3status.png" style="max-width: 100%;"/>
 <div id="caption">One of my simple i3status setups</div>
 
 When I first configured i3 several years ago, I used i3status because it was easy to use with i3 and did everything by default. Over time, I learned how to create and modify [my own .i3status.conf](https://github.com/himmAllRight/dotfiles/blob/master/i3/.config/i3/i3status.conf) so that I could get it to play nice with un-standerd configurations (ex: `/Data` partitions and such). While i3status served me well for many years, using the same-old setup has become boring. I started noticing several other nice looking status bar tools being used in i3 setups, and wanted to try them out.
 
 ## Polybar
 
-![The example polybar](../../img/posts/starting-i3/polybar.png)
+<img alt="The example polybar" src="../../img/posts/starting-i3/polybar.png" style="max-width: 100%;"/>
 <div id="caption">The example polybar</div>
 
 The first bar I saw and tried was [polybar](https://github.com/jaagr/polybar). I started with it because some of the examples look awesome. It looks very modern and has an infinite number of features. I set it up and was able to use the example bar just fine. However, when I started to customize my own, I started to run into a few issues. The biggest issue was polybar not detecting my work-space names, along with other elements. Additionally, due to the support for several window managers, the example configuration file seemed cluttered, and I was never sure what I could edit, and what I should delete. After some frustration, I decided put it aside for now. I might come back to it one day when I'm bored.
@@ -37,7 +38,7 @@ It was. So, I installed it (`sudo eopkg it i3blocks`) and started learning how t
 
 ### Fonts
 
-![A Very Small Sampling of the Awesome Fonts](../../img/posts/starting-i3/awesome-font.png)
+<img alt="A Very Small Sampling of the Awesome Fonts" src="../../img/posts/starting-i3/awesome-font.png" style="max-width: 100%;"/>
 <div id="caption">A *Very Small* Sampling of the Awesome Fonts</div>
 
 The first hurdle I came across when first launching i3blocks was that I did not have all the fonts used in the default configuration installed. I temporarily removed the special fonts from the config, just so I could check that everything was working. But what's the fun in that? One of the biggest reasons I wanted to redo my bar was to have cool modern icon fonts! So, I found the [font awesome](http://fontawesome.io/) package in the Solus repos and installed it.
@@ -50,7 +51,7 @@ With the awesome fonts at my disposal, I had a plethora of icons to use. So I we
 
 ### Finding Git Repos
 
-![The example polybar](../../img/posts/starting-i3/i3block-new-repo-examples.png)
+<img alt="Example of Modules in new i3-block repo" src="../../img/posts/starting-i3/i3block-new-repo-examples.png" style="max-width: 100%;"/>
 <div id="caption">Example of Modules in new i3-block repo</div>
 
 While researching how to configure i3blocks, I started encountering several different GitHub repos and forks of the project. Some forks seemed to have additional modules that my repo version didn't. I downloaded and built [this one](https://github.com/Anachron/i3blocks) to try out. I then configured i3 to point to the new build instead, and got started setting up my own blocks.
@@ -104,13 +105,13 @@ Over the past few weeks, it seems to work well enough. As I continued to *tweak*
 
 ### Color Update for i3 & rofi
 
-![New Color Scheme for rofi launcher](../../img/posts/starting-i3/rofi-run.png)
+<img alt="New Color Scheme for rofi launcher" src="../../img/posts/starting-i3/rofi-run.png" style="max-width: 100%;"/>
 <div id="caption">New color scheme for rofi launcher</div>
 
 When I started using i3 several years ago, I used [dmenu](http://tools.suckless.org/dmenu/) as my launcher (it's the launcher used in [dwm](http://dwm.suckless.org/), another tiling window manager I used to use). I eventually switched to [rofi](https://davedavenport.github.io/rofi/) after seeing it used in some very nice window manager setups (sound familiar?). However, I always used the plain default theme and never bothered to improve it. With all the work I did making i3bars look nice, I thought I should at least make rofi match. Making the color theme wasn't nearly as hard as I anticipated it to be. That's mostly because I found and used the [rofi theme generator](https://davedavenport.github.io/rofi/p11-Generator.html). 
 
 <center>
-![New rofi window switcher](../../img/posts/starting-i3/rofi-window.png)
+<img alt="New rofi window switcher" src="../../img/posts/starting-i3/rofi-window.png" style="max-width: 100%;"/>
 </center>
 <div id="caption">Newly configured rofi window switcher</div>
 
@@ -118,7 +119,7 @@ While touching up rofi, I learned it can also switch through already opened wind
 
 
 ## Conclusion
-<video width=100% controls>
+<video style="max-width:100%;" controls>
   <source src="../../img/posts/starting-i3/i3-gaps-demo.mp4" type="video/mp4">
   <source src="movie.ogg" type="video/ogg">
 Your browser does not support the video tag.

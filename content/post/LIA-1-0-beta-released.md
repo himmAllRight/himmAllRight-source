@@ -7,17 +7,17 @@ image  = "img/header-images/worlds-end-rocks.jpg"
 +++
 
 I have released the 1.0 Beta version for a personal project of mine: the **L**edger **I**mport **A**ssistant, or [LIA](https://github.com/himmALlRight/LIA/). This post will talk briefly about the background of LIA, what it does, and explain the beta release. 
-<!-- more -->
+<!--more-->
 
 ## What is LIA?
 
-<img alt="Credit Card Statement CSV" src="../../img/posts/LIA-1-0-Beta-Released/creditCardDownload.png" width=100%>
+<img alt="Credit Card Statement CSV" src="../../img/posts/LIA-1-0-Beta-Released/creditCardDownload.png" style="max-width: 100%;"/>
 
 *Example Cred Card Statement CSV File*
 
 A while ago, I discovered [Ledger](http://www.ledger-cli.org), the command line double-entry accounting application. Its powerful, yet simple design attracted me, and I wanted to try it out. To use it effectively however, I needed a method to import our bank and credit card statements into ledger journals. Then, I could use ledger to analyze the finances. However, there was an issue. While there are several great ledger convert/import options out there, many were more complicated than what I was looking for. So...I wrote my own. 
 
-<img alt= "Example Ledger Journal File" src="../../img/posts/LIA-1-0-Beta-Released/ledger-journal.png">
+<img alt= "Example Ledger Journal File" src="../../img/posts/LIA-1-0-Beta-Released/ledger-journal.png" style="max-width: 100%;"/>
 
 *Example Ledger Journal File*
 
@@ -26,7 +26,7 @@ When I started writing LIA, I just wanted a python script that could help me con
 
 ## What does LIA do?
 
-<img alt="LIA Running" src="../../img/posts/LIA-1-0-Beta-Released/LIA-demo.gif" width=100%>
+<img alt="LIA Running" src="../../img/posts/LIA-1-0-Beta-Released/LIA-demo.gif" style="max-width: 100%;"/>
 
 LIA executes the core functionality that originally prompted me to write it: converting bank/credit card statement csv files into ledger journal files. Beyond that basic functionality,  LIA has a few nice features that help the user manually convert these files in an enjoyable way. By going through each transaction manually, the user has full control to make sure data is being input correctly. However, LIA helps make this otherwise dull process fast and efficient. Some of LIA's features that help accomplish this are:
 
@@ -42,7 +42,7 @@ LIA executes the core functionality that originally prompted me to write it: con
 ## What does LIA 1.0 Beta mean?
 ### LIA 1.0
 
-<img alt="My 1.0 Todo List" src="../../img/posts/LIA-1-0-Beta-Released/release-todo.png" width=100%>
+<img alt="My 1.0 Todo List" src="../../img/posts/LIA-1-0-Beta-Released/release-todo.png" style="max-width: 100%;"/>
 
 *My Todo list to release the 1.0 Version*
 

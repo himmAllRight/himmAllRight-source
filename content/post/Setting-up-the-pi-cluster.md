@@ -8,14 +8,14 @@ tags   = ["Homelab", "Linux", "Cluster", "Pi", "Devops",]
 
 I have a Raspberry Pi 2, a Raspberry Pi 3, and a Banana Pi. A while ago, I constructed a small tower to house my pi devices. Since then, I have additionally acquired a power source, and some CAT6 cable to connect them all up to a switch. I hope to use the Pis as a mini clustered environment, where I can learn (and play) with some of the "Devops" technologies/techniques out there. This post will briefly explain the initial setup of [my cluster](../../pages/homelab/#cluster).
 
-<!-- more -->
+<!--more-->
 
 # Setting up the OS Images
 Before doing anything with the hardware, I had to setup the pi "hard drives" (micro SD cards), so they could boot. 
 
 ### Ubuntu for Raspberry PI
 
-<img src="../../img/posts/Setting-Up-Pi-Cluster/ubuntu-logo.jpg" style="width: 200px%; float: right; margin: 0px 10px 0px 10px;"/>
+<img src="../../img/posts/Setting-Up-Pi-Cluster/ubuntu-logo.jpg" style="max-width: 50%; height: auto; float: right; margin: 0px 2px 2px 2px;"/>
 
 After mucking around with Rapsbian and Hypriot one Sunday, I decided to just go with a plain Ubuntu image for the Raspberry Pis. I don't have anything against these specific OSes, but I am mostly setting up this cluster to simulate what I would do on a "real" system. For me, that often means using a straight OS like Ubuntu.
 
@@ -39,7 +39,7 @@ sudo dd if=Armbian_5.25_Bananapi_Ubuntu_xenial_next_4.9.7.img  of=/dev/mmcblk0 b
 
 ### Hardware Setup
 
-<img src="../../img/posts/Setting-Up-Pi-Cluster/pi-cluster.png" style="width: 40%; float: right; margin: 0px 10px 0px 10px;"/>
+<img src="../../img/posts/Setting-Up-Pi-Cluster/pi-cluster.png" style="max-width: 40%; float: right; margin: 10px 10px 5px 10px;"/>
 
 After the operating system images have been copied the SD cards, the hardware can be setup. I started by inserting the microSD cards into the PIs, being careful to use the correct card with each device. Unlike the Raspberry PIs, the Bananna PI uses a normal SD card instead of a microSD, so I just left it in the converter card I used to connect it to my computer when imaging.
 

@@ -13,7 +13,7 @@ tags = [
 
 Last week, I was on vacation with my family. While I didn't work a *ton* on personal projects, I was at least able to spend some time on my [TunelBeacon](https://github.com/himmAllRight/TunnelBeacon) project again. I will write a dedicated post about that project down the road when I am further along. Basically, it will be a simple GUI to create reverse ssh tunnels, that family and friends can startup in order grant me temporary access to their computer when they need support. Reverse SSH tunnels are *very* useful and simple to setup, but can be a bit tricky to figure out at first. So, here's a brief and simple guide on how to easily create reverse tunnels.
 ****
-<!-- more -->
+<!--more -->
 
 ### SSH Tunnels
 
@@ -27,18 +27,18 @@ Reverse tunnels are just like normal ssh tunnels except... well... in reverse. T
 
 To make all of this (hopefully) easier to understand, I have drafted up a few diagrams. For the example, lets say I am away and my wife wants me to fix something on her laptop. Unless I have her *properly* configure the router to forward ssh traffic to her laptop, I normally cannot do this. Additionally, she might be at a friends house, office, or other public place where there is no access to the router controls (well, she *shouldn't*). So, her laptop doesn't have a direct public IP address, but our server *does*.
 
-<img alt="Computer behind firewall" src="../../img/posts/simple-reverse-ssh-tunnel/network-diagram.png" width=100%>
+<a href="../../img/posts/simple-reverse-ssh-tunnel/network-diagram.png"><img alt="Computer behind firewall" src="../../img/posts/simple-reverse-ssh-tunnel/network-diagram.png" style="max-width: 100%;"/><a>
 *Two computers (at least one without a direct public IP), both with access to a cloud server with a public IP*
 
 Because my wife can connect to the public cloud server, she can initiate a reverse tunnel from her laptop, with the server. The tunnel directly connects the server to her laptop.
 
-<img alt="Computer behind firewall" src="../../img/posts/simple-reverse-ssh-tunnel/ssh-tunnel.png" width=100%>
+<a href="../../img/posts/simple-reverse-ssh-tunnel/ssh-tunnel.png"><img alt="Computer behind firewall" src="../../img/posts/simple-reverse-ssh-tunnel/ssh-tunnel.png" style="max-width: 100%;"/></a>
 *The laptop computer creates a reverse ssh tunnel to the cloud server.*
 
 On my end, I first ssh to the server from my computer. Once the tunnel is started, I can then ssh again to a specified local port on the server, and it will tunnel me directly to her laptop. This will give me a command prompt as if I was sitting with an open terminal at her computer.
 
 
-<img alt="Computer behind firewall" src="../../img/posts/simple-reverse-ssh-tunnel/connect-through-tunnel.png" width=100%>
+<a href="../../img/posts/simple-reverse-ssh-tunnel/connect-through-tunnel.png"><img alt="Computer behind firewall" src="../../img/posts/simple-reverse-ssh-tunnel/connect-through-tunnel.png" style="max-width: 100%;"/></a>
 *With the reverse tunnel setup, the first computer can ssh to the second via the cloud server and tunnel connection.*
 
 When I am done working, my wife can close the tunnel, and I will no longer be able to access her computer.

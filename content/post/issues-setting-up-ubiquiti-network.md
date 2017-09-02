@@ -15,13 +15,13 @@ learned a lot :). In fact, I am confident that if I had to start over from
 scratch, the process would take me about 10-15 minutes. Just to be sure, I'm
  going to quickly jot down the major pain points I experienced my first time around. 
 
-<!-- more -->
+<!--more-->
 
 ## Trouble Connecting to the EdgeRouter-x for Initial Setup
 <center>
-<img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/wrong-router-connection.png" width="90%">
+<img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/wrong-router-connection.png" style="max-width: 100%;"/>
 </center>
-<div id="caption">During initial setup, I was connecting the router wrong</div>
+*During initial setup, I was connecting the router wrong*
 
 The edgerouter needed to be directly connected to a computer during its initial
 setup, to make the EdgeOS configuration wizard accessible. The
@@ -75,7 +75,7 @@ assigned.
 <img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/ubuntu.png" width="45%">
 <img alt="During initial setup, I was connecting the router wrong" src="../../img/posts/ubiquiti-setup-issues/venomoth.png" width="35%">
 </center>
-<div id="caption">I spun up a new Ubuntu VM (Venomoth) to host the Ubifi controller</div>
+*I spun up a new Ubuntu VM (Venomoth) to host the Ubifi controller*
 
 By this point, I had also learned that the Linux software is more of a server
 service, and not a GUI desktop application. So, I concluded that spinning up a

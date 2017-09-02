@@ -1,19 +1,20 @@
 +++
-title = "Migrating from Solus to Fedora for now"
-date = "2017-07-25"
+title  = "Migrating from Solus to Fedora for now"
+date   = "2017-07-25"
 author = "Ryan Himmelwright"
-tags = ["Linux", "Fedora", "KDE", "Solus",]
+image  = "img/posts/solus-to-fedora/fedora26-upgrade-header.png"
+tags   = ["Linux", "Fedora", "KDE", "Solus",]
 +++
 
 For awhile, I have been debating the idea of switching back to Fedora (from Solus). At least on my [main computer](../../pages/homelab/#alakazam). First, let me state this right up front: I am still *very* satisfied with Solus. I think it is one of the best current Linux distros, and I want to still contribute to the project. However, there are a few reasons why Solus isn't the best fit for my needs *right now*, and I will highlight them below.
 
-<!-- more -->
+<!--more-->
 
 ### Why Switch
 <center>
-<img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/logos.png"  width=85%>
+<img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/logos.png"  style="max-width: 85%;"/>
 </center>
-<div id="caption">The Solus (Left) and Fedora (right) Project Logos</div>
+*The Solus (Left) and Fedora (right) Project Logos*
 
 
 The first phrase stated on the [Solus Project homepage](https://solus-project.com) is "Solus is an operating system that is designed for **home computing**." I find this to be true, and Solus does a great job at it. The Linux community needs a few good, focused, distros. While I have been using Solus for my "*home*" computing, the computing tasks I've focused on recently do not fall into the category of standard *home computing* use. Recently, my main top computing activities and goals are:
@@ -47,9 +48,9 @@ Lastly, I had been eyeing up the Plasma desktop, and wanted to try that out agai
 ### The Switch
 
 <center>
-<img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/fedora25.png"  width=85%>
+<img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/fedora25.png"  style="max-width: 100%;"/>
 </center>
-<div id="caption">Screenfetch on my new Fedora Install</div>
+*Screenfetch on my new Fedora Install*
 
 I eventually (and somewhat sporadically), made the switch to Fedora. I switched
 the week before the 26 release, so I decided to start with 25, and then upgrade
@@ -91,9 +92,9 @@ Fedora 25 to 26. Both updates went very smoothly without any issues:
 
 #### Upgrade to Fedora 26
 <center>
-<img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/fedora26-upgrade.png"  width=85%>
+<a href="../../img/posts/solus-to-fedora/fedora26-upgrade.png"><img alt="Solus and Fedora Logos" src="../../img/posts/solus-to-fedora/fedora26-upgrade.png" style="max-width: 100%;"/></a>
 </center>
-<div id="caption">I upgraded my Fedora 25 Plasma Install to Fedora 26</div>
+*I upgraded my Fedora 25 Plasma Install to Fedora 26*
 
 Other than some odd issues with the GUI tool, the upgrade from 25 to 26 was 
 smooth and uneventful.

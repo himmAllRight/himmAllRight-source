@@ -1,14 +1,15 @@
 +++
-title = "ZFS Snapshot Backups to an External Drive with LUKS"
-date = "2017-04-20"
-author = "Ryan Himmelwright"
-image = "img/header-images/drives1.png"
-tags = ["Homelab", "ZFS", "Linux",]
+title   = "ZFS Snapshot Backups to an External Drive with LUKS"
+date    = "2017-04-20"
+lastmod = "2017-05-12"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/drives1.png"
+tags    = ["Homelab", "ZFS", "Linux",]
 +++
 
 I have been using [ZFS](https://en.wikipedia.org/wiki/ZFS) data pools to store data on [my server](../../pages/homelab/#ninetales) for some time now. As great as that is, I am ashamed to admit that I have not had a *true* backup system in place (raid/mirrors are not backup). I have a backup solution that I have attempted in the past, but ran into an issue and let it drift to the side. That changes now. It's time to revisit my solution, and complete it to the end.
 
-<!-- more -->
+<!--more-->
 
 Currently, my server is configured with two main zfs mirrored pools. The first one, `Data`, is built on 2 x 3TB hard drives, providing 2.72 TB of usable disk space. It contains all of my wife's and my data, organized into sub-category pools (ex: `Data/Music`, `Data/Pictures`, `Data/ryan`, etc). The second, `Backups`, is built on the 2 x 1TB hard drives from my old desktop, creating a 928 GB usable pool . It stores the automatic backups of some of the VMs and LXC containers hosted on the server.
 
@@ -51,7 +52,7 @@ That's it.
 
 ### Taking Base Snapshots
 
-![Taking a ZFS snapshot](../../img/posts/ZFS-Backups-To-LUKS-External/snapshot.gif)
+<img alt="Taking a ZFS snapshot" src="../../img/posts/ZFS-Backups-To-LUKS-External/snapshot.gif" style="max-width: 100%;"/>
 <div id="caption">Taking a ZFS snapshot</div>
 
 With a zpool initialized on the externalDrive, I can now send snapshots to it. To start, I created a base snapshot to send. Starting with the smaller pool, `/Backups`:
@@ -85,7 +86,7 @@ sudo zfs send -R Data@DataBackupBase | sudo zfs recv externalBackup/DataBackup
 
 Taking a snapshot of my data and sending it to an external drive is nice, but I don't want to send all of the data each time I backup. Transferring can take a very long time, especially as my data pools continue to grow. I don't want to sit around all day, listening to hard drives hum as my data transfers.
 
-<center>![no time](../../img/posts/ZFS-Backups-To-LUKS-External/aint-nobody-got-time-for-that.gif)</center>
+<center><img alt="no time" src="../../img/posts/ZFS-Backups-To-LUKS-External/aint-nobody-got-time-for-that.gif" style="max-width: 100%;"/></center>
 
 A useful feature of the zfs `send` and `recv` commands is the ability to send *incremental* snapshots. This means when I want to update my backups, I can just send the *changes* between the two snapshots. This is similar to [source code diffs](https://en.wikipedia.org/wiki/Diff_utility), but for file systems.
 
@@ -122,7 +123,7 @@ I still had the error when sending, so I added the `-F` flag to the `zfs recv` c
 
 ### Safely Closing and Removing the External Drive
 
-![Exporting the zpool](../../img/posts/ZFS-Backups-To-LUKS-External/export-drive.gif)
+<img alt="Exporting the zpool" src="../../img/posts/ZFS-Backups-To-LUKS-External/export-drive.gif" style="max-width: 100%;"/>
 <div id="caption">Exporting the zpool and closing the LUKS device</div>
 
 When the incremental backups finishes transferring, the external drive can be removed. The sequence of steps to do this safely are 1) export the zpool 2) close the LUKS device, and 3) unplug the drive. To export the zpool and close the LUKS device I used the commands:
@@ -154,4 +155,3 @@ That's it. Now the steps detailing taking snapshots and sending incremental back
 I am happy with this solution for now. It allows me to leverage ZFS a bit more, and become more familiar with it. The biggest issue I will likely face is space on the external drive. Luckily, ZFS makes it easy to delete old snapshots. In the future, I might also consider using an online backup solution like [Tarsnap](https://www.tarsnap.com/), but I need to find a cost-effective one first. I'll be sure to update as I continue to expand my backup solution.
 
 
-<div id="post-meta" style="float: right;">Post Updated 05/12/2017</a>
