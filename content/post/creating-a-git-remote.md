@@ -2,6 +2,7 @@
 title = "Creating a git Repo Remote"
 date = "2017-07-19"
 author = "Ryan Himmelwright"
+image  = "img/header-images/boston2.jpg"
 tags = ["git", "Linux", "dev",]
 +++
 
@@ -16,7 +17,7 @@ is actually fairly simple. For such a simple process, all the guides I saw
 online went way above and beyond what I needed. So, here are the *two* steps I
 did to migrate my repos.
 
-<!-- more -->
+<!--more-->
 
 ### SSH Keys
 The *pre* (and somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt for the password of the repo's host user . When using a git service (ex: Github or Gitlab), this is usually unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you 
@@ -25,9 +26,9 @@ do not know how to configure ssh keys, I included a small ssh key how-to [here](
 ### Creating Server Repo
 
 <center>
-<img src="../../img/posts/creating-remote-git-repo/init-bare-repo.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/init-bare-repo.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/init-bare-repo.png'"> 
+<img src="../../img/posts/creating-remote-git-repo/init-bare-repo.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/init-bare-repo.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/init-bare-repo.png'" style="max-width: 100%;"/>
 </center>
-<div id="caption">Creating the remote git repo</div>
+*Creating the remote git repo*
 
 Once ssh authentication is configured, ssh into the remote server that will host the git repository. Creating the remote repo is a simple process. First, make a directory for the repo (the normal convention is to use a `.git` ending: `REPO-NAME.git`). Next, jump into the created directory (`cd`) and run the command `git init --bare`.
 
@@ -44,9 +45,9 @@ This will initialize the repository inside that directory. The `git init` comman
 ### Cloning Repo
 
 <center>
-<img src="../../img/posts/creating-remote-git-repo/clone-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.png'"> 
+<img src="../../img/posts/creating-remote-git-repo/clone-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/clone-new-remote.png'" style="max-width: 100%;"/>
 </center>
-<div id="caption">Clone the Remote to a Local Dir</div>
+*Clone the Remote to a Local Dir*
 
 If the remote git repository is a totally new repository, it can be cloned down to a working directory on a developer machine fairly easily:
 
@@ -59,9 +60,9 @@ git clone user@hostname:REPONAME.git
 
 
 <center>
-<img src="../../img/posts/creating-remote-git-repo/point-to-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.png'"> 
+<img src="../../img/posts/creating-remote-git-repo/point-to-new-remote.png" name="bare init" onmouseover="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.gif'" onmouseout="this.src='../../img/posts/creating-remote-git-repo/point-to-new-remote.png'" style="max-width: 100%;"/>
 </center>
-<div id="caption">Pointing a working repo to the new remote</div>
+*Pointing a working repo to the new remote*
 
 However, I already had an existing working repository that I wanted to sync with the new remote shared repo. With the remote repo initialized, I wanted to point my existing git repository on the local machine to it. To do this, enter the directory of the git repository, and edit the config the (`.git/config`). To redirect the repo to point to the new remote, edit the `url` line to the location of the repo:
 

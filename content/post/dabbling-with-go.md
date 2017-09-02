@@ -1,13 +1,14 @@
 +++
-title = "Dabbling with GO"
-date = "2017-07-30"
+title  = "Dabbling with GO"
+date   = "2017-07-30"
 author = "Ryan Himmelwright"
-tags = ["Dev", "GO", "Programming",]
+image  = "img/header-images/portland1.jpg"
+tags   = ["Dev", "GO", "Programming",]
 +++
 
 After spending most of this month's dedicated learning time working on [system](http://ryan.himmelwright.net/posts/solus-to-fedora/), [server](http://ryan.himmelwright.net/posts/creating-a-git-remote/), and [network](http://ryan.himmelwright.net/posts/issues-setting-up-ubiquiti-network/) activities,  I have been itching to start some home programming again. To motivate myself, I even considered dabbling with a new programming language... and with very little internal debate, I decided to just [Gopher](https://golang.org) it (I'm so sorry).
 
-<!-- more -->
+<!--more-->
 
 ## What is GO?
 <img src="../../img/posts/dabbling-with-go/gopher.png" style="width: 30%; float: right; margin: 0px 10px 0px 10px;"/>

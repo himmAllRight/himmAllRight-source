@@ -13,7 +13,7 @@ setup our old router as a *temporary* fix. It was terrible. So, I began
 researching how I should upgrade our network. This time around, I am doing this
 *correctly*.
 
-<!-- more -->
+<!--more-->
 
 <center>
 <img src="../../img/posts/upgrading-to-ubiquiti-edgerouter/linksys-WRT1900.png"
