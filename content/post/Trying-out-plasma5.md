@@ -1,8 +1,9 @@
 +++
-title = "Trying Out the Plasma 5 Desktop Environment"
-date = "2016-06-26"
+title  = "Trying Out the Plasma 5 Desktop Environment"
+date   = "2016-06-26"
 author = "Ryan Himmelwright"
-tags = ["Linux", "Arch Linux", "KDE",]
+tags   = ["Linux", "Arch Linux", "KDE",]
+image  = "img/posts/plasma-desktop/settings-header.jpg"
 +++
 
 After watching the continued development of the Plasma 5 desktop
@@ -14,7 +15,7 @@ environment (more on that below). However, with that said... I am still
 using the plasma desktop on my main computer (months later, and
 haven't aborted yet**...). Here are my thoughts.
 
-<!-- more -->
+<!--more-->
 
 ### My History with KDE/Plasma 
 
@@ -35,14 +36,14 @@ personal computers for several months. Here are my thoughts.
   child's toy. Even the default theme is _very_ appealing. Also, it
   has *dark themes*, which I am always a fan of.
 
-<img alt="Default KDE Plasma 5.6 Desktop" src="../../img/posts/plasma-desktop/default-plasma.jpg" width=100%>
+<a href="../../img/posts/plasma-desktop/default-plasma.jpg"><img alt="Default KDE Plasma 5.6 Desktop" src="../../img/posts/plasma-desktop/default-plasma.jpg" style="max-width: 100%;"/></a>
 
 * **I Love the customization.** I love the level of customization
   the plasma desktop allows. I can set transparency, add/remove
   panels or widgets, set custom keybindings (very important to me),
   and a bunch of other operations very easily.
 
-<img alt="Plasma Settings" src="../../img/posts/plasma-desktop/settings.jpg" width=100%>
+<a href="../../img/posts/plasma-desktop/settings.jpg"><img alt="Plasma Settings" src="../../img/posts/plasma-desktop/settings.jpg" style="max-width: 100%;"/></a>
 
 * **Lets me hide window bars** One customization I love is the ability
   to hide the window bars. I am not a fan of window bars, because I
@@ -65,13 +66,13 @@ personal computers for several months. Here are my thoughts.
   using KDE. This was definitely contributor to why I liked it much
   more this time around.
   
-<img alt="Plasma Settings" src="../../img/posts/plasma-desktop/krunner.png" width=100%>
+<a href="../../img/posts/plasma-desktop/krunner.png"><img alt="Plasma Settings" src="../../img/posts/plasma-desktop/krunner.png" style="max-width: 100%;"/></a>
   
 * **The ability to use old-school animations is fun** There is not much to say
   here. While not very practical, sometimes spinning a desktop cube is
   just straight up _fun_.
   
-<img alt="Desktop Cube" src="../../img/posts/plasma-desktop/cube.png" width=100%>
+<a href="../../img/posts/plasma-desktop/cube.png"><img alt="Desktop Cube" src="../../img/posts/plasma-desktop/cube.png" style="max-width: 100%;"/></a>
   
 * **Fast. Even for a full DE**
 
@@ -95,7 +96,7 @@ personal computers for several months. Here are my thoughts.
   monitors, or even a permanent desktop setup, I would be
   fine. However, that is not my use case.
   
-<img alt="Plasma Settings" src="../../img/posts/plasma-desktop/wtf-multi-monitor.png" width=100%>
+<a href="../../img/posts/plasma-desktop/wtf-multi-monitor.png"><img alt="Plasma Settings" src="../../img/posts/plasma-desktop/wtf-multi-monitor.png" style="max-width: 100%;"/></a>
   
 * **Randomly just stops working** Sometimes, KDE applications just
   crash and I can't seem to get them back. Widgets seemed to beak

@@ -1,15 +1,16 @@
 +++
-title =  "Trying out snapd on Arch Linux"
-date = "2016-07-17"
+title  =  "Trying out snapd on Arch Linux"
+date   = "2016-07-17"
 author = "Ryan Himmelwright"
-tags = ["Linux", "Arch Linux", "snapd",]
+tags   = ["Linux", "Arch Linux", "snapd",]
+image  = "/img/header-images/boston1.jpg"
 +++
 
 The past few weeks I have been listening to all of the buzz about
 Ubuntu "snaps", but I just recently decided to try this new technology
 out.
 
-<!-- more -->
+<!--more-->
 
 ### Snapd Install and Setup
 
@@ -49,7 +50,7 @@ First, I wanted to find a snap package. This can be done using the
 
 _(where **package-name** is the name of the package to search)_
 
-<img alt= "Finding Snaps" src="../../img/posts/arch-snaps/snap-find.png" width=100%>
+<img alt= "Finding Snaps" src="../../img/posts/arch-snaps/snap-find.png" style="max-width: 100%;"/>
 
 Just like in any standard package manager search, the potential
 matches were returned, along with a version number, the developer
@@ -60,7 +61,7 @@ commands and a description for each one, just type:
 
 `sudo snap help`
 
-<img alt="Snap Help" src="../../img/posts/arch-snaps/snap-help.png" width= 100%>
+<img alt="Snap Help" src="../../img/posts/arch-snaps/snap-help.png" style="max-width: 100%;"/>
 
 ### Testing a snap 
 
@@ -69,7 +70,7 @@ snap to see how well it works. I decided to see if there was a
 Telegram snap (I heard there was, so it was a good bet). I ran
 `sudo snap find telegram`, and a list of my options appeared.
 
-<img alt="Snap telegram" src="../../img/posts/arch-snaps/snap-telegram-install.png" width=100%>
+<img alt="Snap telegram" src="../../img/posts/arch-snaps/snap-telegram-install.png" style="max-width: 100%;"/>
 
 I choose the last one, and installed it using the command 
 `sudo snap install telegram-serguisens`. A progress bar tracked the download of
@@ -79,7 +80,7 @@ telegram snap, and installed it on my _arch linux_ box, without any issue.
 
 ### My Only Issue 
 
-<img alt="Snap Help" src="../../img/posts/arch-snaps/snap-telegram-menu.png" width=100%>
+<img alt="Snap Help" src="../../img/posts/arch-snaps/snap-telegram-menu.png" style="max-width: 100%;"/>
 
 Well... _almost_ without any issues. The one problem I did have was
 after installing the telegram snap, the executable wasn't in my path so
@@ -91,7 +92,7 @@ actual snap, and not another Telegram install.
 
 ### Thoughts
 
-<img alt="Snap Help" src="../../img/posts/arch-snaps/snap-telegram.png" width=100%>
+<img alt="Snap Help" src="../../img/posts/arch-snaps/snap-telegram.png" style="max-width: 100%;"/>
 
 While the fact that snaps are easy to package and install for
 developers and users alike, I think my favorite feature was something

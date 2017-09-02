@@ -1,8 +1,9 @@
 +++
-title = "Linux from Scratch - Final Preparation Steps"
-date = "2017-03-21"
+title  = "Linux from Scratch - Final Preparation Steps"
+date   = "2017-03-21"
 author = "Ryan Himmelwright"
-tags = ["Linux", "LFS",]
+tags   = ["Linux", "LFS",]
+image  = "img/header-images/laptop-screen.jpg"
 +++
 
 Now that the *repeated* setup steps have been defined in [my previous LFS post](http://ryan.himmelwright.net/posts/LFS-Repeated-Setup-Steps/), there are a *few* more preparation steps to complete in order to start building the LFS system. I promise... we will start compiling soon. If all goes well, this should be the last preparation post.
@@ -13,7 +14,7 @@ Now that the *repeated* setup steps have been defined in [my previous LFS post](
 When it comes down to it, Linux from scratch is just a bunch of packages, and the Linux kernel, all compiled from source and linked together. To build all of this, we need to download the source code... for *all* of those packages. Luckily, LFS keeps a list of what is needed, and downloading it is trivial. *(Note: These commands should be run as <b>root</b>)*
 
 <center>
-![Making the sources directory](../../img/posts/LFS-Final-Preparation-Steps/make-sources-dir.png)
+<img alt="Making the sources directory" src="../../img/posts/LFS-Final-Preparation-Steps/make-sources-dir.png" style="max-width: 100%;"/>
 </center>
 
 First, lets make a new directory to put all of the source code. To make the directory:
@@ -30,7 +31,7 @@ chmod -v a+wt $LFS/sources
 
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png'"> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png'" style="max-width: 100%;"/> 
 </center>
 
 To download all of the source packages at once, download [the LFS wget list](http://www.linuxfromscratch.org/lfs/view/stable-systemd/wget-list):
@@ -50,7 +51,7 @@ It should take a few minutes to download everything (or longer if on a poor conn
 
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png'"> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png'" style="max-width: 100%;"/> 
 </center>
 
 
@@ -135,7 +136,7 @@ Now with the *lfs* user created, we need to setup a proper working environment f
 ##### Creating .bash_profile
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png'"> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png'" style="max-width: 100%;"/> 
 </center>
 
 When logging in as the *lfs* user, the shell first reads the `/etc/profile` of the host, followed by the `.bash_profile`. So, lets start with the `.bash_profile`. Create/open `.bash_profile` and add the following line to it:
@@ -149,7 +150,7 @@ This line replaces the running shell with a new one that contains a completely e
 ##### Creating .bashrc
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png'"> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png'" style="max-width: 100%;"/> 
 </center>
 
 The new instance of this the shell is a non-login shell, so it does not read the `/etc/profile` or `.bash_profile` files. However, it does read the `.bashrc, so lets go ahead and create that. Open `~/.bashrc` and add the following lines:

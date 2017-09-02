@@ -1,19 +1,20 @@
 +++
-title = "Linux from Scratch - Repeated Setup Steps"
-date = "2017-03-13"
+title  = "Linux from Scratch - Repeated Setup Steps"
+date   = "2017-03-13"
 author = "Ryan Himmelwright"
-tags = ["Linux", "LFS",]
+tags   = ["Linux", "LFS",]
+image  = "img/header-images/laptop-screen.jpg"
 +++
 
 During the Linux From Scratch process, there may be times when the build environment (computer, VM, chroot, whatever) must be restarted. If so, there are a few steps from the setup phase that have to be re-initialized. This post maps out those steps.
 
-<!-- more -->
+<!--more-->
 
 
 ### Setting The $LFS Variable
 After setting up the virtual disk for my LFS build, I needed to define where I wanted to eventually mount it. This location is important, because it is the path that the $LFS variable is set to. The $LFS variable is used throughout the book, to easily point to where the LFS system is being built.
 
-<center>[![Setting the LFS variable](../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png)](../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png)</center>
+<center><img alt="Setting the LFS variable" src="../../img/posts/LFS-Repeated-Setup-Steps/Setting-LFS-var.png" style="max-width: 100%;"/></center>
 
 To set the #LFS variable, I ran the following command: *
 
@@ -44,7 +45,7 @@ After creating the directories, I mounted them with the command:
 If multiple partitions are being used for the LFS build (*such as a separate `/home` partition*), they should also be mounted at this time.
 
 <center>
-<img src="../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Repeated-Setup-Steps/mount-check.gif'" onmouseout="this.src='../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png'")> 
+<img src="../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Repeated-Setup-Steps/mount-check.gif'" onmouseout="this.src='../../img/posts/LFS-Repeated-Setup-Steps/mounting-play.png'" style="max-width: 100%;"/> 
 </center>
 
 After mounting my partition, the LFS book recommended that I check that the partition was not mounted with restrictive permissions. To do this, I ran the `mount` command again, but this time without any parameters. From the output, I was able to see and confirm that the partition was not mounted with restrictive permissions, such as `nosuid` or `nodev`. If either of these options are set, the partition should be remounted.

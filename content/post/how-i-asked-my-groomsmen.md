@@ -26,19 +26,19 @@ At that moment, I started to figure out how I could make it work. The results of
 
 I first had to find a way to give the intended groomsmen a link to get any code that I wrote. So, Rebecca and I designed the tri-fold letter pictured below (Sorry for the photo quality).
 
-![The front of the letter](../../img/posts/how-i-asked-my-groomsmen/ask-message1.jpg)
+<img alt="The front of the letter" src="../../img/posts/how-i-asked-my-groomsmen/ask-message1.jpg" style="max-width: 100%;"/>
 
 *Figure 1: The Front of Letter*
 
 The front of the envelope had a simple black boarder and said "She said that I had to make it official."
 
-![The first flap of the letter](../../img/posts/how-i-asked-my-groomsmen/ask-message2.jpg)
+<img alt="The first flap of the letter" src="../../img/posts/how-i-asked-my-groomsmen/ask-message2.jpg" style="max-width: 100%;"/>
 
 *Figure 2: The First Flap of the Letter*
 
 When the reader flipped up that flap, another message read "So we're doing this my way".
 
-![The QR code posted inside the letter](../../img/posts/how-i-asked-my-groomsmen/ask-message-qr.jpg)
+<img alt="The QR code posted inside the letter" src="../../img/posts/how-i-asked-my-groomsmen/ask-message-qr.jpg" style="max-width: 100%;"/>
 
 *Figure 3: The QR Code posted on the Inside of the Letter*
 
