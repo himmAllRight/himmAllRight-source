@@ -11,9 +11,9 @@ So in my [last post](../website-transition-to-hugo/), I stated that I should be 
  
 <!--more-->
 
-<img alt="Hugo Logo" src="../../img/posts/website-switched-to-hugo/hugo-logo.png" style="width: 40%; float: right; margin: 0px 15px 5px 5px;"/>
-
 ### Create Single Pages (About/Homelab)
+
+<img alt="Hugo Logo" src="../../img/posts/website-switched-to-hugo/hugo-logo.png" style="width: 40%; float: right; margin: 0px 15px 5px 5px;"/>
 
 This wasn't so hard to do once I got it setup, but it took a while for me to realize how to actually do that. My confusion came from the fact that I didn't realize I needed to setup a layout for the pages.
 
