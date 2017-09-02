@@ -58,6 +58,7 @@ git clone git@github.com:humboldtux/startbootstrap-clean-blog.git
 
 Before I started ripping into the theme too much, I copied the theme directory to make my own version, and set the `theme` line in my `config.toml` to reflect the change. I also went through all the lines of the example `config.toml` and  changed them accordingly.
 
+<a name="summary-setup"></a>
 With the theme setup, and the configuration edited, I started making some minor tweak to the site. The main tweak I made was to add the `Summary` contents to the post list on the home page. I currently use this feature in Cryogen, so all of my posts are written to support it. Summaries are baked into hugo, but I needed to edit the theme to include it on the posts page. To achieve this, I edited the `/layouts/post/summary.html` file of the theme slightly:
 
 original:
@@ -113,6 +114,8 @@ Cryogen, written in [clojure](https://clojure.org/), uses a clojure map for the 
 
 After importing the markdown files for the posts, I needed to add all the images the posts contain. Again, this took a tiny bit of research to figure out the file structure, but I quickly learned that anything in the `/static/` directory gets copied to the site's root directory when the site is compiled. So, I was able to copy my cryogen `/img/` folder directly to `/static/img/` in hugo, and all my image paths worked out-of-the-box!
 
+
+<a name="image-size"></a>
 Unfortunately, I immediately noticed that some images in the posts were massive, and not constrained to the content width. I looked for a solution, and tried editing the `css`, but I eventually just started to convert the markdown syntax images, to use normal html `<img>` tags, with a `width=100%` parameter. Ultimately, this gives me a bit more power with how I set images anyway.
 
 #### Made a bunch of header images
