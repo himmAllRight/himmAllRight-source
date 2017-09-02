@@ -1,8 +1,9 @@
 +++
-title = "Linux from Scratch - SBUs and Binutils"
-date = "2017-04-04"
+title  = "Linux from Scratch - SBUs and Binutils"
+date   = "2017-04-04"
 author = "Ryan Himmelwright"
-tags = ["Linux", "LFS",]
+tags   = ["Linux", "LFS",]
+image  = "img/header-images/laptop-screen.jpg"
 +++
 
 Well, after all of the preparation, we are ready to start compiling packages. This post cover compiling all the packages, but it will detail the first build of [Binutils](https://www.gnu.org/software/binutils/), which is arguably the most important package to compile. Why is Binutils so crucial? It determines the SBU time for your build system. What's an SBU? Read on to find out!
@@ -11,7 +12,7 @@ Well, after all of the preparation, we are ready to start compiling packages. Th
 
 ### SBUs
 
-![SBU Table](../../img/posts/LFS-SBUs-Binutils/SBU-table.png)
+<img alt="SBU Table" src="../../img/posts/LFS-SBUs-Binutils/SBU-table.png" style="max-width: 100%;"/>
 
 *A table of package SBUs and their predicted build time*
 
@@ -26,7 +27,7 @@ For example, systems with multiple cores can run "parallel make" using the `-j` 
 
 ### My Encountered Issues with tar...
 
-![Tar issues](../../img/posts/LFS-SBUs-Binutils/tar-error.png)
+<img alt="Tar issues" src="../../img/posts/LFS-SBUs-Binutils/tar-error.png" style="max-width: 100%;"/>
  
 The first time I attempted to make binutils, I encountered a few errors. The gist of it was that I was not able untar the package correctly, at least from the *lfs* user. Everything worked fine from the *root* or even *ryan* user accounts, but running tar on *lfs* returned the following error:
 
@@ -53,7 +54,7 @@ These commands remove and reset the `tools` symlinks. I then made sure to re-add
 ### Extracting BinUtils
 
 <center>
-<img src="../../img/posts/LFS-SBUs-Binutils/tar-binutils.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.png'"> 
+<img src="../../img/posts/LFS-SBUs-Binutils/tar-binutils.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/tar-binutils.png'" style="max-width: 100%;"/>
 </center>
 
 It is important that Binutils is built first in the process. This is mostly because when Glibc and GCC are built, they perform various tests on the linker and assembler to figure out which of their own features to enable.
@@ -76,7 +77,7 @@ cd build
 ### Making & Executing a Build Script
 
 <center>
-<img src="../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png'"> 
+<img src="../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png'" style="max-width: 100%;"/> 
 </center>
 
 Now it is time to build. Normally, this would best be done by sequentially performing a series of *configure*, *make*, and *make install* commands, but for the first binutils compilation, we want to get an accurate reading on how long it takes (to determine our SBU time). To accomplish this easily, I put all of the commands into a bash script. This way, I could execute the script, and easily time the whole process using the `time` utility. To create the script, I wrote the following commands into a file (`build-binutils.sh`):
@@ -130,7 +131,7 @@ Once I had my standard single-thread SBU value, I wanted to do a run with the `-
 ### Checking the Build
 
 <center>
-<img src="../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png'"> 
+<img src="../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png'" style="max-width: 100%;"/> 
 </center>
 
 After the build is complete, it is a good idea to run the tests, *especially* for binutils. In this case, use the make command:

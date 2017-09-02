@@ -84,10 +84,10 @@ The main "*Small Tweak*" that I wanted to figure out was setting up navigation l
 
 <!-- Next Post/ Previous Post Links -->
 {{ with .NextInSection }}
-    <a href="{{ .Permalink }}" style="float: left;">{{ .Title }}</a>
+    <a href="{{ .Permalink }}" style="float: left; max-width: 40%;">{{ .Title }}</a>
 {{ end }}
 {{ with .PrevInSection }}
-    <a href="{{ .Permalink }}" style="float: right;">{{ .Title }}</a>
+    <a href="{{ .Permalink }}" style="float: right; max-width: 40%;">{{ .Title }}</a>
 {{ end }}
 
 ```

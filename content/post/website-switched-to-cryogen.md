@@ -1,8 +1,8 @@
 +++
-title = "Using Cryogen for Website"
-date = "2016-04-13"
+title  = "Using Cryogen for Website"
+date   = "2016-04-13"
 author = "Ryan Himmelwright"
-tags = ["Website", "Cryogen", "Clojure",]
+tags   = ["Website", "Cryogen", "Clojure",]
 +++
 
 Ever since resurrecting my personal website, I have experimented with several
@@ -14,13 +14,13 @@ started using the [clojure](http://clojure.org/) programming language, I have co
 [cryogen](http://cryogenweb.org/). As you may have already guessed, this site is now
 being generated using cryogen.
 
-<!-- more -->
+<!--more-->
 
 
 ## Emacs/org-mode Solutions
 
-<img alt="emacs logo" src="../../img/posts/using-cryogen-for-website/Emacs-icon.png" width=30%>
-<img alt="org-mode unicorn" src="../../img/posts/using-cryogen-for-website/org-mode-unicorn.png" width=30%>
+<img alt="emacs logo" src="../../img/posts/using-cryogen-for-website/Emacs-icon.png" style="max-width: 40%;"/>
+<img alt="org-mode unicorn" src="../../img/posts/using-cryogen-for-website/org-mode-unicorn.png" style="max-width: 40%;"/>
 
 About a year ago, obsession with
 [emacs](https://www.gnu.org/software/emacs/) (and more importantly,
@@ -52,7 +52,7 @@ because I had to setup emacs, install the dependencies, and get a _.emacs_ file 
 
 ## Jekyll
 
-<img alt= "jekyll logo" src="../../img/posts/using-cryogen-for-website/jekyll.png" width=50%>
+<img alt= "jekyll logo" src="../../img/posts/using-cryogen-for-website/jekyll.png" style="max-width: 100%;"/>
 
 My first experience with [Jekyll](http://jekyllrb.com/) was about two
 years ago, right after I graduated college. It was the first true
@@ -87,7 +87,7 @@ clojure projects, I found [cryogen](http://cryogenweb.org/).
 
 ## Cryogen
 
-<img alt="Cryogen logo" src="../../img/posts/using-cryogen-for-website/cryogen.png" width=100%>
+<img alt="Cryogen logo" src="../../img/posts/using-cryogen-for-website/cryogen.png" style="max-width: 100%;"/>
 
 [Cryogen](http://cryogenweb.org/) is a static website generator
 written in [Clojure](https://clojure.org/).  If you already have

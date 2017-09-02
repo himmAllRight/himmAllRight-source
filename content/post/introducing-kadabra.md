@@ -13,10 +13,12 @@ battery life. Now that I am going to libraries and other locations to
 work on personal and open source projects, I really needed a better
 mobile pc setup. 
 
-<!-- more -->
+<!--more-->
+
 
 ### Other Considerations 
-<img alt="Asus x201e" src="../../img/posts/introducing-kadabra/asus_x201e.png" width=100%>
+
+<img alt="Asus x201e" src="../../img/posts/introducing-kadabra/asus_x201e.png" width=55% style="float: right; margin: 0px 15px 5px 5px;"/>
 
 I had been keeping an eye open for a new mobile computer for well over a
 year to find out what is out there. I mostly looked sub $300 ubuntu laptops like the Asus 11" 
@@ -116,7 +118,7 @@ a second drive several times now to try out different distros on the
   headphones 99% of the time. Still, it would be nice if when I occasionally share a video with someone they could actually hear it.
 
 ### Conclusions
-<img alt="Kadabra" src="../../img/posts/introducing-kadabra/kadabra.jpg" width=100%>
+<img alt="Kadabra" src="../../img/posts/introducing-kadabra/kadabra.jpg" style="max-width: 100%;"/>
 I have had Kadabra for several months now and still love it. I use it at work daily (to listen to
 music, podcasts, and to have a _linux_ computer available to me at all times in a Windows office). It is a perfect mix of being portable while still having enough power to accomplish whatever I want to work on. I still prefer to vote with my wallet by purchasing from a vendors like [System76](http://www.system76.com) when possible, but buying used business hardware, such as thinkpads, is a very affordable alternative. I have no regrets buying my used x230. It is infinitely better than my other options at that price point.
 
