@@ -12,7 +12,7 @@
                     <h1>{{ .Title }}</h1>
                     <h2 class="subheading">{{ .Description }}</h2>
                     <span class="meta">
-                        {{ partial "meta.html" .}}
+                        Last Updated by {{ .Site.Params.Author }} on {{ dateFormat .Site.Params.Dateform .Date }}.
                     </span>
                 </div>
             </div>
