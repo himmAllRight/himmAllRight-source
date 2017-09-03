@@ -1,6 +1,6 @@
 ---
 title: About
-date: 2017-08-28T09:51:18-04:00
+date: 2017-09-03T09:51:18-04:00
 type: about
 menu : 
   main:
@@ -9,7 +9,7 @@ layout: about-page
 image: img/header-images/park-books.jpg
 ---
 
-<img src="../../img/avatar2.jpg" style="width: 40%; float: left; margin: 10px 10px 10px 10px;"/>
+<img src="../../img/squirtle-shirt.jpg" style="width: 40%; float: left; margin: 10px 10px 10px 10px;"/>
 
 I am a 25 year-old back-end software developer working in Walpole MA, at a company that primarily develops in [Allegro Common Lisp](http://franz.com/products/allegro-common-lisp/). I spend most of my days writing LISP code, so naturally, I am also a big fan of [emacs](https://www.gnu.org/software/emacs/) and spend my working hours with it full screen (which also helps me forget I'm in Windows). 
 
