@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2017-08-30T05:44:01-04:00
+date: 2017-09-12
 type: homelab
 layout: homelab-page
 menu: 
@@ -45,7 +45,7 @@ Solus
 ##### Periphery
 ```
 2 x 23.6" ASUS 1920x1080 Monitors
-Happy Hacking Keyboard Lite 2
+Happy Hacking Keyboard Pro2 (not pictured)
 Audioengine A2+ Speakers & Stands
 Bose AE2 Headphones
 Logitech HD Pro Webcam c920 Widescreen
