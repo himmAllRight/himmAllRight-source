@@ -9,7 +9,7 @@ layout: about-page
 image: img/header-images/park-books.jpg
 ---
 
-<img src="../../img/squirtle-shirt.jpg" style="width: 40%; float: left; margin: 10px 10px 10px 10px;"/>
+<img src="../../img/notch-avatar.jpg" style="width: 45%; float: left; margin: 10px 10px 10px 10px;"/>
 
 I am a 26 year-old software developer working at a company in Walpole MA, that heavily utilizes [Allegro Common Lisp](http://franz.com/products/allegro-common-lisp/) for our applications. I primarily focus on our back-end build and deployment infrastructure, but as with any small company, I wear many hats and jump around assisting wherever I am needed.
 
