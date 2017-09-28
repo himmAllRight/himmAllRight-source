@@ -3,7 +3,7 @@ title  = "New Happy Hacking Keyboard Pro 2"
 date   = "2017-09-28"
 author = "Ryan Himmelwright"
 image  = "img/header-images/hhkb-wood.jpg"
-tags   = ["Hardware", "Homelab", "HHKB",]
+tags   = ["Hardware", "Keyboards", "HHKB",]
 draft  = true
 +++
 
