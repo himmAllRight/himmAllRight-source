@@ -22,6 +22,7 @@ Like many, I eventually landed at the [Vortex Pok3r](https://deskthority.net/wik
 
 While I was waiting for a Pok3r drop... something interesting caught my eye on Massdrop... the [Plack keyboard](https://www.massdrop.com/buy/planck-mechanical-keyboard) dropped... The planck is a keyboard kit that you solder together to create a programmable, *ortholinear*, 40% keyboard. When I say *programmable*, I don't just mean you can bind keys. The Planck is fully open and the firmware C code is available on Github. So, you can actually customize and hack together the firmware, which was very appealing to me. So I joined the drop.
 
+After I joined the drop, I finally got a soldering kit so that I could construct the keyboard once it finally shipped. However, the planck drop had *several* delays. However, as previously stated I didn't mind too much, as I was okay to wait. 
 
 ## Deciding on the HHKB Pro
 
