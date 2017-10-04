@@ -22,12 +22,17 @@ Like many, I eventually landed at the [Vortex Pok3r](https://deskthority.net/wik
 
 While I was waiting for a Pok3r drop... something interesting caught my eye on Massdrop... the [Plack keyboard](https://www.massdrop.com/buy/planck-mechanical-keyboard) dropped... The planck is a keyboard kit that you solder together to create a programmable, *ortholinear*, 40% keyboard. When I say *programmable*, I don't just mean you can bind keys. The Planck is fully open and the firmware C code is available on Github. So, you can actually customize and hack together the firmware, which was very appealing to me. So I joined the drop.
 
-After I joined the drop, I finally got a soldering kit so that I could construct the keyboard once it finally shipped. However, the planck drop had *several* delays. However, as previously stated I didn't mind too much, as I was okay to wait. 
+After I joined the drop, I purchased a soldering kit so that I could construct the keyboard once it finally shipped. However, the planck drop had *several* delays, but as I previously stated, I didn't mind too much and was willing to wait. The planck got delayed *so* much, that they eventually allowed people to cancel their order and recieve a refund. I thought the order cancelation was something you *opted in* to do, but it was actually an *opt out* situation... so my lack of response had my order cancled, pre-maturely ending my planck experience.
 
 ## Deciding on the HHKB Pro
 
+With my planck order cancelled, and a refund imminent, I started to look at other options again. The main contender was still the Pok3r. I started researching it again and learning about how I could program the layers to have a layout I would like... and eventually realized I just kept re-creating the infamous HHKB layout. 
+
+So I started to consider the HHKB again. My main reasons for not getting it origonally was that it is a good bit more expensive than the majority of mechanical keyboards on the market. However, after waiting months for the planck, and noticing I kept comparing everything to the HHKB, I realized I would eventually end up with an HHKB anyway, and decided to just go for it now. Decision made.
+
 ## Getting the HHKB
 
+Once I decided on the HHKB, and obtained approval from my wife ( ;) ), I purchased it from Amazon. The one 
 
 ## What I like
 
