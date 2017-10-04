@@ -32,19 +32,21 @@ So I started to consider the HHKB again. My main reasons for not getting it orig
 
 ## Getting the HHKB
 
-Once I decided on the HHKB, and obtained approval from my wife ( ;) ), I purchased it from Amazon. The one 
+Once I decided on the HHKB, and obtained approval from my wife ( ;) ), I purchased it from Amazon. The one thing I did contemplate about was which color to get. I didn't know if I wanted to get the black or white model. I knew I wanted printed keycaps, and that made the white board very appealing. The printed keys on it look *so* nice. Eventually, I decided on the dark gray because it matches everything else I own, whereas the white board would drastically stick out, which may not be idea if I ever *really* care about constructing a nice setup. 
+
+I placed the order and within a few days, it was on my doorstep (well, the neighbor's). 
 
 ## What I like
 
-- Layout
-- The Switches
-- PBT keycaps
-- ... Can I say sound?
+- **Layout** -
+- **The Switches** -
+- **PBT keycaps** -
+- **... Can I say sound?** -
 
 ## What I don't like
 
-- Cost
-- Transporting it (related to cost)
-- "Mac" mode / Delete "fix"
+- **Cost** -
+- **Transporting it (related to cost)** -
+- **"Mac" mode / Delete "fix"** -
 
 ## Conclusion
