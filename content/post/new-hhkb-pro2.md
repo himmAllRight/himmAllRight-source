@@ -45,10 +45,15 @@ As already mentioned, I love they HHKB layout. It was a bit tricky to get accust
 
 I have learned to enjoy all the little HHKB layout differences including the delete by default BS, with the `~` key above it, and the `ESC` key next to `1`. And last but not least, **the CTRL in the CAPS location** *(with CAPs still available as `fn` + `Tab`)*. I honestly think this should be the standard keyboard layout.
  
+#### PBT keycaps
+
+I didn't expect the PBT key-caps to be such a big deal, but I absolutely love them. I could from images that that they would *look* better (especially the white HHKB. I almost chose that design *because* of how sharp the keys look), but I didn't anticipate how great they would feel. They are solid, but with a soft touch, and are a *much* better improvement over every keyboard I have previously owned/used.
+
 #### The Switches
 
 
-#### PBT keycaps
+
+
 #### ... Can I say sound?
 
 ## What I don't like
