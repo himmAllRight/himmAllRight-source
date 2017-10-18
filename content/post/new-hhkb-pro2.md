@@ -38,15 +38,26 @@ I placed the order and within a few days, it was on my doorstep (well, the neigh
 
 ## What I like
 
-- **Layout** -
-- **The Switches** -
-- **PBT keycaps** -
-- **... Can I say sound?** -
+
+#### Layout
+
+As already mentioned, I love they HHKB layout. It was a bit tricky to get accustomed to at first, but that was *several years* ago at this point. The HKKB Pro does have a few difference in layout when compared to the lite version (the pro does not have a bottom left `fn` key, or any dedicated arrow keys). However, I had prepared myself for this change over the last few years by only using the right `fn` key and the `fn` arrow keys. The hardest thing to adjust to was the slightly different sized keys (due to the missing `fn` key).
+
+I have learned to enjoy all the little HHKB layout differences including the delete by default BS, with the `~` key above it, and the `ESC` key next to `1`. And last but not least, **the CTRL in the CAPS location** *(with CAPs still available as `fn` + `Tab`)*. I honestly think this should be the standard keyboard layout.
+ 
+#### The Switches
+
+
+#### PBT keycaps
+#### ... Can I say sound?
 
 ## What I don't like
 
-- **Cost** -
-- **Transporting it (related to cost)** -
-- **"Mac" mode / Delete "fix"** -
+#### Cost
+
+
+#### Transporting it (related to cost)
+
+#### "Mac" mode / Delete "fix"
 
 ## Conclusion
