@@ -54,7 +54,7 @@ Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
 <a name="kadabra"></a>
-#### - Kadabra (Portable Laptop) 
+#### - Abra (Portable Laptop) 
 ```
 Lenovo x230
 Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
