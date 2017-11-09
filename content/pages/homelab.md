@@ -20,6 +20,8 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 
 ### Ryan (Me)
 
+*Note: Images Out of Date*
+
 <img alt="Ryan's Workstation" src="../../img/homelab/alakazam.jpg" width=100%>
 *My Main Computer Setup (Alakazam)*
 
@@ -30,16 +32,13 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 *My Workstation Standing Desk*
 
 <a name="alakazam"></a>
-#### - Alakazam (Main Workstation Laptop)
+#### - Kadabra (Main Laptop)
 ```
-System76 Bonobo Extreme
-Intel i7 4810-MQ [2.8 Ghz (3.8 Ghz Turbo), 6M Cache, 4 Cores, 8 Threads]
-16 GB RAM
-Nvidia GTX 970M
-120 GB Samsung EVO SSD
-1 TB 7200 RPM HDD
-17.3” 1920x1080 Display 
-Monitors)
+T470 Thinkpad
+Intel i5-7200u [2.5 Ghz (3.1 Ghz Turbo), 2 Cores, 4 Threads]
+8 GB RAM
+250 GB Samsung EVO SSD
+14 1920x1080 Display 
 Solus
 ```
 ##### Periphery
@@ -54,12 +53,12 @@ Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
 <a name="kadabra"></a>
-#### - Abra (Portable Laptop) 
+#### - Abra (Secondary Laptop) 
 ```
 Lenovo x230
 Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
 8 GB RAM
-250 GB Samsung 850 EVO SSD
+120 GB SSD
 12.5" HD LED 1366x768 Display
 9-Cell Battery
 Solus
