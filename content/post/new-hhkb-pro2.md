@@ -51,10 +51,13 @@ I didn't expect the PBT key-caps to be such a big deal, but I absolutely love th
 
 #### The Switches
 
-
+I wasn't sure how I would like the topre switches after getting excited for Cherry MX clears. However, I seem to really like them... at least on the HHKB. I have heard that they feel different on the HHKB compared to other Topre keyboards due to the HHKBs plastic back. I'm not sure if this is true or not, but I like the result. Key presses are smooth but at the same time very crisp. Being a heavy typist, I often bottom out, but when I do it feels very soft, and not harsh at all. I figure that if I am going to bottom out on my keys regardless of what keyboard I have, it is probably best to handle it how the HHKB does.
 
 
 #### ... Can I say sound?
+
+
+
 
 ## What I don't like
 
