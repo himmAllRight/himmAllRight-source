@@ -6,7 +6,7 @@ layout: homelab-page
 menu: 
   main:
     weight: -100
-image: img/header-images/alakazam.jpg
+image: img/header-images/kadabra1.jpg
 ---
 
 This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations), as well as network diagrams of our current setup.
@@ -14,37 +14,33 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 ## Network
 ### Network Diagram
 <img alt="Himmelwright Network" src="../../img/homelab/NetworkDiagram.png" width=100%>
-*\* A Little Out of Date*
+*\* Out of Date*
 
 ## Computers
 
 ### Ryan (Me)
 
-*Note: Images Out of Date*
+<a href="../../img/homelab/kadabra1.jpg"><img alt="Ryan's Desk - Chair" src="../../img/homelab/kadabra1.jpg" width=100%></a>
+*My Home Workstation Area*
 
-<img alt="Ryan's Workstation" src="../../img/homelab/alakazam.jpg" width=100%>
-*My Main Computer Setup (Alakazam)*
+<a href="../../img/homelab/kadabra-lights.jpg"><img alt="Ryan's Workstation" src="../../img/homelab/kadabra-lights.jpg" width=100%></a>
+*My Main Computer Setup (with lights on) (Kadabra)*
 
-<img alt="Ryan's Desk - Chair" src="../../img/homelab/alakazam_chair.jpg" width=100%>
-*My Workstation Area*
-
-<img alt="Ryan's Desk" src="../../img/homelab/alakazam_desk.jpg" width=100%>
-*My Workstation Standing Desk*
-
-<a name="alakazam"></a>
+<a name="kadabra"></a>
 #### - Kadabra (Main Laptop)
 ```
 T470 Thinkpad
 Intel i5-7200u [2.5 Ghz (3.1 Ghz Turbo), 2 Cores, 4 Threads]
 8 GB RAM
 250 GB Samsung EVO SSD
-14 1920x1080 Display 
+14" 1920x1080 IPS Display 
 Solus
 ```
 ##### Periphery
 ```
+Thinkpad Ultra Dock 40A2
 2 x 23.6" ASUS 1920x1080 Monitors
-Happy Hacking Keyboard Pro2 (not pictured)
+Happy Hacking Keyboard Pro2 
 Audioengine A2+ Speakers & Stands
 Bose AE2 Headphones
 Logitech HD Pro Webcam c920 Widescreen
