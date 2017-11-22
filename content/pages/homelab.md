@@ -9,12 +9,7 @@ menu:
 image: img/header-images/kadabra1.jpg
 ---
 
-This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations), as well as network diagrams of our current setup.
-
-## Network
-### Network Diagram
-<img alt="Himmelwright Network" src="../../img/homelab/NetworkDiagram.png" width=100%>
-*\* Out of Date*
+This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations).
 
 ## Computers
 
@@ -89,23 +84,6 @@ Intel Xeon E3-1225 v3 [3.2 GHz (3.6 GHz Turbo), 8M Cache, 4 Cores, 4 Threads]
 Proxmox VE 4.4
 ```
 
-##### Ninetales KVM VMs:
-```	
-Gentoo  - Gentoo     - Vm to play with Gentoo Linux
-Vomonat - Kali Linux - Used for learning PenTesting techniques
-test-vm - Various    - VM used to test out differnt distros
-```
-
-##### Ninetales LXC Containers:
-```
-Diglet  (50)  - Arch Linux   - Minecraft Server
-Staryu  (120) - Arch Linux   - Plex Server
-Meowth  (52)  - Arch Linux   - Remote Website Writting/ Other
-Kakuna  (14)  - Ubuntu 16.04 - Experimenting with Ledger syncing methods
-Tangela (114) - Centos 7     - Nginx for Port and Subdomain Proxy
-Geodude (74)  - Ubuntu 16.04 - Gitlab Server
-```
-
 #### - Charmander (Test Server / Rebecca’s Gaming Computer)
 
 ```
@@ -171,4 +149,6 @@ Armbian (Ubuntu 16.04 version)
     20 GB SSD
     Ubuntu 14.04 LTS OS
 
+### AWS
 
+*I have also started playing with AWS, but don't have any persistent servers with it yet.*
