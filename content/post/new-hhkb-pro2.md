@@ -67,8 +67,17 @@ As I've mentioned earlier in the post, probably the *biggest* downside to the HH
 
 #### Transporting it (related to cost)
 
-While the cost issue is mitigated after just biting the bullet and hitting the "check out" button, there is another minor annoyance that is *related* to the high price.
+While the cost issue is mitigated after just biting the bullet and hitting the "check out" button, there is another minor annoyance that is *related* to the high price. Ideally, I'd like to use my HKKB whenever I am at the computer. Being a software developer... I use a computer for 8+ hours a day at work. So, I like to bring my keyboard to work... but I also like to bring it home. Ideally, I'd get two: one for home and one for at work. At the high price point though... I might have to wait to make that purchase. As far as keyboards go, I'd say the HHKB is probably one of the best travel boards out there. It's light, but sturdy, and there is even a [travel case designed specifically for it](). So far I've been using the box to transport it, but am going to get the traveling case soon. That should hold me over until it is justifiable to get a second board. One day...
 
 #### "Mac" mode / Delete "fix"
 
+One benefit of getting the HHKB *Pro* over the *lite* version, is that it has some media key functionality (volume, start/stop). However, these keys only work when the dip switches to put the board in "Mac mode" are flipped. In addition to enabling the media keys, it has some other effects like switching the "Super" key (?) and ... changing the iconic HHKB "Delete" key to a more traditional "Backspace" default. Now, I understand that 99% of people probably welcome this change with open arms. However... after using the HHKB lite for so many years, I have *really* become accustomed to the "delete" key there, and actually prefer it now. With how I jump around my editor/terminals with emacs bindings, I have actually developed a workflow where I use *delete* more often than *backspace* now. 
+
+Unfortunately, I cannot figure out a way to have *both* the *mac mode* and "delete key default" functionality enabled at the same time. So... I have opted to just forgo the new media keys, which is really unfortunate. It's a nice upgrade from the *lite* version, and it's ashame I can't take advantage of it just because I *prefer* the default layout of the keyboard.
+
+#### Missing more "Modern" Features/Perks
+
+The HHKB being a *classic*, seems to be lacking in some of the more "modern" features of high-end keyboards. There no backlighting, no custom programming/macro setups, or wireless connectivity. I even believe that the two USB ports on the back are USB, not 3 (let alone C). While it would be *nice* to have some of these features in the HHKB, I'm not hurting *too badly* for them... *yet*. A modern refresh would be amazing though.
+
 ## Conclusion
+
