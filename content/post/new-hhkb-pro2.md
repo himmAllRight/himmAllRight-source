@@ -42,7 +42,7 @@ I placed the order and within a few days, it was on my doorstep (well, the neigh
 #### Layout
 
 As already mentioned, I love they HHKB layout. It was a bit tricky to get accustomed to at first, but that was *several years* ago at this point. The HKKB Pro does have a few difference in layout when compared to the lite version (the pro does not have a bottom left `fn` key, or any dedicated arrow keys). However, I had prepared myself for this change over the last few years by only using the right `fn` key and the `fn` arrow keys. The hardest thing to adjust to was the slightly different sized keys (due to the missing `fn` key).
-
+you
 I have learned to enjoy all the little HHKB layout differences including the delete by default BS, with the `~` key above it, and the `ESC` key next to `1`. And last but not least, **the CTRL in the CAPS location** *(with CAPs still available as `fn` + `Tab`)*. I honestly think this should be the standard keyboard layout.
  
 #### PBT key-caps
@@ -63,8 +63,11 @@ I love the sound of typing on this keyboard. While it is definitely an audible k
 
 #### Cost
 
+As I've mentioned earlier in the post, probably the *biggest* downside to the HHKB is probably the substantial cost. At >$200 USD, it is expensive, even for high-end mechanical keyboards. The cost is the single problem that kept me from buying it all these years. Eventually, I realized it is what I wanted, and it would likely last me *years*, so it all works out. Additionally, if I didn't like the PRO, or didn't want it anymore, they *do* have an incredible resale value, so I could likely get a large chunk of my money back fairly easily.
 
 #### Transporting it (related to cost)
+
+While the cost issue is mitigated after just biting the bullet and hitting the "check out" button, there is another minor annoyance that is *related* to the high price.
 
 #### "Mac" mode / Delete "fix"
 
