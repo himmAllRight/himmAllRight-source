@@ -39,6 +39,9 @@ So I started to consider the HHKB again. My main reasons for not getting it orig
 
 ## Getting the HHKB
 
+<a href="../../img/posts/new-hhkb-pro2/got-hhkb.jpg"><img alt="Getting the HHKB Keyboard" src="../../img/posts/new-hhkb-pro2/got-hhkb.jpg" style="max-width: 100%;"/></a>
+<div id="caption">My HHKB</div>
+
 Once I decided on the HHKB, and obtained approval from my wife ( ;) ), I purchased it from Amazon. The one thing I did contemplate about was which color to get. I didn't know if I wanted to get the black or white model. I knew I wanted printed key-caps, and that made the white board very appealing. The printed keys on it look *so* nice. Eventually, I decided on the dark gray because it matches everything else I own, whereas the white board would drastically stick out, which may not be idea if I ever *really* care about constructing a nice setup. 
 
 I placed the order and within a few days, it was on my doorstep (well, the neighbor's). 
