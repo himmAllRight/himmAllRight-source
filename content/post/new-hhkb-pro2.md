@@ -7,7 +7,7 @@ tags   = ["Hardware", "Keyboards", "HHKB",]
 draft  = true
 +++
 
-After years of using a Happy Hacking Keyboard Lite, I have *finally* pulled the trigger and splurged on a Happy Hacking Professional 2 keyboard. And I love it.
+After years of using a Happy Hacking Keyboard Lite, I have *finally* decided to splurge on a Happy Hacking Professional 2 keyboard. And I love it.
 
 <!--more-->
 
@@ -16,28 +16,28 @@ After years of using a Happy Hacking Keyboard Lite, I have *finally* pulled the 
 ## My history with the HHKB Lite
 
 <a href="../../img/posts/new-hhkb-pro2/college-computer.jpg"><img alt="Getting the HHKB Keyboard" src="../../img/posts/new-hhkb-pro2/college-computer.jpg" style="max-width: 100%;"/></a>
-<div id="caption">My Computer my senior year of college, including my HHKB lite</div>
+<div id="caption">My Computer (HHKB lite included) during my senior year of college</div>
 
-I started using Linux during my senior year of high school. Later in college, I started diving deeper down the rabbit hole, learning more about shells, window managers, and programming. Eventually, I found myself sitting in front of an [Arch Linux](http://www.archlinux.org) install, configured with a tiling window manger to organize the scattering of VIM and VIM-like terminal applications I used every day. I wanted something that was optimized at the hardware level for my heavy CTRL use. This is when I first learned about the HHKB. However, as a broke college student, I opted for the much cheaper *lite* version to test it out. I loved it so much, that years later when I needed to replace a keyboard at work, I had them order me a HHKB lite (again, the Pro was very expensive).
+I started using Linux during my senior year of high school. In college, I started diving deeper down the rabbit hole, learning more about shells, window managers, and programming. By senior year, I found myself sitting in front of an [Arch Linux](http://www.archlinux.org) install, configured with a tiling window manger to organize the scattering of VIM and VIM-like terminal applications I used every day. To be kind to my wrists, I wanted something that was optimized at the hardware level for my heavy *CTRL* key use. This is when I first learned about the HHKB. However, as a broke college student, I opted for the much cheaper *lite* version to test out. I enjoyed the layout so much, that years later when I needed to replace a keyboard at work, I had them order me a HHKB lite (again, the Pro was very expensive).
 
 ## Time for a Mechanical Keyboard
 
-After years of using the standard rubber dome HHKB lite, I wanted to finally switch to a true mechanical keyboard. I searched long and hard, looking at all different layouts, and learning about the various switch types, mostly [cherry MX switches](https://en.wikipedia.org/wiki/Cherry_(keyboards)). After purchasing and playing with a [switch tester](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=1620), I confirmed that I would likely enjoy MX clear switches best. They are quiet enough I could still reasonably use them in an office, but still had the nice tactile bump that I love (more than what I experienced on the Browns). Additionally, I knew that I wanted to stick with a small, minimalist layout that I had grown to love, so I exclusively looked at [60% keyboards](https://deskthority.net/wiki/60%25), with the occasional [40%](https://deskthority.net/wiki/40%25) board catching my eye.
+After years of using the standard rubber dome HHKB lite, I wanted to finally switch to a true mechanical keyboard. I searched long and hard, looking at different layouts designs, and learning about the various switch types (mostly the commony [cherry MX switches](https://en.wikipedia.org/wiki/Cherry_(keyboards))). After purchasing and playing with a [switch tester](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=1620), I confirmed that I would likely enjoy MX clear switches best. They are quiet enough I could still reasonably use them in an office, but still had the nice tactile bump that I love (more than what I experienced on the Browns). Additionally, I knew that I wanted to stick with a small, minimalist layout, so I exclusively looked at [60% keyboards](https://deskthority.net/wiki/60%25), with the occasional [40%](https://deskthority.net/wiki/40%25) board catching my eye.
 
 
 <a href="https://i.ytimg.com/vi/8wjW-Or1jg8/maxresdefault.jpg"><img alt="The Pok3r Keyboard" src="../../img/posts/new-hhkb-pro2/pok3r.jpg" style="max-width: 100%;"/></a>
 <div id="caption">The Pok3r Keyboard</div>
 
-Like many, I eventually landed at the [Vortex Pok3r](https://deskthority.net/wiki/Vortex_Pok3r). It beautiful, minimal, but sturdy appearance, and had a MX clear variant. I had made my decision, but at the time, new boards weren't available so I decided I would sit back and wait a little while to see if it would drop on [Massdrop](https://www.massdrop.com/). I had waited years to purchase a mechanical keyboard, I could wait a little longer to get the one I wanted.
+Like many, I eventually landed at the [Vortex Pok3r](https://deskthority.net/wiki/Vortex_Pok3r). It is beautiful, with a minimal, but sturdy appearance, and has a MX clear variant. I had made my decision, but at the time, new boards weren't available. I decided to sit back and wait to see if it would drop on [Massdrop](https://www.massdrop.com/) any time soon. I had waited years to purchase a mechanical keyboard, and I could wait a little longer to get the one I wanted.
 
 ## The Planck Drop
 
 <img alt="The Planck Keyboard" src="../../img/posts/new-hhkb-pro2/planck.jpg" style="max-width: 100%;"/>
 <div id="caption">The Planck Keyboard</div>
 
-While I was waiting for a Pok3r drop... something interesting caught my eye on Massdrop... the [Planck keyboard](https://www.massdrop.com/buy/planck-mechanical-keyboard) dropped... The planck is a keyboard kit that you solder together to create a programmable, *ortholinear*, 40% keyboard. When I say *programmable*, I don't just mean you can bind keys. The Planck is fully open and the firmware C code is available on Github. So, you can actually customize and hack together the firmware, which was very appealing to me. So I joined the drop.
+While I was waiting for a Pok3r drop... something interesting caught my eye on Massdrop... the [Planck keyboard](https://www.massdrop.com/buy/planck-mechanical-keyboard)... The planck is a keyboard kit that you solder together to create a programmable, *ortholinear*, 40% keyboard. When I say *programmable*, I don't mean that you can just bind some keys. The Planck is fully open and the firmware C code is available on Github for modification. So, you can actually customize and hack together the firmware, which was very appealing to me. So I joined the drop.
 
-After I joined the drop, I purchased a soldering kit so that I could construct the keyboard once it finally shipped. However, the planck drop had *several* delays, but as I previously stated, I didn't mind too much and was willing to wait. The planck got delayed *so* much, that they eventually allowed people to cancel their order and receive a refund. I thought the order cancellation was something you *opted in* to do, but it was actually an *opt out* situation... so my lack of response had my order canceled, pre-maturely ending my planck experience.
+After joining, I purchased a soldering kit so that I could construct the keyboard once it finally shipped. Unfortunately, the planck drop had *several* delays, but as I previously stated, I didn't waiting. The planck got delayed *so* much, that they eventually allowed people to cancel their order and receive a refund. I thought the order cancellation was something you *opted in* to do, but it was actually an *opt out* situation... so my lack of response had my order canceled, pre-maturely ending my planck experience.
 
 ## Deciding on the HHKB Pro
 
@@ -50,22 +50,22 @@ So I started to consider the HHKB again. My main reasons for not getting it orig
 <a href="../../img/posts/new-hhkb-pro2/got-hhkb.jpg"><img alt="Getting the HHKB Keyboard" src="../../img/posts/new-hhkb-pro2/got-hhkb.jpg" style="max-width: 100%;"/></a>
 <div id="caption">My HHKB</div>
 
-Once I decided on the HHKB, and obtained approval from my wife ( ;) ), I purchased it from Amazon. The one thing I did contemplate about was which color to get. I didn't know if I wanted to get the black or white model. I knew I wanted printed key-caps, and that made the white board very appealing. The printed keys on it look *so* nice. Eventually, I decided on the dark gray because it matches everything else I own, whereas the white board would drastically stick out, which may not be idea if I ever *really* care about constructing a nice setup. 
+Once I decided on the HHKB, (and it was approved by my wife :P ), I purchased it on Amazon. The one thing I did contemplate about was which color to get. I didn't know if I wanted to get the black or white model. I knew I wanted printed key-caps, and that made the white board very appealing. The printed keys on it look *so crisp*. Eventually, I decided on the dark gray because it matches everything else I own, whereas the white board would drastically stick out.
 
-I placed the order and within a few days, it was on my doorstep (well, the neighbor's). 
+I placed the order and within a few days, it was on my doorstep (well, the neighbor's, but that's an issue with our post...). 
 
 ## What I like
 
 
 #### Layout
 
-As already mentioned, I love they HHKB layout. It was a bit tricky to get accustomed to at first, but that was *several years* ago at this point. The HKKB Pro does have a few difference in layout when compared to the lite version (the pro does not have a bottom left `fn` key, or any dedicated arrow keys). However, I had prepared myself for this change over the last few years by only using the right `fn` key and the `fn` arrow keys. The hardest thing to adjust to was the slightly different sized keys (due to the missing `fn` key).
-you
-I have learned to enjoy all the little HHKB layout differences including the delete by default BS, with the `~` key above it, and the `ESC` key next to `1`. And last but not least, **the CTRL in the CAPS location** *(with CAPs still available as `fn` + `Tab`)*. I honestly think this should be the standard keyboard layout.
+As already mentioned, I love they HHKB layout. It was a bit tricky to get accustomed to at first, but that was *several years* ago at this point. The HKKB Pro does have a few difference in layout when compared to the lite version (the pro does not have a bottom left `fn` key, or any dedicated arrow keys). However, I had prepared myself for this change over the last few years by only using the right `fn` key and the `fn` arrow keys. The hardest thing to adjust to was the slightly different sized `alt` and `super` keys on the left (due to the missing `fn` key).
+
+I have learned to appreciate all the little HHKB layout differences. This includes the "delete" by default backspace key, with the `~` key above it, and the `ESC` key next to `1`. Last but not least, **the CTRL in the CAPS location** *(with CAPs still available as `fn` + `Tab`)*. I honestly think this should be the standard keyboard layout.
  
 #### PBT key-caps
 
-I didn't expect the PBT key-caps to be such a big deal, but I absolutely love them. I could from images that that they would *look* better (especially the white HHKB. I almost chose that design *because* of how sharp the keys look), but I didn't anticipate how great they would feel. They are solid, but with a soft touch, and are a *much* better improvement over every keyboard I have previously owned/used.
+I didn't expect the PBT key-caps to be such a big deal, but I absolutely love them. I could tell from images that they would *look* better (especially the white ones), but I didn't anticipate how great they would feel. They are solid, but with a soft touch, and are a *much* better improvement over every keyboard I have previously owned/used.
 
 #### The Switches
 
@@ -74,7 +74,7 @@ I wasn't sure how I would like the topre switches after getting excited for Cher
 
 #### ... Can I say sound?
 
-I love the sound of typing on this keyboard. While it is definitely an audible keyboard, it isn't nearly as obnoxious as louder clicky switches, like MX Blues or Greens. It has a nice, lower pitched (compared to normal "clicky" switches), soft sound as I type. I really do enjoy hearing it, and find myself sometimes taking off my headphones to listen to it if I need motivation to get more characters on the screen.
+I love the sound of typing on this keyboard. While it is definitely an audible keyboard, it isn't nearly as obnoxious as louder clicky switches, like MX Blues or Greens. It has a soft, muted, lower pitched sound as I type (compared to normal "clicky" switches). I really do enjoy hearing it, and find myself sometimes taking off my headphones to listen to it if I need motivation to get more characters on the screen.
 
 
 ## What I don't like
