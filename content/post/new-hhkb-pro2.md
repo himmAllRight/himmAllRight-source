@@ -11,9 +11,17 @@ After years of using a Happy Hacking Keyboard Lite, I have *finally* pulled the 
 
 <!--more-->
 
+*Note: I have been slowly chipping away at this post for the last few months. I have been very busy, but I should be able to get back into the swing of writing again.*
+
 ## My history with the HHKB Lite
 
+<a href="../../img/posts/new-hhkb-pro2/college-computer.jpg"><img alt="Getting the HHKB Keyboard" src="../../img/posts/new-hhkb-pro2/college-computer.jpg" style="max-width: 100%;"/></a>
+<div id="caption">My Computer my senior year of college, including my HHKB lite</div>
+
+I started using Linux during my senior year of high school. Later in college, I started diving deeper down the rabbit hole, learning more about shells, window managers, and programming. Eventually, I found myself sitting in front of an [Arch Linux](http://www.archlinux.org) install, configured with a tiling window manger to organize the scattering of VIM and VIM-like terminal applications I used every day. I wanted something that was optimized at the hardware level for my heavy CTRL use. This is when I first learned about the HHKB. However, as a broke college student, I opted for the much cheaper *lite* version to test it out. I loved it so much, that years later when I needed to replace a keyboard at work, I had them order me a HHKB lite (again, the Pro was very expensive).
+
 ## Time for a Mechanical Keyboard
+
 After years of using the standard rubber dome HHKB lite, I wanted to finally switch to a true mechanical keyboard. I searched long and hard, looking at all different layouts, and learning about the various switch types, mostly [cherry MX switches](https://en.wikipedia.org/wiki/Cherry_(keyboards)). After purchasing and playing with a [switch tester](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=1620), I confirmed that I would likely enjoy MX clear switches best. They are quiet enough I could still reasonably use them in an office, but still had the nice tactile bump that I love (more than what I experienced on the Browns). Additionally, I knew that I wanted to stick with a small, minimalist layout that I had grown to love, so I exclusively looked at [60% keyboards](https://deskthority.net/wiki/60%25), with the occasional [40%](https://deskthority.net/wiki/40%25) board catching my eye.
 
 
