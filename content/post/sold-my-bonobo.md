@@ -65,8 +65,35 @@ However, some of my assumptions about my computer use turned out to not be
 entirely true. Additionally, as the years passed, my computing needs started to
 change from what they were when I first got the Bonobo.
 
+#### I'm Not a Big ~~PC~~ Gamer.
+
+
+For example, when my brothers and I would pull out our laptops to play games
+together, the games we played were never highly demanding. Our top played games
+were Minecraft, Serious Sam 3, Dungeon Defenders, and *maybe* CS GO. So year. So
+yea, the Bonobo was a little overkill. Unfortunately, with my brothers and I all
+living in different states, we really don't see each other in person enough to
+play computer games in the same room anymore. These days, when we want to
+remotely play video games together... we play on Xbox ONE (which I bought mostly
+to keep in touch with friends and family).
+
+<a href="../../img/posts/sold-bonobo/xboxone.png"><img alt="Xbox One" src="../../img/posts/sold-bonobo/xboxone.png" style="max-width: 100%;"/></a>
+
+So, while I have enjoyed owning a computer that can handle most games I throw at
+it...the reality is that I really don't play games too often. Even on the Xbox,
+I go in bursts of playing a few times a week, and then don't touch a game for
+months. While I wouldn't mind having the ability to play more demanding games on
+my computer, it isn't a *requirement* for me... expecially on a laptop.
+
+#### I Travel More. On Airplanes.
+
 ## Recent Discoveries/Realizations
 
+Do I need this section? I think it merged with the above. I think it is to talk
+about learning about docking old thinkpads, but I can mention that as the
+backstory for the "My New Plan" section or something. I might also change that
+because it's not really *plan* at this point... I've been doing it for months
+now...
 
 ## My New Plan
 
