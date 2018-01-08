@@ -77,7 +77,7 @@ play computer games in the same room anymore. These days, when we want to
 remotely play video games together... we play on Xbox ONE (which I bought mostly
 to keep in touch with friends and family).
 
-<a href="../../img/posts/sold-bonobo/xboxone.png"><img alt="Xbox One" src="../../img/posts/sold-bonobo/xboxone.png" style="max-width: 100%;"/></a>
+<a href="../../img/posts/sold-bonobo/xboxone.png"><img alt="xbox one" src="../../img/posts/sold-bonobo/xboxone.png" style="max-width: 100%;"/></a>
 
 So, while I have enjoyed owning a computer that can handle most games I throw at
 it...the reality is that I really don't play games too often. Even on the Xbox,
@@ -85,7 +85,27 @@ I go in bursts of playing a few times a week, and then don't touch a game for
 months. While I wouldn't mind having the ability to play more demanding games on
 my computer, it isn't a *requirement* for me... expecially on a laptop.
 
-#### I Travel More. On Airplanes.
+#### I Travel More. Sometimes On Airplanes.
+
+One change compared to when I originally bought my bonobo is that I travel more.
+When I first moved to Massachusetts, I figured most of my traveling would be
+from here back to Pennsylvania, or to vacation once a year or so. However, my
+wife and I have managed to keep in touch with some of our old friends... who
+live all over the country. Additionally, now that my brothers have moved out of
+the house, they have also started to spread out too (as already mentioned in the
+section above). This means that I travel more often. In particular, I fly more
+frequently.
+
+The Bonobo sucks to travel with. It takes up the majority of my bag, and most
+bags don't even fit it. Besides the laptop itself, TSA is often freaked out by
+the MASSIVE power supply, and has had to re-scan my bag several times, thinking
+I had a "bluetooth speaker" or something I refrained from telling them about,
+despite my polite warnings that "my laptop's power charger is massive". It just
+simply isn't a computer I can pull out of my bag and easily use in an airport
+terminal. In fact, the last time I flew with it, I tried to work on it a bit at
+table, and I couldn' because I don't think the power outlet supplied enough
+juice to actually charge the laptop. So I had to switch to my phone to entertain
+myself for several hours until my flight
 
 ## Recent Discoveries/Realizations
 
