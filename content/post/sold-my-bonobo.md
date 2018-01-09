@@ -118,7 +118,9 @@ I'd joke to myself. After several years of really focusing in on how I
 *actually* use computing devices, and not my *idealized* use, I've noticed that
 I am actually very picky with noise, and on a related note, heat.
 
-
+<center>
+<a href="../../img/posts/sold-bonobo/temps.jpg"><img alt="Temp Sensors" src="../../img/posts/sold-bonobo/temps.jpg" style="max-width: 80%;"/></a>
+</center>
 
 #### Desktop Replacement?
 
