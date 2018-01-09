@@ -96,18 +96,47 @@ the house, they have also started to spread out too (as already mentioned in the
 section above). This means that I travel more often. In particular, I fly more
 frequently.
 
-The Bonobo sucks to travel with. It takes up the majority of my bag, and most
-bags don't even fit it. Besides the laptop itself, TSA is often freaked out by
-the MASSIVE power supply, and has had to re-scan my bag several times, thinking
-I had a "bluetooth speaker" or something I refrained from telling them about,
-despite my polite warnings that "my laptop's power charger is massive". It just
-simply isn't a computer I can pull out of my bag and easily use in an airport
-terminal. In fact, the last time I flew with it, I tried to work on it a bit at
-table, and I couldn' because I don't think the power outlet supplied enough
-juice to actually charge the laptop. So I had to switch to my phone to entertain
-myself for several hours until my flight
+<a href="../../img/posts/sold-bonobo/tsa.png"><img alt="TSA logo" src="../../img/posts/sold-bonobo/tsa.png" style="max-width: 80%;"/></a>
+
+To say it bluntly, the Bonobo sucks to travel with. It takes up the majority of
+my bag, and most bags don't even fit it. Besides the laptop itself, TSA is often
+freaked out by the MASSIVE power supply, and has had to re-scan my bag several
+times, thinking I had a "bluetooth speaker" or something I refrained from
+telling them about, despite my polite warnings that "my laptop's power charger
+is massive". It just simply isn't a computer I can pull out of my bag and easily
+use in an airport terminal. In fact, the last time I flew with it, I tried to
+work on it a bit at table, and I couldn' because I don't think the power outlet
+supplied enough juice to actually charge the laptop. So I had to switch to my
+phone to entertain myself for the several hours before my flight.
+
+#### It turns out I'm noise picky.
+
+When building or purchasing a computer, one concern to consider is noise. With
+my previous machines, I wouldn't worry about it. "Noise? Why should I be
+concerned with that? I'm not building a recording studio with this computer!",
+I'd joke to myself. After several years of really focusing in on how I
+*actually* use computing devices, and not my *idealized* use, I've noticed that
+I am actually very picky with noise, and on a related note, heat.
+
+
+
+#### Desktop Replacement?
+
+My issues with the Bonobo boiled down to the fact that based on *my current
+computing use-case*, the Bonobo functioned less as a *Desktop Replacement
+Laptop*, and more of just a *shitty, somewhat portable, desktop*. Most of the
+time, I am just browsing or writing code on the machine in front of me. If I
+need more power, I connect remotely to a bigger, better, computer. I also never
+game "on the go", so if I want to have a computer for gaming, it makes much more
+sense.
+
+Bonobo is great if you sit it on a desk and use it as your full computer. I did
+not. I have a ton of periphery devices, and started to even sit it in clam-shell
+mode, making the nice 17" screen a waste.
 
 ## Recent Discoveries/Realizations
+
+
 
 Do I need this section? I think it merged with the above. I think it is to talk
 about learning about docking old thinkpads, but I can mention that as the
