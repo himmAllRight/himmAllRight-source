@@ -122,6 +122,12 @@ I am actually very picky with noise, and on a related note, heat.
 <a href="../../img/posts/sold-bonobo/temps.jpg"><img alt="Temp Sensors" src="../../img/posts/sold-bonobo/temps.jpg" style="max-width: 80%;"/></a>
 </center>
 
+I hoped the extra *thickness* of the Bonobo would help with the heating issues.
+While I think it might have helped a little bit, the reality is that when you
+shove a decent GPU into a laptop... it's going to give off heat. Additionally,
+when using a powerful CPU to it's full potential, that too... will generate
+heat.
+
 #### Desktop Replacement?
 
 My issues with the Bonobo boiled down to the fact that based on *my current
@@ -137,8 +143,6 @@ not. I have a ton of periphery devices, and started to even sit it in clam-shell
 mode, making the nice 17" screen a waste.
 
 ## Recent Discoveries/Realizations
-
-
 
 Do I need this section? I think it merged with the above. I think it is to talk
 about learning about docking old thinkpads, but I can mention that as the
