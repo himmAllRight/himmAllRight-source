@@ -124,7 +124,7 @@ high at all.
 <center>
 <a href="../../img/posts/sold-bonobo/temps.jpg"><img alt="Temp Sensors" src="../../img/posts/sold-bonobo/temps.jpg" style="max-width: 80%;"/></a>
 
-<caption>Parallell Compression on the Bonobo Spiked the Temps</caption>
+<caption>Parallel Compression on the Bonobo Spiked the Temps</caption>
 </center>
 
 I hoped the extra *thickness* of the Bonobo would help with the heating issues.
@@ -141,16 +141,26 @@ I think the Bonobo was just a tad to hot and loud for my taste.
 #### Desktop Replacement?
 
 My issues with the Bonobo boiled down to the fact that based on *my current
-computing use-case*, the Bonobo functioned less as a *Desktop Replacement
-Laptop*, and more of just a *shitty, somewhat portable, desktop*. Most of the
-time, I am just browsing or writing code on the machine in front of me. If I
-need more power, I connect remotely to a bigger, better, computer. I also never
-game "on the go", so if I want to have a computer for gaming, it makes much more
-sense.
+computing use-case*, the Bonobo functioned less as a
+*desktop-replacement-laptop*, and more of just a *shitty, somewhat portable,
+desktop*. Most of the time, I am just browsing or writing code on the machine in
+front of me. If I need more power, I connect remotely to a bigger, better,
+computer. I also never game "on the go", so if I want to have a computer for
+gaming, it makes much more sense to eventually have a half-decent desktop, which
+will serve my needs much better that even high-end laptops.
 
-Bonobo is great if you sit it on a desk and use it as your full computer. I did
-not. I have a ton of periphery devices, and started to even sit it in clam-shell
-mode, making the nice 17" screen a waste.
+<a href="../../img/posts/sold-bonobo/power-cord.jpg"><img alt="Bonobo Power Cord" src="../../img/posts/sold-bonobo/power-cord.jpg" style="max-width: 100%;"/></a>
+<caption>The power cord alone made it difficult to pick up the Bonobo and move it elsewhere</caption>
+
+The Bonobo is great if you sit it on a desk and use it as your full computer. I
+did not. I have a ton of periphery devices, and started to even use it in
+clam-shell mode, making the nice 17" screen a waste. Additionally, I hated
+having to unplug and re-plug all the devices when I wanted to move the computer.
+*In theory*, I could move the Bonobo from my desk into the other room and work
+with my wife at the kitchen table whenever we wanted, but I *rarely* did.
+Unplugging all my devices and fishing the massive power cable out from behind my
+desk (because the battery life isn't... yea, I don't think I need to explain)
+was enough to prompt me to treat the Bonobo as a desktop, rather than a laptop.
 
 ## Recent Discoveries/Realizations
 
