@@ -111,22 +111,32 @@ phone to entertain myself for the several hours before my flight.
 
 #### It turns out I'm noise picky.
 
-When building or purchasing a computer, one concern to consider is noise. With
-my previous machines, I wouldn't worry about it. "Noise? Why should I be
-concerned with that? I'm not building a recording studio with this computer!",
-I'd joke to myself. After several years of really focusing in on how I
-*actually* use computing devices, and not my *idealized* use, I've noticed that
-I am actually very picky with noise, and on a related note, heat.
+When building or purchasing a computer, something to consider is noise. With my
+previous machines, I wouldn't worry about it. "Noise? Why should I be concerned
+about that? I'm not building a recording studio!", I'd joke to myself. After
+several years of focusing on how I *actually* use my computing devices, I've
+noticed that I am actually very picky with noise, and on a related note, heat.
+Every time I hear the fans kick up, I start to worry that I am over-taxing the
+system and start to monitor the biggest culprits. When I *am* running taxing
+processes, I tend to always monitor the cpu temps and don't like to seem them
+high at all.
 
 <center>
 <a href="../../img/posts/sold-bonobo/temps.jpg"><img alt="Temp Sensors" src="../../img/posts/sold-bonobo/temps.jpg" style="max-width: 80%;"/></a>
+
+<caption>Parallell Compression on the Bonobo Spiked the Temps</caption>
 </center>
 
 I hoped the extra *thickness* of the Bonobo would help with the heating issues.
 While I think it might have helped a little bit, the reality is that when you
 shove a decent GPU into a laptop... it's going to give off heat. Additionally,
-when using a powerful CPU to it's full potential, that too... will generate
-heat.
+when using a powerful CPU to it's full potential, it is very difficult for a
+laptop to compete with a desktop-level cooling system. The Bonobo is a very
+powerful laptop, but it's loud fans prevented me from actually *using* it to
+it's full potential, because I would immediately start shutting down processes
+when it got a little noisy. I know the fans spin up to *help* with thermals, but
+I think the Bonobo was just a tad to hot and loud for my taste.
+
 
 #### Desktop Replacement?
 
