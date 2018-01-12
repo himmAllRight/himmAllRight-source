@@ -43,7 +43,7 @@ Blue Yeti Microphone - Backout Edition
 Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
-<a name="kadabra"></a>
+<a name="x230"></a>
 #### - Abra (Secondary Laptop) 
 ```
 Lenovo x230

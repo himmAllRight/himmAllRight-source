@@ -1,6 +1,7 @@
 +++
-title =  "Introducing Kadabra - My New, Used x230"
+title =  "My New, Used x230"
 date = "2016-11-29"
+lastmod = "2018-01-12"
 author = "Ryan Himmelwright"
 image = "img/header-images/x230-keyboard1.jpg"
 tags = ["Linux", "Korora", "Thinkpad",]
@@ -18,7 +19,7 @@ mobile pc setup.
 
 ### Other Considerations 
 
-<img alt="Asus x201e" src="../../img/posts/introducing-kadabra/asus_x201e.png" width=55% style="float: right; margin: 0px 15px 5px 5px;"/>
+<img alt="Asus x201e" src="../../img/posts/my-new-used-x230/asus_x201e.png" width=55% style="float: right; margin: 0px 15px 5px 5px;"/>
 
 I had been keeping an eye open for a new mobile computer for well over a
 year to find out what is out there. I mostly looked sub $300 ubuntu laptops like the Asus 11" 
@@ -56,7 +57,7 @@ didn't have the terrible track pad that the x240 and T440s had (without buttons)
 eventually decided on the x230 because the main use of this laptop would be portability.
 
 ### This Particular Thinkpad x230 ...
-<img alt="Kadabra" src="../../img/posts/introducing-kadabra/kadabra2.jpg" width= 100%>
+<img alt="x230" src="../../img/posts/my-new-used-x230/kadabra2.jpg" width= 100%>
 I found my used x230 on Amazon, for about $185. The vendor an acceptable 
 rating, and the specs were good for the price:
 - Intel i5-3320M
@@ -118,9 +119,9 @@ a second drive several times now to try out different distros on the
   headphones 99% of the time. Still, it would be nice if when I occasionally share a video with someone they could actually hear it.
 
 ### Conclusions
-<img alt="Kadabra" src="../../img/posts/introducing-kadabra/kadabra.jpg" style="max-width: 100%;"/>
-I have had Kadabra for several months now and still love it. I use it at work daily (to listen to
+<img alt="x230" src="../../img/posts/my-new-used-x230/kadabra.jpg" style="max-width: 100%;"/>
+I have had my x230 for several months now and still love it. I use it at work daily (to listen to
 music, podcasts, and to have a _linux_ computer available to me at all times in a Windows office). It is a perfect mix of being portable while still having enough power to accomplish whatever I want to work on. I still prefer to vote with my wallet by purchasing from a vendors like [System76](http://www.system76.com) when possible, but buying used business hardware, such as thinkpads, is a very affordable alternative. I have no regrets buying my used x230. It is infinitely better than my other options at that price point.
 
 ### Update
-_I have taken so long to publish this post, I am actually now using Arch Linux on Kadabra. It also runs great :)_
+_I have taken so long to publish this post, I am actually now using Arch Linux on the x230. It also runs great :)_
