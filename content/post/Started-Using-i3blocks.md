@@ -128,6 +128,6 @@ Your browser does not support the video tag.
 
 Thus far, I have been very satisfied with my current i3 setup. Replacing i3status with i3blocks, combined with adding small improvements, for example, the awesome fonts, really helped to enhance the look and feel of my i3 configuration. Additionally, ROFI much better now that it matches everything.
 
-I am glad to be using i3 again. It is so efficient to use and I love flying around the work-spaces and windows. It is particularly useful on [kedabra's](../../pages/homelab/#kadabra) 12" screen, as it utilizes all of the limited resolution. If you have never used a tiling window manager in Linux, I strongly suggest you give it a shot. It can take some time to get up and going the first time, but once a custom configuration is built, it always feels like home.
+I am glad to be using i3 again. It is so efficient to use and I love flying around the work-spaces and windows. It is particularly useful on my x230's 12" screen, as it utilizes all of the limited resolution. If you have never used a tiling window manager in Linux, I strongly suggest you give it a shot. It can take some time to get up and going the first time, but once a custom configuration is built, it always feels like home.
 
 To show off my new i3 setup with i3bars, I've posted a small video at the top of this section. Enjoy!

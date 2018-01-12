@@ -162,14 +162,15 @@ Unplugging all my devices and fishing the massive power cable out from behind my
 desk (because the battery life isn't... yea, I don't think I need to explain)
 was enough to prompt me to treat the Bonobo as a desktop, rather than a laptop.
 
-## Recent Discoveries/Realizations
+## Recent Discoveries & My New Plan
 
-Do I need this section? I think it merged with the above. I think it is to talk
-about learning about docking old thinkpads, but I can mention that as the
-backstory for the "My New Plan" section or something. I might also change that
-because it's not really *plan* at this point... I've been doing it for months
-now...
+A while back, I bought a [used x230 Thinkpad](../my-new-used-x230/). Over the
+past summer, I finally purchased a [used docking
+station](https://www.ebay.com/itm/Lenovo-Thinkpad-Mini-Docking-Station-Series-3-USB-3-0-T410-L420-L520-X230-T530/272238176342?epid=562055390&hash=item3f62a8e856:g:PbIAAOSw2x1XMPHU:sc:USPSPriority!02703!US!-1)
+for the x230 to try out a docked setup. I loved it. It fit my needs
+exceptionally. I was able to have *all* of my periphery devices attached to the
+dock, and I could have my portable laptop connected to everything, or, with the
+push of a button, pop the laptop from the dock and be on my way.
 
-## My New Plan
-
-
+I want to conclude by again stating that the System76 is *not* a bad machine. It
+just wasn't for me anymore.
