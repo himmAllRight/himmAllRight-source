@@ -62,27 +62,27 @@ for when I wanted to take it somewhere.
 <a href="../../img/posts/sold-bonobo/side-view.jpg"><img alt="Bonobo Thickness" src="../../img/posts/sold-bonobo/side-view.jpg" style="max-width: 100%;"/></a>
 <div id="caption">Bonobo Side View</div>
 
-However, some of my assumptions about my computer use turned out to not be
-entirely true. Additionally, as the years passed, my computing needs started to
-change from what they were when I first got the Bonobo.
+As the years passed, my computing needs changed. On top of that, some of the
+initial assumptions about my computer use turned out to not be entirely true.
 
 #### I'm Not a Big ~~PC~~ Gamer.
 
 
 For example, when my brothers and I would pull out our laptops to play games
 together, the games we played were never highly demanding. Our top played games
-were Minecraft, Serious Sam 3, Dungeon Defenders, and *maybe* CS GO. So year. So
-yea, the Bonobo was a little overkill. Unfortunately, with my brothers and I all
-living in different states, we really don't see each other in person enough to
-play computer games in the same room anymore. These days, when we want to
-remotely play video games together... we play on Xbox ONE (which I bought mostly
-to keep in touch with friends and family).
+were Minecraft, Serious Sam 3, Dungeon Defenders, and *maybe* CS GO. Needless to
+say, the Bonobo was a little overkill. Unfortunately, with my brothers and I all
+living in different states now, we really don't see each other in person enough
+to play computer games in the same room anymore. These days, when we want to
+remotely play video games together... we play on the Xbox ONE (which I bought
+mostly to keep in touch with my friends and family. I didn't own one when I
+purchased the Bonobo).
 
 <a href="../../img/posts/sold-bonobo/xboxone.png"><img alt="xbox one" src="../../img/posts/sold-bonobo/xboxone.png" style="max-width: 100%;"/></a>
 
-So, while I have enjoyed owning a computer that can handle most games I throw at
-it...the reality is that I really don't play games too often. Even on the Xbox,
-I go in bursts of playing a few times a week, and then don't touch a game for
+I have enjoyed owning a computer that can handle most of games I throw at
+it, but if I'm being honest... I don't play games too often. Even on the Xbox,
+I go in bursts of playing once or twice a week, and then don't touch a game for
 months. While I wouldn't mind having the ability to play more demanding games on
 my computer, it isn't a *requirement* for me... expecially on a laptop.
 
@@ -92,9 +92,9 @@ One change compared to when I originally bought my bonobo is that I travel more.
 When I first moved to Massachusetts, I figured most of my traveling would be
 from here back to Pennsylvania, or to vacation once a year or so. However, my
 wife and I have managed to keep in touch with some of our old friends... who
-live all over the country. Additionally, now that my brothers have moved out of
-the house, they have also started to spread out too (as already mentioned in the
-section above). This means that I travel more often. In particular, I fly more
+live all over the country. Plus, now that my brothers have moved out of
+the house, they have started to spread out too (as already mentioned in the
+section above). So, I travel more often. In particular, I fly more
 frequently.
 
 <a href="../../img/posts/sold-bonobo/tsa.png"><img alt="TSA logo" src="../../img/posts/sold-bonobo/tsa.png" style="max-width: 80%;"/></a>
@@ -102,25 +102,25 @@ frequently.
 To say it bluntly, the Bonobo sucks to travel with. It takes up the majority of
 my bag, and most bags don't even fit it. Besides the laptop itself, TSA is often
 freaked out by the MASSIVE power supply, and has had to re-scan my bag several
-times, thinking I had a "bluetooth speaker" or something I refrained from
-telling them about, despite my polite warnings that "my laptop's power charger
-is massive". It just simply isn't a computer I can pull out of my bag and easily
-use in an airport terminal. In fact, the last time I flew with it, I tried to
-work on it a bit at table, and I couldn' because I don't think the power outlet
-supplied enough juice to actually charge the laptop. So I had to switch to my
-phone to entertain myself for the several hours before my flight.
+times, thinking I had a "bluetooth speaker" or something else I neglected to
+tell them about (despite my polite warnings that "my laptop's power charger is
+massive"). Beyond security, It just isn't a computer I can pull out of my bag
+and easily use in an airport terminal. In fact, the last time I flew with it, I
+tried to work on it at table, for a little bit, but couldn' because the power
+outlet didn't supplied enough juice to charge the laptop. So, I was
+forced to switch to my phone for entertainment while waiting several hours
+several my flight, despite having a massive gaming laptop in my bag.
 
 #### It turns out I'm noise picky.
 
 When building or purchasing a computer, something to consider is noise. With my
-previous machines, I wouldn't worry about it. "Noise? Why should I be concerned
-about that? I'm not building a recording studio!", I'd joke to myself. After
+previous machines, I didn't worry about it. I'd joke to myself, "Noise? Why
+should I be concerned about that? I'm not building a recording studio"! After
 several years of focusing on how I *actually* use my computing devices, I've
-noticed that I am actually very picky with noise, and on a related note, heat.
-Every time I hear the fans kick up, I start to worry that I am over-taxing the
-system and start to monitor the biggest culprits. When I *am* running taxing
-processes, I tend to always monitor the cpu temps and don't like to seem them
-high at all.
+noticed that I am very picky with noise, and on a related note, heat. Every time
+I hear the fans kick up, I start to worry that I am over-taxing the system and
+start to monitor the biggest culprits. When running taxing processes, I watch
+the cpu temps and hate seeing them even slightly high.
 
 <center>
 <a href="../../img/posts/sold-bonobo/temps.jpg"><img alt="Temp Sensors" src="../../img/posts/sold-bonobo/temps.jpg" style="max-width: 80%;"/></a>
@@ -128,15 +128,15 @@ high at all.
 <caption>Parallel Compression on the Bonobo Spiked the Temps</caption>
 </center>
 
-I hoped the extra *thickness* of the Bonobo would help with the heating issues.
-While I think it might have helped a little bit, the reality is that when you
-shove a decent GPU into a laptop... it's going to give off heat. Additionally,
-when using a powerful CPU to it's full potential, it is very difficult for a
-laptop to compete with a desktop-level cooling system. The Bonobo is a very
-powerful laptop, but it's loud fans prevented me from actually *using* it to
-it's full potential, because I would immediately start shutting down processes
-when it got a little noisy. I know the fans spin up to *help* with thermals, but
-I think the Bonobo was just a tad to hot and loud for my taste.
+I hoped the extra *thickness* of the Bonobo would help with any heating issues.
+While it might have a little bit, when you shove a decent GPU into a laptop...
+it's going to give off heat. Additionally, when using a powerful CPU to it's
+full potential, it is very difficult for a laptop to compete with a
+desktop-level cooling system. The Bonobo is a very powerful laptop, but the loud
+fans prevented me from actually *using* it to its full potential, because I
+would immediately start shutting down processes when the noise kicked up. I know
+the fans spin up to *help* with thermals, but I think the Bonobo was just a tad
+to hot and loud for my taste.
 
 
 #### A Desktop Replacement?
@@ -148,7 +148,7 @@ desktop*. Most of the time, I am just browsing or writing code on the machine in
 front of me. If I need more power, I connect remotely to a bigger, better,
 computer. I also never game "on the go", so if I want to have a computer for
 gaming, it makes much more sense to eventually have a half-decent desktop, which
-will serve my needs much better that even high-end laptops.
+will fit my needs much better that even high-end gaming laptops.
 
 <a href="../../img/posts/sold-bonobo/power-cord.jpg"><img alt="Bonobo Power Cord" src="../../img/posts/sold-bonobo/power-cord.jpg" style="max-width: 100%;"/></a>
 <caption>The power cord alone made it difficult to pick up the Bonobo and move it elsewhere</caption>
@@ -160,18 +160,27 @@ having to unplug and re-plug all the devices when I wanted to move the computer.
 *In theory*, I could move the Bonobo from my desk into the other room and work
 with my wife at the kitchen table whenever we wanted, but I *rarely* did.
 Unplugging all my devices and fishing the massive power cable out from behind my
-desk (because the battery life isn't... yea, I don't think I need to explain)
-was enough to prompt me to treat the Bonobo as a desktop, rather than a laptop.
+desk (because the battery life is ... yea, I don't think I need to explain
+this), was usually enough to prompt me to treat the Bonobo as a desktop, rather
+than a laptop.
 
 ## Recent Discoveries & My New Plan
 
-A while back, I bought a [used x230 Thinkpad](../my-new-used-x230/). Over the
-past summer, I finally purchased a [used docking
+A while back, I bought a [used x230 Thinkpad](../my-new-used-x230/). Last
+summer, I finally purchased a [used docking
 station](https://www.ebay.com/itm/Lenovo-Thinkpad-Mini-Docking-Station-Series-3-USB-3-0-T410-L420-L520-X230-T530/272238176342?epid=562055390&hash=item3f62a8e856:g:PbIAAOSw2x1XMPHU:sc:USPSPriority!02703!US!-1)
-for the x230 to try out a docked setup. I loved it. It fit my needs
+for the x230, so I could try out a docked setup. I loved it. It fit my needs
 exceptionally. I was able to have *all* of my periphery devices attached to the
-dock, and I could have my portable laptop connected to everything, or, with the
-push of a button, pop the laptop from the dock and be on my way.
+dock and thus, the x230, but the push of a button I could detach the latptop be
+on my way. The setup worked so well in fact, that I started to use my x230 as my
+desk computer, and would remote to my Bonobo on the other side of the room when
+I needed it. At that point, I realized that I might want to switch things up.
 
-I want to conclude by again stating that the System76 is *not* a bad machine. It
-just wasn't for me anymore.
+I want to conclude by again stating that my System76 Bonobo Extreme was *not* a
+bad machine. It is great when used as a standalone, semi-portable computer. I
+didn't use it that way, and as a result, it just wasn't for me anymore. A quite,
+cool, portable, but dockable, laptop is ideal for my main device *right now*,
+even if it isn't as powerful. Unfortunately, System76 doesn't offer such a
+machine at this time. So, my plan is to replace the Bonobo with newer thinkpad +
+dock combination. Hopefully that combination will give me a nice dock setup that
+I have grown to appreciate and love.
