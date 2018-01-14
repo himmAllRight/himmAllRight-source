@@ -7,10 +7,12 @@ tags   = ["Hardware", "Homelab", "Linux",]
 draft  = true
 +++
 
-Well, last month I did something I didn't think I would do. I sold my main workstation
-computer. My System76 Bonobo laptop. Some events over the last few months have made me
-realize that my realistic computing *needs* are drastically different than what they were when
-I purchased the Bonobo. This post will highlight some of those realizations.
+Last fall, I did something I didn't think I would do anytime soon.... I sold my
+main workstation computer. Specifically, my System76 Bonobo Extreme laptop.
+Several events over the last few months have led me to the realization that my
+*actual* computing *needs* are drastically different than what they were when I
+purchased the Bonobo in early 2015. This post will highlight some of those
+realizations, and why I ultimately decided to sell my Bonobo laptop.
 
 <!--more-->
 
@@ -20,36 +22,35 @@ I purchased the Bonobo. This post will highlight some of those realizations.
 <div id="caption">Bonobo Workstation Setup</div>
 
 
-I bought my Bonobo Extreme laptop from [System76](https://www.system76.com)
-during my first year after graduating college. I needed to replace my desktop
-that I built before my High School graduation, and used all throughout college.
-My old desktop had a i7-930 CPU and 6GB of RAM with some 1TB HDs in it. While it
-served me well in college, I was starting to feel restricted by it, especially
-the limited RAM. I did some research and came to the conclusion that it would be
-better to get a new system, rather than trying to upgrade my old desktop. I
-wanted a new, powerful computer that could easily run multiple VMs and compile
-software and packages fast.
+I bought my Bonobo laptop from [System76](https://www.system76.com) during my
+first post-college year. I needed to replace my old workstation: an aging
+desktop that I had built before my High School graduation. While its i7-930 CPU,
+6GB of RAM, NVIDIA GTX 260, and hodgepodge of hard drives (SSD and HHD) serverd
+my needs throughout college, I was starting to feel restricted by it. After some
+research, I came to the conclusion that it would be better to get a new system,
+instead of trying to upgrade my old desktop. I wanted a new, powerful computer
+that could easily run multiple VMs, play some video games, and compile
+software/run models *fast*.
 
-Also, after a few months of work, I realized that I wasn't using a portable
-computer as much. I went to work and used my work computer, and then came home
-to my desktop, so portability wasn't the *biggest* concern when searching. While
-I didn't need the *most* portable computer, the reality was that I still lived
-out of state from my family, and would leave home for a week or more at a time
-during hollidays or vacation, so I wanted to still *be able* to lug my computer
-with me. I also liked to game *a little bit* with my brothers when visiting, so
-I wanted a dedicated GPU if possible.
+After a few months at my new job, I realized I wasn't using a portable computer
+as much. I went to work, used my work computer, and then came home to my
+desktop, so portability wasn't the *biggest* concern when searching. That being
+said, I still lived out of state from my family, and would leave for a week or
+more at a time during hollidays or vacation. I wanted to still *be able* to lug
+my computer with me during family vists. I also liked to game *a little bit*
+when visiting with my brothers, or after work, so a dedicated GPU made the list.
 
 <a href="../../img/posts/sold-bonobo/portable-setup.jpg"><img alt="Portable Bonobo Setup" src="../../img/posts/sold-bonobo/portable-setup.jpg" style="max-width: 100%;"/></a>
 <div id="caption">Portable Bonobo Setup</div>
 
-All of this pointed me towards desktop-replacement laptops. I really wanted to
-support a Linux-only vendoor, so I decided to look at System76, and the Bonobo
-seemed comparable to others on the market, and I knew it would support the Linux
-distros I'd put on it without any issues. It was a big computer, but my plan was
-to use it as a desktop most of the time, but still be able to travel with it
-when I needed to go somewhere for more than just a day or two. I also liked that
-the case was larger, because I hoped it would increase airflow to help with
-heat/noise management.
+All of this pointed me towards desktop-replacement laptops. I wanted to support
+a Linux-only vendoor, so I looked at System76.The Bonobo seemed comparable to
+other laptops on the market, but being a System76 device, I felt more confident
+it would play nicely with Linux. It was a big laptop, but my plan was to use it
+mostly as a desktop computer, but still be able to travel with it when I needed
+to go somewhere for more than just a day or two. Besides, I liked that the case
+was larger, because I hoped it would help increase airflow to help with
+heat management.
 
 I purchased the Bonobo, and it worked out very well for several years. It was a
 very powerful computer (more than my old *desktop*), but still portable *enough*
@@ -138,7 +139,7 @@ when it got a little noisy. I know the fans spin up to *help* with thermals, but
 I think the Bonobo was just a tad to hot and loud for my taste.
 
 
-#### Desktop Replacement?
+#### A Desktop Replacement?
 
 My issues with the Bonobo boiled down to the fact that based on *my current
 computing use-case*, the Bonobo functioned less as a
