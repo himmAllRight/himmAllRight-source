@@ -4,7 +4,6 @@ date   = "2018-01-14"
 author = "Ryan Himmelwright"
 image  = "img/header-images/bonobo.jpg"
 tags   = ["Hardware", "Homelab", "Linux",]
-draft  = true
 +++
 
 Last fall, I did something I didn't think I would do anytime soon.... I sold my
