@@ -18,7 +18,7 @@ realizations, and why I ultimately decided to sell my Bonobo laptop.
 ## Why I got the Bonobo
 
 <a href="../../img/posts/sold-bonobo/alakazam.jpg"><img alt="Bonobo Setup" src="../../img/posts/sold-bonobo/alakazam.jpg" style="max-width: 100%;"/></a>
-<div id="caption">Bonobo Workstation Setup</div>
+<div class="caption">Bonobo Workstation Setup</div>
 
 
 I bought my Bonobo laptop from [System76](https://www.system76.com) during my
@@ -40,7 +40,7 @@ my computer with me during family vists. I also liked to game *a little bit*
 when visiting with my brothers, or after work, so I added a dedicated GPU to the search criteria.
 
 <a href="../../img/posts/sold-bonobo/portable-setup.jpg"><img alt="Portable Bonobo Setup" src="../../img/posts/sold-bonobo/portable-setup.jpg" style="max-width: 100%;"/></a>
-<div id="caption">Portable Bonobo Setup</div>
+<div class="caption">Portable Bonobo Setup</div>
 
 All of this pointed me towards desktop-replacement laptops. I wanted to support
 a Linux-only vendoor, so I looked at System76. The Bonobo seemed comparable to
@@ -59,7 +59,7 @@ for when I wanted to take it somewhere.
 ## The Modern Reality
 
 <a href="../../img/posts/sold-bonobo/side-view.jpg"><img alt="Bonobo Thickness" src="../../img/posts/sold-bonobo/side-view.jpg" style="max-width: 100%;"/></a>
-<div id="caption">Bonobo Side View</div>
+<div class="caption">Bonobo Side View</div>
 
 As the years passed, my computing needs changed. On top of that, some of the
 initial assumptions about my computer use turned out to not be entirely true.
@@ -123,9 +123,8 @@ the cpu temps and hate seeing them high.
 
 <center>
 <a href="../../img/posts/sold-bonobo/temps.jpg"><img alt="Temp Sensors" src="../../img/posts/sold-bonobo/temps.jpg" style="max-width: 80%;"/></a>
-
-<caption>Parallel Compression on the Bonobo Spiked the Temps</caption>
 </center>
+<div class="caption">Parallel Compression on the Bonobo Spiked the Temps</div>
 
 I hoped the extra *thickness* of the Bonobo would help with any heating issues.
 While it might have a little bit, when you shove a decent GPU into a laptop...
@@ -151,7 +150,7 @@ invest in an eGPU), which will fit my needs much better that even high-end
 gaming laptops.
 
 <a href="../../img/posts/sold-bonobo/power-cord.jpg"><img alt="Bonobo Power Cord" src="../../img/posts/sold-bonobo/power-cord.jpg" style="max-width: 100%;"/></a>
-<caption>The power cord alone made it difficult to pick up the Bonobo and move it elsewhere</caption>
+<div>The power cord alone made it difficult to pick up the Bonobo and move it elsewhere</div>
 
 The Bonobo is great if you sit it on a desk and use it as your full computer. I
 did not. I have a ton of periphery devices, and started to even use it in
