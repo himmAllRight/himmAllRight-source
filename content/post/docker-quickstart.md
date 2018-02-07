@@ -19,7 +19,39 @@ get started.
 
 ## Installing Docker
 
+Installing docker on [Solus](https://solus-project.com) was easy enough. I just
+had to install the package, and then enable the service:
+
+```
+sudo eopkg it docker
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+On other distributions, it may not be in the package manager, or it might be
+under a different name. To be sure, check out the community edition
+[installation
+documentation](https://docs.docker.com/install/linux/docker-ce/fedora/#set-up-the-repository)
+for your specific distro.
+
+
 ## Adding User to Docker Group
+
+When I first played with docker a few years ago, I ran everything using `sudo`,
+which isn't the best idea. To get around this, a user can simply be added to the
+`docker` group in order to run all the docker under that user:
+
+```
+sudo usermod -a -G docker ryan
+```
+
+If the docker group is not created for some reason, it can be added:
+
+```
+sudo groupadd docker
+```
+
+*Note: These commands MAY differ based on distro.*
 
 ## Pulling images
 
