@@ -2,7 +2,7 @@
 title  = "Quick Start to Docker"
 date   = "2018-02-10"
 author = "Ryan Himmelwright"
-image  = "img/header-images/kadabra-lights.jpg"
+image  = "img/header-images/baltimore-dock-gray.jpg"
 tags   = ["DevOps", "Homelab", "Linux", "Containers",]
 draft  = true
 +++
@@ -64,4 +64,5 @@ sudo groupadd docker
 ## Volumes
 
 ## In Conclusion 
+
 
