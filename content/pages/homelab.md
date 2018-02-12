@@ -70,7 +70,6 @@ Mac OS
 
 <a name="servers"></a>
 ### Servers
-<img alt="Lack Rack" src="../../img/homelab/rack.jpg" width=100%>
 
 <a name="ninetales"></a>
 #### - Ninetales (VM Host / Home Server)
@@ -82,17 +81,6 @@ Intel Xeon E3-1225 v3 [3.2 GHz (3.6 GHz Turbo), 8M Cache, 4 Cores, 4 Threads]
 2 x 1TB WD 7200 RPM HDD (ZFS Mirror, for Backups) (Hotswap)
 2 x 3TB TOSHIBA 7200 RPM HDD (ZFS Mirror, for Storage) (Hotswap)
 Proxmox VE 4.4
-```
-
-#### - Charmander (Test Server / Rebecca’s Gaming Computer)
-
-```
-My old desktop (first computer build)
-Intel i7-930 [2.8 GHz (3.06 GHz Turbo), 8M Cache, 4 Cores, 8 Threads]
-6 GB RAM
-Nvidia GTX 260
-120 GB Kingston SSD
-Ubuntu MATE 15.10 OS
 ```
 
 #### - CyberPower 1500VA/900W UPS
@@ -140,14 +128,6 @@ Armbian (Ubuntu 16.04 version)
     512 MB RAM
     20 GB SSD
     Ubuntu 16.04 OS
-
-#### Wedding-Server (Himmelwright Wedding Website Host)
-
-    Digital Ocean KVM Droplet
-    1 Core
-    512 MB RAM
-    20 GB SSD
-    Ubuntu 14.04 LTS OS
 
 ### AWS
 
