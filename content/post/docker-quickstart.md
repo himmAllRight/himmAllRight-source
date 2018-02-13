@@ -53,7 +53,25 @@ sudo groupadd docker
 
 *Note: These commands MAY differ based on distro.*
 
-## Pulling images
+## Some Useful Commands
+
+```
+docker ps -a
+```
+
+```
+docker rm `docker ps -aq`
+```
+```
+docker images
+```
+
+```
+docker rm
+docker rmi
+```
+
+## Images
 
 ## Creating Containers
 
