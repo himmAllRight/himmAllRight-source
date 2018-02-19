@@ -17,7 +17,10 @@ get started.
 <!--more-->
 
 
+
 ## Installing Docker
+
+<img src="../../img/posts/docker-quickstart/docker-logo.png" style="max-width: 100%; width: 400px; float: right; margin: 0px 15px 5px 5px;" alt="Docker Logo" />
 
 Installing docker on [Solus](https://solus-project.com) was easy enough. I just
 had to install the package, and then enable the service:
