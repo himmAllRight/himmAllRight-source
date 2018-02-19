@@ -108,6 +108,28 @@ docker inspect container_name | grep IPAddress
 
 #### help
 
+Last but not least, don't forget about the `help` command. To see all the
+different docker commands, just run:
+
+```
+docker help
+```
+
+Beyond that, when using specific command, `inspect` for example, a description
+and possible options can be shown using the `--help` flag:
+
+```
+docker inspect --help
+```
+
+Just as `man` pages can be extremely useful when working on a Linux system,
+`help` is valuable when using docker.
+
+
+
+
+## Images
+
 ```
 docker images
 ```
@@ -116,8 +138,6 @@ docker images
 docker rm
 docker rmi
 ```
-
-## Images
 
 ## Creating Containers
 
