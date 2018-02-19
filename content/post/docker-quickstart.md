@@ -1,9 +1,9 @@
 +++
 title  = "Quick Start to Docker"
-date   = "2018-02-10"
+date   = "2018-02-20"
 author = "Ryan Himmelwright"
 image  = "img/header-images/baltimore-dock-gray.jpg"
-tags   = ["DevOps", "Homelab", "Linux", "Containers",]
+tags   = ["DevOps", "Homelab", "Linux", "Containers", "Docker",]
 draft  = true
 +++
 
@@ -55,13 +55,56 @@ sudo groupadd docker
 
 ## Some Useful Commands
 
+Before we get too caught up in learning some of the docker basics, lets just go
+over a few useful commands that make navigating docker a bit easier.
+
+
+#### docker ps
+
+First, just like linux has the `ps` command to see running processes, docker has
+`docker ps` to see it's created and running containers. To see the currently
+running containers, use the basic `docker ps` command:
+
+```
+docker ps
+```
+
+This doesn't always tel the whole story though. Containers might not be running
+*all* of the time. They could be stopped, *or* if something fails, it might have
+exited. Containers that are stopped or exited won't show up in the default
+`docker ps` command. To see *all* of the current containers on the system, run
+`ps` with the `-a` flag.
+
 ```
 docker ps -a
 ```
 
+#### docker inspect
+
+Another useful command to know when working with docker containers is `docker
+inspect`.
+
 ```
-docker rm `docker ps -aq`
+docker inspect container_name
+
+## Or ##
+
+docker inspect container_id
 ```
+
+The `inspect` command will dump out the xml for all the low level information
+for the docker container/docker object. The output contains everything about the
+container, Full ID, time created, state, volumes, network information...
+everything. It can be *extremely* useful to pipe the output of `inspect` to grep
+get information about the container. For example, to easily grab the container's
+IP address, the following command can be used:
+
+```
+docker inspect container_name | grep IPAddress
+```
+
+#### help
+
 ```
 docker images
 ```
@@ -76,6 +119,10 @@ docker rmi
 ## Creating Containers
 
 ## Running Applications or shells
+
+```
+docker rm `docker ps -aq`
+```
 
 ## Port Forwarding
 
