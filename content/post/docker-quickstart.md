@@ -202,7 +202,15 @@ find it in my `docker images` list.
 
 ## Creating Containers
 
+Docker containers can be *created* (and not run) with the `docker create`
+command. When creating containers, it is useful to use flags to tailor the
+details of the container, and, to make it more useful. For example, the `-m`
+flag can be used to create a memory limit, `--name` to name it, and the one I
+use the most, `-it` which makes the container interactive with a tty.
+
 ## Running Applications or shells
+
+
 
 ```
 docker rm `docker ps -aq`
