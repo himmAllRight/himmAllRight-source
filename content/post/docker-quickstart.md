@@ -205,13 +205,29 @@ find it in my `docker images` list.
 Docker containers can be *created* (and not run) with the `docker create`
 command. When creating containers, it is useful to use flags to tailor the
 details of the container, and, to make it more useful. For example, the `-m`
-flag can be used to create a memory limit, `--name` to name it, and the one I
-use the most, `-it` which makes the container interactive with a tty.
+flag can be used to create a memory limit, `--name` to name it, etc. For
+example, to create a simple nginx container:
+
+```
+docker create --name web-test nginx:latest
+```
+
+
+## Starting & Running Containers
+
+To *start* a container created with `docker create`, or one that has simply
+stopped for some reason, use the `docker start` command. For example, to start
+the container created in the previous step:
+
+```
+docker start web-test
+```
+
+Instead of using a `docker create` and `docker start` combination, `docker run`
+can be used to both instantiate *and* start a container.
+
 
 ## Running Applications or shells
-
-
-
 ```
 docker rm `docker ps -aq`
 ```
