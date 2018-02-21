@@ -64,6 +64,9 @@ over a few useful commands that make navigating docker a bit easier.
 
 #### docker ps
 
+<a href="../../img/posts/docker-quickstart/docker-ps.png"><img src="../../img/posts/docker-quickstart/docker-ps.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker ps" /></a>
+
+
 First, just like linux has the `ps` command to see running processes, docker has
 `docker ps` to see it's created and running containers. To see the currently
 running containers, use the basic `docker ps` command:
@@ -78,21 +81,16 @@ exited. Containers that are stopped or exited won't show up in the default
 `docker ps` command. To see *all* of the current containers on the system, run
 `ps` with the `-a` flag.
 
-``` bash
-docker ps -a
-```
 
 #### docker inspect
+
+<a href="../../img/posts/docker-quickstart/docker-inspect.png"><img src="../../img/posts/docker-quickstart/docker-inspect.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker Search output" /></a>
 
 Another useful command to know when working with docker containers is `docker
 inspect`.
 
 ``` bash
 docker inspect container_name
-
-## Or ##
-
-docker inspect container_id
 ```
 
 The `inspect` command will dump out the xml for all the low level information
@@ -108,12 +106,11 @@ docker inspect container_name | grep IPAddress
 
 #### help
 
-Last but not least, don't forget about the `help` command. To see all the
-different docker commands, just run:
+<a href="../../img/posts/docker-quickstart/docker-help.png"><img src="../../img/posts/docker-quickstart/docker-help.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker help" /></a>
 
-``` bash
-docker help
-```
+Last but not least, don't forget about the `help` command. To see all the
+different docker commands, just run `docker help`. Each command 
+
 
 Beyond that, when using specific command, `inspect` for example, a description
 and possible options can be shown using the `--help` flag:
@@ -157,6 +154,7 @@ will be added to the list of local images available for spinning spinning up
 docker containers from. To see all of the local images, use the `docker images`
 command:
 
+
 ``` bash
 docker images
 ```
@@ -164,12 +162,10 @@ docker images
 To delete an image, use the `docker images rm` command, or my preferred, lazier
 command, `docker rmi`:
 
+<a href="../../img/posts/docker-quickstart/docker-images.png"><img src="../../img/posts/docker-quickstart/docker-images.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="docker images and docker rmi" /></a>
+
 ``` bash
 docker image rm image_name
-
-## OR ##
-
-docker rmi image_name
 ```
 
 Lastly, it should be noted that custom images can be created/tailored by using a
