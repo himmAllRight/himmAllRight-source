@@ -219,14 +219,37 @@ the container created in the previous step:
 docker start web-test
 ```
 
+Similarly, a container can be stopped with `docekr stop`, or restarted with
+`docker restart`.
+
 Instead of using a `docker create` and `docker start` combination, `docker run`
-can be used to both instantiate *and* start a container.
+can be used to both instantiate *and* start a container. For example, to create
+and start the "web-test" container from the previous section:
+
+```
+docker run --name web-test -d nginx:latest
+```
 
 
-## Running Applications or shells
+
+#### Cleaning containers
+
+<a href="../../img/posts/docker-quickstart/docker-rm.png"><img src="../../img/posts/docker-quickstart/docker-rm.png" style="max-width: 100%; float: left; width: 95%;" alt="Docker rm all images" /></a>
+
+Over time, old containers may build up in the system. To remove an old (not
+running) container, use `docker rm` with either the container name, *or* the id.
+Note, to easily delete *all* of the containers on the system, `docker rm` can be
+fed the output of `docker ps -aq`, where the `-aq` flag returns a list of all
+the container ids. (Note: this doesn't work in my Fish shell).
+
+
+## Attaching to Containers
+
 ```
-docker rm `docker ps -aq`
+docker exec
+docker attach
 ```
+
 
 ## Port Forwarding
 
