@@ -267,10 +267,38 @@ benefit that after exiting, just the shell exits, and *not* the entire
 container, making it my preferred method.
 
 
+## Ports & Volumes 
 
-## Port Forwarding
+Docker containers can be built and run using many specific commands to tailor
+the container and how it interacts with the host system. There are two in
+particular I want to just briefly touch in this *quick start* post. Those two
+options, are `ports` and `volumes`.
 
-## Volumes
+#### Ports
+
+
+<a href="../../img/posts/docker-quickstart/docker-exec-bash.png"><img src="../../img/posts/docker-quickstart/docker-exec-bash.png" style="max-width: 100%; float: left;" alt="Docker exec bash example" /></a>
+<div class="caption">An example using docker exec with a bash shell, as an alternative to docker attach</div>
+
+While it is nice to spin up a web server inside a docker container, it isn't
+always very useful to only have it available to the host machine. Using the `-p`
+flag when running a container, container ports can be bound to ports on the host
+system.
+
+Using `-p` with just a single number, as in `-p 8080`, that port of the
+container is exposed. To bind ports to the host use two port numbers seperated
+with a `:`. The first number is the host port to bind to, and the second is the
+container port to expose and forward.
+
+For example, for following runs a nginx container with port 80 forwarded to port
+8081 on the host. As a result, any computer connecting to port 8081 of the host
+machine will be directed to the container nginx web server.
+
+
+
+#### Volumes
+
+
 
 ## In Conclusion 
 
