@@ -245,10 +245,27 @@ the container ids. (Note: this doesn't work in my Fish shell).
 
 ## Attaching to Containers
 
-```
-docker exec
-docker attach
-```
+After a container is running, it might be necessary on occasion to attach to it,
+and poke around inside of a shell. There is the obvious way to do this, `docker
+attach`, and sort-of work-around way which I prefer to use, `docker exec`.
+
+<a href="../../img/posts/docker-quickstart/docker-attach.png"><img src="../../img/posts/docker-quickstart/docker-attach.png" style="max-width: 100%; float: left;" alt="Docker attach example" /></a>
+<div class="caption">An example using the docker attach command</div>
+
+The attach command works as one would expect. It is a command to "Attach local
+standard input, output, and error streams to a running container". This is all
+well an great except for one issue: when exiting the attached container, the
+*container also* exits.
+
+<a href="../../img/posts/docker-quickstart/docker-exec-bash.png"><img src="../../img/posts/docker-quickstart/docker-exec-bash.png" style="max-width: 100%; float: left;" alt="Docker exec bash example" /></a>
+<div class="caption">An example using docker exec with a bash shell, as an alternative to docker attach</div>
+
+A way to get around this is by utilizing the `docker exec` command, which allows
+a command to be executed inside a container. Executing a shell program, such as
+`bash`, provides a similar experience to attaching the container, with the
+benefit that after exiting, just the shell exits, and *not* the entire
+container, making it my preferred method.
+
 
 
 ## Port Forwarding
