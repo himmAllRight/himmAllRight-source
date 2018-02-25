@@ -1,18 +1,18 @@
 +++
 title  = "Quick Start to Docker"
-date   = "2018-02-20"
+date   = "2018-02-25"
 author = "Ryan Himmelwright"
 image  = "img/header-images/baltimore-dock-gray.jpg"
-tags   = ["DevOps", "Homelab", "Linux", "Containers", "Docker",]
+tags   = ["DevOps", "Linux", "Homelab", "Containers", "Docker", "Solus",]
 draft  = true
 +++
 
-Over the past few months, and particularly over the holiday season, I've started
-to deep dive and play around with some technologies I've had my eye on the last
-few years. One such technology, is Docker. While Docker has a massive eco-system
-surrounding it, and can take years to truly master, this post will hopefully
-help you get up and playing with docker containers in just a few minutes. Lets
-get started.
+Over the past few months (particularly over the holiday season), I started to
+explore and learn several technologies I've had my eye on the last few years.
+First on the list: [Docker](https://docker.io). These days, Docker has a massive
+ecosystem surrounding it, and can take years to truly master. This post on the
+other hand, will *hopefully* help you get up and playing with docker containers in
+just a few minutes. Lets get started.
 
 <!--more-->
 
@@ -40,9 +40,10 @@ for your specific distro.
 
 ## Adding User to Docker Group
 
-When I first played with docker a few years ago, I ran everything using `sudo`,
-which isn't the best idea. To get around this, a user can simply be added to the
-`docker` group in order to run all the docker under that user:
+By default, user accounts will not have permission to run docker commands
+without root access. So, after first installing docker, it might be tempting to
+just run everything using `sudo`, but that isn't the best idea. To get around
+this, simply add the user account to the `docker` group:
 
 ``` bash
 sudo usermod -a -G docker ryan
@@ -54,75 +55,67 @@ If the docker group is not created for some reason, it can be added:
 sudo groupadd docker
 ```
 
-*Note: These commands MAY differ based on distro.*
+Afterwards, that user should be able to run docker commands without requiring
+`sudo`. They *might* have to log out and back in first.
+
+*Note: These commands may differ based on distro.*
 
 ## Some Useful Commands
 
-Before we get too caught up in learning some of the docker basics, lets just go
+Before getting too caught up in creating and using containers, lets first go
 over a few useful commands that make navigating docker a bit easier.
 
 
 #### docker ps
 
 <a href="../../img/posts/docker-quickstart/docker-ps.png"><img src="../../img/posts/docker-quickstart/docker-ps.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker ps" /></a>
+<div class="caption">Example of the docker ps and docker ps -a commands</div>
 
 
-First, just like linux has the `ps` command to see running processes, docker has
-`docker ps` to see it's created and running containers. To see the currently
-running containers, use the basic `docker ps` command:
+Similar to how Unix-based systems have the `ps` command to see running
+processes, docker has `docker ps` to see created and running containers. To
+view the currently running containers, use the basic `docker ps` command:
 
-``` bash
-docker ps
-```
-
-This doesn't always tel the whole story though. Containers might not be running
-*all* of the time. They could be stopped, *or* if something fails, it might have
-exited. Containers that are stopped or exited won't show up in the default
-`docker ps` command. To see *all* of the current containers on the system, run
-`ps` with the `-a` flag.
+The base command however, doesn't always tell the whole story. A system might
+have containers that *exist* but are not running. A container may have been
+stopped, *or* exited if it encountered an error. Containers that are stopped or
+exited *will not* show up in the default `docker ps` command. To see *all* of the
+current containers on the system, run `ps` with the `-a` flag.
 
 
 #### docker inspect
 
-<a href="../../img/posts/docker-quickstart/docker-inspect.png"><img src="../../img/posts/docker-quickstart/docker-inspect.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker Search output" /></a>
+<a href="../../img/posts/docker-quickstart/docker-inspect.png"><img src="../../img/posts/docker-quickstart/docker-inspect.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker inspect examples: docker inspect web-test | grep Status and docker inspect web-test | grep IPAddress" /></a>
+<div class="caption">Using the docker inspect command to get the container's status and IP address</div>
 
-Another useful command to know when working with docker containers is `docker
-inspect`.
-
-``` bash
-docker inspect container_name
-```
-
-The `inspect` command will dump out the xml for all the low level information
-for the docker container/docker object. The output contains everything about the
-container, Full ID, time created, state, volumes, network information...
-everything. It can be *extremely* useful to pipe the output of `inspect` to grep
-get information about the container. For example, to easily grab the container's
-IP address, the following command can be used:
+Another useful command when working with docker containers is `docker inspect`.
+The `inspect` command will dump the xml for all the low level information of the
+container/docker object. The output contains basically *everything* about the
+container: Full ID, time created, state, volumes, network information...
+everything. It can be useful to pipe the output of `inspect` to grep, in order
+to get specific information about the container quickly. 
 
 ``` bash
 docker inspect container_name | grep IPAddress
 ```
 
+For example, the above command will grab and return only the lines which contain
+"IPAddress".
+
 #### help
 
-<a href="../../img/posts/docker-quickstart/docker-help.png"><img src="../../img/posts/docker-quickstart/docker-help.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker help" /></a>
+<a href="../../img/posts/docker-quickstart/docker-help.png"><img src="../../img/posts/docker-quickstart/docker-help.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Using the docker help command flags. For Example: docker inspect --help" /></a>
+<div class="caption">Using the docker help command flags.</div>
 
 Last but not least, don't forget about the `help` command. To see all the
-different docker commands, just run `docker help`. Each command 
+available docker commands, run `docker help`. 
 
+Additionally, when using each of those specific commands, (`inspect` for
+example), a description and possible options can be shown using the `--help`
+flag (as in `docker inspect --help`).
 
-Beyond that, when using specific command, `inspect` for example, a description
-and possible options can be shown using the `--help` flag:
-
-``` bash
-docker inspect --help
-```
-
-Just as `man` pages can be extremely useful when working on a Linux system,
-`help` is valuable when using docker.
-
-
+Just as man pages can be extremely valuable when working on a Linux system,
+`help` is just as essential when using docker.
 
 
 ## Images
