@@ -277,27 +277,50 @@ options, are `ports` and `volumes`.
 #### Ports
 
 
-<a href="../../img/posts/docker-quickstart/docker-exec-bash.png"><img src="../../img/posts/docker-quickstart/docker-exec-bash.png" style="max-width: 100%; float: left;" alt="Docker exec bash example" /></a>
-<div class="caption">An example using docker exec with a bash shell, as an alternative to docker attach</div>
+<a href="../../img/posts/docker-quickstart/nginx-firefox-port.png"><img src="../../img/posts/docker-quickstart/nginx-firefox-port.png" style="max-width: 100%; float: center;" alt="Container ports can be forwarded to the host's ports." /></a>
+<div class="caption">Container ports can be forwarded to the host's ports.</div>
 
 While it is nice to spin up a web server inside a docker container, it isn't
 always very useful to only have it available to the host machine. Using the `-p`
 flag when running a container, container ports can be bound to ports on the host
 system.
 
+<a href="../../img/posts/docker-quickstart/docker-port.png"><img src="../../img/posts/docker-quickstart/docker-port.png" style="max-width: 100%; float: center;" alt="Creating an nginx container, forwarding port 80 to he host's 8081" /></a>
+<div class="caption">Creating an nginx container, forwarding it's port 80 to the host's port 8081</div>
+
 Using `-p` with just a single number, as in `-p 8080`, that port of the
 container is exposed. To bind ports to the host use two port numbers seperated
 with a `:`. The first number is the host port to bind to, and the second is the
 container port to expose and forward.
 
-For example, for following runs a nginx container with port 80 forwarded to port
+```
+docker run -itd --name webtest -p 8081:80 nginx:latest
+```
+
+The above command, for example, runs a nginx container with port 80 forwarded to port
 8081 on the host. As a result, any computer connecting to port 8081 of the host
 machine will be directed to the container nginx web server.
 
 
-
 #### Volumes
 
+Lastly, by design docker containers are expendable. They are run, and then
+thrown away. It should not be assumed that *any* data inside the container will
+be preserved by default. That is, unless
+[volumes](https://docs.docker.com/storage/volumes/) are used. 
+
+Docker volumes are the preferred mechanism for preserving data across container
+runs, and are specified using the `-v` flag. Similar to setting ports, volumes
+can be created by providing either a single path, or two separated by a `:`.
+When a single path is provided, as in `-v /Data`, docker will create a volume
+and bind it to that location within the container. Two locations can be provided
+to bind a directory on the host system, to the volume inside to container. 
+
+
+
+In the above command, for example, `-v /Data/website:/var/www/` will use the
+`/Data/website/` directory of the host system as a volume located at `/var/www/`
+inside the container.
 
 
 ## In Conclusion 
