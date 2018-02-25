@@ -120,26 +120,22 @@ Just as man pages can be extremely valuable when working on a Linux system,
 
 ## Images
 
-A docker container is spun up from a docker images. Images can be pulled down
+A docker container is created from a base *image*. Images can be pulled down
 from [Dockerhub](https://hub.docker.com/). To search docker hub from command
-line, use the `docker search` command:
+line, use the `docker search` command. For example, `docker search nginx` will
+search for images related nginx.
 
-``` bash
-docker search nginx
-```
 
-<a href="../../img/posts/docker-quickstart/docker-search.png"><img src="../../img/posts/docker-quickstart/docker-search.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker Search output" /></a>
+<a href="../../img/posts/docker-quickstart/docker-search.png"><img src="../../img/posts/docker-quickstart/docker-search.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker Search output. Ex: docker search nginx" /></a>
 <div class="caption">The search output for nginx images</div>
 
 The search will return a list of the all the public images in order from most to
 least stars. When a desired image is found, pull it down using the `docker pull`
-command:
+command. For example, `docker pull nginx` will pull down the [nginx
+image](https://hub.docker.com/_/nginx/).
 
-``` bash
-docker pull nginx:latest
-```
 
-<a href="../../img/posts/docker-quickstart/docker-pull.png"><img src="../../img/posts/docker-quickstart/docker-pull.png" style="max-width: 100%; width:100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker Pull output" /></a>
+<a href="../../img/posts/docker-quickstart/docker-pull.png"><img src="../../img/posts/docker-quickstart/docker-pull.png" style="max-width: 100%; width:100%; float: left; margin: 0px 15px 0px 0px;" alt="Docker Pull output. Ex: docker pull nginx" /></a>
 <div class="caption">Pulling the latest nginx image</div>
 
 Docker will then download all the layers for the image. When it completes, it
