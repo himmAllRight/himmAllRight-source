@@ -276,7 +276,6 @@ options, are `ports` and `volumes`.
 
 #### Ports
 
-
 <a href="../../img/posts/docker-quickstart/nginx-firefox-port.png"><img src="../../img/posts/docker-quickstart/nginx-firefox-port.png" style="max-width: 100%; float: center;" alt="Container ports can be forwarded to the host's ports." /></a>
 <div class="caption">Container ports can be forwarded to the host's ports.</div>
 
@@ -304,10 +303,16 @@ machine will be directed to the container nginx web server.
 
 #### Volumes
 
+<a href="../../img/posts/docker-quickstart/nginx-firefox-volume.png"><img src="../../img/posts/docker-quickstart/nginx-firefox-volume.png" style="max-width: 100%; float: center;" alt="Nginx container with website pages in a volume from the host." /></a>
+<div class="caption">Containers can attach volumes from the host system for persistent data.</div>
+
 Lastly, by design docker containers are expendable. They are run, and then
 thrown away. It should not be assumed that *any* data inside the container will
 be preserved by default. That is, unless
 [volumes](https://docs.docker.com/storage/volumes/) are used. 
+
+<a href="../../img/posts/docker-quickstart/docker-volume.png"><img src="../../img/posts/docker-quickstart/docker-volume.png" style="max-width: 100%; float: center;" alt="Creating an nginx container, forwarding port 80 to he host's 8081" /></a>
+<div class="caption">Creating an nginx container, forwarding it's port 80 to the host's port 8081</div>
 
 Docker volumes are the preferred mechanism for preserving data across container
 runs, and are specified using the `-v` flag. Similar to setting ports, volumes
@@ -316,11 +321,15 @@ When a single path is provided, as in `-v /Data`, docker will create a volume
 and bind it to that location within the container. Two locations can be provided
 to bind a directory on the host system, to the volume inside to container. 
 
+```
+docker run -d --name testsite -v /home/ryan/testsite/:/usr/share/nginx/html nginx:latest
+```
 
-
-In the above command, for example, `-v /Data/website:/var/www/` will use the
-`/Data/website/` directory of the host system as a volume located at `/var/www/`
-inside the container.
+In the above command, for example, `-v
+/home/ryan/testsite/:/usr/share/nginx/html` will use the `/home/ryan/testsite/`
+directory of the host system as a volume located at `/usr/share/nginx/html`,
+inside the container. As a result, the website files on the host system, are
+server by the containerized nginx web-server.
 
 
 ## In Conclusion 
