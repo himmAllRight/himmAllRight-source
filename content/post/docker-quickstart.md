@@ -1,5 +1,5 @@
 +++
-title  = "Quick Start to Docker"
+title  = "Docker Quick Start"
 date   = "2018-02-25"
 author = "Ryan Himmelwright"
 image  = "img/header-images/baltimore-dock-gray.jpg"
