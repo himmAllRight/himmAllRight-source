@@ -133,3 +133,55 @@ Then, to log into with psql with the new user, `psql -U mytestuser`.
 
 To remove user in bash, `dropuser mytestuser`. However, cannot delete user if it
 owns tables/ other objects.
+
+
+Roles
+
+create db
+
+`\du` shows roles
+
+`GRANT INSERT ON tblTest TO test;`
+
+or
+
+user `test` can now insert to tblTest of the testdb, but ONLY INSERT. Can grant
+ALL to do all the stuff. ex: `GRANT ALL ON tblTest TO test;`
+
+can also `REVOKE` roles.
+
+## myPgAdmin
+
+Install epel-release: 
+
+```
+sudo yum install epel-release
+sudo yum update
+
+```
+
+-- Restart postgresql-10 service --
+
+Install:
+
+```
+yum install phpPgAdmin httpd
+```
+
+Edit phpPgAdmin configuration file (`/etc/httpd/conf.d/phpPgAdmin.conf`):
+
+Replace `Require local` to `Require all granted`
+
+change `Deny from all` to `Allow from all`, and then comment out other Allows.
+
+Enable and start apache:
+
+```
+systemctl enable httpd
+systemctl start httpd
+```
+I had errors because of permissions... something with the kernel. 
+I wonder if it's because of being in a container...
+
+Can't figure this out. I might just watch this section, and if it isn't really
+used after this point it might be okay...
