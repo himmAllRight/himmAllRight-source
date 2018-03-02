@@ -195,3 +195,15 @@ that's the case... Might start taking these notes on my LXC one...
 
 Spinning up a Linux Academy server to use for this stuff. I should take
 advantage of it more for things like this...
+
+## Edit php admin
+
+`/etc/phpPgAdmin/config.inc.php`
+
+Change `$conf['servers'][0]['host'] = '';` with `$conf['servers'][0]['host'] = 'localhost';
+
+Change `$conf['extra_login_security'] = true;` to `$conf['extra_login_security'] = false`
+
+Change `$conf['owned_only'] = false;` to `$conf['owned_only'] = true;`
+
+Restart both `httpd` and `postresql-10`
