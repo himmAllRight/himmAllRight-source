@@ -207,3 +207,30 @@ Change `$conf['extra_login_security'] = true;` to `$conf['extra_login_security']
 Change `$conf['owned_only'] = false;` to `$conf['owned_only'] = true;`
 
 Restart both `httpd` and `postresql-10`
+
+#### Config stuff for the site
+
+in `/var/lib/pgsql/10/data/`, make sure in pg_hba.conf `method` is set to
+`password`.
+
+in `postgresql.comf`, change `listen_address` from `localhost` to `*` to connect
+from the web.
+
+in `/etc/httpd/conf.d/`, check that `phpPgAdmin.conf` (same as above)
+
+Restart...
+
+Login "worked" but I got the error message `Version of PostgreSQL not supported. Please upgrade to version or later.`....
+
+So... it looks like phpPgAdmin hasn't been maintained in years and doesn't
+support postgresql 10... However, I found
+[here](https://stackoverflow.com/questions/46794672/installing-phppgadmin-5-1-on-ubuntu-16-04-with-postgresql-10-not-supported)
+that I might be able to hack together a work-around. It might be worth it, just
+for learning purposes if it works...
+
+I couldn't find the file at first, but a simple `find` and `grep` combo lead me to `/usr/share/phpPgAdmin/classes/database/Connection.php` :).
+
+Ugh. This doesn't seem to want to work. I might restart *AGAIN* with the proper
+version. I might break for a bit though...
+
+
