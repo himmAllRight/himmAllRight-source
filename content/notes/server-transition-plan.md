@@ -90,3 +90,11 @@ unlike Proxmox, I want to have the server run and support Docker cotnainers.
 - [ ] Containers on ZFS or LVM pools?
 - [ ] Network so Containers on main network
 - [ ] Auto Backups
+
+
+## Notes
+
+- So, I just installed [cockpit](http://cockpit-project.org/) on the test
+  server. It's been a long time since I have used it, and it has really
+  improved. It has interfaces to my VMs and docker containers. It's not as
+  extensive as Proxmox, but honestly, goes enough of the way there for me.
