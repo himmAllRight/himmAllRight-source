@@ -2,7 +2,7 @@
 title  = "SQL Intro"
 date   = "2018-03-14"
 author = "Ryan Himmelwright"
-image  = "img/header-images/baltimore-dock-gray.jpg"
+image  = "img/header-images/container-building-umich.jpg"
 tags   = ["DevOps", "Linux", "Database",]
 draft  = true
 +++
@@ -316,3 +316,227 @@ Query OK, 0 rows affected (0.00 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
  
+ 
+#### Truncate
+
+Delete the data, but leave table with names of columns all the same... again,
+still be careful because it *will* delete all the data.
+
+``` SQL
+mysql> TRUNCATE TABLE tblCustomerInfoBkup;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SELECT * FROM tblCustomerInfoBkup;
+Empty set (0.00 sec)
+```
+
+#### Auto Increment
+
+An Integer value, that once assigned, auto increments by 1 everytime the table
+is updated.
+
+You can auto increment a key. Very useful for IDs in a table.
+
+``` SQL
+mysql> CREATE TABLE tblEmpInfo(empID int PRIMARY KEY AUTO_INCREMENT,empLastName varchar(50),empSSN varchar(11)); 
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SHOW FIELDS FROM tblEmpInfo;
++-------------|-------------|------|-----|---------|----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------|-------------|------|-----|---------|----------------+
+| empID       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| empLastName | varchar(50) | YES  |     | NULL    |                |
+| empSSN      | varchar(11) | YES  |     | NULL    |                |
++-------------|-------------|------|-----|---------|----------------+
+3 rows in set (0.00 sec)
+
+mysql> INSERT INTO tblEmpInfo (empLastName,empSSN) VALUES ('Smith','11112223344');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO tblEmpInfo (empLastName,empSSN) VALUES ('Jones','11199223344');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM tblEmpInfo;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|     1 | Smith       | 11112223344 |
+|     2 | Jones       | 11199223344 |
++-------|-------------|-------------+
+2 rows in set (0.00 sec)
+```
+
+You can also set the auto increment value:
+
+``` SQL
+mysql> ALTER TABLE tblEmpInfo AUTO_INCREMENT=1000;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO tblEmpInfo (empLastName,empSSN) VALUES ('Banard','27199223344');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM tblEmpInfo;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|     1 | Smith       | 11112223344 |
+|     2 | Jones       | 11199223344 |
+|  1000 | Banard      | 27199223344 |
++-------|-------------|-------------+
+3 rows in set (0.00 sec)
+```
+
+Just be careful when setting the auto increment value that it isn't set to
+something that could eventually overwrite a value in a table that has to be
+unique, or it will error.
+
+
+To change a varchar column to an INT, if empty:
+
+``` SQL
+mysql> SELECT * FROM tblCustomerIDInfo;
+Empty set (0.01 sec)
+
+mysql> ALTER TABLE tblCustomerIDInfo MODIFY custID int AUTO_INCREMENT;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+```
+
+
+### SQL Functions
+
+SQL statements that don't directly manipulate data, but are related to the
+SELECT function.
+
+#### COUNT
+
+Shows us the result of a function was ask it to do. In this case, the count of
+items fitting that criteria.
+
+``` SQL
+mysql> SELECT * FROM tblCustomerInfo;
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |
+| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |
+| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM tblCustomerInfo;
++----------+
+| COUNT(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM tblCustomerInfo;
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |
+| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |
+| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM tblCustomerInfo;
++----------+
+| COUNT(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.00 sec)
+```
+
+
+#### Average and Sum Functions
+
+Starting out with a new test table:
+
+``` SQL
+mysql> SELECT * FROM tblItems;
++-------|----------|----------+
+| empID | name     | numItems |
++-------|----------|----------+
+|     1 | Person A |     2343 |
+|     2 | Person B |    24573 |
+|     3 | Person C |  4844573 |
+|     4 | Person D |   234234 |
+|     5 | Person E |   834234 |
+|     6 | Person F |   783641 |
++-------|----------|----------+
+6 rows in set (0.00 sec)
+```
+
+To get an average of the numbers in a column, use the `AVG` function:
+
+``` SQL
+mysql> SELECT AVG(numItems) from tblItems;
++---------------+
+| AVG(numItems) |
++---------------+
+|  1120599.6667 |
++---------------+
+1 row in set (0.00 sec)
+```
+
+To get a total, use the `SUM` function:
+
+``` SQL
+mysql> SELECT SUM(numItems) from tblItems;
++---------------+
+| SUM(numItems) |
++---------------+
+|       6723598 |
++---------------+
+1 row in set (0.00 sec)
+```
+
+Note again, statements can be combined:
+
+``` SQL
+mysql> SELECT COUNT(*),AVG(numItems),SUM(numItems) from tblItems;
++----------|---------------|---------------+
+| COUNT(*) | AVG(numItems) | SUM(numItems) |
++----------|---------------|---------------+
+|        6 |  1120599.6667 |       6723598 |
++----------|---------------|---------------+
+1 row in set (0.00 sec)
+```
+
+### The Like Operator
+
+The `LIKE` operator can be used to fix matching, with wildcards, `%`. For
+example in the following searches, `%S` and `S%` yield different results because
+the first looks for last names which *end* in an "s", and the second grabs last
+names which *start* with "s".
+
+Note, `LIKE` uses higher CPU usage. If possible, try to use it on columns which
+are indexed.
+
+``` SQL
+mysql> SELECT *FROM tblCustomerInfo WHERE custInfoLastName LIKE '%s';
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT *FROM tblCustomerInfo WHERE custInfoLastName LIKE 's%';
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |
+| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |
++-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+2 rows in set (0.00 sec)
+```
+
+
+### Views
