@@ -540,3 +540,36 @@ mysql> SELECT *FROM tblCustomerInfo WHERE custInfoLastName LIKE 's%';
 
 
 ### Views
+
+Let you create a custom filter and display set of data to use. This can be
+useful for difference scenarios. For example, the view can just be updated when
+querying for dash boards, or reports, instead of going through everything.
+
+``` SQL 
+mysql> SELECT * FROM tblItems;                                                                   +-------|----------|----------+
+| empID | name     | numItems |
++-------|----------|----------+
+|     1 | Person A |     2343 |
+|     2 | Person B |    24573 |
+|     3 | Person C |  4844573 |
+|     4 | Person D |   234234 |
+|     5 | Person E |   834234 |
+|     6 | Person F |   783641 |
++-------|----------|----------+
+6 rows in set (0.00 sec)
+
+mysql> CREATE VIEW myView AS SELECT COUNT(*),AVG(numItems),SUM(numItems) FROM tblItems WHERE numItems > 50000;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SELECT * FROM myView;
++----------|---------------|---------------+
+| COUNT(*) | AVG(numItems) | SUM(numItems) |
++----------|---------------|---------------+
+|        4 |  1674170.5000 |       6696682 |
++----------|---------------|---------------+
+1 row in set (0.00 sec)
+```
+
+### Joins
+
+

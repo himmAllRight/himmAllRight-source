@@ -26,7 +26,7 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 ```
 T470 Thinkpad
 Intel i5-7200u [2.5 Ghz (3.1 Ghz Turbo), 2 Cores, 4 Threads]
-8 GB RAM
+16 GB RAM
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display 
 Solus
