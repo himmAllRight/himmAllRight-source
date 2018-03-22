@@ -572,4 +572,135 @@ mysql> SELECT * FROM myView;
 
 ### Joins
 
+#### Inner Join
 
+An Inner join will return the selected rows from multiple tables, when there is
+at least one match in each table. For example:
+
+``` SQL
+mysql> SELECT * FROM tblItems;
++-------|----------|----------+
+| empID | name     | numItems |
++-------|----------|----------+
+|     1 | Person A |     2343 |
+|     2 | Person B |    24573 |
+|     3 | Person C |  4844573 |
+|     4 | Person D |   234234 |
+|     5 | Person E |   834234 |
+|     6 | Person F |   783641 |
++-------|----------|----------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT * FROM tblEmpInfo;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|     1 | Smith       | 11112223344 |
+|     2 | Jones       | 11199223344 |
+|  1000 | Banard      | 27199223344 |
++-------|-------------|-------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT tblItems.empID, tblItems.name, tblItems.numItems FROM tblItems INNER JOIN tblEmpInfo ON tblItems.empID=tblEmpInfo.empID;
++-------|----------|----------+
+| empID | name     | numItems |
++-------|----------|----------+
+|     1 | Person A |     2343 |
+|     2 | Person B |    24573 |
++-------|----------|----------+
+2 rows in set (0.00 sec)
+```
+
+#### Left Join
+
+Will give everything on the left table, and existing or matched items on the
+right, but will display as null for non matching data.
+
+``` SQL
+mysql> SELECT * FROM tblEmpInfo;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|     1 | Smith       | 11112223344 |
+|     2 | Jones       | 11199223344 |
+|  1000 | Banard      | 27199223344 |
++-------|-------------|-------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * FROM tblItems;
++-------|----------|----------+
+| empID | name     | numItems |
++-------|----------|----------+
+|     1 | Person A |     2343 |
+|     2 | Person B |    24573 |
+|     3 | Person C |  4844573 |
+|     4 | Person D |   234234 |
+|     5 | Person E |   834234 |
+|     6 | Person F |   783641 |
++-------|----------|----------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT tblEmpInfo.empID, empLastName, numItems FROM tblEmpInfo LEFT Join tblItems ON tblEmpInfo.empID=tblItems.empID;
++-------|-------------|----------+
+| empID | empLastName | numItems |
++-------|-------------|----------+
+|     1 | Smith       |     2343 |
+|     2 | Jones       |    24573 |
+|  1000 | Banard      |     NULL |
++-------|-------------|----------+
+3 rows in set (0.00 sec)
+```
+
+#### Right Join
+
+Basically the same as a `LEFT` join, but with the right table items all joining.
+Swapping the example from above for example:
+
+
+``` SQL
+mysql> SELECT tblEmpInfo.empID, empLastName, numItems FROM tblEmpInfo RIGHT JOIN tblItems ON tblEmpInfo.empID=tblItems.empID;
++-------|-------------|----------+
+| empID | empLastName | numItems |
++-------|-------------|----------+
+|     1 | Smith       |     2343 |
+|     2 | Jones       |    24573 |
+|  NULL | NULL        |  4844573 |
+|  NULL | NULL        |   234234 |
+|  NULL | NULL        |   834234 |
+|  NULL | NULL        |   783641 |
++-------|-------------|----------+
+6 rows in set (0.00 sec)
+```
+
+#### Full Join
+A full join shows *all* records from both the right and left table, regardless
+of matching the relation records of either.
+
+NOTE: Full outer joins do not work on mysql, but would on postresql. It is
+recommended to use Unions to emulate it.
+
+### Unions
+
+Unions are used to combine and concatenate `SELECT` statements from multiple
+tables. 
+
+Doesn't work well in this example because the `empSSN` column doesn't actually
+match up across both tables...
+
+``` SQL
+mysql> SELECT tblEmpInfo.empID,tblEmpInfo.empLastName,tblEmpInfo.empSSN FROM tblEmpInfo UNION SELECT * FROM tblItems;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|     1 | Smith       | 11112223344 |
+|     2 | Jones       | 11199223344 |
+|  1000 | Banard      | 27199223344 |
+|     1 | Person A    | 2343        |
+|     2 | Person B    | 24573       |
+|     3 | Person C    | 4844573     |
+|     4 | Person D    | 234234      |
+|     5 | Person E    | 834234      |
+|     6 | Person F    | 783641      |
++-------|-------------|-------------+
+9 rows in set (0.00 sec)
+```
