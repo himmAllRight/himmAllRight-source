@@ -1,6 +1,6 @@
 ---
 title: About
-date: 2017-09-15T05:51:18-04:00
+date: 2018-03-31T15:15:18-04:00
 type: about
 menu : 
   main:
@@ -16,7 +16,9 @@ I am a 26 year-old software developer working at a company in Walpole MA, that h
 Outside of work, I am an enthusiastic Linux user that loves learning about computers,
 programming languages (especially functional ones), and open source technologies. I majored in Neuroscience with a minor in Computer Science at [Lafayette College](https://www.lafayette.edu/), but am mostly a self-taught learner and continue to study computer science and IT topics by working on [personal projects](https://github.com/himmAllRight?tab=repositories), taking courses, and maintaining my [homelab](http://ryan.himmelwright.net/pages/homelab/). This website exists to help document the personal projects I work on, and what I've learned.
 
-Beyond technology, I love music, reading, hiking, and swimming (I competitively swam from the age of 8, through college). I am married to an amazing fourth year Medical Student at the Warren Alpert Medical School of Brown University. We have been together for 11 years and [were married](http://wedding.himmelwright.net) on September 17th, 2016 (the day before our 10th anniversary).
+Beyond technology, I love music, writing, the outdoors, and swimming (I competitively swam from the age of 8, through college). I am married to an amazing fourth year Medical Student (Rebecca) at the Warren Alpert Medical School of Brown University. We have been together for over 11 years and were married on September 17th, 2016 (the day before our 10th anniversary). 
+
+This summer, Rebecca will start her medical residency in [Anesthesiology](https://anesthesia.mc.duke.edu/) at Duke University Medical Center, so we will be moving to [Durham](https://www.durham-nc.com/), North Carolina in June.
 
 Feel free to contact me using any of the methods below.
 
@@ -28,7 +30,6 @@ In addition to the contact icons at the bottom of the website, I can be reached 
 * IRC: I'm often on geekshed and freenode channels as `himmAllRight`
 * Telegram: `@himmAllRight`
 * Wire: `@himmallright`
-* Mastodon: [himmAllRight@mastadon.rocks](https://mastodon.rocks/@himmAllRight)
  
 
 
