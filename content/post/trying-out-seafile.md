@@ -130,6 +130,12 @@ it says.*
 
 ### Client
 
+The seafile desktop client was trivial to install. It was in the Solus repos, so
+I just needed to run `sudo eopkg it seafile-client`, and I was done. I also
+installed it on my work computers (which unfortunately runs Windows 10), and
+even that was simple. I just downloaded and installed the Windows "Desktop
+Syncing Client" at the top of the [download
+page](https://www.seafile.com/en/download/).
 
 
 ## My Thoughts
