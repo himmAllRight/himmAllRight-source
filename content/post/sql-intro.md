@@ -1,6 +1,6 @@
 +++
 title  = "SQL Intro"
-date   = "2018-03-14"
+date   = "2018-04-14"
 author = "Ryan Himmelwright"
 image  = "img/header-images/container-building-umich.jpg"
 tags   = ["DevOps", "Linux", "Database",]
@@ -704,3 +704,83 @@ mysql> SELECT tblEmpInfo.empID,tblEmpInfo.empLastName,tblEmpInfo.empSSN FROM tbl
 +-------|-------------|-------------+
 9 rows in set (0.00 sec)
 ```
+
+
+### Sorting Records
+
+Records can be sorted in the ascending or descending order of a column by using
+the `ODER` command and either `ASC` for "ascending" or `DESC` for "descending".
+Like always, the results can also be limited or trimmed with something like a
+`LIMIT 1`.
+
+``` SQL
+mysql> SELECT * FROM tblEmpInfo;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|     1 | Smith       | 11112223344 |
+|     2 | Jones       | 11199223344 |
+|  1000 | Banard      | 27199223344 |
++-------|-------------|-------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * FROM tblEmpInfo ORDER BY empLastName ASC LIMIT 1;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|  1000 | Banard      | 27199223344 |
++-------|-------------|-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM tblEmpInfo ORDER BY empLastName DESC LIMIT 1;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|     1 | Smith       | 11112223344 |
++-------|-------------|-------------+
+1 row in set (0.00 sec)
+```
+
+### Minimum and Maximum Values
+
+Similar to `ORDER`, min and max values of a particular column in the table can
+also be returned using the `MIN` and `MAX` commands:
+
+```SQL
+mysql> SELECT * FROM tblItems;
++-------|----------|----------+
+| empID | name     | numItems |
++-------|----------|----------+
+|     1 | Person A |     2343 |
+|     2 | Person B |    24573 |
+|     3 | Person C |  4844573 |
+|     4 | Person D |   234234 |
+|     5 | Person E |   834234 |
+|     6 | Person F |   783641 |
++-------|----------|----------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT MIN(numItems) FROM tblItems;
++---------------+
+| MIN(numItems) |
++---------------+
+|          2343 |
++---------------+
+1 row in set (0.00 sec)
+
+```
+
+To return other fields with the min/max item, a sub-query (another query inside
+parenthesis) may have to be used:
+
+```SQL
+mysql> SELECT name,numItems FROM tblItems WHERE numItems=(SELECT MAX(numItems) FROM tblItems);
++----------|----------+
+| name     | numItems |
++----------|----------+
+| Person C |  4844573 |
++----------|----------+
+1 row in set (0.00 sec)
+
+```
+
