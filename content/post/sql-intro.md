@@ -784,3 +784,65 @@ mysql> SELECT name,numItems FROM tblItems WHERE numItems=(SELECT MAX(numItems) F
 
 ```
 
+### Upper and Lower Case Conversions
+
+Can use more functions, like `UCASE` and `LCASE` to changed the *displayed* (the
+data is not altered) text to be upper or lower case, respectively. Note: if
+staying compliant to the SQL standard, there is SQL function to *alter* the
+actual *data* to upper or lower case.
+
+```SQL
+mysql> SELECT * FROM tblEmpInfo;
++-------|-------------|-------------+
+| empID | empLastName | empSSN      |
++-------|-------------|-------------+
+|     1 | Smith       | 11112223344 |
+|     2 | Jones       | 11199223344 |
+|  1000 | Banard      | 27199223344 |
++-------|-------------|-------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT UCASE(empLastName),LCASE(empLastName) FROM tblEmpInfo;
++--------------------|--------------------+
+| UCASE(empLastName) | LCASE(empLastName) |
++--------------------|--------------------+
+| SMITH              | smith              |
+| JONES              | jones              |
+| BANARD             | banard             |
++--------------------|--------------------+
+3 rows in set (0.00 sec)
+```
+
+### Now()
+
+the `Now*()` function can create a new value, using the current date and time.
+This can be appended when making a view, to mark when things happen over time.
+
+
+```sql
+mysql> SELECT * FROM tblItems;
++-------|----------|----------+
+| empID | name     | numItems |
++-------|----------|----------+
+|     1 | Person A |     2343 |
+|     2 | Person B |    24573 |
+|     3 | Person C |  4844573 |
+|     4 | Person D |   234234 |
+|     5 | Person E |   834234 |
+|     6 | Person F |   783641 |
++-------|----------|----------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT empID, name, numItems, Now() as stockDate FROM tblItems;
++-------|----------|----------|---------------------+
+| empID | name     | numItems | stockDate           |
++-------|----------|----------|---------------------+
+|     1 | Person A |     2343 | 2018-04-06 10:25:44 |
+|     2 | Person B |    24573 | 2018-04-06 10:25:44 |
+|     3 | Person C |  4844573 | 2018-04-06 10:25:44 |
+|     4 | Person D |   234234 | 2018-04-06 10:25:44 |
+|     5 | Person E |   834234 | 2018-04-06 10:25:44 |
+|     6 | Person F |   783641 | 2018-04-06 10:25:44 |
++-------|----------|----------|---------------------+
+6 rows in set (0.00 sec)
+```
