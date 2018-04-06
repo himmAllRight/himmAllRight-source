@@ -52,9 +52,11 @@ Create database: `CREATE DATABASE dbTest;`
 
 Drop a database (delete): `DROP DATABASE dbTest`
 
-Select DB to use: `USER dbTest;`
+Select DB to use: `USE dbTest;`
 
 ### Tables
+
+*After a DB is selected with `USE dbName;`...*
 
 Show Tables: `SHOW TABLES;`
 
@@ -845,4 +847,41 @@ mysql> SELECT empID, name, numItems, Now() as stockDate FROM tblItems;
 |     6 | Person F |   783641 | 2018-04-06 10:25:44 |
 +-------|----------|----------|---------------------+
 6 rows in set (0.00 sec)
+```
+
+
+
+
+## EXAMPLE CODE TO REPLACE WITH
+
+Just dumping these examples here for now. Will replace the old examples with
+this in time as I go through and organize everything:
+
+```SQL
+mysql> CREATE TABLE tblUsers (id int PRIMARY KEY AUTO_INCREMENT, firstname varchar(50),lastname varchar(50), age INT,state varchar(2));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Ryan','Himmelwright',26,'MA');Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Rebecca','Himmelwright',26,'MA');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Kyle','Himmelwright',23,'SC');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Kevin','Himmelwright',19,'PA');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW * FROM tblUsers;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM tblUsers' at line 1
+mysql> SELECT * FROM tblUsers;
++----|-----------|--------------|------|-------+
+| id | firstname | lastname     | age  | state |
++----|-----------|--------------|------|-------+
+|  1 | Ryan      | Himmelwright |   26 | MA    |
+|  2 | Rebecca   | Himmelwright |   26 | MA    |
+|  3 | Kyle      | Himmelwright |   23 | SC    |
+|  4 | Kevin     | Himmelwright |   19 | PA    |
++----|-----------|--------------|------|-------+
+4 rows in set (0.00 sec)
 ```
