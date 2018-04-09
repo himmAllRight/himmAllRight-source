@@ -1,5 +1,5 @@
 +++
-title  = "Clojure Notes"
+title  = "Starting Clojure, as a Common Lisp Deveoper"
 date   = "2018-04-20"
 author = "Ryan Himmelwright"
 image  = "img/header-images/container-building-umich.jpg"
@@ -8,9 +8,14 @@ draft  = true
 +++
 
 I have started to get into clojure again. This is just a spot for me to take
-notes for now. I *might* eventually form this into a post somehow...
+notes for now. I'll turn this into a post that is mostly notes to myself about
+the basics of clojure, but also comparing it to what I know about common lisp.
+So sort of a "clojure from a common lisp developer". This might be the first
+post of a series...
 
-But for now.. it's just my notes as I work through some tutorials.
+<!--more-->
+
+
 
 ## Install Clojure
 
@@ -81,4 +86,51 @@ user> (do
 
 #### when
 
+In some languages, the *else* conditional branch of an `if` function is
+mandatory (ex: Haskell), the benefit being that *all* conditions are *defined*.
+However, sometimes when using `if`, it might only be desired to do something
+*if* the conditional is true. In other words... we don't really care about the
+*else* condition, *or* more likely, we intend the `else` to just return `nil`.
 
+In lisp languages, we have `when` to handle this scenario. `When` essentially
+combines the functionality of an else-less `if`, with a `do`. It takes a boolean
+form, and when "true", it will evaluate the remaining forms wrapped inside the
+`when`. Otherwise, it will return `nil`. So for example, the following two
+pieces of code are essentially the same:
+
+```clojure
+user> (if true
+        (do
+          (println "If true, run me")
+          (println "...don't forget about me")
+          "I'm the return value! (in Ralph Wiggum voice...)")
+        nil)
+        
+=> If true, run me
+=> ...don't forget about me
+=> "I'm the return value! (in Ralph Wiggum voice...)"
+
+user> (if false
+        (do
+          (println "If true, run me")
+          (println "...don't forget about me")
+          "I'm the return value! (in Ralph Wiggum voice...)")
+        nil)
+=> nil
+```
+
+```clojure
+user> (when true
+        (println "If true, run me")
+        (println "...don't forget about me")
+        "I'm the return value! (in Ralph Wiggum voice...)")
+If true, run me
+...don't forget about me
+"I'm the return value! (in Ralph Wiggum voice...)"
+
+user> (when false
+        (println "If true, run me")
+        (println "...don't forget about me")
+        "I'm the return value! (in Ralph Wiggum voice...)")
+nil
+```
