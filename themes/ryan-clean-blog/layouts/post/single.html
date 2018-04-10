@@ -18,6 +18,9 @@
             </div>
         </div>
     </div>
+    {{ if isset .Params "caption" }}
+    <span class="header-caption">{{ .Params.caption }}</span>
+    {{ end }}
     </header>
 
     <!-- Post Content -->
