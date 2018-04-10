@@ -3,7 +3,7 @@ title   = "Docker Quick Start"
 date    = "2018-02-25"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/baltimore-dock-gray.jpg"
-caption = "Baltimore, MD USA"
+caption = "Inner Harbor, Baltimore, MD USA"
 tags    = ["DevOps", "Linux", "Homelab", "Containers", "Docker", "Solus",]
 +++
 
