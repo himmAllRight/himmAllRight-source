@@ -1,9 +1,10 @@
 +++
-title = "Website Switched to Hugo"
-date = "2017-09-02"
-author = "Ryan Himmelwright"
-image = "img/header-images/st-lucia-cannon.jpg"
-tags  = ["Website", "Hugo", "Go",]
+title   = "Website Switched to Hugo"
+date    = "2017-09-02"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/st-lucia-cannon.jpg"
+caption = "Fort Rodney, St Lucia"
+tags    = ["Website", "Hugo", "Go",]
 +++
  
 In my [last post](../website-transition-to-hugo/), I stated that *within a few days*, I would officially generate and publish the website using [Hugo](https://gohugo.io). I then proceeded to publish *that* post using Hugo. Close enough. If I remember correctly, I ended that post listing off a few tasks that I wanted to complete *before* switching the site (oops). Well... they're complete *now*. Here's how.

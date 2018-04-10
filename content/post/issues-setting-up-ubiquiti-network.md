@@ -1,9 +1,10 @@
 +++
-title = "Encountered Issues Setting Up Ubiquiti Network"
-date = "2017-06-29"
-author = "Ryan Himmelwright"
-image = "img/header-images/flooded-slide.jpg"
-tags = ["Homelab", "Network", "ubiquiti", "wifi",]
+title   = "Encountered Issues Setting Up Ubiquiti Network"
+date    = "2017-06-29"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/flooded-slide.jpg"
+caption = "WWI Memorial Park, North Attleboro, MA USA"
+tags    = ["Homelab", "Network", "ubiquiti", "wifi",]
 +++
 
 This past weekend, I setup my new ubiquiti network. It actually took up a good
