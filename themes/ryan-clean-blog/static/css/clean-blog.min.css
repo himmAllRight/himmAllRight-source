@@ -252,6 +252,16 @@ hr.small {
     margin-top: 60px;
     font-weight: 700
 }
+.header-caption {
+    text-align: right;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px;
+    padding: 5px;
+    display: block;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px
+}
 .caption {
     text-align: center;
     font-size: 14px;
