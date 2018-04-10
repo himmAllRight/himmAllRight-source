@@ -1,9 +1,10 @@
 +++
-title  = "Docker Quick Start"
-date   = "2018-02-25"
-author = "Ryan Himmelwright"
-image  = "img/header-images/baltimore-dock-gray.jpg"
-tags   = ["DevOps", "Linux", "Homelab", "Containers", "Docker", "Solus",]
+title   = "Docker Quick Start"
+date    = "2018-02-25"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/baltimore-dock-gray.jpg"
+caption = "Baltimore, MD USA"
+tags    = ["DevOps", "Linux", "Homelab", "Containers", "Docker", "Solus",]
 +++
 
 Over the past few months (particularly over the holiday season), I started to

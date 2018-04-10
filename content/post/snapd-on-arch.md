@@ -1,9 +1,10 @@
 +++
-title  =  "Trying out snapd on Arch Linux"
-date   = "2016-07-17"
-author = "Ryan Himmelwright"
-tags   = ["Linux", "Arch Linux", "snapd",]
-image  = "/img/header-images/boston1.jpg"
+title   =  "Trying out snapd on Arch Linux"
+date    = "2016-07-17"
+author  = "Ryan Himmelwright"
+tags    = ["Linux", "Arch Linux", "snapd",]
+caption = "Boston, MA USA"
+image   = "/img/header-images/boston1.jpg"
 +++
 
 The past few weeks I have been listening to all of the buzz about

@@ -1,14 +1,10 @@
 +++
-title = "Simple Reverse SSH Tunnels"
-image = "img/header-images/pipe.jpg"
-description = ""
-date = "2017-08-26"
-tags = [
-	"Linux", 
-	"SSH", 
-	"Homelab", 
-	"Network",
-]
+title   = "Simple Reverse SSH Tunnels"
+date    = "2017-08-26"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/pipe.jpg"
+caption = "Cliff Walk, Newport, RI USA"
+tags    = ["Linux", "SSH", "Homelab", "Network",]
 +++
 
 Last week, I was on vacation with my family. While I didn't work a *ton* on personal projects, I was at least able to spend some time on my [TunelBeacon](https://github.com/himmAllRight/TunnelBeacon) project again. I will write a dedicated post about that project down the road when I am further along. Basically, it will be a simple GUI to create reverse ssh tunnels, that family and friends can startup in order grant me temporary access to their computer when they need support. Reverse SSH tunnels are *very* useful and simple to setup, but can be a bit tricky to figure out at first. So, here's a brief and simple guide on how to easily create reverse tunnels.

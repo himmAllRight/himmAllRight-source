@@ -1,9 +1,10 @@
 +++
-title  = "My New Dotfiles Management - Using GNU Stow"
-date   = "2017-03-07"
-author = "Ryan Himmelwright"
-tags   = ["Linux", "dotfiles",]
-image  = "/img/header-images/st-lucia-beach-feet.jpg"
+title   = "My New Dotfiles Management - Using GNU Stow"
+date    = "2017-03-07"
+author  = "Ryan Himmelwright"
+tags    = ["Linux", "dotfiles",]
+caption = "Rodney Bay, St Lucia"
+image   = "/img/header-images/st-lucia-beach-feet.jpg"
 +++
 
 

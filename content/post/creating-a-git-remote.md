@@ -1,9 +1,10 @@
 +++
-title = "Creating a git Repo Remote"
-date = "2017-07-19"
-author = "Ryan Himmelwright"
-image  = "img/header-images/boston2.jpg"
-tags = ["git", "Linux", "dev",]
+title   = "Creating a git Repo Remote"
+date    = "2017-07-19"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/boston2.jpg"
+caption = "Boston, MA USA"
+tags    = ["git", "Linux", "dev",]
 +++
 
 For over a year or so, I have been using a

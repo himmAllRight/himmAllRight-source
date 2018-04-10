@@ -1,10 +1,11 @@
 +++
-title  = "Trying Out Seafile"
-date   = "2018-04-01"
-author = "Ryan Himmelwright"
-image  = "img/header-images/obx-houses.jpg"
-tags   = ["Homelab", "Linux", "Software"]
-draft  = false
+title   = "Trying Out Seafile"
+date    = "2018-04-01"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/obx-houses.jpg"
+caption = "Outer Banks, NC USA"
+tags    = ["Homelab", "Linux", "Software"]
+draft   = false
 +++
 
 In college, I mostly used Dropbox to handle all of my file syncing needs. As I

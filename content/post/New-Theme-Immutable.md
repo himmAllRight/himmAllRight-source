@@ -1,9 +1,10 @@
 +++ 
-title = "New Website Theme: Immutable"
-date = "2017-04-11"
-author = "Ryan Himmelwright"
-image = "img/header-images/red-leaf.jpg"
-tags = ["Website", "Cryogen",]
+title   = "New Website Theme: Immutable"
+date    = "2017-04-11"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/red-leaf.jpg"
+caption = "Blue Hills Reservation, Milton, MA USA"
+tags    = ["Website", "Cryogen",]
 +++
 
 When I first started using [Cryogen](http://cryogenweb.org) to generate this website, I wanted to create a personalized theme. This desire led me to hack a the default theme into a mutant, which I boringly named "<i>ryan1</i>" (I anticipated it to be temporary). It looked like a relic, designed from when I first learned how to make a web page... the early 2000's. Like ~~many~~ all websites from that time, it was not mobile friendly. I hope to change all of that, by introducing my new website theme: <b><i>Immutable</i></b>.
