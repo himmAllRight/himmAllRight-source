@@ -1,6 +1,6 @@
 +++
 title  = "SQL Intro"
-date   = "2018-04-14"
+date   = "2018-04-16"
 author = "Ryan Himmelwright"
 image  = "img/header-images/container-building-umich.jpg"
 tags   = ["DevOps", "Linux", "Database",]
@@ -58,13 +58,66 @@ Select DB to use: `USE dbTest;`
 
 *After a DB is selected with `USE dbName;`...*
 
-Show Tables: `SHOW TABLES;`
+#### Show Tables
 
-Create Table: 
+To show all of the tables in a database, just use `SHOW TABLES;`. For example:
 
-``` SQL
-CREATE TABLE tblCustomerInfo (custInfoFirstName varchar(50),custInfoLastName varchar(50),custInfoAddr1 varchar(50),custInfoAddr2 varchar(50),custInfoCityName varchar(50),custInfoState varchar(10),custInfoZipCode varchar(10),custInfoPhone varchar(12));
+```SQL
+mysql> SHOW TABLES;
++------------------+
+| Tables_in_dbTest |
++------------------+
+| tblUsers         |
++------------------+
+1 row in set (0.00 sec)
 ```
+
+#### Create Table
+
+To create a *new* table, use `CREATE TABLE`. The `CREATE TABLE` function takes
+1) the name of the new table and 2) a list of the table fields (with their
+types). For example, to create a user information table that contains a user's
+first name, last name, age, and state, as well as an identification number, the
+following SQL command can be used:
+
+```SQL
+mysql> CREATE TABLE tblUsers (id int PRIMARY KEY AUTO_INCREMENT, firstname varchar(50),lastname varchar(50), age INT,state varchar(2));
+Query OK, 0 rows affected (0.01 sec)
+```
+
+#### INSERT INTO
+
+To actually *add* data into the table, the `INSERT INTO` command is used. As an
+example, to add some users to the table created in the previous step:
+
+```SQL
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Ryan','Himmelwright',26,'MA');Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Rebecca','Himmelwright',26,'MA');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Kyle','Himmelwright',23,'SC');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Kevin','Himmelwright',19,'PA');
+Query OK, 1 row affected (0.00 sec)
+```
+
+```SQL
+mysql> SHOW * FROM tblUsers;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM tblUsers' at line 1
+mysql> SELECT * FROM tblUsers;
++----|-----------|--------------|------|-------+
+| id | firstname | lastname     | age  | state |
++----|-----------|--------------|------|-------+
+|  1 | Ryan      | Himmelwright |   26 | MA    |
+|  2 | Rebecca   | Himmelwright |   26 | MA    |
+|  3 | Kyle      | Himmelwright |   23 | SC    |
+|  4 | Kevin     | Himmelwright |   19 | PA    |
++----|-----------|--------------|------|-------+
+4 rows in set (0.00 sec)
+```
+
 
 Drop (delete) Table: `DROP TABLE tblTest;`
 
@@ -858,30 +911,3 @@ Just dumping these examples here for now. Will replace the old examples with
 this in time as I go through and organize everything:
 
 ```SQL
-mysql> CREATE TABLE tblUsers (id int PRIMARY KEY AUTO_INCREMENT, firstname varchar(50),lastname varchar(50), age INT,state varchar(2));
-Query OK, 0 rows affected (0.01 sec)
-
-mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Ryan','Himmelwright',26,'MA');Query OK, 1 row affected (0.00 sec)
-
-mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Rebecca','Himmelwright',26,'MA');
-Query OK, 1 row affected (0.00 sec)
-
-mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Kyle','Himmelwright',23,'SC');
-Query OK, 1 row affected (0.00 sec)
-
-mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Kevin','Himmelwright',19,'PA');
-Query OK, 1 row affected (0.00 sec)
-
-mysql> SHOW * FROM tblUsers;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM tblUsers' at line 1
-mysql> SELECT * FROM tblUsers;
-+----|-----------|--------------|------|-------+
-| id | firstname | lastname     | age  | state |
-+----|-----------|--------------|------|-------+
-|  1 | Ryan      | Himmelwright |   26 | MA    |
-|  2 | Rebecca   | Himmelwright |   26 | MA    |
-|  3 | Kyle      | Himmelwright |   23 | SC    |
-|  4 | Kevin     | Himmelwright |   19 | PA    |
-+----|-----------|--------------|------|-------+
-4 rows in set (0.00 sec)
-```
