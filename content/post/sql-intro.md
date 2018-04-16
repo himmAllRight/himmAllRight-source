@@ -85,156 +85,203 @@ mysql> CREATE TABLE tblUsers (id int PRIMARY KEY AUTO_INCREMENT, firstname varch
 Query OK, 0 rows affected (0.01 sec)
 ```
 
+The `first name`, `last name`, and `state` columns have a `varchar` data type,
+which is essentially strings of various sizes (50 and 2 characters in this
+case). The `id` and `age` columns have the `int` data type. However, note that
+the `id` column has some other junk defined after the `int` identifier....
+
+#### Constraints and Fields
+
+In addition to specifying data *type*, other *constraints* can be imposed on
+columns when defining a new table. Constraints are used to limit the type of
+data that goes into the table, and can be implemented at the column or table
+level. To see the fields of a table, use the `SHOW FIELDS FROM tablename`
+command:
+
+``` SQL
+mysql> SHOW FIELDS FROM tblUsers;
++-----------|-------------|------|-----|---------|----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------|-------------|------|-----|---------|----------------+
+| id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| firstname | varchar(50) | YES  |     | NULL    |                |
+| lastname  | varchar(50) | YES  |     | NULL    |                |
+| age       | int(11)     | YES  |     | NULL    |                |
+| state     | varchar(2)  | YES  |     | NULL    |                |
++-----------|-------------|------|-----|---------|----------------+
+5 rows in set (0.00 sec)
+
+```
+
+The `id` column uses the `PRIMARY KEY` and `AUTO_INCREMENT` constraints.
+The `PRIMARY_KEY` constraint is a combination of the `NOT NULL` and `UNIQUE`
+constraints, meaning it ensures that all the values in the column are different
+and not `NULL`. The `AUTO_INCREMENT` field allows a unique number to be
+generated, and automatically incremented during each table insert.
+
+
 #### INSERT INTO
 
 To actually *add* data into the table, the `INSERT INTO` command is used. As an
 example, to add some users to the table created in the previous step:
 
 ```SQL
-mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Ryan','Himmelwright',26,'MA');Query OK, 1 row affected (0.00 sec)
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) 
+VALUES ('Joe','Fry',32,'RI');
+Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Rebecca','Himmelwright',26,'MA');
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) 
+VALUES ('Emily','Flanders',22,'CA');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) 
+VALUES ('Tina','Oak',42,'NC');
 Query OK, 1 row affected (0.00 sec)
 
-mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Kyle','Himmelwright',23,'SC');
-Query OK, 1 row affected (0.00 sec)
+mysql> INSERT INTO tblUsers (firstname,lastname,age,state) 
+VALUES ('Bob','Builder',51,'MO');
+Query OK, 1 row affected (0.01 sec)
+```
 
-mysql> INSERT INTO tblUsers (firstname,lastname,age,state) VALUES ('Kevin','Himmelwright',19,'PA');
-Query OK, 1 row affected (0.00 sec)
+Now, `tblUsers` should contain the information of the 4 users added. To check
+this, use `SELECT * FROM tblUsers;` to select *everything* from the `tblUsers`
+table:
+
+```SQL
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  8 | Bob       | Builder  |   51 | MO    |
++----|-----------|----------|------|-------+
+4 rows in set (0.00 sec)
+
+```
+
+#### INSERT INTO Another Table
+The `INSERT INTO` command mixed with `SELECT FROM`, can insert contents of *one
+table* into *another*. This technique can be quite useful, and is a simple way to
+create quick backups.
+
+
+```SQL
+mysql> CREATE TABLE tblUsersBackup (id int PRIMARY KEY AUTO_INCREMENT, firstname varchar(50),lastname varchar(50), age INT,state varchar(2));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> SELECT * FROM tblUsersBackup;
+Empty set (0.00 sec)
+
+mysql> INSERT INTO tblUsersBackup SELECT * FROM tblUsers;
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM tblUsersBackup;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  9 | Bob       | Builder  |   51 | MO    |
++----|-----------|----------|------|-------+
+4 rows in set (0.00 sec)
+```
+
+#### Drop (delete) Table
+
+To delete a table, the `DROP` command is used. For example, to delete the table
+from above, issue `DROP TABLE tblUsersBackup;`:
+
+```SQL
+mysql> DROP TABLE tblUsersBackup;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SELECT * FROM tblUsersBackup;
+ERROR 1146 (42S02): Table 'dbTest.tblUsersBackup' doesn't exist
+```
+
+**NOTE: Using `DROP` commands will delete the entire structure (including the
+schema), even if there is data in it. Be Careful!**
+
+
+#### SELECT
+
+In addition to selecting *all* of the data in a table using `SELECT *`, The
+`SELECT` command can be utilized to select all sorts of combinations of the
+data. Here are a few examples:
+
+-- Select specific columns from the table:
+
+``` SQL
+mysql> SELECT firstname,lastname FROM tblUsers;
++-----------|----------+
+| firstname | lastname |
++-----------|----------+
+| Joe       | Fry      |
+| Emily     | Flanders |
+| Tina      | Oak      |
+| Bob       | Builder  |
++-----------|----------+
+4 rows in set (0.00 sec)
+
+```
+
+-- Grab column(s), after matching in another:
+
+``` SQL
+mysql> SELECT firstname,lastname FROM tblUsers WHERE state="RI";
++-----------|----------+
+| firstname | lastname |
++-----------|----------+
+| Joe       | Fry      |
++-----------|----------+
+1 row in set (0.00 sec)
+```
+
+In addition to searching using `=` (which only grabs exact matches), other
+operators, such as `>`, `<`, `<=`, `>=`, `<>` (not equal), `BETWEEN` (between an
+inclusive range), and `LIKE` (search for pattern) can be used with the `WHERE`
+clause. For example:
+
+```SQL
+mysql> SELECT firstname,lastname FROM tblUsers WHERE age>=25;
++-----------|----------+
+| firstname | lastname |
++-----------|----------+
+| Joe       | Fry      |
+| Tina      | Oak      |
+| Bob       | Builder  |
++-----------|----------+
+3 rows in set (0.00 sec)
+
 ```
 
 ```SQL
-mysql> SHOW * FROM tblUsers;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM tblUsers' at line 1
-mysql> SELECT * FROM tblUsers;
-+----|-----------|--------------|------|-------+
-| id | firstname | lastname     | age  | state |
-+----|-----------|--------------|------|-------+
-|  1 | Ryan      | Himmelwright |   26 | MA    |
-|  2 | Rebecca   | Himmelwright |   26 | MA    |
-|  3 | Kyle      | Himmelwright |   23 | SC    |
-|  4 | Kevin     | Himmelwright |   19 | PA    |
-+----|-----------|--------------|------|-------+
-4 rows in set (0.00 sec)
-```
-
-
-Drop (delete) Table: `DROP TABLE tblTest;`
-
-**NOTE: Using `DROP` commands will delete the entire structure, even if there is
-data in it. Be Careful!**
-
-
-#### Constraints
-
-Show the fields and types for a table: `SHOW FIELDS FROM tblCustomerInfo;`
-
-To add constraints to an item, they come after the type. EX: `CREATE TABLE
-tblCustomerIDInfo (custID varchar(10) PRIMARY KEY,...` creates an ID values that
-is a PRIMARY KEY meaning it is *unique* and *not null*. 
-
-``` SQL
-mysql> SHOW FIELDS FROM tblCustomerIDInfo;
-+-------------------|-------------|------|-----|---------|-------+
-| Field             | Type        | Null | Key | Default | Extra |
-+-------------------|-------------|------|-----|---------|-------+
-| custID            | varchar(10) | NO   | PRI | NULL    |       |
-| custInfoFirstName | varchar(50) | YES  |     | NULL    |       |
-| custInfoLastName  | varchar(50) | YES  |     | NULL    |       |
-| custInfoAddr1     | varchar(50) | YES  |     | NULL    |       |
-| custInfoAddr2     | varchar(50) | YES  |     | NULL    |       |
-| custInfoCityName  | varchar(50) | YES  |     | NULL    |       |
-| custInfoState     | varchar(10) | YES  |     | NULL    |       |
-| custInfoZipCode   | varchar(10) | YES  |     | NULL    |       |
-| custInfoPhone     | varchar(12) | YES  |     | NULL    |       |
-+-------------------|-------------|------|-----|---------|-------+
-9 rows in set (0.00 sec)
-```
-
-Add an item to the table using `INSERT INTO`:
-
-``` SQL
-mysql> INSERT INTO tblCustomerInfo (custInfoFirstname,custInfoLastName,custInfoAddr1,custInfoAddr2,custInfoCityName,custInfoState,custInfoZipCode,custInfoPhone) VALUES ('John','Smith','111 Main St','','Anytown','NY','43211','2123445533');
-Query OK, 1 row affected (0.00 sec)
-```
-
-View table information using a `SELECT FROM`:
-
-``` SQL
-mysql> SeLECT * FROM tblCustomerInfo;
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |
-| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |
-| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-3 rows in set (0.00 sec)
-```
-
-Can insert contents of one table INTO another, with the `INSERT INTO` command,
-mixed with the `SELECT FROM`. Good for doing a quick backup.
-
-``` SQL
-mysql> INSERT INTO tblCustomerInfoBkup (custInfoFirstname,custInfoLastName,custInfoAddr1,custInfoAddr2,custInfoCityName,custInfoState,custInfoZipCode,custInfoPhone) VALUES ('June','Fill','1191 Oak St','','Allston','CA','90200','2127447333');
-Query OK, 1 row affected (0.00 sec)
-
-mysql> SELECT * FROM tblCustomerInfoBkup;
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| June              | Fill             | 1191 Oak St   |               | Allston          | CA            | 90200           | 2127447333    |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-1 row in set (0.00 sec)
-
-mysql> INSERT INTO tblCustomerInfoBkup SELECT * FROM tblCustomerInfo;
-Query OK, 3 rows affected (0.03 sec)
-Records: 3  Duplicates: 0  Warnings: 0
-
-mysql> SELECT * FROM tblCustomerInfoBkup;
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| June              | Fill             | 1191 Oak St   |               | Allston          | CA            | 90200           | 2127447333    |
-| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |
-| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |
-| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-4 rows in set (0.00 sec)
-```
-
-Can also select specific columns from the table:
-
-``` SQL
-mysql> SELECT custInfoCityName,custInfoState FROM tblCustomerInfo;
-+------------------|---------------+
-| custInfoCityName | custInfoState |
-+------------------|---------------+
-| Anytown          | NY            |
-| Anytown          | NY            |
-| City             | OH            |
-+------------------|---------------+
-3 rows in set (0.00 sec)
-```
-
-Can also grab a column, after matching in another:
-
-``` SQL
-mysql> SELECT custInfoLastName FROM tblCustomerInfo WHERE custInfoState='NY';
-+------------------+
-| custInfoLastName |
-+------------------+
-| Smith            |
-| Smith            |
-+------------------+
+mysql> SELECT firstname,lastname FROM tblUsers WHERE age BETWEEN 30 AND 50;
++-----------|----------+
+| firstname | lastname |
++-----------|----------+
+| Joe       | Fry      |
+| Tina      | Oak      |
++-----------|----------+
 2 rows in set (0.00 sec)
+
 ```
 
-Can use LIKE to search or a pattern in a field. =, has to match exactly. <> is
-not equal. When using number values, can use < and >.
 
-Can change the table schema (Add or edit fields), the `ALTER` command can be
-used.
+#### ALTER
+
+To change the table schema (add, drop or modify columns), the `ALTER` command
+can be used along with `ADD`, `DROP COLUMN`, or `MODIFY COLUMN` (respectively)
+after the tablename. For example:
+
+```SQL
+
+```
+
 
 ``` SQL
 ALTER TABLE tblCustomerInfoBkup DROP custInfoDOB varchar(10)
