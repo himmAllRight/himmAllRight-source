@@ -278,27 +278,78 @@ To change the table schema (add, drop or modify columns), the `ALTER` command
 can be used along with `ADD`, `DROP COLUMN`, or `MODIFY COLUMN` (respectively)
 after the tablename. For example:
 
+-- Add a `born` column to the table
+
 ```SQL
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  9 | Bob       | Builder  |   51 | MO    |
++----|-----------|----------|------|-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE tblUsers ADD born year;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------|------+
+| id | firstname | lastname | age  | state | born |
++----|-----------|----------|------|-------|------+
+|  5 | Joe       | Fry      |   32 | RI    | NULL |
+|  6 | Emily     | Flanders |   22 | CA    | NULL |
+|  7 | Tina      | Oak      |   42 | NC    | NULL |
+|  9 | Bob       | Builder  |   51 | MO    | NULL |
++----|-----------|----------|------|-------|------+
+4 rows in set (0.00 sec)
 
 ```
 
+-- Change `born` column from a `year` data type to a `date`
 
-``` SQL
-ALTER TABLE tblCustomerInfoBkup DROP custInfoDOB varchar(10)
-```
-
-``` SQL
-mysql> ALTER TABLE tblCustomerInfoBkup MODIFY custInfoDOB year;
+```SQL
+mysql> ALTER TABLE tblUsers MODIFY COLUMN born date;
 Query OK, 4 rows affected (0.03 sec)
 Records: 4  Duplicates: 0  Warnings: 0
 ```
 
+-- Drop the `born` column from the table
 
-NOTE: Depending on the type of SQL database being used, the command may be:
+```SQL
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------|------+
+| id | firstname | lastname | age  | state | born |
++----|-----------|----------|------|-------|------+
+|  5 | Joe       | Fry      |   32 | RI    | NULL |
+|  6 | Emily     | Flanders |   22 | CA    | NULL |
+|  7 | Tina      | Oak      |   42 | NC    | NULL |
+|  9 | Bob       | Builder  |   51 | MO    | NULL |
++----|-----------|----------|------|-------|------+
+4 rows in set (0.00 sec)
 
-``` SQL
-mysql> ALTER TABLE tblCustomerInfoBkup ALTER COLUMN custInfoDOB year;
+mysql> ALTER TABLE tblUsers DROP COLUMN born;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  9 | Bob       | Builder  |   51 | MO    |
++----|-----------|----------|------|-------+
+4 rows in set (0.00 sec)
+
 ```
+
+NOTE: Depending on the type of SQL database being used, the `MODIFY` command may
+be `ALTER`.
 
 
 #### Delete
