@@ -786,7 +786,9 @@ mysql> SELECT * FROM tblUsersPts;
 +----|-----------|----------|-------|--------+
 4 rows in set (0.00 sec)
 
-mysql> SELECT tblUsersPts.firstname, tblUsersPts.lastname, tblUsersPts.points FROM tblUsersPts RIGHT JOIN tblUsers ON tblUsers.lastname=tblUsersPts.lastname AND tblUsers.firstname=tblUsersPts.firstname;
+mysql> SELECT firstname, lastname, points FROM tblUsersPts 
+-> RIGHT JOIN tblUsers ON tblUsers.lastname=tblUsersPts.lastname 
+-> AND tblUsers.firstname=tblUsersPts.firstname;
 +-----------|----------|--------+
 | firstname | lastname | points |
 +-----------|----------|--------+
@@ -841,139 +843,142 @@ UNION SELECT firstname, lastname, age FROM tblUsers;
 
 Records can be sorted in the ascending or descending order of a column by using
 the `ODER` command and either `ASC` for "ascending" or `DESC` for "descending".
-Like always, the results can also be limited or trimmed with something like a
-`LIMIT 1`.
+Like always, the results can be limited or trimmed with a statement, like `LIMIT
+1`.
 
 ``` SQL
-mysql> SELECT * FROM tblEmpInfo;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|     1 | Smith       | 11112223344 |
-|     2 | Jones       | 11199223344 |
-|  1000 | Banard      | 27199223344 |
-+-------|-------------|-------------+
+mysql> SELECT * FROM tblUsersPts;
++----|-----------|----------|-------|--------+
+| id | firstname | lastname | team  | points |
++----|-----------|----------|-------|--------+
+|  1 | Joe       | Fry      | Red   |  20000 |
+|  2 | Emily     | Flanders | Blue  |  17000 |
+|  3 | Tina      | Oak      | Red   |  32800 |
+|  4 | Bob       | Builder  | Green |  40100 |
++----|-----------|----------|-------|--------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT * FROM tblUsersPts ORDER BY points DESC LIMIT 3;
++----|-----------|----------|-------|--------+
+| id | firstname | lastname | team  | points |
++----|-----------|----------|-------|--------+
+|  4 | Bob       | Builder  | Green |  40100 |
+|  3 | Tina      | Oak      | Red   |  32800 |
+|  1 | Joe       | Fry      | Red   |  20000 |
++----|-----------|----------|-------|--------+
 3 rows in set (0.00 sec)
 
-mysql> SELECT * FROM tblEmpInfo ORDER BY empLastName ASC LIMIT 1;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|  1000 | Banard      | 27199223344 |
-+-------|-------------|-------------+
-1 row in set (0.00 sec)
-
-mysql> SELECT * FROM tblEmpInfo ORDER BY empLastName DESC LIMIT 1;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|     1 | Smith       | 11112223344 |
-+-------|-------------|-------------+
-1 row in set (0.00 sec)
+mysql> SELECT * FROM tblUsersPts ORDER BY team,lastname ASC;
++----|-----------|----------|-------|--------+
+| id | firstname | lastname | team  | points |
++----|-----------|----------|-------|--------+
+|  2 | Emily     | Flanders | Blue  |  17000 |
+|  4 | Bob       | Builder  | Green |  40100 |
+|  1 | Joe       | Fry      | Red   |  20000 |
+|  3 | Tina      | Oak      | Red   |  32800 |
++----|-----------|----------|-------|--------+
+4 rows in set (0.00 sec)
 ```
 
 ### Minimum and Maximum Values
 
-Similar to `ORDER`, min and max values of a particular column in the table can
-also be returned using the `MIN` and `MAX` commands:
+Similar to `ORDER`, the minimum and maximum values in a particular column of the
+table can be returned using the `MIN` and `MAX` commands:
 
 ```SQL
-mysql> SELECT * FROM tblItems;
-+-------|----------|----------+
-| empID | name     | numItems |
-+-------|----------|----------+
-|     1 | Person A |     2343 |
-|     2 | Person B |    24573 |
-|     3 | Person C |  4844573 |
-|     4 | Person D |   234234 |
-|     5 | Person E |   834234 |
-|     6 | Person F |   783641 |
-+-------|----------|----------+
-6 rows in set (0.00 sec)
+mysql> SELECT * FROM tblUsersPts ORDER BY team,lastname ASC;
++----|-----------|----------|-------|--------+
+| id | firstname | lastname | team  | points |
++----|-----------|----------|-------|--------+
+|  2 | Emily     | Flanders | Blue  |  17000 |
+|  4 | Bob       | Builder  | Green |  40100 |
+|  1 | Joe       | Fry      | Red   |  20000 |
+|  3 | Tina      | Oak      | Red   |  32800 |
++----|-----------|----------|-------|--------+
+4 rows in set (0.00 sec)
 
-mysql> SELECT MIN(numItems) FROM tblItems;
-+---------------+
-| MIN(numItems) |
-+---------------+
-|          2343 |
-+---------------+
+mysql> SELECT MIN(points),MAX(points)  FROM tblUsersPts;
++-------------|-------------+
+| MIN(points) | MAX(points) |
++-------------|-------------+
+|       17000 |       40100 |
++-------------|-------------+
 1 row in set (0.00 sec)
-
 ```
 
 To return other fields with the min/max item, a sub-query (another query inside
 parenthesis) may have to be used:
 
 ```SQL
-mysql> SELECT name,numItems FROM tblItems WHERE numItems=(SELECT MAX(numItems) FROM tblItems);
-+----------|----------+
-| name     | numItems |
-+----------|----------+
-| Person C |  4844573 |
-+----------|----------+
+mysql> SELECT firstname,lastname,points FROM tblUsersPts 
+-> WHERE points=(SELECT MAX(points) FROM tblUsersPts);
++-----------|----------|--------+
+| firstname | lastname | points |
++-----------|----------|--------+
+| Bob       | Builder  |  40100 |
++-----------|----------|--------+
 1 row in set (0.00 sec)
-
 ```
 
 ### Upper and Lower Case Conversions
 
-Can use more functions, like `UCASE` and `LCASE` to changed the *displayed* (the
-data is not altered) text to be upper or lower case, respectively. Note: if
-staying compliant to the SQL standard, there is SQL function to *alter* the
-actual *data* to upper or lower case.
+Strings (such as names), and be easily altered using functions like `UCASE` and
+`LCASE`. These two functions change the *displayed* text (the data is not
+altered) to be upper or lower case, respectively. Note: if staying compliant to
+the SQL standard, there is SQL function to *alter* the actual *data* to upper or
+lower case.
 
 ```SQL
-mysql> SELECT * FROM tblEmpInfo;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|     1 | Smith       | 11112223344 |
-|     2 | Jones       | 11199223344 |
-|  1000 | Banard      | 27199223344 |
-+-------|-------------|-------------+
-3 rows in set (0.00 sec)
+mysql> SELECT * FROM tblUsersPts;
++----|-----------|----------|-------|--------+
+| id | firstname | lastname | team  | points |
++----|-----------|----------|-------|--------+
+|  1 | Joe       | Fry      | Red   |  20000 |
+|  2 | Emily     | Flanders | Blue  |  17000 |
+|  3 | Tina      | Oak      | Red   |  32800 |
+|  4 | Bob       | Builder  | Green |  40100 |
++----|-----------|----------|-------|--------+
+4 rows in set (0.01 sec)
 
-mysql> SELECT UCASE(empLastName),LCASE(empLastName) FROM tblEmpInfo;
-+--------------------|--------------------+
-| UCASE(empLastName) | LCASE(empLastName) |
-+--------------------|--------------------+
-| SMITH              | smith              |
-| JONES              | jones              |
-| BANARD             | banard             |
-+--------------------|--------------------+
-3 rows in set (0.00 sec)
+mysql> SELECT UCASE(lastname),LCASE(firstname) FROM tblUsersPts;
++-----------------|------------------+
+| UCASE(lastname) | LCASE(firstname) |
++-----------------|------------------+
+| FRY             | joe              |
+| FLANDERS        | emily            |
+| OAK             | tina             |
+| BUILDER         | bob              |
++-----------------|------------------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT * FROM tblUsersPts;
++----|-----------|----------|-------|--------+
+| id | firstname | lastname | team  | points |
++----|-----------|----------|-------|--------+
+|  1 | Joe       | Fry      | Red   |  20000 |
+|  2 | Emily     | Flanders | Blue  |  17000 |
+|  3 | Tina      | Oak      | Red   |  32800 |
+|  4 | Bob       | Builder  | Green |  40100 |
++----|-----------|----------|-------|--------+
+4 rows in set (0.00 sec)
 ```
 
 ### Now()
 
-the `Now*()` function can create a new value, using the current date and time.
+The `Now*()` function can create a new value, using the current date and time.
 This can be appended when making a view, to mark when things happen over time.
 
 
 ```sql
-mysql> SELECT * FROM tblItems;
-+-------|----------|----------+
-| empID | name     | numItems |
-+-------|----------|----------+
-|     1 | Person A |     2343 |
-|     2 | Person B |    24573 |
-|     3 | Person C |  4844573 |
-|     4 | Person D |   234234 |
-|     5 | Person E |   834234 |
-|     6 | Person F |   783641 |
-+-------|----------|----------+
-6 rows in set (0.00 sec)
-
-mysql> SELECT empID, name, numItems, Now() as stockDate FROM tblItems;
-+-------|----------|----------|---------------------+
-| empID | name     | numItems | stockDate           |
-+-------|----------|----------|---------------------+
-|     1 | Person A |     2343 | 2018-04-06 10:25:44 |
-|     2 | Person B |    24573 | 2018-04-06 10:25:44 |
-|     3 | Person C |  4844573 | 2018-04-06 10:25:44 |
-|     4 | Person D |   234234 | 2018-04-06 10:25:44 |
-|     5 | Person E |   834234 | 2018-04-06 10:25:44 |
-|     6 | Person F |   783641 | 2018-04-06 10:25:44 |
-+-------|----------|----------|---------------------+
-6 rows in set (0.00 sec)
+mysql> SELECT id,firstname,lastname,team,points, Now() AS updated
+    -> FROM tblUsersPts;
++----|-----------|----------|-------|--------|---------------------+
+| id | firstname | lastname | team  | points | updated             |
++----|-----------|----------|-------|--------|---------------------+
+|  1 | Joe       | Fry      | Red   |  20000 | 2018-04-17 10:56:53 |
+|  2 | Emily     | Flanders | Blue  |  17000 | 2018-04-17 10:56:53 |
+|  3 | Tina      | Oak      | Red   |  32800 | 2018-04-17 10:56:53 |
+|  4 | Bob       | Builder  | Green |  40100 | 2018-04-17 10:56:53 |
++----|-----------|----------|-------|--------|---------------------+
+4 rows in set (0.00 sec)
 ```
