@@ -500,10 +500,12 @@ mysql> SHOW FIELDS FROM tblPeople;
 +-----------|-------------|------|-----|---------|----------------+
 5 rows in set (0.00 sec)
 
-mysql> INSERT INTO tblPeople (firstname, lastname, age, state) VALUES ('Josh', 'Rivers', 19, "PA");
+mysql> INSERT INTO tblPeople (firstname, lastname, age, state) 
+VALUES ('Josh', 'Rivers', 19, "PA");
 Query OK, 1 row affected (0.00 sec)
 
-mysql> INSERT INTO tblPeople (firstname, lastname, age, state) VALUES ('Kim', 'Medows', 32, "CO");
+mysql> INSERT INTO tblPeople (firstname, lastname, age, state) 
+VALUES ('Kim', 'Medows', 32, "CO");
 Query OK, 1 row affected (0.00 sec)
 
 mysql> SELECT * FROM  tblPeople;
@@ -520,7 +522,8 @@ mysql> SELECT * FROM  tblPeople;
 You can also set the auto increment value:
 
 ``` SQL
-mysql> INSERT INTO tblPeople (firstname, lastname, age, state) VALUES ('Dan', 'Valley', 40, "NH");
+mysql> INSERT INTO tblPeople (firstname, lastname, age, state) 
+VALUES ('Dan', 'Valley', 40, "NH");
 Query OK, 1 row affected (0.01 sec)
 
 mysql> SELECT * FROM  tblPeople;
@@ -540,8 +543,10 @@ unique, or it will error.
 
 ### SQL Functions
 
-SQL statements that don't directly manipulate data, but are related to the
-SELECT function.
+SQL *functions*, are SQL statements that don't directly manipulate data, but can
+be use to extract other useful information from the database and tables. They
+are often used with the `SELECT`. There are a bunch base of SQL functions that
+can used. Here are examples of a few:
 
 #### COUNT
 
@@ -549,39 +554,30 @@ Shows us the result of a function was ask it to do. In this case, the count of
 items fitting that criteria.
 
 ``` SQL
-mysql> SELECT * FROM tblCustomerInfo;
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |
-| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |
-| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-3 rows in set (0.00 sec)
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  9 | Bob       | Builder  |   51 | MO    |
++----|-----------|----------|------|-------+
+4 rows in set (0.00 sec)
 
-mysql> SELECT COUNT(*) FROM tblCustomerInfo;
+mysql> SELECT COUNT(*) FROM tblUsers;
 +----------+
 | COUNT(*) |
 +----------+
-|        3 |
+|        4 |
 +----------+
 1 row in set (0.00 sec)
 
-mysql> SELECT * FROM tblCustomerInfo;
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |
-| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |
-| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-3 rows in set (0.00 sec)
-
-mysql> SELECT COUNT(*) FROM tblCustomerInfo;
+mysql> SELECT COUNT(*) FROM tblUsers WHERE age>35;
 +----------+
 | COUNT(*) |
 +----------+
-|        3 |
+|        2 |
 +----------+
 1 row in set (0.00 sec)
 ```
@@ -589,118 +585,133 @@ mysql> SELECT COUNT(*) FROM tblCustomerInfo;
 
 #### Average and Sum Functions
 
-Starting out with a new test table:
-
-``` SQL
-mysql> SELECT * FROM tblItems;
-+-------|----------|----------+
-| empID | name     | numItems |
-+-------|----------|----------+
-|     1 | Person A |     2343 |
-|     2 | Person B |    24573 |
-|     3 | Person C |  4844573 |
-|     4 | Person D |   234234 |
-|     5 | Person E |   834234 |
-|     6 | Person F |   783641 |
-+-------|----------|----------+
-6 rows in set (0.00 sec)
-```
-
 To get an average of the numbers in a column, use the `AVG` function:
 
 ``` SQL
-mysql> SELECT AVG(numItems) from tblItems;
-+---------------+
-| AVG(numItems) |
-+---------------+
-|  1120599.6667 |
-+---------------+
+mysql> SELECT AVG(age) from tblUsers;
++----------+
+| AVG(age) |
++----------+
+|  36.7500 |
++----------+
 1 row in set (0.00 sec)
 ```
 
 To get a total, use the `SUM` function:
 
 ``` SQL
-mysql> SELECT SUM(numItems) from tblItems;
-+---------------+
-| SUM(numItems) |
-+---------------+
-|       6723598 |
-+---------------+
+mysql> SELECT SUM(age) from tblUsers;
++----------+
+| SUM(age) |
++----------+
+|      147 |
++----------+
 1 row in set (0.00 sec)
 ```
 
-Note again, statements can be combined:
+Note, that statements can  still be combined:
 
 ``` SQL
-mysql> SELECT COUNT(*),AVG(numItems),SUM(numItems) from tblItems;
-+----------|---------------|---------------+
-| COUNT(*) | AVG(numItems) | SUM(numItems) |
-+----------|---------------|---------------+
-|        6 |  1120599.6667 |       6723598 |
-+----------|---------------|---------------+
+mysql> SELECT COUNT(*),AVG(age) from tblUsers;
++----------|----------+
+| COUNT(*) | AVG(age) |
++----------|----------+
+|        4 |  36.7500 |
++----------|----------+
 1 row in set (0.00 sec)
 ```
 
 ### The Like Operator
 
-The `LIKE` operator can be used to fix matching, with wildcards, `%`. For
+The `LIKE` operator can be used for matching, with wildcards, `%`. For
 example in the following searches, `%S` and `S%` yield different results because
 the first looks for last names which *end* in an "s", and the second grabs last
 names which *start* with "s".
 
-Note, `LIKE` uses higher CPU usage. If possible, try to use it on columns which
-are indexed.
+Note, `LIKE` uses higher CPU usage. With larger data sets, try to use it on
+columns which are indexed if possible.
 
 ``` SQL
-mysql> SELECT *FROM tblCustomerInfo WHERE custInfoLastName LIKE '%s';
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  9 | Bob       | Builder  |   51 | MO    |
+| 10 | Zach      | Scout    |   27 | NV    |
++----|-----------|----------|------|-------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM tblUsers WHERE lastname LIKE '%S';
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  6 | Emily     | Flanders |   22 | CA    |
++----|-----------|----------|------|-------+
 1 row in set (0.00 sec)
 
-mysql> SELECT *FROM tblCustomerInfo WHERE custInfoLastName LIKE 's%';
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
-| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |
-| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------+
+mysql> SELECT * FROM tblUsers WHERE lastname LIKE 'S%';
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+| 10 | Zach      | Scout    |   27 | NV    |
++----|-----------|----------|------|-------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM tblUsers WHERE lastname LIKE '%er%';
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  6 | Emily     | Flanders |   22 | CA    |
+|  9 | Bob       | Builder  |   51 | MO    |
++----|-----------|----------|------|-------+
 2 rows in set (0.00 sec)
 ```
 
 
 ### Views
 
-Let you create a custom filter and display set of data to use. This can be
-useful for difference scenarios. For example, the view can just be updated when
-querying for dash boards, or reports, instead of going through everything.
+Views let you create a custom filter, and display set of the data. This can be
+useful in difference scenarios. For example, a view can saved, and then just
+*updated*, instead of *recalculated*, when querying for dash boards, or reports.
 
 ``` SQL 
-mysql> SELECT * FROM tblItems;                                                                   +-------|----------|----------+
-| empID | name     | numItems |
-+-------|----------|----------+
-|     1 | Person A |     2343 |
-|     2 | Person B |    24573 |
-|     3 | Person C |  4844573 |
-|     4 | Person D |   234234 |
-|     5 | Person E |   834234 |
-|     6 | Person F |   783641 |
-+-------|----------|----------+
-6 rows in set (0.00 sec)
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  9 | Bob       | Builder  |   51 | MO    |
+| 10 | Zach      | Scout    |   27 | NV    |
++----|-----------|----------|------|-------+
+5 rows in set (0.00 sec)
 
-mysql> CREATE VIEW myView AS SELECT COUNT(*),AVG(numItems),SUM(numItems) FROM tblItems WHERE numItems > 50000;
-Query OK, 0 rows affected (0.00 sec)
+mysql> CREATE VIEW myView AS SELECT COUNT(*), AVG(age), SUM(age) FROM tblUsers;
+Query OK, 0 rows affected (0.01 sec)
 
 mysql> SELECT * FROM myView;
-+----------|---------------|---------------+
-| COUNT(*) | AVG(numItems) | SUM(numItems) |
-+----------|---------------|---------------+
-|        4 |  1674170.5000 |       6696682 |
-+----------|---------------|---------------+
++----------|----------|----------+
+| COUNT(*) | AVG(age) | SUM(age) |
++----------|----------|----------+
+|        5 |  34.8000 |      174 |
++----------|----------|----------+
 1 row in set (0.00 sec)
+
+mysql> DELETE FROM tblUsers WHERE firstname='Bob';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM myView;
++----------|----------|----------+
+| COUNT(*) | AVG(age) | SUM(age) |
++----------|----------|----------+
+|        4 |  30.7500 |      123 |
++----------|----------|----------+
+1 row in set (0.00 sec)
+
 ```
 
 ### Joins
@@ -711,99 +722,86 @@ An Inner join will return the selected rows from multiple tables, when there is
 at least one match in each table. For example:
 
 ``` SQL
-mysql> SELECT * FROM tblItems;
-+-------|----------|----------+
-| empID | name     | numItems |
-+-------|----------|----------+
-|     1 | Person A |     2343 |
-|     2 | Person B |    24573 |
-|     3 | Person C |  4844573 |
-|     4 | Person D |   234234 |
-|     5 | Person E |   834234 |
-|     6 | Person F |   783641 |
-+-------|----------|----------+
-6 rows in set (0.00 sec)
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+| 10 | Zach      | Scout    |   27 | NV    |
++----|-----------|----------|------|-------+
+4 rows in set (0.00 sec)
 
-mysql> SELECT * FROM tblEmpInfo;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|     1 | Smith       | 11112223344 |
-|     2 | Jones       | 11199223344 |
-|  1000 | Banard      | 27199223344 |
-+-------|-------------|-------------+
-3 rows in set (0.00 sec)
+mysql> SELECT * FROM tblUsersPts;
++----|-----------|----------|-------|--------+
+| id | firstname | lastname | team  | points |
++----|-----------|----------|-------|--------+
+|  1 | Joe       | Fry      | Red   |  20000 |
+|  2 | Emily     | Flanders | Blue  |  17000 |
+|  3 | Tina      | Oak      | Red   |  32800 |
+|  4 | Bob       | Builder  | Green |  40100 |
++----|-----------|----------|-------|--------+
+4 rows in set (0.00 sec)
 
-mysql> SELECT tblItems.empID, tblItems.name, tblItems.numItems FROM tblItems INNER JOIN tblEmpInfo ON tblItems.empID=tblEmpInfo.empID;
-+-------|----------|----------+
-| empID | name     | numItems |
-+-------|----------|----------+
-|     1 | Person A |     2343 |
-|     2 | Person B |    24573 |
-+-------|----------|----------+
-2 rows in set (0.00 sec)
-```
-
-#### Left Join
-
-Will give everything on the left table, and existing or matched items on the
-right, but will display as null for non matching data.
-
-``` SQL
-mysql> SELECT * FROM tblEmpInfo;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|     1 | Smith       | 11112223344 |
-|     2 | Jones       | 11199223344 |
-|  1000 | Banard      | 27199223344 |
-+-------|-------------|-------------+
-3 rows in set (0.00 sec)
-
-mysql> SELECT * FROM tblItems;
-+-------|----------|----------+
-| empID | name     | numItems |
-+-------|----------|----------+
-|     1 | Person A |     2343 |
-|     2 | Person B |    24573 |
-|     3 | Person C |  4844573 |
-|     4 | Person D |   234234 |
-|     5 | Person E |   834234 |
-|     6 | Person F |   783641 |
-+-------|----------|----------+
-6 rows in set (0.00 sec)
-
-mysql> SELECT tblEmpInfo.empID, empLastName, numItems FROM tblEmpInfo LEFT Join tblItems ON tblEmpInfo.empID=tblItems.empID;
-+-------|-------------|----------+
-| empID | empLastName | numItems |
-+-------|-------------|----------+
-|     1 | Smith       |     2343 |
-|     2 | Jones       |    24573 |
-|  1000 | Banard      |     NULL |
-+-------|-------------|----------+
+mysql> SELECT tblUsersPts.firstname, tblUsersPts.lastname, tblUsersPts.points
+    -> FROM tblUsersPts INNER JOIN tblUsers
+    -> ON tblUsers.lastname=tblUsersPts.lastname 
+    -> AND tblUsers.firstname=tblUsersPts.firstname;
++-----------|----------|--------+
+| firstname | lastname | points |
++-----------|----------|--------+
+| Joe       | Fry      |  20000 |
+| Emily     | Flanders |  17000 |
+| Tina      | Oak      |  32800 |
++-----------|----------|--------+
 3 rows in set (0.00 sec)
 ```
 
 #### Right Join
 
-Basically the same as a `LEFT` join, but with the right table items all joining.
-Swapping the example from above for example:
-
+A *right* join will give *everything* in the right table, and any existing/matched
+items on the left, but will display as null for non matching data.
 
 ``` SQL
-mysql> SELECT tblEmpInfo.empID, empLastName, numItems FROM tblEmpInfo RIGHT JOIN tblItems ON tblEmpInfo.empID=tblItems.empID;
-+-------|-------------|----------+
-| empID | empLastName | numItems |
-+-------|-------------|----------+
-|     1 | Smith       |     2343 |
-|     2 | Jones       |    24573 |
-|  NULL | NULL        |  4844573 |
-|  NULL | NULL        |   234234 |
-|  NULL | NULL        |   834234 |
-|  NULL | NULL        |   783641 |
-+-------|-------------|----------+
-6 rows in set (0.00 sec)
+mysql> SELECT * FROM tblUsers;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+| 10 | Zach      | Scout    |   27 | NV    |
++----|-----------|----------|------|-------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT * FROM tblUsersPts;
++----|-----------|----------|-------|--------+
+| id | firstname | lastname | team  | points |
++----|-----------|----------|-------|--------+
+|  1 | Joe       | Fry      | Red   |  20000 |
+|  2 | Emily     | Flanders | Blue  |  17000 |
+|  3 | Tina      | Oak      | Red   |  32800 |
+|  4 | Bob       | Builder  | Green |  40100 |
++----|-----------|----------|-------|--------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT tblUsersPts.firstname, tblUsersPts.lastname, tblUsersPts.points FROM tblUsersPts RIGHT JOIN tblUsers ON tblUsers.lastname=tblUsersPts.lastname AND tblUsers.firstname=tblUsersPts.firstname;
++-----------|----------|--------+
+| firstname | lastname | points |
++-----------|----------|--------+
+| Joe       | Fry      |  20000 |
+| Emily     | Flanders |  17000 |
+| Tina      | Oak      |  32800 |
+| NULL      | NULL     |   NULL |
++-----------|----------|--------+
+4 rows in set (0.00 sec)
 ```
+
+#### Left Join
+
+Basically the same as a `RIGHT` join, but with the left table items all joining.
+
 
 #### Full Join
 A full join shows *all* records from both the right and left table, regardless
@@ -817,25 +815,25 @@ recommended to use Unions to emulate it.
 Unions are used to combine and concatenate `SELECT` statements from multiple
 tables. 
 
-Doesn't work well in this example because the `empSSN` column doesn't actually
-match up across both tables...
+This example doesn't work well because it doesn't make much sense (`age` isn't
+the a `point`), at least it displays what is happening during the `UNION`.
 
 ``` SQL
-mysql> SELECT tblEmpInfo.empID,tblEmpInfo.empLastName,tblEmpInfo.empSSN FROM tblEmpInfo UNION SELECT * FROM tblItems;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|     1 | Smith       | 11112223344 |
-|     2 | Jones       | 11199223344 |
-|  1000 | Banard      | 27199223344 |
-|     1 | Person A    | 2343        |
-|     2 | Person B    | 24573       |
-|     3 | Person C    | 4844573     |
-|     4 | Person D    | 234234      |
-|     5 | Person E    | 834234      |
-|     6 | Person F    | 783641      |
-+-------|-------------|-------------+
-9 rows in set (0.00 sec)
+mysql> SELECT firstname, lastname, points FROM tblUsersPts 
+UNION SELECT firstname, lastname, age FROM tblUsers;
++-----------|----------|--------+
+| firstname | lastname | points |
++-----------|----------|--------+
+| Joe       | Fry      |  20000 |
+| Emily     | Flanders |  17000 |
+| Tina      | Oak      |  32800 |
+| Bob       | Builder  |  40100 |
+| Joe       | Fry      |     32 |
+| Emily     | Flanders |     22 |
+| Tina      | Oak      |     42 |
+| Zach      | Scout    |     27 |
++-----------|----------|--------+
+8 rows in set (0.00 sec)
 ```
 
 
@@ -979,13 +977,3 @@ mysql> SELECT empID, name, numItems, Now() as stockDate FROM tblItems;
 +-------|----------|----------|---------------------+
 6 rows in set (0.00 sec)
 ```
-
-
-
-
-## EXAMPLE CODE TO REPLACE WITH
-
-Just dumping these examples here for now. Will replace the old examples with
-this in time as I go through and organize everything:
-
-```SQL
