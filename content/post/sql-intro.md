@@ -345,7 +345,6 @@ mysql> SELECT * FROM tblUsers;
 |  9 | Bob       | Builder  |   51 | MO    |
 +----|-----------|----------|------|-------+
 4 rows in set (0.00 sec)
-
 ```
 
 NOTE: Depending on the type of SQL database being used, the `MODIFY` command may
@@ -363,36 +362,54 @@ Specific items from the table can be removed using more specific `DELETE FROM`
 commands:
 
 ``` SQL
-mysql> SELECT * FROM tblCustomerInfoBkup;
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------|-------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone | custInfoDOB |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------|-------------+
-| June              | Fill             | 1191 Oak St   |               | Allston          | CA            | 90200           | 2127447333    |        NULL |
-| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |        NULL |
-| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |        NULL |
-| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |        NULL |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------|-------------+
+mysql> SELECT * FROM tblUsersBackup;                                                                    
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  9 | Bob       | Builder  |   51 | MO    |
++----|-----------|----------|------|-------+
 4 rows in set (0.00 sec)
 
-mysql> DELETE FROM tblCustomerInfoBkup WHERE custInfoState='CA';
-Query OK, 1 row affected (0.00 sec)
+mysql> DELETE FROM tblUsersBackup WHERE age>35;
+Query OK, 2 rows affected (0.01 sec)
 
-mysql> SELECT * FROM tblCustomerInfoBkup;
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------|-------------+
-| custInfoFirstName | custInfoLastName | custInfoAddr1 | custInfoAddr2 | custInfoCityName | custInfoState | custInfoZipCode | custInfoPhone | custInfoDOB |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------|-------------+
-| John              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123445533    |        NULL |
-| Jane              | Smith            | 111 Main St   |               | Anytown          | NY            | 43211           | 2123443833    |        NULL |
-| Jan               | Jones            | 111 Main St   |               | City             | OH            | 43200           | 2123447333    |        NULL |
-+-------------------|------------------|---------------|---------------|------------------|---------------|-----------------|---------------|-------------+
-3 rows in set (0.00 sec)
+mysql> SELECT * FROM tblUsersBackup;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
++----|-----------|----------|------|-------+
+2 rows in set (0.00 sec)
 ```
 
 You can also use multiple criteria:
 
 ``` SQL
-mysql> DELETE FROM tblCustomerInfoBkup WHERE custInfoState='John' AND custInfoLastName='Johnson';
-Query OK, 0 rows affected (0.00 sec)
+mysql> SELECT * FROM tblUsersBackup;                                                                    
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  5 | Joe       | Fry      |   32 | RI    |
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
+|  9 | Bob       | Builder  |   51 | MO    |
++----|-----------|----------|------|-------+
+
+mysql> DELETE FROM tblUsersBackup WHERE age>50 OR state="RI";
+Query OK, 2 rows affected (0.00 sec)
+
+mysql> SELECT * FROM tblUsersBackup;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
++----|-----------|----------|------|-------+
+2 rows in set (0.00 sec)
 ```
 
 
@@ -406,23 +423,19 @@ Use with `CREATE INDEX`. Again though, different dbs may have different
 commands.
 
 ``` SQL
-mysql> SHOW FIELDS FROM tblCustomerIDInfo;
-+-------------------|-------------|------|-----|---------|-------+
-| Field             | Type        | Null | Key | Default | Extra |
-+-------------------|-------------|------|-----|---------|-------+
-| custID            | varchar(10) | NO   | PRI | NULL    |       |
-| custInfoFirstName | varchar(50) | YES  |     | NULL    |       |
-| custInfoLastName  | varchar(50) | YES  |     | NULL    |       |
-| custInfoAddr1     | varchar(50) | YES  |     | NULL    |       |
-| custInfoAddr2     | varchar(50) | YES  |     | NULL    |       |
-| custInfoCityName  | varchar(50) | YES  |     | NULL    |       |
-| custInfoState     | varchar(10) | YES  |     | NULL    |       |
-| custInfoZipCode   | varchar(10) | YES  |     | NULL    |       |
-| custInfoPhone     | varchar(12) | YES  |     | NULL    |       |
-+-------------------|-------------|------|-----|---------|-------+
-9 rows in set (0.00 sec)
+mysql> SHOW FIELDS FROM tblUsers;
++-----------|-------------|------|-----|---------|----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------|-------------|------|-----|---------|----------------+
+| id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| firstname | varchar(50) | YES  |     | NULL    |                |
+| lastname  | varchar(50) | YES  |     | NULL    |                |
+| age       | int(11)     | YES  |     | NULL    |                |
+| state     | varchar(2)  | YES  |     | NULL    |                |
++-----------|-------------|------|-----|---------|----------------+
+5 rows in set (0.00 sec)
 
-mysql> CREATE INDEX indexCustInfoID ON tblCustomerIDInfo (custID);
+mysql> CREATE INDEX indexTblUsers ON tblUsers (id);
 Query OK, 0 rows affected (0.01 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
@@ -432,54 +445,38 @@ Records: 0  Duplicates: 0  Warnings: 0
 
 As we already know, you can drop the whole table:
 
-``` SQL
-mysql> SHOW TABLES;
-+--------------------------+
-| Tables_in_dbCustomerInfo |
-+--------------------------+
-| tblCustomerIDInfo        |
-| tblCustomerInfo          |
-| tblCustomerInfoBkup      |
-| tblTest                  |
-+--------------------------+
-4 rows in set (0.00 sec)
-
-mysql> DROP TABLE tblTest;
-Query OK, 0 rows affected (0.00 sec)
-
-mysql> SHOW TABLES;
-+--------------------------+
-| Tables_in_dbCustomerInfo |
-+--------------------------+
-| tblCustomerIDInfo        |
-| tblCustomerInfo          |
-| tblCustomerInfoBkup      |
-+--------------------------+
-3 rows in set (0.00 sec)
-```
-
 However, like many things, `DROP` can be used with other specifications...
 
 Some versions will use `ALTERTABLE tblCustomerIDInfo DROP INDEX
 indexCustInfoID;`, while others may have a different command:
 
 ``` SQL 
-mysql> DROP INDEX indexCustInfoID ON tblCustomerIDInfo;
-Query OK, 0 rows affected (0.00 sec)
+mysql> ALTER TABLE tblUsers DROP INDEX indexTblUsers;
+Query OK, 0 rows affected (0.01 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
  
  
 #### Truncate
 
-Delete the data, but leave table with names of columns all the same... again,
-still be careful because it *will* delete all the data.
+The `truncate` command will delete the data, but leave table with names of
+columns all the same... again, still be careful because it *will* delete all the
+data in the table.
 
 ``` SQL
-mysql> TRUNCATE TABLE tblCustomerInfoBkup;
-Query OK, 0 rows affected (0.01 sec)
+mysql> SELECT * FROM tblUsersBackup;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  6 | Emily     | Flanders |   22 | CA    |
+|  7 | Tina      | Oak      |   42 | NC    |
++----|-----------|----------|------|-------+
+2 rows in set (0.00 sec)
 
-mysql> SELECT * FROM tblCustomerInfoBkup;
+mysql> TRUNCATE TABLE tblUsersBackup;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> SELECT * FROM tblUsersBackup;
 Empty set (0.00 sec)
 ```
 
@@ -491,72 +488,55 @@ is updated.
 You can auto increment a key. Very useful for IDs in a table.
 
 ``` SQL
-mysql> CREATE TABLE tblEmpInfo(empID int PRIMARY KEY AUTO_INCREMENT,empLastName varchar(50),empSSN varchar(11)); 
-Query OK, 0 rows affected (0.01 sec)
+mysql> SHOW FIELDS FROM tblPeople;
++-----------|-------------|------|-----|---------|----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------|-------------|------|-----|---------|----------------+
+| id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| firstname | varchar(50) | YES  |     | NULL    |                |
+| lastname  | varchar(50) | YES  |     | NULL    |                |
+| age       | int(11)     | YES  |     | NULL    |                |
+| state     | varchar(2)  | YES  |     | NULL    |                |
++-----------|-------------|------|-----|---------|----------------+
+5 rows in set (0.00 sec)
 
-mysql> SHOW FIELDS FROM tblEmpInfo;
-+-------------|-------------|------|-----|---------|----------------+
-| Field       | Type        | Null | Key | Default | Extra          |
-+-------------|-------------|------|-----|---------|----------------+
-| empID       | int(11)     | NO   | PRI | NULL    | auto_increment |
-| empLastName | varchar(50) | YES  |     | NULL    |                |
-| empSSN      | varchar(11) | YES  |     | NULL    |                |
-+-------------|-------------|------|-----|---------|----------------+
-3 rows in set (0.00 sec)
-
-mysql> INSERT INTO tblEmpInfo (empLastName,empSSN) VALUES ('Smith','11112223344');
+mysql> INSERT INTO tblPeople (firstname, lastname, age, state) VALUES ('Josh', 'Rivers', 19, "PA");
 Query OK, 1 row affected (0.00 sec)
 
-mysql> INSERT INTO tblEmpInfo (empLastName,empSSN) VALUES ('Jones','11199223344');
+mysql> INSERT INTO tblPeople (firstname, lastname, age, state) VALUES ('Kim', 'Medows', 32, "CO");
 Query OK, 1 row affected (0.00 sec)
 
-mysql> SELECT * FROM tblEmpInfo;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|     1 | Smith       | 11112223344 |
-|     2 | Jones       | 11199223344 |
-+-------|-------------|-------------+
+mysql> SELECT * FROM  tblPeople;
++----|-----------|----------|------|-------+
+| id | firstname | lastname | age  | state |
++----|-----------|----------|------|-------+
+|  1 | Josh      | Rivers   |   19 | PA    |
+|  2 | Kim       | Medows   |   32 | CO    |
++----|-----------|----------|------|-------+
 2 rows in set (0.00 sec)
+
 ```
 
 You can also set the auto increment value:
 
 ``` SQL
-mysql> ALTER TABLE tblEmpInfo AUTO_INCREMENT=1000;
-Query OK, 0 rows affected (0.00 sec)
-Records: 0  Duplicates: 0  Warnings: 0
+mysql> INSERT INTO tblPeople (firstname, lastname, age, state) VALUES ('Dan', 'Valley', 40, "NH");
+Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO tblEmpInfo (empLastName,empSSN) VALUES ('Banard','27199223344');
-Query OK, 1 row affected (0.00 sec)
-
-mysql> SELECT * FROM tblEmpInfo;
-+-------|-------------|-------------+
-| empID | empLastName | empSSN      |
-+-------|-------------|-------------+
-|     1 | Smith       | 11112223344 |
-|     2 | Jones       | 11199223344 |
-|  1000 | Banard      | 27199223344 |
-+-------|-------------|-------------+
+mysql> SELECT * FROM  tblPeople;
++------|-----------|----------|------|-------+
+| id   | firstname | lastname | age  | state |
++------|-----------|----------|------|-------+
+|    1 | Josh      | Rivers   |   19 | PA    |
+|    2 | Kim       | Medows   |   32 | CO    |
+| 1000 | Dan       | Valley   |   40 | NH    |
++------|-----------|----------|------|-------+
 3 rows in set (0.00 sec)
 ```
 
 Just be careful when setting the auto increment value that it isn't set to
 something that could eventually overwrite a value in a table that has to be
 unique, or it will error.
-
-
-To change a varchar column to an INT, if empty:
-
-``` SQL
-mysql> SELECT * FROM tblCustomerIDInfo;
-Empty set (0.01 sec)
-
-mysql> ALTER TABLE tblCustomerIDInfo MODIFY custID int AUTO_INCREMENT;
-Query OK, 0 rows affected (0.02 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-```
-
 
 ### SQL Functions
 
