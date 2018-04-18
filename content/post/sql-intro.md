@@ -7,56 +7,136 @@ tags   = ["DevOps", "Linux", "Database",]
 draft  = true
 +++
 
-After putting postgresql on pause for a bit, I have switched our rue-rss app to
-use SQLite3. In doing so, I figured it would be useful to finally dig in and learn some SQL.
+SQL is one of those technologies that seems to be everywhere, yet, I somehow
+haven't *had* to use it for anything in school or at work. I know, it's quite a
+feat. Still, it's pervasiveness argues that I really *should* learn it. So I am.
 
 <!--more-->
 
+The main purpose of this website is to document some of the tech stuff I do in
+my free time. This serves three purposes: 1) Organizing my thoughts into a post
+helps me learn it better, 2) I can easily refer back to the post to refresh my
+knowledge in the future, 3) It's a good medium to share what I've learned with
+others. 
+
+This post is a prime example, as it didn't start out as a *post*, but a plain
+file of my *notes* as I learned SQL basics. As I progressed, I realized all the
+information accumulated should be cleaned up and posted. So here we are. I've
+dramatically cleaned the file up, but if this post still seems a bit different
+than previous ones (no images, more code snippets than words)... that's because
+it's my learning notes with makeup heavily applied. Enjoy.
+
 ## Install Setup
 
-Started with mysql for some testing. Went to the [mySQL download
-Page](https://dev.mysql.com/downloads) and installed the version for me VM. This
-may differ based on Distro/DB.
+I started with installing mysql, by going to the [mySQL download
+Page](https://dev.mysql.com/downloads) and installed the version for my VM
+(centos 7). This may differ based on Distro/DB.
 
-Update... can't get `/usr/bin/mysql_secure_installation` command to run...
-getting a permission denied issue...
+At first, I couldn't get the `/usr/bin/mysql_secure_installation` command to run
+due to a permission denied error...
 
-I think I figured it out... the first time mysql is run it creates a temp
-password in the log, located at `/var/log/mysqld.log`. Lets test it out.
+Eventually, I learned that the first time mysql runs, it creates a temp password
+in the log, located at `/var/log/mysqld.log`. Using that password, I was able to
+login.
 
-It worked. I guess that's something that's out of date from my tutorial video...
-
-#### create user
-
-From shell: `mysql -u root -p mysql`, where `-u` is for the user, and `-p` is
-for the DB to connect to.
-
-
-#### Installing MariaDB on Ubuntu
-Going over the new videos, they actually explain a way to fix this. Also, there
-is a section that talks about how MariaDB is kind of replacing mySQL because
-people aren't sure what Oracle's game plan is.
-
-Still should run the secure setup to make it a bit safer:
-`mysql_secure_installation`.
-
+*I'm not going to cover any other installation steps, as this post is more about
+the SQL language, not setting up the DB. Besides, I did this in mysql, but in
+the future I'll likely look at using MariaDB anyway...*
 
 ## DBs and Commands:
 
-Generally, SQL commands are typed in all CAPS. Also, statements end with a `;`
-to terminate.
+Usually, SQL commands are typed in all CAPS. Also, statements end with a
+terminating `;`.
 
-Show databases: `SHOW DATABASES;`
+#### Show databases
 
-Create database: `CREATE DATABASE dbTest;`
+To display all of the available databases, use the `SHOW DATABASES;` command.
+Note, some of the DBs displayed are ones generated for the database system. For
+example, in the output below, *I* only created `dbCustomerInfo` and `dbTest`:
 
-Drop a database (delete): `DROP DATABASE dbTest`
+```SQL
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| dbCustomerInfo     |
+| dbTest             |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+```
 
-Select DB to use: `USE dbTest;`
+#### Create database 
+
+To create a new database, use the `CREATE DATABASE` command. Simple.
+
+```SQL
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| dbCustomerInfo     |
+| dbTest             |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE shotLivedDB;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| dbCustomerInfo     |
+| dbTest             |
+| mysql              |
+| performance_schema |
+| shotLivedDB        |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+```
+
+#### Drop a database (delete): 
+
+As easy as it was to *create* that database, deleting, or *dropping* it is just
+with the `DROP DATABASE command, so be careful!
+
+```SQL
+mysql> DROP DATABASE shotLivedDB;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| dbCustomerInfo     |
+| dbTest             |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+```
+
+#### Select DB
+
+To select which db to use inside the mysql shell use... `USE`. For this
+tutorial, I created a database named `dbTest` and selected it with `USE dbTest`.
 
 ### Tables
 
-*After a DB is selected with `USE dbName;`...*
+*Note: make sure to first select a DB to work in with `USE dbName;`...*
 
 #### Show Tables
 
@@ -982,3 +1062,9 @@ mysql> SELECT id,firstname,lastname,team,points, Now() AS updated
 +----|-----------|----------|-------|--------|---------------------+
 4 rows in set (0.00 sec)
 ```
+
+## Conclusion
+
+I think that is enough to get started with SQL :) (it was for me anyway).
+There's not much else to say other than hopefully this post continues to serve
+me well down the road :). Enjoy!
