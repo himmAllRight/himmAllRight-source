@@ -1,47 +1,51 @@
 +++
 title  = "SQL Intro"
-date   = "2018-04-16"
+date   = "2018-04-19"
 author = "Ryan Himmelwright"
 image  = "img/header-images/container-building-umich.jpg"
-tags   = ["DevOps", "Linux", "Database",]
+tags   = ["Linux", "Programming", "Dev", "Database",]
 draft  = true
 +++
 
-SQL is one of those technologies that seems to be everywhere, yet, I somehow
-haven't *had* to use it for anything in school or at work. I know, it's quite a
-feat. Still, it's pervasiveness argues that I really *should* learn it. So I am.
+SQL is one of those technologies that which to be everywhere, but yet... I
+somehow haven't *had* to use it for anything in school or at work. I know, I
+know... it's quite a feat. Still, the pervasiveness of SQL-like databases argues
+that I really *should* learn it. So I am.
 
 <!--more-->
 
 The main purpose of this website is to document some of the tech stuff I do in
 my free time. This serves three purposes: 1) Organizing my thoughts into a post
-helps me learn it better, 2) I can easily refer back to the post to refresh my
-knowledge in the future, 3) It's a good medium to share what I've learned with
+enhances my learning, 2) I can easily refer back to the post to refresh my
+memory in the future, 3) It's a good medium to share what I've learned with
 others. 
 
-This post is a prime example, as it didn't start out as a *post*, but a plain
-file of my *notes* as I learned SQL basics. As I progressed, I realized all the
-information accumulated should be cleaned up and posted. So here we are. I've
-dramatically cleaned the file up, but if this post still seems a bit different
-than previous ones (no images, more code snippets than words)... that's because
-it's my learning notes with makeup heavily applied. Enjoy.
+This post is a prime example, as it didn't start out as a *post*, but a file of
+the *notes* I took as I learned SQL basics. As I progressed, I realized all of
+the accumulating information should be cleaned up and posted. So here we are.
+I've redone the examples, and turned my shorthand blurbs into sentences, but if
+this post still seems a bit different than previous ones (no images, more code
+snippets than words)... that's because it's my learning notes with makeup
+heavily applied. Enjoy.
 
 ## Install Setup
 
-I started with installing mysql, by going to the [mySQL download
-Page](https://dev.mysql.com/downloads) and installed the version for my VM
-(centos 7). This may differ based on Distro/DB.
+I first installed mysql, by going to the [mySQL download
+page](https://dev.mysql.com/downloads) and getting the appropriate the version
+for my VM (centos 7). This may differ based on Distro/DB.
 
-At first, I couldn't get the `/usr/bin/mysql_secure_installation` command to run
-due to a permission denied error...
+*I'm not going to cover any of the installation steps, as this post is more about
+the SQL language, not setting up the DB. Besides, I did this in mysql, but in
+the future I'll likely look at using MariaDB anyway...*
+
+I do however want to note this issue I encountered, so I don't stumble over it
+in the future. At first, I couldn't get the `/usr/bin/mysql_secure_installation`
+command to run due to a permission denied error...
 
 Eventually, I learned that the first time mysql runs, it creates a temp password
 in the log, located at `/var/log/mysqld.log`. Using that password, I was able to
 login.
 
-*I'm not going to cover any other installation steps, as this post is more about
-the SQL language, not setting up the DB. Besides, I did this in mysql, but in
-the future I'll likely look at using MariaDB anyway...*
 
 ## DBs and Commands:
 
