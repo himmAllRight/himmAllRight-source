@@ -49,8 +49,9 @@ login.
 
 ## DBs and Commands:
 
-Usually, SQL commands are typed in all CAPS. Also, statements end with a
-terminating `;`.
+Conventionally, SQL commands are typed in all CAPS, and statements end with a
+terminating `;`. The rest of this post contains some SQL functions, with
+examples of how they are used.
 
 #### Show databases
 
@@ -113,7 +114,7 @@ mysql> SHOW DATABASES;
 #### Drop a database (delete): 
 
 As easy as it was to *create* that database, deleting, or *dropping* it is just
-with the `DROP DATABASE command, so be careful!
+as effortless with the `DROP DATABASE command, so be careful!
 
 ```SQL
 mysql> DROP DATABASE shotLivedDB;
@@ -140,11 +141,11 @@ tutorial, I created a database named `dbTest` and selected it with `USE dbTest`.
 
 ### Tables
 
-*Note: make sure to first select a DB to work in with `USE dbName;`...*
+*Note: make sure to first select a DB to work with: `USE dbTest;`...*
 
 #### Show Tables
 
-To show all of the tables in a database, just use `SHOW TABLES;`. For example:
+To show all of the tables in a database, use `SHOW TABLES;`. For example:
 
 ```SQL
 mysql> SHOW TABLES;
