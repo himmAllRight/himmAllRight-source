@@ -160,8 +160,8 @@ mysql> SHOW TABLES;
 #### Create Table
 
 To create a *new* table, use `CREATE TABLE`. The `CREATE TABLE` function takes
-1) the name of the new table and 2) a list of the table fields (with their
-types). For example, to create a user information table that contains a user's
+1) the name of the new table, and 2) a list of the table fields (with their
+data types). For example, to create a user information table that contains a user's
 first name, last name, age, and state, as well as an identification number, the
 following SQL command can be used:
 
@@ -171,9 +171,9 @@ Query OK, 0 rows affected (0.01 sec)
 ```
 
 The `first name`, `last name`, and `state` columns have a `varchar` data type,
-which is essentially strings of various sizes (50 and 2 characters in this
-case). The `id` and `age` columns have the `int` data type. However, note that
-the `id` column has some other junk defined after the `int` identifier....
+which are strings of various sizes (50 and 2 characters in this case). The `id`
+and `age` columns have an `int` data type. Notice that the `id` column
+has some other junk defined after the `int` identifier....
 
 #### Constraints and Fields
 
@@ -199,15 +199,15 @@ mysql> SHOW FIELDS FROM tblUsers;
 ```
 
 The `id` column uses the `PRIMARY KEY` and `AUTO_INCREMENT` constraints.
-The `PRIMARY_KEY` constraint is a combination of the `NOT NULL` and `UNIQUE`
-constraints, meaning it ensures that all the values in the column are different
-and not `NULL`. The `AUTO_INCREMENT` field allows a unique number to be
-generated, and automatically incremented during each table insert.
+`PRIMARY_KEY` is a combination of the `NOT NULL` and `UNIQUE` constraints,
+meaning it ensures that all values in the column are unique and not `NULL`. The
+`AUTO_INCREMENT` field generates an unique number that is automatically
+incremented during each insert to the table.
 
 
 #### INSERT INTO
 
-To actually *add* data into the table, the `INSERT INTO` command is used. As an
+To actually *add* data to the table, the `INSERT INTO` command is used. As an
 example, to add some users to the table created in the previous step:
 
 ```SQL
@@ -228,7 +228,7 @@ VALUES ('Bob','Builder',51,'MO');
 Query OK, 1 row affected (0.01 sec)
 ```
 
-Now, `tblUsers` should contain the information of the 4 users added. To check
+The `tblUsers` table should now contain the information of the 4 users added. To check
 this, use `SELECT * FROM tblUsers;` to select *everything* from the `tblUsers`
 table:
 
@@ -247,8 +247,9 @@ mysql> SELECT * FROM tblUsers;
 ```
 
 #### INSERT INTO Another Table
-The `INSERT INTO` command mixed with `SELECT FROM`, can insert contents of *one
-table* into *another*. This technique can be quite useful, and is a simple way to
+
+The `INSERT INTO` command combined with `SELECT FROM`, can insert contents of *one
+table* into *another*. This technique can be quite useful, providing a simple way to
 create quick backups.
 
 
@@ -277,8 +278,8 @@ mysql> SELECT * FROM tblUsersBackup;
 
 #### Drop (delete) Table
 
-To delete a table, the `DROP` command is used. For example, to delete the table
-from above, issue `DROP TABLE tblUsersBackup;`:
+To delete a table, the `DROP` command is used. For example, to delete the backup
+table from above, issue `DROP TABLE tblUsersBackup;`:
 
 ```SQL
 mysql> DROP TABLE tblUsersBackup;
