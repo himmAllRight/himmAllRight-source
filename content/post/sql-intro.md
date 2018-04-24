@@ -361,7 +361,7 @@ mysql> SELECT firstname,lastname FROM tblUsers WHERE age BETWEEN 30 AND 50;
 #### ALTER
 
 To change the table schema (add, drop or modify columns), the `ALTER` command
-can be used along with `ADD`, `DROP COLUMN`, or `MODIFY COLUMN` (respectively)
+is used along with `ADD`, `DROP COLUMN`, or `MODIFY COLUMN` (respectively)
 after the tablename. For example:
 
 -- Add a `born` column to the table
@@ -434,17 +434,17 @@ mysql> SELECT * FROM tblUsers;
 ```
 
 NOTE: Depending on the type of SQL database being used, the `MODIFY` command may
-be `ALTER`.
+be known as `ALTER`.
 
 
 #### Delete
 
-First, we can delete all the *data* in a table with `DELETE * FROM tblName`,
+All the *data* in a table can be removed using `DELETE * FROM tblName`,
 *without* deleting the table schema. However, this is almost never used because
 there are better commands to do that.
 
 
-Specific items from the table can be removed using more specific `DELETE FROM`
+*Specific* items from the table can be removed using `DELETE FROM`
 commands:
 
 ``` SQL
@@ -472,7 +472,7 @@ mysql> SELECT * FROM tblUsersBackup;
 2 rows in set (0.00 sec)
 ```
 
-You can also use multiple criteria:
+Multiple criteria can also be used to specify what to delete:
 
 ``` SQL
 mysql> SELECT * FROM tblUsersBackup;                                                                    
@@ -501,12 +501,12 @@ mysql> SELECT * FROM tblUsersBackup;
 
 #### Indexes
 
-Speeds up access to getting values in a table. However, comes at a speed cost
-for updating the table. Want to index columns or tables that are frequently
-searched on. Want to have unique values as often as possible.
+An index speeds up the data retrieval time of a table. However, this comes at a
+speed cost for *updating* the table. So, it is usually a good idea to only index
+columns or tables that are frequently searched on.
 
-Use with `CREATE INDEX`. Again though, different dbs may have different
-commands.
+To add an index, use `CREATE INDEX`. *(Again, may differ depending on database
+technology being used)*
 
 ``` SQL
 mysql> SHOW FIELDS FROM tblUsers;
@@ -529,19 +529,15 @@ Records: 0  Duplicates: 0  Warnings: 0
 #### Drop Table
 
 
-As we already know, you can drop the whole table:
+As we already know, you can drop a whole table with `DROP`. However, like many
+of the other commands, `DROP` can be used with other items, like an index:
 
-However, like many things, `DROP` can be used with other specifications...
-
-Some versions will use `ALTERTABLE tblCustomerIDInfo DROP INDEX
-indexCustInfoID;`, while others may have a different command:
 
 ``` SQL 
 mysql> ALTER TABLE tblUsers DROP INDEX indexTblUsers;
 Query OK, 0 rows affected (0.01 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
- 
  
 #### Truncate
 
