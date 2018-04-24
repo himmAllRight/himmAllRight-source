@@ -26,7 +26,7 @@ be here.
 
 **Checklist**:
 
-- [ ] Determine OS/Distro to use
+- [X] Determine OS/Distro to use (Ubuntu 18.04, 16.04 fallback)
 - [ ] Monitoring System
 - [ ] Easy Management System for Containers/VMs (ex: Ansible/Chef)
 
@@ -57,6 +57,7 @@ for management, especially remotely.
 
 **Checklist**:
 
+- [ ] Replace Meowth with new VM
 - [X] Export desired VMs
 - [ ] Run VMs on ZFS or LVM pools
 - [ ] Learn how to create VMs
