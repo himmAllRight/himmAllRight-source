@@ -1,8 +1,9 @@
 +++
-title  = "SQL Intro"
-date   = "2018-04-24"
-author = "Ryan Himmelwright"
-image  = "img/header-images/container-building-umich.jpg"
+title   = "SQL Intro"
+date    = "2018-04-24"
+author  = "Ryan Himmelwright"
+image   = "img/header-images/container-building-umich.jpg"
+caption = "Ross School of Business - University of Michigan, Ann Arbor, MI"
 tags   = ["Linux", "Programming", "Dev", "Database", "SQL",]
 +++
 
