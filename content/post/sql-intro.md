@@ -1,10 +1,9 @@
 +++
 title  = "SQL Intro"
-date   = "2018-04-19"
+date   = "2018-04-24"
 author = "Ryan Himmelwright"
 image  = "img/header-images/container-building-umich.jpg"
-tags   = ["Linux", "Programming", "Dev", "Database",]
-draft  = true
+tags   = ["Linux", "Programming", "Dev", "Database", "SQL",]
 +++
 
 SQL is one of those technologies that which to be everywhere, but yet... I
@@ -541,9 +540,8 @@ Records: 0  Duplicates: 0  Warnings: 0
  
 #### Truncate
 
-The `truncate` command will delete the data, but leave table with names of
-columns all the same... again, still be careful because it *will* delete all the
-data in the table.
+The `truncate` command will delete the data, but leave table schema the same...
+again, still be careful because it *will* delete *all the data* in the table.
 
 ``` SQL
 mysql> SELECT * FROM tblUsersBackup;
@@ -567,7 +565,8 @@ Empty set (0.00 sec)
 An Integer value, that once assigned, auto increments by 1 everytime the table
 is updated.
 
-You can auto increment a key. Very useful for IDs in a table.
+You can auto increment a key, which is very useful for IDs in a table (as we saw
+earlier).all the data
 
 ``` SQL
 mysql> SHOW FIELDS FROM tblPeople;
@@ -601,7 +600,7 @@ mysql> SELECT * FROM  tblPeople;
 
 ```
 
-You can also set the auto increment value:
+Note: The auto increment value can be manually set.
 
 ``` SQL
 mysql> INSERT INTO tblPeople (firstname, lastname, age, state) 
@@ -619,21 +618,21 @@ mysql> SELECT * FROM  tblPeople;
 3 rows in set (0.00 sec)
 ```
 
-Just be careful when setting the auto increment value that it isn't set to
-something that could eventually overwrite a value in a table that has to be
-unique, or it will error.
+When setting the auto increment value manually, just be careful that it isn't
+set to one that will eventually overwrite another value in the table that *must*
+be unique, or it will error.
 
 ### SQL Functions
 
 SQL *functions*, are SQL statements that don't directly manipulate data, but can
 be use to extract other useful information from the database and tables. They
-are often used with the `SELECT`. There are a bunch base of SQL functions that
-can used. Here are examples of a few:
+are often used in conjunction with `SELECT`. There are a bunch of base SQL
+functions to use. Here is a sampling of a few:
 
 #### COUNT
 
-Shows us the result of a function was ask it to do. In this case, the count of
-items fitting that criteria.
+Shows the number of matched results returned. In this example, the number of
+rows in `tblUsers`, and then the number of users over the age of 35:
 
 ``` SQL
 mysql> SELECT * FROM tblUsers;
@@ -667,7 +666,7 @@ mysql> SELECT COUNT(*) FROM tblUsers WHERE age>35;
 
 #### Average and Sum Functions
 
-To get an average of the numbers in a column, use the `AVG` function:
+To get an average of the number values in a column, use the `AVG` function:
 
 ``` SQL
 mysql> SELECT AVG(age) from tblUsers;
@@ -679,7 +678,7 @@ mysql> SELECT AVG(age) from tblUsers;
 1 row in set (0.00 sec)
 ```
 
-To get a total, use the `SUM` function:
+To get a total of a column's number values, use the `SUM` function:
 
 ``` SQL
 mysql> SELECT SUM(age) from tblUsers;
@@ -691,7 +690,7 @@ mysql> SELECT SUM(age) from tblUsers;
 1 row in set (0.00 sec)
 ```
 
-Note, that statements can  still be combined:
+Note, that select statements using functions can still be combined:
 
 ``` SQL
 mysql> SELECT COUNT(*),AVG(age) from tblUsers;
@@ -705,13 +704,14 @@ mysql> SELECT COUNT(*),AVG(age) from tblUsers;
 
 ### The Like Operator
 
-The `LIKE` operator can be used for matching, with wildcards, `%`. For
-example in the following searches, `%S` and `S%` yield different results because
-the first looks for last names which *end* in an "s", and the second grabs last
-names which *start* with "s".
+The `LIKE` operator can be used for matching, with wildcards (`%`). For example
+in the following searches, `%S` and `S%` yield different results because the
+first looks for last names which *end* in an "s", and the second grabs last
+names which *start* with "s". The last example returns names which have "er"
+anywhere in the last name.
 
-Note, `LIKE` uses higher CPU usage. With larger data sets, try to use it on
-columns which are indexed if possible.
+*Note, `LIKE` uses higher CPU usage. With larger data sets, try to use it on
+columns which are indexed if possible.*
 
 ``` SQL
 mysql> SELECT * FROM tblUsers;
@@ -755,9 +755,10 @@ mysql> SELECT * FROM tblUsers WHERE lastname LIKE '%er%';
 
 ### Views
 
-Views let you create a custom filter, and display set of the data. This can be
-useful in difference scenarios. For example, a view can saved, and then just
-*updated*, instead of *recalculated*, when querying for dash boards, or reports.
+Views create a custom filter to display a set of the data. This can be useful
+when defining several use cases of an application. For example, a view can
+saved, and then just *updated*, instead of *recalculated*, when querying for
+dash boards, and/or reports.
 
 ``` SQL 
 mysql> SELECT * FROM tblUsers;
@@ -842,8 +843,8 @@ mysql> SELECT tblUsersPts.firstname, tblUsersPts.lastname, tblUsersPts.points
 
 #### Right Join
 
-A *right* join will give *everything* in the right table, and any existing/matched
-items on the left, but will display as null for non matching data.
+A *right* join will return *everything* in the right table, and any existing/matched
+items on the left. Any non-matching data will display as null.
 
 ``` SQL
 mysql> SELECT * FROM tblUsers;
@@ -892,7 +893,7 @@ A full join shows *all* records from both the right and left table, regardless
 of matching the relation records of either.
 
 NOTE: Full outer joins do not work on mysql, but would on postresql. It is
-recommended to use Unions to emulate it.
+recommended to use Unions to emulate them if needed.
 
 ### Unions
 
@@ -900,7 +901,7 @@ Unions are used to combine and concatenate `SELECT` statements from multiple
 tables. 
 
 This example doesn't work well because it doesn't make much sense (`age` isn't
-the a `point`), at least it displays what is happening during the `UNION`.
+the same as a `point`), but at least it displays what is happening during the `UNION`.
 
 ``` SQL
 mysql> SELECT firstname, lastname, points FROM tblUsersPts 
@@ -923,9 +924,9 @@ UNION SELECT firstname, lastname, age FROM tblUsers;
 
 ### Sorting Records
 
-Records can be sorted in the ascending or descending order of a column by using
+Record rows can be sorted in the ascending or descending order of a column by using
 the `ODER` command and either `ASC` for "ascending" or `DESC` for "descending".
-Like always, the results can be limited or trimmed with a statement, like `LIMIT
+The results can be limited or trimmed using another statement, like `LIMIT
 1`.
 
 ``` SQL
@@ -988,8 +989,8 @@ mysql> SELECT MIN(points),MAX(points)  FROM tblUsersPts;
 1 row in set (0.00 sec)
 ```
 
-To return other fields with the min/max item, a sub-query (another query inside
-parenthesis) may have to be used:
+To return other fields with the min/max item, a sub-query (another SQL query
+inside parenthesis) may have to be used:
 
 ```SQL
 mysql> SELECT firstname,lastname,points FROM tblUsersPts 
@@ -1006,9 +1007,7 @@ mysql> SELECT firstname,lastname,points FROM tblUsersPts
 
 Strings (such as names), and be easily altered using functions like `UCASE` and
 `LCASE`. These two functions change the *displayed* text (the data is not
-altered) to be upper or lower case, respectively. Note: if staying compliant to
-the SQL standard, there is SQL function to *alter* the actual *data* to upper or
-lower case.
+altered) to be upper or lower case.
 
 ```SQL
 mysql> SELECT * FROM tblUsersPts;
@@ -1047,8 +1046,8 @@ mysql> SELECT * FROM tblUsersPts;
 
 ### Now()
 
-The `Now*()` function can create a new value, using the current date and time.
-This can be appended when making a view, to mark when things happen over time.
+The `Now*()` function creates a new value, using the current date and time. This
+can be appended when creating a view, to mark when changes happen over time.
 
 
 ```sql
@@ -1067,6 +1066,6 @@ mysql> SELECT id,firstname,lastname,team,points, Now() AS updated
 
 ## Conclusion
 
-I think that is enough to get started with SQL :) (it was for me anyway).
-There's not much else to say other than hopefully this post continues to serve
-me well down the road :). Enjoy!
+I think that is enough to at least get started with SQL :) (it was for me
+anyway). There's not much else to say other than hopefully this post server as
+a good SQL quick-reference down the road :). Enjoy!
