@@ -15,6 +15,10 @@ from scratch.
 
 <!--more-->
 
+<a href="../../img/posts/emacs-config-evil-usepackage/newemacs1.png"><img src="../../img/posts/emacs-config-evil-usepackage/newemacs1.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="New Emacs Window" /></a>
+
+<div class="caption">A window of my New Emacs configuration</div>
+
 ## Evil Mode
 
 
