@@ -1,5 +1,5 @@
 +++
-title   = "Emacs Config Update - Evil Mode & Use-Package"
+title   = "Emacs Config Redo - Evil & Use-Package"
 date    = "2018-06-06"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/roger-williams-park-leaves1.jpg"
@@ -21,6 +21,93 @@ from scratch.
 
 ## Evil Mode
 
+#### History
+
+The one emacs package that spacemacs *really* got me addicted to using
+was [Evil](https://github.com/emacs-evil/evil). Evil mode emulates the
+main features of [vim](https://www.vim.org) text editor. While I
+*started* with emacs in college, I switched to Vim and it became the
+first power editor that I *really* got into (I even bought a
+[book](https://www.amazon.com/dp/059652983X/?tag=mh0b-20&hvadid=78271540595342&hvqmt=b&hvbmt=bb&hvdev=c&ref=pd_sl_y7m3vu93e_b)
+to learn it better). I stuck with Vim until I became a professonial
+LISP developer, and the switch back to Emacs was obvious.
+
+<a href="../../img/posts/emacs-config-evil-usepackage/vim.png"><img src="../../img/posts/emacs-config-evil-usepackage/vim.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="A Vim Window" /></a>
+
+<div class="caption">The Vim editor</div>
+
+Throughout the years, I have also enjoyed using command line
+applications like [cmus](https://cmus.github.io),
+[ranger](https://github.com/ranger/ranger), and
+[w3m](http://w3m.sourceforge.net), many of which are influenced by Vim
+and often incorporate similar keyboard commands (at least the `j`,
+`k`, `l`, `;` navigation. So, I have never really lost my love for the
+homerow-centric, and efficient vim-style movement. However, it isn't
+ideal for everything, as I prefer to *write* (not nessicarially
+*edit*) code with emacs-syle navigation.
+
+#### Best of Both Worlds
+
+So, for the last two years I have been getting the best of both worlds
+by using [Spacemacs](http://spacemacs.org/) with it's default Vim
+configuration. I liked how it had all of the Evil packages already
+setup, but if I wanted to jump back to Emacs-style commands, I could
+just hit `Ctrl-z`.
+
+Spacemacs was easy to use and I enjoyed it, but it really started to
+have stability issues on my Windows 10 work computer. I thought going
+back to a stock emacs configuration might help the issue. I decided to
+build a new configuration based around `Evil`. During configuration, I
+was happily surpised to learn that the `Ctrl-z` option to switch back
+to Emacs-mode was a default `Evil` behavior. So, I still have the best
+of both worlds.
+
+#### Starting Config
+
+Here is my starting `Evil` setup. I've nested other `use-pacages`
+inside of it, so that if`evil` gets configured, the packages that
+depend on it go ahead and configure themselves too. I'm sure this will
+grow over time as I add packages I miss from the spacemacs
+configuration, but so far, it seems to do all the core functionality
+that I need.
+
+```lisp
+;; Evil Mode
+(use-package evil
+  :ensure t
+  :config
+
+  (evil-mode 1)
+  (use-package evil-leader
+    :ensure t
+    :config
+    (global-evil-leader-mode t)
+    (evil-leader/set-leader "<SPC>")
+    (evil-leader/set-key
+      "s s" 'swiper
+      "d x w" 'delete-trailing-whitespace)) 
+
+  (use-package evil-surround
+    :ensure t
+    :config (global-evil-surround-mode))
+
+  (use-package evil-indent-textobject
+    :ensure t)
+
+  (use-package evil-org
+    :ensure t
+    :config
+    (evil-org-set-key-theme 
+	  '(textobjects insert navigation additional shift todo heading))
+    (add-hook 'org-mode-hook (lambda () (evil-org-mode))))
+
+  (use-package powerline-evil
+    :ensure t
+    :config
+    (powerline-evil-vim-color-theme)))
+```
+
+I bet I will add a bunch of key bindings over time...
 
 ## Use Package
 
@@ -36,7 +123,7 @@ through my `.emacs` file, converting all of my `(require
 
 After making sure the [MELPA](http://melpa.org) repos are added:
 
-```emacs-lisp
+```lisp
 ;; Add Melpa packages to Repos
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -52,7 +139,7 @@ isn't (now that basically *everything* in my config requires it).
 After that, make sure to `(require 'use-package)`, although it only
 needs to happen during compile.
 
-```emacs-lisp
+```lisp
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
