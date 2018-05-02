@@ -153,8 +153,21 @@ when setting up a new computer.
 
 #### Bye Bye emacs_init.el
 
-No longer need my `emacs_init.el` file with it's `mapcar`s for
-installing packages.
+When I last had my own custom emacs config (before spacemacs), I had
+to also maintain an `emacs_init.el` file. This was a simple emacs-lisp
+script that used a `mapcar` applied a `#'package-install` across my
+list of ever-growing emacs packages I needed installed for my
+configuration. The idea was that when I was configuring Emacs on a new
+system, I could just load and evaluate the contents of
+`emacs_init.el`, and everything required for `.emacs` would
+automatically install. 
+
+The reality was that it never fully worked. There were always a few
+packages that would error, or a few I forgot to add the last time I
+updated my `.emacs` file. With `use-package`, I think this might be
+an issue of the past. It effectively allows me to combine my emacs
+init script *with* my configuration files.
+
 
 #### Organize by package
 
