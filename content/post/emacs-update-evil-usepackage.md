@@ -235,3 +235,8 @@ to minimize that issue (because even preferences like *key bindings*
 can be defined inside the `use-pacage`). This might work...
 
 ## Next Steps
+
+Now that I have an "`Evil`" Emacs setup configured, things should be
+returning to business as usuall. As I work, I sure there'll be a
+forgotten package here or there that needs to added. With
+`use-package`, it should be a piece of cake, and easy to maintain.
