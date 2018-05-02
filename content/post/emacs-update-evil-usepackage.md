@@ -169,16 +169,17 @@ an issue of the past. It effectively allows me to combine my emacs
 init script *with* my configuration files.
 
 
-#### Organize by package
-
-I can move all of my configuration code related to a package inside
-the `:config` keys.
-
 #### Key Bindings
 
-After moving the configs into the wrapper, I learned of the `:bind`
-parameter, which lets me do my key bindings in the `use-package` call,
-with a simple list of cons pairs. Ex:
+After convirting all of my `(require 'PACKAGE-NAME)` calls into
+`use-package` wrappers, and moving the related package configuration
+code to it, I learned about the `:bind` parameter. Instead of manually
+setting key binds with a `setq`, `:bind` takes a list of dotted pairs
+and binds the function (defined in the second spot of the pair), to
+the key sequence stated in the first spot of the pair. 
+
+For example, to setup my preferred `ispell` key-bindings, I used the
+following `:bind` parameter in my `use-package` call:
 
 ```emacs-lisp
 (use-package ispell
@@ -187,6 +188,9 @@ with a simple list of cons pairs. Ex:
   (("C-c w" . 'ispell-word)
    ("C-c r" . 'ispell-region)))
    ```
+   
+This helps to keep the configuration a bit cleaner and organized. The
+syntax is also straight-forward and easy to remember.
 
 
 ## System Specific Load Files
