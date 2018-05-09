@@ -68,11 +68,10 @@ both worlds!
 #### Starting Config
 
 Here is my starting `Evil` setup. I've nested other `use-pacages`
-inside of it, so that if`evil` gets configured, the packages that
+inside of it, so that if `evil` is configured, the packages that
 depend on it go ahead and configure themselves too. I'm sure this will
-grow over time as I add packages I miss from the spacemacs
-configuration, but so far, it seems to do all the core functionality
-that I need.
+grow over time as I add missing packages, but so far, it seems to
+provde all the core functionality I need.
 
 ```lisp
 ;; Evil Mode
@@ -110,21 +109,22 @@ that I need.
     (powerline-evil-vim-color-theme)))
 ```
 
-I bet I will add a bunch of key bindings over time...
+I think it needs more key bindings over time...
 
 ## Use Package
 
-After my setting up a base install of the Evil mode parts, I
+After my setting up an initial install of the Evil mode parts, I
 discovered the amazing
-[use-package](https://github.com/jwiegley/use-package) emacs
-package. I think I have com across it before, but never actually
-looked at it. After realizing how well it worked, I immediately combed
-through my `.emacs` file, converting all of my `(require
-'package-name)` calls to `use-package` instead.
+[use-package](https://github.com/jwiegley/use-package). I have come
+across it before reading blog posts, but never actually tried
+it. After realizing how well it worked, I immediately combed through
+my `.emacs` file, converting all of my `(require 'package-name)` calls
+to `use-package` forms instead.
 
 #### Setup
 
-After making sure the [MELPA](http://melpa.org) repos are added:
+After ensuring the [MELPA](http://melpa.org) repos are added and
+initialized:
 
 ```lisp
 ;; Add Melpa packages to Repos
@@ -134,13 +134,12 @@ After making sure the [MELPA](http://melpa.org) repos are added:
 
 ```
 
-The `use-pckage` package can be installed from there. I wrapped the
-install commands up in an `unless`, so that when my emacs loads, it
-checks to see if `use-package` is installed, and installs it if it
-isn't (now that basically *everything* in my config requires it).
+The `use-package` package can be installed next. I wrapped the
+install commands in an `unless`, so that when my emacs loads, it
+only installs `use-package` if it is not already installed.
 
-After that, make sure to `(require 'use-package)`, although it only
-needs to happen during compile.
+Afterwards, make sure to `(require 'use-package)`. It only needs to
+happen during compile, so I have mine in an `(evail-when compile ...)`.
 
 ```lisp
 (unless (package-installed-p 'use-package)
@@ -151,8 +150,8 @@ needs to happen during compile.
   (require 'use-package))
 ```
 
-I keep all of this at the top of my configuration, and works well even
-when setting up a new computer.
+I keep all of this at the top of my configuration, which works well
+even when initializing a new computer.
 
 #### Bye Bye emacs_init.el
 
