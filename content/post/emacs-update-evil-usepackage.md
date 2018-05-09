@@ -1,6 +1,6 @@
 +++
 title   = "Emacs Config Redo - Evil & Use-Package"
-date    = "2018-06-06"
+date    = "2018-05-09"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/roger-williams-park-leaves1.jpg"
 caption = "Roger Williams Park, Providence RI"
@@ -155,20 +155,19 @@ even when initializing a new computer.
 
 #### Bye Bye emacs_init.el
 
-When I last had my own custom emacs config (before spacemacs), I had
-to also maintain an `emacs_init.el` file. This was a simple emacs-lisp
-script that used a `mapcar` applied a `#'package-install` across my
-list of ever-growing emacs packages I needed installed for my
-configuration. The idea was that when I was configuring Emacs on a new
-system, I could just load and evaluate the contents of
-`emacs_init.el`, and everything required for `.emacs` would
-automatically install. 
+When I last had my own custom emacs config, I had to also maintain an
+`emacs_init.el` file. This was an emacs-lisp script that used a
+`mapcar` to apply `#'package-install` across an ever-growing list of
+emacs packages my configuration required. My goal was to have a
+script, so that when configuring Emacs on a new system, I could just load
+and evaluate the contents of `emacs_init.el`, and everything required
+for `.emacs` would automatically install.
 
 The reality was that it never fully worked. There were always a few
-packages that would error, or a few I forgot to add the last time I
-updated my `.emacs` file. With `use-package`, I think this might be
-an issue of the past. It effectively allows me to combine my emacs
-init script *with* my configuration files.
+packages that would error, or that I had forgoten to add the last time
+I updated my `.emacs` file. With `use-package`, this might be an issue
+of the pastm, as it allows me to combine my emacs init script *with*
+my configuration files.
 
 
 #### Key Bindings
