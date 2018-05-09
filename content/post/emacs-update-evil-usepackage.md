@@ -7,11 +7,12 @@ caption = "Roger Williams Park, Providence RI"
 tags    = ["Linux", "Programming", "Dev", "Emacs","dotfiles"]
 +++
 
-It's about time I move off of [Spacemacs](http://spacemacs.org), and
-pull togeather *my own* emacs configuration again. However, spacemacs
-has shown me several packages that I wanted to incorporate into my
-emacs configuration... so much so that I decided I might as well start
-from scratch.
+After switching to [Spacemacs](http://spacemacs.org) for the last year
+or two, it's about time to back and pull togeather *my own* emacs
+configuration again. However, spacemacs has shown me several packages
+that I want to incorporate into my new emacs setup. Rather than
+resuruct and Frankenstein the changes into my old `.emacs`
+file... I'm starting from scratch.
 
 <!--more-->
 
@@ -23,44 +24,46 @@ from scratch.
 
 #### History
 
-The one emacs package that spacemacs *really* got me addicted to using
-was [Evil](https://github.com/emacs-evil/evil). Evil mode emulates the
-main features of [vim](https://www.vim.org) text editor. While I
-*started* with emacs in college, I switched to Vim and it became the
-first power editor that I *really* got into (I even bought a
+The one emacs package that spacemacs *really* got me addicted to was
+[Evil](https://github.com/emacs-evil/evil), which emulates the main
+features of the [vim](https://www.vim.org) text editor. I *started*
+with emacs in college, but eventually switched to Vim which, became
+the first power editor that I *really* got into (I even bought a
 [book](https://www.amazon.com/dp/059652983X/?tag=mh0b-20&hvadid=78271540595342&hvqmt=b&hvbmt=bb&hvdev=c&ref=pd_sl_y7m3vu93e_b)
 to learn it better). I stuck with Vim until I became a professonial
-LISP developer, and the switch back to Emacs was obvious.
+LISP developer, and the switch back to Emacs was impossible to ignore,
+and obvious.
 
 <a href="../../img/posts/emacs-config-evil-usepackage/vim.png"><img src="../../img/posts/emacs-config-evil-usepackage/vim.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="A Vim Window" /></a>
 
 <div class="caption">The Vim editor</div>
 
-Throughout the years, I have also enjoyed using command line
-applications like [cmus](https://cmus.github.io),
+Even after switching to back Emacs, I have still enjoyed using command
+line applications like [cmus](https://cmus.github.io),
 [ranger](https://github.com/ranger/ranger), and
 [w3m](http://w3m.sourceforge.net), many of which are influenced by Vim
 and often incorporate similar keyboard commands (at least the `j`,
-`k`, `l`, `;` navigation. So, I have never really lost my love for the
-homerow-centric, and efficient vim-style movement. However, it isn't
-ideal for everything, as I prefer to *write* (not nessicarially
-*edit*) code with emacs-syle navigation.
+`k`, `l`, `;` navigation). While it isn't ideal for everything (I
+prefer to *write*, but not nessicarially *edit* code with emacs-syle
+navigation), I never lost my love for the homerow-centric, and
+efficient vim-style movement commands.
+
 
 #### Best of Both Worlds
 
-So, for the last two years I have been getting the best of both worlds
-by using [Spacemacs](http://spacemacs.org/) with it's default Vim
-configuration. I liked how it had all of the Evil packages already
-setup, but if I wanted to jump back to Emacs-style commands, I could
-just hit `Ctrl-z`.
+For the last two years, [Spacemacs](http://spacemacs.org/)'s default
+Vim configuration has provided the best of both worlds. It had all of
+the Evil packages pre-configured and optimized, but I could simply hit
+`Ctrl-z`, and jump back to Emacs-mode.
 
 Spacemacs was easy to use and I enjoyed it, but it really started to
-have stability issues on my Windows 10 work computer. I thought going
-back to a stock emacs configuration might help the issue. I decided to
-build a new configuration based around `Evil`. During configuration, I
-was happily surpised to learn that the `Ctrl-z` option to switch back
-to Emacs-mode was a default `Evil` behavior. So, I still have the best
-of both worlds.
+have stability issues on my Windows 10 work computer. I thought that
+going back to a stock emacs configuration may tone down the
+complexity, and increase stability. I started to build a *new*
+configuration based around `Evil`. During setup, I was happily
+surpised to learn that the `Ctrl-z` option to switch back to
+Emacs-mode was a default `Evil` behavior... so I still have the best of
+both worlds!
 
 #### Starting Config
 
