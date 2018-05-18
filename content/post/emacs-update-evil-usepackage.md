@@ -1,6 +1,6 @@
 +++
 title   = "Emacs Config Redo - Evil & Use-Package"
-date    = "2018-05-15"
+date    = "2018-05-18"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/roger-williams-park-leaves1.jpg"
 caption = "Roger Williams Park, Providence RI"
@@ -196,10 +196,10 @@ syntax is also straight-forward and easy to remember.
 
 ## System Specific Load Files
 
-I finally moved all my work-specific emacs configuration (setting up
+Finally, I moved all my work-specific emacs configuration (setting up
 Allego Common Lisp, defining some helper functions... and anything
-with a Windows pathname) a `emacs-work.el` file. With that in it's own
-seperate file, I just needed to `load` it from my main `.emacs`
+Windows specific) into it's own `emacs-work.el` file. With that in it's
+own seperate file, I just needed to `load` it from my main `.emacs`
 configuration. The only issue with that, is I only want it to load on
 my *work computer*. So, I wrapped it with a nice little handler:
 
@@ -229,15 +229,15 @@ emacs setup, I think I might break those sections into actual *files*,
 and then `load` them from the main config. 
 
 The only issue I can see with that is that it can be confusing with
-configurations overlap use-cases. However, I already have to deal with
-that in a single configuration (which *section* to put it in), and my
-process of converting everyting to `use-package` has actually started
-to minimize that issue (because even preferences like *key bindings*
-can be defined inside the `use-pacage`). This might work...
+ overlaping use-cases. However, I already have to deal with that in a
+ single configuration (which *section* to put it in), and my process
+ of converting everyting to `use-package` has actually started to
+ minimize that issue. So it might work...
 
 ## Next Steps
 
 Now that I have an "`Evil`" Emacs setup configured, things should be
 returning to business as usuall. As I work, I sure there'll be a
-forgotten package here or there that needs to added. With
-`use-package`, it should be a piece of cake, and easy to maintain.
+forgotten package here or there that needs to added. However, with
+`use-package`, that should be a piece of cake, and easy to maintain
+from here on out.
