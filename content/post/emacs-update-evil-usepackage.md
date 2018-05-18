@@ -1,6 +1,6 @@
 +++
 title   = "Emacs Config Redo - Evil & Use-Package"
-date    = "2018-05-09"
+date    = "2018-05-15"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/roger-williams-park-leaves1.jpg"
 caption = "Roger Williams Park, Providence RI"
@@ -172,15 +172,15 @@ my configuration files.
 
 #### Key Bindings
 
-After convirting all of my `(require 'PACKAGE-NAME)` calls into
-`use-package` wrappers, and moving the related package configuration
-code to it, I learned about the `:bind` parameter. Instead of manually
-setting key binds with a `setq`, `:bind` takes a list of dotted pairs
-and binds the function (defined in the second spot of the pair), to
-the key sequence stated in the first spot of the pair. 
+After convirting all of my `(require 'PACKAGE-NAME)` calls and related
+expressions to filled `use-package` wrappers, I learned about the `:bind`
+parameter. Instead of manually setting key binds with a `setq`,
+`:bind` takes a list of dotted pairs and binds the function (defined
+in the second spot of the pair), to the key sequence stated in the
+first spot of the pair.
 
 For example, to setup my preferred `ispell` key-bindings, I used the
-following `:bind` parameter in my `use-package` call:
+following `:bind` parameter in my `ispell` `use-package` call:
 
 ```emacs-lisp
 (use-package ispell
