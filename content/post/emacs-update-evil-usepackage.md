@@ -11,7 +11,7 @@ After switching to [Spacemacs](http://spacemacs.org) for the last year
 or two, it's about time to back and pull togeather *my own* emacs
 configuration again. However, spacemacs has shown me several packages
 that I want to incorporate into my new emacs setup. Rather than
-resuruct and Frankenstein the changes into my old `.emacs`
+resurrect and Frankenstein the changes into my old `.emacs`
 file... I'm starting from scratch.
 
 <!--more-->
