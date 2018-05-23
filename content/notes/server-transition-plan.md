@@ -18,11 +18,13 @@ though I have an idea about what to do. I will check things off as I go through
 and fully ensure I know what to do for that task, and optionally write something
 down about it.
 
+## Pre Planning
+
 ### Host
 
-The host system needs a few things it needs to support. Most are broken down
-into the other categories below, but some are specific to the Host, which will
-be here.
+The host system needs a few things it needs to support. Most are
+broken down into the other categories below, but some are specific to
+the Host, which will be here.
 
 **Checklist**:
 
@@ -38,7 +40,7 @@ if it was easy enough to setup samba shares.
 
 **Checklist**:
 
-- [ ] Test OS ZFS install/Setup
+- [X] Test OS ZFS install/Setup
 - [ ] Import ZFS Pools
 - [ ] LUKs setup and working
 - [ ] Ensure Backup Process Works
@@ -57,12 +59,12 @@ for management, especially remotely.
 
 **Checklist**:
 
-- [ ] Replace Meowth with new VM
+- [X] Replace Meowth with new VM
 - [X] Export desired VMs
 - [ ] Run VMs on ZFS or LVM pools
-- [ ] Learn how to create VMs
+- [X] Learn how to create VMs
 - [ ] Network so VMs on main network
-- [ ] Remotely View GUI VMs
+- [X] Remotely View GUI VMs
 - [ ] Remotely Edit VMs (Easily)
 - [ ] Auto Backups for VMs
 
@@ -92,10 +94,38 @@ unlike Proxmox, I want to have the server run and support Docker cotnainers.
 - [ ] Network so Containers on main network
 - [ ] Auto Backups
 
+## Transition Steps
+
+- [ ] Export All Proxmox VMs 
+- [ ] Export All Proxmox Containers 
+- [ ] Run Test install (attached drive) 
+- [ ] BACKUP EVERYTHING
+- [ ] Install OS 
+- [ ] Setup ZFS 
+- [ ] Import Pools 
+- [ ] Setup KVM/QEMU 
+- [ ] Setup LXC/LCD 
+- [ ] Configure Bridged Network
+- [ ] Import VMs/Contaienrs
 
 ## Notes
 
-- So, I just installed [cockpit](http://cockpit-project.org/) on the test
-  server. It's been a long time since I have used it, and it has really
-  improved. It has interfaces to my VMs and docker containers. It's not as
-  extensive as Proxmox, but honestly, goes enough of the way there for me.
+- So, I just installed [cockpit](http://cockpit-project.org/) on the
+  test server. It's been a long time since I have used it, and it has
+  really improved. It has interfaces to my VMs and docker
+  containers. It's not as extensive as Proxmox, but honestly, goes
+  enough of the way there for me.
+
+- Now that I am using Ubuntu/Fedora systems as my main OS, I should be
+  able to easily remote manage using virt-manager as well. Works so
+  far on my test server.
+  
+- I have setup ZFS stuff on the test server. However, I won't really
+  be able to test the pool import until I test it on the actual
+  server. 
+  
+- I am thinking that I will setup a vpn VM that I can use for remote
+  access to the network. This might be the most secure way to do
+  remote management anyway.
+  
+  
