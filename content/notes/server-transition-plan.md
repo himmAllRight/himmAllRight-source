@@ -127,5 +127,25 @@ unlike Proxmox, I want to have the server run and support Docker cotnainers.
 - I am thinking that I will setup a vpn VM that I can use for remote
   access to the network. This might be the most secure way to do
   remote management anyway.
+    
+-- Doing it
+
+- Okay, I exported most of the VMs this morning and imaged my
+Ubuntu 18.04 Server USB drive. Tonight, I've swapped the SSDs, which
+are luckily the same one :).
+
+- I installed Ubuntu Server on the new SSD.
+
+- I first ran updated and setup ssh. No issue. Then I decided to try
+  the part that is more difficult... at least for me right
+  now. Setting up the VM bridge. It actually wasn't that bad and seems
+  to be working :). I owe all thanks to [this
+  post](https://www.linuxtechi.com/install-configure-kvm-ubuntu-18-04-server/)
+  though... it was *very* helpful.
   
+- I just installed `zfsutils-linux` and `zfs-initramfs`. I think I am
+  going to try a reboot and insert my drives (took them out for
+  safety). Will I be able to detect and then just import the pools? I
+  guess I'll find out in a few minutes... 
   
+  Fingers crossed...
