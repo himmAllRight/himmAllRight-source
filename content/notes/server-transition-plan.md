@@ -155,3 +155,5 @@ are luckily the same one :).
 	
 - I imported the pools and everything. This morning, I've upgraded the
   pools and am now in the process of scrubbing them.
+
+- I also setup ansible and ran my ubuntu server playbooks :)
