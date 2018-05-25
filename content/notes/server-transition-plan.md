@@ -148,4 +148,10 @@ are luckily the same one :).
   safety). Will I be able to detect and then just import the pools? I
   guess I'll find out in a few minutes... 
   
-  Fingers crossed...
+  Fingers crossed...  
+  
+- It worked, although I didn't actually install the packages before
+  the upgrade. Opps.
+	
+- I imported the pools and everything. This morning, I've upgraded the
+  pools and am now in the process of scrubbing them.
