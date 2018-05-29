@@ -41,7 +41,7 @@ if it was easy enough to setup samba shares.
 **Checklist**:
 
 - [X] Test OS ZFS install/Setup
-- [ ] Import ZFS Pools
+- [X] Import ZFS Pools
 - [ ] LUKs setup and working
 - [ ] Ensure Backup Process Works
 
@@ -61,9 +61,8 @@ for management, especially remotely.
 
 - [X] Replace Meowth with new VM
 - [X] Export desired VMs
-- [ ] Run VMs on ZFS or LVM pools
 - [X] Learn how to create VMs
-- [ ] Network so VMs on main network
+- [X] Network so VMs on main network
 - [X] Remotely View GUI VMs
 - [ ] Remotely Edit VMs (Easily)
 - [ ] Auto Backups for VMs
@@ -79,7 +78,6 @@ unlike Proxmox, I want to have the server run and support Docker cotnainers.
 **Checklist**:
 
 - [X] Install Setup LXC
-- [ ] Run Containers on ZFS or LVM pools?
 - [ ] Easily Create New (with options Proxmox provides)
 - [ ] Network so Containers on main network
 - [ ] Remotely Edit Containers (Easily)
@@ -90,22 +88,20 @@ unlike Proxmox, I want to have the server run and support Docker cotnainers.
 **Checklist**:
 
 - [X] Docker Setup
-- [ ] Containers on ZFS or LVM pools?
 - [ ] Network so Containers on main network
 - [ ] Auto Backups
 
 ## Transition Steps
 
-- [ ] Export All Proxmox VMs 
-- [ ] Export All Proxmox Containers 
-- [ ] Run Test install (attached drive) 
-- [ ] BACKUP EVERYTHING
-- [ ] Install OS 
-- [ ] Setup ZFS 
-- [ ] Import Pools 
-- [ ] Setup KVM/QEMU 
+- [X] Export All Proxmox VMs 
+- [X] Export All Proxmox Containers 
+- [X] Run Test install (attached drive) 
+- [X] Install OS 
+- [X] Setup ZFS 
+- [X] Import Pools 
+- [X] Setup KVM/QEMU 
 - [ ] Setup LXC/LCD 
-- [ ] Configure Bridged Network
+- [X] Configure Bridged Network
 - [ ] Import VMs/Contaienrs
 
 ## Notes
@@ -157,3 +153,15 @@ are luckily the same one :).
   pools and am now in the process of scrubbing them.
 
 - I also setup ansible and ran my ubuntu server playbooks :)
+
+-- 
+
+- So it's been a few days, and everything still seems to be up and
+  working. I've easily setup and configured a few dev VMs through
+  virt-manger on kadabra, and it works great. I would still like a
+  better way to do it remotely, but I think setting up my VPN like
+  I've planned will be the best way to do that, and cockpit will be
+  enough for when I am truely remote.
+  
+- I still need to set up the container stuff, and put in place some
+  automation system, but the basics are all up and running.
