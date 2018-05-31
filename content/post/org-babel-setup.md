@@ -8,12 +8,12 @@ tags    = ["Linux", "Programming", "Dev", "Emacs","dotfiles"]
 draft   = true
 +++
 
-I started using org-babel
+In my [previous post](../emacs-update-evil-usepackage/), I completely
+redit my emacs configuration from scratch, building it around the use
+of evil mode, and use-package. As I was wrapping, I discovered yet
+another emacs package that has forever changed how I maintain my emacs
+configuration... [org-babel](https://orgmode.org/worg/org-contrib/babel/intro.html).
 
 <!--more-->
 
-I am writing something to see if my Jenkins auto build will work on
-the commit trigger...
-
-
-
+Org-babel lets you...
