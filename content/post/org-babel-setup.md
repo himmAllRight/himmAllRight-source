@@ -12,7 +12,8 @@ I started using org-babel
 
 <!--more-->
 
-More
+I am writing something to see if my Jenkins auto build will work on
+the commit trigger...
 
 
 
