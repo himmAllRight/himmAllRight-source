@@ -1,6 +1,6 @@
 +++
 title   = "Organizing my Emacs config with Org-Babel"
-date    = "2018-05-28"
+date    = "2018-06-08"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/golden-co-mountains.jpg"
 caption = "Golden, CO"
@@ -9,24 +9,91 @@ draft   = true
 +++
 
 In my [previous post](../emacs-update-evil-usepackage/), I completely
-redit my emacs configuration from scratch, building it around the use
-of evil mode, and use-package. As I was wrapping, I discovered yet
+redid my emacs configuration from scratch, building it around the use
+of evil mode and use-package. As I was wrapping, I discovered yet
 another emacs package that has forever changed how I maintain my emacs
 configuration... [org-babel](https://orgmode.org/worg/org-contrib/babel/intro.html).
 
 <!--more-->
 
 ## Org Babel
-Org-babel lets you...
-
+Org-babel is an emacs package that lets take an
+[org-mode](https://orgmode.org/) file, and evaluate all of the [code
+blocks](https://orgmode.org/org.html#Literal-examples) contained in
+it. This means I can write an annotated org file filled with
+`emacs-lisp` code blocks, and export just the emacs-lisp code... my
+`.emacs` file...
 
 ## Setup
 
+Installing babel couldn't be simplier. If you are running `>=Emacs24`,
+a current version of Org-mode with Babel is already available by
+default. In order to generate our `.emacs` config from a `.org` file,
+we need to first setup that `config.org` file, and then tell the
+`.emacs` one to use it.
+
 ### config.org
+
+Start by creating a `.org` file to use for all of the configuration
+content. This can be named anything, and exist anywhere really, but I
+like to keep mine in the emacs section of my [dotfiles
+repo](https://github.com/himmAllRight/dotfiles), named
+`config.org`. This file functions like any other org file, so I
+decided to add a small header at the top... because why not?
+
+```org
+#+TITLE: My Emacs Configuration
+#+AUTHOR: Ryan Himmelwright
+#+EMAIL: ryan@himmelwright.net
+#+OPTIONS: num:nil 
+```
+
+After that, I broke down my configuration by creating org headings for
+the different sections of my configuration. For example, I started
+with `Repos & Core Packages`, `Core Setup`, `Evil Mode`, `Ivy`,
+`Writting`, `Development`... and so on.
+
+*Note: Use "\*" to create headings in org mode. Each "\*" correspondings
+to the html heading levels. Ex: `*` == `<h1>`, `**` == `<h2>`, etc.*
+
+Under each heading, I started transferring my emacs code. I turned the
+comments that described each code piece into normal org text, and
+wrapped the `emacs-lisp` code snippet in an org code block. For
+example:
+
+
+<center>
+<a href="../../img/posts/org-babel-setup/config-org-example1.png"><img src="../../img/posts/org-babel-setup/config-org-example1.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Example snippet of my org-babel config.org file" /></a>
+</center>
+<br clear="all">
+<div class="caption">Example snippet of my org-babel config.org file</div>
+
+Use the `#+BEGIN_SRC emacs-lisp` and `#+END_SRC` org tags to
+encapsulate the `emacs-lisp` code. Continue to do this until all of
+the desired emacs-lisp code is contained inside org code blocks.
+
+##### Easy Org Code Blocks
+
+<center>
+<a href="../../img/posts/org-babel-setup/easy-org-mode-code.gif"><img src="../../img/posts/org-babel-setup/easy-org-mode-code.gif" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Example snippet of my org-babel config.org file" /></a>
+</center>
+<br clear="all">
+<div class="caption">Example snippet of my org-babel config.org file</div>
+
+**Note:** In org mode, you can just write `<s` and hit `TAB` and
+org-mode will expand it out into the source code `BEGIN` and `END`
+tags. Just don't forget to add `emacs-lisp` to the `BEGIN_SRC` tag.
+
 
 ### .emacs
 
 ## What I like
+
+### Organized
+### Maintainable
+### Easy to Read
+#### In Code
+#### On Github
 
 ## My maintined config
 
