@@ -62,9 +62,7 @@ wrapped the `emacs-lisp` code snippet in an org code block. For
 example:
 
 
-<center>
 <a href="../../img/posts/org-babel-setup/config-org-example1.png"><img src="../../img/posts/org-babel-setup/config-org-example1.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Example snippet of my org-babel config.org file" /></a>
-</center>
 <br clear="all">
 <div class="caption">Example snippet of my org-babel config.org file</div>
 
@@ -74,9 +72,7 @@ the desired emacs-lisp code is contained inside org code blocks.
 
 ##### Easy Org Code Blocks
 
-<center>
 <a href="../../img/posts/org-babel-setup/easy-org-mode-code.gif"><img src="../../img/posts/org-babel-setup/easy-org-mode-code.gif" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Example snippet of my org-babel config.org file" /></a>
-</center>
 <br clear="all">
 <div class="caption">Example snippet of my org-babel config.org file</div>
 
