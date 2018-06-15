@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2017-11-22
+date: 2018-05-07
 type: homelab
 layout: homelab-page
 menu: 
@@ -29,7 +29,7 @@ Intel i5-7200u [2.5 Ghz (3.1 Ghz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display 
-Solus
+Kubuntu 18.04
 ```
 ##### Periphery
 ```
@@ -52,7 +52,7 @@ Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
 120 GB SSD
 12.5" HD LED 1366x768 Display
 9-Cell Battery
-Solus
+Ubuntu Mate 18.04
 ```
 
 ### Rebecca (Wife)
@@ -77,10 +77,10 @@ Mac OS
 Lenovo ThinkServer 440
 Intel Xeon E3-1225 v3 [3.2 GHz (3.6 GHz Turbo), 8M Cache, 4 Cores, 4 Threads]
 20 GB ECC RAM
-250 GB Samsung EVO SSD (OS Partition + LVM partion for VM Volumes)
+250 GB Samsung EVO SSD (OS + LVM Virtual Disk Drive)
 2 x 1TB WD 7200 RPM HDD (ZFS Mirror, for Backups) (Hotswap)
 2 x 3TB TOSHIBA 7200 RPM HDD (ZFS Mirror, for Storage) (Hotswap)
-Proxmox VE 4.4
+Ubuntu Server 18.04
 ```
 
 #### - CyberPower 1500VA/900W UPS
@@ -93,6 +93,7 @@ Proxmox VE 4.4
 
 #### Node 1
 ```
+BROKEN
 Raspberry Pi 3
 ARM v8 CPU (1.2 GHz, 4 Cores, 4 Threads)
 1 GB RAM
