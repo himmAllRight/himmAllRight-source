@@ -28,8 +28,6 @@ married to Rebecca, an amazing first year Duke medical resident
 together for 12 years and were married on September 17th, 2016 (the
 day before our 10th anniversary).
 
-This summer, Rebecca will start her medical residency in  at Duke University Medical Center, so we will be moving to  in June.
-
 Feel free to contact me using any of the methods below.
 
 
