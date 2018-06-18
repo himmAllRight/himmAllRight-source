@@ -1,6 +1,6 @@
 ---
 title: About
-date: 2018-06-18T15:15:18-04:00
+date: 2018-06-18T08:00:00-04:00
 type: about
 menu : 
   main:
