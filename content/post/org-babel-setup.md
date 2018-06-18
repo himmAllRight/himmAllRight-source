@@ -83,6 +83,24 @@ tags. Just don't forget to add `emacs-lisp` to the `BEGIN_SRC` tag.
 
 ### .emacs
 
+For the contents of `.emacs`, just call `package-initialize` and then
+have `org-babel` load the file, like so:
+
+```emacs-lisp
+(package-initialize)
+(org-babel-load-file "~/dotfiles/emacs/config.org")
+```
+
+That's it. Assuming the `config.org` is complete, emacs should now
+load up using the code snippets from *it*, instead of needing to have
+everything in the `.emacs` file. These are the only two lines
+needed. However, do note that emacs will still write the
+`#'custom-set-variables` to the bottom of the `.emacs` file. That's
+fine. If anything, it makes it easier to source control the *actual*
+configuration file, since emacs isn't constantly adding to it.
+
+
+
 ## What I like
 
 ### Organized
