@@ -41,3 +41,49 @@ Start nginx:
 ```bash 
 sudo systemctl start nginx
 ```
+
+## Configure Nginx
+
+Look at the config file, just to check that everything looks
+good.
+
+```bash
+vim /etc/nginx/nginx.conf
+```
+
+Specifically, we want to see the line:
+
+```bash 
+include /etc/nginx/conf.d/*.conf;
+```
+It basically says that any *.conf file inside the `/etc/nginx/conf.d/`
+directory will also be loaded and used by nginx. 
+
+## Configure Proxy
+
+I created a `reverse-proxies.config` (it can be named anything with a
+`.config` extension) file in `/etc/nginx/conf.d/` to contain all of
+the reverse proxy definations. These are just server block entries. For
+example:
+
+```bash
+server {
+        listen 80;
+        server_name jenkins.himmelwright.net;
+        location / {
+                proxy_pass      http://192.168.1.122:8080;
+        }
+}
+
+server {
+        listen 80;
+        server_name ryan-beta.himmelwright.net;
+        location / {
+                proxy_pass      http://192.168.1.77:80;
+        }
+}
+```
+
+
+*NOTE*: Still having issues with non port `80` redirects... get a 502
+bad gateway page...
