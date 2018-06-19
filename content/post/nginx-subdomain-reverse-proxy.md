@@ -84,6 +84,18 @@ server {
 }
 ```
 
+## selinux fixes
+
+```bash 
+sudo yum install -y setools
+```
 
 *NOTE*: Still having issues with non port `80` redirects... get a 502
 bad gateway page...
+
+Figured it out. It was a selinux issue. Besides putting selinux to
+permissive move, this fixed it even when in enforcing mode:
+
+```bash
+setsebool -P httpd_can_network_connect true
+```
