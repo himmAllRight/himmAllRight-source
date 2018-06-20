@@ -26,7 +26,7 @@ it. This means I can write an annotated org file filled with
 
 ## Setup
 
-Installing babel couldn't be simplier. If you are running `>=Emacs24`,
+Installing babel couldn't be simpler. If you are running `>=Emacs24`,
 a current version of Org-mode with Babel is already available by
 default. In order to generate our `.emacs` config from a `.org` file,
 we need to first setup that `config.org` file, and then tell the
@@ -51,10 +51,10 @@ decided to add a small header at the top... because why not?
 After that, I broke down my configuration by creating org headings for
 the different sections of my configuration. For example, I started
 with `Repos & Core Packages`, `Core Setup`, `Evil Mode`, `Ivy`,
-`Writting`, `Development`... and so on.
+`Writing`, `Development`... and so on.
 
-*Note: Use "\*" to create headings in org mode. Each "\*" correspondings
-to the html heading levels. Ex: `*` == `<h1>`, `**` == `<h2>`, etc.*
+*Note: Use "\*" to create headings in org mode. Each "\*" corresponding
+to the HTML heading levels. Ex: `*` == `<h1>`, `**` == `<h2>`, etc.*
 
 Under each heading, I started transferring my emacs code. I turned the
 comments that described each code piece into normal org text, and
@@ -72,9 +72,12 @@ the desired emacs-lisp code is contained inside org code blocks.
 
 ##### Easy Org Code Blocks
 
-<a href="../../img/posts/org-babel-setup/easy-org-mode-code.gif"><img src="../../img/posts/org-babel-setup/easy-org-mode-code.gif" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Example snippet of my org-babel config.org file" /></a>
-<br clear="all">
-<div class="caption">Example snippet of my org-babel config.org file</div>
+<a href="../../img/posts/org-babel-setup/easy-org-mode-code.gif"><img
+src="../../img/posts/org-babel-setup/easy-org-mode-code.gif"
+style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
+alt="Example snippet of my org-babel config.org file" /></a> <br
+clear="all"> <div class="caption">Code block can be easil created with
+`<s` and `TAB`.</div>
 
 **Note:** In org mode, you can just write `<s` and hit `TAB` and
 org-mode will expand it out into the source code `BEGIN` and `END`
@@ -104,10 +107,26 @@ configuration file, since emacs isn't constantly adding to it.
 ## What I like
 
 ### Organized
+
+<a href="../../img/posts/org-babel-setup/org-expand-example.gif"><img
+src="../../img/posts/org-babel-setup/org-expand-example.gif"
+style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
+alt="Example snippet of expanding org headers to easily find code."
+/></a> <br clear="all"> <div class="caption">Expanding org headers to
+easily find code.</div>
+
+Org mode's hierarchical structure inherently organizes the contents of
+files. Using it for my emacs configuration is no different. I can use
+org headers to easily break down my file into sections, and
+sub-sections, which I can expand and collapse as needed. For example,
+my `config.org` is currently over 500 lines long, but with all the
+headers collapsed, it is less than 20. From there I can just expand to
+the section I need.
+
 ### Maintainable
 ### Easy to Read
 #### In Code
 #### On Github
 
-## My maintined config
+## My maintained config
 
