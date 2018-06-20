@@ -84,6 +84,12 @@ server {
 }
 ```
 
+Restart nginx for the changes to take effect:
+
+```bash
+sudo systemctl restart nginx
+```
+
 ## selinux fixes
 
 ```bash 
