@@ -124,6 +124,15 @@ headers collapsed, it is less than 20. From there I can just expand to
 the section I need.
 
 ### Maintainable
+
+Being so organized, the `config.org` file is very easy to maintain. If
+I want to edit a setting, I can just search through the headers for
+the section, and then edit either the code block, or text. If I want
+to add a new item, I can just insert a new header, add a code block
+for what I want, any maybe some text to explain what it does for
+future reference. Done. Most importantly, the structure helps prevent
+it from turning into an in-production *"scratch code"* file...
+
 ### Easy to Read
 #### In Code
 #### On Github
