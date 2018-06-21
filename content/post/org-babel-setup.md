@@ -155,13 +155,7 @@ a known markup language! This means that if you click on a `*.org`
 file on Gihub's web interface, it will display well-formated version
 of the content, instead of defaulting to the raw org text.
 
-## My maintained config
-
-<a href="../../img/posts/org-babel-setup/github-emacs.png"><img
-src="../../img/posts/org-babel-setup/github-emacs.png"
-style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
-alt="Example of how Github renders org files as a markdown" /></a> <br
-clear="all"> <div class="caption">Github renders org files as a markdown.</div>
+## Speaking of Github...
 
 While I have always maintained my emacs configuration in [my dotfiles
 repo](https://github.com/himmAllRight/dotfiles), org-babel let me step
@@ -171,13 +165,27 @@ files in a sperate `emacs` folder. On Github, each directory in a repo
 can contain a `README` file (or.... a symlink to a file...) that will
 be displayed below the list of files.
 
-In the emacs section of my dotfiles, I have created a symlink,
-`README.org`, to my `config.org` flie. Github recognizes this, so my
-`README` file "contains" whatever the conetnts of `config.org` are.
 
-So now, when one vists the [emacs section of my dotfiles
-repo](https://github.com/himmAllRight/dotfiles/tree/master/emacs), an
-organized, well-formated, and always up-to-date version of my
+## My Maintained Config
+<a href="../../img/posts/org-babel-setup/github-emacs.png"><img
+src="../../img/posts/org-babel-setup/github-emacs.png"
+style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
+alt="Example of how Github renders org files as a markdown" /></a> <br
+clear="all"> <div class="caption">Github renders org files as a
+markdown.</div>
+
+In the emacs section of my dotfiles, I have created a symlink,
+`README.org`, to my `config.org` flie.
+
+```bash 
+sudo ln -s config.org README.org
+```
+
+Github recognizes this, so my `README` file "contains" whatever the
+conetnts of `config.org` are. Now, when one vists the [emacs
+section](https://github.com/himmAllRight/dotfiles/tree/master/emacs) of my dotfiles
+repo,
+an organized, well-formated, and always up-to-date version of my
 "`.emacs` file is displayed as the `README`.
 
 The Github integration is the cherry on top of a new emacs
