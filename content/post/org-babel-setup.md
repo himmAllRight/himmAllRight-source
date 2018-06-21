@@ -134,9 +134,54 @@ future reference. Done. Most importantly, the structure helps prevent
 it from turning into an in-production *"scratch code"* file...
 
 ### Easy to Read
-#### In Code
-#### Exported
-#### On Github
+
+It should go without saying that the organization and maintainabilty
+of org-mode configurations make them extemely *readable*. Not only is
+the source code easier to read, but org files can be
+[exported](https://orgmode.org/manual/Exporting.html) to all sorts of
+outputs (HTML, LaTeX, OpenDocument, etc). Combined with a stylesheet,
+these outputs can look *very* sharp... especially for a "`.emacs`
+file"! 
+
+<a href="../../img/posts/org-babel-setup/github-config.png"><img
+src="../../img/posts/org-babel-setup/github-config.png"
+style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
+alt="Example of how Github renders org files as a markdown" /></a> <br
+clear="all"> <div class="caption">Github renders org files as a markdown.</div>
+
+Beyond normal `org` exporing, [Github](http://www.github.com) does
+something awesome... in their web viewer they *render* `org` files as
+a known markup language! This means that if you click on a `*.org`
+file on Gihub's web interface, it will display well-formated version
+of the content, instead of defaulting to the raw org text.
 
 ## My maintained config
 
+<a href="../../img/posts/org-babel-setup/github-emacs.png"><img
+src="../../img/posts/org-babel-setup/github-emacs.png"
+style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
+alt="Example of how Github renders org files as a markdown" /></a> <br
+clear="all"> <div class="caption">Github renders org files as a markdown.</div>
+
+While I have always maintained my emacs configuration in [my dotfiles
+repo](https://github.com/himmAllRight/dotfiles), org-babel let me step
+up my game a bit. My current [dotfile
+system](http://localhost:1313/post/new-dotfiles/) has all of my emacs
+files in a sperate `emacs` folder. On Github, each directory in a repo
+can contain a `README` file (or.... a symlink to a file...) that will
+be displayed below the list of files.
+
+In the emacs section of my dotfiles, I have created a symlink,
+`README.org`, to my `config.org` flie. Github recognizes this, so my
+`README` file "contains" whatever the conetnts of `config.org` are.
+
+So now, when one vists the [emacs section of my dotfiles
+repo](https://github.com/himmAllRight/dotfiles/tree/master/emacs), an
+organized, well-formated, and always up-to-date version of my
+"`.emacs` file is displayed as the `README`.
+
+The Github integration is the cherry on top of a new emacs
+configuration system I was already estatic about. I've been an
+org-mode fan for years, and org-babel is one more feature to add to my
+growing list of reasons *why* I love it. I highly reccomend checking
+it out.
