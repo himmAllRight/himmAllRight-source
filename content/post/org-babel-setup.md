@@ -135,6 +135,7 @@ it from turning into an in-production *"scratch code"* file...
 
 ### Easy to Read
 #### In Code
+#### Exported
 #### On Github
 
 ## My maintained config
