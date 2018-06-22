@@ -1,6 +1,6 @@
 +++
 title   = "Organizing my Emacs config with Org-Babel"
-date    = "2018-06-08"
+date    = "2018-06-22"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/golden-co-mountains.jpg"
 caption = "Golden, CO"
@@ -10,27 +10,29 @@ draft   = true
 
 In my [previous post](../emacs-update-evil-usepackage/), I completely
 redid my emacs configuration from scratch, building it around the use
-of evil mode and use-package. As I was wrapping, I discovered yet
-another emacs package that has forever changed how I maintain my emacs
+of evil mode and use-package. As I was wrapping up, I learned of yet
+*another* emacs package that wil forever change how I maintain my
+emacs
 configuration... [org-babel](https://orgmode.org/worg/org-contrib/babel/intro.html).
 
 <!--more-->
 
 ## Org Babel
-Org-babel is an emacs package that lets take an
-[org-mode](https://orgmode.org/) file, and evaluate all of the [code
-blocks](https://orgmode.org/org.html#Literal-examples) contained in
-it. This means I can write an annotated org file filled with
-`emacs-lisp` code blocks, and export just the emacs-lisp code... my
+Org-babel is an emacs package, that lets take an
+[org-mode](https://orgmode.org/) file, and evaluates all of the [code
+blocks](https://orgmode.org/org.html#Literal-examples) contained
+within it. This means I can write an annotated org file, filled with
+`emacs-lisp` code blocks, and export just the emacs-lisp code. After
+testing it out, I realized that the main emacs lisp file I use is... my
 `.emacs` file...
 
 ## Setup
 
-Installing babel couldn't be simpler. If you are running `>=Emacs24`,
-a current version of Org-mode with Babel is already available by
-default. In order to generate our `.emacs` config from a `.org` file,
-we need to first setup that `config.org` file, and then tell the
-`.emacs` one to use it.
+Installing babel couldn't be simpler. If you are running Emacs version
+24 or higher, and a current version of Org-mode, Babel is already
+available by default. In order to generate an `.emacs` config from a
+`.org` file, we need to first setup a `config.org` file, and then tell
+`.emacs` to load it with org-babel.
 
 ### config.org
 
@@ -76,7 +78,7 @@ the desired emacs-lisp code is contained inside org code blocks.
 src="../../img/posts/org-babel-setup/easy-org-mode-code.gif"
 style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
 alt="Example snippet of my org-babel config.org file" /></a> <br
-clear="all"> <div class="caption">Code block can be easil created with
+clear="all"> <div class="caption">Code block can be easily created with
 `<s` and `TAB`.</div>
 
 **Note:** In org mode, you can just write `<s` and hit `TAB` and
@@ -135,11 +137,11 @@ it from turning into an in-production *"scratch code"* file...
 
 ### Easy to Read
 
-It should go without saying that the organization and maintainabilty
-of org-mode configurations make them extemely *readable*. Not only is
+It should go without saying that the organization and maintainability
+of org-mode configurations make them extremely *readable*. Not only is
 the source code easier to read, but org files can be
 [exported](https://orgmode.org/manual/Exporting.html) to all sorts of
-outputs (HTML, LaTeX, OpenDocument, etc). Combined with a stylesheet,
+outputs (HTML, LaTeX, OpenDocument, etc). Combined with a style-sheet,
 these outputs can look *very* sharp... especially for a "`.emacs`
 file"! 
 
@@ -149,10 +151,10 @@ style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
 alt="Example of how Github renders org files as a markdown" /></a> <br
 clear="all"> <div class="caption">Github renders org files as a markdown.</div>
 
-Beyond normal `org` exporing, [Github](http://www.github.com) does
+Beyond normal `org` exporting, [Github](http://www.github.com) does
 something awesome... in their web viewer they *render* `org` files as
 a known markup language! This means that if you click on a `*.org`
-file on Gihub's web interface, it will display well-formated version
+file on Gihub's web interface, it will display well-formatted version
 of the content, instead of defaulting to the raw org text.
 
 ## Speaking of Github...
@@ -161,7 +163,7 @@ While I have always maintained my emacs configuration in [my dotfiles
 repo](https://github.com/himmAllRight/dotfiles), org-babel let me step
 up my game a bit. My current [dotfile
 system](http://localhost:1313/post/new-dotfiles/) has all of my emacs
-files in a sperate `emacs` folder. On Github, each directory in a repo
+files in a separate `emacs` folder. On Github, each directory in a repo
 can contain a `README` file (or.... a symlink to a file...) that will
 be displayed below the list of files.
 
@@ -175,21 +177,21 @@ clear="all"> <div class="caption">Github renders org files as a
 markdown.</div>
 
 In the emacs section of my dotfiles, I have created a symlink,
-`README.org`, to my `config.org` flie.
+`README.org`, to my `config.org` file.
 
 ```bash 
 sudo ln -s config.org README.org
 ```
 
 Github recognizes this, so my `README` file "contains" whatever the
-conetnts of `config.org` are. Now, when one vists the [emacs
+contents of `config.org` are. Now, when one visits the [emacs
 section](https://github.com/himmAllRight/dotfiles/tree/master/emacs) of my dotfiles
 repo,
-an organized, well-formated, and always up-to-date version of my
+an organized, well-formatted, and always up-to-date version of my
 "`.emacs` file is displayed as the `README`.
 
 The Github integration is the cherry on top of a new emacs
-configuration system I was already estatic about. I've been an
+configuration system I was already ecstatic about. I've been an
 org-mode fan for years, and org-babel is one more feature to add to my
-growing list of reasons *why* I love it. I highly reccomend checking
+growing list of reasons *why* I love it. I highly recommend checking
 it out.
