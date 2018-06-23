@@ -6,6 +6,7 @@ image   = "img/header-images/roger-williams-park-leaves1.jpg"
 caption = "Roger Williams Park, Providence RI"
 tags    = ["Linux", "Homelab", "Network", "Nginx", "Website"]
 draft   = "True"
+Comments = "True"
 +++
 
 Setting up Tangela again, so I think I'll write some notes about it
