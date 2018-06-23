@@ -46,9 +46,10 @@
                         <a href="{{ .Permalink }}" style="text-align: right; float: right; max-width: 40%">{{ .Title }}</a>
                     {{ end }}
 
-
-                    <!-- Comments Section -->
-                    {{ partial "comments.html" .}}
+			<!-- Comments Section -->
+			<div class="comment-section">
+			  {{ partial "comments.html" .}}
+			</div>
                 </div>
             </div>
         </div>
