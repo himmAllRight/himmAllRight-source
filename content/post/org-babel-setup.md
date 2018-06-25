@@ -1,11 +1,12 @@
 +++
-title   = "Organizing my Emacs config with Org-Babel"
-date    = "2018-06-22"
-author  = "Ryan Himmelwright"
-image   = "img/header-images/golden-co-mountains.jpg"
-caption = "Golden, CO"
-tags    = ["Linux", "Programming", "Dev", "Emacs","dotfiles"]
-draft   = true
+title    = "Organizing my Emacs config with Org-Babel"
+date     = "2018-06-22"
+author   = "Ryan Himmelwright"
+image    = "img/header-images/golden-co-mountains.jpg"
+caption  = "Golden, CO"
+tags     = ["Linux", "Programming", "Dev", "Emacs","dotfiles"]
+Comments = "True"
+draft    = true
 +++
 
 In my [previous post](../emacs-update-evil-usepackage/), I completely
