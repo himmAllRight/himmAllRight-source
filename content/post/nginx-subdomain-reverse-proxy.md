@@ -1,6 +1,6 @@
 +++
 title   = "Nginx as a Reverse Proxy to Forward Sub-Domains"
-date    = "2018-06-22"
+date    = "2018-06-30"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/roger-williams-park-leaves1.jpg"
 caption = "Roger Williams Park, Providence RI"

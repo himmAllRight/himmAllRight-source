@@ -1,9 +1,10 @@
 +++
-title  = "Refreshing my i3 setup with i3blocks"
-date   = "2017-06-22"
-author = "Ryan Himmelwright"
-image   = "img/posts/starting-i3/rofi-window-header.png"
-tags   = ["Linux", "i3", "customization", "Solus",]
+title    = "Refreshing my i3 setup with i3blocks"
+date     = "2017-06-22"
+author   = "Ryan Himmelwright"
+image    = "img/posts/starting-i3/rofi-window-header.png"
+tags     = ["Linux", "i3", "customization", "Solus",]
+Comments = "True"
 +++
 
 The last couple of weeks I have shifted back to using the i3 window mangers. When I fired it up, my fingers danced across the keyboard, remembering all of the personalized keybindings I have cultivated in my i3 configuration over the years. It is a simple, beautiful setup... well, beautiful minus one of the components. My i3status bar was looking rather bland and dated, especially compared some of the i3 setups posted by all the cool kids over at [/r/unixporn](https://www.reddit.com/r/unixporn/). I decided it was time for a refresh.

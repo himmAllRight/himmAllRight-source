@@ -5,6 +5,7 @@ author = "Ryan Himmelwright"
 image  = "img/header-images/hhkb-wood.jpg"
 tags   = ["Hardware", "Keyboards", "HHKB",]
 draft  = false
+Comments = "True"
 +++
 
 After years of using a Happy Hacking Keyboard Lite, I have *finally* decided to splurge on a Happy Hacking Professional 2 keyboard. And I love it.

@@ -5,6 +5,7 @@ author  = "Ryan Himmelwright"
 image   = "img/header-images/baltimore-dock-gray.jpg"
 caption = "Inner Harbor, Baltimore, MD USA"
 tags    = ["DevOps", "Linux", "Homelab", "Containers", "Docker", "Solus",]
+Comments = "True"
 +++
 
 Over the past few months (particularly over the holiday season), I started to

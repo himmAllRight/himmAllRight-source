@@ -1,6 +1,6 @@
 +++
 title    = "Organizing my Emacs config with Org-Babel"
-date     = "2018-06-22"
+date     = "2018-06-27"
 author   = "Ryan Himmelwright"
 image    = "img/header-images/golden-co-mountains.jpg"
 caption  = "Golden, CO"
@@ -120,23 +120,23 @@ alt="Example snippet of expanding org headers to easily find code."
 /></a> <br clear="all"> <div class="caption">Expanding org headers to
 easily find code.</div>
 
-Org mode's hierarchical structure inherently organizes the contents of
+Org mode's hierarchical structure inherently organizes the content of
 files. Using it for my emacs configuration is no different. I can use
-org headers to easily break down my file into sections, and
-sub-sections, which I can expand and collapse as needed. For example,
-my `config.org` is currently over 500 lines long, but with all the
-headers collapsed, it is less than 20. From there I can just expand to
-the section I need.
+org headers to easily break down my file into sections and
+sub-sections, which I can then expand and collapse as needed. For
+example, my `config.org` is currently over 500 lines long, but with
+all the headers collapsed, it displays in less than 20. From there I
+can just expand to the section I need.
 
 ### Maintainable
 
 Being so organized, the `config.org` file is very easy to maintain. If
 I want to edit a setting, I can just search through the headers for
-the section, and then edit either the code block, or text. If I want
-to add a new item, I can just insert a new header, add a code block
-for what I want, any maybe some text to explain what it does for
-future reference. Done. Most importantly, the structure helps prevent
-it from turning into an in-production *"scratch code"* file...
+the section, and then edit the code block and/or text. If I want to
+add a new item, I can just insert a new header, add the code block I
+want, and maybe some explanatory text. Done. Most importantly, the
+structure helps prevent it from turning into an *in-production
+"scratch code"* file...
 
 ### Easy to Read
 
@@ -145,8 +145,7 @@ of org-mode configurations make them extremely *readable*. Not only is
 the source code easier to read, but org files can be
 [exported](https://orgmode.org/manual/Exporting.html) to all sorts of
 outputs (HTML, LaTeX, OpenDocument, etc). Combined with a style-sheet,
-these outputs can look *very* sharp... especially for a "`.emacs`
-file"! 
+these outputs can look quite professional.
 
 <a href="../../img/posts/org-babel-setup/github-config.png"><img
 src="../../img/posts/org-babel-setup/github-config.png"
@@ -155,20 +154,20 @@ alt="Example of how Github renders org files as a markdown" /></a> <br
 clear="all"> <div class="caption">Github renders org files as a markdown.</div>
 
 Beyond normal `org` exporting, [Github](http://www.github.com) does
-something awesome... in their web viewer they *render* `org` files as
-a known markup language! This means that if you click on a `*.org`
-file on Gihub's web interface, it will display well-formatted version
-of the content, instead of defaulting to the raw org text.
+something awesome... they *render* `org` files as a known markup
+language on their website! This means that if you click an `*.org`
+file on Gihub's web interface, it will display a rendered version of
+the content, instead of defaulting to the raw org text.
 
 ## Speaking of Github...
 
 While I have always maintained my emacs configuration in [my dotfiles
-repo](https://github.com/himmAllRight/dotfiles), org-babel let me step
-up my game a bit. My current [dotfile
-system](http://localhost:1313/post/new-dotfiles/) has all of my emacs
-files in a separate `emacs` folder. On Github, each directory in a repo
-can contain a `README` file (or.... a symlink to a file...) that will
-be displayed below the list of files.
+repo](https://github.com/himmAllRight/dotfiles), org-babel has helped
+me step up my game. My current [dotfile
+system](http://ryan.himmelwright.net/post/new-dotfiles/) has all of my
+emacs files in a separate `emacs` folder. On Github, each directory in
+a repo can contain a `README` file (or.... a symlink to *another*
+file...)  to be displayed below the list of files.
 
 
 ## My Maintained Config
@@ -180,7 +179,7 @@ clear="all"> <div class="caption">Github renders org files as a
 markdown.</div>
 
 In the emacs section of my dotfiles, I have created a symlink,
-`README.org`, to my `config.org` file.
+`README.org`, to my `config.org` file:
 
 ```bash 
 sudo ln -s config.org README.org
@@ -188,13 +187,11 @@ sudo ln -s config.org README.org
 
 Github recognizes this, so my `README` file "contains" whatever the
 contents of `config.org` are. Now, when one visits the [emacs
-section](https://github.com/himmAllRight/dotfiles/tree/master/emacs) of my dotfiles
-repo,
-an organized, well-formatted, and always up-to-date version of my
-"`.emacs` file is displayed as the `README`.
+section](https://github.com/himmAllRight/dotfiles/tree/master/emacs)
+of my dotfiles repo, an organized, annotated, and always up-to-date
+version of my "`.emacs`" file is displayed as the `README`.
 
-The Github integration is the cherry on top of a new emacs
-configuration system I was already ecstatic about. I've been an
-org-mode fan for years, and org-babel is one more feature to add to my
-growing list of reasons *why* I love it. I highly recommend checking
-it out.
+The Github support was the cherry on top of a new emacs configuration
+system I am already ecstatic about. I've been a fan of org-mode for
+years, and org-babel is one more feature to add to the growing list of
+reasons *why* I love it. I highly recommend checking it out.
