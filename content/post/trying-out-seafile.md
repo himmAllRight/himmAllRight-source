@@ -6,6 +6,7 @@ image   = "img/header-images/obx-houses.jpg"
 caption = "Outer Banks, NC USA"
 tags    = ["Homelab", "Linux", "Software"]
 draft   = false
+Comments = "True"
 +++
 
 In college, I mostly used Dropbox to handle all of my file syncing needs. As I

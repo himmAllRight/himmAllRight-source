@@ -5,6 +5,7 @@ author  = "Ryan Himmelwright"
 image   = "img/header-images/roger-williams-park-leaves1.jpg"
 caption = "Roger Williams Park, Providence RI"
 tags    = ["Linux", "Programming", "Dev", "Emacs","dotfiles"]
+Comments = "True"
 +++
 
 After switching to [Spacemacs](http://spacemacs.org) for the last year
