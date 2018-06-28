@@ -8,7 +8,7 @@ theme = "ryan-clean-blog"
 languageCode = "en-us"
 copyright = "Copyright © Ryan Himmelwright. Site created with Hugo"
 googleAnalytics = "UA-123-45" # delete or comment to disable Google Analytics JS generation
-disqusShortname = "ryan-himmelwright" #delete or comment to disable Disqus comments
+disqusShortname = "himmallright" #delete or comment to disable Disqus comments
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
