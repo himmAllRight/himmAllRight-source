@@ -31,18 +31,18 @@ testing it out, I realized that the main emacs lisp file I use is... my
 
 Installing babel couldn't be simpler. If you are running Emacs version
 24 or higher, and a current version of Org-mode, Babel is already
-available by default. In order to generate an `.emacs` config from a
+available by default. In order to generate an `.emacs` config from an
 `.org` file, we need to first setup a `config.org` file, and then tell
 `.emacs` to load it with org-babel.
 
 ### config.org
 
-Start by creating a `.org` file to use for all of the configuration
-content. This can be named anything, and exist anywhere really, but I
-like to keep mine in the emacs section of my [dotfiles
+First, start by creating an `.org` file to use for all of the
+configuration content. This can be named anything, and exist anywhere,
+but I like to keep mine in the emacs section of my [dotfiles
 repo](https://github.com/himmAllRight/dotfiles), named
-`config.org`. This file functions like any other org file, so I
-decided to add a small header at the top... because why not?
+`config.org`. This file functions like any other org file, so I added
+a small header section at the top... because why not?
 
 ```org
 #+TITLE: My Emacs Configuration
@@ -51,46 +51,49 @@ decided to add a small header at the top... because why not?
 #+OPTIONS: num:nil 
 ```
 
-After that, I broke down my configuration by creating org headings for
-the different sections of my configuration. For example, I started
-with `Repos & Core Packages`, `Core Setup`, `Evil Mode`, `Ivy`,
-`Writing`, `Development`... and so on.
+After that, I broke down my file by creating org headings for the
+different groups of the configuration. For example, I started with the
+headings `Repos & Core Packages`, `Core Setup`, `Evil Mode`, `Ivy`,
+`Writing`, `Development`... etc.
 
-*Note: Use "\*" to create headings in org mode. Each "\*" corresponding
-to the HTML heading levels. Ex: `*` == `<h1>`, `**` == `<h2>`, etc.*
+*Note: In org-mode, use "\*" to create headings. Each contiguous "\*"
+corresponds to the equivalent HTML heading level. Ex: `*` == `<h1>`,
+`**` == `<h2>`, and so on.*
 
-Under each heading, I started transferring my emacs code. I turned the
-comments that described each code piece into normal org text, and
-wrapped the `emacs-lisp` code snippet in an org code block. For
-example:
-
+I started transferring the emacs-lisp code from my previous `.emacs`
+file, to under each heading in `config.org`. As I transferred text, I
+transformed the comments that described each code snippet into normal
+org text, and wrapped the `emacs-lisp` inside an org code block.
 
 <a href="../../img/posts/org-babel-setup/config-org-example1.png"><img src="../../img/posts/org-babel-setup/config-org-example1.png" style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;" alt="Example snippet of my org-babel config.org file" /></a>
 <br clear="all">
 <div class="caption">Example snippet of my org-babel config.org file</div>
 
-Use the `#+BEGIN_SRC emacs-lisp` and `#+END_SRC` org tags to
-encapsulate the `emacs-lisp` code. Continue to do this until all of
-the desired emacs-lisp code is contained inside org code blocks.
+To create a code block, use the `#+BEGIN_SRC emacs-lisp` and
+`#+END_SRC` org tags to encapsulate the `emacs-lisp` code. Continue to
+do this until all of the desired emacs-lisp code is contained inside
+org code blocks. 
 
-##### Easy Org Code Blocks
+
+
+##### Side Note: Easy Org Code Blocks
 
 <a href="../../img/posts/org-babel-setup/easy-org-mode-code.gif"><img
 src="../../img/posts/org-babel-setup/easy-org-mode-code.gif"
 style="max-width: 100%; float: left; margin: 0px 15px 0px 0px;"
 alt="Example snippet of my org-babel config.org file" /></a> <br
-clear="all"> <div class="caption">Code block can be easily created with
-`<s` and `TAB`.</div>
+clear="all"> <div class="caption">Code block can be easily created
+with `<s` and `TAB`.</div>
 
-**Note:** In org mode, you can just write `<s` and hit `TAB` and
-org-mode will expand it out into the source code `BEGIN` and `END`
-tags. Just don't forget to add `emacs-lisp` to the `BEGIN_SRC` tag.
+In org-mode, you can write `<s`, then hit `TAB` and it will expand
+into the `BEGIN_SRC` and `END_SRC` tags. Just don't forget to add
+`emacs-lisp` to the `BEGIN_SRC` tag!
 
 
 ### .emacs
 
-For the contents of `.emacs`, just call `package-initialize` and then
-have `org-babel` load the file, like so:
+For the contents of `.emacs`, call `package-initialize` and then have
+`org-babel` load the `config.org` file.
 
 ```emacs-lisp
 (package-initialize)
@@ -98,13 +101,12 @@ have `org-babel` load the file, like so:
 ```
 
 That's it. Assuming the `config.org` is complete, emacs should now
-load up using the code snippets from *it*, instead of needing to have
-everything in the `.emacs` file. These are the only two lines
-needed. However, do note that emacs will still write the
+initialize using the code snippets from *it*. While these are the only
+two *required* lines, do note that emacs will still write the
 `#'custom-set-variables` to the bottom of the `.emacs` file. That's
 fine. If anything, it makes it easier to source control the *actual*
-configuration file, since emacs isn't constantly adding to it.
-
+configuration file, since emacs isn't constantly adding to it,
+changing the diff.
 
 
 ## What I like
