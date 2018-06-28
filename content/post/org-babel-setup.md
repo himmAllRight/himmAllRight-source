@@ -6,7 +6,7 @@ image    = "img/header-images/golden-co-mountains.jpg"
 caption  = "Golden, CO"
 tags     = ["Linux", "Programming", "Dev", "Emacs","dotfiles"]
 Comments = "True"
-draft    = true
+draft    = false
 +++
 
 In my [previous post](../emacs-update-evil-usepackage/), I completely
