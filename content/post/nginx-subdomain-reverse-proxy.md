@@ -1,19 +1,36 @@
 +++
 title   = "Nginx as a Reverse Proxy to Forward Sub-Domains"
-date    = "2018-06-30"
+date    = "2018-07-03"
 author  = "Ryan Himmelwright"
-image   = "img/header-images/roger-williams-park-leaves1.jpg"
-caption = "Roger Williams Park, Providence RI"
+image   = "img/header-images/foster-street-farmers-market1.jpg"
+caption = "Farmers Market, Foster Street, Durham NC"
 tags    = ["Linux", "Homelab", "Network", "Nginx", "Website"]
 draft   = "True"
 Comments = "True"
 +++
 
-Setting up Tangela again, so I think I'll write some notes about it
-since I've been asked about it in the past... and didn't remember how
-to setup it up myself X-D.
+Last month, Rebecca and I moved to Durham, North Carolina and as a
+result I've had to re-setup our network. I used to configure a Virtual
+Machine running Nginx as a reverse-proxy on the network (Tangela), and
+I decided I wanted to do that again on the new network. While it's a
+simple process, it's one that other people often ask me about (and I
+forget about). So, this time... I'm taking notes!
 
 <!--more-->
+
+## Why?
+
+The purpose of this reverse proxy is to direct outside traffic to the
+appropriate host internally, by looking at the subdomain of the url
+request. For example, I may have servers for both
+`website.himmelwright.net` and `dashboard.himmelwright.net` running
+internally internally on my network, but they will have the same
+public IP. Using Nginx, I can point all of my web traffic to
+*tangela*, and if it sees that the incoming request is for
+`website.himmelwright.net`, it will forward that traffic to the
+website server. On the other hand, if the request is for
+`dashboard.himmelwright.net`, it will direct it to the dasboard
+server.
 
 ## Setup Server
 
