@@ -6,7 +6,7 @@ image    = "img/header-images/foster-street-farmers-market1.jpg"
 caption  = "Farmers Market, Foster Street, Durham NC"
 tags     = ["Linux", "Homelab", "Network", "Nginx", "Website"]
 Comments = "True"
-draft    = "True"
+draft    = "False"
 +++
 
 Last month, Rebecca and I moved to Durham, North Carolina. As a
@@ -171,4 +171,4 @@ setsebool -P httpd_can_network_connect true
 Besides having to configure your router to forward http traffic to the
 server, that is really it. This is a real basic configuration, but it
 has worked well for me over the years. If I start doing something more
-complex, I may write provide an update. Until then, enjoy!
+complex, I may provide an update. Until then, enjoy!
