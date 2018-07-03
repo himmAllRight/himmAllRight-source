@@ -9,12 +9,12 @@ draft   = "True"
 Comments = "True"
 +++
 
-Last month, Rebecca and I moved to Durham, North Carolina and as a
-result I've had to re-setup our network. I used to configure a Virtual
-Machine running Nginx as a reverse-proxy on the network (Tangela), and
-I decided I wanted to do that again on the new network. While it's a
-simple process, it's one that other people often ask me about (and I
-forget about). So, this time... I'm taking notes!
+Last month, Rebecca and I moved to Durham, North Carolina. As a
+result, I've had to re-setup our home network. In years past, I setup
+a virtual machine running [Nginx](https://www.nginx.com/) as a
+reverse-proxy (Tangela), and I decided to do that again on the new
+network. While it is a simple process, it is one that other people often
+ask me about. So, this time... I'm taking notes!
 
 <!--more-->
 
@@ -24,25 +24,27 @@ The purpose of this reverse proxy is to direct outside traffic to the
 appropriate host internally, by looking at the subdomain of the url
 request. For example, I may have servers for both
 `website.himmelwright.net` and `dashboard.himmelwright.net` running
-internally internally on my network, but they will have the same
-public IP. Using Nginx, I can point all of my web traffic to
-*tangela*, and if it sees that the incoming request is for
+internally on my network, but they will have the same public IP. Using
+nginx, I can point all of my web traffic to *tangela*, my
+reverse-proxy. If tangela sees that the incoming request is for
 `website.himmelwright.net`, it will forward that traffic to the
 website server. On the other hand, if the request is for
 `dashboard.himmelwright.net`, it will direct it to the dasboard
-server.
+server. A reverse-proxy expands what can be accomplished on a single network,
+and is a cleaner (and possibly safer) method than doing everything through
+port-forwarding.
+
+
+
+## Setup Server
 
 <a href="../../img/posts/nginx-reverse-proxy/tangela.png"><img
 src="../../img/posts/nginx-reverse-proxy/tangela.png" style="max-width:
 50%; float: right; margin: 0px 0px 0px 0px;" alt="Example snippet of
 my org-babel config.org file" /></a> 
 
-## Setup Server
-
-
-
 To get started, configure a server/container/droplet that will host
-Nginx. I'm using a Centos 7 minimal install VM on
+nginx. I'm using a Centos 7 minimal install VM on
 [Nintales](http://ryan.himmelwright.net/pages/homelab/#ninetales) (my
 home server). I don't have a bunch of traffic (well, I *shouldn't*), so I'm
 just giving it 1 core and 512MB RAM.
@@ -52,10 +54,10 @@ just giving it 1 core and 512MB RAM.
 
 ### Setup Nginx
 
-Next, it's time to setup and install Nginx. 
+Next, it's time to setup and install Nginx.  
 
-*NOTE: The rest of the post will be focused on using a Centos 7 base,
-since that is what I am using.*
+*Note*: the rest of the post will be focused on using a Centos 7
+base, since that is what I am using.
 
 Add the nginx repo, and install it:
 
