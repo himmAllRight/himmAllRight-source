@@ -1,12 +1,12 @@
 ---
 title: "Homelab"
-date: 2018-05-07
+date: 2018-07-04
 type: homelab
 layout: homelab-page
 menu: 
   main:
     weight: -100
-image: img/header-images/kadabra1.jpg
+image: img/homelab/durham-desk3.jpg
 ---
 
 This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations).
@@ -15,11 +15,15 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 
 ### Ryan (Me)
 
-<a href="../../img/homelab/kadabra1.jpg"><img alt="Ryan's Desk - Chair" src="../../img/homelab/kadabra1.jpg" width=100%></a>
-*My Home Workstation Area*
+Having recently moved to Durham NC, I built a new standing desk and am
+slowly putting my space together. So for now ... don't mind the wires
+:P. I'll try to keep updating this page as I progress.
 
-<a href="../../img/homelab/kadabra-lights.jpg"><img alt="Ryan's Workstation" src="../../img/homelab/kadabra-lights.jpg" width=100%></a>
-*My Main Computer Setup (with lights on) (Kadabra)*
+<a href="../../img/homelab/durham-desk1.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/durham-desk1.jpg" width=100%></a>
+<div class="caption">My Home Desk</div>
+
+<a href="../../img/homelab/durham-desk2.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/durham-desk2.jpg" width=100%></a>
+<div class="caption">My Home Workstation</div>
 
 <a name="kadabra"></a>
 #### - Kadabra (Main Laptop)
@@ -29,7 +33,7 @@ Intel i5-7200u [2.5 Ghz (3.1 Ghz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display 
-Kubuntu 18.04
+Fedora 28
 ```
 ##### Periphery
 ```
