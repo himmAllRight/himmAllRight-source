@@ -10,7 +10,7 @@ pipeline {
     }
     stage ('deploy') {
         steps{
-        sh 'rsync -r /var/lib/jenkins/workspace/himmAllRight.github.io/* ryan@192.168.1.77:/usr/share/nginx/html/'
+        sh 'rsync -r /var/lib/jenkins/workspace/himmAllRight.github.io/* ryan@ponyta:/usr/share/nginx/html/'
         }
     }   
   }
