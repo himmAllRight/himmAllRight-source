@@ -10,7 +10,7 @@ pipeline {
 	}
 	stage ('deploy') {
             steps{
-		sh 'rsync -r $WORKSPACE/himmAllRight.github.io/* ryan@ponyta:/usr/share/nginx/html/'
+		sh 'rsync -r "$WORKSPACE/public/" ryan@ponyta:/usr/share/nginx/html/'
             }
 	}   
     }
