@@ -16,8 +16,7 @@ pipeline {
 		success {
 		    emailext(
 			subject: "${env.JOB_NAME}[${eng.BUILD_NUMBER}] Drafts Pushed to Server!",
-			body: """<p>'${env.JOB_NAME} [${env.BUILD_NUMBER}]' Drafts Pushed to Server":</p>
-        <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+			body: """<p>'${env.JOB_NAME} [${env.BUILD_NUMBER}]' Drafts Pushed to Server":</p>""",
 			to: "ryan.himmelwright@gmail.com"
 		    )
 		}
@@ -29,8 +28,7 @@ pipeline {
 	failure {
 	    emailext(
 		subject: "${env.JOB_NAME}[${eng.BUILD_NUMBER}] Failed!",
-		body: """<p>'${env.JOB_NAME} [${env.BUILD_NUMBER}]' Failed!":</p>
-        <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+		body: """<p>'${env.JOB_NAME} [${env.BUILD_NUMBER}]' Failed!":</p>""",
 		to: "ryan.himmelwright@gmail.com"
 	    )
 	}
