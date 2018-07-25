@@ -5,7 +5,7 @@ pipeline {
     stages {
 	stage ('build') {
 	    steps{
-		sh 'hugo -D -F -b "http://ryan-drafts.himmelwright.net"'
+		sh 'hugo -DOOM -F -b "http://ryan-drafts.himmelwright.net"'
 	    }
 	}
 	stage ('deploy') {
