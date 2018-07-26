@@ -5,7 +5,7 @@ pipeline {
     stages {
 	stage ('build') {
 	    steps{
-		sh 'hugo -DOOM -F -b "http://ryan-drafts.himmelwright.net"'
+		sh 'hugo -D-F -b "http://ryan-drafts.himmelwright.net"'
 	    }
 	}
 	stage ('deploy') {
@@ -14,14 +14,5 @@ pipeline {
             }
 	}
 
-    }
-    post {
-	failure {
-	    emailext(
-		subject: "${env.JOB_NAME}[${eng.BUILD_NUMBER}] Failed!",
-		body: """<p>'${env.JOB_NAME} [${env.BUILD_NUMBER}]' Failed!":</p>""",
-		to: "ryan.himmelwright@gmail.com"
-	    )
-	}
     }
 }
