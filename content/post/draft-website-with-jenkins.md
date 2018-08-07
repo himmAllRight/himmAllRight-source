@@ -43,10 +43,9 @@ pushing my changes.
 
 <a href="../../img/posts/draft-website-jenkins/mr-mime.png"><img
 src="../../img/posts/draft-website-jenkins/mr-mime.png" style="max-width:
-45%; float: right; margin: 0px 0px 0px 10px;" alt="Jenkins Logo" /></a> 
+45%; float: right; margin: 20px 0px 0px 10px;" alt="Jenkins Logo" /></a> 
 
 ## Jenkins
-
 
 On my home network, I have created a dedicated Jenkins server
 (Mr. Mime), using a CentOS7 VM hosted on my home server. However, any
