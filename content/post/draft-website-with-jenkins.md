@@ -1,6 +1,6 @@
 +++
 title    = "Creating a CI/CD 'Draft' Website with Jenkins"
-date     = "2018-08-05"
+date     = "2018-08-11"
 author   = "Ryan Himmelwright"
 image    = "img/header-images/atc-back1.jpg"
 caption  = "American Tobacco Campus, Durham NC"
@@ -52,9 +52,29 @@ Jenkins setup should work. To get started, checkout the [Jenkins
 Website](https://jenkins.io/download/), and don't be afraid to browse
 [the documentation](https://jenkins.io/doc/) for help.
 
-#### Quick Setup with Docker
 
 ### Github Integration
+
+#### Jenkins Service
+My website is currently hosted on github, so we need to configure that
+project to work with our Jenkins server. To do that, go to the
+project's github page, and then click on **Settings** ->
+**Integrations & services**. Click the **Add service** drop-down and
+select *Jenkins (Git Plugin)*. Then, add the Jenkins server url
+(assuming the server is accessable from the internet. If not, hosting
+the jenkins server on something like [Digital
+Ocean](http://digitalocean.com) might be a solution). Lastly, make
+sure the **Activate** box is selected, and click the **Add Service**
+button.
+
+#### SSH Keys
+
+While on the project's Github page, make sure that the Jenkins
+server's ssh keys are added to the project. To add them, click on
+**Deploy Keys**, again under the project's **Settings** tab. Then
+select **Add deploy key**, and add the public key.
+
+### Project Setup
 
 ## A Nginx Server
 
