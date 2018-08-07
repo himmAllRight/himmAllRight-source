@@ -41,10 +41,12 @@ and future posts). If I want to check how a post is looking on my
 phone or any other device, I can just check the draft website after
 pushing my changes.
 
-## Jenkins
 <a href="../../img/posts/draft-website-jenkins/mr-mime.png"><img
 src="../../img/posts/draft-website-jenkins/mr-mime.png" style="max-width:
-40%; float: right; margin: 0px 0px 0px 0px;" alt="Jenkins Logo" /></a> 
+45%; float: right; margin: 0px 0px 0px 10px;" alt="Jenkins Logo" /></a> 
+
+## Jenkins
+
 
 On my home network, I have created a dedicated Jenkins server
 (Mr. Mime), using a CentOS7 VM hosted on my home server. However, any
