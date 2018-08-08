@@ -77,6 +77,10 @@ select **Add deploy key**, and add the public key.
 
 ## A Nginx Server
 
+<a href="../../img/posts/draft-website-jenkins/nginx.png"><img
+src="../../img/posts/draft-website-jenkins/nginx.png" style="max-width:
+100%; float: center; margin: 20px 0px 0px 10px;" alt="Default Nginx Page" /></a> 
+
 With Jenkins ready, lets setup the web server before configuring the
 Jenkins project. Any webserver will do, but I used
 [nginx](https://nginx.org/en/) in my setup. It just needs to be able
@@ -86,16 +90,26 @@ can be installed, enabled, and started with (on Ubuntu):
 
 ```bash 
 ## Install
-sudo apt install nginx
+sudo apt install -y nginx
 
-## Enable and Start Service
-sudo systemctl enable nginx
-sudo systemctl start nginx
+## Check it is running
+sudo systemctl status nginx
 ```
 
+After installing, nginx will by default serve content at
+`/user/share/nginx/html/`, so remember that location.
 
+*Note: Don't forget to add the `jenkins` user's ssh key from the
+jenkins server to the `authorized_keys` file of the nginx server. This
+will make file transfers easier when setting up the jenkins project.*
 
 ## Configuring a Project
+
+#### Source Control
+
+#### Build Step
+
+#### Deploy to Webserver
 
 ## Beter Yet... Pipelines
 
