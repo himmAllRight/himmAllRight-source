@@ -75,9 +75,25 @@ server's ssh keys are added to the project. To add them, click on
 **Deploy Keys**, again under the project's **Settings** tab. Then
 select **Add deploy key**, and add the public key.
 
-### Project Setup
-
 ## A Nginx Server
+
+With Jenkins ready, lets setup the web server before configuring the
+Jenkins project. Any webserver will do, but I used
+[nginx](https://nginx.org/en/) in my setup. It just needs to be able
+to serve our generated *static* website. Just make sure it's installed
+and running, and know *where* the files need to go. If using nginx, it
+can be installed, enabled, and started with (on Ubuntu):
+
+```bash 
+## Install
+sudo apt install nginx
+
+## Enable and Start Service
+sudo systemctl enable nginx
+sudo systemctl start nginx
+```
+
+
 
 ## Configuring a Project
 
