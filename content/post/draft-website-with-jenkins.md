@@ -79,7 +79,7 @@ select **Add deploy key**, and add the public key.
 
 <a href="../../img/posts/draft-website-jenkins/nginx.png"><img
 src="../../img/posts/draft-website-jenkins/nginx.png" style="max-width:
-100%; float: center; margin: 0px 0px 0px 10px;" alt="Default Nginx Page" /></a> 
+100%; float: center; margin: 0px 0px 0px 0px;" alt="Default Nginx Page" /></a> 
 
 With Jenkins ready, lets setup the web server before configuring the
 Jenkins project. Any webserver will do, but I used
