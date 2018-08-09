@@ -105,7 +105,23 @@ will make file transfers easier when setting up the jenkins project.*
 
 ## Configuring a Project
 
+Lets configure our Jenkins project! Log in to the Jenkins
+server and click the **New Item** option on the left side bar. Enter a
+name for the project, select the **Freestyle Project** option, and hit
+**OK**.
+
+<a href="../../img/posts/draft-website-jenkins/general-config.png"><img
+src="../../img/posts/draft-website-jenkins/general-config.png" style="max-width:
+100%; float: center; margin: 0px 0px 0px 0px;" alt="The Project's General Configuration Section" /></a> 
+<div class="caption">The Project's General Configuration Section</div>
+
+In the **General** section of the configuration screen, optionally
+write a description about the project. Next, select the "*GitHub
+Project*" checkbox, and add the github repo's url into the *Project
+url* text box.
+
 #### Source Control
+
 
 #### Build Step
 
