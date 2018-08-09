@@ -53,6 +53,9 @@ Jenkins setup should work. To get started, checkout the [Jenkins
 Website](https://jenkins.io/download/), and don't be afraid to browse
 [the documentation](https://jenkins.io/doc/) for help.
 
+*Note: make sure hugo is installed on the Jenkins server, as we need
+it to generate the website.*
+
 
 ### Github Integration
 
@@ -122,10 +125,67 @@ url* text box.
 
 #### Source Control
 
+<a href="../../img/posts/draft-website-jenkins/credentials.png"><img
+src="../../img/posts/draft-website-jenkins/credentials.png"
+style="max-width: 100%; float: center; margin: 0px 0px 0px 0px;"
+alt="Setting Credentials" /></a> 
+<div class="caption">Setting Credentials</div>
+
+In the **Source Code Management** section of the configuration, select
+the *Git* option. Then, enter the repo's url (I did ssh url) for the
+*Repository URL* box. For *Credentals*, click *Add* if they aren't
+already setup. Select *SSH Username with private key* for *Kind*,
+`jenkins` for the *Username*. 
+
+More options can for the source control can be added here, but this
+should be the minimum setup required. Again, for any of this to work
+public keys for the `jenkins` user on the jenkins server must be
+generated, and added as a deployment key on Github.
+
+#### Build Trigger
+
+Under the **Build Triggers** section, select *Poll SCM*. Without adding
+any schedule parameters, it will just pull each time it detect a new
+commit. This is what we want.
 
 #### Build Step
 
+In the **Build** section, click **Add build step**, and select
+**Execute shell**. This is where we can add the shell commands to
+build the website with hugo.
+
+```bash
+hugo -D -F -b "http://10.1.1.77" -d public
+```
+
+The `-D` tells hugo to include all draft posts, while the `-F` flag
+has it include all posts with a future date. The `-b` flag sets the
+url for the generated website. This sould the be url or ip address of
+the nginx server setup previously. Lastly, the `-d` flag tells hugo to
+output the generated static website to the `public` directory. This
+will be useful to know when deploying the build.
+
 #### Deploy to Webserver
+
+Our deployment step will be another shell command, so I've actually
+added it as another build step. So, add another **Execute shell**. I
+used rsync to copy the build files to the nginx webserver:
+
+```bash
+rsync -r "$WORKSPACE/public/" ryan@10.1.1.77:/usr/share/nginx/html/
+```
+
+I used the jenkins `$WORKSPACE` variable to get the location of this
+build, and was able to append the `public` directory to that, since we
+defined it with the `-d` flag in the hugo build step above. This will
+copy the generated website, to the webserver to be served.
+
+Hit **Save**, and test it out by hitting the **Build Now** link on the
+left. If the build is successfull, check the nginx website to see if
+the website is deployed!
+
+*Note: If it doesn't work, double check all permissions and
+credentials between accounts and servers.*
 
 ## Beter Yet... Pipelines
 
