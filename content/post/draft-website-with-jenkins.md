@@ -189,6 +189,11 @@ credentials between accounts and servers.*
 
 ## Beter Yet... Pipelines
 
+What's better than using Jenkins for auto draft website deployments?
+Using a Jenkins Pipeline:
+
+
+
 ## Conclusion
 
 In the future, could automate publication by deploying when that repo
