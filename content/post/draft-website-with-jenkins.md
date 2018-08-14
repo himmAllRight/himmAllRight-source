@@ -1,6 +1,6 @@
 +++
-title    = "Creating a CI/CD 'Draft' Website with Jenkins"
-date     = "2018-08-11"
+title    = "Creating a CI/CD 'Draft' Website with Jenkins (and Hugo)"
+date     = "2018-08-14"
 author   = "Ryan Himmelwright"
 image    = "img/header-images/atc-back1.jpg"
 caption  = "American Tobacco Campus, Durham NC"
@@ -9,13 +9,13 @@ Comments = "True"
 draft    = "True"
 +++
 
-Over the last few months I have been learning about the open source
-automation server, [Jenkins](https://jenkins.io/). As I have digging
-into it, I have been thinking of ways to improve my home
-environment. One such way has been to utilize Jenkins to automatically
-build and deploy a "drafts" website, so I can stage a new post/website
-change on the home network, before publishing it to
-"production".
+The last few months I have been working more with the open source
+automation server, [Jenkins](https://jenkins.io/). While digging into
+it, I have been thinking of ways to improve my home build
+environment. One idea, was to utilize Jenkins to automatically build
+and deploy a "draft" website, so I can stage new posts/website change
+on my home network, before publishing it to the "production"
+website. Here is how that idea was Instantiated...
 
 <!--more-->
 
@@ -25,20 +25,20 @@ change on the home network, before publishing it to
 src="../../img/posts/draft-website-jenkins/jenkins-logo.png" style="max-width:
 50%; float: left; margin: 0px 12px 0px 0px;" alt="Jenkins Logo" /></a> 
 
-As I have [previously written about](../website-transition-to-hugo/),
-I [currenty generate my website](../website-switched-to-hugo/) using
+I have previously [described](../website-transition-to-hugo/) how my
+website is [currenty generated](../website-switched-to-hugo/), using
 the [Hugo](https://gohugo.io) static website generator. To organize
-this system, I have two git repos: One that contains all the hugo
-source files (where I write content), and one that contains the hugo
+this system, I have two git repos: One that consists of all the hugo
+source files (where I write content), and one that contains the 
 generated static website (that gets deployed to my web host).
 
-When I am writting a post, I use `hugo server -D -F` to live view the
-page in my browser. However, I often want to view the state of all the
-*commited code* in the *repo*, to see what the site would look like if
-I decided to publish a post. So, I created a "drafts" webstite, which
-shows the current state of my website's *source* repo (including draft
-and future posts). If I want to check how a post is looking on my
-phone or any other device, I can just check the draft website after
+When writting a post, I use `hugo server -D -F` to live view the page
+in my browser. However, I occasionally want to view the state of all
+the *commited code* in the *repo*, to see what the site would look
+like if I decided to publish a post. So, I created a "drafts" website,
+which shows the current state of my website's *source* repo (including
+draft and future posts). If I want to check how a post looks on my
+phone, or any other device, I can just open up the draft website after
 pushing my changes.
 
 <a href="../../img/posts/draft-website-jenkins/mr-mime.png"><img
@@ -47,13 +47,14 @@ src="../../img/posts/draft-website-jenkins/mr-mime.png" style="max-width:
 
 ## Jenkins
 
-On my home network, I have created a dedicated Jenkins server
+I had previously created a dedicated Jenkins server on my home network
 (Mr. Mime), using a CentOS7 VM hosted on my home server. However, any
-Jenkins setup should work. To get started, checkout the [Jenkins
-Website](https://jenkins.io/download/), and don't be afraid to browse
-[the documentation](https://jenkins.io/doc/) for help.
+Jenkins setup should work for this project (including a [docker
+container](on my home network)). To get started, checkout the [Jenkins
+Website](https://jenkins.io/download/), and be sure to take advantage
+of the [the documentation](https://jenkins.io/doc/) for help.
 
-*Note: make sure hugo is installed on the Jenkins server, as we need
+*Note: just make sure hugo is installed on the Jenkins server, as we need
 it to generate the website.*
 
 
