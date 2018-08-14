@@ -190,7 +190,16 @@ credentials between accounts and servers.*
 ## Beter Yet... Pipelines
 
 What's better than using Jenkins for auto draft website deployments?
-Using a Jenkins Pipeline:
+Using a [Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/). A
+Pipeline allows the jenkins project to be defined in a file that can
+be source controlled. In fact, the `Jenkinsfile` is often saved right
+in the root directory of a project's git repo. 
+
+While a
+[Jenkinsfile](https://jenkins.io/doc/book/pipeline/jenkinsfile/) might
+be a little more confusing to learn how to setup, it is well worth
+it. For example, the following Jenkinsfile can be used to do
+essentially what we setup in the previous steps:
 
 ```groovy
 pipeline {
@@ -200,7 +209,7 @@ pipeline {
     stages {
 	stage ('build') {
 	    steps{
-		sh 'hugo -D -F -b "http://ryan-drafts.himmelwright.net"'
+		sh 'hugo -D -F -b "http://10.1.1.77"'
 	    }
 	}
 	stage ('deploy') {
@@ -213,8 +222,15 @@ pipeline {
 }
 ```
 
+I'm not going to cover pipelines in this post (although maybe in
+another one...). However, the reader is encouraged to try to setup
+their own using the documentation and example I've provided.
 
 ## Conclusion
 
-In the future, could automate publication by deploying when that repo
-is changed.
+That's about it. While I currently host my website using [github
+pages](https://pages.github.com/), if I ever start self-hosting it
+again, I will definitely automate publishing it using Jenkins as
+well. This has been a *very* basic example of what Jenkins can be used
+for, but I have found it rather usefull when working on the content of
+this website. 
