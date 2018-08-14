@@ -192,6 +192,26 @@ credentials between accounts and servers.*
 What's better than using Jenkins for auto draft website deployments?
 Using a Jenkins Pipeline:
 
+```groovy
+pipeline {
+    agent {
+	label 'mr-mime'
+    }
+    stages {
+	stage ('build') {
+	    steps{
+		sh 'hugo -D -F -b "http://ryan-drafts.himmelwright.net"'
+	    }
+	}
+	stage ('deploy') {
+	    steps{
+		sh 'rsync -r "$WORKSPACE/public/" ryan@ponyta:/usr/share/nginx/html/'
+	    }
+	}
+
+    }
+}
+```
 
 
 ## Conclusion
