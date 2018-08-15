@@ -84,7 +84,7 @@ select **Add deploy key**, and add the public key.
 src="../../img/posts/draft-website-jenkins/nginx.png" style="max-width:
 100%; float: center; margin: 0px 0px 0px 0px;" alt="Default Nginx Page" /></a> 
 
-With Jenkins ready, lets quickly setup the web server before
+With Jenkins ready, let's quickly setup the web server before
 configuring the Jenkins project. Any webserver will do (it just needs
 to serve the generated *static* website content). I used
 [nginx](https://nginx.org/en/) in for setup. After installing, make
@@ -112,7 +112,7 @@ will make file transfers easier when setting up the jenkins project.*
 
 ## Configuring a Project
 
-Lets configure our Jenkins project! Log in to the Jenkins
+Let's configure our Jenkins project! Log in to the Jenkins
 server and click the **New Item** option on the left side bar. Enter a
 name for the project, select the **Freestyle Project** option, and hit
 **OK**.
@@ -136,33 +136,34 @@ alt="Setting Credentials" /></a>
 <div class="caption">Setting Credentials</div>
 
 In the **Source Code Management** section of the configuration, select
-the *Git* option. Then, enter the repo's url (I did ssh url) for the
-*Repository URL* box. For *Credentals*, click *Add* if they aren't
-already setup. Select *SSH Username with private key* for *Kind*,
-`jenkins` for the *Username*. 
+the *Git* option. Then, enter the repo's url for the *Repository URL*
+box (I did the ssh url). For *Credentals*, select *Add* to configure a
+new credential. Select *SSH Username with private key* for *Kind*,
+use `jenkins` for the *Username*.
 
-More options can for the source control can be added here, but this
-should be the minimum setup required. Again, for any of this to work
-public keys for the `jenkins` user on the jenkins server must be
-generated, and added as a deployment key on Github.
+More source control options can be configured, but this should be the
+minimum setup required. *Again, for this to work public keys for the
+`jenkins` user on the jenkins server must be generated, and added as a
+deployment key on Github.*
 
 #### Build Trigger
 
-Under the **Build Triggers** section, select *Poll SCM*. Without adding
-any schedule parameters, it will just pull each time it detect a new
-commit. This is what we want.
+Under the **Build Triggers** section, select *Poll SCM*. Without
+adding any schedule parameters, it will trigger each time a new commit
+is detected. This is what we want.
 
 #### Build Step
 
 In the **Build** section, click **Add build step**, and select
 **Execute shell**. This is where we can add the shell commands to
-build the website with hugo.
+build the website with hugo. Add the following command to the box
+(don't forget to change the url):
 
 ```bash
 hugo -D -F -b "http://10.1.1.77" -d public
 ```
 
-The `-D` tells hugo to include all draft posts, while the `-F` flag
+The `-D` flag tells hugo to include all draft posts, while the `-F` flag
 has it include all posts with a future date. The `-b` flag sets the
 url for the generated website. This sould the be url or ip address of
 the nginx server setup previously. Lastly, the `-d` flag tells hugo to
@@ -171,22 +172,23 @@ will be useful to know when deploying the build.
 
 #### Deploy to Webserver
 
-Our deployment step will be another shell command, so I've actually
-added it as another build step. So, add another **Execute shell**. I
-used rsync to copy the build files to the nginx webserver:
+For deployment, I used rsync to copy the build files to the nginx
+webserver. This step will be another shell command, so I've actually
+added it as another "build" step. Add another **Execute shell** and
+paste the following command inside the text box (again, changing the url):
 
 ```bash
 rsync -r "$WORKSPACE/public/" ryan@10.1.1.77:/usr/share/nginx/html/
 ```
 
-I used the jenkins `$WORKSPACE` variable to get the location of this
+I used the jenkins `$WORKSPACE` variable to get the location of the
 build, and was able to append the `public` directory to that, since we
 defined it with the `-d` flag in the hugo build step above. This will
-copy the generated website, to the webserver to be served.
+copy the generated website, to the webserver.
 
-Hit **Save**, and test it out by hitting the **Build Now** link on the
+Hit **Save**, and test it out by clicking the **Build Now** link on the
 left. If the build is successfull, check the nginx website to see if
-the website is deployed!
+the website was deployed!
 
 *Note: If it doesn't work, double check all permissions and
 credentials between accounts and servers.*
