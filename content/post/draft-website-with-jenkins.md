@@ -61,22 +61,21 @@ it to generate the website.*
 ### Github Integration
 
 #### Jenkins Service
-My website is currently hosted on github, so we need to configure that
-project to work with our Jenkins server. To do that, go to the
-project's github page, and then click on **Settings** ->
-**Integrations & services**. Click the **Add service** drop-down and
-select *Jenkins (Git Plugin)*. Then, add the Jenkins server url
-(assuming the server is accessable from the internet. If not, hosting
-the jenkins server on something like [Digital
-Ocean](http://digitalocean.com) might be a solution). Lastly, make
-sure the **Activate** box is selected, and click the **Add Service**
-button.
+My website repo is hosted on github, so we need to configure it to
+work with our Jenkins server. To do that, go to the project's github
+page, and navigate through **Settings** -> **Integrations &
+services**. Click the **Add service** drop-down and select *Jenkins
+(Git Plugin)*. Next, add the Jenkins server url (assuming the server
+is accessable from the internet. If not, hosting the jenkins server on
+something like [Digital Ocean](http://digitalocean.com) might be an
+easy solution). Lastly, make sure the **Activate** box is selected,
+and click the **Add Service** button.
 
 #### SSH Keys
 
 While on the project's Github page, make sure that the Jenkins
-server's ssh keys are added to the project. To add them, click on
-**Deploy Keys**, again under the project's **Settings** tab. Then
+server's ssh keys are added to the project. To add them, navigate to
+the **Deploy Keys** page (under the project's **Settings** tab). Then
 select **Add deploy key**, and add the public key.
 
 ## A Nginx Server
@@ -85,12 +84,12 @@ select **Add deploy key**, and add the public key.
 src="../../img/posts/draft-website-jenkins/nginx.png" style="max-width:
 100%; float: center; margin: 0px 0px 0px 0px;" alt="Default Nginx Page" /></a> 
 
-With Jenkins ready, lets setup the web server before configuring the
-Jenkins project. Any webserver will do, but I used
-[nginx](https://nginx.org/en/) in my setup. It just needs to be able
-to serve our generated *static* website. Just make sure it's installed
-and running, and know *where* the files need to go. If using nginx, it
-can be installed, enabled, and started with (on Ubuntu):
+With Jenkins ready, lets quickly setup the web server before
+configuring the Jenkins project. Any webserver will do (it just needs
+to serve the generated *static* website content). I used
+[nginx](https://nginx.org/en/) in for setup. After installing, make
+sure it is running. To install and check the status of nginx on an
+Ubuntu System:
 
 ```bash 
 ## Install
@@ -98,10 +97,14 @@ sudo apt install -y nginx
 
 ## Check it is running
 sudo systemctl status nginx
+
+## Optional: Ensure it is enabled to start up after reboots
+sudo systemctl enable nginx
 ```
 
-After installing, nginx will by default serve content at
-`/user/share/nginx/html/`, so remember that location.
+With the webserver running, we need to know *where* the website files
+need to go. Nginx will by default serve content at
+`/user/share/nginx/html/`, so remember that location for later...
 
 *Note: Don't forget to add the `jenkins` user's ssh key from the
 jenkins server to the `authorized_keys` file of the nginx server. This
