@@ -31,13 +31,6 @@ PygmentsStyle = "monokai"
 [[params.social]]
   title = "linkedin"
   url = "https://www.linkedin.com/in/ryan-himmelwright-b3891774/"
-[[params.social]]
-  title = "instagram"
-  url = "https://www.instagram.com/himmelwr/"
-[[params.social]]
-  title = "twitter"
-  url = "https://twitter.com/himmAllRight17"
-
 
 [[menu.main]]
   name = "home"
