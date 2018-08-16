@@ -38,6 +38,11 @@ PygmentsStyle = "monokai"
   weight = -200
 
 [[menu.main]]
+  name = "tags"
+  url = "/tags"
+  weight = -100
+
+[[menu.main]]
   name = "Archives"
   url = "/post/"
   weight = -80
