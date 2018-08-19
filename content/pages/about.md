@@ -46,7 +46,7 @@ Feel free to contact me using any of the methods below.
 In addition to the contact icons at the bottom of the website, I can
 be reached via these additional methods:
 
-* Email: [ryan.himmelwright@gmail.com](mailto:ryan.himmelwright@gmail.com)
+* Email: [ryan@himmelwright.net](mailto:ryan@himmelwright.net)
 * IRC: I'm often on geekshed and freenode channels as `himmAllRight`
 * Telegram: `@himmAllRight`
 * Wire: `@himmallright`
