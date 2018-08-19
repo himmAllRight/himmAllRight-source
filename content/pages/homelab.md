@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2018-07-04
+date: 2018-08-19
 type: homelab
 layout: homelab-page
 menu: 
@@ -31,7 +31,7 @@ slowly putting my space together. So for now ... don't mind the wires
 T470 Thinkpad
 Intel i5-7200u [2.5 Ghz (3.1 Ghz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
-500 GB Samsung EVO SSD
+500 GB Samsung EVO SSD (LUKS encrypted and using ZFS on the Data partition)
 14" 1920x1080 IPS Display 
 Fedora 28
 ```
@@ -56,7 +56,7 @@ Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
 120 GB SSD
 12.5" HD LED 1366x768 Display
 9-Cell Battery
-Ubuntu Mate 18.04
+Ubuntu Mate/Kubuntu 18.04
 ```
 
 ### Rebecca (Wife)
