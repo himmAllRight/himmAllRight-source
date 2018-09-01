@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2018-08-19
+date: 2018-09-01
 type: homelab
 layout: homelab-page
 menu: 
@@ -38,7 +38,7 @@ Fedora 28
 ##### Periphery
 ```
 Thinkpad Ultra Dock 40A2
-2 x 23.6" ASUS 1920x1080 Monitors
+LG UD4379-b, 43" IPS UHD (3840x2160 px) Monitor
 Happy Hacking Keyboard Pro2 
 Audioengine A2+ Speakers & Stands
 Bose AE2 Headphones
