@@ -6,7 +6,7 @@ layout: homelab-page
 menu: 
   main:
     weight: -100
-image: img/homelab/durham-desk3.jpg
+image: img/homelab/new_monitor1.jpg
 ---
 
 This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations).
@@ -19,10 +19,10 @@ Having recently moved to Durham NC, I built a new standing desk and am
 slowly putting my space together. So for now ... don't mind the wires
 :P. I'll try to keep updating this page as I progress.
 
-<a href="../../img/homelab/durham-desk1.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/durham-desk1.jpg" width=100%></a>
+<a href="../../img/homelab/new_monitor2.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/new_monitor2.jpg" width=100%></a>
 <div class="caption">My Home Desk</div>
 
-<a href="../../img/homelab/durham-desk2.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/durham-desk2.jpg" width=100%></a>
+<a href="../../img/homelab/new_monitor3.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/new_monitor3.jpg" width=100%></a>
 <div class="caption">My Home Workstation</div>
 
 <a name="kadabra"></a>
