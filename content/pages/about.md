@@ -1,6 +1,6 @@
 ---
 title: About
-date: 2018-06-18T08:00:00-04:00
+date: 2018-09-06T06:41:00-04:00
 type: about
 menu : 
   main:
@@ -11,7 +11,7 @@ image: img/header-images/park-books.jpg
 
 <img src="../../img/notch-avatar.jpg" style="width: 45%; float: left; margin: 10px 10px 10px 10px;"/>
 
-I am a 26 year-old software developer working at a Walpole, MA based
+I am a 27 year-old software developer working at a Walpole, MA based
 company (although I recently moved to Durham, NC), that heavily
 utilizes [Allegro Common
 Lisp](http://franz.com/products/allegro-common-lisp/) for its
