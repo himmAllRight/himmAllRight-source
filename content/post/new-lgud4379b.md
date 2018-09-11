@@ -2,19 +2,22 @@
 title  = "My New LG-UD4329b Monitor"
 date   = "2018-09-20"
 author = "Ryan Himmelwright"
-image  = "img/header-images/hhkb-wood.jpg"
+image  = "img/homelab/new_monitor4.jpg"
 tags   = ["Hardware", "Monitors", "Homelab",]
 draft  = true
 Comments = "True"
 +++
 
-After years of using a Happy Hacking Keyboard Lite, I have *finally* decided to splurge on a Happy Hacking Professional 2 keyboard. And I love it.
+After years of weilding dual monitors, I have dicided to upgrade to using a single, but better, monitor.
 
 <!--more-->
 
-*Note: I have been slowly chipping away at this post for the last few months. I have been very busy, but I should be able to get back into the swing of writing again.*
+## From two, to one
+<a href="../../img/posts/new-lgud4379b-monitor/pre-college-monitors.jpg"><img alt="Pre College monitors" src="../../img/posts/new-lgud4379b-monitor/pre-college-monitors.jpg" style="max-width: 100%;"/></a>
+<div class="caption">My monitor setup right before moving to college</div>
 
-## The Long Back and Forth...
+
+## Ultrawide or *Large* UHD?
 
 ## Deciding on the 43" UHD
 
