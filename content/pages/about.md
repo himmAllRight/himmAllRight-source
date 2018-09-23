@@ -1,6 +1,6 @@
 ---
 title: About
-date: 2018-09-06T06:41:00-04:00
+date: 2018-09-23T07:14:00-04:00
 type: about
 menu : 
   main:
@@ -23,21 +23,20 @@ Outside of work, I am an enthusiastic Linux user that loves learning
 about computers, programming languages (especially functional ones),
 and open source technologies. I majored in Neuroscience with a minor
 in Computer Science at [Lafayette
-College](https://www.lafayette.edu/), but am mostly a self-taught
-learner and continue to study computer science and IT topics by
-working on [personal
-projects](https://github.com/himmAllRight?tab=repositories), taking
-courses, and maintaining my
+College](https://www.lafayette.edu/), but am a self-taught learner and
+continue to study computer science and IT topics by working on
+[personal projects](https://github.com/himmAllRight?tab=repositories),
+taking courses, and maintaining my
 [homelab](http://ryan.himmelwright.net/pages/homelab/). This website
 exists to help document the personal projects I work on, and what I've
 learned.
 
 Beyond technology, I love music, writing, the outdoors, and swimming
 (I competitively swam from the age of 8, through college). I am
-married to my wife Rebecca, an amazing first year Duke medical
-resident ([Anesthesiology](https://anesthesia.mc.duke.edu/)). We have
-been together for almost 12 years and were married on September 17th,
-2016 (the day before our 10th anniversary).
+married to my wife Rebecca, a first year Duke medical resident
+([Anesthesiology](https://anesthesia.mc.duke.edu/)). We have been
+together for 12 years and were married on September 17th, 2016 (the
+day before our 10th anniversary).
 
 Feel free to contact me using any of the methods below.
 
