@@ -44,17 +44,40 @@ very usefull when writting code or reports.
 <div class="caption">When using two monitors, I always had to have a primary and secondary.</div>
 
 While I like having the *screen realistate* of two monitors, I was
-never able optimally use them because of the bezels. 
+never able to optimally use them because of the bezels. Over time, I
+began to notice that while working, I would natually shift over and
+use one monitor as a *primary* display, and the other as a *secondary*
+display. This was okay for some tasks, but it usually just meant that
+I just used the primary monitor, and *half* of the secondary one,
+because it was too hard to see far end of the screen. 
 
--- Talk about how I basically had the choice of using a primary +
-secondary setup, or to center them (which was better with portrait),
-but it meant my optimal viewing was stairing at... two black pieces of
-plastic...
+This issue was *slightly* better when using my displays in portrait
+mode, but this wasn't always ideal when connecting to remote machiens,
+or VMs. It also still didn't solve the main issue, that when I looked
+at the screens in my natural position (head centered, looking straigt
+forward)... I saw two pieces of black plastic. I wanted to see my
+*primary* window straigt in front of me, and then have some auxilary
+space on either side for documentation or terminal windows. I wanted a
+wide screen display.
 
--- With the rise of ultrawide and large form UHD monitors (and fall of
-their prices)... I can get around this.
+## Ultrawide or *Large* 16:9 UHD?
 
-## Ultrawide or *Large* UHD?
+Luckily over the past few years, the once *extremely* expensive
+ultrawide and large UHD monitors have started to come down in
+price. After following the market for a long time, I narrowed my
+decision to my favorite choice in each category: The [Dell
+u3415w](https://www.dell.com/en-us/shop/dell-ultrasharp-34-curved-ultrawide-monitor-u3415w/apd/210-adtr/monitors-monitor-accessories)
+and the [LG ud4379b](https://www.lg.com/us/monitors/lg-43UD79-B-4k-uhd-led-monitor).
+
+<a href="../../img/posts/new-lgud4379b-monitor/dellu3415w.jpg"><img alt="Dell u3415w" src="../../img/posts/new-lgud4379b-monitor/dellu3415w.jpg" style="max-width: 100%;"/></a>
+<div class="caption">The Dell u3415w 34" 3440x1440p Ultra Wide Monitor </div>
+
+The 34" Dell u3415w is...
+
+<a href="../../img/posts/new-lgud4379b-monitor/ud4379b.jpg"><img alt="Dell u3415w" src="../../img/posts/new-lgud4379b-monitor/ud4379b.jpg" style="max-width: 100%;"/></a>
+<div class="caption">The LG ud4379b 42.5" 3440x2160p Monitor</div>
+
+The massive 43" LG...
 
 ## Deciding on the 43" UHD
 
