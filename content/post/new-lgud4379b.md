@@ -30,7 +30,7 @@ at the far end of my desk, with an
 it. When I built my desktop before moving to college (picture above), I
 also purchased a second monitor for it.
 
-<a href="../../img/posts/new-lgud4379b-monitor/college-desk.jpg"><img alt="College Desk" src="../../img/posts/new-lgud4379b-monitor/college-desk.jpg" style="max-width: 100%;"/></a>
+<a href="../../img/posts/new-lgud4379b-monitor/college-desk.jpg"><img alt="College Desk" src="../../img/posts/new-lgud4379b-monitor/college-desk.jpg" style="max-width: 100%; padding: 10px;"/></a>
 <div class="caption">My desk duing my senior year of collage</div>
 
 Throught college, as I started to explore Linux and programming more,
@@ -40,7 +40,7 @@ match when paired. It gave me much more vertical realestate that was
 very usefull when writting code or reports.
 
 ## Why go from two, to one?
-<a href="../../img/homelab/kadabra1.jpg"><img alt="MA Desk" src="../../img/homelab/kadabra1.jpg" style="max-width: 100%;"/></a>
+<a href="../../img/homelab/kadabra1.jpg"><img alt="MA Desk" src="../../img/homelab/kadabra1.jpg" style="max-width: 100%; padding: 10px;"/></a>
 <div class="caption">When using two monitors, I always had to have a primary and secondary.</div>
 
 While I like having the *screen realistate* of two monitors, I was
@@ -72,7 +72,22 @@ and the [LG ud4379b](https://www.lg.com/us/monitors/lg-43UD79-B-4k-uhd-led-monit
 <a href="../../img/posts/new-lgud4379b-monitor/dellu3415w.jpg"><img alt="Dell u3415w" src="../../img/posts/new-lgud4379b-monitor/dellu3415w.jpg" style="max-width: 100%;"/></a>
 <div class="caption">The Dell u3415w 34" 3440x1440p Ultra Wide Monitor </div>
 
-The 34" Dell u3415w is...
+The Dell u3415w is the slightly older (compared to the
+[u34**17**w](https://www.dell.com/ed/business/p/dell-u3417w-monitor/pd))
+34" ultrawide monitor offering from Dell. It has an 3440x1440 60 Hz,
+slightly-curved, IPS panel sitting on a solid but adjustable monitor
+stand. I liked it compared to other ultrawides because it could be
+found for a reasonable price, and had a very professional build
+quality.
+
+Based on my reasons listed above, an ultrawide (1440p ones... not
+1080p) would fit my mostly programmer use-case very well. Being a
+single monitor, I could position it directly in front of me, with my
+main code/content centered. The 3440px wide resolution would also
+allow enough horizontal space to have a full webpage of documentation,
+and several terminal windows open on either side of the main
+display. Lastly, the 1440px vertical resolution would be an adaquit
+improvement from my *"starting to feel very tight"*, 1080p monitors.
 
 <a href="../../img/posts/new-lgud4379b-monitor/ud4379b.jpg"><img alt="Dell u3415w" src="../../img/posts/new-lgud4379b-monitor/ud4379b.jpg" style="max-width: 100%;"/></a>
 <div class="caption">The LG ud4379b 42.5" 3440x2160p Monitor</div>
