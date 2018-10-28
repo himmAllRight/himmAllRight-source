@@ -141,23 +141,23 @@ luckily looked like all the components were fine.
 
 ## What I like
 
-#### IPS Display
+- **IPS Display** -
 
-#### Screen Realistate
+- **Screen Realistate** -
 
-#### Single Monitor, No Bezels
+- **Single Monitor, No Bezels** -
 
-#### Flexability, multiple inputs
+- **Flexability, multiple inputs** -
 
 
 
 ## What I don't like
 
-#### Edge Shadowing
+- **Edge Shadowing** -
 
-#### Input Switching lag?
+- **Input Switching lag?** -
 
-#### Gaming?
+- **Gaming?** -
 
-## Conclusion
+- **Conclusion** -
 
