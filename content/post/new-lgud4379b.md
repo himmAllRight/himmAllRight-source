@@ -141,9 +141,23 @@ luckily looked like all the components were fine.
 
 ## What I like
 
-- **IPS Display** -
+- **Screen Realistate** - The most obvious Pro using a monitor at this
+  size and resolution... is the screen realistate. As explained above,
+  it's twice the size of my old, dual 1080p monitor setup. With this
+  space, I can easily have several code files, documentation, a few
+  terminals, a chat window, and even a video opened on my single
+  screen as I work. 
 
-- **Screen Realistate** -
+- **IPS Display** - Many people might assume that the driving factor
+  pushing me to *finally* update was my desire for more screen
+  resolution. While that was *part* of my goal... what really
+  motivated me was my desire to switched to an IPS display on my main
+  setup. After almost a year using my T470's IPS display (which is
+  *not a good IPS panel*, mind you). As someone who spends a large
+  percentage of their computing time in terminals and IDEs, an IPS
+  panel really helps text and colors pop, because the darks look *so*
+  much better. It turns out, this panel is actually quite good for
+  it's price, and I am very happy with it.
 
 - **Single Monitor, No Bezels** -
 
