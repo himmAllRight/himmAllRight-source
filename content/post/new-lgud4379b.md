@@ -141,6 +141,9 @@ luckily looked like all the components were fine.
 
 ## What I like
 
+  <a href="../../img/posts/new-lgud4379b-monitor/monitor-working.png"><img alt="Monitor Working" src="../../img/posts/new-lgud4379b-monitor/monitor-working.png" style="max-width: 100%;"/></a>
+<div class="caption">I can have my main content front and center, with other windows on the sides</div>
+
 - **Screen Resolution** - The most obvious Pro using a monitor at this
   size and resolution... is the screen real estate. As explained above,
   it's twice the size of my old, dual 1080p monitor setup. With this
@@ -158,6 +161,7 @@ luckily looked like all the components were fine.
   panel really helps text and colors pop, because the darks look *so*
   much better. It turns out, this panel is actually quite good for
   it's price, and I am very happy with it.
+  
 
 - **Single Monitor, No (center) Bezels** - As explained earlier in this
   post, I like that this is is a *single* monitor. This means I am no
