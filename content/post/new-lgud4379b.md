@@ -141,8 +141,8 @@ luckily looked like all the components were fine.
 
 ## What I like
 
-- **Screen Realistate** - The most obvious Pro using a monitor at this
-  size and resolution... is the screen realistate. As explained above,
+- **Screen Resolution** - The most obvious Pro using a monitor at this
+  size and resolution... is the screen real estate. As explained above,
   it's twice the size of my old, dual 1080p monitor setup. With this
   space, I can easily have several code files, documentation, a few
   terminals, a chat window, and even a video opened on my single
@@ -159,9 +159,26 @@ luckily looked like all the components were fine.
   much better. It turns out, this panel is actually quite good for
   it's price, and I am very happy with it.
 
-- **Single Monitor, No Bezels** -
+- **Single Monitor, No (center) Bezels** - As explained earlier in this
+  post, I like that this is is a *single* monitor. This means I am no
+  longer needing to twist my head back and forth, or forced to stare
+  at bezels. I can looks straight ahead and see my main content, with
+  my "auxiliary" windows view-able off in my periphery.
 
-- **Flexability, multiple inputs** -
+- **Flexability, multiple inputs** - Lastly, I enjot the multiple
+  inputs, and excellent PIP system of this monitor. Combined with
+  something like [Synergy](https://symless.com/synergy), I can easily
+  use this one display with several devices at a time. This is great
+  when working with more than one device, or watching content on
+  something like a chromecast stick, while still working on the
+  computer. It really is the flexability of having 4 monitors, but in
+  a single package.
+  
+- **Speakers** - They aren't *amazing*, and as such I don't use them
+  too often, but for "monitor" speakers, they really aren't half
+  bad. They're what you'd expect from a TV. However, this means that
+  if I were to use something like a media stick, the build-in speaker
+  are at least acceptable enough for such a device.
 
 
 
