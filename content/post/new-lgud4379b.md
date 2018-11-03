@@ -188,11 +188,20 @@ luckily looked like all the components were fine.
 
 ## What I don't like
 
-- **Edge Shadowing** -
+- **Edge Shadowing** - The one issue that myself
+  [and](https://youtu.be/yA6hL3inqRc?t=250)
+  [others](https://youtu.be/3BSaPRHrA_U?t=667) have experinced with
+  this monitor is a sort of "edge shadowing". This is appently
+  something that is sort of common on monitors this massive, and it's
+  really hard to rengineer around. If I sit back far enough from the
+  display, you can't see it anymore.
 
-- **Input Switching lag?** -
+- **Input Switching Lag?** -
+
+- **Corners Out of View** - 
 
 - **Gaming?** -
 
-- **Conclusion** -
+
+## Conclusion
 
