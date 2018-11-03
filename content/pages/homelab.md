@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2018-09-01
+date: 2018-11-03
 type: homelab
 layout: homelab-page
 menu: 
@@ -29,22 +29,12 @@ slowly putting my space together. So for now ... don't mind the wires
 #### - Kadabra (Main Laptop)
 ```
 T470 Thinkpad
-Intel i5-7200u [2.5 Ghz (3.1 Ghz Turbo), 2 Cores, 4 Threads]
+Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
 500 GB Samsung EVO SSD (LUKS encrypted and using ZFS on the Data partition)
-14" 1920x1080 IPS Display 
+14" 1920x1080 IPS Display
+Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
 Fedora 28
-```
-##### Periphery
-```
-Thinkpad Ultra Dock 40A2
-LG UD4379-b, 43" IPS UHD (3840x2160 px) Monitor
-Happy Hacking Keyboard Pro2 
-Audioengine A2+ Speakers & Stands
-Bose AE2 Headphones
-Logitech HD Pro Webcam c920 Widescreen
-Blue Yeti Microphone - Backout Edition
-Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
 <a name="x230"></a>
@@ -56,14 +46,38 @@ Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
 120 GB SSD
 12.5" HD LED 1366x768 Display
 9-Cell Battery
+Thinkpad Dock (to connect to periphery devices below)
 Ubuntu Mate/Kubuntu 18.04
+```
+
+<a name="periphery"></a>
+##### Periphery
+```
+LG UD4379-b, 43" IPS UHD (3840x2160 px) Monitor
+Happy Hacking Keyboard Pro2 
+Audioengine A2+ Speakers & Stands
+Bose AE2 Headphones
+Logitech HD Pro Webcam c920 Widescreen
+Blue Yeti Microphone - Backout Edition
+Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
 ### Rebecca (Wife)
 
-#### - Bellsprout (2014)
+### - Weepinbell
 ```
-Macbook Air
+Thinkpad T450s
+Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
+12 GB RAM
+256 GB SSD
+14" 1600x900 LED Display
+6-Cell Battery
+Elementary OS 5 (Juno)
+```
+
+#### - Bellsprout (Dead)
+```
+Macbook Air (2014)
 Intel i5 (1.4 GHz (2.7 GHz Turbo), 3M Cache, 2 Cores, 2 Threads) ?
 4 GB RAM
 128 GB PCIe Flash HD
