@@ -162,6 +162,8 @@ luckily looked like all the components were fine.
   much better. It turns out, this panel is actually quite good for
   it's price, and I am very happy with it.
   
+<a href="../../img/posts/new-lgud4379b-monitor/new-monitor.jpg"><img alt="Monitor Shading" src="../../img/posts/new-lgud4379b-monitor/new-monitor.jpg" style="max-width: 100%;"/></a>
+<div class="caption">When working, I can look straight at a single display and still have enough room.</div>
 
 - **Single Monitor, No (center) Bezels** - As explained earlier in this
   post, I like that this is is a *single* monitor. This means I am no
@@ -188,7 +190,7 @@ luckily looked like all the components were fine.
 
 ## What I don't like
 
-<a href="../../img/posts/new-lgud4379b-monitor/monitor_shading.png"><img alt="Monitor Shading" src="../../img/posts/new-lgud4379b-monitor/monitor_shading.png" style="max-width: 100%;"/></a>
+<a href="../../img/posts/new-lgud4379b-monitor/monitor-shading.png"><img alt="Monitor Shading" src="../../img/posts/new-lgud4379b-monitor/monitor-shading.png" style="max-width: 100%;"/></a>
 <div class="caption">Viewed from the center, the monitor edges have shadowing.</div>
 
 - **Edge Shadowing** - The one issue that myself
@@ -209,3 +211,6 @@ luckily looked like all the components were fine.
 
 ## Conclusion
 
+
+<a href="../../img/posts/new-lgud4379b-monitor/new-monitor-desk.jpg"><img alt="Monitor Shading" src="../../img/posts/new-lgud4379b-monitor/new-monitor-desk.jpg" style="max-width: 100%;"/></a>
+<div class="caption">New monitor on my desk.</div>
