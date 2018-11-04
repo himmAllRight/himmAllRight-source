@@ -141,7 +141,7 @@ luckily looked like all the components were fine.
 
 ## What I like
 
-  <a href="../../img/posts/new-lgud4379b-monitor/monitor-working.png"><img alt="Monitor Working" src="../../img/posts/new-lgud4379b-monitor/monitor-working.png" style="max-width: 100%;"/></a>
+<a href="../../img/posts/new-lgud4379b-monitor/monitor-working.png"><img alt="Monitor Working" src="../../img/posts/new-lgud4379b-monitor/monitor-working.png" style="max-width: 100%;"/></a>
 <div class="caption">I can have my main content front and center, with other windows on the sides</div>
 
 - **Screen Resolution** - The most obvious Pro using a monitor at this
@@ -188,6 +188,9 @@ luckily looked like all the components were fine.
 
 ## What I don't like
 
+<a href="../../img/posts/new-lgud4379b-monitor/monitor_shading.png"><img alt="Monitor Shading" src="../../img/posts/new-lgud4379b-monitor/monitor_shading.png" style="max-width: 100%;"/></a>
+<div class="caption">Viewed from the center, the monitor edges have shadowing.</div>
+
 - **Edge Shadowing** - The one issue that myself
   [and](https://youtu.be/yA6hL3inqRc?t=250)
   [others](https://youtu.be/3BSaPRHrA_U?t=667) have experinced with
@@ -196,7 +199,8 @@ luckily looked like all the components were fine.
   really hard to rengineer around. If I sit back far enough from the
   display, you can't see it anymore.
 
-- **Input Switching Lag?** -
+- **Input Switching Lag?** - While this is more of a critique of
+  *monitors* in general, one thing I wish was a bitt better 
 
 - **Corners Out of View** - 
 
