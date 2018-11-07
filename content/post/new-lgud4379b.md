@@ -1,8 +1,8 @@
 +++
-title  = "My New LG-UD4329b Monitor"
+title  = "Monitor Selection: My New LG-UD4329b"
 date   = "2018-09-20"
 author = "Ryan Himmelwright"
-image  = "img/homelab/new_monitor4.jpg"
+image  = "img/homelab/new_monitor2.jpg"
 tags   = ["Hardware", "Monitors", "Homelab",]
 draft  = true
 Comments = "True"
@@ -141,50 +141,50 @@ luckily looked like all the components were fine.
 
 ## What I like
 
-    <a href="../../img/posts/new-lgud4379b-monitor/monitor-working.png"><img alt="Monitor Working" src="../../img/posts/new-lgud4379b-monitor/monitor-working.png" style="max-width: 100%;"/></a>
+<a href="../../img/posts/new-lgud4379b-monitor/monitor-working.png"><img alt="Monitor Working" src="../../img/posts/new-lgud4379b-monitor/monitor-working.png" style="max-width: 100%;"/></a>
 <div class="caption">I can have my main content front and center, with other windows on the sides</div>
 
 - **Screen Resolution** - The most obvious Pro using a monitor at this
-size and resolution... is the screen real estate. As explained above,
-it's twice the size of my old, dual 1080p monitor setup. With this
-space, I can easily have several code files, documentation, a few
-terminals, a chat window, and even a video opened on my single
-screen as I work.
+    size and resolution... is the screen real estate. As explained above,
+    it's twice the size of my old, dual 1080p monitor setup. With this
+    space, I can easily have several code files, documentation, a few
+    terminals, a chat window, and even a video opened on my single
+    screen as I work.
 
 - **IPS Display** - Many people might assume that the driving factor
-pushing me to *finally* update was my desire for more screen
-resolution. While that was *part* of my goal... what really
-motivated me was my desire to switched to an IPS display on my main
-setup. After almost a year using my T470's IPS display (which is
-*not a good IPS panel*, mind you). As someone who spends a large
-percentage of their computing time in terminals and IDEs, an IPS
-panel really helps text and colors pop, because the darks look *so*
-much better. It turns out, this panel is actually quite good for
-it's price, and I am very happy with it.
+    pushing me to *finally* update was my desire for more screen
+    resolution. While that was *part* of my goal... what really
+    motivated me was my desire to switched to an IPS display on my main
+    setup. After almost a year using my T470's IPS display (which is
+    *not a good IPS panel*, mind you). As someone who spends a large
+    percentage of their computing time in terminals and IDEs, an IPS
+    panel really helps text and colors pop, because the darks look *so*
+    much better. It turns out, this panel is actually quite good for
+    it's price, and I am very happy with it.
 
-<a href="../../img/posts/new-lgud4379b-monitor/new-monitor.jpg"><img alt="Monitor Shading" src="../../img/posts/new-lgud4379b-monitor/new-monitor.jpg" style="max-width: 100%;"/></a>
-<div class="caption">When working, I can look straight at a single display and still have enough room.</div>
+    <a href="../../img/posts/new-lgud4379b-monitor/new-monitor.jpg"><img alt="Monitor Shading" src="../../img/posts/new-lgud4379b-monitor/new-monitor.jpg" style="max-width: 100%;"/></a>
+    <div class="caption">When working, I can look straight at a single display and still have enough room.</div>
 
 - **Single Monitor, No (center) Bezels** - As explained earlier in this
-post, I like that this is is a *single* monitor. This means I am no
-longer needing to twist my head back and forth, or forced to stare
-at bezels. I can looks straight ahead and see my main content, with
-my "auxiliary" windows view-able off in my periphery.
+    post, I like that this is is a *single* monitor. This means I am no
+    longer needing to twist my head back and forth, or forced to stare
+    at bezels. I can looks straight ahead and see my main content, with
+    my "auxiliary" windows view-able off in my periphery.
 
 - **Flexability, multiple inputs** - Lastly, I enjot the multiple
-inputs, and excellent PIP system of this monitor. Combined with
-something like [Synergy](https://symless.com/synergy), I can easily
-use this one display with several devices at a time. This is great
-when working with more than one device, or watching content on
-something like a chromecast stick, while still working on the
-computer. It really is the flexability of having 4 monitors, but in
-a single package.
+    inputs, and excellent PIP system of this monitor. Combined with
+    something like [Synergy](https://symless.com/synergy), I can easily
+    use this one display with several devices at a time. This is great
+    when working with more than one device, or watching content on
+    something like a chromecast stick, while still working on the
+    computer. It really is the flexability of having 4 monitors, but in
+    a single package.
 
 - **Speakers** - They aren't *amazing*, and as such I don't use them
-too often, but for "monitor" speakers, they really aren't half
-bad. They're what you'd expect from a TV. However, this means that
-if I were to use something like a media stick, the build-in speaker
-are at least acceptable enough for such a device.
+    too often, but for "monitor" speakers, they really aren't half
+    bad. They're what you'd expect from a TV. However, this means that
+    if I were to use something like a media stick, the build-in speaker
+    are at least acceptable enough for such a device.
 
 
 
@@ -194,19 +194,33 @@ are at least acceptable enough for such a device.
 <div class="caption">Viewed from the center, the monitor edges have shadowing.</div>
 
 - **Edge Shadowing** - The one issue that myself
-[and](https://youtu.be/yA6hL3inqRc?t=250)
-[others](https://youtu.be/3BSaPRHrA_U?t=667) have experinced with
-this monitor is a sort of "edge shadowing". This is appently
-something that is sort of common on monitors this massive, and it's
-really hard to rengineer around. If I sit back far enough from the
-display, you can't see it anymore.
+    [and](https://youtu.be/yA6hL3inqRc?t=250)
+    [others](https://youtu.be/3BSaPRHrA_U?t=667) have experience with
+    this monitor is a sort of "edge shadowing". This is apparently
+    something that is sort of common on monitors this massive, and it's
+    really hard to engineer around. If I sit back far enough from the
+    display, you can't see it anymore.
 
 - **Input Switching Lag?** - While this is more of a critique of
-*monitors* in general, one thing I wish was a bitt better
+    *monitors* in general, one thing I wish was a bit better was the input
+    switching. Having so many inputs, it can get confusing remembering which one is
+    attached to which device, or trying to quickly configure a 2x2 multi-input
+    layout. Having to *wait* for each device to connect when flipping through all
+    the inputs makes it that much more frustrating (and disappointing when it's the
+    wrong input...).
 
-- **Corners Out of View** - Because it is such a large display, one issue I
-    sometimes have is that the outside corners are out of my field of v
+- **Corners Out of View** - Being such a large display, one issue I
+    sometimes have is that the outside corners are out of my field of view.
+    I mostly experience this issue by sometimes missing notification pop-ups
+    that I *want* to see. On the flip-side, notifications don't seem to
+    distract me as much now when I'm trying to focus :P.
 
+## Conclusion
 
 <a href="../../img/posts/new-lgud4379b-monitor/new-monitor-desk.jpg"><img alt="Monitor Shading" src="../../img/posts/new-lgud4379b-monitor/new-monitor-desk.jpg" style="max-width: 100%;"/></a>
 <div class="caption">New monitor on my desk.</div>
+
+In conclusion, I an *very* happy with my new monitor. It fits all of the
+criteria I had, and works for my use-case perfectly. While I wouldn't
+recommend it for a pure gaming machine, it might be one of the best deal
+*productivity* monitors out there.
