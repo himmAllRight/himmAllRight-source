@@ -18,8 +18,8 @@ monitor. After two years of debating, I have finally made my choice.
 <a href="../../img/posts/new-lgud4379b-monitor/pre-college-monitors.jpg"><img alt="Pre College monitors" src="../../img/posts/new-lgud4379b-monitor/pre-college-monitors.jpg" style="max-width: 100%;"/></a>
 <div class="caption">My monitor setup right before moving to college</div>
 
-Half way through high school, I purchased my first laptop (it was also the
-first computer I installed Linux on. I had a special edition model, but it was
+Half way through high school, I purchased my first laptop (it also happens to
+be the first computer I installed Linux on. I had a special edition model, but it was
 very similar to [this
 one](https://www.cnet.com/products/hp-pavilion-dv6000/specs/)). The laptop was
 replacing an old standard E-machines desktop, so I kept the spare monitor to
@@ -27,16 +27,16 @@ use with the laptop. From that point on, I *usually* had two screens to look
 at, even if one was just my laptop's screen at the far end of my desk, with an
 [AIM](https://en.wikipedia.org/wiki/AIM_(software)) window open in it. Before
 moving to college, I built a desktop computer with a new monitor (picture
-above), and again utilized the old one as a secondary display.
+above), and utilized the old one as a secondary display.
 
 <a href="../../img/posts/new-lgud4379b-monitor/college-desk.jpg"><img alt="College Desk" src="../../img/posts/new-lgud4379b-monitor/college-desk.jpg" style="max-width: 100%; padding: 10px;"/></a>
 <div class="caption">My desk during my senior year of collage</div>
 
-Throughout college as I started to explore Linux and programming more,
-I started to experiment with using monitors in a portrait orientation.
-Eventually, purchased a second 23.6" 1080p monitor so they would
-match when paired. This gave me much more vertical real estate that was
-useful when writing code or lab reports.
+Throughout college, as I started to explore Linux and programming more,
+I began to experiment with using monitors in portrait orientations.
+Eventually, I purchased a second 23.6" 1080p monitor so they would
+match when paired. This gave me much more vertical real estate, which was
+useful when writing code, essays, or lab reports.
 
 ## Why go from two, to one?
 <a href="../../img/homelab/kadabra1.jpg"><img alt="MA Desk" src="../../img/homelab/kadabra1.jpg" style="max-width: 100%; padding: 10px;"/></a>
