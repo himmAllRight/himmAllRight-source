@@ -3,7 +3,7 @@ title: "Homelab"
 date: 2018-11-03
 type: homelab
 layout: homelab-page
-menu: 
+menu:
   main:
     weight: -100
 image: img/homelab/new_monitor1.jpg
@@ -25,6 +25,19 @@ slowly putting my space together. So for now ... don't mind the wires
 <a href="../../img/homelab/new_monitor3.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/new_monitor3.jpg" width=100%></a>
 <div class="caption">My Home Workstation</div>
 
+<a name="charmeleon"></a>
+#### - Charmeleon (Main Workstation)
+```
+Ryzen 5 2600 [3.4 GHz (3.9GHz Turbo), 6 Cores, 12 Threads)
+MSI B450 Tomahawk Motherboard
+32 GB (2x16GB) DDR4-3200 Mhz RAM
+Sapphire 1024 4GB PULSE Radeon RX 560 GPU
+250 GB Samsung EVO SSD
+Fractal Design Meshify C Dark TG ATX Mid Tower Case
+EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
+Fedora 29
+*Connected to Periphery devices
+```
 <a name="kadabra"></a>
 #### - Kadabra (Main Laptop)
 ```
@@ -38,7 +51,7 @@ Fedora 28
 ```
 
 <a name="x230"></a>
-#### - Abra (Secondary Laptop) 
+#### - Abra (Secondary Laptop)
 ```
 Lenovo x230
 Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
@@ -54,7 +67,7 @@ Ubuntu Mate/Kubuntu 18.04
 ##### Periphery
 ```
 LG UD4379-b, 43" IPS UHD (3840x2160 px) Monitor
-Happy Hacking Keyboard Pro2 
+Happy Hacking Keyboard Pro2
 Audioengine A2+ Speakers & Stands
 Bose AE2 Headphones
 Logitech HD Pro Webcam c920 Widescreen
