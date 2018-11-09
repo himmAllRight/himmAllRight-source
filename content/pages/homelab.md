@@ -51,7 +51,7 @@ Fedora 28
 ```
 
 <a name="x230"></a>
-#### - Abra (Secondary Laptop)
+#### - Abra (Test Laptop)
 ```
 Lenovo x230
 Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
@@ -60,7 +60,7 @@ Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
 12.5" HD LED 1366x768 Display
 9-Cell Battery
 Thinkpad Dock (to connect to periphery devices below)
-Ubuntu Mate/Kubuntu 18.04
+Fedora 29 SilverBlue
 ```
 
 <a name="periphery"></a>
