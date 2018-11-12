@@ -59,53 +59,51 @@ side for documentation and terminal windows. I wanted a wide screen display.
 
 ## Ultra-wide or *Large* 16:9 UHD?
 
-Luckily over the past few years, the once *extremely* expensive
-ultrawide and large UHD monitors have started to come down in
-price. After following the market for a long time, I narrowed my
-decision to my favorite choice in each category: The [Dell
+Luckily, the once *extremely* expensive ultra-wide and large UHD monitors have
+started to come down in price. After following the market for a few years, I
+narrowed my decision to my favorite choice in each category: The [Dell
 u3415w](https://www.dell.com/en-us/shop/dell-ultrasharp-34-curved-ultrawide-monitor-u3415w/apd/210-adtr/monitors-monitor-accessories)
-and the [LG ud4379b](https://www.lg.com/us/monitors/lg-43UD79-B-4k-uhd-led-monitor).
+and the [LG
+ud4379b](https://www.lg.com/us/monitors/lg-43UD79-B-4k-uhd-led-monitor).
 
 <a href="../../img/posts/new-lgud4379b-monitor/dellu3415w.jpg"><img alt="Dell u3415w" src="../../img/posts/new-lgud4379b-monitor/dellu3415w.jpg" style="max-width: 100%;"/></a>
 <div class="caption">The Dell u3415w 34" 3440x1440p Ultra Wide Monitor </div>
 
 The Dell u3415w is the slightly older (compared to the
-[u34**17**w](https://www.dell.com/ed/business/p/dell-u3417w-monitor/pd))
-34" ultrawide monitor offering from Dell. It has an 3440x1440 60 Hz,
-slightly-curved, IPS panel sitting on a solid but adjustable monitor
-stand. I liked it compared to other ultrawides because it could be
-found for a reasonable price, and had a very professional build
-quality.
+[u34**17**w](https://www.dell.com/ed/business/p/dell-u3417w-monitor/pd)) 34"
+ultra-wide monitor offering from Dell. It has a 3440x1440, 60 Hz,
+slightly-curved, IPS panel sitting on a solid and adjustable monitor stand. I
+preferred it over other ultra-wides because it could be found for a reasonable
+price, and had a professional build quality.
 
-Based on my reasons listed above, an ultrawide (1440p ones... not
-1080p) would fit my mostly programmer use-case very well. Being a
-single monitor, I could position it directly in front of me, with my
-main code/content centered. The 3440px wide resolution would also
-allow enough horizontal space to have a full webpage of documentation,
-and several terminal windows open on either side of the main
-display. Lastly, the 1440px vertical resolution would be an adaquit
-improvement from my *"starting to feel very tight"*, 1080p monitors.
+Based on my reasoning explained in the section above, an ultra-wide (1440p
+ones... not 1080p) would fit my mostly programmer use-case very well. Being a
+single monitor, I could position it directly in front of me, with my main
+code/content centered. The 3440px wide resolution would also allow enough
+horizontal space to have a full web page of documentation, and several terminal
+windows open on either side of the main display. Lastly, the 1440px vertical
+resolution would be an adequate improvement from my *"starting to feel tight"*,
+1080p monitors.
 
 <a href="../../img/posts/new-lgud4379b-monitor/ud4379b.jpg"><img alt="Dell u3415w" src="../../img/posts/new-lgud4379b-monitor/ud4379b.jpg" style="max-width: 100%;"/></a>
 <div class="caption">The LG ud4379b 42.5" 3440x2160p Monitor</div>
 
-The massive LG ud4379b is a 42.5" 3840x2160px IPS display. At this
-size and resolution, it is roughly the equivalant to having 4 21"
-1920x1080px monitors aligned in a 2x2 grid... but with 0 bezel between
-them. Compared to other 40"+ 4K displays, I liked this one because
-again, it was reasonably priced, and also seemed to actualy have a
-half decent panel. Reviewers consistantly said it had good colors and
-minimal backlight bleed.
+The massive LG ud4379b is a 42.5" 3840x2160px IPS display. At this size and
+resolution, it is roughly the equivalent of having four 21" 1920x1080px
+monitors aligned in a 2x2 grid... except with 0 bezel between them. Compared to
+other 40"+ 4K displays, I preferred this one because once again, it was
+reasonably priced, had great input options, and also seemed to have a half
+decent panel. Reviewers consistently said it had vibrant colors and minimal
+back light bleed.
 
-Being a single monitor, I could easily center myself in front of it,
-and have my main content center just like in the ultrawide. Being so
-large, I could also still have auxilary windows opened on the
-sides. One advantage the ud4379 had over the ultrawide however, was
-that being a massive 16:9 screen, it could easily be divided into 4
-1080p screens (in fact, this model supports spitting the screen into
-4, each takings a seperate input. But more on that later..). While the
-ultrawides often support splitting and picture in picture, it seems
-more versitile on the 43" monitor.
+Being single monitor, I could easily sit myself in front of it, and have my
+main content centered, just like with the ultra-wide. Being so large, I could
+still have auxiliary windows opened on either side. One advantage the ud4379
+had over the ultrawide however, was that being a massive 16:9 screen, it could
+easily be divided into 4 1080p screens. In fact, this model supports spitting
+the screen into four separate displays, each taking a different input (more on
+that later..). While the ultra-wides often support splitting and
+picture-in-picture, it seems more natural on the 43" monitor.
 
 ## Deciding on the 43" UHD
 
