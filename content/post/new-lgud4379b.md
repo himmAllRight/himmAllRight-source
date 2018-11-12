@@ -1,6 +1,6 @@
 +++
 title  = "Monitor Selection: My New LG-UD4329b"
-date   = "2018-09-20"
+date   = "2018-11-12"
 author = "Ryan Himmelwright"
 image  = "img/homelab/new_monitor2.jpg"
 tags   = ["Hardware", "Monitors", "Homelab",]
@@ -42,24 +42,22 @@ useful when writing code, essays, or lab reports.
 <a href="../../img/homelab/kadabra1.jpg"><img alt="MA Desk" src="../../img/homelab/kadabra1.jpg" style="max-width: 100%; padding: 10px;"/></a>
 <div class="caption">When using two monitors, I always had to have a primary and secondary.</div>
 
-While I like having the *screen realistate* of two monitors, I was
-never able to optimally use them because of the bezels. Over time, I
-began to notice that while working, I would natually shift over and
-use one monitor as a *primary* display, and the other as a *secondary*
-display. This was okay for some tasks, but it usually just meant that
-I just used the primary monitor, and *half* of the secondary one,
-because it was too hard to see far end of the screen.
+While I like having the *screen real estate* of two monitors, I was never able
+to optimally use them because of the bezels between the monitors.  While
+working, I would naturally shift over and use one monitor as a *primary*
+display, and the other as a *secondary* display. This was okay for some tasks,
+but it usually just meant that I just used the primary monitor, and *half* of
+the secondary one, because it was too hard to see the far end of the screen.
 
-This issue was *slightly* better when using my displays in portrait
-mode, but this wasn't always ideal when connecting to remote machiens,
-or VMs. It also still didn't solve the main issue, that when I looked
-at the screens in my natural position (head centered, looking straigt
-forward)... I saw two pieces of black plastic. I wanted to see my
-*primary* window straigt in front of me, and then have some auxilary
-space on either side for documentation or terminal windows. I wanted a
-wide screen display.
+This issue was *slightly* better when using my displays in portrait mode, but
+that wasn't always ideal when connecting to remote machines, or viewing wide
+content (videos, for example). It also didn't solve the main issue. When
+looking at the screens in a natural position (head centered, looking strait
+forward)... I still saw two pieces of black plastic. I wanted to see my
+*primary* window directly in front of me, with some auxiliary space on either
+side for documentation and terminal windows. I wanted a wide screen display.
 
-## Ultrawide or *Large* 16:9 UHD?
+## Ultra-wide or *Large* 16:9 UHD?
 
 Luckily over the past few years, the once *extremely* expensive
 ultrawide and large UHD monitors have started to come down in
