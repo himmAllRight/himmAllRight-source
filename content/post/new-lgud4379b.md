@@ -99,7 +99,7 @@ back light bleed.
 Being single monitor, I could easily sit myself in front of it, and have my
 main content centered, just like with the ultra-wide. Being so large, I could
 still have auxiliary windows opened on either side. One advantage the ud4379
-had over the ultrawide however, was that being a massive 16:9 screen, it could
+had over the ultra-wide however, was that being a massive 16:9 screen, it could
 easily be divided into 4 1080p screens. In fact, this model supports spitting
 the screen into four separate displays, each taking a different input (more on
 that later..). While the ultra-wides often support splitting and
@@ -107,32 +107,36 @@ picture-in-picture, it seems more natural on the 43" monitor.
 
 ## Deciding on the 43" UHD
 
-<a href="../../img/posts/new-lgud4379b-monitor/multi-input.jpg"><img alt="Shipped Box" src="../../img/posts/new-lgud4379b-monitor/multi-input.jpg" style="max-width: 100%;"/></a>
-<div class="caption">The LG ud4379 can support multiple inputs at a time to the single display</div>
+<a href="../../img/posts/new-lgud4379b-monitor/multi-input.jpg"><img
+alt="Shipped Box" src="../../img/posts/new-lgud4379b-monitor/multi-input.jpg"
+style="max-width: 100%;"/></a> <div class="caption">The LG ud4379 can support
+multiple inputs at a time to the single display</div>
 
-I went back and forth on what type of monitor I wanted several
-times. Eventually though I realized the long term versitility of the
-Lg monitor was just something I couldn't ignore. Being able to use it
-as one massive display that I could fit several full VM windows on, or
-even as 1,2, or 4 discrete monitors made it super usefull for me. I
-tend to be playing with more than one computer or Vm at a time, and it
-is VERY nice to have them all fit so nicely on a single display. I was
-worried it would be a bit *too* big and look a little stupid on my
-desk, especially compared to how slick the Ultrawide would
-look. However, in the end, practicality won out.
+I went back and forth on which monitor I wanted several times. Eventually, I
+realized the long term versatility of the LG monitor was just something I could
+not ignore. Being able to use it as one massive display that I could fit
+several full VM windows in, or even as 1,2, or 4 discrete monitors makes it
+extremely useful for me. I tend to be playing with more than one computer or VM
+at a time, and it is VERY nice to have them all fit on a single display. I
+*was* worried it would be a bit *too* large and look stupid on my desk,
+especially compared to how slick the ultra-wide would look. However, in the
+end, practicality won out.
 
 ## Getting the UD4379b
 
-<a href="../../img/posts/new-lgud4379b-monitor/box.jpg"><img alt="Shipped Box" src="../../img/posts/new-lgud4379b-monitor/box.jpg" style="max-width: 100%;"/></a>
-<div class="caption">The Monitor arrived a few days later perfectly safe, despite the beat up box</div>
+<a href="../../img/posts/new-lgud4379b-monitor/box.jpg"><img alt="Shipped Box"
+src="../../img/posts/new-lgud4379b-monitor/box.jpg" style="max-width:
+100%;"/></a> <div class="caption">The Monitor arrived a few days later
+perfectly safe, despite the beat up box</div>
 
-After planning that we would likely order my monitor for my birthday
-gift, my wife and I started watching the price a few weeks before. One
-day, we noticed the price had dropped $200... so we ordered it.
+After deciding that we would likely order the monitor as my birthday gift, my
+wife and I started watching the price a few weeks before. One day, we noticed
+the price had dropped $200... so we ordered it. The price soon went back up, so
+I'm glad we snatched it when we did!
 
-It came a few days latter in a massive box that I happily carted up to
-our appartment. The box was a bit beat up, but after opening it up, it
-luckily looked like all the components were fine.
+It came a few days latter in a massive box that I happily carted up to our
+apartment. The box was a bit beat up, but after opening it, all the components
+were fine.
 
 ## What I like
 
