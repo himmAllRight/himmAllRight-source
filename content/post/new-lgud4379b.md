@@ -4,7 +4,7 @@ date   = "2018-11-12"
 author = "Ryan Himmelwright"
 image  = "img/homelab/new_monitor2.jpg"
 tags   = ["Hardware", "Monitors", "Homelab",]
-draft  = true
+draft  = false
 Comments = "True"
 +++
 
