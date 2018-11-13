@@ -1,8 +1,9 @@
 +++
 title  = "Reset Plasma 5 Monitor Configuration"
-date   = "2018-11-04"
+date   = "2018-11-14"
 author = "Ryan Himmelwright"
-image  = "img/homelab/new_monitor4.jpg"
+image  = "img/header-images/nc-sun-in-trees1.jpg"
+caption= "North Carolina Arboretum (Pisgah National Forest), Asheville, NC"
 tags   = ["Hardware", "Monitors", "Linux", "KDE"]
 draft  = true
 Comments = "True"
@@ -11,6 +12,7 @@ Comments = "True"
 A quick post, but one that could be usefull since I have to do it often...
 
 <!--more-->
+
 
 ## Issue
 
