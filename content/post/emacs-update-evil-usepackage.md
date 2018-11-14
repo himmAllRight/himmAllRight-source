@@ -68,7 +68,7 @@ both worlds!
 
 #### Starting Config
 
-Here is my starting `Evil` setup. I've nested other `use-pacages`
+Here is my starting `Evil` setup. I've nested other `use-packages`
 inside of it, so that if `evil` is configured, the packages that
 depend on it go ahead and configure themselves too. I'm sure this will
 grow over time as I add missing packages, but so far, it seems to
