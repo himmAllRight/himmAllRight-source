@@ -9,7 +9,7 @@ Comments = "True"
 +++
 
 After switching to [Spacemacs](http://spacemacs.org) for the last year
-or two, it's about time to back and pull togeather *my own* emacs
+or two, it's about time to back and pull together *my own* emacs
 configuration again. However, spacemacs has shown me several packages
 that I want to incorporate into my new emacs setup. Rather than
 resurrect and Frankenstein the changes into my old `.emacs`
@@ -31,7 +31,7 @@ features of the [vim](https://www.vim.org) text editor. I *started*
 with emacs in college, but eventually switched to Vim which, became
 the first power editor that I *really* got into (I even bought a
 [book](https://www.amazon.com/dp/059652983X/?tag=mh0b-20&hvadid=78271540595342&hvqmt=b&hvbmt=bb&hvdev=c&ref=pd_sl_y7m3vu93e_b)
-to learn it better). I stuck with Vim until I became a professonial
+to learn it better). I stuck with Vim until I became a professional
 LISP developer, and the switch back to Emacs was impossible to ignore,
 and obvious.
 
@@ -45,7 +45,7 @@ line applications like [cmus](https://cmus.github.io),
 [w3m](http://w3m.sourceforge.net), many of which are influenced by Vim
 and often incorporate similar keyboard commands (at least the `j`,
 `k`, `l`, `;` navigation). While it isn't ideal for everything (I
-prefer to *write*, but not nessicarially *edit* code with emacs-syle
+prefer to *write*, but not necessarily *edit* code with emacs-syle
 navigation), I never lost my love for the homerow-centric, and
 efficient vim-style movement commands.
 
@@ -62,7 +62,7 @@ have stability issues on my Windows 10 work computer. I thought that
 going back to a stock emacs configuration may tone down the
 complexity, and increase stability. I started to build a *new*
 configuration based around `Evil`. During setup, I was happily
-surpised to learn that the `Ctrl-z` option to switch back to
+surprised to learn that the `Ctrl-z` option to switch back to
 Emacs-mode was a default `Evil` behavior... so I still have the best of
 both worlds!
 
@@ -72,7 +72,7 @@ Here is my starting `Evil` setup. I've nested other `use-pacages`
 inside of it, so that if `evil` is configured, the packages that
 depend on it go ahead and configure themselves too. I'm sure this will
 grow over time as I add missing packages, but so far, it seems to
-provde all the core functionality I need.
+provide all the core functionality I need.
 
 ```lisp
 ;; Evil Mode
@@ -88,7 +88,7 @@ provde all the core functionality I need.
     (evil-leader/set-leader "<SPC>")
     (evil-leader/set-key
       "s s" 'swiper
-      "d x w" 'delete-trailing-whitespace)) 
+      "d x w" 'delete-trailing-whitespace))
 
   (use-package evil-surround
     :ensure t
@@ -100,7 +100,7 @@ provde all the core functionality I need.
   (use-package evil-org
     :ensure t
     :config
-    (evil-org-set-key-theme 
+    (evil-org-set-key-theme
 	  '(textobjects insert navigation additional shift todo heading))
     (add-hook 'org-mode-hook (lambda () (evil-org-mode))))
 
@@ -165,15 +165,15 @@ and evaluate the contents of `emacs_init.el`, and everything required
 for `.emacs` would automatically install.
 
 The reality was that it never fully worked. There were always a few
-packages that would error, or that I had forgoten to add the last time
+packages that would error, or that I had forgotten to add the last time
 I updated my `.emacs` file. With `use-package`, this might be an issue
-of the pastm, as it allows me to combine my emacs init script *with*
+of the past, as it allows me to combine my emacs init script *with*
 my configuration files.
 
 
 #### Key Bindings
 
-After convirting all of my `(require 'PACKAGE-NAME)` calls and related
+After converting all of my `(require 'PACKAGE-NAME)` calls and related
 expressions to filled `use-package` wrappers, I learned about the `:bind`
 parameter. Instead of manually setting key binds with a `setq`,
 `:bind` takes a list of dotted pairs and binds the function (defined
@@ -190,7 +190,7 @@ following `:bind` parameter in my `ispell` `use-package` call:
   (("C-c w" . 'ispell-word)
    ("C-c r" . 'ispell-region)))
    ```
-   
+
 This helps to keep the configuration a bit cleaner and organized. The
 syntax is also straight-forward and easy to remember.
 
@@ -198,9 +198,9 @@ syntax is also straight-forward and easy to remember.
 ## System Specific Load Files
 
 Finally, I moved all my work-specific emacs configuration (setting up
-Allego Common Lisp, defining some helper functions... and anything
+Allegro Common Lisp, defining some helper functions... and anything
 Windows specific) into it's own `emacs-work.el` file. With that in it's
-own seperate file, I just needed to `load` it from my main `.emacs`
+own separate file, I just needed to `load` it from my main `.emacs`
 configuration. The only issue with that, is I only want it to load on
 my *work computer*. So, I wrapped it with a nice little handler:
 
@@ -211,7 +211,7 @@ my *work computer*. So, I wrapped it with a nice little handler:
 
 This works because I don't name my home computers with the same name
 as my work machine. This little tweak worked so well, that I decided
-to make another file, `emacs-linux.el`, that I could dump my linux
+to make another file, `emacs-linux.el`, that I could dump my Linux
 and/or home specific configuration into. I only load it when on a
 GNU/Linux machine:
 
@@ -224,21 +224,21 @@ I've really enjoyed the ability to only load parts of my configuration
 when a certain condition is met. Breaking down my configuration into
 use-specific components seems like a good idea (like abstracting messy
 code to smaller functions). Right now, I try to keep my configuration
-file partitioned into sections, based on use-case (Writting,
+file partitioned into sections, based on use-case (Writing,
 Development, Appearance, etc). However, as I continue to fine-tune my
 emacs setup, I think I might break those sections into actual *files*,
-and then `load` them from the main config. 
+and then `load` them from the main config.
 
 The only issue I can see with that is that it can be confusing with
- overlaping use-cases. However, I already have to deal with that in a
+ overlapping use-cases. However, I already have to deal with that in a
  single configuration (which *section* to put it in), and my process
- of converting everyting to `use-package` has actually started to
+ of converting everything to `use-package` has actually started to
  minimize that issue. So it might work...
 
 ## Next Steps
 
 Now that I have an "`Evil`" Emacs setup configured, things should be
-returning to business as usuall. As I work, I sure there'll be a
+returning to business as usually. As I work, I sure there'll be a
 forgotten package here or there that needs to added. However, with
 `use-package`, that should be a piece of cake, and easy to maintain
 from here on out.
