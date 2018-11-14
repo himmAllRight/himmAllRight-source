@@ -29,7 +29,7 @@ Over the past few years (particularly since moving to the [T470](../my-t470/), I
 #### MBs
 - MSI B450 Pro Gaming AC Carbon
 
-## My Build Selections
+## Final Build Selections
 
 **- CPU: Ryzen 5 2600 -**
 
