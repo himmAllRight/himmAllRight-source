@@ -6,7 +6,7 @@ canonifyurls = true
 paginate = 1000
 theme = "ryan-clean-blog"
 languageCode = "en-us"
-copyright = "Copyright © Ryan Himmelwright. Site created with Hugo"
+
 googleAnalytics = "UA-123-45" # delete or comment to disable Google Analytics JS generation
 disqusShortname = "himmallright" #delete or comment to disable Disqus comments
 
@@ -22,8 +22,8 @@ PygmentsStyle = "monokai"
   #Description = "Software Developer, Open Source and Linux Enthusiast"
   Author = "Ryan Himmelwright"
   email = "ryan@himmelwright.net"
-  postSummariesFrontPage = 5 
-  showReadTime = true 
+  postSummariesFrontPage = 5
+  showReadTime = true
 
 [[params.social]]
   title = "github"
