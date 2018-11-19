@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2018-11-03
+date: 2018-11-18
 type: homelab
 layout: homelab-page
 menu:
@@ -35,7 +35,7 @@ Sapphire 1024 4GB PULSE Radeon RX 560 GPU
 250 GB Samsung EVO SSD
 Fractal Design Meshify C Dark TG ATX Mid Tower Case
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
-Fedora 29
+Fedora 29 (KDE Plasma Spin)
 *Connected to Periphery devices
 ```
 <a name="kadabra"></a>
@@ -44,10 +44,10 @@ Fedora 29
 T470 Thinkpad
 Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
-500 GB Samsung EVO SSD (LUKS encrypted and using ZFS on the Data partition)
+500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
 Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
-Fedora 28
+Fedora 29 (KDE Plasma Spin)
 ```
 
 <a name="x230"></a>
