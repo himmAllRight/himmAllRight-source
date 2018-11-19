@@ -36,6 +36,7 @@ was doing. So, what I wanted *my build* to have, likely deviates from the
 much of the *suggested* guidance found online.
 
 #### More Cores
+
 I tend to have workloads that can really benefit from multiple cores (and
 threads). For example, I run a bunch of virtual machines, often at the same
 time. While my server's 4 core Xeon handles day to day VMs just fine, it is
@@ -44,8 +45,17 @@ cluster across. Beyond VMs, I compile code, compress/decompress packages of
 files, and occasionally encode audio/video files. All tasks that love more
 cores.
 
-#### Lots of Ram
+#### Lots of (*fast*) Ram
 
+When running VMs, lots of RAM is actually more desirable than more cores. For
+example, when running my 6 24-7 VM's, my server's 4-core Xeon will typically be
+15-35% utilized. It's 20GB or RAM however, is almost always fully used. If I
+want more cores, I'll need lots of RAM. Also... I use electron apps (Slack
+etc.)... so, yea....
+
+Lastly, because I'm looking at Ryzen builds, the RAM has to be *fast*.
+More than other CPU architectures, Ryzen actually runs *faster* with faster
+RAM.
 
 #### Fast Storage
 #### *Some* Gaming Ability
