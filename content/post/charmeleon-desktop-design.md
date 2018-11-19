@@ -36,7 +36,17 @@ was doing. So, what I wanted *my build* to have, likely deviates from the
 much of the *suggested* guidance found online.
 
 #### More Cores
+I tend to have workloads that can really benefit from multiple cores (and
+threads). For example, I run a bunch of virtual machines, often at the same
+time. While my server's 4 core Xeon handles day to day VMs just fine, it is
+nice to have a workstation with a bunch of cores to spread a virtualised
+cluster across. Beyond VMs, I compile code, compress/decompress packages of
+files, and occasionally encode audio/video files. All tasks that love more
+cores.
+
 #### Lots of Ram
+
+
 #### Fast Storage
 #### *Some* Gaming Ability
 #### Good Budget "Base", Ability to Upgrade
