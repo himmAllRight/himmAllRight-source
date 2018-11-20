@@ -20,6 +20,9 @@ CPUs, which caught my attention.
 
 ## Why a Desktop?
 
+<a href="../../img/posts/chameleon-desktop-design/kadabra-cpu-usage.png"><img alt="The KDE Plasma 5 extend display GUI" src="../../img/posts/charmeleon-desktop-design/kadabra-cpu-usage.png" style="max-width: 100%;"/></a>
+<div class="caption">My T470 has been a little tight on resources.</div>
+
 My laptops have served the majority of my needs well the last few years, I have
 been feeling a bit restricted when trying to do more complicated and demanding
 tasks. While I still agree with a "*interface with a low-powered, portable
@@ -36,6 +39,7 @@ was doing. So, what I wanted *my build* to have, likely deviates from the
 much of the *suggested* guidance found online.
 
 #### More Cores
+
 
 I tend to have workloads that can really benefit from multiple cores (and
 threads). For example, I run a bunch of virtual machines, often at the same
@@ -58,39 +62,53 @@ More than other CPU architectures, Ryzen actually runs *faster* with faster
 RAM.
 
 #### Fast Storage
+
+This goal of this build is for it to be a multi-tasking beast. If I have a
+several CPU threads, running several VMs and a bunch of applications, and a
+pile of *fast* RAM moving data around... I need good *fast* storage that has
+[MOAR IOPs](https://www.youtube.com/watch?v=Bh_f0uof7Jw&feature=youtu.be&t=359)
+to support all of these tasks that will compete for disk access. While I
+wouldn't mind having room to throw a pair 3.5" rust drive to configure as a ZFS
+data pool down the road, the goal for the initial *primary* drive of this build
+is the most IOPs I can *afford*. So, a 2.5" SATA SSD at the very *least*.
+
 #### *Some* Gaming Ability
+
+While it doesn't have to be a *gaming* machine... I would like to be able to
+play the *occasional* game. While I don't mind playing games with lower graphic
+settings, on my laptops even with the lower settings they spike up the
+temperature and nearly max out the CPU... which I *do* mind. I don't
+need to play the most demanding games at *Ulimate* graphics settings, I do
+want to play basic games at medium settings. A discrete graphics card would be
+nice, ideally an AMD one due to their recent commitment to pushing forward
+their open source drivers.
+
 #### Good Budget "Base", Ability to Upgrade
 
-## Other Considerations
-
-#### CPUs
-- Ryzen 7 1700
-- Ryzen 7 2700
-- Ryzen 5 2400g
-
-#### GPUs
-- RX 580
-- RX 570
-- Vega 11 (in the 2400g)
-
-#### MBs
-- MSI B450 Pro Gaming AC Carbon
+Most importantly, I want this build to be a solid *base* that I can upgrade
+over the next several years. That is easily the *main* advantage of switching
+to a desktop over a laptop for my main rig. I want this build designed so that
+over the next few years I can easily max out the RAM (so 4 RAM slots and
+preferably 16GB sticks), add storage, or upgrade the CPU and/or GPU, and my
+needs grow. For this to work best, I want my more long-time parts (case, power
+supply, motherboard), to be long-lived and support the easy upgrading of the
+otehr components.
 
 ## Final Build Selections
 
-**- CPU: Ryzen 5 2600 -**
+#### CPU: Ryzen 5 2600
 
-**- Motherboard: MSI B450 Tomahawk -**
+#### Motherboard: MSI B450 Tomahawk
 
-**- RAM: G.Skill - Trident Z 32GB (2 x 16GB) DDR4-3200Mhz RAM -**
+#### RAM: G.Skill - Trident Z 32GB (2 x 16GB) DDR4-3200Mhz RAM
 
-**- GPU: Sapphire 1024 4GB PULSE Radeon RX 560 -**
+#### GPU: Sapphire 1024 4GB PULSE Radeon RX 560
 
-**- Case: Fractal Design - Meshify C Dark TG ATX Mid Tower -**
+#### Case: Fractal Design - Meshify C Dark TG ATX Mid Tower
 
-**- PSU: EVGA - SuperNOVA G4 650W 80+ Gold, fully modular ATX PSU -**
+#### PSU: EVGA - SuperNOVA G4 650W 80+ Gold, fully modular ATX PSU -**
 
-**- Storage: One of my Samsung 850 Evo SSDs (temp) -**
+#### Storage: One of my Samsung 850 Evo SSDs (temp) -**
 
 [pc part picker
 list](https://pcpartpicker.com/user/himmelwr/saved/#view=MhbcYJ)
