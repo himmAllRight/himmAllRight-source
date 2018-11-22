@@ -32,6 +32,9 @@ desktop.
 
 ## Workstation Goals
 
+<a href="../../img/posts/chameleon-desktop-design/ryzen-logo.png"><img alt="The KDE Plasma 5 extend display GUI" src="../../img/posts/charmeleon-desktop-design/ryzen-logo.png" style="max-width: 100%;"/></a>
+<div class="caption">My T470 has been a little tight on resources.</div>
+
 As much as people may think I want to build a computer for the fun of it, if
 I'm designing a workstation, I have goals in mind for it. Additionally, 98% of
 online build guides are for designing *gaming* desktops... which is not what I
@@ -92,11 +95,31 @@ over the next few years I can easily max out the RAM (so 4 RAM slots and
 preferably 16GB sticks), add storage, or upgrade the CPU and/or GPU, and my
 needs grow. For this to work best, I want my more long-time parts (case, power
 supply, motherboard), to be long-lived and support the easy upgrading of the
-otehr components.
+other components.
 
 ## Final Build Selections
 
+
+#### Name: Charmeleon
+
+<a href="../../img/posts/chameleon-desktop-design/charmeleon.png"><img alt="The KDE Plasma 5 extend display GUI" src="../../img/posts/charmeleon-desktop-design/charmeleon.png" style="max-width: 50%; float: right;"/></a>
+
+Since my last desktop build was named "Charmander", I figured "Charmeleon" was
+fitting. Also, I', free to rename it to "Charzard" in the future if I *evolve*
+the build to a future Ryzen 7...
+
 #### CPU: Ryzen 5 2600
+
+While I ideally wanted a Ryzen 2700, it made my build out of budget... and
+coming from 4 core/4 thread systems... it's likely that I don't *need* 8
+cores/16 threads yet. Honestly, 4 cores/8 threads would be a noticeable
+improvement from what I've been using... which is why I originally
+considered the Ryzen 5 2400g, which I planned to start with and upgrade to the
+2700 + a GPU once I had the spare money. However, [someone on the level1tech
+forums](https://forum.level1techs.com/t/finalizing-an-upgradable-ryzen-linux-build/134670/2)
+reminded me that the 2600 was the same price as the 2400g, and I could get that
+plus a GPU for not much more cost. After thinking it over, I realized that was
+my best option.
 
 #### Motherboard: MSI B450 Tomahawk
 
