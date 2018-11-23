@@ -2,7 +2,8 @@
 title  = "Designing my new Ryzen Workstation"
 date   = "2018-11-23"
 author = "Ryan Himmelwright"
-image  = "img/homelab/new_monitor4.jpg"
+image  = "img/posts/charmeleon-desktop-design/rht-header.jpg"
+caption= "Red Hat Tower, Raleigh NC"
 tags   = ["Hardware", "Linux", "Ryzen", "Homelab",]
 draft  = true
 Comments = "True"
