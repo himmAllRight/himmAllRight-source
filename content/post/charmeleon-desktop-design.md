@@ -9,13 +9,13 @@ draft  = true
 Comments = "True"
 +++
 
-Over the past few years (particularly since moving to the [T470](../my-t470/)
-as my main device, I have been anticipating what an eventual desktop
-workstation build will look like. For awhile, I was convinced that I was going
-to make a [muti-socket, used xeon
-build](https://www.techspot.com/review/1155-affordable-dual-xeon-pc/). In 2017
-however, AMD released their [Ryzen](https://en.wikipedia.org/wiki/Ryzen)
-CPUs, which caught my attention.
+Over the past few years (particularly after moving to the [T470](../my-t470/)
+as my main device), I have been anticipating what my next desktop
+workstation build will look like. For a period of time, I was convinced that
+I would build a [muti-socket, used xeon
+build](https://www.techspot.com/review/1155-affordable-dual-xeon-pc/). Then, in 2017
+AMD released their [Ryzen](https://en.wikipedia.org/wiki/Ryzen)
+series CPUs...
 
 <!--more-->
 
@@ -24,10 +24,10 @@ CPUs, which caught my attention.
 <a href="../../img/posts/chameleon-desktop-design/kadabra-cpu-usage.png"><img alt="Full system monitor on Laptop" src="../../img/posts/charmeleon-desktop-design/kadabra-cpu-usage.png" style="max-width: 100%;"/></a>
 <div class="caption">My T470 has been a little tight on resources.</div>
 
-My laptops have served the majority of my needs well the last few years, I have
+My laptops have served the majority of my needs well these last few years, but I *have*
 been feeling a bit restricted when trying to do more complicated and demanding
-tasks. While I still agree with a "*interface with a low-powered, portable
-computer, and remote into more powerful ones when needed*" mentality, I enjoy
+workloads. While I still agree with a "*use low-powered, portable
+computers, and remote into more powerful ones when needed*" mentality, I enjoy
 having *one* of those power computers being my physical, main workstation
 desktop.
 
@@ -36,22 +36,23 @@ desktop.
 <a href="../../img/posts/chameleon-desktop-design/ryzen-logo.png"><img alt="Ryzen Logo" src="../../img/posts/charmeleon-desktop-design/ryzen-logo.png" style="max-width: 100%;"/></a>
 <div class="caption">My T470 has been a little tight on resources.</div>
 
-As much as people may think I want to build a computer for the fun of it, if
-I'm designing a workstation, I have goals in mind for it. Additionally, 98% of
-online build guides are for designing *gaming* desktops... which is not what I
-was doing. So, what I wanted *my build* to have, likely deviates from the
-much of the *suggested* guidance found online.
+While building a new workstaion may be fun, I have particular goals I want it
+to achieve. Additionally, 98% of
+online build guides are for designing *gaming* desktops... which is not exactly
+what I want. So, the features I wanted *my build* to have, likely deviate from the
+much of the *suggested* guidance found online, which tends to focus entirely on
+gaming performance.
 
 #### More Cores
 
 
-I tend to have workloads that can really benefit from multiple cores (and
+I tend to have workloads that benefit from multiple cores (and
 threads). For example, I run a bunch of virtual machines, often at the same
 time. While my server's 4 core Xeon handles day to day VMs just fine, it is
-nice to have a workstation with a bunch of cores to spread a virtualised
+nice to have a workstation with a bunch of cores to spin up a virtualised
 cluster across. Beyond VMs, I compile code, compress/decompress packages of
-files, and occasionally encode audio/video files. All tasks that love more
-cores.
+files, and occasionally encode audio/video files. All tasks that love many
+threads.
 
 #### Lots of (*fast*) Ram
 
