@@ -36,12 +36,11 @@ desktop.
 <a href="../../img/posts/chameleon-desktop-design/ryzen-logo.png"><img alt="Ryzen Logo" src="../../img/posts/charmeleon-desktop-design/ryzen-logo.png" style="max-width: 100%;"/></a>
 <div class="caption">My T470 has been a little tight on resources.</div>
 
-While building a new workstaion may be fun, I have particular goals I want it
-to achieve. Additionally, 98% of
-online build guides are for designing *gaming* desktops... which is not exactly
-what I want. So, the features I wanted *my build* to have, likely deviate from the
-much of the *suggested* guidance found online, which tends to focus entirely on
-gaming performance.
+While building a new workstation may be fun, I have particular goals I want it
+to achieve. Additionally, 98% of online build guides are for designing *gaming*
+desktops... which is not exactly what I want. So, the features I wanted *my
+build* to have, likely deviate from the much of the *suggested* guidance found
+online, which tends to focus entirely on gaming performance.
 
 #### More Cores
 
@@ -49,44 +48,44 @@ gaming performance.
 I tend to have workloads that benefit from multiple cores (and
 threads). For example, I run a bunch of virtual machines, often at the same
 time. While my server's 4 core Xeon handles day to day VMs just fine, it is
-nice to have a workstation with a bunch of cores to spin up a virtualised
-cluster across. Beyond VMs, I compile code, compress/decompress packages of
-files, and occasionally encode audio/video files. All tasks that love many
+nice to have a workstation with several cores to spin up a virtualized
+cluster across. Beyond VMs, I compile code, compress/decompress
+file packages, and occasionally encode audio/video files. All tasks that love many
 threads.
 
 #### Lots of (*fast*) Ram
 
-When running VMs, lots of RAM is actually more desirable than more cores. For
-example, when running my 6 24-7 VM's, my server's 4-core Xeon will typically be
-15-35% utilized. It's 20GB or RAM however, is almost always fully used. If I
-want more cores, I'll need lots of RAM. Also... I use electron apps (Slack
-etc.)... so, yea....
+When running VMs, the amount of available RAM is usually more limiting than the
+number of cpu cores. For example, when running 6 VM's, my server's 4-core Xeon
+will typically be 15-35% utilized whereas it's 20GB of RAM is nearly full.  If
+I want more cores, I should supplement it with lots of RAM. In addition... I
+use electron apps (Slack etc.) and modern web browsers... so yea.... more RAM.
 
-Lastly, because I'm looking at Ryzen builds, the RAM has to be *fast*.
-More than other CPU architectures, Ryzen actually runs *faster* with faster
+Lastly, because I'm looking at Ryzen builds, the RAM needs to be *fast*.
+More than other CPU architectures, Ryzen CPUs actually *run faster* with faster
 RAM.
 
 #### Fast Storage
 
-This goal of this build is for it to be a multi-tasking beast. If I have a
-several CPU threads, running several VMs and a bunch of applications, and a
-pile of *fast* RAM moving data around... I need good *fast* storage that has
+This main goal of this build is for it to be a multi-tasking beast. If I am
+running several VMs and a bunch of applications, with a
+stack of *fast* RAM moving data around... I need good *fast* storage with
 [MOAR IOPs](https://www.youtube.com/watch?v=Bh_f0uof7Jw&feature=youtu.be&t=359)
-to support all of these tasks that will compete for disk access. While I
-wouldn't mind having room to throw a pair 3.5" rust drive to configure as a ZFS
+to support all of these operations that will be competing for disk access. While I
+wouldn't mind having space to throw in a pair 3.5" rust drive to configure as a ZFS
 data pool down the road, the goal for the initial *primary* drive of this build
-is the most IOPs I can *afford*. So, a 2.5" SATA SSD at the very *least*.
+is the most IOPs I can *afford*. So, I ideally *want* a m.2 NVMe SSD, but *need*
+a normal 2.5" SATA SSD at the very least.
 
 #### *Some* Gaming Ability
 
-While it doesn't have to be a *gaming* machine... I would like to be able to
-play the *occasional* game. While I don't mind playing games with lower graphic
-settings, on my laptops even with the lower settings they spike up the
-temperature and nearly max out the CPU... which I *do* mind. I don't
-need to play the most demanding games at *Ulimate* graphics settings, I do
-want to play basic games at medium settings. A discrete graphics card would be
-nice, ideally an AMD one due to their recent commitment to pushing forward
-their open source drivers.
+While it doesn't have to be a *gaming machine*... I would like to be able to
+play the *occasional* game. I don't mind playing games with lower graphic
+settings on my laptops, but I *do mind* that even with the lower settings they
+spike up the temperature and nearly max out the CPU. Increased graphics
+performance would also better support [my large monitor](../new-lgud4379b/).  A
+discrete graphics card would be nice, ideally an AMD one due to their recent
+work on improving their open source drivers.
 
 #### Good Budget "Base", Ability to Upgrade
 
