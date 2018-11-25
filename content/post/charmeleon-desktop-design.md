@@ -68,14 +68,14 @@ RAM.
 #### Fast Storage
 
 This main goal of this build is for it to be a multi-tasking beast. If I am
-running several VMs and a bunch of applications, with a
-stack of *fast* RAM moving data around... I need good *fast* storage with
-[MOAR IOPs](https://www.youtube.com/watch?v=Bh_f0uof7Jw&feature=youtu.be&t=359)
-to support all of these operations that will be competing for disk access. While I
-wouldn't mind having space to throw in a pair 3.5" rust drive to configure as a ZFS
-data pool down the road, the goal for the initial *primary* drive of this build
-is the most IOPs I can *afford*. So, I ideally *want* a m.2 NVMe SSD, but *need*
-a normal 2.5" SATA SSD at the very least.
+running several VMs and a bunch of applications, with a stack of *fast* RAM
+moving data around... I need good *fast* storage with [MOAR
+IOPs](https://www.youtube.com/watch?v=Bh_f0uof7Jw&feature=youtu.be&t=359) to
+support all of these operations that will be competing for disk access. While I
+wouldn't mind having space to throw in a pair 3.5" rust drive to configure as a
+ZFS data pool down the road, the goal for the initial *primary* drive of this
+machine is the most IOPs I can *afford*. So, I ideally *want* a m.2 NVMe SSD,
+but *need* a normal 2.5" SATA SSD at the very least.
 
 #### *Some* Gaming Ability
 
@@ -89,15 +89,11 @@ work on improving their open source drivers.
 
 #### Good Budget "Base", Ability to Upgrade
 
-Most importantly, I want this build to be a solid *base* that I can upgrade
-over the next several years. That is easily the *main* advantage of switching
-to a desktop over a laptop for my main rig. I want this build designed so that
-over the next few years I can easily max out the RAM (so 4 RAM slots and
-preferably 16GB sticks), add storage, or upgrade the CPU and/or GPU, and my
-needs grow. For this to work best, I want my more long-time parts (case, power
-supply, motherboard), to be long-lived and support the easy upgrading of the
-other components.
-
+Most importantly, I want this computer to be a solid *base* that I can upgrade
+over the next several years. Upgradability is hands-down *the main* advantage
+of switching to a desktop over a laptop for my main rig. I want this build
+designed so that as my needs grow, I can easily max out the RAM, add storage,
+or upgrade the CPU and/or GPU.
 ## Final Build Selections
 
 <a href="../../img/posts/chameleon-desktop-design/charmeleon.png"><img alt="Chameleon Picture" src="../../img/posts/charmeleon-desktop-design/charmeleon.png" style="max-width: 40%; float: right;"/></a>
