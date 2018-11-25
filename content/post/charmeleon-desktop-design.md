@@ -94,74 +94,74 @@ over the next several years. Upgradability is hands-down *the main* advantage
 of switching to a desktop over a laptop for my main rig. I want this build
 designed so that as my needs grow, I can easily max out the RAM, add storage,
 or upgrade the CPU and/or GPU.
+
 ## Final Build Selections
 
 <a href="../../img/posts/chameleon-desktop-design/charmeleon.png"><img alt="Chameleon Picture" src="../../img/posts/charmeleon-desktop-design/charmeleon.png" style="max-width: 40%; float: right;"/></a>
 
 After spending weeks researching all the parts on the market and building
-probably 50 part builds, I eventually settled on [my final part list](https://pcpartpicker.com/user/himmelwr/saved/#view=MhbcYJ).
+probably 50 theoretical builds, I eventually settled on [my final part list](https://pcpartpicker.com/user/himmelwr/saved/#view=MhbcYJ).
 
 #### Name: Charmeleon
 
 
 Since my last desktop build was named "Charmander", I figured "Charmeleon" was
-fitting. Also, I', free to rename it to "Charzard" in the future if I *evolve*
-the build to a future Ryzen 7...
+fitting. Also, I'm then free to rename it to "Charzard" in the future if I *evolve*
+the build to a next-generation Ryzen 7...
 
 #### CPU: [Ryzen 5 2600](https://www.amd.com/en/products/cpu/amd-ryzen-5-2600)
 
 <a href="../../img/posts/chameleon-desktop-design/ryzen2600.jpg"><img alt="ryzen 2600" src="../../img/posts/charmeleon-desktop-design/ryzen2600.jpg" style="max-width: 40%; float: left;"/></a>
 
-While I ideally wanted a Ryzen 2700, it made my build out of budget... and
-coming from 4 core/4 thread systems... it's likely that I don't *need* 8
-cores/16 threads yet. Honestly, 4 cores/8 threads would be a noticeable
-improvement from what I've been using... which is why I originally
-considered the Ryzen 5 2400g, which I planned to start with and upgrade to the
-2700 + a GPU once I had the spare money. However, [someone on the level1tech
+While I initially wanted a Ryzen 2700, it pushed the build out of budget.
+Coming from 4 core/4 thread systems... it's likely that I don't *need* 8
+cores/16 threads right off the bat. Honestly, 4 cores/8 threads would be a
+noticeable improvement from what I've been using... which is why I first
+considered the Ryzen 5 2400g. I planned to start with the 2400g and upgrade to
+a 2700 + a GPU once I had spare money. However, [someone on the level1tech
 forums](https://forum.level1techs.com/t/finalizing-an-upgradable-ryzen-linux-build/134670/2)
 reminded me that the 2600 was the same price as the 2400g, and I could get that
-plus a GPU for not much more cost. After thinking it over, I realized that was
-my best option, and would *actually* fit my needs for awhile.
+plus a GPU for not much more cost (considering I don't need an expensive GPU).
+After thinking it over, I realized that was my best option, and should
+*actually* fit my needs for quite awhile.
 
 #### Motherboard: [MSI B450 Tomahawk](https://www.msi.com/Motherboard/B450-TOMAHAWK)
 
 <a href="../../img/posts/chameleon-desktop-design/tomahawk.jpg"><img alt="B450 Tomahawk motherboard" src="../../img/posts/charmeleon-desktop-design/tomahawk.jpg" style="max-width: 40%; float: right;"/></a>
 
-I had selected the MSI B450 Tomahawk after watching a [review of it by
-Wendell](https://www.youtube.com/watch?v=lxtrHDJUMt4). Several other reviews
-stated that it was a solid board, especially for it's price. When I considered
-the 2400g however, I had to switch to looking at the [MSI B450 Gaming Pro
-Carbon AC](https://www.newegg.com/Product/Product.aspx?Item=N82E16813144188)
-(what a terrible name), because the Tomahawk didn't have a display output
-that the integrated graphics could properly use with [my UHD
-monitor](../new-lgud4379b/)'s resolution (I basically need display port). When
-I switched to the 2600, I was able to go back to the TOMAHAWK, and funnel the
-cost savings towards getting my GPU.
+I had selected the MSI B450 Tomahawk after [Wendell reviewed
+it](https://www.youtube.com/watch?v=lxtrHDJUMt4). Several other reviews
+confirmed that it was a solid board, especially for the price. When I was
+considering the 2400g, I had to switch to the [MSI B450 Gaming Pro Carbon
+AC](https://www.newegg.com/Product/Product.aspx?Item=N82E16813144188), because
+the Tomahawk didn't have a display output that the integrated graphics could
+properly use with [my UHD monitor](../new-lgud4379b/)'s resolution (I need a
+display port). When I switched to the 2600, I was able to go back to the
+TOMAHAWK, and funnel the cost savings towards getting my GPU.
 
 #### GPU: [Sapphire 1024 4GB PULSE Radeon RX 560](http://www.sapphiretech.com/productdetial.asp?pid=3ECEAD87-2972-477A-A3BE-480194D9FD6E&lang=eng)
 
 <a href="../../img/posts/chameleon-desktop-design/rx560.png"><img alt="The KDE Plasma 5 extend display GUI" src="../../img/posts/charmeleon-desktop-design/rx560.png" style="max-width: 35%; float: left;"/></a>
 
-As discussed above, I don't really need a killer GPU as I don't play very
-demanding games. However, I did want something that could perform at least a
-*little bit*, which is [why I picked the rx560 over the
-rx550](https://www.youtube.com/watch?v=237L9UGQtGk&t=422s). I originally
-planend to upgrade to something like a rx580 which I still might eventually
-do.. but I don't think I will *need* to for a long time.
+As discussed above, I don't need a killer GPU as I don't play very demanding
+games. However, I did want something that could perform at least a *little
+bit*. So, [I picked the rx560 over the
+rx550](https://www.youtube.com/watch?v=237L9UGQtGk&t=422s). At first I planned
+to get something like a rx580, which I still might eventually do... but
+I don't think I will *need* to for a long time.
 
 #### RAM: G.Skill - Trident Z 32GB (2 x 16GB) DDR4-3200Mhz RAM
 
 <a href="../../img/posts/chameleon-desktop-design/ram.png"><img alt="The KDE Plasma 5 extend display GUI" src="../../img/posts/charmeleon-desktop-design/ram.png" style="max-width: 40%; float: right;"/></a>
 
 I wanted to start out with 32GB of RAM, with the ability to easily upgrade to
-64GB down the road, which meant I needed to get a 2x16GB pack. Additionally, I
+64GB down the road. This meant that I needed a 2x16GB pack. Additionally, I
 needed the RAM to be *fast*, but still not *overpriced*. Some research showed
 that at least right now, [3200Mhz seems to be the sweet spot, especially for my
 particular motherboard](https://youtu.be/lxtrHDJUMt4?t=752). I originally
 picked another kit, but the reviews for it weren't great, so I switched to the
-G.Skill one which was only a few dollars more with much better reviews. I also
-searched for kits with tighter timings, but they were *way* more expensive, so
-that search didn't last long.
+G.Skill kit for only a few dollars more, but with much better reviews. I also
+breifly searched for kits with tighter timings, but they were *way* more expensive and not worth it.
 
 #### Case: [Fractal Design - Meshify C Dark TG ATX Mid Tower](https://www.fractal-design.com/home/product/cases/meshify/meshify-c)
 
@@ -169,10 +169,10 @@ that search didn't last long.
 
 I wanted a case that was sturdy, sleek, but not too flashy or expensive. During my
 search, the Fractal Design cases kept catching eye. Eventually, I found the
-Meshify C TG, which seemed to be universally loved by reviewers. Additionally,
+Meshify C TG Dark, which seemed to be universally loved by reviewers. Additionally,
 it appeared to have [good
 thermals](https://www.fractal-design.com/home/product/cases/meshify/meshify-c),
-which I like. This was my easiest part to pick.
+which I liked. This was my easiest part to pick.
 
 #### PSU: EVGA - [SuperNOVA G4 650W 80+ Gold, fully modular ATX PSU](https://www.evga.com/products/product.aspx?pn=120-g1-0650-xr)
 
@@ -187,8 +187,8 @@ gives me a little more room as I upgrade.
 #### Storage: One of my Samsung 850 Evo SSDs (temp)
 
 
-Lastly, storage. For now I am just going to use my spare 250GB Samsung Evo SSD
-I have for my test laptop. I plan to eventually upgrade to a [500GB Samsung Evo
+Lastly, storage. For now I am just going to use a spare 250GB Samsung Evo SSD
+I had in my test laptop. I plan to eventually upgrade to a [500GB Samsung Evo
 m.2 NVMe
 drive](https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/970evo/),
 but the 850 will work for now.
