@@ -1,11 +1,11 @@
 +++
 title  = "Designing my new Ryzen Workstation"
-date   = "2018-11-23"
+date   = "2018-11-26"
 author = "Ryan Himmelwright"
 image  = "img/posts/charmeleon-desktop-design/rht-header.jpg"
 caption= "Red Hat Tower, Raleigh NC"
 tags   = ["Hardware", "Linux", "Ryzen", "Homelab",]
-draft  = true
+draft  = false
 Comments = "True"
 +++
 
@@ -24,12 +24,12 @@ series CPUs...
 <a href="../../img/posts/chameleon-desktop-design/kadabra-cpu-usage.png"><img alt="Full system monitor on Laptop" src="../../img/posts/charmeleon-desktop-design/kadabra-cpu-usage.png" style="max-width: 100%;"/></a>
 <div class="caption">My T470 has been a little tight on resources.</div>
 
-My laptops have served the majority of my needs well these last few years, but I *have*
-been feeling a bit restricted when trying to do more complicated and demanding
-workloads. While I still agree with a "*use low-powered, portable
-computers, and remote into more powerful ones when needed*" mentality, I enjoy
-having *one* of those power computers being my physical, main workstation
-desktop.
+[My](../sold-my-bonobo/) [laptops](../my-t470/) [have](../my-new-used-x230)
+served the majority of my needs these last few years, but I have been feeling
+a bit restricted when trying to do more demanding workloads.
+While I still side with a "*use low-powered, portable computers, and remote
+into more powerful ones when needed*" mentality, I enjoy having *one* of those
+power computers being my physical, main workstation desktop.
 
 ## Workstation Goals
 
@@ -37,43 +37,44 @@ desktop.
 <div class="caption">My T470 has been a little tight on resources.</div>
 
 While building a new workstation may be fun, I have particular goals I want it
-to achieve. Additionally, 98% of online build guides are for designing *gaming*
-desktops... which is not exactly what I want. So, the features I wanted *my
-build* to have, likely deviate from the much of the *suggested* guidance found
-online, which tends to focus entirely on gaming performance.
+to achieve. Additionally, it seems like 98% of online build guides are for
+designing *gaming* desktops... which is not exactly what I want. So, the
+features I wanted in *my build*, likely deviate from much of the
+*suggested* guidance found online, which tends to focus entirely on gaming
+performance (more FPS). Here is the breakdown of what I was looking for:
 
 #### More Cores
 
 
-I tend to have workloads that benefit from multiple cores (and
-threads). For example, I run a bunch of virtual machines, often at the same
-time. While my server's 4 core Xeon handles day to day VMs just fine, it is
-nice to have a workstation with several cores to spin up a virtualized
-cluster across. Beyond VMs, I compile code, compress/decompress
-file packages, and occasionally encode audio/video files. All tasks that love many
-threads.
+I tend to have workloads that benefit from multiple cores (and threads). For
+example, I run a bunch of virtual machines, often at the same time. While my
+server's 4 core Xeon handles day to day VMs just fine, it is nice to have a
+workstation with several cores to spin up a virtualized cluster across. Beyond
+VMs, I compile code, compress/decompress file packages, and occasionally encode
+audio/video files. These are all tasks that love having many threads at their
+disposal.
 
 #### Lots of (*fast*) Ram
 
 When running VMs, the amount of available RAM is usually more limiting than the
 number of cpu cores. For example, when running 6 VM's, my server's 4-core Xeon
-will typically be 15-35% utilized whereas it's 20GB of RAM is nearly full.  If
+will typically be 15-35% utilized, whereas it's 20GB of RAM is nearly full.  If
 I want more cores, I should supplement it with lots of RAM. In addition... I
-use electron apps (Slack etc.) and modern web browsers... so yea.... more RAM.
+use electron apps (Slack, Spotify,  etc.) and modern web browsers... so yea.... more RAM.
 
-Lastly, because I'm looking at Ryzen builds, the RAM needs to be *fast*.
-More than other CPU architectures, Ryzen CPUs actually *run faster* with faster
-RAM.
+Being a Ryzen build, the RAM also needs to be *fast*.  More than other CPU
+architectures, Ryzen CPUs actually [*run better* with faster
+RAM](https://www.youtube.com/watch?v=g0SDr3EHHmY).
 
 #### Fast Storage
 
 This main goal of this build is for it to be a multi-tasking beast. If I am
-running several VMs and a bunch of applications, with a stack of *fast* RAM
-moving data around... I need good *fast* storage with [MOAR
+running several VMs and a bunch of applications, utilizing a stack of *fast* RAM
+to move data around... I need good *fast* storage with [MOAR
 IOPs](https://www.youtube.com/watch?v=Bh_f0uof7Jw&feature=youtu.be&t=359) to
-support all of these operations that will be competing for disk access. While I
-wouldn't mind having space to throw in a pair 3.5" rust drive to configure as a
-ZFS data pool down the road, the goal for the initial *primary* drive of this
+support of these operations, which will all be competing for disk access. While I
+wouldn't mind having space to eventually throw in a pair 3.5" rust drives to configure as a
+ZFS data pool, the goal for the initial *primary* drive of this
 machine is the most IOPs I can *afford*. So, I ideally *want* a m.2 NVMe SSD,
 but *need* a normal 2.5" SATA SSD at the very least.
 
@@ -81,13 +82,13 @@ but *need* a normal 2.5" SATA SSD at the very least.
 
 While it doesn't have to be a *gaming machine*... I would like to be able to
 play the *occasional* game. I don't mind playing games with lower graphic
-settings on my laptops, but I *do mind* that even with the lower settings they
-spike up the temperature and nearly max out the CPU. Increased graphics
-performance would also better support [my large monitor](../new-lgud4379b/).  A
-discrete graphics card would be nice, ideally an AMD one due to their recent
-work on improving their open source drivers.
+settings on my laptops, but I *do mind* that even with the lower settings, the
+CPUs nearly max out, which spikes up the temperature.
+Increased graphics performance would also better support [my large
+monitor](../new-lgud4379b/).  A discrete graphics card would be nice, ideally
+an AMD one due to their recent work on improving their open source drivers.
 
-#### Good Budget "Base", Ability to Upgrade
+#### Ability to Upgrade
 
 Most importantly, I want this computer to be a solid *base* that I can upgrade
 over the next several years. Upgradability is hands-down *the main* advantage
@@ -114,11 +115,11 @@ the build to a next-generation Ryzen 7...
 <a href="../../img/posts/chameleon-desktop-design/ryzen2600.jpg"><img alt="ryzen 2600" src="../../img/posts/charmeleon-desktop-design/ryzen2600.jpg" style="max-width: 40%; float: left;"/></a>
 
 While I initially wanted a Ryzen 2700, it pushed the build out of budget.
-Coming from 4 core/4 thread systems... it's likely that I don't *need* 8
+Coming from a 4 core/4 thread system... it's likely that I don't *need* 8
 cores/16 threads right off the bat. Honestly, 4 cores/8 threads would be a
 noticeable improvement from what I've been using... which is why I first
 considered the Ryzen 5 2400g. I planned to start with the 2400g and upgrade to
-a 2700 + a GPU once I had spare money. However, [someone on the level1tech
+the 2700 and a GPU once I had more cash. However, [someone on the level1tech
 forums](https://forum.level1techs.com/t/finalizing-an-upgradable-ryzen-linux-build/134670/2)
 reminded me that the 2600 was the same price as the 2400g, and I could get that
 plus a GPU for not much more cost (considering I don't need an expensive GPU).
@@ -130,8 +131,9 @@ After thinking it over, I realized that was my best option, and should
 <a href="../../img/posts/chameleon-desktop-design/tomahawk.jpg"><img alt="B450 Tomahawk motherboard" src="../../img/posts/charmeleon-desktop-design/tomahawk.jpg" style="max-width: 40%; float: right;"/></a>
 
 I had selected the MSI B450 Tomahawk after [Wendell reviewed
-it](https://www.youtube.com/watch?v=lxtrHDJUMt4). Several other reviews
-confirmed that it was a solid board, especially for the price. When I was
+it](https://www.youtube.com/watch?v=lxtrHDJUMt4). [Several
+other](https://www.youtube.com/watch?v=MWGzmbbimPw&feature=youtu.be&t=145) [reviews
+confirmed](https://www.youtube.com/watch?v=MMJoLyrWa7E&feature=youtu.be&t=1260) that it was a solid board, especially for the price. When I was
 considering the 2400g, I had to switch to the [MSI B450 Gaming Pro Carbon
 AC](https://www.newegg.com/Product/Product.aspx?Item=N82E16813144188), because
 the Tomahawk didn't have a display output that the integrated graphics could
@@ -161,7 +163,7 @@ that at least right now, [3200Mhz seems to be the sweet spot, especially for my
 particular motherboard](https://youtu.be/lxtrHDJUMt4?t=752). I originally
 picked another kit, but the reviews for it weren't great, so I switched to the
 G.Skill kit for only a few dollars more, but with much better reviews. I also
-breifly searched for kits with tighter timings, but they were *way* more expensive and not worth it.
+briefly searched for kits with tighter timings, but they were *way* more expensive and not worth it.
 
 #### Case: [Fractal Design - Meshify C Dark TG ATX Mid Tower](https://www.fractal-design.com/home/product/cases/meshify/meshify-c)
 
@@ -187,14 +189,14 @@ gives me a little more room as I upgrade.
 #### Storage: One of my Samsung 850 Evo SSDs (temp)
 
 
-Lastly, storage. For now I am just going to use a spare 250GB Samsung Evo SSD
-I had in my test laptop. I plan to eventually upgrade to a [500GB Samsung Evo
+Lastly, storage. For now I am just going to use a spare 250GB Samsung 850 Evo SSD
+I had in my test laptop. I plan to eventually upgrade to a [500GB Samsung 970 Evo
 m.2 NVMe
 drive](https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/970evo/),
 but the 850 will work for now.
 
 ## Conclusion
 
-So after months of planing and research, I have finally picked and ordered all
-the parts for my desktop. Hopefully, it meets the goals I set out to solve, and
-I will be able to upgrade it over the next few years.
+So after months of planing and research, my desktop parts have all been
+ordered. Hopefully, it meets the goals I set out to solve, and I will be able
+to upgrade it over the next few years
