@@ -2,8 +2,8 @@
 title  = "Configuring Pass, the Standard Unix Password Manager"
 date   = "2018-12-04"
 author = "Ryan Himmelwright"
-image  = "img/header-images/nc-sun-in-trees1.jpg"
-caption= "North Carolina Arboretum (Pisgah National Forest), Asheville, NC"
+image  = "img/header-images/liberty-brick-lock.jpg"
+caption= "Liberty Warehouse Apartments, Durham, NC"
 tags   = ["Linux", "Homelab", "Network", "Dotfiles"]
 draft  = false
 Comments = "True"
