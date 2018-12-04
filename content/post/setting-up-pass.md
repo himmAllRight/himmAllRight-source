@@ -84,7 +84,17 @@ sudo dnf install pass
 
 #### New GPG Key
 
+*TODO: Make animation a hover-over*
+<a href="../../img/posts/setting-up-pass/generate-gpg-key.gif"><img alt="animation running gpg --gen-key" src="../../img/posts/setting-up-pass/generate-gpg-keys.gif" style="max-width: 100%;"/></a>
+<div class="caption">Generate a new gpg key with `gpg --gen-key`.</div>
+
+
 #### Pass Init
+
+*TODO: Make animation a hover-over*
+<a href="../../img/posts/setting-up-pass/pass-init.gif"><img alt="Crating new pass store with pass init" src="../../img/posts/setting-up-pass/pass-init.gif" style="max-width: 100%;"/></a>
+<div class="caption">Initialzie a new pass store with `pass init`.</div>
+
 
 #### Add some items
 
