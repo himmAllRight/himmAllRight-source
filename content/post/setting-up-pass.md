@@ -64,8 +64,6 @@ am on a public computer, if I can `ssh` into one of my servers... I can access m
 
 #### Flexible
 
-*Add animation of making a saved note password*
-
 As mentioned, pass is just a bunch of encrypted plain text files. While pass can automatically
 return the first line to the clipboard for easy password entering, the contents of a pass file can
 really be anything. This gives the system a ton of flexibility, as my password items don't have to
@@ -84,21 +82,18 @@ sudo dnf install pass
 
 #### New GPG Key
 
-*TODO: Redo animations to use gpg2 :(
 <img alt="animation running gpg --gen-key" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/generate-gpg-keys.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Generate a new gpg key with `gpg2 --full-gen-key`.</div>
 
 
 #### Pass Init
 
-*TODO: Redo animations to use gpg2 :(
 <img alt="Crating new pass store with pass init" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-init.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Initialize a new pass store with `pass init`.</div>
 
 
 #### Add some items
 
-*TODO: Redo animations to use gpg2 :(
 <img alt="Adding, editing, and retrieving some passwords with `pass`, `pass insert`, `pass generate`, and `pass edit`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-add-demo.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Adding, editing, and retrieving some passwords with `pass`, `pass insert`, `pass generate`, and `pass edit`.</div>
 ##### `pass insert`
@@ -110,8 +105,10 @@ sudo dnf install pass
 
 ## Making Pass Better
 
+#### `pass git`
+
 <img alt="Managing and maintaining the password store with `pass git`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-git.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
-<div class="caption"></div>
+<div class="caption">Use git to automatically maintain your password store</div>
 
 
 ## Setting up your pass setup on a new system
