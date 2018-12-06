@@ -71,7 +71,7 @@ conform to any sort of template.
 
 ## Installing Pass & Help Packages
 
-On Fedora, pass can be installed with dnf. For other systems, check out the "Download" section of
+On Fedora, pass can be installed using dnf. For other systems, check out the "Download" section of
 the [pass website](https://www.passwordstore.org/).
 
 ```bash
@@ -80,16 +80,33 @@ sudo dnf install pass
 
 ## Configuring Pass
 
+After installing pass, there are few steps to configure it. First, we need to create a gpg key if
+one doesn't already exist. Then, we need to initialize a password store using that key.
+
+*(I went a little heavy with the animation images below. Sorry. I hope they are useful. Being a
+visual learner, at the very least they are helpful for me when I have to revist this post...)*
+
 #### New GPG Key
 
 <img alt="animation running gpg --gen-key" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/generate-gpg-keys.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Generate a new gpg key with `gpg2 --full-gen-key`.</div>
+
+First, lets create a new gpg key. To create a gpg key, the `gpg2 --gen-key` command can be used.
+However, I opted to use `gpg2 --full-gen-key` which is just a bit more detailed.
+The command will prompt for several bits of information. The default selections are fine for most
+of the options (I usually choose to use a 4096-bit key... because why not). At the end it will ask
+for a Name, Password, and optional comment.
+
+It should be noted that `gpg2` most likely needs to be used instead of `gpg` for pass. However, it
+may vary depending on distribution and the package version.
 
 
 #### Pass Init
 
 <img alt="Crating new pass store with pass init" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-init.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Initialize a new pass store with `pass init`.</div>
+
+
 
 
 #### Add some items
