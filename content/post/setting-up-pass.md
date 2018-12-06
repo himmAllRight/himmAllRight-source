@@ -86,18 +86,21 @@ sudo dnf install pass
 
 *TODO: Redo animations to use gpg2 :(
 <img alt="animation running gpg --gen-key" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/generate-gpg-keys.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
-<div class="caption">Generate a new gpg key with `gpg --gen-key`.</div>
+<div class="caption">Generate a new gpg key with `gpg2 --full-gen-key`.</div>
 
 
 #### Pass Init
 
 *TODO: Redo animations to use gpg2 :(
 <img alt="Crating new pass store with pass init" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-init.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
-<div class="caption">Initialzie a new pass store with `pass init`.</div>
+<div class="caption">Initialize a new pass store with `pass init`.</div>
 
 
 #### Add some items
 
+*TODO: Redo animations to use gpg2 :(
+<img alt="Adding, editing, and retrieving some passwords with `pass`, `pass insert`, `pass generate`, and `pass edit`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-add-demo.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
+<div class="caption">Adding, editing, and retrieving some passwords with `pass`, `pass insert`, `pass generate`, and `pass edit`.</div>
 ##### `pass insert`
 
 ##### `pass edit`
@@ -107,9 +110,8 @@ sudo dnf install pass
 
 ## Making Pass Better
 
-#### `pass git`
-
-#### `passmenu`
+<img alt="Managing and maintaining the password store with `pass git`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-git.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
+<div class="caption"></div>
 
 
 ## Setting up your pass setup on a new system
@@ -118,11 +120,16 @@ sudo dnf install pass
 
 #### export
 
+<img alt="Export a gpg key to use with pass on another system" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/export-key.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
+<div class="caption">Export a gpg key to save or use on another system.</div>
+
 #### import
+
+<img alt="Import a gpg key and trust it to use with pass" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-import-gpg-key.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
+<div class="caption">Import and trust a gpg key to use it with pass.</div>
 
 ### Pull pass repo
 
-### init
 
 
 ### Conclusion
