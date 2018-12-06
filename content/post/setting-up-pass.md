@@ -86,39 +86,96 @@ one doesn't already exist. Then, we need to initialize a password store using th
 *(I went a little heavy with the animation images below. Sorry. I hope they are useful. Being a
 visual learner, at the very least they are helpful for me when I have to revist this post...)*
 
-#### New GPG Key
+### New GPG Key
 
 <img alt="animation running gpg --gen-key" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/generate-gpg-keys.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Generate a new gpg key with `gpg2 --full-gen-key`.</div>
 
-First, lets create a new gpg key. To create a gpg key, the `gpg2 --gen-key` command can be used.
-However, I opted to use `gpg2 --full-gen-key` which is just a bit more detailed.
-The command will prompt for several bits of information. The default selections are fine for most
-of the options (I usually choose to use a 4096-bit key... because why not). At the end it will ask
-for a Name, Password, and optional comment.
+First, lets create a new gpg key. To create a gpg key, the `gpg2 --gen-key`
+command can be used.  However, I opted to use `gpg2 --full-gen-key` which is
+just a bit more detailed.  The command will prompt for several bits of
+information. The default selections are fine for most of the options (I usually
+choose to use a 4096-bit key... because why not). At the end it will ask for a
+Name, Password, and optional comment.
 
-It should be noted that `gpg2` most likely needs to be used instead of `gpg` for pass. However, it
-may vary depending on distribution and the package version.
+It should be noted that `gpg2` most likely needs to be used instead of `gpg`
+for pass. However, it may vary depending on distribution and the package
+version.
 
 
-#### Pass Init
+### Pass Init
 
 <img alt="Crating new pass store with pass init" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-init.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Initialize a new pass store with `pass init`.</div>
 
+After a gpg key has been generated, it can be used to initialize pass.
+First, get the key's ID using `gpg2 --list-secret-keys`. Then, initialize pass
+using `pass init GPG-KEY-ID`. This will create and initialize a password-store
+directory, located by default at `~/.password-store/`.
 
 
-
-#### Add some items
+### Add some items
 
 <img alt="Adding, editing, and retrieving some passwords with `pass`, `pass insert`, `pass generate`, and `pass edit`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-add-demo.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Adding, editing, and retrieving some passwords with `pass`, `pass insert`, `pass generate`, and `pass edit`.</div>
-##### `pass insert`
 
-##### `pass edit`
+With pass initialized, lets start adding passwords to it! Here are *some* of
+the most common commands to do so:
 
-##### `pass generate`
+#### insert
 
+`pass insert` ... inserts a password. Simply call it with the folder/file
+structure desired for the password, and it will then prompt for the password to
+save. That's it.
+
+```
+pass insert Shopping/amazon.com/ryan
+```
+
+#### pass generate
+
+In addition to inserting existing passwords, pass can also *generate* new ones
+using `pass generate`. Simply provide the password path, and optionally the
+length of the password. Pass will then generate a random password, spit it out
+on screen, and insert the entry to the password store.
+
+```
+pass generate Shopping/SomeFakeStore/ryan 35
+```
+
+#### pass edit
+
+Generating a password is great, but being a forgetful person, I like to keep
+additional information in my pass entries (username, email, website url). This
+is where `pass edit` comes in. To use it, call it with a password entry, and it
+will open up the contents of the entry in your favorite editor. Make your
+changes and save.
+
+```
+pass edit Shopping/SomeFakeStore/ryan
+```
+Then, in vim:
+```bash
+<&DdU1x<&~&{;w7w"kvsWdHAF-\Vi"I9Q)I
+---
+Username: ryan
+Password: <&DdU1x<&~&{;w7w"kvsWdHAF-\Vi"I9Q)I
+URL: https://www.some-bs-store.com
+Notes: I love this place!
+```
+
+#### pass
+
+It should be noted to actualy *get* stored passwords, just use `pass` with the
+password entry location. Optionally, use the `-c` flag to copy the password
+(first line if a multi-line entry) to the clipboard instead of spewing it into
+the terminal.
+
+```bash
+pass Shopping/SomeFakeStore/ryan
+## or ##
+pass -c Shopping/SomeFakeStore/ryan
+```
 
 ## Making Pass Better
 
