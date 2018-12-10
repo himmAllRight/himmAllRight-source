@@ -179,10 +179,25 @@ pass -c Shopping/SomeFakeStore/ryan
 
 ## Making Pass Better
 
+With pass's flexibility, there are many ways to make it function better for each user's needs.
+For me, there are probably two features/extentions that I've utilized over the years to make my
+pass experience *much* more enjoyable.
+
 #### `pass git`
 
 <img alt="Managing and maintaining the password store with `pass git`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-git.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Use git to automatically maintain your password store</div>
+
+Pass items are just gpg encrypted text files. This means that they are easily version controlled
+with something like git, which `pass` has built in support for with `pass git`. If a password-store
+is linked up to a git repo, normal git commands (`add`, `mv`, `rm`...) can be used with the store.
+Additionally, `pass git` will automatically create commits whenever the password-store is modified.
+
+
+I use this in order to keep all of my devices up to date with my passwords. I host my password
+store's git repo on a private server, and point my devices to it. To sync password-stores between
+devices, simply issue the commands `pass git push` on the updated machine, and then `pass git pull`
+on the others.
 
 
 #### `passmeu`
@@ -195,6 +210,20 @@ Your browser does not support the video tag.
 </video>
 <div id="caption">`passmenu` lets you easily search and select a pass item.</div>
 </center>
+
+While having a CLI password manager is nice when working with headless systems, it is a bit
+cumbersome for normal day-to-day use. That's where
+[passmenu](https://git.zx2c4.com/password-store/tree/contrib/dmenu/passmenu) shines. Passmenu is a
+script (now built into the upstream project) that connects pass with the legendary
+[dmenu](https://tools.suckless.org/dmenu/) selection menu. When `passmenu` is run, `dmenu` opens up
+with all the password store items to be selected, or searched. When a pass item in dmenu is
+selected, the user is prompted for the gpg password (if it hasn't been unlocked in awhile), and the
+pass item's password is then temporarily added to the user's clipboard.
+
+In my computers, I always bind the command `passmenu` to the keys `SUPER` + `SHIFT` + `P`.
+Whenever I need a password, I just hit those keys, dmenu pops up so I can search for the password I want,
+type in my master passphrase, and then simply paste the password wherever I want it. It's very
+easy to use.
 
 ## Setting up your pass setup on a new system
 
