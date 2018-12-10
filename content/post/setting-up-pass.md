@@ -166,7 +166,7 @@ Notes: I love this place!
 
 #### pass
 
-It should be noted to actualy *get* stored passwords, just use `pass` with the
+It should be noted to actually *get* stored passwords, just use `pass` with the
 password entry location. Optionally, use the `-c` flag to copy the password
 (first line if a multi-line entry) to the clipboard instead of spewing it into
 the terminal.
@@ -184,6 +184,17 @@ pass -c Shopping/SomeFakeStore/ryan
 <img alt="Managing and maintaining the password store with `pass git`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-git.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Use git to automatically maintain your password store</div>
 
+
+#### `passmeu`
+
+<center>
+<video style="max-width:100%;" controls>
+  <source src="../../img/posts/setting-up-pass/passmenu_demo.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<div id="caption">`passmenu` lets you easily search and select a pass item.</div>
+</center>
 
 ## Setting up your pass setup on a new system
 
