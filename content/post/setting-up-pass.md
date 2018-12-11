@@ -1,6 +1,6 @@
 +++
 title  = "Configuring Pass, the Standard Unix Password Manager"
-date   = "2018-12-04"
+date   = "2018-12-12"
 author = "Ryan Himmelwright"
 image  = "img/header-images/liberty-brick-lock.jpg"
 caption= "Liberty Warehouse Apartments, Durham, NC"
@@ -227,20 +227,53 @@ easy to use.
 
 ## Setting up your pass setup on a new system
 
-### add gpg keys
+Setting up a new system is relatively easy. The hardest part about is exporting/import the gpg
+keys... but even that isn't too complicated.
 
-#### export
+#### Export GPG Key
 
 <img alt="Export a gpg key to use with pass on another system" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/export-key.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Export a gpg key to save or use on another system.</div>
 
-#### import
+First, the password-store's gpg key must be exported to a file to transfer to another system. To do
+this, first use `gpg2 --list-secret-keys` to confirm the key's ID. Then, export the key to a file
+name with the following command:
+
+```
+gpg2 --export-secret-keys KEY-ID >> key-filename.gpg
+```
+
+Next, transfer the file to the new machine.
+
+#### Import GPG Key
 
 <img alt="Import a gpg key and trust it to use with pass" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-import-gpg-key.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Import and trust a gpg key to use it with pass.</div>
 
-### Pull pass repo
+With the exported gpg key file on the new machine we can import it using the command (note, you
+will need to enter the key's passphrase):
+
+```
+gpg2 --import key-filename.gpg
+```
+
+After the key is imported, it needs to be edited to change the *trust level* to *ultimate*. Use the
+command `gpg2 --edit-key KEY-ID` to enter the edit prompt. From there, type `trust` and hit `ENTER`
+to edit the key's trust. The various levels will be shown on screen. Enter and confirm `5`, to select
+'Ultimate'. Lastly, enter `quit` to leave the gpg editing cli.
 
 
+#### Pull Pass Repo
+
+Lastly, pull the password store to the new machine. If using git, this can be done with `pass git
+clone`... although if I'm being honest, I usually just do a normal `git clone`, and then move the
+directory to `~/.password-store/`. If not using git, just copy the store's directory and files to
+the new machine. The important thing is that the store can be found at `~/.password-store` (by
+default, this of course can be changed during a `pass init`).
 
 ### Conclusion
+
+That's about it. As I previously stated, I've been loving pass for years now. It's very simple, but
+generic and flexible. I don't plan to be switching off of it any time soon. At this point, if there is something I
+want to improve with my password setup... I'm sure the community has already created a solution
+using  pass.
