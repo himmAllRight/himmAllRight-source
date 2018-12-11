@@ -9,38 +9,44 @@ draft  = false
 Comments = "True"
 +++
 
-I've been using `pass` for several years now to manage my passwords. I used to have issues setting
-it up on a new machine, but those days appear to be ove. It is a simple, but flexible system.
-Here's how to get started.
+I've been using `pass` to manage my passwords for quite some time.
+Occasionally, during the early days of use I had difficulty configuring it on
+new machines, but those days appear to be long gone. It is a simple, generic,
+but flexible system.  Here's how to get started.
 
 <!--more-->
 
 ## My Password Manager History
 
-For the longest time... I didn't use a password manager (but in my defence, not
-many people did). Then in college, I started using
-[lastpass](https://www.lastpass.com/). It was simple and made it easy for me to
-switch all my passwords to randomly generated ones. It even allowed me to
-configure my [yubikey](https://www.yubico.com) with it. It was a good system
-and worked for years.
+For the longest time, I didn't use a password manager (in my defence, not many
+people did). Then in college, I started using
+[LastPass](https://www.lastpass.com/). It was simple and made it easy to switch
+all of my passwords to randomly generated ones. I had a good system that
+worked for a few years, and  was even able to integrate my
+[yubikey](https://www.yubico.com) with it.
 
 
 <center>
 <a href="../../img/posts/setting-up-pass/LastPass-Logo.png"><img alt="LastPass logo" src="../../img/posts/setting-up-pass/LastPass-Logo.png" style="max-width: 100%;"/></a>
 </center>
 
-Then, in 2015, Lastpass was acquired by [LogMeIn](https://www.logmeininc.com),
+Then in 2015, Lastpass was acquired by [LogMeIn](https://www.logmeininc.com),
 which had a questionable past of Linux support. Like many others in the open
-source community... I started looking for alternatives. I had already started
-to keep my eyes opened for a replacement even before the acquisition because
-there was one big issue I had with LastPass... it largely worked as a Chrome or
-Firefox plugin. As someone who occasionally uses other browsers like
-[qutebrowser](https://qutebrowser.org), or works on headless machines, I try
-not to use applications that exist solely as a FireFox/Chome app.
-Additionally... I'm not a fan of web-apps.
+source community... I started looking for alternatives.
 
-So, as I watched others switch their password manager, I watched Chris Fischer
-of the Linux Action Show, switch to
+I had already been searching for a LastPass replacement even before the
+acquisition. My search was mainly fueled by one big issue I had with
+LastPass... it required a web browser to use.  Additionally, to utilize it's full
+feature set, it needed to run as a Chrome or Firefox plugin. As someone who
+often uses alternative web browsers (like [qutebrowser](https://qutebrowser.org)),
+or works on headless machines, I try not to use applications that exist solely
+as a FireFox/Chome app.  I'm also not a fan of pure website-apps in
+general.
+
+So, as the I watched others switch password managers amongst the acquisition
+hype, one switch I remember seeing was Chris Fischer of the Linux Action Show.
+In episode 387 of LAS, Chris and Noah discussed LastPass alternatives, and
+Chris highlighted his switch to
 [pass](https://www.youtube.com/watch?v=OfgZ5Fh-NfE&feature=youtu.be&t=4935).
 While I don't think he kept with the system long-term... I have.
 
@@ -273,7 +279,7 @@ default, this of course can be changed during a `pass init`).
 
 ### Conclusion
 
-That's about it. As I previously stated, I've been loving pass for years now. It's very simple, but
-generic and flexible. I don't plan to be switching off of it any time soon. At this point, if there is something I
-want to improve with my password setup... I'm sure the community has already created a solution
-using  pass.
+That's about it. As I previously stated, I've been loving pass for years, and I
+don't plan to be switching off of it any time soon. At this point, if there is
+something I want to improve with my password setup... I'm sure the community
+has already created a solution using  pass.
