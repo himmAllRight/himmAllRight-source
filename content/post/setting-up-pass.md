@@ -54,31 +54,38 @@ While I don't think he kept with the system long-term... I have.
 
 #### Unix Philosophy "Simplicity"
 
-While the average computer might not think `pass` is "simple", designed to follow the [Unix
-philosophy](https://en.wikipedia.org/wiki/Unix_philosophy), pass's architecture is. At its core,
-pass is just a bunch of [gpg](https://en.wikipedia.org/wiki/GNU_Privacy_Guard) encrypted text
-files. This model makes pass easily compatible with many other great tools, like bash, git,
+Okay. The average computer user might not think `pass` is "simple". I agree.
+However, being designed to follow the [Unix
+philosophy](https://en.wikipedia.org/wiki/Unix_philosophy), pass's architecture
+*is*. Basically, pass is just a nice wrapper around a bunch of
+[gpg](https://en.wikipedia.org/wiki/GNU_Privacy_Guard) encrypted text files. It
+is a minimal, but tested solution.  This model makes pass easily compatible
+with many other great tools, like bash, git,
 [dmenu](https://git.zx2c4.com/password-store/tree/contrib/dmenu),
-[xmonad](https://hackage.haskell.org/package/xmonad-contrib-0.13/docs/XMonad-Prompt-Pass.html) and
-[emacs](https://git.zx2c4.com/password-store/tree/contrib/emacs).
+[xmonad](https://hackage.haskell.org/package/xmonad-contrib-0.13/docs/XMonad-Prompt-Pass.html)
+and [emacs](https://git.zx2c4.com/password-store/tree/contrib/emacs).
 
-#### Can access on a headless system
+#### Usable on a Headless System
 
-Being a command-line tool, I can use pass anywhere, no matter how strange my setup may be. I can
-have it on my desktop, on a headless server, or even inside a container. This means that even if I
-am on a public computer, if I can `ssh` into one of my servers... I can access my passwords.
+As a command-line tool, I can use pass anywhere. It doesn't matter how
+conventional or strange the setup may be. I can have it on my desktop, on a
+headless server, or even inside a container. It makes no difference. As a
+result, even if I am on a public computer, if I can `ssh` into one of my
+servers... I can access my passwords.
 
 #### Flexible
 
-As mentioned, pass is just a bunch of encrypted plain text files. While pass can automatically
-return the first line to the clipboard for easy password entering, the contents of a pass file can
-really be anything. This gives the system a ton of flexibility, as my password items don't have to
-conform to any sort of template.
+As mentioned, pass is just a bunch of encrypted text files. By default, pass
+automatically returns the first line to the clipboard for easy password
+entering. However, the multi-line contents of a pass file can be anything. For
+example, pass could be used securely store encrypted notes. This gives the
+system a ton of flexibility, as my password items don't *have* to conform to
+any sort of template.
 
 ## Installing Pass & Help Packages
 
-On Fedora, pass can be installed using dnf. For other systems, check out the "Download" section of
-the [pass website](https://www.passwordstore.org/).
+On Fedora, pass can be installed using `dnf`. For other systems, check out the
+"Download" section of the [pass website](https://www.passwordstore.org/).
 
 ```bash
 sudo dnf install pass
@@ -89,24 +96,25 @@ sudo dnf install pass
 After installing pass, there are few steps to configure it. First, we need to create a gpg key if
 one doesn't already exist. Then, we need to initialize a password store using that key.
 
-*(I went a little heavy with the animation images below. Sorry. I hope they are useful. Being a
-visual learner, at the very least they are helpful for me when I have to revist this post...)*
+**Note:** *I went a little heavy with the animation images in the remainder of
+the post. Sorry. I hope they are more useful than annoying. Being a visual learner, at the very
+least they are helpful for me when I reference this post in the future. ...*
 
 ### New GPG Key
 
 <img alt="animation running gpg --gen-key" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/generate-gpg-keys.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Generate a new gpg key with `gpg2 --full-gen-key`.</div>
 
-First, lets create a new gpg key. To create a gpg key, the `gpg2 --gen-key`
-command can be used.  However, I opted to use `gpg2 --full-gen-key` which is
-just a bit more detailed.  The command will prompt for several bits of
-information. The default selections are fine for most of the options (I usually
-choose to use a 4096-bit key... because why not). At the end it will ask for a
-Name, Password, and optional comment.
+To create a gpg key, the `gpg2 --gen-key` command is normally used.  However, I
+opted to use `gpg2 --full-gen-key`, which allows for a bit more control during
+setup.  The command will prompt for several bits of information, and the default
+selections are generally fine for most of the option. I usually opt to use a 4096-bit
+key, because... why not? At the end it will ask for a name, Password, and
+optional comment.
 
-It should be noted that `gpg2` most likely needs to be used instead of `gpg`
+*It should be noted that `gpg2` most likely needs to be used instead of `gpg`
 for pass. However, it may vary depending on distribution and the package
-version.
+versions.*
 
 
 ### Pass Init
