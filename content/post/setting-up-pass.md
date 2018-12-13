@@ -94,7 +94,7 @@ sudo dnf install pass
 ## Configuring Pass
 
 After installing pass, there are few steps to configure it. First, we need to create a gpg key if
-one doesn't already exist. Then, we need to initialize a password store using that key.
+one doesn't already exist. Then, we need to initialize a password-store using that key.
 
 **Note:** *I went a little heavy with the animation images in the remainder of
 the post. Sorry. I hope they are more useful than annoying. Being a visual learner, at the very
@@ -122,10 +122,9 @@ versions.*
 <img alt="Crating new pass store with pass init" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-init.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Initialize a new pass store with `pass init`.</div>
 
-After a gpg key has been generated, it can be used to initialize pass.
-First, get the key's ID using `gpg2 --list-secret-keys`. Then, initialize pass
-using `pass init GPG-KEY-ID`. This will create and initialize a password-store
-directory, located by default at `~/.password-store/`.
+After a gpg key has been generated, it can be used with pass.  First, find the key's ID by using
+`gpg2 --list-secret-keys`. Then, configure pass with `pass init GPG-KEY-ID`. This will create a
+password-store directory, located by default at `~/.password-store/`.
 
 
 ### Add some items
@@ -138,8 +137,8 @@ the most common commands to do so:
 
 #### insert
 
-`pass insert` ... inserts a password. Simply call it with the folder/file
-structure desired for the password, and it will then prompt for the password to
+Simply put, `pass insert` ... inserts a password. Call it with the desired folder/file
+structure for the password, and pass will then prompt for the password to
 save. That's it.
 
 ```
@@ -148,10 +147,10 @@ pass insert Shopping/amazon.com/ryan
 
 #### pass generate
 
-In addition to inserting existing passwords, pass can also *generate* new ones
-using `pass generate`. Simply provide the password path, and optionally the
+In addition to inserting existing passwords, pass can also *generate new* ones
+using `pass generate`. Just provide the password path, and optionally the
 length of the password. Pass will then generate a random password, spit it out
-on screen, and insert the entry to the password store.
+on screen, and insert the entry to the password-store.
 
 ```
 pass generate Shopping/SomeFakeStore/ryan 35
@@ -159,11 +158,12 @@ pass generate Shopping/SomeFakeStore/ryan 35
 
 #### pass edit
 
-Generating a password is great, but being a forgetful person, I like to keep
-additional information in my pass entries (username, email, website url). This
-is where `pass edit` comes in. To use it, call it with a password entry, and it
-will open up the contents of the entry in your favorite editor. Make your
-changes and save.
+Generating passwords is great, but being a forgetful person, I like to keep additional information
+in my pass entries (username, email, website url). This is where `pass edit` comes in. When called,
+`pass edit` will open up the contents of the entry in the default editor. From there, make the
+changes, and save.
+
+For example:
 
 ```
 pass edit Shopping/SomeFakeStore/ryan
@@ -180,7 +180,7 @@ Notes: I love this place!
 
 #### pass
 
-It should be noted to actually *get* stored passwords, just use `pass` with the
+Lastly, to retrieve stored passwords, call `pass` with the
 password entry location. Optionally, use the `-c` flag to copy the password
 (first line if a multi-line entry) to the clipboard instead of spewing it into
 the terminal.
@@ -193,28 +193,24 @@ pass -c Shopping/SomeFakeStore/ryan
 
 ## Making Pass Better
 
-With pass's flexibility, there are many ways to make it function better for each user's needs.
-For me, there are probably two features/extentions that I've utilized over the years to make my
-pass experience *much* more enjoyable.
+With pass's flexibility, there are many additional features to help improve it for each user's
+needs.  For me, there are two extensions that make my pass experience *much* more enjoyable.
 
-#### `pass git`
+### Pass Git
 
-<img alt="Managing and maintaining the password store with `pass git`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-git.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
-<div class="caption">Use git to automatically maintain your password store</div>
+<img alt="Managing and maintaining the password-store with `pass git`" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-git.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
+<div class="caption">Use git to automatically maintain your password-store</div>
 
-Pass items are just gpg encrypted text files. This means that they are easily version controlled
-with something like git, which `pass` has built in support for with `pass git`. If a password-store
+Password-Store items are text files, which allows them to be easily version controlled.
+Consequently, pass has built in support for git, with the `pass git` command. If a password-store
 is linked up to a git repo, normal git commands (`add`, `mv`, `rm`...) can be used with the store.
-Additionally, `pass git` will automatically create commits whenever the password-store is modified.
+
+Additionally, when modifying the store's contents, `pass git` will automatically create commits
+that reflect the changes. After adding or modifying a password, simply issue the command `pass git push` on the updated
+machine, and then `pass git pull` on others to sync the changes.
 
 
-I use this in order to keep all of my devices up to date with my passwords. I host my password
-store's git repo on a private server, and point my devices to it. To sync password-stores between
-devices, simply issue the commands `pass git push` on the updated machine, and then `pass git pull`
-on the others.
-
-
-#### `passmeu`
+### Passmeu
 
 <center>
 <video style="max-width:100%;" controls>
@@ -225,63 +221,64 @@ Your browser does not support the video tag.
 <div id="caption">`passmenu` lets you easily search and select a pass item.</div>
 </center>
 
-While having a CLI password manager is nice when working with headless systems, it is a bit
-cumbersome for normal day-to-day use. That's where
-[passmenu](https://git.zx2c4.com/password-store/tree/contrib/dmenu/passmenu) shines. Passmenu is a
-script (now built into the upstream project) that connects pass with the legendary
-[dmenu](https://tools.suckless.org/dmenu/) selection menu. When `passmenu` is run, `dmenu` opens up
-with all the password store items to be selected, or searched. When a pass item in dmenu is
-selected, the user is prompted for the gpg password (if it hasn't been unlocked in awhile), and the
-pass item's password is then temporarily added to the user's clipboard.
+While having a CLI password manager is nice when working with headless systems, it can be a bit
+cumbersome for normal day-to-day use. Hence,
+[passmenu](https://git.zx2c4.com/password-store/tree/contrib/dmenu/passmenu).
 
-In my computers, I always bind the command `passmenu` to the keys `SUPER` + `SHIFT` + `P`.
-Whenever I need a password, I just hit those keys, dmenu pops up so I can search for the password I want,
-type in my master passphrase, and then simply paste the password wherever I want it. It's very
-easy to use.
+Passmenu is a script (now built into the upstream project) that wraps
+[dmenu](https://tools.suckless.org/dmenu/) around pass. When `passmenu` is run, `dmenu` opens up
+with all the password-store items to search/filter from. When an item is
+selected in dmenu, the user is prompted for the gpg password (if it hasn't been unlocked recently),
+after which the password is then temporarily added to the user's clipboard.
+
+On all my computers, I bind the command `passmenu` to the keys `SUPER` + `SHIFT` + `P`.  Whenever I
+need a password, I just hit those three keys, and dmenu pops up so I can search for the password I
+want.  After typing in my master passphrase, I can simply paste the password wherever I need it.
+It's very convenient to use.
+
+*See Also: [rofi-pass](https://github.com/carnager/rofi-pass)*
 
 ## Setting up your pass setup on a new system
 
-Setting up a new system is relatively easy. The hardest part about is exporting/import the gpg
-keys... but even that isn't too complicated.
+Now that I've done it over a hundred times, setting up a new system is easy.
 
 #### Export GPG Key
 
 <img alt="Export a gpg key to use with pass on another system" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/export-key.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Export a gpg key to save or use on another system.</div>
 
-First, the password-store's gpg key must be exported to a file to transfer to another system. To do
-this, first use `gpg2 --list-secret-keys` to confirm the key's ID. Then, export the key to a file
-name with the following command:
+First, export the password-store's gpg key.  To do that, use `gpg2 --list-secret-keys` to confirm the
+key's ID, then export that key to a file with the following command:
 
 ```
 gpg2 --export-secret-keys KEY-ID >> key-filename.gpg
 ```
 
-Next, transfer the file to the new machine.
+Next, transfer that file to the new machine.
 
 #### Import GPG Key
 
 <img alt="Import a gpg key and trust it to use with pass" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/pass-import-gpg-key.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Import and trust a gpg key to use it with pass.</div>
 
-With the exported gpg key file on the new machine we can import it using the command (note, you
-will need to enter the key's passphrase):
+On the new machine, import the gpg key using the following command (note, you
+will be required to enter the key's passphrase):
 
 ```
 gpg2 --import key-filename.gpg
 ```
 
-After the key is imported, it needs to be edited to change the *trust level* to *ultimate*. Use the
+After the key is imported, it will need to be edited to set the *trust level* to *ultimate*. Use the
 command `gpg2 --edit-key KEY-ID` to enter the edit prompt. From there, type `trust` and hit `ENTER`
 to edit the key's trust. The various levels will be shown on screen. Enter and confirm `5`, to select
-'Ultimate'. Lastly, enter `quit` to leave the gpg editing cli.
+'Ultimate'. Lastly, use `quit` to leave the gpg key editor.
 
 
 #### Pull Pass Repo
 
-Lastly, pull the password store to the new machine. If using git, this can be done with `pass git
-clone`... although if I'm being honest, I usually just do a normal `git clone`, and then move the
-directory to `~/.password-store/`. If not using git, just copy the store's directory and files to
+With the keys configured, the last step is to pull down the password-store to the new machine. If using git, this can be done with `pass git
+clone`... although if I'm being honest, I usually just do a normal `git clone`, and then move
+the folder to `~/.password-store/`. If not using git, just copy the store's directory and files to
 the new machine. The important thing is that the store can be found at `~/.password-store` (by
 default, this of course can be changed during a `pass init`).
 
