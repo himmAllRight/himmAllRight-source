@@ -5,7 +5,7 @@ author = "Ryan Himmelwright"
 image  = "img/header-images/nc-sun-in-trees1.jpg"
 caption= "North Carolina Arboretum (Pisgah National Forest), Asheville, NC"
 tags   = ["Hardware", "Monitors", "Linux", "KDE"]
-draft  = false
+draft  = true
 Comments = "True"
 +++
 

@@ -10,11 +10,13 @@ Comments = "True"
 +++
 
 I've been using `pass` to manage my passwords for quite some time.
-Occasionally, during the early days of use I had difficulty configuring it on
+During the early days of use, I occasionally had difficulty configuring it on
 new machines, but those days appear to be long gone. It is a simple, generic,
-but flexible system.  Here's how to get started.
+yet flexible system.  Here's how to get started.
 
 <!--more-->
+
+*(but first, some background... feel free to skip ahead)*
 
 ## My Password Manager History
 
@@ -40,12 +42,12 @@ LastPass... it required a web browser to use.  Additionally, to utilize it's ful
 feature set, it needed to run as a Chrome or Firefox plugin. As someone who
 often uses alternative web browsers (like [qutebrowser](https://qutebrowser.org)),
 or works on headless machines, I try not to use applications that exist solely
-as a FireFox/Chome app.  I'm also not a fan of pure website-apps in
+as a FireFox/Chome app.  I am also not a fan of pure website-apps in
 general.
 
 So, as the I watched others switch password managers amongst the acquisition
 hype, one switch I remember seeing was Chris Fischer of the Linux Action Show.
-In episode 387 of LAS, Chris and Noah discussed LastPass alternatives, and
+In episode 387 of LAS, Chris and Noah (his co-host) discussed LastPass alternatives, and
 Chris highlighted his switch to
 [pass](https://www.youtube.com/watch?v=OfgZ5Fh-NfE&feature=youtu.be&t=4935).
 While I don't think he kept with the system long-term... I have.
@@ -54,33 +56,30 @@ While I don't think he kept with the system long-term... I have.
 
 #### Unix Philosophy "Simplicity"
 
-Okay. The average computer user might not think `pass` is "simple". I agree.
+Okay. The average computer user will not think `pass` is "simple". I agree.
 However, being designed to follow the [Unix
-philosophy](https://en.wikipedia.org/wiki/Unix_philosophy), pass's architecture
-*is*. Basically, pass is just a nice wrapper around a bunch of
+philosophy](https://en.wikipedia.org/wiki/Unix_philosophy), pass's *architecture
+is*. Basically, pass is just a nice wrapper around a bunch of
 [gpg](https://en.wikipedia.org/wiki/GNU_Privacy_Guard) encrypted text files. It
 is a minimal, but tested solution.  This model makes pass easily compatible
-with many other great tools, like bash, git,
+with many other great tools, such as bash, git,
 [dmenu](https://git.zx2c4.com/password-store/tree/contrib/dmenu),
 [xmonad](https://hackage.haskell.org/package/xmonad-contrib-0.13/docs/XMonad-Prompt-Pass.html)
 and [emacs](https://git.zx2c4.com/password-store/tree/contrib/emacs).
 
-#### Usable on a Headless System
+#### Command Line Tool
 
-As a command-line tool, I can use pass anywhere. It doesn't matter how
-conventional or strange the setup may be. I can have it on my desktop, on a
-headless server, or even inside a container. It makes no difference. As a
-result, even if I am on a public computer, if I can `ssh` into one of my
-servers... I can access my passwords.
+As a command-line tool, I can use pass anywhere. It doesn't matter how conventional or strange the
+setup may be. I can have it on my desktop, on a headless server, or even inside a container. It
+makes no difference.  Even if I am on a public computer, if I can `ssh` into one of my servers, I
+can access my passwords.
 
 #### Flexible
 
-As mentioned, pass is just a bunch of encrypted text files. By default, pass
-automatically returns the first line to the clipboard for easy password
-entering. However, the multi-line contents of a pass file can be anything. For
-example, pass could be used securely store encrypted notes. This gives the
-system a ton of flexibility, as my password items don't *have* to conform to
-any sort of template.
+By default, pass assumes the first line of a store file is the password.  However, the
+multi-line contents of a pass file can be anything. For example, pass could be used securely store
+encrypted notes. This gives the system a ton of flexibility, as the password items don't *have* to
+conform to any sort of template.
 
 ## Installing Pass & Help Packages
 
@@ -105,12 +104,11 @@ least they are helpful for me when I reference this post in the future. ...*
 <img alt="animation running gpg --gen-key" src="../../img/posts/setting-up-pass/animation-hover.png" onmouseover="this.src='../../img/posts/setting-up-pass/generate-gpg-keys.gif'" onmouseout="this.src='../../img/posts/setting-up-pass/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Generate a new gpg key with `gpg2 --full-gen-key`.</div>
 
-To create a gpg key, the `gpg2 --gen-key` command is normally used.  However, I
-opted to use `gpg2 --full-gen-key`, which allows for a bit more control during
-setup.  The command will prompt for several bits of information, and the default
-selections are generally fine for most of the option. I usually opt to use a 4096-bit
-key, because... why not? At the end it will ask for a name, Password, and
-optional comment.
+To create a gpg key, the `gpg2 --gen-key` command is normally used.  However, I opted to use `gpg2
+--full-gen-key`, which allows for a bit more control during setup.  The command will prompt for
+several bits of information, and the default selections are generally fine for most of the options
+(Personally, I use a 4096-bit key, because... why not?). At the end it will ask for a
+name, Password, and optional comment.
 
 *It should be noted that `gpg2` most likely needs to be used instead of `gpg`
 for pass. However, it may vary depending on distribution and the package
@@ -181,7 +179,7 @@ Notes: I love this place!
 #### pass
 
 Lastly, to retrieve stored passwords, call `pass` with the
-password entry location. Optionally, use the `-c` flag to copy the password
+password entry. Optionally, use the `-c` flag to copy the password
 (first line if a multi-line entry) to the clipboard instead of spewing it into
 the terminal.
 
@@ -202,11 +200,11 @@ needs.  For me, there are two extensions that make my pass experience *much* mor
 <div class="caption">Use git to automatically maintain your password-store</div>
 
 Password-Store items are text files, which allows them to be easily version controlled.
-Consequently, pass has built in support for git, with the `pass git` command. If a password-store
+Consequently, pass has built in support for git with the `pass git` command. If a password-store
 is linked up to a git repo, normal git commands (`add`, `mv`, `rm`...) can be used with the store.
 
 Additionally, when modifying the store's contents, `pass git` will automatically create commits
-that reflect the changes. After adding or modifying a password, simply issue the command `pass git push` on the updated
+that reflect the changes. After adding or modifying a password, issue the command `pass git push` on the updated
 machine, and then `pass git pull` on others to sync the changes.
 
 
@@ -233,14 +231,14 @@ after which the password is then temporarily added to the user's clipboard.
 
 On all my computers, I bind the command `passmenu` to the keys `SUPER` + `SHIFT` + `P`.  Whenever I
 need a password, I just hit those three keys, and dmenu pops up so I can search for the password I
-want.  After typing in my master passphrase, I can simply paste the password wherever I need it.
-It's very convenient to use.
+want.  After typing in my master passphrase, I can paste the password wherever I need it.  Passmenu
+makes pass much more reasonable to use.
 
 *See Also: [rofi-pass](https://github.com/carnager/rofi-pass)*
 
 ## Setting up your pass setup on a new system
 
-Now that I've done it over a hundred times, setting up a new system is easy.
+Now that I've done it over a hundred times, setting up a new system is easy. Here's my usual steps:
 
 #### Export GPG Key
 
@@ -268,23 +266,23 @@ will be required to enter the key's passphrase):
 gpg2 --import key-filename.gpg
 ```
 
-After the key is imported, it will need to be edited to set the *trust level* to *ultimate*. Use the
-command `gpg2 --edit-key KEY-ID` to enter the edit prompt. From there, type `trust` and hit `ENTER`
-to edit the key's trust. The various levels will be shown on screen. Enter and confirm `5`, to select
-'Ultimate'. Lastly, use `quit` to leave the gpg key editor.
+After the key is imported, its *trust level* will have to be set to *ultimate*. Use the command
+`gpg2 --edit-key KEY-ID` to enter the edit prompt. From there, type `trust` and hit `ENTER`. The
+various levels will be shown on screen. Enter and confirm `5`, to select 'Ultimate'. Lastly, use
+`quit` to leave the gpg key editor.
 
 
 #### Pull Pass Repo
 
 With the keys configured, the last step is to pull down the password-store to the new machine. If using git, this can be done with `pass git
-clone`... although if I'm being honest, I usually just do a normal `git clone`, and then move
+clone`... but if I'm being honest, I usually just do a normal `git clone`, and then move
 the folder to `~/.password-store/`. If not using git, just copy the store's directory and files to
 the new machine. The important thing is that the store can be found at `~/.password-store` (by
-default, this of course can be changed during a `pass init`).
+default, this of course can be changed using `pass init`).
 
 ### Conclusion
 
 That's about it. As I previously stated, I've been loving pass for years, and I
 don't plan to be switching off of it any time soon. At this point, if there is
 something I want to improve with my password setup... I'm sure the community
-has already created a solution using  pass.
+has already figured out how to do it with pass!
