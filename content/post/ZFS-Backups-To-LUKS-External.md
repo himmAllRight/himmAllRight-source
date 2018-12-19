@@ -4,7 +4,7 @@ date    = "2017-04-20"
 lastmod = "2017-05-12"
 author  = "Ryan Himmelwright"
 image   = "img/header-images/drives1.png"
-tags    = ["Homelab", "ZFS", "Linux",]
+tags    = ["Homelab", "Filesystems", "ZFS", "Linux",]
 +++
 
 I have been using [ZFS](https://en.wikipedia.org/wiki/ZFS) data pools to store data on [my server](../../pages/homelab/#ninetales) for some time now. As great as that is, I am ashamed to admit that I have not had a *true* backup system in place (raid/mirrors are not backup). I have a backup solution that I have attempted in the past, but ran into an issue and let it drift to the side. That changes now. It's time to revisit my solution, and complete it to the end.
@@ -29,7 +29,7 @@ cryptsetup luksFormat --cipher aes-xts-plain64 --key-size 512 --iter-time 10000 
 ```
 `--cipher aex-xts-plain64`and `--key-size 512` refer to the algorithm and key size used to encrypt the data. In general, the larger the key, the harder the encryption is to crack.
 
-`--iter-time 10000` and `--use-random -y` are additional precautions to make it more difficult to crack the encryption. The `--iter-time 10000` means it will spend at least 10 seconds processing the passphrase each time the disk is unlocked. This makes it much harder to brute-force the passphrase. 
+`--iter-time 10000` and `--use-random -y` are additional precautions to make it more difficult to crack the encryption. The `--iter-time 10000` means it will spend at least 10 seconds processing the passphrase each time the disk is unlocked. This makes it much harder to brute-force the passphrase.
 
 Once the device is encrypted, we need to unlock it and map it as a device. This is done using the command:
 
@@ -47,7 +47,7 @@ I am creating a zpool using just my single external drive, so the setup is very 
 sudo zpool create externalBackup sdf-enc
 ```
 
-That's it. 
+That's it.
 
 
 ### Taking Base Snapshots
@@ -107,7 +107,7 @@ sudo zfs send -R -i Data@DataBackupBase Data@DataBackup20170418 | sudo zfs recv 
 ```
 
 
-Notice that I specify *two* snapshots in the send command, to define the range of differences to send. 
+Notice that I specify *two* snapshots in the send command, to define the range of differences to send.
 
 #### A Minor Issue
 
@@ -137,7 +137,7 @@ sudo cryptSetup luksClose sdf-enc
 After that, I was able to unplug the external drive, and store it in a safe location, until I need to backup data to it again.
 
 ### Opening and Importing zpool for Recurring Backups
-Lastly, there are a few steps to take when reconnecting the drive to run a daily/monthly/weekly (whatever) backup. First, the drive must be decrypted and mounted, using the same command as above: 
+Lastly, there are a few steps to take when reconnecting the drive to run a daily/monthly/weekly (whatever) backup. First, the drive must be decrypted and mounted, using the same command as above:
 
 ```
 sudo cryptSetup luksOpen /dev/sdf sdf-enc
