@@ -32,7 +32,8 @@ Ryzen 5 2600 [3.4 GHz (3.9GHz Turbo), 6 Cores, 12 Threads)
 MSI B450 Tomahawk Motherboard
 32 GB (2x16GB) DDR4-3200 Mhz RAM
 Sapphire 1024 4GB PULSE Radeon RX 560 GPU
-250 GB Samsung EVO SSD
+500 GB Samsung 970 EVO NVME SSD
+250 GB Samsung 850 EVO SATA SSD
 Fractal Design Meshify C Dark TG ATX Mid Tower Case
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
 Fedora 29 (KDE Plasma Spin)
