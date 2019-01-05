@@ -116,6 +116,7 @@ pipeline command that returns the number of files/directories in the current dir
 ```shell
 ➜ ls
 dirA  dirB  file1  file2
+
 ➜ ls | wc -l
 4
 ```
@@ -142,8 +143,11 @@ some `*.swp` files from editing in vim.
 ./file1.retry
 ./dirA/file5.retry
 ./dirA/file3.retry
+
 ➜ rm $(find . | grep .retry)    ## Delete *.retry files
+
 ➜ find . | grep .retry          ## Check that they were deleted
+
 ➜
 ```
 
