@@ -1,5 +1,5 @@
 +++
-title  = "Shell Shit: Find, Grep, and Command Substitution"
+title  = "Shell Stuff: Find, Grep, and Command Substitution"
 date   = "2019-01-05"
 author = "Ryan Himmelwright"
 image  = "img/header-images/ww1-park-x230.jpg"
@@ -33,6 +33,32 @@ finds.
 
 Example:
 
+```text
+➜  tree
+.
+├── dirA
+│   ├── file3
+│   ├── file4
+│   └── file5
+├── dirB
+│   └── file6
+├── file1
+└── file2
+
+2 directories, 6 files
+
+➜  find .
+.
+./file2
+./file1
+./dirB
+./dirB/file6
+./dirA
+./dirA/file5
+./dirA/file4
+./dirA/file3
+```
+
 #### `grep`
 
 Another classic, searches for a pattern in each file provided, **or** text it
@@ -40,10 +66,35 @@ is passed through a pipe (this is important for our use-case).
 
 Example:
 
+```text
+➜  cat file1
+This is a fake file
+with a few lines of content.
+
+However, I want search for something
+without opening it...
+
+Secret: 12345
+
+I wonder if I will be able to get it...
+
+
+➜  grep Secret file1
+Secret: 12345
+```
+
 #### Command Substitution
-  [it is preferred to use $(..) instead of \`..\`](http://mywiki.wooledge.org/BashFAQ/082)
+
+Lastly, command substitution is taking one command, and using it's output as
+part of another command. Historically, this used to be done by calling the
+substitution command inside back-tics (\`command\`), but it [is now preferred to
+use $(COMMAND) instead of \`COMMAND\`](http://mywiki.wooledge.org/BashFAQ/082).
 
 Example:
+
+```text
+
+```
 
 ### Creating the Dream Team
 
