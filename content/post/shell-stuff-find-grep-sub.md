@@ -1,5 +1,5 @@
 +++
-title  = "Shell Stuff: Find, Grep, and Command Substitution"
+title  = "Shell Stuff: Easy File Cleanup"
 date   = "2019-01-05"
 author = "Ryan Himmelwright"
 image  = "img/header-images/ww1-park-x230.jpg"
@@ -17,19 +17,19 @@ my files.
 
 <!--more-->
 
-### There are many ways
-
-First, lets clarify something. I know there are *MANY* ways to accomplish this.
+*DISCLAIMER:* I know there are *MANY* ways to accomplish this.
 The method described in this post is to share **one** solution I use, that
 might help someone that currently knows **zero**.
 
 ### The commands
 
-### `find`
+First, lets quickly meet the commands we will be using:
+
+### Find
 
 `find` is a classic UNIX command, that searches for files in a directory
-hierarchy. By default, it writes out the absolute file path for each file it
-finds.
+hierarchy. By default, it writes out the file path for each file/directory that
+it finds.
 
 #### Example
 
@@ -59,11 +59,11 @@ finds.
 ./dirA/file3
 ```
 
-### `grep`
+### Grep
 
 Another classic. Basically, `grep` searches for a pattern in each file
-provided, **or** text it is passed through a pipe (this is important for our
-use-case).
+provided. In addition to files, it can search text passed through a pipe (this
+is important for our use, but more on that later).
 
 #### Example
 
@@ -87,8 +87,8 @@ Secret: 12345
 ### Command Substitution
 
 Lastly, command substitution is taking one command, and using it's output as
-part of another command. Historically, this used to be done by calling the
-substitution command inside back-tics (\`command\`), but it [is now preferred to
+*part* of *another command*. Historically, this was done by calling the
+substitution command \`inside backticks\`, but it [is now preferred to
 use $(COMMAND) instead of backticks](http://mywiki.wooledge.org/BashFAQ/082).
 
 #### Example
@@ -106,15 +106,13 @@ I am at: /tmp/demo
 
 ### Pipes
 
-In addition to command substitution, I should probably briefly explain what a
-[unix pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix) ) is. Basically, a
-pipe (`|`) directs the *output* of one command, to be used as the *input* for
-another command. Using pipes to chain together commands form what is known as a
-*pipeline*
+A [unix pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix) ) (`|`) directs the
+*output* of one command, to be used as the *input* for another command. Pipes
+can be used to chain together several commands to form a *pipeline*.
 
 #### Example
 The output of `ls` can be fed as input to `wc` (word count) to create a
-pipeline that returns the number of files/directories in the current directory.
+pipeline command that returns the number of files/directories in the current directory.
 ```shell
 ➜ ls
 dirA  dirB  file1  file2
@@ -122,12 +120,12 @@ dirA  dirB  file1  file2
 4
 ```
 
-### Creating the Dream Team
+### Putting It All Together
 
-So, now to piece all the parts together. One particular shell chain I find
-useful is using find and grep to recursively get the absolute paths of a
-particular type of file, and then pass that result with a command substitution
-to do something with/to all of those files.
+Now that we know all the parts, how does it all fit together? One particular
+shell chain I find convenient is pairing `find` and `grep` to recursively get
+all the paths of a particular file type, and then use it in a command
+substitution to pass that result on to another command (such as `rm`)
 
 ```shell
 COMMAND $(find . | grep SEARCHSTRING)
@@ -135,9 +133,9 @@ COMMAND $(find . | grep SEARCHSTRING)
 
 #### Example
 
-For example, I like to use this combination to clean up my directories. While
-working on writing ansible playbooks, I can generate server `*.retry` files,
-as well as some `*.swp` files from editing them in vim.
+I use this combination to clean up my directories. While working on
+writing ansible playbooks, I can generate a few `*.retry` files, as well as
+some `*.swp` files from editing in vim.
 
 ```bash
 ➜ find . | grep .retry          ## Find *.retry files
@@ -152,4 +150,5 @@ as well as some `*.swp` files from editing them in vim.
 ### Summary
 
 That's it. A small post for a very *simple* but **powerful** command line set.
-If you haven't used this team of commands before, give it a try sometime!
+If you haven't used this team of commands before, give it a try sometime! Have
+fun!
