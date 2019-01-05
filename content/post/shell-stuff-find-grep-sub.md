@@ -25,7 +25,7 @@ might help someone that currently knows **zero**.
 
 ### The commands
 
-#### `find`
+### `find`
 
 `find` is a classic UNIX command, that searches for files in a directory
 hierarchy. By default, it writes out the absolute file path for each file it
@@ -59,10 +59,11 @@ Example:
 ./dirA/file3
 ```
 
-#### `grep`
+### `grep`
 
-Another classic, searches for a pattern in each file provided, **or** text it
-is passed through a pipe (this is important for our use-case).
+Another classic. Basically, `grep` searches for a pattern in each file
+provided, **or** text it is passed through a pipe (this is important for our
+use-case).
 
 Example:
 
@@ -83,18 +84,28 @@ I wonder if I will be able to get it...
 Secret: 12345
 ```
 
-#### Command Substitution
+### Command Substitution
 
 Lastly, command substitution is taking one command, and using it's output as
 part of another command. Historically, this used to be done by calling the
 substitution command inside back-tics (\`command\`), but it [is now preferred to
-use $(COMMAND) instead of \`COMMAND\`](http://mywiki.wooledge.org/BashFAQ/082).
+use $(COMMAND) instead of backticks](http://mywiki.wooledge.org/BashFAQ/082).
 
 Example:
 
 ```text
-
+➜ echo I am at: `pwd`
+I am at: /tmp/demo
 ```
+
+or (preferred):
+
+```test
+➜ echo I am at: $(pwd)
+I am at: /tmp/demo
+```
+
+#### Pipes?
 
 ### Creating the Dream Team
 
