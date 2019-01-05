@@ -31,7 +31,7 @@ might help someone that currently knows **zero**.
 hierarchy. By default, it writes out the absolute file path for each file it
 finds.
 
-Example:
+#### Example
 
 ```text
 ➜  tree
@@ -65,7 +65,7 @@ Another classic. Basically, `grep` searches for a pattern in each file
 provided, **or** text it is passed through a pipe (this is important for our
 use-case).
 
-Example:
+#### Example
 
 ```text
 ➜  cat file1
@@ -91,8 +91,7 @@ part of another command. Historically, this used to be done by calling the
 substitution command inside back-tics (\`command\`), but it [is now preferred to
 use $(COMMAND) instead of backticks](http://mywiki.wooledge.org/BashFAQ/082).
 
-Example:
-
+#### Example
 ```text
 ➜ echo I am at: `pwd`
 I am at: /tmp/demo
@@ -105,8 +104,52 @@ or (preferred):
 I am at: /tmp/demo
 ```
 
-#### Pipes?
+### Pipes
+
+In addition to command substitution, I should probably briefly explain what a
+[unix pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix) ) is. Basically, a
+pipe (`|`) directs the *output* of one command, to be used as the *input* for
+another command. Using pipes to chain together commands form what is known as a
+*pipeline*
+
+#### Example
+The output of `ls` can be fed as input to `wc` (word count) to create a
+pipeline that returns the number of files/directories in the current directory.
+```shell
+➜ ls
+dirA  dirB  file1  file2
+➜ ls | wc -l
+4
+```
 
 ### Creating the Dream Team
 
-### Examples
+So, now to piece all the parts together. One particular shell chain I find
+useful is using find and grep to recursively get the absolute paths of a
+particular type of file, and then pass that result with a command substitution
+to do something with/to all of those files.
+
+```shell
+COMMAND $(find . | grep SEARCHSTRING)
+```
+
+#### Example
+
+For example, I like to use this combination to clean up my directories. While
+working on writing ansible playbooks, I can generate server `*.retry` files,
+as well as some `*.swp` files from editing them in vim.
+
+```bash
+➜ find . | grep .retry          ## Find *.retry files
+./file1.retry
+./dirA/file5.retry
+./dirA/file3.retry
+➜ rm $(find . | grep .retry)    ## Delete *.retry files
+➜ find . | grep .retry          ## Check that they were deleted
+➜
+```
+
+### Summary
+
+That's it. A small post for a very *simple* but **powerful** command line set.
+If you haven't used this team of commands before, give it a try sometime!
