@@ -2,29 +2,34 @@
 title  = "Replacing a Drive in my ZFS Mirror"
 date   = "2019-01-15"
 author = "Ryan Himmelwright"
-image  = "img/header-images/ww1-park-x230.jpg"
+image  = "img/header-images/hdd-replace.jpg"
 caption= "World War I Memorial Park, North Attleboro, MA"
-tags   = ["Linux", "Homelab", "ZFS",]
+tags   = ["Linux", "Homelab", "filesystems", "ZFS",]
 draft  = "True"
 Comments = "True"
 +++
 
+Sometime right before the Holidays, one of the data hard drives in my servers
+started get noisy... very noisy. Fearing the worst, [did a
+backup](../zfs-backups-to-luks-external) and shutdown the server until I have
+time to investigate further, and likely, replace the drive. That time came this
+past week.
+
+<!--more-->
+
+### Ordering a New Drive
+
+When I started looking at drives, I decided to replace my broken 7200 RPM drive
+a 5400 RPM one. I'd rather have the drives last longer and run quieter than
+whatever marginal speed difference the faster spinning drives may provide. I
+decided to go with a [3TB Western Digital RED
+drive](https://www.amazon.com/dp/B008JJLW4M/ref=twister_B07GXT9HNH?_encoding=UTF8&psc=1)
+this time, even tough it's a bit more expensive... mostly just to try it out.
+
+### Replacing the Drive
 
 ```
-λ ninetales ~ → zpool status
-  pool: Backups
- state: ONLINE
-  scan: scrub repaired 0B in 0h52m with 0 errors on Tue Nov 20 00:23:13 2018
-config:
-
-	NAME                        STATE     READ WRITE CKSUM
-	Backups                     ONLINE       0     0     0
-	  mirror-0                  ONLINE       0     0     0
-	    wwn-0x50014ee002299cbf  ONLINE       0     0     0
-	    wwn-0x50014ee20902b0c2  ONLINE       0     0     0
-
-errors: No known data errors
-
+λ ninetales ~ → zpool status Data
   pool: Data
  state: ONLINE
 status: One or more devices has experienced an unrecoverable error.  An
@@ -42,24 +47,12 @@ config:
 	    ata-TOSHIBA_DT01ACA300_365XDR5KS  ONLINE       0     0     0
 
 errors: No known data errors
-
-  pool: default
- state: ONLINE
-  scan: scrub repaired 0B in 0h0m with 0 errors on Sun Nov 11 00:24:08 2018
-config:
-
-	NAME                              STATE     READ WRITE CKSUM
-	default                           ONLINE       0     0     0
-	  /var/lib/lxd/disks/default.img  ONLINE       0     0     0
-
-errors: No known data errors
 ```
 
 
 
 
---------------------------------------------------------------------------------
-Which drive is which
+#### Figuring out which drive to replace
 
 `lsblk`
 
@@ -69,58 +62,12 @@ Which drive is which
 
 
 
---------------------------------------------------------------------------------
 Which drive am I replacing?
 
 
 ```
-λ ninetales by-uuid → zdb
-Backups:
-    version: 5000
-    name: 'Backups'
-    state: 0
-    txg: 10885152
-    pool_guid: 4108246424462889343
-    errata: 0
-    hostname: 'ninetales'
-    com.delphix:has_per_vdev_zaps
-    vdev_children: 1
-    vdev_tree:
-        type: 'root'
-        id: 0
-        guid: 4108246424462889343
-        children[0]:
-            type: 'mirror'
-            id: 0
-            guid: 2747801777241697193
-            metaslab_array: 34
-            metaslab_shift: 33
-            ashift: 12
-            asize: 1000189984768
-            is_log: 0
-            create_txg: 4
-            com.delphix:vdev_zap_top: 50
-            children[0]:
-                type: 'disk'
-                id: 0
-                guid: 1816192614509453370
-                path: '/dev/disk/by-id/wwn-0x50014ee002299cbf-part1'
-                whole_disk: 1
-                DTL: 47
-                create_txg: 4
-                com.delphix:vdev_zap_leaf: 61
-            children[1]:
-                type: 'disk'
-                id: 1
-                guid: 7388959194879004915
-                path: '/dev/disk/by-id/wwn-0x50014ee20902b0c2-part1'
-                whole_disk: 1
-                DTL: 46
-                create_txg: 4
-                com.delphix:vdev_zap_leaf: 106
-    features_for_read:
-        com.delphix:hole_birth
-        com.delphix:embedded_data
+λ ninetales ~ → zdb
+... (just Data pool output)...
 Data:
     version: 5000
     name: 'Data'
@@ -171,43 +118,11 @@ Data:
     features_for_read:
         com.delphix:hole_birth
         com.delphix:embedded_data
-default:
-    version: 5000
-    name: 'default'
-    state: 0
-    txg: 2348788
-    pool_guid: 13410195935159583570
-    errata: 0
-    hostname: 'ninetales'
-    com.delphix:has_per_vdev_zaps
-    vdev_children: 1
-    vdev_tree:
-        type: 'root'
-        id: 0
-        guid: 13410195935159583570
-        create_txg: 4
-        children[0]:
-            type: 'file'
-            id: 0
-            guid: 2539842071018542623
-            path: '/var/lib/lxd/disks/default.img'
-            metaslab_array: 131
-            metaslab_shift: 28
-            ashift: 9
-            asize: 49387405312
-            is_log: 0
-            DTL: 266
-            create_txg: 4
-            com.delphix:vdev_zap_leaf: 129
-            com.delphix:vdev_zap_top: 130
-    features_for_read:
-        com.delphix:hole_birth
-        com.delphix:embedded_data
+...
 ```
 
 
---------------------------------------------------------------------------------
-Repalcing the drive
+#### Repalcing the drive
 
 
 `sudo zpool replace Data 4676737554230074290 /dev/sdd`
