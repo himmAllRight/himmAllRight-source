@@ -1,29 +1,29 @@
 +++
-title  = "Replacing a Drive in my ZFS Mirror"
+title  = "Replacing a Drive in My ZFS Mirror"
 date   = "2019-01-15"
 author = "Ryan Himmelwright"
 image  = "img/header-images/hdd-replace.jpg"
 caption= "My Desk, Durham, NC"
 tags   = ["Linux", "Homelab", "filesystems", "ZFS",]
-draft  = "True"
+draft  = "False"
 Comments = "True"
 +++
 
-Sometime right before the Holidays, one of the data hard drives in my servers
-started get noisy... very noisy. Fearing the worst, [did a
-backup](../zfs-backups-to-luks-external) and shutdown the server until I have
-time to investigate further, and likely, replace the drive. That time came this
-past week.
+Right before Thanksgiving, one of the hard drives in my server started get
+noisy... very noisy. Fearing the worst, I [did a
+backup](../zfs-backups-to-luks-external), and shutdown the server until I had
+time to investigate further... and likely replace the drive. That
+time came this past week.
 
 <!--more-->
 
-### Verifying the drive failed
+### Verifying the Drive Failed
 
 
-Before throwing money at the problem, I wanted to verify if ZFS was
-detecting any issues. When I ran a `zpool status` on my `Data` pool, it
-did warn me that one of my devices has experienced an error, but I have not
-(yet) encountered any data errors. Time to buy a new drive.
+Before throwing money at the problem, I wanted to see if ZFS was detecting any
+issues. When I ran a `zpool status` on my `Data` pool, it warned me that one of
+the devices had experienced an error, but that I had not (*yet*) encountered
+any data errors. Time to buy a new drive.
 
 ```bash
 λ ninetales ~ → zpool status Data
@@ -48,12 +48,12 @@ errors: No known data errors
 
 ### Ordering a New Drive
 
-When I started shopping for drives, I decided to replace my broken 7200 RPM drive
-a 5400 RPM one. I'd rather have the drives last longer and run quieter than
-whatever marginal speed difference the faster spinning drives may provide. I
-decided to go with a [3TB Western Digital RED
+When I started shopping for hard drives, I decided to replace my broken 7200 RPM
+one a 5400 RPM one. I'd rather have the drives last longer and run quieter,
+than whatever marginal speed difference the faster spinning disks *may*
+provide. I decided to finally go with a [3TB Western Digital RED
 drive](https://www.amazon.com/dp/B008JJLW4M/ref=twister_B07GXT9HNH?_encoding=UTF8&psc=1)
-this time, even tough it's a bit more expensive... mostly just to try it out.
+this time, even tough it's a bit more expensive... mostly to try out.
 
 ### Replacing the Drive
 
@@ -62,28 +62,27 @@ this time, even tough it's a bit more expensive... mostly just to try it out.
 <div class="caption">Swapping the hot-swap caddy from the broken hard drive (left) with my new WD Red drive (right)</div>
 </center>
 
-Physically swapping the hard drives was a breeze. I could easily tell which
-drive was the defective one (the one causing the entire server to rumble), so I
-slid it out. I love hot-swap drive bays. Next, I simply unscrewed the drive
-from the caddy, and screwed in the new drive. Lastly, I slide the caddy back
-into the server and booted it up.
+*Physically* swapping the hard drives was a breeze. I could easily tell which
+drive was the defective one... as it caused the entire server to rumble (ಠ_ಠ) .
+So I slid it out, unscrewed the drive from its caddy, and screwed in the new
+one. Lastly, I slide the caddy back into the server and booted it up. I love
+hot-swap drive bays.
 
 
-#### Figuring out which drive to replace
+#### Figuring Out Which Disk To Replace
 
-While figuring out which *physical* drive was the broken one, determining which
-disk the new one was replacing was a bit more difficult. Im order to add the
-new drive to my `Data` pool, I needed to tell ZFS which drive I had *replaced*.
-This was made more complicated by the fact that previously, the two drives in
-the mirror were the same and both showed up as
-`/dev/disk/by-id/ata-TOSHIBA_DT01ACA300_365XDR5KS`. I needed to get the `guid`
-for each drive, which would differ between them. I used the command `zdb` to
-spit out the information of each of my pools:
+Determining which disk was being replaced *in software* was a bit more
+difficult. In order to add the new drive to the `Data` pool, I needed to tell
+ZFS which one had been *replaced*.  This was made more complicated by the fact
+that previously, the two drives in the mirror were the same model and both showed up
+as `/dev/disk/by-id/ata-TOSHIBA_DT01ACA300_365XDR5KS`. So, I needed to find the
+`guid` for each drive, because it would differ between them. I used the command
+`zdb` to spit out information about of each of my pools:
 
 
 ```bash
 λ ninetales ~ → zdb
-... (just Data pool output)...
+... (other pool output)...
 Data:
     version: 5000
     name: 'Data'
@@ -137,30 +136,27 @@ Data:
 ...
 ```
 
-At first, I still didn't know drive which was which. However, after looking at
-the output closer, I noticed that one of the listed Toshiba drives had the
-line `not_present: 1`... indicating it was the broken drive I removed!
+At first, I still didn't know which drive was which. However, after looking
+deeper, I noticed that *one* of the Toshiba drives listed had the line
+`not_present: 1`, indicating that it was the broken drive I had removed!
 
 #### Replacing the drive
 
-With the `guid` of the broken drive, I was able to start the process to
-replacing it in the pool with my new one. I issued the following `zpool
-replace` command:
+With the `guid` of the broken drive known, I was able to start the process of
+replacing it in the pool with the new one. I issued a `zpool replace` command
+with the following arguments:
 
 ```bash
 sudo zpool replace Data 4676737554230074290 /dev/sdd
 ```
+* `Data` - the name of the pool
 
-The `zpool replace` command requires three arguments:
+* `4676737554230074290` - the `guid` of the previous drive
 
-* the name of the pool (`Data`),
-
-* the `guid` of the previous drive (`4676737554230074290`), and
-
-* the path to my new drive (`/dev/sdd`).
+* `/dev/sdd` - the path to the new drive
 
 Afterwards, the resilvering process started (rebuilding the mirror by copying
-the data from the one drive to the new one). I was able to check the status of
+data from one drive to the other). I was able to check the status of
 the process using `zpool status Data`.
 
 ```bash
@@ -186,11 +182,11 @@ config:
 errors: No known data errors
 ```
 
-Resilvering can take a *long* time. Luckily, I only had about ~1 TB~ of data to
-rebuild, so I hoped it wouldn't *actually* take the 123.5 hours the first
-`status` told me! Regardless, while waiting  for the pool to rebuild, the only
-thing to do is wait (*and hope that the other drive doesn't break in the
-process!*).
+Resilvering can take a *long* time. Luckily, I only had about ~1 TB of data to
+rebuild, so I hoped it wouldn't *actually* take the 123.5 hours that the first
+`status` predicted! Regardless, during the resilvering process, the only thing
+to do is wait (*and hope that the other drive doesn't break in the process!*).
+So I did.
 
 
 #### Resilver Complete
@@ -214,7 +210,7 @@ errors: No known data errors
 ```
 
 Looking at this output now, I realize I probably should have added the new
-drive by `uuid`, and not pathname...hmmm...
+drive by `uuid` instead of pathname...hmmm...
 
-Oh well. That is a post for another day. For now... at least my broken drive
-has finally been replaced!
+Oh well. That is a post for another day. At least my broken drive
+has *finally* been replaced!
