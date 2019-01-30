@@ -17,15 +17,44 @@ here we are.
 
 <!--more-->
 
+#### Assumptions
+
+Before we get started, I just want to point out that this method is
+specific to the setup I currently have for *my* VMs. Specifically, I
+am running my VMs using kvm/qemu and virt-manager, with qcow2 images
+for the virtual disks. Additionally, the VM I was extending was
+installed with LVM and it's main partition was formatted with an xfs
+filesystem. Just note that some steps may differ if a different environment
+is being used.
+
 ## Clone VM
-You don't have to, but it's not a *bad* idea.
+
+<center>
+<a href="../../img/posts/extending-vm-hd/clone-vm.png"><img alt="Clone VM window in Virt Manager" src= "../../img/posts/extending-vm-hd/clone-vm.png" style="max-width: 100%;"/></a>
+<div class="caption">Cloning the VM in Virt Manager</div>
+</center>
+
+While not required, it is not a *bad* idea to first clone the VM (just
+in case anything gets messed up). If using *virt manager*, cloning a
+VM is as simple as right clicking a *powered down* VM, and selecting
+"*Clone...*". A window will pop up with options for cloning the
+VM. Make and desired name changes amd hit *Clone*. Shortly after, the
+clone should be ready.
+
+**NOTE**: If making changing to the *VM's* settings, be careful to not accidently
+fire up the *VM clone*, and get all mad thinking the changes haven't
+been applied...
 
 ## Extend qcow2 file
 
-Expand the `qcow2` image using the `qemu-img resize` command. You give
-it the image name and then the size to expand. For example, I used
-`+40G` in my command (`qemu-img resize Jenkins.qcow2 +40G`) to extend
-my image 40GB.
+The first step in resizing the the virtual drive is to first expand
+the `qcow2` image. By default, the images tend to be stored at
+`/var/lib/libvirt/images/` and will require `root` privledges to
+access. Virt-Manager can be used to double check which image the VM is
+using for its disk. To resize the qcow2 image, use the `qemu-img
+resize` command, providing it image file path/name and then the size
+to expand it. For example, I used `+40G` in my command (`qemu-img
+resize Jenkins.qcow2 +40G`) to extend my image by 40GB.
 
 ```bash
 root@ninetales:/var/lib/libvirt/images# qemu-img info Jenkins.qcow2 
@@ -57,6 +86,9 @@ Format specific information:
     
 root@ninetales:/var/lib/libvirt/images# 
 ```
+
+The command `qemu-image info` is helpful to use to check the size of
+the image, and to verify that the resize worked.
 
 ## Gparted Live ISO
 For the next few steps, it is a good idea to boot the system from a
