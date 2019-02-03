@@ -1,6 +1,6 @@
 +++
 title  = "Extending VM Hard Drive"
-date   = "2019-02-01"
+date   = "2019-02-04"
 author = "Ryan Himmelwright"
 image  = "img/header-images/hdd-replace.jpg"
 caption= "My Desk, Durham, NC"
@@ -57,7 +57,7 @@ to expand it. For example, I used `+40G` in my command (`qemu-img
 resize Jenkins.qcow2 +40G`) to extend my image by 40GB.
 
 ```bash
-root@ninetales:/var/lib/libvirt/images# qemu-img info Jenkins.qcow2 
+root@ninetales:/var/lib/libvirt/images# qemu-img info Jenkins.qcow2
 image: Jenkins.qcow2
 file format: qcow2
 virtual size: 20G (21474836480 bytes)
@@ -72,7 +72,7 @@ Format specific information:
 root@ninetales:/var/lib/libvirt/images# qemu-img resize Jenkins.qcow2 +40G
 Image resized.
 
-root@ninetales:/var/lib/libvirt/images# qemu-img info Jenkins.qcow2 
+root@ninetales:/var/lib/libvirt/images# qemu-img info Jenkins.qcow2
 image: Jenkins.qcow2
 file format: qcow2
 virtual size: 60G (64424509440 bytes)
@@ -83,26 +83,29 @@ Format specific information:
     lazy refcounts: true
     refcount bits: 16
     corrupt: false
-    
-root@ninetales:/var/lib/libvirt/images# 
+
+root@ninetales:/var/lib/libvirt/images#
 ```
 
 The command `qemu-image info` is helpful to use to check the size of
 the image, and to verify that the resize worked.
 
 ## Gparted Live ISO
-For the next few steps, it is a good idea to boot the system from a
-live CD. That way, the disk isn't being used, and if you use a live
-ISO like `gparted`, it has nice graphical tools to use to resize
-everything.
+For the next few steps, it is a good idea to boot the system from a live CD.
+This will fully run the OS in RAM, allowing the disk to be fully unmounted.
+Additionally, with access to the VM's display server, an ISO like `gparted`
+live CD can be used, which contains the amazing graphical tool, `gparted` (duh),
+to resize the partitions.
 
-(When you boot up and don't see the new space available to to
-volume... make sure you didn't boot up the backup VM XD. Opps)
+*Note: If you boot up and don't see the new unallocated space available in the
+volume... make sure you didn't accidentally boot up the backup VM... Not that I
+did made that noob mistake or anything... :P*
 
 #### LVM Resize
 
-My VM is installed using LVM volumes, so I have to resize them in
-order to resize the filesystem partition.
+My VM is installed using LVM volumes, so I had to resize them
+before I could resize the file system partition. Gparted will do this
+automatically when resizing a partition.
 
 
 <center>
@@ -110,17 +113,25 @@ order to resize the filesystem partition.
 <div class="caption">Booting into the Gparted live ISO</div>
 </center>
 
+To resize the partition in Gedit, I selected the partition to expand (after
+selecting the virtual disk from the drop down in the top right of the window),
+and then clicked the "*Resize/Move*" icon in the top icon bar.
+
 <center>
 <a href="../../img/posts/extending-vm-hd/gparted-resize.png"><img alt="Resizing the partition in Gparted" src= "../../img/posts/extending-vm-hd/gparted-resize.png" style="max-width: 100%;"/></a>
 <div class="caption">Resizing the partition in Gparted</div>
 </center>
 
+In the resize window, I simply then changed the `Free space following (MiB)`
+value to `0`, to expand the partition to use *all* of the unallocated space.
+Lastly, I hit the *Resize* button and let Gparted do it's magic.
+
 #### Grow XFS
 
-It wasn't a mounted volume from the live disk, so I booted into the
-VM. However, this meant I couldn't auto complete tab in my shell
-because it spit out there's no disk space. Looks like the `xfs_growfs`
-worked though.
+Finally, with the lvm volume expanded, I just had to grow my file system to use
+the new space. So, I booted up the VM and logged in. I have this VM using an
+xfs file system, so I used the `xfs_growfs` command to expand the partition:
+
 
 ```bash
 [ryan@mr-mime ~]$ sudo xfs_growfs /dev/centos/root
@@ -137,4 +148,11 @@ tmpfs                    1.9G     0  1.9G   0% /sys/fs/cgroup
 /dev/vda1                497M  231M  267M  47% /boot
 tmpfs                    379M     0  379M   0% /run/user/1000
 ```
+
+*Note: It wasn't a mounted volume from the live disk, so I booted into the
+VM. However, this meant I couldn't auto complete tab in my shell
+because it spit out there's no disk space.*
+
+Looks like the `xfs_growfs` worked though.
+
 That's about it. :)
