@@ -2,8 +2,8 @@
 title  = "Extending VM Hard Drive"
 date   = "2019-02-04"
 author = "Ryan Himmelwright"
-image  = "img/header-images/hdd-replace.jpg"
-caption= "My Desk, Durham, NC"
+image  = "img/header-images/construction.jpg"
+caption= "Foster Street, Durham, NC"
 tags   = ["Linux", "Homelab", "filesystems", "KVM", "LVM",]
 draft  = "False"
 Comments = "True"
@@ -129,8 +129,8 @@ Lastly, I hit the *Resize* button and let Gparted do it's magic.
 #### Grow XFS
 
 Finally, with the lvm volume expanded, I just had to grow my file system to use
-the new space. So, I booted up the VM and logged in. I have this VM using an
-xfs file system, so I used the `xfs_growfs` command to expand the partition:
+the new space. I booted up the VM and logged in. This VM is using an xfs file
+system, so I was able to use the `xfs_growfs` command to expand the partition:
 
 
 ```bash
@@ -149,10 +149,13 @@ tmpfs                    1.9G     0  1.9G   0% /sys/fs/cgroup
 tmpfs                    379M     0  379M   0% /run/user/1000
 ```
 
-*Note: It wasn't a mounted volume from the live disk, so I booted into the
-VM. However, this meant I couldn't auto complete tab in my shell
-because it spit out there's no disk space.*
+*Note: My VM's disk space was COMPLETELY full. This meant that I couldn't use auto
+tab complete in my shell because it spit out there's no disk space. Typing the
+command out fully by hand, still worked.*
 
-Looks like the `xfs_growfs` worked though.
+With the xfs partition resized, I rebooted the VM for good measure, and
+everything was up and running.
 
-That's about it. :)
+That's about it. Again, the steps I took might need to be altered for other
+environments, but this post should still help one get *started*. I know it will
+help me when I acidently overfill this VM *again*... Enjoy!
