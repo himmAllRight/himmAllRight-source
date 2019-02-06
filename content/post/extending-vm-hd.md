@@ -1,31 +1,31 @@
 +++
-title  = "Extending VM Hard Drive"
-date   = "2019-02-04"
+title  = "Extending a VM Virtual Disk"
+date   = "2019-02-06"
 author = "Ryan Himmelwright"
 image  = "img/header-images/construction.jpg"
 caption= "Foster Street, Durham, NC"
-tags   = ["Linux", "Homelab", "filesystems", "KVM", "LVM",]
+tags   = ["Linux", "Homelab", "filesystems", "KVM", "Jenkins",]
 draft  = "False"
 Comments = "True"
 +++
 
-Last week I extended my Jenkin's VM server's HD. Then I extended the
-max size of one of the job's docker containers... which also runs on
-that HD, so I need to extend it again. If you ever have to do
-something twice... it *better* be documented for the third time. So
-here we are.
+Last week, I extended the virtual disk of the VM hosting my
+[jenkins](https://jenkins.io) server. Shortly after, I increased the max size
+of one of the job's docker containers, maxing out the disk. So, I need to
+extend the drive*... again*. If you ever do something twice, it is *best* to
+have it documented for the third time. So here we are.
 
 <!--more-->
 
 #### Assumptions
 
-Before we get started, I just want to point out that this method is
-specific to the setup I currently have for *my* VMs. Specifically, I
-am running my VMs using kvm/qemu and virt-manager, with qcow2 images
-for the virtual disks. Additionally, the VM I was extending was
-installed with LVM and it's main partition was formatted with an xfs
-filesystem. Just note that some steps may differ if a different environment
-is being used.
+Before getting started, I want to point out that this method is
+specific to the environment I currently have for *my VMs*. Specifically, I
+am using kvm/qemu and virt-manager, with qcow2 images
+for the virtual disks. Additionally, the specific VM I was extending was
+installed with LVM and it's main partition was formatted with a xfs
+file system. Just note that some steps *may* differ if a different environment
+is being used. This is what worked for *me*.
 
 ## Clone VM
 
@@ -34,27 +34,22 @@ is being used.
 <div class="caption">Cloning the VM in Virt Manager</div>
 </center>
 
-While not required, it is not a *bad* idea to first clone the VM (just
-in case anything gets messed up). If using *virt manager*, cloning a
+While not *required*, it isn't a *bad* idea to first clone the VM (just
+in case anything becomes damaged). If using `virt-manager`, cloning a
 VM is as simple as right clicking a *powered down* VM, and selecting
 "*Clone...*". A window will pop up with options for cloning the
-VM. Make and desired name changes amd hit *Clone*. Shortly after, the
-clone should be ready.
-
-**NOTE**: If making changing to the *VM's* settings, be careful to not accidently
-fire up the *VM clone*, and get all mad thinking the changes haven't
-been applied...
+VM. Make the desired name changes and hit *Clone*.
 
 ## Extend qcow2 file
 
-The first step in resizing the the virtual drive is to first expand
+The first step in resizing the virtual drive is to first expand
 the `qcow2` image. By default, the images tend to be stored at
-`/var/lib/libvirt/images/` and will require `root` privledges to
+`/var/lib/libvirt/images/` and will require `root` privileges to
 access. Virt-Manager can be used to double check which image the VM is
 using for its disk. To resize the qcow2 image, use the `qemu-img
-resize` command, providing it image file path/name and then the size
+resize` command, providing it an image file path/name and then the size
 to expand it. For example, I used `+40G` in my command (`qemu-img
-resize Jenkins.qcow2 +40G`) to extend my image by 40GB.
+resize Jenkins.qcow2 +40G`) to extend the image by 40GB.
 
 ```bash
 root@ninetales:/var/lib/libvirt/images# qemu-img info Jenkins.qcow2
@@ -87,19 +82,19 @@ Format specific information:
 root@ninetales:/var/lib/libvirt/images#
 ```
 
-The command `qemu-image info` is helpful to use to check the size of
-the image, and to verify that the resize worked.
+The command `qemu-image info` can be helpful in verifying that the resize
+worked, by checking the size of the image.
 
 ## Gparted Live ISO
 For the next few steps, it is a good idea to boot the system from a live CD.
-This will fully run the OS in RAM, allowing the disk to be fully unmounted.
-Additionally, with access to the VM's display server, an ISO like `gparted`
-live CD can be used, which contains the amazing graphical tool, `gparted` (duh),
-to resize the partitions.
+This will run the OS in RAM, allowing the disk to be fully unmounted.  With
+access to the VM's display, an ISO like the [gparted live
+CD](https://gparted.org/livecd.php) can be used to resize the partitions,
+as it contains the amazing graphical tool, `gparted` (duh).
 
-*Note: If you boot up and don't see the new unallocated space available in the
-volume... make sure you didn't accidentally boot up the backup VM... Not that I
-did made that noob mistake or anything... :P*
+**Note:** If you boot up and don't see the new unallocated space available in the
+volume... make sure you didn't accidentally boot up the backup VM... Not that
+*I would make such a mistake...* :P
 
 #### LVM Resize
 

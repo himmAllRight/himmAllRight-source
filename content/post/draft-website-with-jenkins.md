@@ -4,7 +4,7 @@ date     = "2018-08-15"
 author   = "Ryan Himmelwright"
 image    = "img/header-images/atc-back1.jpg"
 caption  = "American Tobacco Campus, Durham NC"
-tags     = ["Linux", "Homelab", "Network", "Nginx", "Website", "DevOps", "Hugo"]
+tags     = ["Linux", "Homelab", "Network", "Nginx", "Website", "DevOps", "Hugo", "Jenkins",]
 Comments = "True"
 draft    = "False"
 +++
@@ -23,13 +23,13 @@ website. Here is how that idea was Instantiated...
 
 <a href="../../img/posts/draft-website-jenkins/jenkins-logo.png"><img
 src="../../img/posts/draft-website-jenkins/jenkins-logo.png" style="max-width:
-50%; float: left; margin: 0px 12px 0px 0px;" alt="Jenkins Logo" /></a> 
+50%; float: left; margin: 0px 12px 0px 0px;" alt="Jenkins Logo" /></a>
 
 I have previously [described](../website-transition-to-hugo/) how my
 website is [currently generated](../website-switched-to-hugo/), using
 the [Hugo](https://gohugo.io) static website generator. To organize
 this system, I have two git repos: One that consists of all the hugo
-source files (where I write content), and one that contains the 
+source files (where I write content), and one that contains the
 generated static website (that gets deployed to my web host).
 
 When writing a post, I use `hugo server -D -F` to live view the page
@@ -43,7 +43,7 @@ pushing my changes.
 
 <a href="../../img/posts/draft-website-jenkins/mr-mime.png"><img
 src="../../img/posts/draft-website-jenkins/mr-mime.png" style="max-width:
-45%; float: right; margin: 20px 0px 0px 10px;" alt="Jenkins Logo" /></a> 
+45%; float: right; margin: 20px 0px 0px 10px;" alt="Jenkins Logo" /></a>
 
 ## Jenkins
 
@@ -82,7 +82,7 @@ select **Add deploy key**, and add the public key.
 
 <a href="../../img/posts/draft-website-jenkins/nginx.png"><img
 src="../../img/posts/draft-website-jenkins/nginx.png" style="max-width:
-100%; float: center; margin: 0px 0px 0px 0px;" alt="Default Nginx Page" /></a> 
+100%; float: center; margin: 0px 0px 0px 0px;" alt="Default Nginx Page" /></a>
 
 With Jenkins ready, let's quickly setup the web server before
 configuring the Jenkins project. Any web server will do (it just needs
@@ -91,7 +91,7 @@ to serve the generated *static* website content). I used
 sure it is running. To install and check the status of nginx on an
 Ubuntu System:
 
-```bash 
+```bash
 ## Install
 sudo apt install -y nginx
 
@@ -119,7 +119,7 @@ name for the project, select the **Freestyle Project** option, and hit
 
 <a href="../../img/posts/draft-website-jenkins/general-config.png"><img
 src="../../img/posts/draft-website-jenkins/general-config.png" style="max-width:
-100%; float: center; margin: 0px 0px 0px 0px;" alt="The Project's General Configuration Section" /></a> 
+100%; float: center; margin: 0px 0px 0px 0px;" alt="The Project's General Configuration Section" /></a>
 <div class="caption">The Project's General Configuration Section</div>
 
 In the **General** section of the configuration screen, optionally
@@ -132,7 +132,7 @@ url* text box.
 <a href="../../img/posts/draft-website-jenkins/credentials.png"><img
 src="../../img/posts/draft-website-jenkins/credentials.png"
 style="max-width: 100%; float: center; margin: 0px 0px 0px 0px;"
-alt="Setting Credentials" /></a> 
+alt="Setting Credentials" /></a>
 <div class="caption">Setting Credentials</div>
 
 In the **Source Code Management** section of the configuration, select
