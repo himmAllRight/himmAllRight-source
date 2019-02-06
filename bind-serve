@@ -1,0 +1,9 @@
+#!/bin/bash
+# Runs hugo serve using a provided arg as the bind address
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied. Please provide an address to bind."
+  else
+    echo -e "hugo serve -F -D --bind $1 -b $1"
+    hugo serve -F -D --bind $1 -b $1
+fi
