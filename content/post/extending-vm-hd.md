@@ -1,6 +1,6 @@
 +++
 title  = "Extending a VM Virtual Disk"
-date   = "2019-02-06"
+date   = "2019-02-07"
 author = "Ryan Himmelwright"
 image  = "img/header-images/construction.jpg"
 caption= "Foster Street, Durham, NC"
@@ -10,22 +10,22 @@ Comments = "True"
 +++
 
 Last week, I extended the virtual disk of the VM hosting my
-[jenkins](https://jenkins.io) server. Shortly after, I increased the max size
-of one of the job's docker containers, maxing out the disk. So, I need to
-extend the drive*... again*. If you ever do something twice, it is *best* to
-have it documented for the third time. So here we are.
+[jenkins](https://jenkins.io) server. Shortly after, I increased the maximum
+disk size of one of the job's docker containers, maxing out the disk. This
+meant that I needed to extend the drive*... again*. If you ever do something
+twice, it is *best* to have it documented for the potential third time. So,
+here we are.
 
 <!--more-->
 
 #### Assumptions
 
-Before getting started, I want to point out that this method is
-specific to the environment I currently have for *my VMs*. Specifically, I
-am using kvm/qemu and virt-manager, with qcow2 images
-for the virtual disks. Additionally, the specific VM I was extending was
-installed with LVM and it's main partition was formatted with a xfs
-file system. Just note that some steps *may* differ if a different environment
-is being used. This is what worked for *me*.
+Before getting started, I want to point out that this method is specific to the
+environment I currently have for *my VMs*. Specifically, I am using kvm/qemu
+and virt-manager, with qcow2 images for the virtual disks. Additionally, the
+specific VM I was extending was installed with LVM and it's main partition was
+formatted with a xfs file system. Just note that some steps *may* differ
+elsewhere. This is what worked for *me*.
 
 ## Clone VM
 
@@ -47,7 +47,7 @@ the `qcow2` image. By default, the images tend to be stored at
 `/var/lib/libvirt/images/` and will require `root` privileges to
 access. Virt-Manager can be used to double check which image the VM is
 using for its disk. To resize the qcow2 image, use the `qemu-img
-resize` command, providing it an image file path/name and then the size
+resize` command, providing it the image file path/name and then the size
 to expand it. For example, I used `+40G` in my command (`qemu-img
 resize Jenkins.qcow2 +40G`) to extend the image by 40GB.
 
@@ -88,18 +88,18 @@ worked, by checking the size of the image.
 ## Gparted Live ISO
 For the next few steps, it is a good idea to boot the system from a live CD.
 This will run the OS in RAM, allowing the disk to be fully unmounted.  With
-access to the VM's display, an ISO like the [gparted live
+access to the VM's display, an ISO such as the [gparted live
 CD](https://gparted.org/livecd.php) can be used to resize the partitions,
 as it contains the amazing graphical tool, `gparted` (duh).
 
-**Note:** If you boot up and don't see the new unallocated space available in the
-volume... make sure you didn't accidentally boot up the backup VM... Not that
-*I would make such a mistake...* :P
+**Note:** If you boot up the VM and don't see the new unallocated space available in the
+volume... make sure you didn't accidentally boot the *backup VM*... Not that
+**I made such a mistake...** :P
 
 #### LVM Resize
 
 My VM is installed using LVM volumes, so I had to resize them
-before I could resize the file system partition. Gparted will do this
+before I could resize the file system. Gparted will do this
 automatically when resizing a partition.
 
 
@@ -108,23 +108,23 @@ automatically when resizing a partition.
 <div class="caption">Booting into the Gparted live ISO</div>
 </center>
 
-To resize the partition in Gedit, I selected the partition to expand (after
-selecting the virtual disk from the drop down in the top right of the window),
-and then clicked the "*Resize/Move*" icon in the top icon bar.
+To resize the partition, first verify that the correct virtual disk
+is selected in the top right drop-down the window. Next, select the
+partition to expand, and click the "*Resize/Move*" icon at the top.
 
 <center>
 <a href="../../img/posts/extending-vm-hd/gparted-resize.png"><img alt="Resizing the partition in Gparted" src= "../../img/posts/extending-vm-hd/gparted-resize.png" style="max-width: 100%;"/></a>
 <div class="caption">Resizing the partition in Gparted</div>
 </center>
 
-In the resize window, I simply then changed the `Free space following (MiB)`
+In the resize window, I changed the `Free space following (MiB)`
 value to `0`, to expand the partition to use *all* of the unallocated space.
 Lastly, I hit the *Resize* button and let Gparted do it's magic.
 
 #### Grow XFS
 
 Finally, with the lvm volume expanded, I just had to grow my file system to use
-the new space. I booted up the VM and logged in. This VM is using an xfs file
+the new space. I booted up the VM and logged in. This VM uses an xfs file
 system, so I was able to use the `xfs_growfs` command to expand the partition:
 
 
@@ -149,8 +149,8 @@ tab complete in my shell because it spit out there's no disk space. Typing the
 command out fully by hand, still worked.*
 
 With the xfs partition resized, I rebooted the VM for good measure, and
-everything was up and running.
+everything was up and running again.
 
-That's about it. Again, the steps I took might need to be altered for other
-environments, but this post should still help one get *started*. I know it will
-help me when I acidently overfill this VM *again*... Enjoy!
+That's about it. Remember, the steps I took might need to be altered for other
+environments, but this post should still be a good *starting* point. I know it
+will help me when I acidently overfill this VM *again*... Enjoy!
