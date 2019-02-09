@@ -30,7 +30,7 @@ elsewhere. This is what worked for *me*.
 ## Clone VM
 
 <center>
-<a href="../../img/posts/extending-vm-hd/clone-vm.png"><img alt="Clone VM window in Virt Manager" src= "../../img/posts/extending-vm-hd/clone-vm.png" style="max-width: 100%;"/></a>
+<a href="/img/posts/extending-vm-hd/clone-vm.png"><img alt="Clone VM window in Virt Manager" src= "/img/posts/extending-vm-hd/clone-vm.png" style="max-width: 100%;"/></a>
 <div class="caption">Cloning the VM in Virt Manager</div>
 </center>
 
@@ -104,7 +104,7 @@ automatically when resizing a partition.
 
 
 <center>
-<a href="../../img/posts/extending-vm-hd/gparted-live-iso.png"><img alt="Booting into the Gparted live ISO" src= "../../img/posts/extending-vm-hd/gparted-live-iso.png" style="max-width: 100%;"/></a>
+<a href="/img/posts/extending-vm-hd/gparted-live-iso.png"><img alt="Booting into the Gparted live ISO" src= "/img/posts/extending-vm-hd/gparted-live-iso.png" style="max-width: 100%;"/></a>
 <div class="caption">Booting into the Gparted live ISO</div>
 </center>
 
@@ -113,7 +113,7 @@ is selected in the top right drop-down the window. Next, select the
 partition to expand, and click the "*Resize/Move*" icon at the top.
 
 <center>
-<a href="../../img/posts/extending-vm-hd/gparted-resize.png"><img alt="Resizing the partition in Gparted" src= "../../img/posts/extending-vm-hd/gparted-resize.png" style="max-width: 100%;"/></a>
+<a href="/img/posts/extending-vm-hd/gparted-resize.png"><img alt="Resizing the partition in Gparted" src= "/img/posts/extending-vm-hd/gparted-resize.png" style="max-width: 100%;"/></a>
 <div class="caption">Resizing the partition in Gparted</div>
 </center>
 

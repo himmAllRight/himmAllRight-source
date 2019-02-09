@@ -11,9 +11,10 @@ Comments = "True"
 
 Right before Thanksgiving, one of the hard drives in my server started get
 noisy... very noisy. Fearing the worst, I [did a
-backup](../zfs-backups-to-luks-external), and shutdown the server until I had
+backup](/post/zfs-backups-to-luks-external), and shutdown the server until I had
 time to investigate further... and likely replace the drive. That
 time came this past week.
+
 
 <!--more-->
 
@@ -58,7 +59,7 @@ this time, even tough it's a bit more expensive... mostly to try out.
 ### Replacing the Drive
 
 <center>
-<a href="../../img/posts/replace-zfs-mirror-drive/hdd-swap.jpg"><img alt="Swapping the two hard drives" src= "../../img/posts/replace-zfs-mirror-drive/hdd-swap.jpg" style="max-width: 100%;"/></a>
+<a href="/img/posts/replace-zfs-mirror-drive/hdd-swap.jpg"><img alt="Swapping the two hard drives" src= "/img/posts/replace-zfs-mirror-drive/hdd-swap.jpg" style="max-width: 100%;"/></a>
 <div class="caption">Swapping the hot-swap caddy from the broken hard drive (left) with my new WD Red drive (right)</div>
 </center>
 

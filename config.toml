@@ -1,5 +1,6 @@
 baseurl = "http://ryan.himmelwright.net"
 #baseurl = ""
+relativeURLs = true
 publishDir = "../himmAllRight.github.io/"
 title = "λ ryan. himmelwright. net"
 canonifyurls = true
