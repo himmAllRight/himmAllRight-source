@@ -1,6 +1,6 @@
 +++
 title  = "Why I Got an iPad"
-date   = "2019-02-12"
+date   = "2019-02-17"
 author = "Ryan Himmelwright"
 image  = "img/header-images/ipad-pro-box.jpg"
 caption= "My Desk, Durham, NC"
@@ -24,27 +24,35 @@ a tablet might work well for many of my use cases.
 
 The main reason? I don't like using smartphones. While I think modern phones
 are a wonderful piece of technology, they are often misused. The smartphone has
-become most people's main computer (in that it's the one they use the most).
-While I agree it can be the *best* device for *some* tasks, particularly ones
-on the go, it isn't *great* at many other tasks people use them for.
+become many user's  *main* computing device.  While I agree it can be the *best*
+device for *some* tasks (particularly ones "on the go"), it isn't *great* at
+the hundreds of other tasks which people use them for. In the worst case, many
+apps are convenient distractions.
 
-So the main reason for adding a tablet to my list of devices, is to offload
-some of what I use my phone for, to the tablet which is much better suited for
-some of these activities.
-
-
-[this article](http://calnewport.com/blog/2019/01/08/are-smartphones-necessary-anymore/) was interesting
+I try to keep the set of apps installed on my phone to a minimum, only using
+the ones I deem to be best used on my phone. Over the past few months, I have
+noticed myself starting to use my phone for many "computer/TV" activities when
+I want to be more portable. The experience of these tasks on the phone isn't
+great, and I realized they would be best completed on a tablet. Some of the
+activities I intend to offload from my phone to my iPad are:
 
 
 #### Portable Media Consumption
-Youtube, Hulu, Netflix
-For example, many people (and
-I started to notice myself included with this group) also love to watch videos,
-read books, and browse the web from their phones. These are all activities that
-run best on... a tablet. The key for *me*, is that these coincidentally are
-all activities that I *don't really want to be doing on the go*. If anything,
-they are a distraction.
-[Blackberry KEYone](https://blackberrymobile.com/us/product/blackberry-keyone/)
+
+I tend to watch most of my media on our TV or at my computer, but I did start
+to notice myself watching Youtube, or shows on Hulu and Netflix from my phone
+more often, when I wanted to watch from a different location, or if the TV was
+in use. With a small screen and crap speakers, watching video on a phone is
+terrible, especially on my [Blackberry
+KEYone's](https://blackberrymobile.com/us/product/blackberry-keyone/) smaller
+screen (Which I have to be a great *communication device* with a long
+battery life. However, even on large bezel-less phone screens, watching video is
+still terrible).
+
+In college, I used my previous tablet ([an Asus Transformer
+T101](https://en.wikipedia.org/wiki/Asus_Eee_Pad_Transformer), with no dock) to
+watch videos in my dorm or around campus. It was a great portable viewing
+experience, and I assumed that with modern tablets, wit would only be better.
 
 #### Reading
 
@@ -55,15 +63,15 @@ Humble Book Bundle, Paper, Kindle
 #### Offload *Some* of My Smart Phone Use
 Banking Apps, Email Apps, Housing
 
-#### Portable Productivity?
-
 
 ## My Apple Device History
-#### iPod "Video" (5th Gen)
 
-#### iPod Touch (2nd Gen?)
+I was going to do a full section detailing my limited use of apple products
+throughout my life, only buying them when they obviously stand out. But that
+would be boring. So in short: The only Apple devices I have owned are 1) an
+iPod "Video", an iPod "Touch", and ... my wife had an Macbook air I helped
+occasionally fix??? So why be willing to get an iPad?
 
-#### ... My wife's stuff?
 
 ## Why an iPad?
 

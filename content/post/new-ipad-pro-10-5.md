@@ -1,6 +1,6 @@
 +++
 title  = "My new iPad Pro 10.5\" (2017 model)"
-date   = "2019-02-18"
+date   = "2019-02-24"
 author = "Ryan Himmelwright"
 image  = "img/header-images/ipad-pro-box.jpg"
 caption= "My Desk, Durham, NC"
