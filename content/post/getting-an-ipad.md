@@ -18,21 +18,15 @@ point... I ordered an iPad Pro (2017 model). Here's why.
 <!--more-->
 
 ## Why a Tablet?
-When I use technology, I try to figure out and use devices that best fit what I
-want to do. Evaluating how I complete many tasks, I've started to think that a
-tablet might work well for many of my use cases.
+When I use technology, I try to figure out and use devices which best fit the
+tasks I to do. Evaluating how I complete many tasks, I've started to think that
+a tablet might work well for many of my use cases.
 
-#### Offload *Some* of My Smart Phone Use
-I really don't like using smart phones. I think they are a wonderful set of
-technology, but are often misused. The smartphone has become most people's main
-computer (in that it's the one they use the most). While I agree it really is
-the *best* device for some tasks, particularly ones on the go, it isn't the
-*great* at many other tasks people use them for. For example, many people (and
-I started to notice myself included with this group) also love to watch videos,
-read books, and browse the web from their phones. These are all activities that
-run best on... a tablet. The key for *me*, is that these coincidentally are
-all activities that I *don't really want to be doing on the go*. If anything,
-they are a distraction.
+The main reason? I don't like using smartphones. While I think modern phones
+are a wonderful piece of technology, they are often misused. The smartphone has
+become most people's main computer (in that it's the one they use the most).
+While I agree it can be the *best* device for *some* tasks, particularly ones
+on the go, it isn't *great* at many other tasks people use them for.
 
 So the main reason for adding a tablet to my list of devices, is to offload
 some of what I use my phone for, to the tablet which is much better suited for
@@ -41,15 +35,28 @@ some of these activities.
 
 [this article](http://calnewport.com/blog/2019/01/08/are-smartphones-necessary-anymore/) was interesting
 
+
+#### Portable Media Consumption
+Youtube, Hulu, Netflix
+For example, many people (and
+I started to notice myself included with this group) also love to watch videos,
+read books, and browse the web from their phones. These are all activities that
+run best on... a tablet. The key for *me*, is that these coincidentally are
+all activities that I *don't really want to be doing on the go*. If anything,
+they are a distraction.
+[Blackberry KEYone](https://blackberrymobile.com/us/product/blackberry-keyone/)
+
 #### Reading
 
-Humble Book Bundle, Paper
+Humble Book Bundle, Paper, Kindle
 
 #### "Touch" browsing
-The main reason driving my purchase of a tablet is for touch browsing and
-reading.
 
-#### Portable Productivity
+#### Offload *Some* of My Smart Phone Use
+Banking Apps, Email Apps, Housing
+
+#### Portable Productivity?
+
 
 ## My Apple Device History
 #### iPod "Video" (5th Gen)
