@@ -84,7 +84,6 @@ This practice has been great so far, but I do think it would be ideal to be able
 to sit down in an arm chair with a tablet in my lap during my batch reads.
 
 
-Humble Book Bundle, Paper, Kindle
 
 #### "Touch" browsing
 
@@ -107,4 +106,3 @@ occasionally fix??? So why be willing to get an iPad?
 #### Why the 10.5" Pro?
 - Sale
 - The things it's better at, I appreciate (speakers, screen)
-
