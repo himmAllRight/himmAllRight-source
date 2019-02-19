@@ -56,6 +56,34 @@ experience, and I assumed that with modern tablets, wit would only be better.
 
 #### Reading
 
+Being such a visual learner, I tend to gravitate towards visual media. Reading
+however, is much less passive than video. When watching a video, it will
+continue to progress whether the viewer is paying attention or now. Reading is
+much more self-driven and I find it helps to build my concentration. So,
+Reading is something I am always trying to do more of.
+
+While I have had a kindle for years, and it is the best way to consume books
+*for me*, there are other areas of my reading material it isn't great for. For
+example, thanks to [Humble Book
+Bundles](https://www.humblebundle.com/books/) I have aquired a collection of
+programming, DevOps, SysAdmin, and general tech books. You know, the type of book that is
+*technically* classified as a "textbook"... but I refrain from calling it so.
+Anyway the point is... they are terrible to read on the kindle. I sometimes
+have them open on my monior, but that experience isn't great either. I'd really
+like to have a way to flip through them. A tablet device lets me do that.
+
+<a href="/img/posts/getting-an-ipad/pocket-logo.svg"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/pocket-logo.svg" style="max-width: 40%; width: 175px; float: right; margin: 15px 15px 15px 15px; "/></a>
+
+Lastly, the internet is full of all sorts of "artciles". News artciles, blog
+posts, product announcements, opinion pieces, tutorials, reviews, all litter
+the internet. Recently, I've been starting to control this craziness by using
+tools like [pocket](https://getpocket.com/) to *save* articles I want to read.
+Then, I come back and batch-read them later. This helps me break the time suck
+and digging through and semi-reading articles, half of which aren't even good.
+This practice has been great so far, but I do think it would be ideal to be able
+to sit down in an arm chair with a tablet in my lap during my batch reads.
+
+
 Humble Book Bundle, Paper, Kindle
 
 #### "Touch" browsing
