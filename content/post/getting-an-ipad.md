@@ -22,6 +22,8 @@ When I use technology, I try to figure out and use devices which best fit the
 tasks I to do. Evaluating how I complete many tasks, I've started to think that
 a tablet might work well for many of my use cases.
 
+<a href="/img/posts/getting-an-ipad/keyone.png"><img alt="Blackberry KEYone" src="/img/posts/getting-an-ipad/keyone.png" style="max-width: 100%; width: 250px; float: left;"/></a>
+
 The main reason? I don't like using smartphones. While I think modern phones
 are a wonderful piece of technology, they are often misused. The smartphone has
 become many user's  *main* computing device.  While I agree it can be the *best*
@@ -38,6 +40,8 @@ activities I intend to offload from my phone to my iPad are:
 
 
 #### Portable Media Consumption
+
+<a href="/img/posts/getting-an-ipad/youtube-logo.png"><img alt="Youtube Logo" src="/img/posts/getting-an-ipad/youtube-logo.png" style="max-width: 100%; width: 200px; float: right; margin: 15px 15px 15px 15px;"/></a>
 
 I tend to watch most of my media on our TV or at my computer, but I did start
 to notice myself watching Youtube, or shows on Hulu and Netflix from my phone
@@ -62,6 +66,7 @@ continue to progress whether the viewer is paying attention or now. Reading is
 much more self-driven and I find it helps to build my concentration. So,
 Reading is something I am always trying to do more of.
 
+<a href="/img/posts/getting-an-ipad/leanyouahaskell.jpg"><img alt="Learn You A Haskell for Great Good Book" src="/img/posts/getting-an-ipad/leanyouahaskell.jpg" style="max-width: 100%; width: 260px; float: left; margin: 25px 25px 25px 25px; "/></a>
 While I have had a kindle for years, and it is the best way to consume books
 *for me*, there are other areas of my reading material it isn't great for. For
 example, thanks to [Humble Book
@@ -72,7 +77,7 @@ Anyway the point is... they are terrible to read on the kindle. I sometimes
 have them open on my monior, but that experience isn't great either. I'd really
 like to have a way to flip through them. A tablet device lets me do that.
 
-<a href="/img/posts/getting-an-ipad/pocket-logo.svg"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/pocket-logo.svg" style="max-width: 40%; width: 175px; float: right; margin: 15px 15px 15px 15px; "/></a>
+<a href="/img/posts/getting-an-ipad/pocket-logo.svg"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/pocket-logo.svg" style="max-width: 100%; width: 175px; float: right; margin: 15px 15px 15px 15px; "/></a>
 
 Lastly, the internet is full of all sorts of "artciles". News artciles, blog
 posts, product announcements, opinion pieces, tutorials, reviews, all litter
@@ -83,24 +88,19 @@ and digging through and semi-reading articles, half of which aren't even good.
 This practice has been great so far, but I do think it would be ideal to be able
 to sit down in an arm chair with a tablet in my lap during my batch reads.
 
-
-
-#### "Touch" browsing
-
 #### Offload *Some* of My Smart Phone Use
 Banking Apps, Email Apps, Housing
 
 
-## My Apple Device History
+## Why an iPad?
+
+#### My Apple Device History
 
 I was going to do a full section detailing my limited use of apple products
 throughout my life, only buying them when they obviously stand out. But that
 would be boring. So in short: The only Apple devices I have owned are 1) an
 iPod "Video", an iPod "Touch", and ... my wife had an Macbook air I helped
 occasionally fix??? So why be willing to get an iPad?
-
-
-## Why an iPad?
 
 
 #### Why the 10.5" Pro?
