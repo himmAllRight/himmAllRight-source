@@ -79,7 +79,7 @@ like to have a way to flip through them. A tablet device lets me do that.
 
 <a href="/img/posts/getting-an-ipad/pocket-logo.svg"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/pocket-logo.svg" style="max-width: 100%; width: 175px; float: right; margin: 15px 15px 15px 15px; "/></a>
 
-Lastly, the internet is full of all sorts of "artciles". News artciles, blog
+The internet is full of all sorts of "artciles". News artciles, blog
 posts, product announcements, opinion pieces, tutorials, reviews, all litter
 the internet. Recently, I've been starting to control this craziness by using
 tools like [pocket](https://getpocket.com/) to *save* articles I want to read.
@@ -89,7 +89,19 @@ This practice has been great so far, but I do think it would be ideal to be able
 to sit down in an arm chair with a tablet in my lap during my batch reads.
 
 #### Offload *Some* of My Smart Phone Use
-Banking Apps, Email Apps, Housing
+
+Lastly, as stated above, my biggest motivations for buying a tablet are to
+offload my phone use to it. For some apps, I want to offload my use of them
+*entirely* to a tablet. This is largly for apps that I enjoy using, or *need*
+to have... but don't need them with me all the time on my phone.
+
+The best example of this? Banking and other financial apps. I appreciate the
+ease of modern banking, and love that I can easily take a picture of a check to
+deposit it. However, I don't need this on my phone. Not only am I unlikely to
+be scanning checks and moving money around my bank accounts in public... it
+isn't really safe and secure to be doing so. I'd rather just wait until I get
+home to my own network, and do my banking from a tablet (which safely stays at
+home/away more often than my phone).
 
 
 ## Why an iPad?
@@ -102,6 +114,7 @@ would be boring. So in short: The only Apple devices I have owned are 1) an
 iPod "Video", an iPod "Touch", and ... my wife had an Macbook air I helped
 occasionally fix??? So why be willing to get an iPad?
 
+#### iPad
 
 #### Why the 10.5" Pro?
 - Sale
