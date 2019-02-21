@@ -106,16 +106,52 @@ home/away more often than my phone).
 
 ## Why an iPad?
 
+<a href="/img/posts/getting-an-ipad/ipod-video.png"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/ipod-video.png" style="max-width: 100%; width: 200px; float: left; margin: 20px 20px 10px 10px;"/></a>
 #### My Apple Device History
 
-I was going to do a full section detailing my limited use of apple products
-throughout my life, only buying them when they obviously stand out. But that
-would be boring. So in short: The only Apple devices I have owned are 1) an
-iPod "Video", an iPod "Touch", and ... my wife had an Macbook air I helped
-occasionally fix??? So why be willing to get an iPad?
+
+I originally wanted to do a full *multi-paragraph section* detailing my limited
+use of apple products throughout my life, and how I only really buy them when
+they obviously stand out. But that would be pretentious, extremely boring, and
+quite honestly, annoying. So in short: The only Apple devices I have owned are
+1) an iPod "Video", an iPod "Touch", and ... my wife has had Apple devices that
+I've played with and helped occasionally fix??? So why am I willing to get an
+iPad as my tablet device?
+
+
+
+
+#### Other Options
+
+When I started looking at tablets, I quickly noticed that the market has
+changed *dramatically* from a few years ago. While there are still android
+tablets available, the future of Google supporting android on tablets is a bit
+unclear, as they appear to be trying to shift them to ChromeOS, as observed on
+their own [Pixel
+Slate](https://store.google.com/us/product/pixel_slate?hl=en-US) device.
+Android still tends to treat tablets as just a large screen phone, and
+applications are often not optimized for it. So I was a little leery about
+Android tablets. As for ChromOS tablets, the Slate is currently the only real
+contender, but with it's high price point, and [lack-luster
+reviews](https://www.youtube.com/watch?v=2jsqZMCPJts), it was out of the running.
+
+At the *extreme* low end of the tablet market, was the [Amazon Fire Tablet
+Family](https://www.amazon.com/Amazon-Fire-Tablet-Family/). While these devices
+are very affordable, and would work for anyone that really just wants to
+read/watch video on a tablet. However, desipite that being the main thing
+discussed above, I do tend to push my technology to it's limit as I experiment
+with it. I just felt that the Fire tablet limit might be too low for me.
+Additionally, the very cheap versions of the tablet are the "with special
+offers" ones, which basically show amazon ads (like a kindle) on the tablet. By
+the time I had selected a 10" tablet *without* special offers, the price point
+started approaching (note quite, but close enough to consider jumping up)
+another contender... the 2018 iPad.
+
 
 #### iPad
 
 #### Why the 10.5" Pro?
 - Sale
 - The things it's better at, I appreciate (speakers, screen)
+
+
