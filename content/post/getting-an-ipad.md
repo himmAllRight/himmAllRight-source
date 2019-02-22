@@ -104,7 +104,6 @@ home to my own network, and do my banking from a tablet (which safely stays at
 home/away more often than my phone).
 
 
-
 ### Other Options
 
 ##### Android Tablets
@@ -137,7 +136,6 @@ another contender... the 2018 iPad.
 <a href="/img/posts/getting-an-ipad/ipod-video.png"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/ipod-video.png" style="max-width: 100%; width: 200px; float: left; margin: 20px 20px 10px 10px;"/></a>
 #### My Apple Device History
 
-
 I originally wanted to do a full *multi-paragraph section* detailing my limited
 use of apple products throughout my life, and how I only really buy them when
 they obviously stand out. But that would be pretentious, extremely boring, and
@@ -147,6 +145,14 @@ I've played with and helped occasionally fix??? So why am I willing to get an
 iPad as my tablet device?
 
 #### iPad
+
+While researching, I found that the Apple *iPad* was consistantly
+[reccomended](https://www.youtube.com/watch?v=GD1zTrs2EMw) [as
+a](https://www.youtube.com/watch?v=e7eNq6hTm5E)
+[*greatvalue*](https://www.youtube.com/watch?v=sGkr6Cjr0TI)
+[tablet-device](https://www.youtube.com/watch?v=y3PFt1Y8ZgA) on the market
+today. This was particulary true with the 2018 entry-level iPad, which sold for
+$330 USD, but could often be found on sale for under $300.
 
 #### Why the 10.5" Pro?
 - Sale
