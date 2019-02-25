@@ -154,8 +154,34 @@ a](https://www.youtube.com/watch?v=e7eNq6hTm5E)
 today. This was particulary true with the 2018 entry-level iPad, which sold for
 $330 USD, but could often be found on sale for under $300.
 
+Aimed at the education market, the 2018 iPad saw a cpu upgrade, and supprot for
+the iPad pencil. It was also said to have great battery life. The only con I
+ran into people reporting was that because it didn't have a laminated screen,
+there was a bit of a "gap" between it and the glass. Dispite the screen
+problem, this was still the best device I could find in the price range.
+
 #### Why the 10.5" Pro?
-- Sale
-- The things it's better at, I appreciate (speakers, screen)
+<a href="/img/posts/getting-an-ipad/ipadpro.png"><img alt='iPad 10.5" Pro' src="/img/posts/getting-an-ipad/ipadpro.png" style="max-width: 100%; width: 350px; float: right; margin: 20px 20px 10px 10px;"/></a>
 
+So... why did I end up with the 10.5" iPad Pro? The switch sort of happened
+last minute the morning I ended up ordering it. Basically, my upgrade happened
+because of two reasons:
 
+- **Sale**: The iPad Pro 10.5" had gone on a sale at BestBuy, and the model I would
+    get ended up being $499. While this was a bit more expensive, I thought it
+    was still a good deal, and the 2018 iPad wasn't on sale anywhere so it was
+    the full $330.
+
+- **Features**: Basically, the Pro had a slightly larger and *much* better display, better speakers,
+  and double the storage space (64GB compared to 32GB). While this isn't
+  something I think most people should care about, I knew I would really
+  appreciate those features, especially now that I could get them for only a
+  ~$170 increase over the iPad, compared to the nearly *doubled* price tag the
+  10.5" Pro had off sale.
+
+## Summary
+So, that's about it. That's the history and reasoning as to *why* I decided to
+get a tablet device, and why that device ultimately ended up being an iPad
+10.5" Pro. It arrived a couple weeks ago, and I have been enjoying it so far. I
+think I'll give myself some more time with it, and potentially write a follow
+post about how I *actually* use it, and what I think.
