@@ -119,7 +119,9 @@ Android tablets. As for ChromOS tablets, the Slate is currently the only real
 contender, but with it's high price point, and [lack-luster
 reviews](https://www.youtube.com/watch?v=2jsqZMCPJts), it was out of the running.
 
+
 ##### Amazon Fire Tablets
+<a href="/img/posts/getting-an-ipad/firetablet.png"><img alt="Amazon Fire Tablet" src="/img/posts/getting-an-ipad/firetablet.png" style="max-width: 100%; width: 300px; float: right; margin: 15px 15px 15px 15px; "/></a>
 At the *extreme* low end of the tablet market, was the [Amazon Fire Tablet
 Family](https://www.amazon.com/Amazon-Fire-Tablet-Family/). While these devices
 are very affordable, and would work for anyone that really just wants to
