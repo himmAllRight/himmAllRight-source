@@ -68,36 +68,40 @@ it would only be better.
 #### Reading
 
 Being such a visual learner, I tend to gravitate towards visual media. Reading
-however, is much less passive than video. When watching a video, it will
-continue to progress whether the viewer is paying attention or now. Reading is
-much more self-driven and I find it helps to build my concentration. So,
-Reading is something I am always trying to do more of.
+however, is much less passive than video. When watching a movie, it will
+continue to progress whether the viewer is paying attention or not. Reading is
+much more *self-driven* and I find it helps to build my concentration. As a
+result, reading is something I am always trying to do more of.
 
 <a href="/img/posts/getting-an-ipad/leanyouahaskell.jpg"><img alt="Learn You A Haskell for Great Good Book" src="/img/posts/getting-an-ipad/leanyouahaskell.jpg" style="max-width: 100%; width: 260px; float: left; margin: 25px 25px 25px 25px; "/></a>
-While I have had a kindle for years, and it is the best way to consume books
-*for me*, there are other areas of my reading material it isn't great for. For
-example, thanks to [Humble Book
-Bundles](https://www.humblebundle.com/books/) I have aquired a collection of
-programming, DevOps, SysAdmin, and general tech books. You know, the type of book that is
-*technically* classified as a "textbook"... but I refrain from calling it so.
-Anyway the point is... they are terrible to read on the kindle. I sometimes
-have them open on my monior, but that experience isn't great either. I'd really
-like to have a way to flip through them. A tablet device lets me do that.
+
+I have owned a kindle paperwhite for years and it is perfect for reading books.
+However, there are some types of reading material that my kindle falls
+short with.
+
+For example, thanks to [Humble Book
+Bundles](https://www.humblebundle.com/books/), I have aquired a collection of
+programming, DevOps, system administration, and general technology ebooks. You
+know...  the type of book that is *technically* classified as a "textbook"...
+but does not sound nearly as *cool* when I call it that...  Anyway the point
+is... they are *horrendous* to read on the kindle. I'd appreciate the ability to
+flip through them on a large, color screen, and a tablet enables that.
 
 <a href="/img/posts/getting-an-ipad/pocket-logo.svg"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/pocket-logo.svg" style="max-width: 100%; width: 175px; float: right; margin: 15px 15px 15px 15px; "/></a>
 
-The internet is full of all sorts of "artciles". News artciles, blog
-posts, product announcements, opinion pieces, tutorials, reviews, all litter
-the internet. Recently, I've been starting to control this craziness by using
-tools like [pocket](https://getpocket.com/) to *save* articles I want to read.
-Then, I come back and batch-read them later. This helps me break the time suck
-and digging through and semi-reading articles, half of which aren't even good.
-This practice has been great so far, but I do think it would be ideal to be able
-to sit down in an arm chair with a tablet in my lap during my batch reads.
+Lastly, the internet is full of all sorts of "articles". News stories, blog posts,
+product announcements, opinion pieces, tutorials, reviews... all litter the
+internet. Recently, I've been starting to corral this craziness by using tools
+such as [pocket](https://getpocket.com/) to *save* articles I *want* to read.
+Then, I can come back and batch-read them later. This helps me break the
+endless rabbit-hole of digging through, and semi-reading "*related*" articles
+(half of which aren't even good).  This practice has worked alright on my
+computer so far, but I do think it would be *ideal* to sit down in an
+arm chair with a tablet in my lap, for my batch reads.
 
 #### Offload *Some* of My Smart Phone Use
 
-Lastly, as stated above, my biggest motivations for buying a tablet are to
+As stated above, my biggest motivation for buying a tablet are to
 offload my phone use to it. For some apps, I want to offload my use of them
 *entirely* to a tablet. This is largly for apps that I enjoy using, or *need*
 to have... but don't need them with me all the time on my phone.
