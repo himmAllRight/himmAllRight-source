@@ -9,34 +9,39 @@ draft  = "True"
 Comments = "True"
 +++
 
-Over the last few months, I've been considering getting a tablet device for the
-first time since my sophomore year of college. After extensive research, it
-became clear that ipads are really the only competition in the tablet
-space right now. After convincing myself that I'd likely pickup a 2018 9.7" iPad at some
-point... I ordered an iPad Pro (2017 model). Here's why.
+Over the past few months, I've been considering getting a tablet device for the
+first time since I was in college. After resarching all the different tablets
+in the market, I had convinced myself that I'd likely be picking up a [2018
+9.7" iPad](https://www.apple.com/ipad-9.7/) at some point. Then I ordered an
+[iPad Pro 10.5" (2017
+model)](https://www.apple.com/shop/buy-ipad/ipad-pro-10-5).  Here's why.
 
 <!--more-->
 
 ## Why a Tablet?
-When I use technology, I try to figure out and use devices which best fit the
-tasks I to do. Evaluating how I complete many tasks, I've started to think that
-a tablet might work well for many of my use cases.
+When I use technology, I try to plan out and use devices which best fit the
+tasks I want to accomplish. After evaluating my work habits, I've started to
+think that a tablet might function well in many of my use cases.
 
 <a href="/img/posts/getting-an-ipad/keyone.png"><img alt="Blackberry KEYone" src="/img/posts/getting-an-ipad/keyone.png" style="max-width: 100%; width: 250px; float: left;"/></a>
 
-The main reason? I don't like using smartphones. While I think modern phones
-are a wonderful piece of technology, they are often misused. The smartphone has
-become many user's  *main* computing device.  While I agree it can be the *best*
-device for *some* tasks (particularly ones "on the go"), it isn't *great* at
-the hundreds of other tasks which people use them for. In the worst case, many
-apps are convenient distractions.
+The main reason? I don't like using smartphones. I think modern phones
+are a wonderful piece of technology, but they are often misused. While some
+smartphone apps can greatly enhance one's life, many are convenient
+distractions.
 
-I try to keep the set of apps installed on my phone to a minimum, only using
-the ones I deem to be best used on my phone. Over the past few months, I have
-noticed myself starting to use my phone for many "computer/TV" activities when
-I want to be more portable. The experience of these tasks on the phone isn't
-great, and I realized they would be best completed on a tablet. Some of the
-activities I intend to offload from my phone to my iPad are:
+
+My phone is _always_ with me, so I keep the set of apps installed on it to a
+minimum. I try to use apps that are most needed "on the go" (maps/lyft,
+music/podcasts, and various communication apps). I find it helps prevent me
+from easily distracting myself throughout the day.
+
+However, I realized I had starting to use my phone for many "computer/TV"
+activities when I wanted to do them away from my desk. The experience of these
+tasks on the phone isn't great, and I realized they would be best completed on
+a tablet. Additionally, setting up a tablet for these apps meant I could still
+enjoy them in a more portable way. but maintain a clean, distraction-free
+phone. Some of the use cases I intended to offload from my phone are:
 
 
 #### Portable Media Consumption
