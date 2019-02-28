@@ -48,20 +48,22 @@ phone. Some of the use cases I intended to offload from my phone are:
 
 <a href="/img/posts/getting-an-ipad/youtube-logo.png"><img alt="Youtube Logo" src="/img/posts/getting-an-ipad/youtube-logo.png" style="max-width: 100%; width: 200px; float: right; margin: 15px 15px 15px 15px;"/></a>
 
-I tend to watch most of my media on our TV or at my computer, but I did start
-to notice myself watching Youtube, or shows on Hulu and Netflix from my phone
-more often, when I wanted to watch from a different location, or if the TV was
-in use. With a small screen and crap speakers, watching video on a phone is
-terrible, especially on my [Blackberry
-KEYone's](https://blackberrymobile.com/us/product/blackberry-keyone/) smaller
-screen (Which I have to be a great *communication device* with a long
-battery life. However, even on large bezel-less phone screens, watching video is
-still terrible).
+I usually consume the majority of my media either on our TV, or at my computer.
+That being said, I did start to notice myself watching Youtube, Hulu, and
+Netflix, more often from my phone. This usually occured when the TV was in use,
+or I simply wanted to watch from a different location (ex: my bed). With a
+small screen, and tinny speakers, watching video on a phone is terrible.
+This is especially true on my [Blackberry
+KEYone's](https://blackberrymobile.com/us/product/blackberry-keyone/) *even
+smaller* screen (Which I choose because it is a great *communication device*, with a long
+battery life. Regardless, even on a large, bezel-less phone screen, watching video
+on a smart phone is still terrible).
 
 In college, I used my previous tablet ([an Asus Transformer
 T101](https://en.wikipedia.org/wiki/Asus_Eee_Pad_Transformer), with no dock) to
-watch videos in my dorm or around campus. It was a great portable viewing
-experience, and I assumed that with modern tablets, wit would only be better.
+watch videos in my dorm or around campus. I loved it's convenient, but yet
+still acceptable viewing experience. I assumed that with a modern tablet,
+it would only be better.
 
 #### Reading
 
