@@ -117,32 +117,33 @@ home much more frequently than my phone).
 ### Other Options
 
 ##### Android Tablets
-When I started looking at tablets, I quickly noticed that the market has
-changed *dramatically* from a few years ago. While there are still android
-tablets available, the future of Google supporting android on tablets is a bit
-unclear, as they appear to be trying to shift them to ChromeOS, as observed on
-their own [Pixel
-Slate](https://store.google.com/us/product/pixel_slate?hl=en-US) device.
-Android still tends to treat tablets as just a large screen phone, and
-applications are often not optimized for it. So I was a little leery about
+When I started looking at tablets, I quickly noticed that the market had
+changed *dramatically* from a just few years ago. While there are still android
+tablets *available*, the future of Google *supporting* android on tablets is a
+bit unclear, as they appear to be trying to shift everything to ChromeOS, as
+demonstrated with the [Pixel
+Slate](https://store.google.com/us/product/pixel_slate?hl=en-US).
+Additionally, Android still tends to treat tablets as just a large screen phone, and
+applications are often not optimized for it. Understandably, I was a little leery about
 Android tablets. As for ChromOS tablets, the Slate is currently the only real
 contender, but with it's high price point, and [lack-luster
-reviews](https://www.youtube.com/watch?v=2jsqZMCPJts), it was out of the running.
+reviews](https://www.youtube.com/watch?v=2jsqZMCPJts), it was out of the
+running.
 
 
 ##### Amazon Fire Tablets
 <a href="/img/posts/getting-an-ipad/firetablet.png"><img alt="Amazon Fire Tablet" src="/img/posts/getting-an-ipad/firetablet.png" style="max-width: 100%; width: 300px; float: right; margin: 15px 15px 15px 15px; "/></a>
-At the *extreme* low end of the tablet market, was the [Amazon Fire Tablet
-Family](https://www.amazon.com/Amazon-Fire-Tablet-Family/). While these devices
-are very affordable, and would work for anyone that really just wants to
-read/watch video on a tablet. However, desipite that being the main thing
-discussed above, I do tend to push my technology to it's limit as I experiment
-with it. I just felt that the Fire tablet limit might be too low for me.
-Additionally, the very cheap versions of the tablet are the "with special
-offers" ones, which basically show amazon ads (like a kindle) on the tablet. By
-the time I had selected a 10" tablet *without* special offers, the price point
-started approaching (note quite, but close enough to consider jumping up)
-another contender... the 2018 iPad.
+
+In contrast to the pixel slate, at the low end of the tablet market was the
+[Amazon Fire Tablet Family](https://www.amazon.com/Amazon-Fire-Tablet-Family/).
+These devices are quite affordable and would work well for anyone that just
+wants to read/watch video on a tablet (expecially Amazon content). However, I
+just felt that the Fire tablet might be a bit too limiting for me, as I tend to
+push technology as far as I can.  Beyond that, the cheaper iterations of each
+tablet are the "special offers" ones, which show amazon ads (like a kindle) on
+the tablet. By the time I had selected a 10" tablet *without* special offers,
+the price point started approaching (well... almost) another contender... the
+2018 iPad.
 
 ## Why an iPad?
 <a href="/img/posts/getting-an-ipad/ipod-video.png"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/ipod-video.png" style="max-width: 100%; width: 200px; float: left; margin: 20px 20px 10px 10px;"/></a>
@@ -150,11 +151,10 @@ another contender... the 2018 iPad.
 
 I originally wanted to do a full *multi-paragraph section* detailing my limited
 use of apple products throughout my life, and how I only really buy them when
-they obviously stand out. But that would be pretentious, extremely boring, and
-quite honestly, annoying. So in short: The only Apple devices I have owned are
-1) an iPod "Video", an iPod "Touch", and ... my wife has had Apple devices that
-I've played with and helped occasionally fix??? So why am I willing to get an
-iPad as my tablet device?
+they *obviously* stand out above the competition. But that would be
+pretentious, extremely boring, and quite honestly, annoying. So in short: the
+only Apple devices that I have owned are 1) an iPod Video, and 2) iPod Touch.
+So why am I willing to get an iPad as my tablet device?
 
 #### iPad
 
@@ -163,24 +163,24 @@ While researching, I found that the Apple *iPad* was consistantly
 a](https://www.youtube.com/watch?v=e7eNq6hTm5E)
 [*greatvalue*](https://www.youtube.com/watch?v=sGkr6Cjr0TI)
 [tablet-device](https://www.youtube.com/watch?v=y3PFt1Y8ZgA) on the market
-today. This was particulary true with the 2018 entry-level iPad, which sold for
-$330 USD, but could often be found on sale for under $300.
+today. This was particulary true regarding the 2018 entry-level iPad, which
+sold for $330 USD, but could often be found on sale for under $300.
 
-Aimed at the education market, the 2018 iPad saw a cpu upgrade, and supprot for
-the iPad pencil. It was also said to have great battery life. The only con I
-ran into people reporting was that because it didn't have a laminated screen,
-there was a bit of a "gap" between it and the glass. Dispite the screen
-problem, this was still the best device I could find in the price range.
+Aimed at the education market, the 2018 iPad saw a cpu upgrade, and support for
+the Apple pencil. The only con I ran into people reporting was that because it
+didn't have a laminated screen, there was a bit of a "gap" between it and the
+glass. Dispite the screen problem, this was still the best device I could find
+around that price range.
 
 #### Why the 10.5" Pro?
 <a href="/img/posts/getting-an-ipad/ipadpro.png"><img alt='iPad 10.5" Pro' src="/img/posts/getting-an-ipad/ipadpro.png" style="max-width: 100%; width: 350px; float: right; margin: 20px 20px 10px 10px;"/></a>
 
 So... why did I end up with the 10.5" iPad Pro? The switch sort of happened
 last minute the morning I ended up ordering it. Basically, my upgrade happened
-because of two reasons:
+because of two factors:
 
 - **Sale**: The iPad Pro 10.5" had gone on a sale at BestBuy, and the model I would
-    get ended up being $499. While this was a bit more expensive, I thought it
+    get ended up being $499 (down from $650). While this was a bit more expensive, I thought it
     was still a good deal, and the 2018 iPad wasn't on sale anywhere so it was
     the full $330.
 
@@ -188,12 +188,11 @@ because of two reasons:
   and double the storage space (64GB compared to 32GB). While this isn't
   something I think most people should care about, I knew I would really
   appreciate those features, especially now that I could get them for only a
-  ~$170 increase over the iPad, compared to the nearly *doubled* price tag the
-  10.5" Pro had off sale.
+  ~$170 increase over the iPad, compared to the normal $310 differance.
 
 ## Summary
-So, that's about it. That's the history and reasoning as to *why* I decided to
+So, that's the history and reasoning as to *why* I decided to
 get a tablet device, and why that device ultimately ended up being an iPad
 10.5" Pro. It arrived a couple weeks ago, and I have been enjoying it so far. I
-think I'll give myself some more time with it, and potentially write a follow
-post about how I *actually* use it, and what I think.
+think I'll give myself some more time with it, before I attempt to write any
+sort of review.
