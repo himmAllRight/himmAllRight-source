@@ -101,18 +101,17 @@ arm chair with a tablet in my lap, for my batch reads.
 
 #### Offload *Some* of My Smart Phone Use
 
-As stated above, my biggest motivation for buying a tablet are to
-offload my phone use to it. For some apps, I want to offload my use of them
-*entirely* to a tablet. This is largly for apps that I enjoy using, or *need*
-to have... but don't need them with me all the time on my phone.
+As previously stated, my biggest motivation for buying a tablet is to offload
+my phone usage to it. This is particulary true for apps which I am *required*
+to use... but don't need to have access to at all times.
 
 The best example of this? Banking and other financial apps. I appreciate the
-ease of modern banking, and love that I can easily take a picture of a check to
-deposit it. However, I don't need this on my phone. Not only am I unlikely to
-be scanning checks and moving money around my bank accounts in public... it
-isn't really safe and secure to be doing so. I'd rather just wait until I get
-home to my own network, and do my banking from a tablet (which safely stays at
-home/away more often than my phone).
+ease of modern banking, and love that I can simply take a picture to deposit a
+check. However, I don't need this on my phone. Not only am I unlikely to be
+scanning checks and moving money around my bank accounts in public... it isn't
+really safe to be doing so. I'd rather just wait until I get home on
+my own network, and do my banking from a tablet (which stays at
+home much more frequently than my phone).
 
 
 ### Other Options
