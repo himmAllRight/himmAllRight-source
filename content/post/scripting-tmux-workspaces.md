@@ -40,15 +40,35 @@ background section...
 
 #### Create new tmux session (with var name)
 
+```bash
+# Session Name
+session="Website"
+
+# Start New Session with our name
+tmux new-session -d -s $session
+```
 
 #### Name initial default Pane (and switch to `zsh`)
+
+``` bash
+# Name first Pane and start zsh
+tmux rename-window -t 0 'Shell'
+tmux send-keys -t 'Shell' 'zsh' C-m 'clear' C-m
+```
 
 
 #### Add a new (named) pane for server
 Also kick off hugo?
 
+```bash
+# Create and setup pane for hugo server
+tmux new-window -t $session:1 -n 'Hugo Server'
+tmux send-keys -t 'Hugo Server' 'hugo serve -D -F' C-m # Switch to bind script?
+```
 #### Add a new (name) pane for vim
 Open VIM?
+
+#### Attach Session
 
 ### Demo workflow, how I'd use it
 

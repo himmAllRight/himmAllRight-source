@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Set Session Name
+session="Website"
+
+# Start New Session with our name
+tmux new-session -d -s $session
+
+
+# Name first Pane and start zsh
+tmux rename-window -t 0 'Shell'
+tmux send-keys -t 'Shell' 'zsh' C-m 'clear' C-m
+
+
+# Create and setup pane for hugo server
+tmux new-window -t $session:1 -n 'Hugo Server'
+tmux send-keys -t 'Hugo Server' 'hugo serve -D -F' C-m # Switch to bind script?
+
+tmux attach-session -t
