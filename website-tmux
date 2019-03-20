@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Set Session Name
-SESSION="Test"
+SESSION="Website"
 SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
 
 # Only create tmux session if it doesn't already exist
@@ -14,16 +14,16 @@ then
     tmux rename-window -t 0 'Main'
     tmux send-keys -t 'Main' 'zsh' C-m 'clear' C-m # Switch to bind script?
 
-    # setup Writting window
-    tmux new-window -t $SESSION:1 -n 'Writting'
-    tmux send-keys -t 'Writting' "nvim" C-m
-
     # Create and setup pane for hugo server
     tmux new-window -t $SESSION:1 -n 'Hugo Server'
     tmux send-keys -t 'Hugo Server' 'hugo serve -D -F' C-m # Switch to bind script?
 
+    # setup Writting window
+    tmux new-window -t $SESSION:2 -n 'Writting'
+    tmux send-keys -t 'Writting' "nvim" C-m
+
     # Setup an additional shell
-    tmux new-window -t $SESSION:1 -n 'Shell'
+    tmux new-window -t $SESSION:3 -n 'Shell'
     tmux send-keys -t 'Shell' "zsh" C-m 'clear' C-m
 fi
 
