@@ -52,8 +52,8 @@ tmux new-session -d -s $session
 
 ``` bash
 # Name first Pane and start zsh
-tmux rename-window -t 0 'Shell'
-tmux send-keys -t 'Shell' 'zsh' C-m 'clear' C-m
+tmux rename-window -t 0 'Main'
+tmux send-keys -t 'Main' 'zsh' C-m 'clear' C-m
 ```
 
 
@@ -63,13 +63,40 @@ Also kick off hugo?
 ```bash
 # Create and setup pane for hugo server
 tmux new-window -t $session:1 -n 'Hugo Server'
-tmux send-keys -t 'Hugo Server' 'hugo serve -D -F' C-m # Switch to bind script?
+tmux send-keys -t 'Hugo Server' 'hugo serve -D -F' C-m
 ```
 #### Add a new (name) pane for vim
 Open VIM?
 
+```bash
+# setup Writting window
+tmux new-window -t $SESSION:2 -n 'Writting'
+tmux send-keys -t 'Writting' "nvim" C-m
+```
+
+#### Setup an extra shell. Why not?
+
+```bash
+# Setup an additional shell
+tmux new-window -t $SESSION:3 -n 'Shell'
+tmux send-keys -t 'Shell' "zsh" C-m 'clear' C-m
+```
+
 #### Attach Session
+
+```bash
+# Attach Session, on the Main window
+tmux attach-session -t $SESSION:0
+```
 
 ### Demo workflow, how I'd use it
 
+#### Minor improvement
+
+`if` wrapper for if the sessions already exists
+
 ### Conclusion
+
+This post might be moot now if I check out
+[tmuxinator](https://github.com/tmuxinator/tmuxinator), which I've just learned
+about... oh well. It was still a good exercise in bash scripting :P.
