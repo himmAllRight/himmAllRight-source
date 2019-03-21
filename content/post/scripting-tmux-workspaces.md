@@ -2,8 +2,8 @@
 title  = "Scriping A Tmux Workspace Startup"
 date   = "2019-03-20"
 author = "Ryan Himmelwright"
-image  = "img/posts/charmeleon-desktop-design/rht-header.jpg"
-caption= "Red Hat Tower, Raleigh NC"
+image  = "img/posts/scripting-tmux-workspaces/parking-garage-sunset1.jpg"
+caption= "Liberty Warehouse, Durham NC"
 tags   = ["Linux", "Dev", "Dotfiles", "Customization", "Shell",]
 draft  = "True"
 Comments = "True"
