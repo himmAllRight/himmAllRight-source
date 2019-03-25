@@ -10,11 +10,11 @@ then
     # Start New Session with our name
     tmux new-session -d -s $SESSION
 
-    # Name first Pane and start zsh
+    # Name first Window and start zsh
     tmux rename-window -t 0 'Main'
     tmux send-keys -t 'Main' 'zsh' C-m 'clear' C-m # Switch to bind script?
 
-    # Create and setup pane for hugo server
+    # Create and setup Window for hugo server
     tmux new-window -t $SESSION:1 -n 'Hugo Server'
     tmux send-keys -t 'Hugo Server' 'hugo serve -D -F' C-m # Switch to bind script?
 
