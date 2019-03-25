@@ -33,12 +33,27 @@ background section...
 
 ### Walk through making the new script
 #### New Script
+
+First, lets create a new script. Start by opening a new file, and adding a bash
+[shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) line to the top:
+
 ```bash
 #!/bin/bash
 
 ```
 
+This line tells the system that the following text will be a
+[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) script.
+
+*Optional: Save and close the file, then re-open it to take advantage the text
+editors's bash syntax highlighting if it didn't automatically switch it on.*
+
+
 #### Create new tmux session (with var name)
+
+Next, lets define a variable to store the tmux session name. This will make it
+easier to change the session name later on. Then, using the session variable, a new
+tmux-session with our desired name can be started.
 
 ```bash
 # Session Name
@@ -48,25 +63,48 @@ session="Website"
 tmux new-session -d -s $session
 ```
 
-#### Name initial default Pane (and switch to `zsh`)
+Normally if entering this command directly into the command line, an empty tmux
+session would created an attached. However, our script will do a bit more setup
+before attaching.
+
+#### Name initial default Window (and switch to `zsh`)
+
+Let's customize the defuault window and give it a name. I'll this first tmux
+window `"Main"`, and have it simply run a [zsh](https://ohmyz.sh/) shell. After
+creating a new session, there is only one window, so I know it will be
+identified with the number `0`. I can use this with `-t` to rename the window.
 
 ``` bash
-# Name first Pane and start zsh
+# Name first Window and start zsh
 tmux rename-window -t 0 'Main'
 tmux send-keys -t 'Main' 'zsh' C-m 'clear' C-m
 ```
 
+I can then use the `send-keys` command using the new window name to start zsh.
+This is the equivalent of typing `zsh`, `[Enter]`, `clear`, `[Enter]` into the
+command line.
 
-#### Add a new (named) pane for server
-Also kick off hugo?
+
+#### Add a new (named) window for hugo server
+
+With the main tmux window setup, I want to start adding more for different
+tasks. First, I want a window that can run the hugo server when I am working on
+the website. Now that I have a session created, I can name the window as I
+create it.
 
 ```bash
 # Create and setup pane for hugo server
 tmux new-window -t $session:1 -n 'Hugo Server'
 tmux send-keys -t 'Hugo Server' 'hugo serve -D -F' C-m
 ```
+
+Again, I can use tmux `send-keys` to send the `hugo serve -D -F` command to
+start up a hugo server for local draft editing.
+
 #### Add a new (name) pane for vim
-Open VIM?
+
+Now, I need a place to write website posts... so lets spin up a new tmux
+window, and open up neovim inside of it.
 
 ```bash
 # setup Writting window
@@ -74,7 +112,9 @@ tmux new-window -t $SESSION:2 -n 'Writting'
 tmux send-keys -t 'Writting' "nvim" C-m
 ```
 
-#### Setup an extra shell. Why not?
+#### Another shell
+
+Lastly, lets spin up one more shell window, just in case it's needed. Why not?
 
 ```bash
 # Setup an additional shell
@@ -84,6 +124,10 @@ tmux send-keys -t 'Shell' "zsh" C-m 'clear' C-m
 
 #### Attach Session
 
+With the tmux session all configured and customized, we can tell the script to
+go ahead and attach it, using the `attach-session` command with the session
+name variable.
+
 ```bash
 # Attach Session, on the Main window
 tmux attach-session -t $SESSION:0
@@ -91,7 +135,7 @@ tmux attach-session -t $SESSION:0
 
 ### Demo workflow, how I'd use it
 
-#### Minor improvement
+#### Bonus: Minor improvement
 
 `if` wrapper for if the sessions already exists
 
