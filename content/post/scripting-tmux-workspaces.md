@@ -20,9 +20,10 @@ it would be a great tutorial!
 
 <!--more-->
 
-### tmux background/demo?
+### Tmux
 
-### How I scripted my work stuff/What workflow I want for the website stuff
+<img alt="tmux demo animation" src="../../img/posts/scripting-tmux-workspaces/animation-hover.png" onmouseover="this.src='../../img/posts/scripting-tmux-workspaces/tmux-demo.gif'" onmouseout="this.src='../../img/posts/scripting-tmux-workspaces/animation-hover.png'" style="max-width: 100%;"/>
+<div class="caption">Small tmux demonstration</div>
 
 ### Walk through making the new script
 #### New Script
@@ -127,6 +128,10 @@ tmux attach-session -t $SESSION:0
 ```
 
 #### Bonus: Minor improvement
+
+<img alt="tmux demo animation" src="../../img/posts/scripting-tmux-workspaces/animation-hover.png" onmouseover="this.src='../../img/posts/scripting-tmux-workspaces/tmux-duplicate-windows.gif'" onmouseout="this.src='../../img/posts/scripting-tmux-workspaces/animation-hover.png'" style="max-width: 100%;"/>
+<div class="caption">The script would create duplicate windows if the tmux
+session already existed.</div>
 
 At this point, I was done with my tmux script. It worked well for creating my
 session and attaching it. However, there was *one* issue I often had. If I ran
