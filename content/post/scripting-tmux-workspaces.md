@@ -126,19 +126,35 @@ name variable.
 tmux attach-session -t $SESSION:0
 ```
 
-### Demo workflow, how I'd use it
-
 #### Bonus: Minor improvement
 
-`if` wrapper for if the sessions already exists
+At this point, I was done with my tmux script. It worked well for creating my
+session and attaching it. However, there was *one* issue I often had. If I ran
+the script when there was a tmux session with the same name *already*, it would
+just double up the windows in that session. If I accidently did this, I would
+have to go through each window, close out whatever and was running, and then
+close the window.
+
+To fix this issue, I decided to wrap the initialization commands inside of an
+`if` statement, and only run them if the tmux session *didn't* already exist.
 
 ##### check if session already exists
 
+First, I needed a way to *check* whether the desired tmux session already existed
+or not. This can be done by "grep'ing" the output of `tmux list-sessions` for
+the session name, which we've already convienently stored in our `$SESSION`
+variable. For Cleanliness, I took the output of that process and saved it in a
+`SESSIONEXISTS` variable, defined directly under `SESSION` in the script.
 ```bash
 SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
 ```
-Wrap the new session steps in an `if` conditional:
 
+If the session exists, `SESSIONEXISTS` will be a string of the line `grep`
+matched. Otherwise, it will just be an empty string (`""`).
+
+
+Now, I can use the `SESSIONEXISTS` variable with an `if` wrap the the tmux
+setup code so that it only runs when the session isn't there already.
 ```bash
 if [ "$SESSIONEXISTS" = "" ]
 then
@@ -146,9 +162,14 @@ then
 fi
 ```
 
+The `attach-session` command should be *outside* of the `if` body, because it
+will be run in both cases (even if the session doesn't have to be created, we
+still want to attach the one that already exists).
+
+
 ### Conclusion
 
-Everything all together:
+That is it. Here is the script with everything all put together:
 
 ```bash
 #!/bin/sh
@@ -184,6 +205,8 @@ fi
 tmux attach-session -t $SESSION:0
 ```
 
-This post might be moot now if I check out
-[tmuxinator](https://github.com/tmuxinator/tmuxinator), which I've just learned
-about... oh well. It was still a good exercise in bash scripting :P.
+I hope this post has been helpfull! However, I have to admit that this post
+*may* be moot if I decide check out
+[tmuxinator](https://github.com/tmuxinator/tmuxinator) (which a co-worker
+recomended) ... oh well. I guess this endevour was still a good exercise in
+some bash scripting :P.
