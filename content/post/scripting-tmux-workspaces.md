@@ -9,23 +9,16 @@ draft  = "True"
 Comments = "True"
 +++
 
-For years, I have enjoyed the terminal multiplexer [tmux](http://www.tmux.com).
-It allows you to open a shell in the terminal that can be split horizontally and
-vetically into multiple panes. Like a browser, there can also be multiple tabs
-or even sessions of these split terminals. Best of all, tmux sessions can be
-detached and re-attached later (which is wonderful combined with ssh). As I
-have been utilizing tmux even more at work now, I've learned how to script the
-startup/configuration of my tmux sessions for each project.
+For years, I have enjoyed the terminal multiplexer,
+[tmux](http://www.tmux.com).  It allows you to open a shell in the terminal
+(complete with multiple tabs and pane splitting) that can be detached and
+re-attached later (which is wonderful combined with ssh). Now that I am
+utilizing tmux even more at work, I have started to script the
+startup/configuration a tmux session for each project. I recently decided to
+write a script to start up a session for working on my website... and thought
+it would be a great tutorial!
 
 <!--more-->
-
-After scripting some of my tmux workflow setups for projects at my job, I
-decided that I want to script a tmux startup session for when I'm writing
-website posts. Which is a perfect example to write a post about :D.
-
-
-Some outlining for the post. The intro might be broken up and put in a
-background section...
 
 ### tmux background/demo?
 
