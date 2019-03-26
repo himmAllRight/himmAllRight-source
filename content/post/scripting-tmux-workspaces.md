@@ -25,7 +25,14 @@ it would be a great tutorial!
 <img alt="tmux demo animation" src="../../img/posts/scripting-tmux-workspaces/animation-hover.png" onmouseover="this.src='../../img/posts/scripting-tmux-workspaces/tmux-demo.gif'" onmouseout="this.src='../../img/posts/scripting-tmux-workspaces/animation-hover.png'" style="max-width: 100%;"/>
 <div class="caption">Small tmux demonstration</div>
 
-### Walk through making the new script
+When working on a project, I like to use tmux to maintain all of the terminal
+windows related to it. This keeps everything together, and allows me to even
+detach the session, switch to another computer, ssh into the previous computer,
+and re-attach my working tmux session. Paired with the fact that I've started
+using VIM again, it works seamlessly. Scripting the initialization makes
+getting to work even smoother.
+
+### Automating tmux initialization for working on my website
 #### New Script
 
 First, lets create a new script. Start by opening a new file, and adding a bash
