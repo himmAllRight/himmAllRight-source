@@ -9,14 +9,13 @@ draft  = "True"
 Comments = "True"
 +++
 
-For years, I have enjoyed the terminal multiplexer,
-[tmux](http://www.tmux.com).  It allows you to open a shell in the terminal
-(complete with multiple tabs and pane splitting) that can be detached and
-re-attached later (which is wonderful combined with ssh). Now that I am
-utilizing tmux even more at work, I have started to script the
-startup/configuration a tmux session for each project. I recently decided to
-write a script to start up a session for working on my website... and thought
-it would be a great tutorial!
+I love the terminal multiplexer, [tmux](http://www.tmux.com). It adds
+functionality to the terminal, such as multiple tabs, pane splitting, and the
+ability to detach and re-attach everything later (which is *amazing* when
+combined with `ssh`). I have been utilizing tmux even more at work, and recently
+started to script the startup/configuration a tmux session for each project.
+The other day, I decided to write a script to spin up a session for working on my
+website... and thought it would be a great tutorial!
 
 <!--more-->
 
