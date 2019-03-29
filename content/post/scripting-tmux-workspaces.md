@@ -1,6 +1,6 @@
 +++
 title  = "Scripting A Tmux Work-space Start-up"
-date   = "2019-03-20"
+date   = "2019-03-27"
 author = "Ryan Himmelwright"
 image  = "img/posts/scripting-tmux-workspaces/parking-garage-sunset1.jpg"
 caption= "Liberty Warehouse, Durham NC"
@@ -25,7 +25,7 @@ website... and thought it would be a great tutorial!
 <div class="caption">Small tmux demonstration</div>
 
 When working on a project, I like to use tmux to maintain all of the terminal
-windows related to it. This keeps everything together, and even allows me to 
+windows related to it. This keeps everything together, and even allows me to
 detach the session, switch to another computer, ssh into the previous computer,
 and re-attach my working tmux session. Paired with the fact that I've started
 using VIM again, it works seamlessly. Scripting the initialization makes
