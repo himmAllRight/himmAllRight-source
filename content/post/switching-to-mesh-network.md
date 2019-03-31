@@ -36,10 +36,30 @@ time which we'd likely live in the apartment. So I reluctantly used the Google
 provided box.
 
 ### We Moved
+The Google fiber was indeed short lived, as my wife and I just moved into a
+house this past month. When working with Spectrum (yea... I know), we
+discovered that while there were coax plugs in both the living room and
+master bedroom... we couldn't actually find any hook-ups to connect the house
+to the cable/internet service line.
 
 #### Cable line in Bedroom
+After searching with multiple techs, we decided just to have them drill a line
+into the master bedroom (which is at the back of the house and means the
+connection box can be next to the other meters). Our house isn't massive and
+having the router in the bedroom works well enough except for one issue.
+
+I tend to have several servers and desktop computers that I *need* to connect
+to ethernet (either because they don't have wifi cards, and/or because I rely
+on Wake-On-Lan technologies with them). This means that I need an ethernet
+connection in my office... at the front of the house. With the only ethernet
+router/switch being in the bedroom and the rest of the house relying on wifi...
+I needed to figure something out.
 
 #### Powerline Issues
+In past apartments, I had used powerline ethernet adaptors to extend ethernet
+from a router in a different room to my computers. The speeds weren't great
+but, then again neither was our connection so it wasn't a huge deal. This time
+around though I ran some tests...
 
 #### Mesh Network?
 
