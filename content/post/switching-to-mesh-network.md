@@ -62,14 +62,42 @@ but, then again neither was our connection so it wasn't a huge deal. This time
 around though I ran some tests...
 
 
-<a href="/img/posts/switching-to-mesh-network/internet-speed-comparison.png"><img alt="Diagram comparing internet speeds: 1) Plugged directly into Router: 27 ms ping, 231.44 Mbps Download, 11.79 Mbps upload 2) Wifi in Office: 17 ms ping, 178.74 Mbps Download, 11.72 Mbps Upload 3) Powerline Ethernet in Office: 15 ms ping, 17.66 MBps Download, 11.86 Mbps Upload." src="/img/posts/switching-to-mesh-network/internet-speed-comparison.png" style="max-width: 100%; width= 768px;"/></a>
-<dif class="caption">Different internet Speed test results after hooking up
+<a href="/img/posts/switching-to-mesh-network/internet-speed-comparison.png">
+
+<img alt="Diagram comparing internet speeds: 1) Plugged directly into Router: 27 ms ping, 231.44 Mbps Download, 11.79 Mbps upload 2) Wifi in Office: 17 ms ping, 178.74 Mbps Download, 11.72 Mbps Upload 3) Powerline Ethernet in Office: 15 ms ping, 17.66 MBps Download, 11.86 Mbps Upload." src="/img/posts/switching-to-mesh-network/internet-speed-comparison.png" style="max-width: 100%;"/></a>
+
+<div class="caption">Different internet Speed test results after hooking up
 internet to the house.</div>
 
+So while it *worked*, this setup wasn't ideal. More importantly, I found out a
+few days there was a problem that *completely prevents* me from being able to
+use the powerline adaptors. The house's electrical panel is between the master
+bedroom and the office, which is basically the worst case scenerio. One day, we
+turned on the washing machine and our internet went down (not just the
+powerline connections... the entire network, wifi and all). When I unplugged
+the powerline adaptors, it worked again. Powerline wasn't going to cut it this
+time around.
 
-#### Mesh Network?
+#### Mesh Network
+I wondered if there was any other way to get ethernet in my office beyond
+having to drop cat6 cable from the bedroom to the office. I looked into wifi
+bridges, but they seemed to be deviceds designed for large distances, or not
+much better than a powerline adaptors when it came to perforamnce or
+reliability. While looking at wifi bridges, a thought occured to me... would a
+mesh network system work? If the satilite devices had ethernet ports on it...
+maybe.
 
-#### Orbi
+#### Netgeat Orbi
+
+When I started researching wifi mesh networks, the orbi systems were constantly
+rated the highest, and people generally reported that they experienced *great*
+performance. When I dug further into it, I learned that this performance was
+likely due to the orbi's ["tri-band wifi
+technology"](https://www.netgear.com/landings/mesh-network/) it used.
+Basically, in addition to the normal 2.4 and 5 Ghz network bands, the orbi
+system has *a second 5 Ghz band dedicated* to connecting the orbi router and
+satilites together. In other words... a dedicated wifi bridge :D .
+
 
 ##### Tri-band acting as "wireless" ethernet bridge :P
 
