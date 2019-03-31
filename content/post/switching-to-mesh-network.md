@@ -61,6 +61,12 @@ from a router in a different room to my computers. The speeds weren't great
 but, then again neither was our connection so it wasn't a huge deal. This time
 around though I ran some tests...
 
+
+<a href="/img/posts/switching-to-mesh-network/internet-speed-comparison.png"><img alt="Diagram comparing internet speeds: 1) Plugged directly into Router: 27 ms ping, 231.44 Mbps Download, 11.79 Mbps upload 2) Wifi in Office: 17 ms ping, 178.74 Mbps Download, 11.72 Mbps Upload 3) Powerline Ethernet in Office: 15 ms ping, 17.66 MBps Download, 11.86 Mbps Upload." src="/img/posts/switching-to-mesh-network/internet-speed-comparison.png" style="max-width: 100%; width= 768px;"/></a>
+<dif class="caption">Different internet Speed test results after hooking up
+internet to the house.</div>
+
+
 #### Mesh Network?
 
 #### Orbi
