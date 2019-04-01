@@ -95,7 +95,7 @@ when it came to performance/reliability. While looking at wifi
 bridges, a thought occurred to me... would a mesh network system work?
 If the satellite devices had ethernet ports... maybe.
 
-#### Netgeat Orbi
+#### Netgear Orbi
 
 When I started researching wifi mesh networks, the orbi systems were consistently
 rated the highest, and people generally reported that they experienced *great*
