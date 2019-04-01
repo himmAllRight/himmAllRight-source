@@ -96,8 +96,8 @@ likely due to the orbi's ["tri-band wifi
 technology"](https://www.netgear.com/landings/mesh-network/) it used.
 Basically, in addition to the normal 2.4 and 5 Ghz network bands, the orbi
 system has *a second 5 Ghz band dedicated* to connecting the orbi router and
-satilites together. In other words... a dedicated wifi bridge :D .
+satilites together. In other words... a dedicated wifi bridge :D.
 
-
-##### Tri-band acting as "wireless" ethernet bridge :P
-
+So I started looking at the differant orbis and saw that there were two
+satilite types: one that was just a wall plug, and a larger one that had 2-4
+ethernet ports int it.
