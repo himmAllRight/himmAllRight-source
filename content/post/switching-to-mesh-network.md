@@ -98,6 +98,24 @@ Basically, in addition to the normal 2.4 and 5 Ghz network bands, the orbi
 system has *a second 5 Ghz band dedicated* to connecting the orbi router and
 satilites together. In other words... a dedicated wifi bridge :D.
 
-So I started looking at the differant orbis and saw that there were two
-satilite types: one that was just a wall plug, and a larger one that had 2-4
-ethernet ports int it.
+So I started looking at the orbi hardware and saw that there were several types
+of
+[satilites](https://www.netgear.com/orbi/products.aspx#filter=.satellites-indoor%2C.satellites%2C.satellites-outdoor%2C.satellites):
+some were just wall plugs, but a few had 2-4 ethernet ports. Perfect. Realizing
+this, I ended up ordering the [RBK50](https://www.netgear.com/orbi/rbk50.aspx)
+system, which contains a 4-port orbi router, and a 4-port satilite. My hope was
+that I could set up the router in the master bedroom with our modem, and then
+put the satilite in my office on the other end of the house, connecting my
+hardwire devices, or even a network switch, into the ethernet ports.
+
+#### Conclusion
+
+I have ordered and setup my orbi system, and will write a review post about it
+in the future. This post's intention was mostly to just explain *why* I ended
+up getting an orbi system.
+
+Many people have started using wifi "mesh" systems because they provide a
+simple solution to cover an entire house with a solid wifi connection. While
+this is a great *bonus* I get from having a mesh system, as this post
+demonstrates, my *main* purpose for the orbi, is to be a solid "ethernet over
+wifi" system for the new house. So far... it's working great.
