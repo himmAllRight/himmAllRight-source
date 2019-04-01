@@ -27,6 +27,11 @@ lite](https://www.ui.com/unifi/unifi-ap-ac-lite/) wifi access point. I loved
 it. It handled our web traffic flawlessly, and unlike the previous Linksys
 routers, I never had to randomly restart it. It just worked for months on end.
 
+
+<a href="/img/posts/switching-to-mesh-network/google-fiber-box.png"><img alt="The RBK50 system comes with 1 router, and 1 satilite
+device. Both have 4 etherent ports." src="/img/posts/switching-to-mesh-network/google-fiber-box.png" style="max-width: 100%;"/></a>
+<div class="caption">The Google Fiber "network box".</div>
+
 I enjoyed the setup *so* much in fact, that while I was thrilled to have a Google
 Fiber internet connection in our apartment when we moved to Durham NC last
 year... I was a little sad that setting up the edgerouter on the fiber
@@ -42,7 +47,7 @@ discovered that while there were coax plugs in both the living room and
 master bedroom... we couldn't actually find any hook-ups to connect the house
 to the cable/internet service line.
 
-#### Cable line in Bedroom
+#### Cable-line in Bedroom
 After searching with multiple techs, we decided just to have them drill a line
 into the master bedroom (which is at the back of the house and means the
 connection box can be next to the other meters). Our house isn't massive and
@@ -63,7 +68,6 @@ around though I ran some tests...
 
 
 <a href="/img/posts/switching-to-mesh-network/internet-speed-comparison.png">
-
 <img alt="Diagram comparing internet speeds: 1) Plugged directly into Router: 27 ms ping, 231.44 Mbps Download, 11.79 Mbps upload 2) Wifi in Office: 17 ms ping, 178.74 Mbps Download, 11.72 Mbps Upload 3) Powerline Ethernet in Office: 15 ms ping, 17.66 MBps Download, 11.86 Mbps Upload." src="/img/posts/switching-to-mesh-network/internet-speed-comparison.png" style="max-width: 100%;"/></a>
 
 <div class="caption">Different internet Speed test results after hooking up
@@ -98,6 +102,13 @@ Basically, in addition to the normal 2.4 and 5 Ghz network bands, the orbi
 system has *a second 5 Ghz band dedicated* to connecting the orbi router and
 satilites together. In other words... a dedicated wifi bridge :D.
 
+<a href="/img/posts/switching-to-mesh-network/rbk50.png"><img alt="The RBK50 system comes with 1 router, and 1 satilite
+device. Both have 4 etherent ports." src="/img/posts/switching-to-mesh-network/rbk50.png" style="max-width: 100%;"/></a>
+<div class="caption">The RBK50 system comes with 1 router, and 1 satilite
+device. Both have 4 etherent ports.</div>
+
+
+Different internet Speed test results after hooking up
 So I started looking at the orbi hardware and saw that there were several types
 of
 [satilites](https://www.netgear.com/orbi/products.aspx#filter=.satellites-indoor%2C.satellites%2C.satellites-outdoor%2C.satellites):
