@@ -1,12 +1,12 @@
 ---
 title: "Homelab"
-date: 2018-11-18
+date: 2019-04-21
 type: homelab
 layout: homelab-page
 menu:
   main:
     weight: -100
-image: img/homelab/new_monitor1.jpg
+image: img/homelab/new_house3.jpg
 ---
 
 This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations).
@@ -15,17 +15,17 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 
 ### Ryan (Me)
 
-Having recently moved to Durham NC, I built a new standing desk and am
-slowly putting my space together. So for now ... don't mind the wires
-:P. I'll try to keep updating this page as I progress.
+I recently moved into a new house and am still putting this space together...
+So for now ... don't mind the wires :P. I'll try to keep updating this page as
+I progress.
 
-<a href="../../img/homelab/new_monitor2.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/new_monitor2.jpg" width=100%></a>
-<div class="caption">My Home Desk</div>
+<a href="../../img/homelab/new_house2.jpg"><img alt="Home Office" src="../../img/homelab/new_house2.jpg" width=100%></a>
+<div class="caption">My Home Office</div>
 
-<a href="../../img/homelab/new_monitor3.jpg"><img alt="Ryan's New Desk" src="../../img/homelab/new_monitor3.jpg" width=100%></a>
-<div class="caption">My Home Workstation</div>
+<a href="../../img/homelab/new_house1.jpg"><img alt="My Desk" src="../../img/homelab/new_house1.jpg" width=100%></a>
+<div class="caption">My Desk</div>
 
-<a name="charmeleon"></a>
+
 #### - Charmeleon (Main Workstation)
 ```
 Ryzen 5 2600 [3.4 GHz (3.9GHz Turbo), 6 Cores, 12 Threads)
@@ -36,11 +36,11 @@ Sapphire 1024 4GB PULSE Radeon RX 560 GPU
 250 GB Samsung 850 EVO SATA SSD
 Fractal Design Meshify C Dark TG ATX Mid Tower Case
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
-Fedora 29 (KDE Plasma Spin)
+Fedora 29 (Multiple Desktops)
 *Connected to Periphery devices
 ```
 <a name="kadabra"></a>
-#### - Kadabra (Main Laptop)
+#### - Kadabra (Laptop)
 ```
 T470 Thinkpad
 Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
@@ -48,60 +48,24 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
 Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
-Fedora 29 (KDE Plasma Spin)
-```
-
-<a name="x230"></a>
-#### - Abra (Test Laptop)
-```
-Lenovo x230
-Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
-8 GB RAM
-120 GB SSD
-12.5" HD LED 1366x768 Display
-9-Cell Battery
-Thinkpad Dock (to connect to periphery devices below)
-Fedora 29 SilverBlue
+Fedora S29/30 SilverBlue
 ```
 
 <a name="periphery"></a>
 ##### Periphery
 ```
-LG UD4379-b, 43" IPS UHD (3840x2160 px) Monitor
+LG UD4379-b, 43" IPS UHD (3840x2160px) Monitor
 Happy Hacking Keyboard Pro2
 Audioengine A2+ Speakers & Stands
+Audio Technica M50x Headphones
 Bose AE2 Headphones
-Logitech HD Pro Webcam c920 Widescreen
 Blue Yeti Microphone - Backout Edition
+Logitech HD Pro Webcam c920 Widescreen
 Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
-### Rebecca (Wife)
-
-### - Weepinbell
-```
-Thinkpad T450s
-Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
-12 GB RAM
-256 GB SSD
-14" 1600x900 LED Display
-6-Cell Battery
-Elementary OS 5 (Juno)
-```
-
-#### - Bellsprout (Dead)
-```
-Macbook Air (2014)
-Intel i5 (1.4 GHz (2.7 GHz Turbo), 3M Cache, 2 Cores, 2 Threads) ?
-4 GB RAM
-128 GB PCIe Flash HD
-13.3” 1440x900 LED Display
-2.96 Lbs and ~0.7” thick
-Mac OS
-```
-
 <a name="servers"></a>
-### Servers
+### Servers & Networking
 
 <a name="ninetales"></a>
 #### - Ninetales (VM Host / Home Server)
@@ -115,41 +79,27 @@ Intel Xeon E3-1225 v3 [3.2 GHz (3.6 GHz Turbo), 8M Cache, 4 Cores, 4 Threads]
 Ubuntu Server 18.04
 ```
 
+<a name="x230"></a>
+#### - Abra (Test Laptop/"server")
+```
+Lenovo x230
+Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
+8 GB RAM
+120 GB SSD
+12.5" HD LED 1366x768 Display
+9-Cell Battery
+Thinkpad Dock
+Centos 7
+```
+
+
+#### - Networking
+```
+Netgear Orbi RBK50 Router (In Bedroom)
+Netgear Orbi RBK50 Satellite (In Office)
+```
+
 #### - CyberPower 1500VA/900W UPS
-
-#### - Xbox One
-
-<a name="cluster"></a>
-### PI Cluster
-<img alt="PI Cluster" src="../../img/homelab/pi-cluster.png" width=100%>
-
-#### Node 1
-```
-BROKEN
-Raspberry Pi 3
-ARM v8 CPU (1.2 GHz, 4 Cores, 4 Threads)
-1 GB RAM
-MicroSD card for HD
-Ubuntu 16.04 ARM
-```
-
-#### Node 2
-```
-Raspberry Pi 2
-ARM Coretx-A7 (900 MHz, 4 Cores, 4 Threads)
-1 GB RAM
-MicroSD card for HD
-Ubuntu 16.04 ARM
-```
-#### Node 3
-```
-Banana Pi M1
-A20 ARM Cortex-A7 Dual Core (2 Cores, 2 Threads)
-1 GB RAM
-10/100/1000 Ethernet
-MicroSD card for HD
-Armbian (Ubuntu 16.04 version)
-```
 
 
 ### Digital Ocean Droplets
@@ -158,10 +108,40 @@ Armbian (Ubuntu 16.04 version)
 
     Digital Ocean KVM Droplet
     1 Core
-    512 MB RAM
+    1 GB RAM
     20 GB SSD
     Ubuntu 16.04 OS
 
-### AWS
+#### Seafile Server
 
-*I have also started playing with AWS, but don't have any persistent servers with it yet.*
+    Digital Ocean KVM Droplet
+    1 Core
+    1 GB RAM
+    20 GB SSD
+    Ubuntu 16.04 OS
+
+
+### Rebecca (Wife)
+
+### - Weepinbell
+```
+Thinkpad T450s
+Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
+12 GB RAM
+256 GB SSD
+14" 1600x900 LED Display
+6-Cell Battery
+Ubuntu 18.04
+```
+
+#### - Bellsprout (Dead)
+```
+Macbook Air (2014)
+Intel i5 (1.4 GHz (2.7 GHz Turbo), 3M Cache, 2 Cores, 2 Threads) ?
+4 GB RAM
+128 GB PCIe Flash HD
+13.3” 1440x900 LED Display
+2.96 Lbs and ~0.7” thick
+Mac OS
+```
+
