@@ -1,10 +1,10 @@
 +++
 title  = "Creating \"Sub\"-Monitor Workflows Using xrandr"
-date   = "2019-04-01"
+date   = "2019-04-22"
 author = "Ryan Himmelwright"
-image  = "img/posts/switching-to-mesh-network/flower-tree-innovation-train.jpg"
-caption= "American Tobacco Campus, Durham NC"
-tags   = ["Homelab", "Hardware", "wifi",]
+image  = "img/header-images/ncsu-bridge1.jpg"
+caption= "NC State Campus, Raleigh NC"
+tags   = ["Homelab", "Hardware", "Monitors", "Linux",]
 draft  = "False"
 Comments = "True"
 +++
