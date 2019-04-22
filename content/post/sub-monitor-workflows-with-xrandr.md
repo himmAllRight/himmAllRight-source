@@ -35,7 +35,23 @@ smaller image, but with the monitor's native pixel density, in the center of my
 screen. Problem #1 solved!
 
 ### Problem 2: New Resolution Sets
-With help from [this post](http://www.arunviswanathan.com/node/53), I was able
+
+The second problem, is that by default many of the resolutions I want to try
+out do not show up in my display settings. This makes sense, as *most* people
+won't be selecting `21:9` resolutions on a `16:9` panel. So, I needed to add
+new options using `xrandr`.
+
+<< Image of Display Settings *Without* Custom Options >>
+
+After playing around with `xrandr`, and some help from [this post](http://www.arunviswanathan.com/node/53), I was able to create new `xrandr` modes, and set my monitor to use them.
+
+#### Creating a new xrandr mode
+
+```
+gtf 3440 1440 59.9
+```
+
+
 
 ### But Wait, There's More! Scripting it:
 After running these commands to create and enable custom xrandr twice... I
