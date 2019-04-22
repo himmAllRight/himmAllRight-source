@@ -20,8 +20,22 @@ space, which can actually be distracting, or inefficient.
 ### Reasoning
 
 
-### Solution
+### Problem 1: Scaling
 
+To get "sub"-resolutions working, I had to fix two problems. The first was that
+even if I select a smaller resolution on my computer, most monitors will
+display that resolution, but scaled to the size of the display. For example, if
+I set my computer to 1920x1080, by default it will display that, full-size on
+my monitor, making eveything gigantic... the exact opposite of what I wanted.
+
+After playing around in my monitor's input settings, I noticed that there is an
+"Aspect Ratio" field, with a `1:1` option. When selected, the monitor displays
+an image at its native resolution. So a 1920x1080 pixel display shows as a
+smaller image, but with the monitor's native pixel density, in the center of my
+screen. Problem #1 solved!
+
+### Problem 2: New Resolution Sets
+With help from [this post](http://www.arunviswanathan.com/node/53), I was able
 
 ### But Wait, There's More! Scripting it:
 After running these commands to create and enable custom xrandr twice... I
@@ -123,5 +137,6 @@ respond "`y`".
   multiple inputs and picture-by-picture (ex: I can't do a horizontal +
   vertical 1080p setup, even using pbp because it will center each one).
 - The dpi is slightly bigger than if I got the *common* size/pixel monitors.
+- Any *curving* or other physical attributes another monitor form factor has.
 ### Conclusion
 
