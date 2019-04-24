@@ -47,10 +47,53 @@ After playing around with `xrandr`, and some help from [this post](http://www.ar
 
 #### Creating a new xrandr mode
 
+To create a new xrandr mode, I first need to calculate my first modeline. This
+can be done by using the `gtf` tool. For example, to calculate a modeline for a
+3440x1440 resolution at 59.9 hertz, use the following:
+
+```bash
+➜  ~ gtf 3440 1440 59.9
+
+  # 3440x1440 @ 59.90 Hz (GTF) hsync: 89.25 kHz; pclk: 418.41 MHz
+  Modeline "3440x1440_59.90"  418.41  3440 3688 4064 4688  1440 1441 1444 1490  -HSync +Vsync
+
+➜  ~
 ```
-gtf 3440 1440 59.9
+The line that starts with *Modeline* (but *not including* "Modeline") is what
+we want. Copy that and give it to `xrandr` to create a new mode:
+
+```bash
+xrandr --newmode "3440x1440_59.90"  418.41  3440 3688 4064 4688  1440 1441 1444 1490  -HSync +Vsync
 ```
 
+Lastly, to add that mode to a display, use that same line but with the
+`--addmode` flag, and the monitor to switch (`DP-1` in my case):
+
+```bash
+xrandr --addmode DP-1 "3440x1440_59.90"  418.41  3440 3688 4064 4688  1440 1441 1444 1490  -HSync +Vsync
+```
+
+*Note: To find the available monitor names, enter a plain `xrandr` command, and
+it will spit out all the available outputs.*
+
+#### Switching to the new mode
+##### arandr
+To switch to the new mode, I like to use the GUI tool, `arandr`.  Simply right
+click on the display's rectangle, and select the new mode name from the
+"Resolution" list (Or *Outputs* -> *Monitor Name* -> *Resolution* -> *New MODE
+NAME* in the menubar).
+
+<a href="/img/posts/sub-monitor-workflows-with-xrandr/arandr-select-newmode.png"><img alt="Using arandr to select new mode" src="/img/posts/sub-monitor-workflows-with-xrandr/arandr-select-newmode.png" style="max-width: 100%;"/></a>
+<div class="caption">Using `arandr` to select new mode</div>
+
+##### xrandr
+If you are too [1337](https://en.wikipedia.org/wiki/Leet) to use a GUI app,
+never fear! The display can be switched to the new mode using `xrandr` with the
+`--output` and `--mode` flags:
+
+```bash
+xrandr --output DP-1 --mode "3440x1440_59.90"  418.41  3440 3688 4064 4688  1440 1441 1444 1490  -HSync +Vsync
+```
 
 
 ### But Wait, There's More! Scripting it:
@@ -64,7 +107,7 @@ realized it would be easy enough to automate. So I did with this script:
 
 # A function to prompt the user if they want to switch to the new mode now.
 switch_to_new_mode () {
-	echo -n "Switch to new mode now? [y/n]: "
+	echo -n "Switch to mode $modename now? [y/n]: "
 	read change
 	if [ "$change" == "y" ]
 	then
@@ -79,18 +122,14 @@ switch_to_new_mode () {
 create_new_mode () {
 	echo "Adding new mode: $gtf_output"
 	xrandr --newmode $gtf_output
-	echo "Adding new mode [$modename] to display [$MONITOR]"
+	echo "Adding new mode $modename to display $MONITOR"
 	xrandr --addmode $MONITOR $modename
 	echo "Done!"
-	switch_to_new_mode
 }
 
 # Message if the mode appears to already exist
 mode_already_exists () {
-	echo "Hmmm... I think that mode already exists. Verify the xrandr output for me?"
-	echo "Don't worry. I'll print it in $ESLEEP seconds..."
-	sleep $ESLEEP
-	xrandr
+	echo "Hmmm... I think the mode $modename already exists."
 }
 
 ## Main Function to set vars and code
@@ -109,8 +148,10 @@ main () {
 	if [ "$modeexists" == "" ]
 	then
 		create_new_mode
+	    switch_to_new_mode
 	else
 		mode_already_exists
+	    switch_to_new_mode
 	fi
 }
 
