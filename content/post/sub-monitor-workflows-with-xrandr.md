@@ -10,15 +10,42 @@ Comments = "True"
 +++
 
 A couple months ago, I swapped out my duel monitor setup for a single (but
-massive), [42.5" UHD IPS display](/post/new-lgud4379b/). While I dicided that
-the larger display was better than an ultrawide or 1440p monitor, I sometimes wish
-that I had their more focused workspace, as sometimes mine gives me *too much*
-space, which can actually be distracting, or inefficient.
+massive), [42.5" UHD IPS display](/post/new-lgud4379b/). However, I have found
+that *sometimes*, it has *too much* workspace. Ultimately, I think that the
+larger display was better choice (for me) than an ultrawide or 1440p monitor.
+However, I sometimes wish that I had their more limited, but *focused*
+workspace. *Maybe I still can...*
 
 <!--more-->
 
 ### Reasoning
 
+Okay. I understand this post might seem ridiculous to most people.
+
+"Ryan, if you have just a lovely display with such a large resolution, *why
+would you want to intentionally scale it down!?!?!*".
+
+The truth is, there are a number of occasions when I think having a single,
+more focused display is helpful.
+
+#### Focused work
+First, when I am trying to deeply focus on
+working on something, I like to have the windows that I *need* for the activity
+to be opened at a *reasonable size* (a fullscreen 3840x2160 single terminal
+looks stupid), and nothing else. With such a big screen, it's too tempting to
+drag chat windows, or monitor apps into the sides of the monitor. While 1080p
+is a little cramped, I think a single 1440p resolution is [more ideal for *focused
+work*](https://hackernoon.com/why-i-stopped-using-multiple-monitors-bfd87efa2e5b)
+(especially because I tend to take advantage of [virtual
+desktops](https://en.wikipedia.org/wiki/Virtual_desktop).
+
+#### Tiling Window Managers
+Second, when working (especially programming), I often like to use tiling
+window managers ([i3 for example](/post/started-using-i3blocks/)). In tiling
+window managers, applications tend to open up fullscreen by default, which
+again... is usually just obnoxious on such a large display.
+
+#### Gaming?
 
 ### Problem 1: Scaling
 
@@ -100,9 +127,8 @@ xrandr --output DP-1 --mode "3440x1440_59.90"  418.41  3440 3688 4064 4688  1440
 After running these commands to create and enable custom xrandr twice... I
 realized it would be easy enough to automate. So I did with this script:
 
+
 ```bash
-# add-xandr-.sh
-# --------------
 #!/bin/bash
 
 # A function to prompt the user if they want to switch to the new mode now.
@@ -158,6 +184,7 @@ main () {
 ## Execute Main
 main "$@"
 ```
+<div class="caption">add-xrandr.sh</div>
 
 Basically, this script is run by providing it the desired width, height, and
 `xrandr` display to apply the new mode to. For example, to create a new
@@ -195,5 +222,6 @@ respond "`y`".
   vertical 1080p setup, even using pbp because it will center each one).
 - The dpi is slightly bigger than if I got the *common* size/pixel monitors.
 - Any *curving* or other physical attributes another monitor form factor has.
+
 ### Conclusion
 
