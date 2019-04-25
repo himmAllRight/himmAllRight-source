@@ -28,7 +28,9 @@ would you want to intentionally scale it down!?!?!*".
 The truth is, there are a number of occasions when I think having a single,
 more focused display is helpful.
 
+
 #### Focused work
+
 First, when I am trying to deeply focus on
 working on something, I like to have the windows that I *need* for the activity
 to be opened at a *reasonable size* (a fullscreen 3840x2160 single terminal
@@ -39,13 +41,33 @@ work*](https://hackernoon.com/why-i-stopped-using-multiple-monitors-bfd87efa2e5b
 (especially because I tend to take advantage of [virtual
 desktops](https://en.wikipedia.org/wiki/Virtual_desktop).
 
-#### Tiling Window Managers
-Second, when working (especially programming), I often like to use tiling
-window managers ([i3 for example](/post/started-using-i3blocks/)). In tiling
-window managers, applications tend to open up fullscreen by default, which
-again... is usually just obnoxious on such a large display.
 
-#### Gaming?
+#### Tiling Window Managers
+
+<a href="/img/posts/sub-monitor-workflows-with-xrandr/i3-writing.png"><img alt="writing this post with i3" src="/img/posts/sub-monitor-workflows-with-xrandr/i3-writing.png" style="max-width: 100%;"/></a>
+<div class="caption">I actually wrote most of the draft for this post in i3</div>
+
+Second, when working (especially programming), I like to use tiling window
+managers ([i3 for example](/post/started-using-i3blocks/)). This lets me *work*
+without having to manually move around my windows, allowing me to stay mostly
+on my keyboard. In tiling window managers, applications tend to open up
+fullscreen by default, which again... is usually just obnoxious on such a large
+display. Scaling down the display allows me to still use tiling window managers
+without compromise.
+
+#### Gaming
+
+Lastly, a half-reason is gaming. I'm not a huge gamer so I didn't opt for a
+crazy graphics card when I [designed and built my
+desktop](http://localhost:1313/post/charmeleon-desktop-design/). When I *do*
+game, I rarely play at full 4k, and usually in a smaller windowed-mode (which
+is usually a better experience anyway... again for field of view reasons).
+However sometimes, a game won't support windowed mode well, or I just want to
+play full screen at a lower resolution that my gpu can handle.
+
+Now that it is (hopefully) understood *why* I want to setup a "sub-monitor"
+inside my monitor, lets switch to *how* I did it.
+
 
 ### Problem 1: Scaling
 
@@ -111,7 +133,7 @@ click on the display's rectangle, and select the new mode name from the
 NAME* in the menubar).
 
 <a href="/img/posts/sub-monitor-workflows-with-xrandr/arandr-select-newmode.png"><img alt="Using arandr to select new mode" src="/img/posts/sub-monitor-workflows-with-xrandr/arandr-select-newmode.png" style="max-width: 100%;"/></a>
-<div class="caption">Using `arandr` to select new mode</div>
+<div class="caption">Using `arandr` to select new mode (SO many resolutions XD )</div>
 
 ##### xrandr
 If you are too [1337](https://en.wikipedia.org/wiki/Leet) to use a GUI app,
@@ -225,3 +247,8 @@ respond "`y`".
 
 ### Conclusion
 
+In conclusion, I love this setup. With this solution, I was able to take a few
+use cases where my monitor didn't work well, and fix it. This makes me even
+happier with my selection, as now I can enjoy a massive display when I want it,
+but also have the ability to tone it down when I want to focus in more. So far,
+it's working great!
