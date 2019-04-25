@@ -22,8 +22,8 @@ workspace. *Maybe I still can...*
 
 Okay. I understand this post might seem ridiculous to most people.
 
-"Ryan, if you have just a lovely display with such a large resolution, *why
-would you want to intentionally scale it down!?!?!*".
+> "But Ryan, if you have just a lovely display with such a large resolution, *why
+> would you want to **intentionally** scale it down smaller?!?!?!*".
 
 The truth is, there are a number of occasions when I think having a single,
 more focused display is helpful.
@@ -224,6 +224,10 @@ wish to switch to the new mode right away, and will do it for them if they
 respond "`y`".
 
 ### Pros/Cons
+
+<a href="/img/posts/sub-monitor-workflows-with-xrandr/ultrawide-mode.jpg"><img alt="Monitor in 'ultrawide mode'" src="/img/posts/sub-monitor-workflows-with-xrandr/ultrawide-mode.jpg" style="max-width: 100%;"/></a>
+<div class="caption">Monitor in 'ultrawide mode'. It is set to 3440x1440px and
+measures ~36" diagonally.</div>
 
 #### What this solves
 - When I have the monitor set to a sub-resolution, I don't experience any of
