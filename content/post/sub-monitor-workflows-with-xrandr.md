@@ -9,12 +9,12 @@ draft  = "False"
 Comments = "True"
 +++
 
-A couple months ago, I swapped out my duel monitor setup for a single (but
-massive), [42.5" UHD IPS display](/post/new-lgud4379b/). However, I have found
-that *sometimes*, it has *too much* workspace. Ultimately, I think that the
-larger display was better choice (for me) than an ultrawide or 1440p monitor.
-However, I sometimes wish that I had their more limited, but *focused*
-workspace. *Maybe I still can...*
+A couple months ago I swapped out my dual monitor setup for a single (but
+massive), [42.5" UHD IPS display](/post/new-lgud4379b/). I love it, but admit
+that *sometimes*, it has *too much* workspace. I ultimately think that the
+larger display was better choice (for me).  However, I sometimes wish that
+I had the more limited, but *focused* workspace of an ultrawide or 1440p
+monitor. *Maybe I still can...*
 
 <!--more-->
 
@@ -22,24 +22,25 @@ workspace. *Maybe I still can...*
 
 Okay. I understand this post might seem ridiculous to most people.
 
-> "But Ryan, if you have just a lovely display with such a large resolution, *why
-> would you want to **intentionally** scale it down smaller?!?!?!*".
+> "But Ryan, if you have a great display with such a large resolution, why
+> would you want to **intentionally** scale it down smaller?!?!?!".
 
-The truth is, there are a number of occasions when I think having a single,
-more focused display is helpful.
+The truth is, there are a number of occasions when having a single, smaller
+display is helpful.
 
 
-#### Focused work
+#### Focused Work
 
-First, when I am trying to deeply focus on
-working on something, I like to have the windows that I *need* for the activity
-to be opened at a *reasonable size* (a fullscreen 3840x2160 single terminal
-looks stupid), and nothing else. With such a big screen, it's too tempting to
-drag chat windows, or monitor apps into the sides of the monitor. While 1080p
-is a little cramped, I think a single 1440p resolution is [more ideal for *focused
+First, when trying to focus deeply on a single task, I like to have the windows
+that I *need* for the activity opened, and nothing else. Furthermore, I like
+to have these windows opened at a *reasonable size* (Note: a full screen
+3840x2160 single terminal looks stupid). With such a big screen, it is just too
+tempting to drag chat windows, monitoring apps, and videos to the sides of the workspace.
+While 1080p is a little cramped, I think a single 1440p resolution is [more
+ideal for *focused
 work*](https://hackernoon.com/why-i-stopped-using-multiple-monitors-bfd87efa2e5b)
 (especially because I tend to take advantage of [virtual
-desktops](https://en.wikipedia.org/wiki/Virtual_desktop).
+desktops](https://en.wikipedia.org/wiki/Virtual_desktop)).
 
 
 #### Tiling Window Managers
@@ -47,24 +48,26 @@ desktops](https://en.wikipedia.org/wiki/Virtual_desktop).
 <a href="/img/posts/sub-monitor-workflows-with-xrandr/i3-writing.png"><img alt="writing this post with i3" src="/img/posts/sub-monitor-workflows-with-xrandr/i3-writing.png" style="max-width: 100%;"/></a>
 <div class="caption">I actually wrote most of the draft for this post in i3</div>
 
-Second, when working (especially programming), I like to use tiling window
-managers ([i3 for example](/post/started-using-i3blocks/)). This lets me *work*
-without having to manually move around my windows, allowing me to stay mostly
-on my keyboard. In tiling window managers, applications tend to open up
-fullscreen by default, which again... is usually just obnoxious on such a large
-display. Scaling down the display allows me to still use tiling window managers
-without compromise.
+Second, when working (especially programming), I often like to use tiling
+window managers ([i3 for example](/post/started-using-i3blocks/)). This lets me
+*work* without having to manually move around the windows, or even leave my
+keyboard. In tiling window managers, applications tend to open up fullscreen by
+default, which again... is just obnoxious on such a large display.
+Scaling down the display allows me to still use tiling window managers without
+compromise.
 
 #### Gaming
 
 Lastly, a half-reason is gaming. I'm not a huge gamer so I didn't opt for a
 crazy graphics card when I [designed and built my
 desktop](http://localhost:1313/post/charmeleon-desktop-design/). When I *do*
-game, I rarely play at full 4k, and usually in a smaller windowed-mode (which
+game, I usually play in windowed-mode (which
 is usually a better experience anyway... again for field of view reasons).
-However sometimes, a game won't support windowed mode well, or I just want to
+However, sometimes a game won't support windowed mode, or I want to
 play full screen at a lower resolution that my gpu can handle.
 
+
+## How
 Now that it is (hopefully) understood *why* I want to setup a "sub-monitor"
 inside my monitor, lets switch to *how* I did it.
 
@@ -89,8 +92,6 @@ The second problem, is that by default many of the resolutions I want to try
 out do not show up in my display settings. This makes sense, as *most* people
 won't be selecting `21:9` resolutions on a `16:9` panel. So, I needed to add
 new options using `xrandr`.
-
-<< Image of Display Settings *Without* Custom Options >>
 
 After playing around with `xrandr`, and some help from [this post](http://www.arunviswanathan.com/node/53), I was able to create new `xrandr` modes, and set my monitor to use them.
 
