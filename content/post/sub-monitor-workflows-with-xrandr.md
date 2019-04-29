@@ -1,6 +1,6 @@
 +++
 title  = "Creating \"Sub\"-Monitor Workflows Using xrandr"
-date   = "2019-04-22"
+date   = "2019-04-29"
 author = "Ryan Himmelwright"
 image  = "img/header-images/ncsu-bridge1.jpg"
 caption= "NC State Campus, Raleigh NC"
@@ -11,8 +11,8 @@ Comments = "True"
 
 A couple months ago I swapped out my dual monitor setup for a single (but
 massive), [42.5" UHD IPS display](/post/new-lgud4379b/). I love it, but admit
-that *sometimes*, it has *too much* workspace. I ultimately think that the
-larger display was better choice (for me).  However, I sometimes wish that
+that sometimes, it has *too much* workspace. While I still think that the
+larger display was better choice, I sometimes wish that
 I had the more limited, but *focused* workspace of an ultrawide or 1440p
 monitor. *Maybe I still can...*
 
@@ -20,7 +20,7 @@ monitor. *Maybe I still can...*
 
 ### Reasoning
 
-Okay. I understand this post might seem ridiculous to most people.
+Okay. I understand that this post might seem ridiculous to most people.
 
 > "But Ryan, if you have a great display with such a large resolution, why
 > would you want to **intentionally** scale it down smaller?!?!?!".
@@ -51,7 +51,7 @@ desktops](https://en.wikipedia.org/wiki/Virtual_desktop)).
 Second, when working (especially programming), I often like to use tiling
 window managers ([i3 for example](/post/started-using-i3blocks/)). This lets me
 *work* without having to manually move around the windows, or even leave my
-keyboard. In tiling window managers, applications tend to open up fullscreen by
+keyboard. In tiling window managers, applications tend to open up full screen by
 default, which again... is just obnoxious on such a large display.
 Scaling down the display allows me to still use tiling window managers without
 compromise.
@@ -64,11 +64,11 @@ desktop](http://localhost:1313/post/charmeleon-desktop-design/). When I *do*
 game, I usually play in windowed-mode (which
 is usually a better experience anyway... again for field of view reasons).
 However, sometimes a game won't support windowed mode, or I want to
-play full screen at a lower resolution that my gpu can handle.
+play full screen at a lower resolution so that my GPU can handle it.
 
 
 ## How
-Now that it is (hopefully) understood *why* I want to setup a "sub-monitor"
+Now that it is (hopefully) understood *why* I want to setup a "sub-display"
 inside my monitor, lets switch to *how* I did it.
 
 
@@ -77,29 +77,30 @@ inside my monitor, lets switch to *how* I did it.
 To get "sub"-resolutions working, I had to fix two problems. The first was that
 even if I select a smaller resolution on my computer, most monitors will
 display that resolution, but scaled to the size of the display. For example, if
-I set my computer to 1920x1080, by default it will display that, full-size on
-my monitor, making eveything gigantic... the exact opposite of what I wanted.
+I set my computer's display settings to 1920x1080 on my 3840x2160 monitor, by
+default it will double up the pixels to get the smaller resolution
+to *fit* full-size on the monitor. This makes everything appear gigantic... which
+is the exact opposite of what I wanted.
 
 After playing around in my monitor's input settings, I noticed that there is an
 "Aspect Ratio" field, with a `1:1` option. When selected, the monitor displays
-an image at its native resolution. So a 1920x1080 pixel display shows as a
-smaller image, but with the monitor's native pixel density, in the center of my
-screen. Problem #1 solved!
+an image at its pixel density. So a 1920x1080 pixel display shows as a smaller
+image in the middle of the screen, but with a `1:1` pixel density. Problem #1 solved!
 
 ### Problem 2: New Resolution Sets
 
-The second problem, is that by default many of the resolutions I want to try
-out do not show up in my display settings. This makes sense, as *most* people
-won't be selecting `21:9` resolutions on a `16:9` panel. So, I needed to add
+The second problem was that by default, many of the resolutions I wanted to use
+out do not show up in the display settings. This makes sense, as *most* people
+won't be selecting `21:9` resolutions on a `16:9` panel. I needed to add
 new options using `xrandr`.
 
-After playing around with `xrandr`, and some help from [this post](http://www.arunviswanathan.com/node/53), I was able to create new `xrandr` modes, and set my monitor to use them.
+After spending sometime in a terminal with `xrandr`, (and with some help from [this post](http://www.arunviswanathan.com/node/53)), I was able to create new `xrandr` modes, and set my monitor to use them.
 
 #### Creating a new xrandr mode
 
-To create a new xrandr mode, I first need to calculate my first modeline. This
-can be done by using the `gtf` tool. For example, to calculate a modeline for a
-3440x1440 resolution at 59.9 hertz, use the following:
+To create a new xrandr mode, I first needed to calculate a new modeline. This
+can be done by using the `gtf` tool. To calculate a modeline for a
+3440x1440 resolution at 59.9 hertz for example, use the following:
 
 ```bash
 ➜  ~ gtf 3440 1440 59.9
@@ -110,7 +111,8 @@ can be done by using the `gtf` tool. For example, to calculate a modeline for a
 ➜  ~
 ```
 The line that starts with *Modeline* (but *not including* "Modeline") is what
-we want. Copy that and give it to `xrandr` to create a new mode:
+we want. Copy that and give it to `xrandr` with the `--newmode` flag to create
+a new mode:
 
 ```bash
 xrandr --newmode "3440x1440_59.90"  418.41  3440 3688 4064 4688  1440 1441 1444 1490  -HSync +Vsync
@@ -128,10 +130,10 @@ it will spit out all the available outputs.*
 
 #### Switching to the new mode
 ##### arandr
-To switch to the new mode, I like to use the GUI tool, `arandr`.  Simply right
+To switch to the new mode, I like to use a GUI tool named `arandr`.  Simply right
 click on the display's rectangle, and select the new mode name from the
 "Resolution" list (Or *Outputs* -> *Monitor Name* -> *Resolution* -> *New MODE
-NAME* in the menubar).
+NAME* in the menu bar).
 
 <a href="/img/posts/sub-monitor-workflows-with-xrandr/arandr-select-newmode.png"><img alt="Using arandr to select new mode" src="/img/posts/sub-monitor-workflows-with-xrandr/arandr-select-newmode.png" style="max-width: 100%;"/></a>
 <div class="caption">Using `arandr` to select new mode (SO many resolutions XD )</div>
@@ -147,8 +149,8 @@ xrandr --output DP-1 --mode "3440x1440_59.90"  418.41  3440 3688 4064 4688  1440
 
 
 ### But Wait, There's More! Scripting it:
-After running these commands to create and enable custom xrandr twice... I
-realized it would be easy enough to automate. So I did with this script:
+After running these commands twice... I realized it would be easy enough to
+automate. So I did with this script:
 
 
 ```bash
@@ -209,7 +211,7 @@ main "$@"
 ```
 <div class="caption">add-xrandr.sh</div>
 
-Basically, this script is run by providing it the desired width, height, and
+Basically, the script is run by providing it the desired width, height, and
 `xrandr` display to apply the new mode to. For example, to create a new
 `3440x1440` mode for my `DP-1` display, I would run the following command:
 
@@ -217,12 +219,15 @@ Basically, this script is run by providing it the desired width, height, and
 ./add-xrandr.sh 3440 1440 DP-1.
 ```
 
-Then, it will check to see if the mode already
-exists. If it does, it will tell the user that it thinks the mode already
-exists, and print output of the `xrandr` command for the user to check (after a
-short delay). If the mode is not already detected, It will ask the user if they
-wish to switch to the new mode right away, and will do it for them if they
-respond "`y`".
+The script will generate a new mode based on the parameters fed it it, and then
+check to see if the mode already exists. If it doesn't, it will create it, add
+it to the display name passed in, and will ask the user if they would like to
+switch to the new mode. If the mode *was* already detected, the script will just
+ask the user if they wish to switch to it.
+
+*Note: The script is hard-coded to always create modes at `59.9` Hertz,
+because I don't have any fancy fast monitors. If you want that option, just add
+another parameter and swap out the `59.9` with it.*
 
 ### Pros/Cons
 
@@ -233,27 +238,27 @@ measures ~36" diagonally.</div>
 #### What this solves
 - When I have the monitor set to a sub-resolution, I don't experience any of
     the "edge shadowing" issues I mentioned in the review post.
-- I can test out any resolution setup less than UHD. (Including Ultrawide
+- I can test out any resolution setup less than 2840x2160. (Including Ultrawide
     setups)
 - Using a smaller resolution is friendlier to my tiling wm setups
-- I can use a better "single focus" monitor setup, like the equivalent of a 28"
+- I can use a better "single focus" monitor setup. For example, the equivalent of a 28"
     1440p display.
 - I can set my monitor to a smaller resolution to better play full screen games (so that
-    the resolution better fits my gpu performance *and* so the game is in my
+    the resolution better fits my GPU performance *and* the game is in my
     field of view)
 
 #### What it doesn't fix
 - The *physical* size of my monitor stays the same. (MASSIVE Bezels :P )
-- I can't really do multiple displays setups, even though my monitor supports
-  multiple inputs and picture-by-picture (ex: I can't do a horizontal +
-  vertical 1080p setup, even using pbp because it will center each one).
-- The dpi is slightly bigger than if I got the *common* size/pixel monitors.
+- I can't really do multiple displays setups. Even though my monitor supports
+  multiple inputs and picture-by-picture, I still can't do a *good* horizontal +
+  vertical 1080p setup, because it will center each one.
+- The DPI is slightly bigger than if I got the *common* size/pixel monitors.
 - Any *curving* or other physical attributes another monitor form factor has.
 
 ### Conclusion
 
-In conclusion, I love this setup. With this solution, I was able to take a few
-use cases where my monitor didn't work well, and fix it. This makes me even
-happier with my selection, as now I can enjoy a massive display when I want it,
+In conclusion, I love this setup. With this work-around, I was able to take a few
+use cases where my monitor didn't fully fit my needs, and fix it. I am even
+happier with my monitor selection now, as I can enjoy a massive IPS display when I want it,
 but also have the ability to tone it down when I want to focus in more. So far,
 it's working great!
