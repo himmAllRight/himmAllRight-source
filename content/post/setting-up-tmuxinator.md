@@ -1,6 +1,6 @@
 +++
 title  = "Setting up Tmuxinator"
-date   = "2019-05-25"
+date   = "2019-05-22"
 author = "Ryan Himmelwright"
 image  = "img/posts/scripting-tmux-workspaces/parking-garage-sunset1.jpg"
 caption= "Liberty Warehouse, Durham NC"
@@ -48,6 +48,7 @@ This will open up a new tmuxinator template inside your default editor. The
 default template contains a bunch of comments that help guide how to configure
 one.
 
+
 #### Header
 
 The first thing to set is the `name` field at the top of the template, followed
@@ -71,7 +72,7 @@ root: ~/Documents/himmAllRight-source
 ## Launch
 
 <a href='../../img/posts/setting-up-tmuxinator/start-website-tmuxinator.gif'>
-<img alt="Launching Website tmux session with tmuxinator" src="../../img/posts/setting-up-tmuxinator/starting-website-tmuxinator.png" onmouseover="this.src='../../img/posts/setting-up-tmuxinator/start-website-tmuxinator.gif'" onmouseout="this.src='../../img/setting-up-tmuxinator/start-website-tmuxinator.gif'" style="max-width: 100%;"/>
+<img alt="Launching Website tmux session with tmuxinator" src="../../img/posts/setting-up-tmuxinator/starting-website-tmuxinator.png" onmouseover="this.src='../../img/posts/setting-up-tmuxinator/start-website-tmuxinator.gif'" onmouseout="this.src='../../img/posts/setting-up-tmuxinator/starting-website-tmuxinator.png'" style="max-width: 100%;"/>
 </a>
 <div class="caption">Launching website tmux session with tmuxinator</div>
 
