@@ -2,8 +2,8 @@
 title  = "Setting up Tmuxinator"
 date   = "2019-05-22"
 author = "Ryan Himmelwright"
-image  = "img/posts/scripting-tmux-workspaces/parking-garage-sunset1.jpg"
-caption= "Liberty Warehouse, Durham NC"
+image  = "img/posts/setting-up-tmuxinator/mountain-trees.jpg"
+caption= "Port Angeles, WA"
 tags   = ["Linux", "Dev", "Dotfiles", "Customization", "Shell",]
 draft  = "True"
 Comments = "True"
