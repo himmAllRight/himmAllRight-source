@@ -19,6 +19,11 @@ tmuxinator. Here's how.
 <!--more-->
 
 ## What is Tmuxinator?
+[Tmuxinator](https://github.com/tmuxinator/tmuxinator) is a command line
+application that makes it easy to create and manage tmux sessions. It lets a
+user define how to setup a session, including name windows, splitting panes,
+and what commands are run in each pane. The configuration is done in yaml, so
+it is very easy to get started.
 
 ## Install
 Most repos probably have `tmuxinator` in their offical repos. These days, I
@@ -66,8 +71,31 @@ root: ~/Documents/himmAllRight-source
 
 #### Windows
 
+Next, I needed to configure my windows. To convert the script from my previous
+post, I wanted a dedicated 'Main' window, one for the server, one for vim, and
+one for an extra shell. Additionally, since my last post I added a window that
+starts up my locally server website in a web browser. To recreate *all* that
+with tmuxinator:
+
+```yaml
+windows:
+  - Main:
+      - zsh
+      - clear
+  - Server: hugo serve -D -F
+  - Write: nvim
+  - Shell: zsh; clear
+  - Web: qutebrowser localhost:1313
+```
+
+Done. See the benefit? Save the file and that's it!
 
 #### (also) Pane splits
+
+While I don't use them for this configuration, it should be noted that setting
+up pane splits is also quite easy with tmuxinator.
+
+**PANE SPLIT EXAMPLE**
 
 ## Launch
 
