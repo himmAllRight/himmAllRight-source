@@ -34,8 +34,10 @@ install on Fedora:
 sudo dnf install termixinator
 ```
 
-Alternatively, it can be installed using the method on the project's Github
-page:
+**However**, I found that this version was quite out of date even on my new
+Fedora 30 install (`0.6.11`) so I recommend using the method stated on
+the project's Github page (requires `rubygems`) to installer a much more current
+version (currently `1.1.0`):
 
 ```shell
 gem install tmuxinator
@@ -93,9 +95,22 @@ Done. See the benefit? Save the file and that's it!
 #### (also) Pane splits
 
 While I don't use them for this configuration, it should be noted that setting
-up pane splits is also quite easy with tmuxinator.
+up pane splits is also quite easy with tmuxinator. For example, if I wanted to
+split the server window into two panes, one running the hugo server and one
+running htop, I could use:
 
-**PANE SPLIT EXAMPLE**
+```yaml
+- Server:
+    layout: even-vertical
+    panes:
+        - hugo
+        - htop
+```
+
+The `layout` key defines which
+[layout](http://man7.org/linux/man-pages/man1/tmux.1.html#WINDOWS_AND_PANES) to
+use when splitting the panes, and `panes` is a list that defines what to run in
+each pane.
 
 ## Launch
 
@@ -111,10 +126,15 @@ start`:
 tmuxinator start Website
 ```
 
-
 ## Manage
+
 All of the tmuxinator profile templates are stored at `~/.config/tmuxinator`,
 which means they can easily be copied to a new machine, or even
 saved/maintained in source control.
 
 ## Conclusion
+So that's it. While scripting my own method was a good bash exercise and helped
+me learn the details of `tmux` a little bit better, I ultimately think that
+`tmuxinator` is the way to go when using tmux to work on several projects, even
+across multiple machines. If you still haven't tried `tmux`... I still highly
+recommend it!
