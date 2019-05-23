@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2019-04-21
+date: 2019-05-23
 type: homelab
 layout: homelab-page
 menu:
@@ -36,7 +36,7 @@ Sapphire 1024 4GB PULSE Radeon RX 560 GPU
 250 GB Samsung 850 EVO SATA SSD
 Fractal Design Meshify C Dark TG ATX Mid Tower Case
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
-Fedora 29 (Multiple Desktops)
+Fedora 30 (Multiple Desktops)
 *Connected to Periphery devices
 ```
 <a name="kadabra"></a>
@@ -48,7 +48,7 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
 Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
-Fedora S29/30 SilverBlue
+Fedora 30 SilverBlue
 ```
 
 <a name="periphery"></a>
@@ -89,7 +89,7 @@ Intel i5-3320M [2.6 GHz (3.3 GHz Turbo), 3M Cache, 2 Cores, 4 Threads]
 12.5" HD LED 1366x768 Display
 9-Cell Battery
 Thinkpad Dock
-Centos 7
+Whatever disto I'm playing with right now...
 ```
 
 
@@ -118,7 +118,7 @@ Netgear Orbi RBK50 Satellite (In Office)
     1 Core
     1 GB RAM
     20 GB SSD
-    Ubuntu 16.04 OS
+    Centos 7.6 (Core)
 
 
 ### Rebecca (Wife)
@@ -131,7 +131,7 @@ Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
 256 GB SSD
 14" 1600x900 LED Display
 6-Cell Battery
-Ubuntu 18.04
+Pop_OS! 19.04
 ```
 
 #### - Bellsprout (Dead)
