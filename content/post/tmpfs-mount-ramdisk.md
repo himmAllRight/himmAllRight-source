@@ -1,6 +1,6 @@
 +++
 title  = "Creating a RAM Disk with a tmpfs Mount"
-date   = "2019-06-02"
+date   = "2019-06-04"
 author = "Ryan Himmelwright"
 image  = "img/posts/tmpfs-mount-ramdisk/wilmington-riverwalk.jpg"
 caption= "Riverwalk, Wilmington NC"
@@ -8,6 +8,12 @@ tags   = ["Linux", "Hardware", "Filesystems",]
 draft  = "True"
 Comments = "True"
 +++
+
+Do you have too much RAM on your computer? Or maybe you just want to mount a
+partition that is quite *fast*. Or maybe you are just bored (guilty).
+Regardless of the reason, creating a RAM-disk might help. Here's how.
+
+<!--more-->
 
 ### RAM disks and tmpfs
 
@@ -63,8 +69,13 @@ So with all of this mounted, how can we be sure it's actually functioning as a
 RAM disk? The simplest way to test it is... move some files over to the mount
 location and see if it starts to use up RAM!
 
-For my quick test, I copied quickly my `Music` directory from my `~` to the new
-mount:
+For my quick test, I quickly copied some `iso` files to the new mount:
+
+<a href='../../img/posts/tmpfs-mount-ramdisk/ram-disk-usage.gif'>
+<img alt="Copied some iso files to ramdisk" src="../../img/posts/tmpfs-mount-ramdisk/ram-disk-usage.png" onmouseover="this.src='../../img/posts/tmpfs-mount-ramdisk/ram-disk-usage.gif'" onmouseout="this.src='../../img/posts/tmpfs-mount-ramdisk/ram-disk-usage.png'" style="max-width: 100%;"/>
+</a>
+<div class="caption">When copying files to a tmpfs mount, RAM usages increases
+by the amount copied.</div>
 
 ```bash
 sudo cp -r ~/Music /var/ramdisk/
