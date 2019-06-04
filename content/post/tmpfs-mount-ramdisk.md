@@ -17,11 +17,35 @@ Regardless of the reason, creating a RAM-disk might help. Here's how.
 
 ### RAM disks and tmpfs
 
+Creating a RAM disk in Linux is actually quite easy. Unlike other OS's, it
+doesn't require special software or anything, because it is already heavily
+used in a Linux system. Many root sub-directories are actually mounted using a
+[tmpfs](http://man7.org/linux/man-pages/man5/tmpfs.5.html) file system, most
+notably `/tmp`. To see some `tmpfs` mounts on a system, `grep` the `df`
+command:
+
+```bash
+➜  ~ df -h | grep tmpfs
+devtmpfs                  16G     0   16G   0% /dev
+tmpfs                     16G  299M   16G   2% /dev/shm
+tmpfs                     16G  2.0M   16G   1% /run
+tmpfs                     16G     0   16G   0% /sys/fs/cgroup
+tmpfs                     16G  5.9M   16G   1% /tmp
+tmpfs                    3.2G  184K  3.2G   1% /run/user/1000
+tmpfs                     12G     0   12G   0% /var/ramdisk
+```
+
+
+All of the contents of a `tmpfs` filesystem reside in system memory, typically
+RAM. This allows file access that is *extremely* fast.  However, like RAM,
+`tmpfs` is also *volatile*, meaning it will all be erased if the computer
+restarts or shuts down. So don't store anything important in `tmpfs`!
+
 
 ### fstab
 
 The easiest way to add a new RAM disk to our system is by adding it as a new
-item on the `/etc/fstab` file. I wanted to create a persistant RAM mount at
+item in the `/etc/fstab` file. I wanted to create a persistent RAM mount at
 `/var/ramdisk` that I could use whenever I wanted. I'm currently running
 [Fedora Silverblue](https://silverblue.fedoraproject.org/), so I had to place
 it under `/var/` because I don't have write access elsewhere. Feel free to
@@ -36,7 +60,7 @@ tmpfs      /var/ramdisk       tmpfs   rw,nodev,nosuid,size=10G	0  0
 
 By default, Linux allocates half the RAM available on the system to a new
 `tmpfs` mount. However, I wanted to specifiy my disk size, so I took advantage
-of using the `size` arguement:
+of using the `size` argument:
 
 
 ### Mounting
@@ -45,8 +69,8 @@ With the `fstab` edited, it is time to mount everything. While [the arch wiki
 page](https://wiki.archlinux.org/index.php/Tmpfs) cautions *against* running
 `mount -a` to mount the new RAM disk, that is because it is warning that any
 files that might already be in the directories will be removed during the
-mount. While this is a concern when editing any of the already "natually
-occuring" `tmpfs` mounts on the system (such as `/tmp` and `/run`), our use
+mount. While this is a concern when editing any of the already "naturally
+occurring" `tmpfs` mounts on the system (such as `/tmp` and `/run`), our use
 case is adding a *new* one. So, we should be safe!
 
 ```shell
