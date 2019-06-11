@@ -2,8 +2,8 @@
 title  = "Switched to Joplin Notes"
 date   = "2019-06-16"
 author = "Ryan Himmelwright"
-image  = "img/posts/tmpfs-mount-ramdisk/wilmington-riverwalk.jpg"
-caption= "Riverwalk, Wilmington NC"
+image  = "img/posts/switched-to-joplin-notes/lafayette-pardee-flowers.jpg"
+caption= "Pardee Hall - Lafayette College, Easton PA"
 tags   = ["Linux", "Notes", "Organization", "Applications",]
 draft  = "True"
 Comments = "True"
