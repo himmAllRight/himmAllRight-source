@@ -16,13 +16,18 @@ Intro Paragraph
 ## History - Org-mode
 ### Previous System
 
-***Screenshot of Emacs w/ org note opened***
+<a href="/img/posts/switched-to-joplin-notes/org-mode-notes.png">
+<img alt="Emacs with a note opened in org-mode." src="/img/posts/switched-to-joplin-notes/org-mode-notes.png" style="max-width: 100%;"/></a>
+<div class="caption">Emacs with a note opened in org-mode</div>
 
 Explain basically what I used to do for notes.
 
 ### What I liked
 
-***Screenshot of Notes Web-page***
+<a href="/img/posts/switched-to-joplin-notes/org-notes-export-pages.png">
+<img alt="Pictured of org notes exported to HTML" src="/img/posts/switched-to-joplin-notes/org-notes-export-pages.png" style="max-width: 100%;"/></a>
+<div class="caption">org-notes allowed me to link and export my notes to
+HTML</div>
 
 - `org-mode` is great.
 - I could take all my notes in a simple markdown
