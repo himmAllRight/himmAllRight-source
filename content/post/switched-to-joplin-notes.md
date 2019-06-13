@@ -9,7 +9,14 @@ draft  = "True"
 Comments = "True"
 +++
 
-Intro Paragraph
+As a [huge fan](/post/org-babel-setup/) of emacs's
+[org-mode](https://orgmode.org/), it should be no surprise that I've been using
+it for all of my personal and work planning/notes over the last few years.
+However, as my daily emacs use slowly dropped and the support for `.org` files
+outside of emacs remains low (besides [Github README
+files](https://github.com/himmAllRight/dotfiles/tree/master/emacs)), I started
+to look for a more standard system. [Joplin](https://joplinapp.org/) is what
+I've been testing the last few months. Here are my thoughts.
 
 <!--more-->
 
