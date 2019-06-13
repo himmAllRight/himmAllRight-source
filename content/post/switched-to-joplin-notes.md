@@ -45,7 +45,9 @@ HTML</div>
 ## The Switch - Joplin
 ### About Joplin
 
-***Screenshot of Joplin Application***
+<a href="/img/posts/switched-to-joplin-notes/joplin-window.png">
+<img alt="Window of the Joplin GUI application" src="/img/posts/switched-to-joplin-notes/joplin-window.png" style="max-width: 100%;"/></a>
+<div class="caption">Joplin GUI window (in 'split mode')</div>
 
 
 ### My Setup
@@ -55,6 +57,11 @@ HTML</div>
 
 
 ### Issues I'm still figuring out/Anticipate
+
+<a href="/img/posts/switched-to-joplin-notes/joplin-cli.png">
+<img alt="Joplin cli application" src="/img/posts/switched-to-joplin-notes/joplin-cli.png" style="max-width: 100%;"/></a>
+<div class="caption">Joplin CLI window </div>
+
 
 
 ## Conclusion
