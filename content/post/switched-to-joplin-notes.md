@@ -20,14 +20,23 @@ I've been testing the last few months. Here are my thoughts.
 
 <!--more-->
 
-## History - Org-mode
-### Previous System
+## Previous System - Org-mode
 
 <a href="/img/posts/switched-to-joplin-notes/org-mode-notes.png">
 <img alt="Emacs with a note opened in org-mode." src="/img/posts/switched-to-joplin-notes/org-mode-notes.png" style="max-width: 100%;"/></a>
 <div class="caption">Emacs with a note opened in org-mode</div>
 
-Explain basically what I used to do for notes.
+Previously, I had been taking all of my notes using org-mode in emacs. Each
+week, I would make a new `.org` file for my work notes and another for my
+personal planning/notes. I would then list my [todo items](https://orgmode.org/manual/TODO-items.html), usually grouped by day, category, or both. Often, I would also [tag](https://orgmode.org/manual/Tags.html) each item, for organization.
+
+As I worked on each item, I could quickly add time stamped notes using the
+build-in [logbook drawer](https://orgmode.org/manual/Drawers.html) command. In
+these notes, I would ramble on, or even past a [code snippet](https://orgmode.org/manual/Working-with-source-code.html) to save for later. As work on each task progressed, I could switch the `TODO` status to `Working On` `Finished`, `Removed`, or any other state I had pre-defined. Eventually, I [wrote an emacs-lisp script/package](https://github.com/himmAllRight/ry-org-scrum) that took  todo items in my `org` file, and dumped them into a SCRUM board at the top of the file.
+
+#### `TODO`:
+
+*Linked notes, archive, and exporting*
 
 ### What I liked
 
@@ -46,6 +55,7 @@ HTML</div>
 ### Issues
 - Basically _had_ to use emacs for any edits
 - Note supported on mobile devices
+- As I used more `.md` syntax for stuff, I found myself fumbling between `org` and `md` syntax often.
 - Syncing issues (mostly Nextcloud issues. Seafile helped, but still)
 
 
