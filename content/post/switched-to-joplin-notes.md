@@ -34,16 +34,21 @@ As I worked on each item, I could quickly add time stamped notes using the
 build-in [logbook drawer](https://orgmode.org/manual/Drawers.html) command. In
 these notes, I would ramble on, or even past a [code snippet](https://orgmode.org/manual/Working-with-source-code.html) to save for later. As work on each task progressed, I could switch the `TODO` status to `Working On` `Finished`, `Removed`, or any other state I had pre-defined. Eventually, I [wrote an emacs-lisp script/package](https://github.com/himmAllRight/ry-org-scrum) that took  todo items in my `org` file, and dumped them into a SCRUM board at the top of the file.
 
-#### `TODO`:
-
-*Linked notes, archive, and exporting*
-
-### What I liked
 
 <a href="/img/posts/switched-to-joplin-notes/org-notes-export-pages.png">
 <img alt="Pictured of org notes exported to HTML" src="/img/posts/switched-to-joplin-notes/org-notes-export-pages.png" style="max-width: 100%;"/></a>
 <div class="caption">org-notes allowed me to link and export my notes to
 HTML</div>
+
+Lastly, org files can be [exported](https://orgmode.org/manual/Exporting.html)
+to all sorts of file types (md, html, pdf, latex). By combining exporting with
+[internal linking](https://orgmode.org/manual/Internal-links.html), I was able
+to create a nice system for my archived notes. I created an `index.org` file
+which linked to each week's notes (each note file also linked back to the
+index). Each week, I would archive the html export of a note, and add it to the
+index list. This meant I could browse my old notes as a website.
+
+### What I liked
 
 - `org-mode` is great.
 - I could take all my notes in a simple markdown
@@ -58,17 +63,44 @@ HTML</div>
 - As I used more `.md` syntax for stuff, I found myself fumbling between `org` and `md` syntax often.
 - Syncing issues (mostly Nextcloud issues. Seafile helped, but still)
 
+All in all, I loved taking notes in org-mode. However, I wanted something that
+could be used on *all* my devices, and was able to more easily translate
+outside of emacsOS.
 
 ## The Switch - Joplin
-### About Joplin
 
 <a href="/img/posts/switched-to-joplin-notes/joplin-window.png">
 <img alt="Window of the Joplin GUI application" src="/img/posts/switched-to-joplin-notes/joplin-window.png" style="max-width: 100%;"/></a>
 <div class="caption">Joplin GUI window (in 'split mode')</div>
 
+### About Joplin
+
+Joplin is a free and open source note taking/to-do application. It syncs and organizes
+markdown notes into notebooks, across all platforms (Android, iOS, macOS,
+Linux, and Windows). It even have a terminal application in addition to the GUI
+one.
+
+I decided to try it out because it was an open source markdown editor that was
+supported on *so many* platforms.
+
 
 ### My Setup
 
+When configuring joplin, a sync system has to be defined (well, *should*. Notes
+*can* be saved locally). There are a few supported options, including using
+Nextcloud, which is what I had used for my org notes, but eventually moved away
+from due to file conflict issues.
+
+<center>
+<a href="/img/posts/switched-to-joplin-notes/fastmail_logo.png">
+<img alt="Window of the Joplin GUI application" src="/img/posts/switched-to-joplin-notes/fastmail_logo.png" style="max-width: 70%;"/></a>
+<div class="caption">Joplin GUI window (in 'split mode')</div>
+</center>
+
+The past few years, I have used [fastmail](https://www.fastmail.com) for my
+personal email. While researching Joplin, I learned that I could sync the notes
+to my fastmail account's WebDav server. I wasn't using any of my account's file
+storage, so I figured I might as well. It works great!
 
 ### What I like
 
@@ -79,6 +111,10 @@ HTML</div>
 <img alt="Joplin cli application" src="/img/posts/switched-to-joplin-notes/joplin-cli.png" style="max-width: 100%;"/></a>
 <div class="caption">Joplin CLI window </div>
 
+#### Setup is a pain (fixed)
 
+#### Taking notes isn't as nice
+
+#### Long term archiving
 
 ## Conclusion
