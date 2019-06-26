@@ -1,6 +1,6 @@
 +++
 title  = "Switched to Joplin Notes"
-date   = "2019-06-16"
+date   = "2019-06-26"
 author = "Ryan Himmelwright"
 image  = "img/posts/switched-to-joplin-notes/lafayette-pardee-flowers.jpg"
 caption= "Pardee Hall - Lafayette College, Easton PA"
@@ -103,6 +103,24 @@ to my fastmail account's WebDav server. I wasn't using any of my account's file
 storage, so I figured I might as well. It works great!
 
 ### What I like
+#### Syncs on *all* my devices
+What I have enjoyed most about this setup is that my notes sync to all of my
+devices. More importantly, I can *read* the notes on every device. With
+previous systems, the *files* might sync everywhere, but I still couldn't read
+them.
+
+#### CLI and GUI versions
+Similarly, I like that Joplin has both a GUI and CLI client. While I have
+mostly used the GUI client, I enjoy having the CLI because it means I always
+have the option to ssh home into a machine and take notes. Additionally, the
+cli client allows me to take/edit notes with my own terminal editors such as
+emacs *or* vim. This is very convenient, and I should honestly try using
+Joplin in the way *more*.
+
+#### Markdown Note Exports
+
+
+#### Easy enough to use
 
 
 ### Issues I'm still figuring out/Anticipate
