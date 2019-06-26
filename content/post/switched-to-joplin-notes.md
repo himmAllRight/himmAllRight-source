@@ -119,8 +119,21 @@ Joplin in the way *more*.
 
 #### Markdown Note Exports
 
+<center>
+<a href="/img/posts/switched-to-joplin-notes/export-options.png">
+<img alt="Joplin cli application" src="/img/posts/switched-to-joplin-notes/export-options.png" style="max-width: 100%;"/></a>
+</center>
+<div class="caption">Export options in Joplin GUI</div>
+
+I like that the notes are formatted in markdown. This provides me with some
+consistency when writing, but also means that my notes are in a format that is
+very standardized. Additionally, I like that joplin allows easy exporting of
+the notes to other formats such as `json` or as `pdf`s.
 
 #### Easy enough to use
+Lastly, Joplin has been easy to use. After setup, I just have to open the app,
+and start typing away (maybe with a sync or two). While my last setup required
+one to be somewhat of an emacs/org guru to use... this doesn't.
 
 
 ### Issues I'm still figuring out/Anticipate
@@ -131,8 +144,11 @@ Joplin in the way *more*.
 
 #### Setup is a pain (fixed)
 
-#### Taking notes isn't as nice
+#### Taking quick notes isn't as nice
 
 #### Long term archiving
+
+The **big** problem I have... and think I will continue to have with Joplin, is
+long-term organization of notes.
 
 ## Conclusion
