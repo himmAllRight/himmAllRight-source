@@ -142,13 +142,58 @@ one to be somewhat of an emacs/org guru to use... this doesn't.
 <img alt="Joplin cli application" src="/img/posts/switched-to-joplin-notes/joplin-cli.png" style="max-width: 100%;"/></a>
 <div class="caption">Joplin CLI window </div>
 
-#### Setup is a pain (fixed)
+#### Setup is a pain
 
-#### Taking quick notes isn't as nice
+For as easily as Joplin is to *use*, it can be a bit of a pain to setup. First,
+configuring the sync solution *can* be a bit confusing for a non-technical
+person. I'll note that I do use a slightly more confusing sync system, and I'm
+sure that something like Dropbox is much easier. Still, the application could
+benefit from a setup wizard or something to help people get started.
+
+The main issue I have with the setup however isn't configuring sync. It's
+adding a new system. By default, if I configure a new device with my sync
+solution (my laptop or phone for example) and then sync it, it will load up all
+of the crap default example tags and notes, which then pull down on all of my
+systems. This is extremely frustrating because I have to keep deleting them.
+This is multiplied by the fact that it happens with *each* client I setup. So
+if I setup the gui on my laptop, it will happen and then when I setup the cli,
+it will happen *again*.
+
+A *slight* work-around I have been able to use when setting up a new computer
+is to simply copy the config files from an existing system to the new one.
+These folders can be found at `~/.config/joplin/`, `~/.config/Joplin/`, and/or
+`~/.config/joplin-desktop/`. This also means that the new system *should* have less
+it needs to sync down from the server on the first sync.
 
 #### Long term archiving
 
 The **big** problem I have... and think I will continue to have with Joplin, is
-long-term organization of notes.
+long-term organization of notes. Part of this is my inability to figure out an
+efficient way to organized way to handle my new "log" notes (where I take quick
+notes about items I'm working on. Previously I used to take them under my todo
+items, but decided to break them out into their own notes in Joplin).
+
+Part of this problem however is caused my Joplins shallow organization
+structure. There are 1) notebooks, and then 2) notes. That's it. Unlike having
+a file structure where I can do something like
+`archive/2019/June/Weekly_Plans/`, I can't really go that deep with Joplin, so
+I end up just having a single notebook with *all* my weekly plan notes listed
+in it.
+
+One remaining solution might be to get more aggressive with the tagging
+feature, and see if I can create a more organized system using that. I might be
+able to tag each note with a month/year, and then cut off my log notes each
+month. The only problem with this is that it doesn't seem like I can select
+*multiple* tags at a time... which would mean *all* of my notes for a month
+will me shown under the tag... which would be a deal breaker for me :( .
 
 ## Conclusion
+
+So in conclusion, I think that Joplin *is* a great open source notes solution.
+If someone needs a system to keep a bunch of normal *notes* synced across all
+their devices, this is it. I however, have requirements that are a bit more
+complicated, and might have to try out something else as a result. There are a
+bunch of features I learned from Joplin that I didn't have with org-mode that I
+will definitely look for... in my next solution.
+
+
