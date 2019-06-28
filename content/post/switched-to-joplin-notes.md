@@ -9,14 +9,14 @@ draft  = "True"
 Comments = "True"
 +++
 
-As a [huge fan](/post/org-babel-setup/) of emacs's
+As a [massive fan](/post/org-babel-setup/) of emacs's
 [org-mode](https://orgmode.org/), it should be no surprise that I've been using
-it for all of my personal and work planning/notes over the last few years.
-However, as my daily emacs use slowly dropped and the support for `.org` files
-outside of emacs remains low (besides [Github README
+it for my personal and work planning/notes over the last few years.  However,
+as my daily emacs usage has slowly dropped, and the support for `.org` files
+outside of emacs remains low (other than [Github README
 files](https://github.com/himmAllRight/dotfiles/tree/master/emacs)), I started
-to look for a more standard system. [Joplin](https://joplinapp.org/) is what
-I've been testing the last few months. Here are my thoughts.
+to look for a more standard system. The last few months, I've been using
+[Joplin](https://joplinapp.org/). Here's are my thoughts.
 
 <!--more-->
 
@@ -27,12 +27,22 @@ I've been testing the last few months. Here are my thoughts.
 <div class="caption">Emacs with a note opened in org-mode</div>
 
 Previously, I had been taking all of my notes using org-mode in emacs. Each
-week, I would make a new `.org` file for my work notes and another for my
-personal planning/notes. I would then list my [todo items](https://orgmode.org/manual/TODO-items.html), usually grouped by day, category, or both. Often, I would also [tag](https://orgmode.org/manual/Tags.html) each item, for organization.
+week, I made a new `.org` file for my work notes, and another for my personal
+planning/notes. I would then list my [todo
+items](https://orgmode.org/manual/TODO-items.html), usually grouped by day,
+category, or both. Usually, I would also
+[tag](https://orgmode.org/manual/Tags.html) each item, for better organization.
 
-As I worked on each item, I could quickly add time stamped notes using the
-build-in [logbook drawer](https://orgmode.org/manual/Drawers.html) command. In
-these notes, I would ramble on, or even past a [code snippet](https://orgmode.org/manual/Working-with-source-code.html) to save for later. As work on each task progressed, I could switch the `TODO` status to `Working On` `Finished`, `Removed`, or any other state I had pre-defined. Eventually, I [wrote an emacs-lisp script/package](https://github.com/himmAllRight/ry-org-scrum) that took  todo items in my `org` file, and dumped them into a SCRUM board at the top of the file.
+As I worked on each task, I could quickly add time-stamped notes using the
+built-in [logbook drawer](https://orgmode.org/manual/Drawers.html) shortcut. In
+these notes, I would ramble, or paste a [code
+snippet](https://orgmode.org/manual/Working-with-source-code.html) to save for
+later. As work on each item progressed, I could set the `TODO` status to
+`Working On` `Finished`, `Removed`, or any other state I had pre-defined.
+Eventually, I [wrote an emacs-lisp
+script/package](https://github.com/himmAllRight/ry-org-scrum) that took  todo
+items in my `org` file, and dumped them into a SCRUM board at the top of the
+file.
 
 
 <a href="/img/posts/switched-to-joplin-notes/org-notes-export-pages.png">
@@ -41,31 +51,31 @@ these notes, I would ramble on, or even past a [code snippet](https://orgmode.or
 HTML</div>
 
 Lastly, org files can be [exported](https://orgmode.org/manual/Exporting.html)
-to all sorts of file types (md, html, pdf, latex). By combining exporting with
+to all sorts of file types (md, html, pdf, latex). By combining export feature with
 [internal linking](https://orgmode.org/manual/Internal-links.html), I was able
-to create a nice system for my archived notes. I created an `index.org` file
-which linked to each week's notes (each note file also linked back to the
-index). Each week, I would archive the html export of a note, and add it to the
+to create an organized system for my archived notes. I created an `index.org` file
+which linked to each week's notes, and each note file also linked back to the
+index. Every week, I would archive the html export of a note, and add it to the
 index list. This meant I could browse my old notes as a website.
 
 ### What I liked
 
 - `org-mode` is great.
-- I could take all my notes in a simple markdown
-- Simple code-block support
+- I could take all of my notes in a simple markdown language (org)
+- Good code-block support
 - Note linking
 - Exported to html (or txt, md, pdf, or anything really)
 - My previous notes were all exported to an archive website
 
 ### Issues
-- Basically _had_ to use emacs for any edits
-- Note supported on mobile devices
-- As I used more `.md` syntax for stuff, I found myself fumbling between `org` and `md` syntax often.
-- Syncing issues (mostly Nextcloud issues. Seafile helped, but still)
+- I _had_ to use emacs for any edits
+- Not supported (*well*) on mobile devices
+- As I used more `.md` syntax for other applications, I found myself fumbling between `org` and `md` syntax often.
+- Syncing issues (mostly Nextcloud issues. Seafile helped, but it still occurred)
 
 All in all, I loved taking notes in org-mode. However, I wanted something that
-could be used on *all* my devices, and was able to more easily translate
-outside of emacsOS.
+could be used on *all* my devices, and was more easily translatable outside of
+"emacsOS".
 
 ## The Switch - Joplin
 
