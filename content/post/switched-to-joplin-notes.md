@@ -85,21 +85,19 @@ could be used on *all* my devices, and was more easily translatable outside of
 
 ### About Joplin
 
-Joplin is a free and open source note taking/to-do application. It syncs and organizes
-markdown notes into notebooks, across all platforms (Android, iOS, macOS,
-Linux, and Windows). It even have a terminal application in addition to the GUI
-one.
-
-I decided to try it out because it was an open source markdown editor that was
-supported on *so many* platforms.
+Joplin is an open source note taking and to-do application. It syncs and
+organizes markdown notes into notebooks, across many platforms (Android, iOS,
+macOS, Linux, and Windows). It even has both a GUI *and* terminal client.  So,
+I decided to give it a try.
 
 
 ### My Setup
 
 When configuring joplin, a sync system has to be defined (well, *should*. Notes
-*can* be saved locally). There are a few supported options, including using
-Nextcloud, which is what I had used for my org notes, but eventually moved away
-from due to file conflict issues.
+can also be saved locally). There are a few supported options including using
+Nextcloud. I had previously synced my org notes using Nextcloud, but eventually
+moved away from it due to repeated file conflict issues. So I wanted to try
+something different this time.
 
 <center>
 <a href="/img/posts/switched-to-joplin-notes/fastmail_logo.png">
@@ -107,10 +105,10 @@ from due to file conflict issues.
 <div class="caption">Joplin GUI window (in 'split mode')</div>
 </center>
 
-The past few years, I have used [fastmail](https://www.fastmail.com) for my
-personal email. While researching Joplin, I learned that I could sync the notes
-to my fastmail account's WebDav server. I wasn't using any of my account's file
-storage, so I figured I might as well. It works great!
+While researching Joplin, I learned that I could sync notes to the WebDav
+server on the [fastmail](https://www.fastmail.com) account I use for email. I
+wasn't using any of the account's file storage, so I figured I this would be a
+good way to get use out of a service I'm already paying for. It works great!
 
 ### What I like
 #### Syncs on *all* my devices
