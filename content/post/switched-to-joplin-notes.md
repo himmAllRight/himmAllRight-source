@@ -113,17 +113,17 @@ good way to get use out of a service I'm already paying for. It works great!
 ### What I like
 #### Syncs on *all* my devices
 What I have enjoyed most about this setup is that my notes sync to all of my
-devices. More importantly, I can *read* the notes on every device. With
-previous systems, the *files* might sync everywhere, but I still couldn't read
-them.
+devices. Most importantly, I can *read* the notes on every device. With
+previous systems, the files would sync everywhere, but I still couldn't always
+easily read them.
 
 #### CLI and GUI versions
-Similarly, I like that Joplin has both a GUI and CLI client. While I have
-mostly used the GUI client, I enjoy having the CLI because it means I always
-have the option to ssh home into a machine and take notes. Additionally, the
-cli client allows me to take/edit notes with my own terminal editors such as
-emacs *or* vim. This is very convenient, and I should honestly try using
-Joplin in the way *more*.
+Similarly, I like that Joplin has both a GUI and CLI client. I
+mostly use the GUI, but enjoy having the CLI as an option because it means I
+can always ssh into a machine and take notes. Additionally, the
+cli client allows me to take/edit notes using my own terminal editors such as
+emacs *or* vim. This is quite convenient, and I should probably start using
+Joplin way more often.
 
 #### Markdown Note Exports
 
@@ -133,9 +133,9 @@ Joplin in the way *more*.
 </center>
 <div class="caption">Export options in Joplin GUI</div>
 
-I like that the notes are formatted in markdown. This provides me with some
-consistency when writing, but also means that my notes are in a format that is
-very standardized. Additionally, I like that joplin allows easy exporting of
+I like that notes are formatted in markdown. This provides some
+consistency when writing, but ensures that my notes are in a format that is
+standardized. Additionally, joplin allows easy exporting of
 the notes to other formats such as `json` or as `pdf`s.
 
 #### Easy enough to use
