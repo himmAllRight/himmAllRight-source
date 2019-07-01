@@ -1,11 +1,11 @@
 +++
 title  = "Switched to Joplin Notes"
-date   = "2019-06-26"
+date   = "2019-06-30"
 author = "Ryan Himmelwright"
 image  = "img/posts/switched-to-joplin-notes/lafayette-pardee-flowers.jpg"
 caption= "Pardee Hall - Lafayette College, Easton PA"
 tags   = ["Linux", "Notes", "Organization", "Applications",]
-draft  = "True"
+draft  = "False"
 Comments = "True"
 +++
 
@@ -16,7 +16,7 @@ as my daily emacs usage has slowly dropped, and the support for `.org` files
 outside of emacs remains low (other than [Github README
 files](https://github.com/himmAllRight/dotfiles/tree/master/emacs)), I started
 to look for a more standard system. The last few months, I've been using
-[Joplin](https://joplinapp.org/). Here's are my thoughts.
+[Joplin](https://joplinapp.org/). Here are my thoughts.
 
 <!--more-->
 
@@ -30,7 +30,7 @@ Previously, I had been taking all of my notes using org-mode in emacs. Each
 week, I made a new `.org` file for my work notes, and another for my personal
 planning/notes. I would then list my [todo
 items](https://orgmode.org/manual/TODO-items.html), usually grouped by day,
-category, or both. Usually, I would also
+category, or both. I would also
 [tag](https://orgmode.org/manual/Tags.html) each item, for better organization.
 
 As I worked on each task, I could quickly add time-stamped notes using the
@@ -40,9 +40,9 @@ snippet](https://orgmode.org/manual/Working-with-source-code.html) to save for
 later. As work on each item progressed, I could set the `TODO` status to
 `Working On` `Finished`, `Removed`, or any other state I had pre-defined.
 Eventually, I [wrote an emacs-lisp
-script/package](https://github.com/himmAllRight/ry-org-scrum) that took  todo
-items in my `org` file, and dumped them into a SCRUM board at the top of the
-file.
+script/package](https://github.com/himmAllRight/ry-org-scrum) that took the
+`todo` items in my `org` file, and dumped them into a SCRUM board at the top of
+the file.
 
 
 <a href="/img/posts/switched-to-joplin-notes/org-notes-export-pages.png">
@@ -51,12 +51,13 @@ file.
 HTML</div>
 
 Lastly, org files can be [exported](https://orgmode.org/manual/Exporting.html)
-to all sorts of file types (md, html, pdf, latex). By combining export feature with
-[internal linking](https://orgmode.org/manual/Internal-links.html), I was able
-to create an organized system for my archived notes. I created an `index.org` file
-which linked to each week's notes, and each note file also linked back to the
-index. Every week, I would archive the html export of a note, and add it to the
-index list. This meant I could browse my old notes as a website.
+to all sorts of file types (md, html, pdf, latex). By combining the export
+feature with [internal
+linking](https://orgmode.org/manual/Internal-links.html), I was able to create
+an organized system for my archived notes. I created an `index.org` file which
+linked to each week's notes. Every week, I would archive the html export of a
+note, and add it to the index list. This meant I could browse my old notes as a
+website.
 
 ### What I liked
 
@@ -69,7 +70,7 @@ index list. This meant I could browse my old notes as a website.
 
 ### Issues
 - I _had_ to use emacs for any edits
-- Not supported (*well*) on mobile devices
+- Not supported on mobile devices
 - As I used more `.md` syntax for other applications, I found myself fumbling between `org` and `md` syntax often.
 - Syncing issues (mostly Nextcloud issues. Seafile helped, but it still occurred)
 
@@ -85,7 +86,7 @@ could be used on *all* my devices, and was more easily translatable outside of
 
 ### About Joplin
 
-Joplin is an open source note taking and to-do application. It syncs and
+Joplin is an open source note-taking and to-do application. It synchronizes and
 organizes markdown notes into notebooks, across many platforms (Android, iOS,
 macOS, Linux, and Windows). It even has both a GUI *and* terminal client.  So,
 I decided to give it a try.
@@ -97,7 +98,7 @@ When configuring joplin, a sync system has to be defined (well, *should*. Notes
 can also be saved locally). There are a few supported options including using
 Nextcloud. I had previously synced my org notes using Nextcloud, but eventually
 moved away from it due to repeated file conflict issues. So I wanted to try
-something different this time.
+something different.
 
 <center>
 <a href="/img/posts/switched-to-joplin-notes/fastmail_logo.png">
@@ -106,7 +107,7 @@ something different this time.
 </center>
 
 While researching Joplin, I learned that I could sync notes to the WebDav
-server on the [fastmail](https://www.fastmail.com) account I use for email. I
+server on the [fastmail](https://www.fastmail.com) account I have for email. I
 wasn't using any of the account's file storage, so I figured I this would be a
 good way to get use out of a service I'm already paying for. It works great!
 
@@ -123,7 +124,7 @@ mostly use the GUI, but enjoy having the CLI as an option because it means I
 can always ssh into a machine and take notes. Additionally, the
 cli client allows me to take/edit notes using my own terminal editors such as
 emacs *or* vim. This is quite convenient, and I should probably start using
-Joplin way more often.
+Joplin this way more often.
 
 #### Markdown Note Exports
 
@@ -141,7 +142,7 @@ the notes to other formats such as `json` or as `pdf`s.
 #### Easy enough to use
 Lastly, Joplin has been easy to use. After setup, I just have to open the app,
 and start typing away (maybe with a sync or two). While my last setup required
-one to be somewhat of an emacs/org guru to use... this doesn't.
+the user to be somewhat of an emacs/org guru... this doesn't.
 
 
 ### Issues I'm still figuring out/Anticipate
@@ -152,14 +153,14 @@ one to be somewhat of an emacs/org guru to use... this doesn't.
 
 #### Setup is a pain
 
-While configuring up sync can be a pain, it's not my biggest gripe with the Joplin
+While configuring sync can be a pain, it's not my biggest gripe with the Joplin
 setup process. It's adding a new system. By default, if I configure a new
-device with my sync solution (my laptop or phone for example) and then sync it,
-it will load up all of the crap default example tags and notes, which then pull
+device with my sync solution (my laptop or phone for example) and then sync, it
+will load up all of the crap default example tags and notes, which then pull
 down to all of my systems. This is extremely frustrating because I have to keep
-deleting them.  This is multiplied by the fact that it happens with *each*
-client I setup. So if I setup the gui on my laptop and then
-when I setup the cli, it will happen *twice*.
+deleting them.  This is multiplied by the fact that it happens with *each
+client* I setup. So if I setup the gui and cli on my laptop, it will happen
+*twice* (2x each default tags/notes will show up on all my systems).
 
 *Semi-Solution*:
 
@@ -184,17 +185,17 @@ in it.
 
 One remaining solution might be to get more aggressive with the tagging
 feature, and see if I can create a more organized system using that. I might be
-able to tag each note with a month/year, and then cut off my log notes each
+able to tag each note with a month/year, and then truncate my log notes each
 month. The only problem with this is that it doesn't seem like I can select
 *multiple* tags at a time, which would mean *all* of my notes for a month
-will me shown under the tag. That would be a deal breaker for me :( .
+will be shown under the tag. That would be a deal breaker for me :( .
 
 ## Conclusion
 
 In summary, I think that Joplin *is* a great open source notes solution.  If
 someone needs a system to keep a bunch of normal notes synced across all their
-devices, this is it. I however might have to try out something else long-term.
-However, there are a bunch of features in Joplin that love and will definitely
-look for... in my next solution.
+devices, this is it. I however, might need to try out something else long-term.
+On the bright side, there are a bunch of features in Joplin that love and will
+definitely look for... in my next solution.
 
 
