@@ -61,27 +61,51 @@ dock my computer to it when I want to focus and mix things up a bit.
 
 
 ### Selection
-So, I wanted a 32", 2560x1440 IPS monitor... at a decent price.
+So, I wanted a 32", 2560x1440 IPS monitor... at a decent price. After browsing
+around amazon, I came across the [LG 32QK500W](https://www.amazon.com/gp/product/B07LD6XJ8X/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1). It was listed at a very reasonable price, had a few bonus features (75 Hz refresh + freesync options), and was an LG IPS panel, which I felt comfortable purchasing considering how much I enjoyed [my LG monitor](/post/new-lgud4379b/).
 
-[monitor](https://www.amazon.com/gp/product/B07LD6XJ8X/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1)
+In summary, the LG 32QK500-W has the following specs/features:
 
-[mount](https://www.amazon.com/gp/product/B01BCUM766/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
+* 32 Inch 2560 x 1440 pixel
+* IPS Panel
+* mDP and 2 HDMI imports
+* VESA mount capatable
+* 60 *and* 75 Hertz refresh rates
+* Freesync
+* On sale for less than $250 (USD)
+
+
+We also got a cheap [Amazon basics
+mount](https://www.amazon.com/gp/product/B01BCUM766/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
+to wall mount it, but in hindsight, it might of been worth paying a little
+extra for a better one.
 
 ### What I Like
 
-- Resolution
+#### Resolution
+The "2k" resolution is perfect. It gives just enough space to get work done,
+but not *so* much space that it is distracting. I can perfectly
+fit two *full* windows next to each other on the screen. At the same time, it
+is still a small enough resolution that I can comfortably work with a
+focused full screen window.
 
-- Colors
+#### Colors
+The colors are great. The are nice and sharp, and the blacks are *really* dark.
+I think I might even enjoy them better than on my monitor...
 
-- 75 Hz refresh rate (and Freesync!)
+#### 75 Hz refresh rate (and Freesync!)
+Lastly, the 75 Hz refresh rate and Freesync was a nice little bonus. While the
+only computer we have in the house that can *really* take advantage of that is
+[my desktop](/post/charmeleon-desktop-design/), which is in another room...
+it's nice to know we have the option if I every want to test it out.
 
 ### What I Don't Like
 
-- No speakers/audio plug isn't great
+#### No speakers/audio plug isn't great
 
-- While dpi is perfect for it's use, it isn't the best
+#### While dpi is perfect for it's use, it isn't the best
 
-- White back?
+#### White back?
 
 
 ### Conclusion
