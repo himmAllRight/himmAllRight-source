@@ -88,6 +88,10 @@ extra for a better one.
 ### What I Like
 
 #### Resolution
+<a href="/img/posts/new-lg32qk500w/screenshot.png">
+<img alt="Screenshot of working on monitor" src="/img/posts/new-lg32qk500w/screenshot.png" style="max-width: 100%;"/></a>
+<div class="caption">The resolution is perfect for productivity work.</div>
+
 The "2k" resolution is perfect. It gives just enough space to get work done,
 but not *so* much space that it is distracting. I can perfectly
 fit two *full* windows next to each other on the screen. At the same time, it
