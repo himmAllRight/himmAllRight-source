@@ -61,6 +61,11 @@ dock my computer to it when I want to focus and mix things up a bit.
 
 
 ### Selection
+
+<a href="/img/posts/new-lg32qk500w/box.jpg">
+<img alt="New monitor box" src="/img/posts/new-lg32qk500w/box.jpg" style="max-width: 100%;"/></a>
+<div class="caption">The new monitor in it's box</div>
+
 So, I wanted a 32", 2560x1440 IPS monitor... at a decent price. After browsing
 around amazon, I came across the [LG 32QK500W](https://www.amazon.com/gp/product/B07LD6XJ8X/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1). It was listed at a very reasonable price, had a few bonus features (75 Hz refresh + freesync options), and was an LG IPS panel, which I felt comfortable purchasing considering how much I enjoyed [my LG monitor](/post/new-lgud4379b/).
 
@@ -101,11 +106,27 @@ it's nice to know we have the option if I every want to test it out.
 
 ### What I Don't Like
 
-#### No speakers/audio plug isn't great
+#### No speakers... and audio jack isn't great
+Normally, I could care less if a monitor has speakers or not. They usually
+sound terrible, and I end up plugging external headphones/speakers to the
+computer directly anyway. However, as we intend to also use this monitor as a
+"TV" via an [Amazon
+Firestick](https://www.amazon.com/Fire-TV-Stick-4K-with-Alexa-Voice-Remote/dp/B079QHML21/ref=sr_1_1?keywords=amazon+fire+stick&qid=1563791000&s=gateway&sr=8-1),
+it would be nice to have even _basic_ speakers to pump audio through by
+default. It _does_ have a 3.5mm headphone jack, but there seemed to be a bit of
+noise when I tried it.
 
 #### While dpi is perfect for it's use, it isn't the best
-
-#### White back?
-
+As mentioned earlier, the dpi isn't the best, and the image isn't quite as
+"crisp" as you might find on a high resolution display. Also, at such a large
+screen size, it is almost required to sit back from the screen a little bit
+further than normal. However, as I already described in the sections above...
+for our use case, this was actually preferred.
 
 ### Conclusion
+I think that's it. There isn't much left to say. At this price point, and for
+what we wanted a monitor for, I think this was a perfect match. While it might
+not be the top of the line, best monitor out there, it is a great value. If
+you're looking for a large 1440p monitor to get some work done on, and maybe
+watch a TV show or two on for a good price (I'm looking at you college
+students), I highly recommend it.
