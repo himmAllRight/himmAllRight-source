@@ -8,34 +8,35 @@ draft  = true
 Comments = "True"
 +++
 
-At the beginning of summer, I was thinking maybe we should improve my wife's setup with
-a new external monitor. She agreed. So, over the last few weeks, we have
-purchased, recieved, and even _mounted_, the [LG 32QK500w](https://www.lg.com/us/monitors/lg-32QK500-W-led-monitor)
-monitor. Here are my thoughts.
+At the beginning of summer, I was entertaining the idea of improving my wife's
+computer setup by adding a new external monitor. She agreed. As a result, we
+have purchased, recieved, and even _mounted_, the [LG
+32QK500w](https://www.lg.com/us/monitors/lg-32QK500-W-led-monitor) monitor.
+Here are my thoughts.
 
 <!--more-->
 
 ### Reasoning
-Recently, my wife has had to study/prep at night for her next workday, which
-she does on her laptop. So we decided it was a good time to finally setup her
+Recently, my wife has had to spend more time prepping at night for her next workday, which
+she does on her laptop. This made it a good time to finally setup her
 office space in the guest bedroom. She has an old 21.5" 1080p monitor from
-college, but talking it over we decided it might not be the best fit for the
+college, but we decided it might not be the best fit for the
 space.
 
 <a href="/img/posts/new-lg32qk500w/dpi-32.png">
 <img alt="Netflix logo" src="/img/posts/new-lg32qk500w/netflix.png" style="max-width: 100%;"/></a>
 
-We decided that it would be nice to have a larger screen in that room which guests
-could watch content on. Additionally, we have a habit of falling asleep
-watching TV on the couch most weekend nights. So, while we want to keep a TV
-out of our bedroom, having a spot where we can lay down on a bed and prep for
-the inevitable is probably a good idea (our backs agree).
+We thought that it would be nice to have a larger screen in that room, guests
+could watch video content. Additionally, my wife and I have a habit of falling
+asleep on the couch watching TV most weekend nights... but we want to keep our
+bedroom TV free. Having a spot where we can lay down on a bed and prep for the
+inevitable while watching a movie, is probably a good idea (and our backs agree).
 
-So I started looking for slightly larger monitors and noticed something... the
-2560x1440 32" monitors were a good bit cheaper than their 27" counterparts.This
-makes sense as the dpi is lower, but doing the math, 2560x1440 pixels @ 32" is
-the same dpi of as a 24" 1920x1080 monitor, about 109 dots per inch. While this
-isn't the most _crisp_, it is very common and reasonable for productivity setups.
+I started looking for slightly larger monitors and quickly noticed something... the
+2560x1440 32" monitors were cheaper than their 27" counterparts. This
+made sense, as the dpi is lower. However, after doing the math, 2560x1440 pixels @ 32" is
+the same dpi of as a 24" 1920x1080 monitor (109 dots per inch). While this
+isn't the _sharpest_ configuration, it is very common and reasonable for productivity setups.
 
 <a href="/img/posts/new-lg32qk500w/dpi-32.png">
 <img alt="2560 by 1440 pixels at 32 inches has a dpi of 91." src="/img/posts/new-lg32qk500w/dpi-32.png" style="max-width: 100%;"/></a>
@@ -46,19 +47,19 @@ isn't the most _crisp_, it is very common and reasonable for productivity setups
 <div class="caption">1920x1080 pixels at 24" also has a dpi of 91</div>
 
 
-Additionally, my wife doesn't have the best vision (especially at night when
-she tends to work), so the larger scale of a 109 dpi is actually _preferred_
-(we purposefully picked the 1600x900 resolution screen over the FHD one when
-buying her Thinkpad for the same reason).
+In fact, my wife doesn't have the best vision (especially at night when she
+tends to work), and tends to actually _prefer_ the larger scale of 109 dpi. We
+even purposefully picked a 1600x900 resolution screen over a FHD one when
+buying her Thinkpad for the same reason.
 
-Lastly, while scaled a little larger on a bigger display, it is still a
-2560x1440 resolution. I have recently declared this the best for productivity
-(at least in the type of workflows I use), and even figured out how to
-[configure a 2560x1440 "sub-monitor" on my 43" QHD
+Lastly, while it is scaled up a bit on a physically larger display, these
+monitors still provide a 2560x1440 resolution. Recently, I have decided that this
+particular resolution, may be the best for productivity , at least in the type
+of workflows I use. I even figured out how to [configure a 2560x1440
+"sub-monitor" on my 43" QHD
 monitor](http://192.168.1.5:1313/post/sub-monitor-workflows-with-xrandr/) when
-I need to _focus_. With this monitor, I am also comfortable to sit down and
-dock my computer to it when I want to focus and mix things up a bit.
-
+I need to _focus_. Having an _actual_ 2560x1440 monitor in the house would be
+wonderful for both my wife's and my own productivity.
 
 ### Selection
 
