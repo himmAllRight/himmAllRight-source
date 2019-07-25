@@ -47,7 +47,6 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
-Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
 Fedora 30 SilverBlue
 ```
 
@@ -122,8 +121,13 @@ Netgear Orbi RBK50 Satellite (In Office)
 
 
 ### Rebecca (Wife)
+<a href="../../img/homelab/rebecca_desk.jpg"><img alt="Rebecca's Desk" src="../../img/homelab/rebecca_desk.jpg" width=100%></a>
+<div class="caption">Rebecca's Desk (yes, that is my laptop in the dock)</div>
 
-### - Weepinbell
+Even though this is my wife's gear... I'm in charge of managing it all. So I
+decided to add it here.
+
+#### - Weepinbell
 ```
 Thinkpad T450s
 Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
@@ -131,10 +135,18 @@ Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
 256 GB SSD
 14" 1600x900 LED Display
 6-Cell Battery
-Pop_OS! 19.04
+CloudReady (a chromiumos spin)
+
 ```
 
-#### - Bellsprout (Dead)
+#### - Periphery
+```
+Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
+LG 32QK500W, 32" 2560x1440 IPS Monitor
+Bose AE2 Headphones
+```
+
+#### - Bellsprout
 ```
 Macbook Air (2014)
 Intel i5 (1.4 GHz (2.7 GHz Turbo), 3M Cache, 2 Cores, 2 Threads) ?
