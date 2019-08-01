@@ -55,8 +55,27 @@ traveling.
 
 ### Org-mode use cases
 #### Logging-Style Notes
+Emacs' org-mode by comparison allows for more of a `log-style` note-taking.
+This is due to it being very *task* oriented. It encourages outline
+organization of notes, allowing "tasks" to be collapsed in a hierarchical
+fashion. These items can be marked as "TODO" or "DONE" using the built in todo
+system, or tagged. While org-mode can be used to take "normal" style notes, it
+really shines when working in a task or outline based structure.
+
 #### Quick Notes, Keybinds
+Another feature of org mode is it's note drawer. By pressing a particular key
+combination (as one tends to do in Emacs), a new buffer will open up to take a
+note in. I can write text, or even add a code snippet (if I really want, I can
+write the code snippet *in the mode of that language* When done, I can simply
+press `C-c C-c`, and the buffer will close, inserting my note under a
+time-stamped entry as part of the `logbook` item I started the note in.
+
+This quick logging feature, along with the power of all the key-binding
+customization, makes logging and take notes fast, efficient, and enjoyable.
+
 #### Todo/SCRUM Board tasks
+
+
 #### Exporting/Archiving Weekly Logs
 
 
