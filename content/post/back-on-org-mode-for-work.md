@@ -1,6 +1,6 @@
 +++
 title  = "Back On org-mode For Work"
-date   = "2019-07-31"
+date   = "2019-08-01"
 author = "Ryan Himmelwright"
 image  = "img/posts/back-on-org-mode-for-work/eno-rocks.jpg"
 caption= "Eno State Park, Durham NC"
@@ -21,6 +21,8 @@ have I switched at work, but *not* at home?
 ## Use Cases
 To better understand why Joplin works well for me at home but not work, lets
 first the different features between Joplin and emacs org-mode.
+
+#### Normal vs Logging notes?
 
 ### Joplin Features
 #### "Notes"-Style
@@ -63,6 +65,9 @@ system, or tagged. While org-mode can be used to take "normal" style notes, it
 really shines when working in a task or outline based structure.
 
 #### Quick Notes, Keybinds
+
+*Gif of quick note log (with code?)*
+
 Another feature of org mode is it's note drawer. By pressing a particular key
 combination (as one tends to do in Emacs), a new buffer will open up to take a
 note in. I can write text, or even add a code snippet (if I really want, I can
@@ -75,17 +80,34 @@ customization, makes logging and take notes fast, efficient, and enjoyable.
 
 #### Todo/SCRUM Board tasks
 
+*Insert ORG-SCRUM Board Picture*
+
+As mentioned, org-mode has a powerful [todo]() system. Users can configure how
+they want to group the task items, beyond just a basic `TODO`/`DONE`. Using
+this flexability (and some lisp knowledge), I wrote myself an [org-mode scrum
+board](https://github.com/himmAllRight/ry-org-scrum) generator. This package
+takes all of my various `TODO` items, and organizes them into scrum task board.
+Again, making org-mode great for task tracking and logging workflows.
 
 #### Exporting/Archiving Weekly Logs
+Lastly, the big "feature" org mode has that I find to be missing in Joplin is
+the ability to better organize long-term sets of notes. With a logging style of
+note-taking, notes can often be organized by a range in time. For example,
+week, month, and years. Naturally, these systems are hierarchical and Joplin's
+notebook/note organization only truely allows for note systems to be 2 levels
+deep. Being text files in a traditional filesystem however, org-mode can better
+organize this data, allowing it to be more maintainable over time.
 
+Additionally, org files can be linked, so everything can still be quickly
+navigated, even if it spans hundreds of note files over several years.
 
 ## Home vs Work Notes
 ### Home Use Case
-#### Various topics which don't pile up a ton over time
+Various topics which don't pile up a ton over time
 
 
 ### Work Use Case
-
+Weekly task lists, with progress notes logged under each one.
 
 
 ### Future Plans
