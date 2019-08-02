@@ -1,6 +1,6 @@
 +++
 title  = "Back On org-mode For Work"
-date   = "2019-08-01"
+date   = "2019-08-02"
 author = "Ryan Himmelwright"
 image  = "img/posts/back-on-org-mode-for-work/eno-rocks.jpg"
 caption= "Eno State Park, Durham NC"
@@ -21,8 +21,6 @@ have I switched at work, but *not* at home?
 ## Use Cases
 To better understand why Joplin works well for me at home but not work, lets
 first the different features between Joplin and emacs org-mode.
-
-#### Normal vs Logging notes?
 
 ### Joplin Features
 #### "Notes"-Style
@@ -109,12 +107,37 @@ Additionally, org files can be linked, so everything can still be quickly
 navigated, even if it spans hundreds of note files over several years.
 
 ## Home vs Work Notes
-### Home Use Case
-Various topics which don't pile up a ton over time
+
+Now with some of each note system's features broken down, how do they
+contribute to my preference across different note environments (personal vs.
+work).
+
+#### Home
+<a href="/img/posts/back-on-org-mode-for-work/joplin-travel-notes.jpg">
+<img alt="Joplin Android GUI" src="/img/posts/back-on-org-mode-for-work/joplin-travel-notes.jpg" style="max-width: 100%; width: 350px; float: right; padding: 15px 0px 10px 20px"/></a>
+
+My personal notes tend to be organized as more traditional notes. I make large
+groups, such as 'Home', 'Tech', 'Travel', and stash notes into each. In a note,
+I tend to organize information on a topic and store it for later. For example,
+I may have a notebook for online classes, and then a note for each class where
+I jot stuff down as I progress.
+
+For another example, I have a notebook called 'Travel' which contains a note for
+each trip I plan to take.  In the note, can store information I need to
+remember, such as flight numbers, or hotel addresses. Below, I then store other
+information while planning and researching before leaving. This may include
+places to to eat, or activities I want to do (with links to the websites).
+
+Joplin's mobile platform support is particularly useful here, as I am able to
+write up notes on my desktop, and then read the notes from my phone on the go.
+
+#### Work
+By contrast, my work notes tend to be a mix of task-list and logbook for each
+week. I plan out each week and day, moving `TODO` tasks from one day to
+another, changing their status as I work on each one. I also take notes under
+each task about my progress, and the issues/solutions I experience on the way.
 
 
-### Work Use Case
-Weekly task lists, with progress notes logged under each one.
 
 
 ### Future Plans
