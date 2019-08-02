@@ -66,7 +66,11 @@ really shines when working in a task or outline based structure.
 
 #### Quick Notes, Keybinds
 
-*Gif of quick note log (with code?)*
+<a href='../../img/posts/back-on-org-mode-for-work/note-demo.gif'>
+<img alt="Demonstration of logging a quick note." src="../../img/posts/back-on-org-mode-for-work/note-demo-pre.png" onmouseover="this.src='../../img/posts/back-on-org-mode-for-work/note-demo.gif'" onmouseout="this.src='../../img/posts/back-on-org-mode-for-work/note-demo-pre.png'" style="max-width: 100%;"/>
+</a>
+<div class="caption">Notes and code blocks can be easily added using
+key-binding shortcuts.</div>
 
 Another feature of org mode is it's note drawer. By pressing a particular key
 combination (as one tends to do in Emacs), a new buffer will open up to take a
@@ -80,7 +84,10 @@ customization, makes logging and take notes fast, efficient, and enjoyable.
 
 #### Todo/SCRUM Board tasks
 
-*Insert ORG-SCRUM Board Picture*
+<a href="/img/posts/back-on-org-mode-for-work/scrum-board.png">
+<img alt="Joplin Android GUI" src="/img/posts/back-on-org-mode-for-work/scrum-board.png" style="max-width: 100%;"/></a>
+<div class="caption">I wrote a package that lets me view org tasks in a
+scrum board.</div>
 
 As mentioned, org-mode has a powerful [todo]() system. Users can configure how
 they want to group the task items, beyond just a basic `TODO`/`DONE`. Using
