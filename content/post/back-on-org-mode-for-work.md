@@ -10,20 +10,20 @@ Comments = "True"
 +++
 
 Last month, I wrote about my [switch to Joplin](post/switched-to-joplin-notes/)
-for my personal and work notes. While there were many features I liked about
-the system, I had a few issues which caused concern for using the application
-long-term for all my notes. While I am still using Joplin for all of my
-personal notes, I have switched back to `org-mode` for my notes at work. Why
-have I switched at work, but *not* at home?
+for both my personal and work notes. While I enjoyed many features in Joplin, I
+also had a few concerns about using the system long-term for all my notes.
+As of last week, I am still using Joplin for all of my personal notes, but have switched
+back to `org-mode` for my notes at work. Why?
 
 <!--more-->
 
 ## Use Cases
-To better understand why Joplin works well for me at home but not work, lets
-first the different features between Joplin and emacs org-mode.
+To better understand why Joplin works well for me at home but can't effectively
+replace org-mode at work, lets first list some different features between Joplin and
+emacs org-mode.
 
 ### Joplin Features
-#### "Notes"-Style
+#### "Notes"-Style Focused
 <a href="/img/posts/back-on-org-mode-for-work/joplin-gui.png">
 <img alt="Joplin GUI" src="/img/posts/back-on-org-mode-for-work/joplin-gui.png" style="max-width: 100%;"/></a>
 <div class="caption">Joplin uses a traditional "note" layout, with blank text
@@ -31,27 +31,27 @@ boxes organized into notebooks.</div>
 
 Joplin organizes notes in a traditional "notes" style. Each note starts as a
 big, blank text-box that the user fills in. These notes are further organized
-into "notebooks", which is simply a list of one or notes. While the notes are written
-in markdown, which allows the user format them in any way, the system doesn't
-really support features like collapsible sections or outlines.
+into "notebooks", which are simply a list of one or more notes. The notes are
+formatted with markdown, but the application doesn't seem to support features
+like collapsible sections.
 
 #### Simple Markdown Format -- Sharable
 The markdown editor in Joplin may not support collapsing sections, but it does
 a great job at supporting other features, like simple code highlighting and web
-links. Additionaly, being markdown the contents can be easily exported,
-transferred, or even shared with other applications and/or people. This is
-handy when grabbing snippets from the web, which may already be in a markdown
-friendly format.
+links. Additionaly, being formated in markdown, the note contents can be easily
+exported, transferred, or even shared with other applications and/or people.
+This is handy when grabbing snippets from the web, which may already be in a
+markdown friendly format.
 
 #### Shared across Computer and Mobile Devices
 <a href="/img/posts/back-on-org-mode-for-work/joplin-android.png">
 <img alt="Joplin Android GUI" src="/img/posts/back-on-org-mode-for-work/joplin-android.png" style="max-width: 100%;"/></a>
 <div class="caption">The Notebook and Notes views on the Android client.</div>
 
-Lastly, the Joplin application is available on all platforms, including mobile.
-Furthermore, it syncs the notes across all devices. This makes it easy to take
-write some notes at a computer, and then have available on a phone while
-traveling.
+Lastly, the Joplin application is available on all platforms (including
+mobile), and manages the system to sync the notes across all devices. This
+makes it a breeze to write a note at a computer, and then have it immediately
+available on a phone afterwards.
 
 ### Org-mode use cases
 #### Logging-Style Notes
@@ -132,12 +132,17 @@ Joplin's mobile platform support is particularly useful here, as I am able to
 write up notes on my desktop, and then read the notes from my phone on the go.
 
 #### Work
+
 By contrast, my work notes tend to be a mix of task-list and logbook for each
 week. Each week and day are planned out by moving `TODO` tasks from one day to
 the next, and changing the status as I work on each one. As I work, I log notes
 under each task about my progress, as well as any issues/solutions I experience
 on the way. While the notes are mostly rambeling, logging thoughts as I work
 often helps me quickly identify issues, and figure out solutions.
+
+<a href="/img/posts/back-on-org-mode-for-work/exported-notes.png">
+<img alt="My notes exported as linked html pages" src="/img/posts/back-on-org-mode-for-work/exported-notes.png" style="max-width: 100%;"/></a>
+<div class="caption">The index page of my exported weekly work notes.</div>
 
 Most importantly, due to organizing notes by *week* rather than topic, it is
 best if I can archive the notes in more of a tree layout. Org notes are plain
