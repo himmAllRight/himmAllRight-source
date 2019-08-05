@@ -1,6 +1,6 @@
 +++
 title  = "Back On org-mode For Work"
-date   = "2019-08-02"
+date   = "2019-08-04"
 author = "Ryan Himmelwright"
 image  = "img/posts/back-on-org-mode-for-work/eno-rocks.jpg"
 caption= "Eno State Park, Durham NC"
@@ -133,11 +133,29 @@ write up notes on my desktop, and then read the notes from my phone on the go.
 
 #### Work
 By contrast, my work notes tend to be a mix of task-list and logbook for each
-week. I plan out each week and day, moving `TODO` tasks from one day to
-another, changing their status as I work on each one. I also take notes under
-each task about my progress, and the issues/solutions I experience on the way.
+week. Each week and day are planned out by moving `TODO` tasks from one day to
+the next, and changing the status as I work on each one. As I work, I log notes
+under each task about my progress, as well as any issues/solutions I experience
+on the way. While the notes are mostly rambeling, logging thoughts as I work
+often helps me quickly identify issues, and figure out solutions.
+
+Most importantly, due to organizing notes by *week* rather than topic, it is
+best if I can archive the notes in more of a tree layout. Org notes are plain
+text files, so I can save them on my hard drive any way I want, which allows me
+to organize the notes as `/work/archive/YEAR/MONTH/week-of{date}.org`.
+Additionally, I can export the notes to linked html files, which is very
+useful for going back and looking at my previous notes, which I require with my
+work flow.
 
 
+### Conclusion
 
+So that's about it. I've switched back to emacs org-notes for my work notes...
+but remain using Joplin for my personal and home notes. So far... I'm loving
+it. I think that I switched to joplin because org-mode wasn't ideal for my
+personal notes. However, it turned out that it was lacking for my work
+notes. That's okay. It turns out that those two use cases are completely
+different, and as such work best using different tools.
 
-### Future Plans
+So, moving forward, I plan to keep using Joplin for my personal notes, and
+emacs org-mode for my work notes. Perfect.
