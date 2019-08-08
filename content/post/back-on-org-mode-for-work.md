@@ -1,11 +1,11 @@
 +++
 title  = "Back On org-mode For Work"
-date   = "2019-08-04"
+date   = "2019-08-07"
 author = "Ryan Himmelwright"
 image  = "img/posts/back-on-org-mode-for-work/eno-rocks.jpg"
 caption= "Eno State Park, Durham NC"
 tags   = ["Linux", "Notes", "Organization", "Applications",]
-draft  = "True"
+draft  = "False"
 Comments = "True"
 +++
 
@@ -38,7 +38,7 @@ like collapsible sections.
 #### Simple Markdown Format -- Sharable
 The markdown editor in Joplin may not support collapsing sections, but it does
 a great job at supporting other features, like simple code highlighting and web
-links. Additionaly, being formated in markdown, the note contents can be easily
+links. Additionally, being formated in markdown, the note contents can be easily
 exported, transferred, or even shared with other applications and/or people.
 This is handy when grabbing snippets from the web, which may already be in a
 markdown friendly format.
@@ -55,14 +55,14 @@ available on a phone afterwards.
 
 ### Org-mode use cases
 #### Logging-Style Notes
-Emacs' org-mode by comparison allows for more of a `log-style` note-taking.
-This is due to it being very *task* oriented. It encourages outline
-organization of notes, allowing "tasks" to be collapsed in a hierarchical
-fashion. These items can be marked as "TODO" or "DONE" using the built in todo
-system, or tagged. While org-mode can be used to take "normal" style notes, it
-really shines when working in a task or outline based structure.
+By comparison, Emacs' org-mode can be very *task* oriented, allowing for a more
+'log-style' note-taking system. It encourages outline organization of notes,
+organized under "tasks" which can be collapsed in a hierarchy. The
+tasks can be marked "TODO" or "DONE" using the built in TODO system, or
+tagged for organization. While org-mode can be used when writing "normal" notes, it really
+shines when working as a task/note system.
 
-#### Quick Notes, Keybinds
+#### Quick Notes, Key-bindings
 
 <a href='../../img/posts/back-on-org-mode-for-work/note-demo.gif'>
 <img alt="Demonstration of logging a quick note." src="../../img/posts/back-on-org-mode-for-work/note-demo-pre.png" onmouseover="this.src='../../img/posts/back-on-org-mode-for-work/note-demo.gif'" onmouseout="this.src='../../img/posts/back-on-org-mode-for-work/note-demo-pre.png'" style="max-width: 100%;"/>
@@ -70,47 +70,48 @@ really shines when working in a task or outline based structure.
 <div class="caption">Notes and code blocks can be easily added using
 key-binding shortcuts.</div>
 
-Another feature of org mode is it's note drawer. By pressing a particular key
-combination (as one tends to do in Emacs), a new buffer will open up to take a
-note in. I can write text, or even add a code snippet (if I really want, I can
-write the code snippet *in the mode of that language* When done, I can simply
-press `C-c C-c`, and the buffer will close, inserting my note under a
-time-stamped entry as part of the `logbook` item I started the note in.
+Another feature in org mode is the note drawer. By pressing a key combination
+(as one tends to do in Emacs), a new buffer will open up to take a note in. The
+contents of the note may be text, or even a code snippet (*in the emacs mode of
+that language*). When done, I can simply press `C-c C-c` and the buffer will
+close, inserting the note with a time-stamped entry as part of the `logbook`
+for the task I opened the note in.
 
 This quick logging feature, along with the power of all the key-binding
-customization, makes logging and take notes fast, efficient, and enjoyable.
+customization, makes note logging fast, efficient, and enjoyable.
 
-#### Todo/SCRUM Board tasks
+#### TODO/SCRUM Board tasks
 
 <a href="/img/posts/back-on-org-mode-for-work/scrum-board.png">
 <img alt="Joplin Android GUI" src="/img/posts/back-on-org-mode-for-work/scrum-board.png" style="max-width: 100%;"/></a>
 <div class="caption">I wrote a package that lets me view org tasks in a
 scrum board.</div>
 
-As mentioned, org-mode has a powerful [todo]() system. Users can configure how
-they want to group the task items, beyond just a basic `TODO`/`DONE`. Using
-this flexability (and some lisp knowledge), I wrote myself an [org-mode scrum
-board](https://github.com/himmAllRight/ry-org-scrum) generator. This package
-takes all of my various `TODO` items, and organizes them into scrum task board.
-Again, making org-mode great for task tracking and logging workflows.
+As mentioned, org-mode has a powerful
+[todo](https://orgmode.org/manual/TODO-items.html) system. Users can configure
+how task items should be grouped beyond just a basic `TODO`/`DONE`. Using this
+flexability (and some lisp knowledge), I wrote an [scrum board generator for
+org-mode](https://github.com/himmAllRight/ry-org-scrum). This package takes all
+of my `TODO` items, and organizes them into scrum task board. This feature
+helps organize my daily and weekly task lists.
 
 #### Exporting/Archiving Weekly Logs
-Lastly, the big "feature" org mode has that I find to be missing in Joplin is
-the ability to better organize long-term sets of notes. With a logging style of
-note-taking, notes can often be organized by a range in time. For example,
-week, month, and years. Naturally, these systems are hierarchical and Joplin's
-notebook/note organization only truely allows for note systems to be 2 levels
-deep. Being text files in a traditional filesystem however, org-mode can better
-organize this data, allowing it to be more maintainable over time.
+The big "feature" org mode has that I find lacking in Joplin, is the
+ability to better organize long-term sets of notes. With a logging style of
+note-taking, notes are often organized by a specific range in time (day, week,
+month). These systems are naturally structured hierarchically and Joplin's notebook/note
+organization only allows for systems to be 2 levels deep. However, org files are stored
+as text files on a traditional file system.
 
-Additionally, org files can be linked, so everything can still be quickly
-navigated, even if it spans hundreds of note files over several years.
+Lastly, org files can be linked (and exported as html files), so any note can
+still be quickly navigated to, even if the archive spans hundreds of note files over
+several years.
 
 ## Home vs Work Notes
 
 Now with some of each note system's features broken down, how do they
-contribute to my preference across different note environments (personal vs.
-work).
+fit with my preferences across different note taking use-cases? (mostly personal vs.
+work)
 
 #### Home
 <a href="/img/posts/back-on-org-mode-for-work/joplin-travel-notes.jpg">
@@ -119,26 +120,25 @@ work).
 My personal notes tend to be organized as more traditional notes. I make large
 groups, such as 'Home', 'Tech', 'Travel', and stash notes into each. In a note,
 I tend to organize information on a topic and store it for later. For example,
-I may have a notebook for online classes, and then a note for each class where
-I jot stuff down as I progress.
+I may have a notebook for online classes, and then a note for each class.
 
-For another example, I have a notebook called 'Travel' which contains a note for
-each trip I plan to take.  In the note, can store information I need to
-remember, such as flight numbers, or hotel addresses. Below, I then store other
-information while planning and researching before leaving. This may include
-places to to eat, or activities I want to do (with links to the websites).
+For another example, I have a notebook called 'Travel' which contains a note
+for each trip I plan.  In the note, I store information that I will need, such
+as flight numbers, or hotel addresses. Below important information, I jot down
+ideas while planning and researching before leaving. This may include places to
+to eat, or activities I want to do (with links to the websites).
 
 Joplin's mobile platform support is particularly useful here, as I am able to
-write up notes on my desktop, and then read the notes from my phone on the go.
+write up notes on my desktop, and then read them from my phone on the go.
 
 #### Work
 
-By contrast, my work notes tend to be a mix of task-list and logbook for each
-week. Each week and day are planned out by moving `TODO` tasks from one day to
+By contrast, my work notes are a mix of task-list and logbook for each
+week. I plan each week by moving `TODO` tasks from one day to
 the next, and changing the status as I work on each one. As I work, I log notes
 under each task about my progress, as well as any issues/solutions I experience
-on the way. While the notes are mostly rambeling, logging thoughts as I work
-often helps me quickly identify issues, and figure out solutions.
+on the way. While the notes are mostly rambling, logging thoughts as I work
+helps me to quickly identify issues, and solve problems faster.
 
 <a href="/img/posts/back-on-org-mode-for-work/exported-notes.png">
 <img alt="My notes exported as linked html pages" src="/img/posts/back-on-org-mode-for-work/exported-notes.png" style="max-width: 100%;"/></a>
@@ -146,21 +146,19 @@ often helps me quickly identify issues, and figure out solutions.
 
 Most importantly, due to organizing notes by *week* rather than topic, it is
 best if I can archive the notes in more of a tree layout. Org notes are plain
-text files, so I can save them on my hard drive any way I want, which allows me
-to organize the notes as `/work/archive/YEAR/MONTH/week-of{date}.org`.
-Additionally, I can export the notes to linked html files, which is very
-useful for going back and looking at my previous notes, which I require with my
-work flow.
-
+text files, so I can save them on my hard drive any way I want. For example, I
+have my work notes organized as `./work/archive/{YEAR}/{MONTH}{DAY}/week-of-{date}.org`.
+Each week, I also export the finished notes to linked html files, which is very
+useful for going back and looking at my previous notes.
 
 ### Conclusion
 
-So that's about it. I've switched back to emacs org-notes for my work notes...
-but remain using Joplin for my personal and home notes. So far... I'm loving
-it. I think that I switched to joplin because org-mode wasn't ideal for my
-personal notes. However, it turned out that it was lacking for my work
-notes. That's okay. It turns out that those two use cases are completely
-different, and as such work best using different tools.
+That's it. I've switched back to emacs org-notes for my work tasks,
+but remain on Joplin for my personal and home notes. So far... I'm loving
+it. I think that I switched to Joplin because org-mode wasn't ideal for my
+personal notes. However, Joplin was lacking for my work
+notes. That's okay. I learned that my home vs. work notes are two completely
+different use cases, and as a result should use different tools.
 
 So, moving forward, I plan to keep using Joplin for my personal notes, and
-emacs org-mode for my work notes. Perfect.
+emacs org-mode for my work tasks. Perfect.
