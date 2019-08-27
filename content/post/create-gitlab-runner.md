@@ -74,14 +74,25 @@ Enter the coordinator URL (ex: `https://gitlab.com`)
 
 Then, enter the *gitlab-ci* token for the runner.
 
+<a href="/img/posts/create-gitlab-runner/gitlab-runner-settings.png">
+<img alt="Gitlab Runner Settings" src="/img/posts/create-gitlab-runner/gitlab-runner-settings.png" style="max-width: 100%;"/></a>
+<div class="caption">Gitlab Runner Settings Page</div>
+
 To obtain a gitlab-ci token, got to **Admin Area** -> **Overview** ->
-**Runners*. Then, on the right there should be a token to use during setup.
+**Runners**. Then, on the right there should be a token to use during setup.
 
-*Add Screenshot of web-UI. Spin up a gitlab droplet to take screenshots for
-this*
+When the runner registrations asks for the token, use the "registration token"
+listed in the "Set up a shared Runner manually" section.
 
-## Setup API key
+Next, provide a short description for the runner, and then add a tag or two
+for it (when prompted).
+
+Lastly, enter the executor (what system on the runner *does* stuff). For now,
+I've just been using `"shell"` for my needs, as these VMs are fully dedicated
+to be used as runners.
+
+Congrats, the runner should be registered! Now to set it up...
 
 ## Link to CI/CD Builds
 
-## Test
+## Test Run
