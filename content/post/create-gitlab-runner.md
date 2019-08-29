@@ -2,12 +2,13 @@
 title  = "Setup a Runner VM for Gitlab"
 date   = "2019-08-27"
 author = "Ryan Himmelwright"
-image  = "img/posts/back-on-org-mode-for-work/eno-rocks.jpg"
-caption= "Eno State Park, Durham NC"
+image  = "img/posts/create-gitlab-runner/keep-off-rocks.jpg"
+caption= "Sugar Creek Restaurant, Nags Head NC"
 tags   = ["Linux", "Homelab", "Git", "KVM", "DEV", "Devops", "Fedora"]
 draft  = "True"
 Comments = "True"
 +++
+
 
 
 <!--more-->
@@ -15,6 +16,11 @@ Comments = "True"
 ## What/Why
 
 ## Setup a Machine/VM
+
+<a href="/img/posts/create-gitlab-runner/fedora-vm-install.png">
+<img alt="Installing a new Fedora30 VM in Virt-Manager" src="/img/posts/create-gitlab-runner/fedora-vm-install.png" style="max-width: 100%;"/></a>
+<div class="caption">Installing a new Fedora 30 VM in Virt-Manager for my runner</div>
+
 #### Some things to note/consider:
 
 - Install packages required for pipeline
