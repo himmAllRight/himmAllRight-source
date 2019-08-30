@@ -15,14 +15,10 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 
 ### Ryan (Me)
 
-I recently moved into a new house and am still putting this space together...
-So for now ... don't mind the wires :P. I'll try to keep updating this page as
-I progress.
-
-<a href="../../img/homelab/new_house2.jpg"><img alt="Home Office" src="../../img/homelab/new_house2.jpg" width=100%></a>
+<a href="../../img/homelab/desk_front_night.jpg"><img alt="Home Office" src="../../img/homelab/desk_front_night.jpg" width=100%></a>
 <div class="caption">My Home Office</div>
 
-<a href="../../img/homelab/new_house1.jpg"><img alt="My Desk" src="../../img/homelab/new_house1.jpg" width=100%></a>
+<a href="../../img/homelab/desk_night.jpg"><img alt="My Desk" src="../../img/homelab/desk_night.jpg" width=100%></a>
 <div class="caption">My Desk</div>
 
 
@@ -53,7 +49,7 @@ Fedora 30 SilverBlue
 <a name="periphery"></a>
 ##### Periphery
 ```
-LG UD4379-b, 43" IPS UHD (3840x2160px) Monitor
+Dell 27" 2560x1440 IPS Monitor (Dell u2717d)
 Happy Hacking Keyboard Pro2
 Audioengine A2+ Speakers & Stands
 Audio Technica M50x Headphones
@@ -96,6 +92,11 @@ Whatever disto I'm playing with right now...
 ```
 Netgear Orbi RBK50 Router (In Bedroom)
 Netgear Orbi RBK50 Satellite (In Office)
+```
+
+#### - Living Room "TV"
+```
+LG UD4379-b, 43" IPS UHD (3840x2160px) Monitor
 ```
 
 #### - CyberPower 1500VA/900W UPS
