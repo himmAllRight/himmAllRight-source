@@ -1,6 +1,6 @@
 +++
 title  = "Setup a Runner VM for Gitlab"
-date   = "2019-08-27"
+date   = "2019-08-31"
 author = "Ryan Himmelwright"
 image  = "img/posts/create-gitlab-runner/keep-off-rocks.jpg"
 caption= "Sugar Creek Restaurant, Nags Head NC"
@@ -9,11 +9,15 @@ draft  = "True"
 Comments = "True"
 +++
 
-
+I play around with CI/CD quite a bit, both at home and at work. While I have
+mostly used Jenkins for this, I wanted to see how Gitlab's CI/CD tooling has
+progressed over the last year. So I decided to try to use Gitlab to manage the
+automated build and deployments for a personal project I've been working on.
+The first step of the process was to setup a runner my Gitlab instance could
+use for the builds.
 
 <!--more-->
 
-## What/Why
 
 ## Setup a Machine/VM
 
@@ -21,11 +25,19 @@ Comments = "True"
 <img alt="Installing a new Fedora30 VM in Virt-Manager" src="/img/posts/create-gitlab-runner/fedora-vm-install.png" style="max-width: 100%;"/></a>
 <div class="caption">Installing a new Fedora 30 VM in Virt-Manager for my runner</div>
 
+This post will not explain how to setup a Gitlab instance. This is
+something I already "*had laying around*", so I won't cover setting that up...
+right now. This is a BYOG post (bring your own Gitlab).
+
+I am using [buildah](https://buildah.io/) and [podman](https://podman.io/) for
+this project. Your runner needs may differ, but in this post I am installing
+runner on a Fedora 30 VM.
+
 #### Some things to note/consider:
 
-- Install packages required for pipeline
-- If `sudo` required, manage the `gitlab-runner` user/group in `visudo`
-- If using docker runners, need `docker-machine` installed.
+- Install packages required for pipeline tasks (ex: `podman` and `buildah`)
+- If `sudo` is required, manage the `gitlab-runner` user/group using `visudo`
+- If using docker runners, `docker-machine` needs to be installed
 
 ## Install runner
 First, install the `gitlab-runner` package. This can be done from following the
@@ -152,3 +164,8 @@ going to the project's `CI/CD->Pipelines` page via the side menu, and hitting
 the `Run Pipeline` button.
 
 ## Conclusion
+
+That's it, we *(should)* have working runner! So far, the runners have been
+working *mostly* fine. When they *do* break, it is usually because I've let the disk fill
+up or allowed some other system-related negligence `¯\_(ツ)_/¯`. I might add
+some 'runner maintenance' steps to my pipeline, but not today.
