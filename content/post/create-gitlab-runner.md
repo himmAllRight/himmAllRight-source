@@ -9,9 +9,9 @@ draft  = "True"
 Comments = "True"
 +++
 
-I play around with CI/CD quite a bit, both at home and at work. While I have
-mostly used Jenkins for this, I wanted to see how Gitlab's CI/CD tooling has
-progressed over the last year. So I decided to try to use Gitlab to manage the
+I play around with CI/CD pipelines quite a bit, both at home and at work. I have
+mostly used Jenkins, but I wanted to see how Gitlab's CI/CD tooling has
+progressed over the last year. So, I decided to try to use Gitlab to manage the
 automated build and deployments for a personal project I've been working on.
 The first step of the process was to setup a runner my Gitlab instance could
 use for the builds.
@@ -21,9 +21,11 @@ use for the builds.
 
 ## Setup a Machine/VM
 
+<center>
 <a href="/img/posts/create-gitlab-runner/fedora-vm-install.png">
 <img alt="Installing a new Fedora30 VM in Virt-Manager" src="/img/posts/create-gitlab-runner/fedora-vm-install.png" style="max-width: 100%;"/></a>
 <div class="caption">Installing a new Fedora 30 VM in Virt-Manager for my runner</div>
+</center>
 
 This post will not explain how to setup a Gitlab instance. This is
 something I already "*had laying around*", so I won't cover setting that up...
