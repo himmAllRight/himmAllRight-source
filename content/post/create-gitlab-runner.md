@@ -1,6 +1,6 @@
 +++
 title  = "Setup a Runner VM for Gitlab"
-date   = "2019-08-31"
+date   = "2019-09-02"
 author = "Ryan Himmelwright"
 image  = "img/posts/create-gitlab-runner/keep-off-rocks.jpg"
 caption= "Sugar Creek Restaurant, Nags Head NC"
@@ -27,13 +27,12 @@ use for the builds.
 <div class="caption">Installing a new Fedora 30 VM in Virt-Manager for my runner</div>
 </center>
 
-This post will not explain how to setup a Gitlab instance. This is
-something I already "*had laying around*", so I won't cover setting that up...
-right now. This is a BYOG post (bring your own Gitlab).
+This will be a BYOG post (bring your own Gitlab). I already
+"*had one laying around*", so I won't cover setting that up...  right now.
 
-I am using [buildah](https://buildah.io/) and [podman](https://podman.io/) for
-this project. Your runner needs may differ, but in this post I am installing
-runner on a Fedora 30 VM.
+Your runner needs may differ, but in this post I am installing runner on a
+Fedora 30 VM. I will also be using [buildah](https://buildah.io/) and
+[podman](https://podman.io/) for this project.
 
 #### Some things to note/consider:
 
@@ -42,12 +41,12 @@ runner on a Fedora 30 VM.
 - If using docker runners, `docker-machine` needs to be installed
 
 ## Install runner
-First, install the `gitlab-runner` package. This can be done from following the
+First, install the `gitlab-runner` package. This can be done using the
 instructions found
 [here](https://docs.gitlab.com/runner/install/linux-repository.html).
-*However*, I have been encountering issues installing it on my Fedora 30 VMs,
-as this install method currently isn't supported for 30 yet. If installing on a
-Fedora 30 node, skip down to the next section.
+*However*, I encountered issues installing it on my Fedora VMs, as this install
+method isn't supported for 30 yet.  (Check out [this
+issue](https://gitlab.com/gitlab-org/gitlab-runner/issues/4401) for more info).
 
 #### Add GitLab's Repo
 
@@ -62,10 +61,7 @@ sudo dnf install gitlab-runner
 
 ## (Alternative) Copr install
 
-I've been having trouble on Fedora 30 with the normal install. Apparently as of
-now the service they use for distribution doesn't support Fedora 30 yet. Check
-out [this issue](https://gitlab.com/gitlab-org/gitlab-runner/issues/4401) for
-more info. For now, I have been using the copr install posted in the comments
+For now, I have been using the copr install posted in the comments
 of that issue. However, first check if that issue is resolved first, as it
 might change from the time of writing this post.
 
