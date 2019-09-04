@@ -1,18 +1,18 @@
 +++
 title  = "Setup a Runner VM for Gitlab"
-date   = "2019-09-02"
+date   = "2019-09-04"
 author = "Ryan Himmelwright"
 image  = "img/posts/create-gitlab-runner/keep-off-rocks.jpg"
 caption= "Sugar Creek Restaurant, Nags Head NC"
 tags   = ["Linux", "Homelab", "Git", "KVM", "DEV", "Devops", "Fedora"]
-draft  = "True"
+draft  = "False"
 Comments = "True"
 +++
 
 I play around with CI/CD pipelines quite a bit, both at home and at work. I have
 mostly used Jenkins, but I wanted to see how Gitlab's CI/CD tooling has
 progressed over the last year. So, I decided to try to use Gitlab to manage the
-automated build and deployments for a personal project I've been working on.
+automated build and deployments of a personal project I've been working on.
 The first step of the process was to setup a runner my Gitlab instance could
 use for the builds.
 
@@ -28,13 +28,13 @@ use for the builds.
 </center>
 
 This will be a BYOG post (bring your own Gitlab). I already
-"*had one laying around*", so I won't cover setting that up...  right now.
+"*had one laying around*", so I won't cover setting that up.
 
 Your runner needs may differ, but in this post I am installing runner on a
-Fedora 30 VM. I will also be using [buildah](https://buildah.io/) and
+Fedora 30 VM. I will also be using both [buildah](https://buildah.io/) and
 [podman](https://podman.io/) for this project.
 
-#### Some things to note/consider:
+#### Some things to note/consider during VM setup:
 
 - Install packages required for pipeline tasks (ex: `podman` and `buildah`)
 - If `sudo` is required, manage the `gitlab-runner` user/group using `visudo`
@@ -62,10 +62,10 @@ sudo dnf install gitlab-runner
 ## (Alternative) Copr install
 
 For now, I have been using the copr install posted in the comments
-of that issue. However, first check if that issue is resolved first, as it
-might change from the time of writing this post.
+of that issue (linked above). I recommend checking if the issue is resolved first, as it
+might change from the time of writing this post. To install:
 
-For the copr install, first enable the copr repo:
+First enable the copr repo:
 
 ```
 sudo dnf copr enable snecker/gitlab-runner -y
@@ -79,8 +79,8 @@ sudo dnf install gitlab-runner -y
 
 #### Register the Runner
 
-Instructions for registering the runner can be found
-[here](https://docs.gitlab.com/runner/register/index.html).
+Once installed, register the runner. Instructions on how to register a runner
+can be found [here](https://docs.gitlab.com/runner/register/index.html).
 
 ```
 sudo gitlab-runner register
@@ -88,39 +88,38 @@ sudo gitlab-runner register
 
 Enter the coordinator URL (ex: `https://gitlab.com`)
 
-Then, enter the *gitlab-ci* token for the runner.
+Next, a *gitlab-ci* token must be shared with the runner.
 
 <a href="/img/posts/create-gitlab-runner/gitlab-runner-settings.png">
 <img alt="Gitlab Runner Settings" src="/img/posts/create-gitlab-runner/gitlab-runner-settings.png" style="max-width: 100%;"/></a>
 <div class="caption">Gitlab Runner**s** Settings Page</div>
 
 To obtain a gitlab-ci token, got to **Admin Area** -> **Overview** ->
-**Runners**. Then, on the right there should be a token to use during setup.
+**Runners**. On the right, there should be a token to use during setup.
 
 When the runner registrations asks for the token, use the "registration token"
 listed in the "Set up a shared Runner manually" section.
 
-Next, provide a short description for the runner, and then add a tag or two
-for it (when prompted).
+Next, provide a short description, and add a tag or two (when prompted).
 
-Lastly, enter the executor (what system on the runner *does* stuff). For now,
-I've just been using `"shell"` for my needs, as these VMs are fully dedicated
-to be used as runners.
+Lastly, enter the executor (the system on the runner that executes commands). For
+now, I've been using `"shell"` for my needs, as these VMs are fully
+dedicated to be used as the runners for a single project.
 
 Congrats, the runner should be registered! Now to set it up...
 
 ## Link to CI/CD Builds
 
-Now, it's time to link up the runner to a CI/CD job. This can be done with
+It is time to link up the runner to a CI/CD job. This can be done with
 tagging, but I currently just have one pipeline using my runners, so haven't
-used the tags as much. Edit the runner by clicking the runner's `edit` icon.
+used the tags as much. Edit the runner by clicking its  `edit` icon.
 
 <a href="/img/posts/create-gitlab-runner/runner-edit.png">
 <img alt="Gitlab Runner Settings" src="/img/posts/create-gitlab-runner/runner-edit.png" style="max-width: 100%;"/></a>
 <div class="caption">Gitlab Runner Edit Page</div>
 
 In the runner edit menu, ensure that the "`Active`" checkbox is checked. I've
-also checked the "`Run untagged jobs`" box for this runner. This will allow it
+also checked the "`Run untagged jobs`" box for this runner, which will allow it
 to pick up any job that does *not* have a tag. If the runner is to be assigned
 to a *specific* project, that can be enabled/assigned below in the "`Restrict
 projects for this Runner`" section.
@@ -128,10 +127,10 @@ projects for this Runner`" section.
 ## Test Run
 
 To test out the runner, start a new build in a project! (Note, if there are
-several runners setup 1) why are you reading this, 2) it might be a good idea
+several runners already setup, 1. why are you reading this, and 2. it might be a good idea
 to pause the others to ensure the new one will run with the test).
 
-I won't go into writing a `gitlab-ci.yml` now, but for my test I made an empty
+I won't detail how to write a `gitlab-ci.yml` now, but for my test I made an empty
 demo repo with the following pipeline:
 
 ```
@@ -149,7 +148,7 @@ build-base:
 After committing it, a build kicked off with the new runner and finished
 successfully!
 
-*Note that the job indeed ran on `post-runner`, the runner I setup
+*Notice that the job indeed ran on `post-runner`, the runner I setup
 specifically for this post*
 
 <a href="/img/posts/create-gitlab-runner/pipeline-run.png">
@@ -157,13 +156,14 @@ specifically for this post*
 <div class="caption">Gitlab Demo Job Run Results</div>
 
 If the job is more complicated, more runs might have to be manually started
-after tweaking the runner settings again. Pipelines can be manually started by
-going to the project's `CI/CD->Pipelines` page via the side menu, and hitting
-the `Run Pipeline` button.
+after tweaking the runner settings again. Pipelines can be started by going to
+the project's `CI/CD->Pipelines` page via the side menu, and hitting the `Run
+Pipeline` button.
 
 ## Conclusion
 
-That's it, we *(should)* have working runner! So far, the runners have been
-working *mostly* fine. When they *do* break, it is usually because I've let the disk fill
-up or allowed some other system-related negligence `¯\_(ツ)_/¯`. I might add
-some 'runner maintenance' steps to my pipeline, but not today.
+That's it. We should now have a connected runner! So far, the runners have been working
+*(mostly)* fine. When they *do* break, it is usually because I've let the disk
+fill up or allowed some other system-related negligence to build up
+`¯\_(ツ)_/¯`. I might add some 'runner maintenance' steps to my pipeline... but
+some other time. Enjoy!
