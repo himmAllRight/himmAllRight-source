@@ -2,8 +2,8 @@
 title  = "Switching to Bitwarden"
 date   = "2019-09-10"
 author = "Ryan Himmelwright"
-image  = "img/posts/create-gitlab-runner/keep-off-rocks.jpg"
-caption= "Sugar Creek Restaurant, Nags Head NC"
+image  = "img/posts/switching-to-bitwarden/trosa-college-dressers.jpg"
+caption= "TROSA Thrift Store and Donation Center, Durham NC"
 tags   = ["Linux", "Homelab", "dotfiles"]
 draft  = "True"
 Comments = "True"
