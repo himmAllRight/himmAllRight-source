@@ -1,6 +1,6 @@
 +++
 title  = "Switching to Bitwarden"
-date   = "2019-09-10"
+date   = "2019-09-12"
 author = "Ryan Himmelwright"
 image  = "img/posts/switching-to-bitwarden/trosa-college-dressers.jpg"
 caption= "TROSA Thrift Store and Donation Center, Durham NC"
@@ -41,6 +41,9 @@ works as expected out of the box without having to mess around at all.
 
 #### Mobile Support
 
+<a href="/img/posts/switching-to-bitwarden/bitwarden-ipad.jpg">
+<img alt="Bitwarden on Flathub Page" src="/img/posts/switching-to-bitwarden/bitwarden-ipad.jpg" style="float: right;width: 250px; max-width: 100%; padding: 5px 5px 10px 10px"/></a>
+
 
 Over the past few months, I have been [switching up some of the tools I
 use](/post/switched-to-joplin-notes/), at least the ones I use for my [non-work
@@ -48,8 +51,6 @@ life](/post/back-on-org-mode-for-work/). A big diving force for some of many of
 these switches is better mobile support. While I still prefer to keep as much
 off of my phone as possible, there are some things I like/need to have on the
 go. My password manager is unfortunately one of them.
-
-*-- Screenshot of Mobile App --*
 
 Additionally, as I start to test out different workloads on alternative devices
 like my ipad, having a mobil-friendly workflow is helpful. In fact, trying to
