@@ -71,7 +71,11 @@ setup. I mainly access pass using helper launcher applications like `dmenu` and
 `pass` from the terminal while in a wayland session. Bitwarden, (at least the
 limtied GUI interactions I've used thus far), works just fine in wayland.
 
-#### Easier to share if I want down the road?
+#### Easier to share/expand
+Lastly, if my wife eventually wants to switch to bitwarden, I *think* we could
+still share our joint passwords with each other using the free personal
+service. If not, we can upgrade to the "family plan" which is currently $1/mo
+and allows unlimited collections across 5 accounts *and* optional self hosting.
 
 ### What I am still learning
 Normally, this is where I list the few things that I "don't like". However,
@@ -81,8 +85,37 @@ learning" section (•‿•) .
 
 #### Better keyboard/DE integration
 
-The *feature* I really enjoyed with pass was it's integration wit
+The *main feature* I still seem to be missing is better keyboard
+support/integration with the desktop environment. The GUI app is nice, and
+bitwarden has *much* better support for browser extensions and tools, but I
+haven't found a good way yet to open up bitwarden (give my master password),
+search for an item, and copy the password... all from the keyboard.
 
-#### Multi-User Support
+<center>
+<video style="max-width:100%;" controls>
+  <source src="../../img/posts/setting-up-pass/passmenu_demo.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<div id="caption">`passmenu` lets you easily search and select a pass item.</div>
+</center>
+
+By comparison, `pass` let me integrate with launchers like `dmenu` and `rofi`
+to efficiently grab my passwords which was *awesome*. As mentioned in the
+section above, the `passmenu` also falls apart for me these days now that I am
+mostly on wayland... but I don't need pass support. Honestly, all I *need* is
+the ability to copy a password (and maybe other fields) using my keyboard once
+I have selected an item. I can already search using `ctrl-f`, and `tab` then
+`arrow` my way down the list, but once there I can copy unless I tab through
+all the options.
+
+This is a highly request feature, and I'm sure someone has hacked *some
+solution* together... I just have yet to find it, or implement it myself.
 
 ### Conclusion
+
+That is it. I've switched to bitwarden and have been using it as my main
+password manager for almost a month now and I love it. It works on *all* my
+devices and doesn't give me *too* many headaches. My only real complaint is I
+wish it had better keyboard support, but I'm sure I'll be able to figure
+out a work-around eventually.
