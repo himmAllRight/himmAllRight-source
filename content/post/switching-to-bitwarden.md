@@ -44,7 +44,6 @@ works as expected out of the box without having to mess around at all.
 <a href="/img/posts/switching-to-bitwarden/bitwarden-ipad.jpg">
 <img alt="Bitwarden on Flathub Page" src="/img/posts/switching-to-bitwarden/bitwarden-ipad.jpg" style="float: right;width: 250px; max-width: 100%; padding: 5px 5px 10px 10px"/></a>
 
-
 Over the past few months, I have been [switching up some of the tools I
 use](/post/switched-to-joplin-notes/), at least the ones I use for my [non-work
 life](/post/back-on-org-mode-for-work/). A big diving force for some of many of
@@ -62,6 +61,10 @@ By comparison, to setup Bitwarden I just had to install the app and login. The
 experience was the exact same on my phone.
 
 #### Wayland Friendly
+
+<a href="/img/posts/switching-to-bitwarden/wayland-logo.png">
+<img alt="Wayland logo" src="/img/posts/switching-to-bitwarden/wayland-logo.png" style="float: left; width: 250px; max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+
 One of my favorite parts of my pass system was how well it was integrated into
 my desktop environment. *However*, I have been wanting to switch to wayland
 more than ever now, but probably the biggest blocker keeping me from being able
@@ -72,6 +75,7 @@ setup. I mainly access pass using helper launcher applications like `dmenu` and
 limtied GUI interactions I've used thus far), works just fine in wayland.
 
 #### Easier to share/expand
+
 Lastly, if my wife eventually wants to switch to bitwarden, I *think* we could
 still share our joint passwords with each other using the free personal
 service. If not, we can upgrade to the "family plan" which is currently $1/mo
