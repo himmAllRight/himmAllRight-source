@@ -2,8 +2,8 @@
 title  = "My Experience with the Large Display Paradox"
 date   = "2019-09-20"
 author = "Ryan Himmelwright"
-image  = "img/posts/switching-to-bitwarden/trosa-college-dressers.jpg"
-caption= "TROSA Thrift Store and Donation Center, Durham NC"
+image  = "img/posts/large-display-paradox/dc-rooftop.jpg"
+caption= "Crimson View Rooftop Bar, Washington DC"
 tags   = ["linux", "homelab", "dotfiles", "security"]
 draft  = "True"
 Comments = "True"
