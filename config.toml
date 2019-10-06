@@ -28,7 +28,7 @@ PygmentsStyle = "monokai"
 
 [params.header]
   image = "/img/philly-chair.jpg"
-  caption = "West Washington Square, Philladelphia PA"
+  caption = "Washington Square West, Philladelphia PA"
 
 [[params.social]]
   title = "github"
