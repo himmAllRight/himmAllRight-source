@@ -26,6 +26,10 @@ PygmentsStyle = "monokai"
   postSummariesFrontPage = 5
   showReadTime = true
 
+[params.header]
+  image = "/img/philly-chair.jpg"
+  caption = "Washington Square West, Philladelphia PA"
+
 [[params.social]]
   title = "github"
   url = "https://github.com/himmAllRight"
