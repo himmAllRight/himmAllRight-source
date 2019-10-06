@@ -2,7 +2,7 @@
 title: About
 date: 2018-10-21T07:14:00-04:00
 type: about
-menu : 
+menu :
   main:
     weight: -150
 layout: about-page
@@ -11,7 +11,7 @@ image: img/header-images/park-books.jpg
 
 <img src="../../img/notch-avatar.jpg" style="width: 45%; float: left; margin: 10px 10px 10px 10px;"/>
 
-I am a 27 year-old Quality Engineer at [Red Hat](https://redhat.com),
+I am a Quality Engineer at [Red Hat](https://redhat.com),
 living and working in [Durham, NC](https://durhamnc.gov/). Previously,
 I worked at [2Is-Inc](http://2is-inc.com/) as a Back-end Software Developer,
 creating applications and build systems (mostly in [Allegro Common
@@ -55,6 +55,6 @@ be reached via these additional methods:
 * IRC: I'm often on geekshed and freenode channels as `himmAllRight`
 * Telegram: `@himmAllRight`
 * Wire: `@himmallright`
- 
+
 
 
