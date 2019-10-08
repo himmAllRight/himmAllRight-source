@@ -1,6 +1,6 @@
 +++
 title  = "My Experience with the Large Display Paradox"
-date   = "2019-09-20"
+date   = "2019-10-13"
 author = "Ryan Himmelwright"
 image  = "img/posts/large-display-paradox/dc-rooftop.jpg"
 caption= "Crimson View Rooftop Bar, Washington DC"
@@ -14,17 +14,39 @@ monitor](/post/new-lgud4379b/). My motivation to *switch* monitors was mostly
 to convert to an IPS panel. My *selection of monitor* on the other hand, was an
 attempt to simplify my hardware by only having a single monitor. I wanted a
 single monitor, but not at the cost of loosing the 2x(1920x1080) resolution my
-duel 1080p setup had, because [everyone knows]() [that multiple monitors]()
+dual 1080p setup had, because [everyone knows]() [that multiple monitors]()
 [are required]() [to get any real work]() [done,]() [especially programming]().
-After a year of my large display with a massive resolution, I started to
-feel the large  display paradox.
+After a year of using my massive display, I started to feel the large display
+paradox.
 
 <!--more-->
 
 ### Background
-- Quick refresh on previous setup
-- What I switched to
-- *Why* I switched to that setup
+
+Before I dive into what exactly the *large display paradox* is and how I
+experienced it, lets refresh on the past. In the [post about choosing my 43"
+monitor](/post/new-lgud4379b/), I went in depth about my history of using dual
+monitors, and *why* I wanted to switch to a single monitor:
+
+>While I like having the screen real estate of two monitors, I was never able to optimally use them because of the bezels between the monitors. While working, I would naturally shift over and use one monitor as a primary display, and the other as a secondary display.
+
+Basically, I wanted to be able to stare at my monitor straight on, without any
+bezels getting in the way. I also knew that a single 1080p monitor was just a
+bit too cramped though.
+
+In that same paragraph, I provided an additional reason for the switch. If I
+had been paying closer attention, I might have noticed it
+foreshadowed the large display paradox:
+
+>This was okay for some tasks, but it usually just meant that I just used the primary monitor, and half of the secondary one, because it was too hard to see the far end of the screen.
+
+While I was aware that large screen may not be optimal, the lure of having 4
+monitors in one was just too strong to let go of. This is apparent in the section where I compare the LG 43" with the Dell ultrawide:
+
+>Being so large, I could still have auxiliary windows opened on either side. One advantage the ud4379 had over the ultra-wide however, was that being a massive 16:9 screen, it could easily be divided into 4 1080p screens.
+
+Despite a nagging voice in the back of my head reminding me that a *single* 27"
+1440p monitor was an option... I ignored it and picked up the 43" LG monitor. (Don't get me wrong, It's a *Great* monitor!)
 
 ### The Large Display Paradox
 - Background information on what the "Large Display Paradox" is
