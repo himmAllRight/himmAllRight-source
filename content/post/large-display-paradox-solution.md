@@ -49,8 +49,36 @@ Despite a nagging voice in the back of my head reminding me that a *single* 27"
 1440p monitor was an option... I ignored it and picked up the 43" LG monitor. (Don't get me wrong, It's a *Great* monitor!)
 
 ### The Large Display Paradox
-- Background information on what the "Large Display Paradox" is
-- Talk a bit about the research
+
+#####  Background information on what the "Large Display Paradox" is
+
+So. What *is* the *"Large Display Paradox"*? As far as I can find, the term was
+coined by Jeff Atwood in a [blog post titled with the same
+name](https://blog.codinghorror.com/the-large-display-paradox/). In the post,
+Atwood refers to [another post](http://www.dansdata.com/3007wfp-hc.htm) in
+which Dan Rutter states while reviewing his new Dell UltraSharp 3007WFP-HC monitor (remember... each of these posts are from over 10 years ago!)
+
+>Users of 30-inch monitors face the terrible, terrible problem of how to
+effectively use all of that space. You don't often want to maximise a folder or
+document window on a screen this big; either you'll end up with a lot of white
+space and important program buttons separated by a vast expanse of nothing, or
+you'll get lines of text 300 or more characters long, which are difficult to
+read.
+
+
+Atwood claims this is a perfect example of what he deems the *Large Display Paradox*:
+
+>That's the large display paradox. Having all that space can make you less
+productive due to all the window manipulation excise you have to deal with to
+make effective use of it.
+
+explains how once a display grows beyond the point of being able to
+efficiently maximize windows without too much whitespace (above 1600x1200 by
+his estimates), it becomes *less productive* due to the user having to
+continuously manage the windows.
+
+
+#### Talk a bit about the research
 - Number of Screens vs. Total Resolution
 - Maybe touch on field of view
 
