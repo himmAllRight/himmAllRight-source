@@ -79,9 +79,22 @@ continuously manage the windows.
 
 ### My Experience
 
+<a href="/img/posts/large-display-paradox/work-widescreen.jpg">
+<img alt="Wayland logo" src="/img/posts/large-display-paradox/work-widescreen.jpg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">I enjoyed remoting to my Windows work computer using an ultrawide
+resolution, and still having space for my notes and chat applications below.</div>
+
 With the *Large Display Paradox* finally defined... did I expereince it with my
 very large 43" monitor? In sort, yes. At first, it was great. I loved throwing
-up everything I needed on a single screen.
+everything I needed up on a single screen. In particular during the first few
+months, I still worked remotely for my previous job and required to work on a
+Windows machine. I loved that I could RDP to my work computer with an ultrawide
+resolution from my linux laptop, and *still* have space to keep my notes and
+chat windows below it.
+
+Switch to Linux
+
+
 - However, when I tried to *focus* on a task, the usefulness really started to
     fall apart.
 
