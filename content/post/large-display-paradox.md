@@ -99,7 +99,7 @@ very large 43" monitor? Yes. At first, it was great. I loved throwing
 everything I wanted up on a single screen.
 
 <a href="/img/posts/large-display-paradox/work-widescreen.jpg">
-<img alt="Wayland logo" src="/img/posts/large-display-paradox/work-widescreen.jpg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<img alt="Widescreen work RDP session" src="/img/posts/large-display-paradox/work-widescreen.jpg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
 <div class="caption">I enjoyed remoting to my Windows work computer using an ultrawide
 resolution, and still having space for my notes and chat applications below.</div>
 
@@ -113,6 +113,8 @@ having to RDP into a second machine... I could just `ssh` using a small
 terminal window. I no longer had to view multiple machine desktops to get work
 done.
 
+### Issues
+
 At first, I still didn't see an issue, especially when using it on my personal
 computer. I was mostly on my computer for leisure anyway, so it didn't matter
 as much if I also had a video and chat window next to met personal project.
@@ -122,8 +124,29 @@ against when trying to be productive with what was seemingly one of "the best
 productivity monitors on the market".
 
 #### Always wanting to fill the space.
+
 The tricky thing about having all that space... is you want to fill it, even if
-you don't *need* to for the task at hand.
+you don't *need* to for the task at hand. So for example, if I wanted to work
+on writing a blog post, all I *need* is my text editor. In addition, I like to
+have a preview of the post open in a browser so I can see how the post renders.
+While I sometimes like to also have a photo editor and picture folders also
+open, it is best if I can have them in a separate [virtual
+workspace](https://en.wikipedia.org/wiki/Virtual_workplace). In reality,
+everything beyond my text editor, really starts to detract from my ability to
+focus on *writing* the post.
+
+<a href="/img/posts/large-display-paradox/filling-space.jpg">
+<img alt="Filling up the monitor's space" src="/img/posts/large-display-paradox/filling-space.jpg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">With so much space, I felt obligated to fill it with
+windows unrelated to the task at hand...</div>
+
+It turns out people really like filling space. How often do you find that a
+particular surface in the house seems to *always* collect random crap? Large
+monitors are the same. Even when I *knew* I only needed a single small terminal
+in from of me... the vast space surrounding it always made me feel uneasy. So I
+would fill the space by either extending the editor window to a comical size,
+or litter the surround space with random applications, unrelated to the work I
+was trying to focus on.
 
 #### I didn't use the entire space, just focused on what was in my field of view in front of me.
 
