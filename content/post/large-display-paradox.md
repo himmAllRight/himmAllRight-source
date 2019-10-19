@@ -150,11 +150,39 @@ was trying to focus on.
 
 #### I didn't use the entire space, just focused on what was in my field of view in front of me.
 
+When I had two monitors, I would center myself on one to prevent looking at
+bezels, and then usually only utilize *half* of the secondary monitor, because
+the far end of it was out of my sight. This didn't change with a single large
+monitor. I usually found my self using an "appropriately sized" window, smack
+in the middle of the screen. If I needed to switch to working in a different
+application, I would move *that* application to the center and focus on it.
+
 #### I couldn't fullscreen my windows, or even split screen them really (too big)
 
-#### Without being able to split nicely, I couldn't use quick keyboard shortcuts to setup windows
-	- This meant I was manually moving my windows around
-	- It also meant using tiling window managers like i3 (or sway), was out of the question.
+<a href="/img/posts/large-display-paradox/split-screen.png">
+<img alt="Using Split Screen Windows" src="/img/posts/large-display-paradox/split-screen.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">Fullscreen, and even split screen windows were unwieldy.
+Moist of the time I just wanted to work from a normal sized window.</div>
+
+Speaking of focusing on a single application... fullscreen... it isn't really
+an option on such a big monitor. While it might look awesome at first, it
+wasn't very practical for day-to-day use. This issue was compounded by the
+"shadow" that prevented me from seeing the first few characters near the edge
+of the screen. The size of the screen combined with how far I sat from it, mean
+that all but the center was out of my field of view.
+
+#### Bad Keyboard Window Management Experience
+
+Without being able to view windows in full or split screen configurations, all
+of the quick window-snapping key bindings I've become accustomed to fall apart.
+I was forced to switch over to my mouse more than I would like to. While [some
+might point to using window management
+software](https://www.youtube.com/watch?v=DuIK-NuN3aY), or a [tiling window
+manager](https://jonblack.me/large-display-paradox-resolved/), I don't think
+this would solve *my* issues. You *might* be able to get away with using a
+window manager like [i3-gaps](https://github.com/Airblader/i3) (or
+[sway](https://github.com/swaywm/sway)) on a 1440p ultrawide monitor, but a
+full unscaled 4k space is just too much.
 
 
 
