@@ -14,8 +14,13 @@ monitor](/post/new-lgud4379b/). My motivation to *switch* monitors was mostly
 to convert to an IPS panel. My *selection of monitor* on the other hand, was an
 attempt to simplify my hardware by only having one monitor. I wanted a
 single monitor, but not at the cost of loosing the 2x(1920x1080) resolution my
-dual 1080p setup had, because [everyone knows]() [that multiple monitors]()
-[are required]() [to get any real work]() [done,]() [especially programming]().
+dual 1080p setup had, because
+[everyone knows](https://www.pcmag.com/feature/336710/13-eye-popping-home-office-setups/10)
+[that multiple monitors](https://www.techradar.com/news/5-reasons-you-need-dual-monitors-in-2017)
+[are required](https://www.lifewire.com/boost-productivity-with-a-second-monitor-2377817)
+[to get any real work](https://www.business.com/articles/increasing-productivity-how-dual-monitors-can-save-you-time-and-money/)
+[done,](https://www.howtogeek.com/174452/beginner-geek-how-to-use-multiple-monitors-to-be-more-productive/)
+[especially programming](https://www.entrepreneur.com/article/322640).
 After a year of using my massive display, I started to notice the *large display
 paradox*.
 
