@@ -67,12 +67,12 @@ monitor!).
 
 ### The Large Display Paradox
 
-So. What *is* the *"Large Display Paradox"*? As far as I can find, the term was
-coined by Jeff Atwood in a [blog post titled with the same
-name](https://blog.codinghorror.com/the-large-display-paradox/). In the post,
-Atwood refers to [another post](http://www.dansdata.com/3007wfp-hc.htm) in
-which Dan Rutter states the following while reviewing his new Dell UltraSharp
-3007WFP-HC monitor:
+So then. What *is* the *"Large Display Paradox"*? As far as I can find, the
+term was coined by Jeff Atwood in a [blog
+post](https://blog.codinghorror.com/the-large-display-paradox/) titled with the
+same name. In the post, Atwood refers to [another
+post](http://www.dansdata.com/3007wfp-hc.htm) in which Dan Rutter states the
+following while reviewing his new Dell UltraSharp 3007WFP-HC monitor:
 
 >Users of 30-inch monitors face the terrible, terrible problem of how to
 effectively use all of that space. You don't often want to maximise a folder or
@@ -94,28 +94,30 @@ efficiently maximize windows without too much whitespace (above 1600x1200, by
 his estimates), it becomes *less productive* due to the user having to
 continuously manage the windows.
 
-While these posts are on the older side (2007!), I think the issue is even more
-possible today.
+While these posts are on the older side (2007!), I think most people are more
+likely to experience this issue *today*, due to cheaper large monitor options.
 
 ### My Experience
 
-With the *Large Display Paradox* finally defined... did I experience it with my
-very large 43" monitor? Yes. At first, it was great. I loved throwing
-everything I wanted up on a single screen.
+With the *Large Display Paradox* finally defined... did I experience it using
+my 43" monitor? Yes.
+
+At first, it was great. I loved throwing everything I wanted up on a single
+screen, without any applications overlapping.
+
+In particular, during the first few months using the monitor, I still worked
+remotely at my previous job and needed to use a Windows machine. I appreciated
+that I could RDP to my work computer using an ultrawide resolution (3440x1440),
+but *still* have extra pixels to keep my notes and chat windows below it.
 
 <a href="/img/posts/large-display-paradox/work-widescreen.jpg">
 <img alt="Widescreen work RDP session" src="/img/posts/large-display-paradox/work-widescreen.jpg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
-<div class="caption">I enjoyed remoting to my Windows work computer using an ultrawide
+<div class="caption">Remoting into my Windows work computer using an ultrawide
 resolution, and still having space for my notes and chat applications below.</div>
-
-In particular, during the first few months using the monitor, I still worked
-remotely for my previous job and needed to use a Windows machine. I appreciated
-that I could RDP to my work computer using an ultrawide resolution, but *still*
-have space to keep my notes and chat windows below it.
 
 Then, I switched jobs and used Linux 100% for home *and* work. Instead of
 having to RDP into a second machine... I could just `ssh` using a small
-terminal window. I no longer had to view multiple machine desktops to get work
+terminal window. I no longer *had* to view multiple machine desktops to get work
 done.
 
 ### Issues
