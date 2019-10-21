@@ -9,20 +9,22 @@ draft  = "True"
 Comments = "True"
 +++
 
-About a year ago, I [switched to using the LG ud4379b, a 42.5" 4k IPS
-monitor](/post/new-lgud4379b/). My motivation to *switch* monitors was mostly
-to convert to an IPS panel. My *selection of monitor* on the other hand, was an
-attempt to simplify my hardware by only having one monitor. I wanted a
-single monitor, but not at the cost of loosing the 2x(1920x1080) resolution my
-dual 1080p setup had, because
-[everyone knows](https://www.pcmag.com/feature/336710/13-eye-popping-home-office-setups/10)
-[that multiple monitors](https://www.techradar.com/news/5-reasons-you-need-dual-monitors-in-2017)
-[are required](https://www.lifewire.com/boost-productivity-with-a-second-monitor-2377817)
-[to get any real work](https://www.business.com/articles/increasing-productivity-how-dual-monitors-can-save-you-time-and-money/)
+About a year ago, I [switched to the LG ud4379b](/post/new-lgud4379b/), a 42.5"
+4k IPS monitor. My initial motivation for *upgrading* was to convert to an IPS
+panel. However, my *selection of monitor* was an attempt to simplify my
+hardware, by pairing down my dual 1080p setup. While I wanted a single monitor,
+I didn't want to drop my total resolution because [everyone
+knows](https://www.pcmag.com/feature/336710/13-eye-popping-home-office-setups/10)
+[that multiple
+monitors](https://www.techradar.com/news/5-reasons-you-need-dual-monitors-in-2017)
+[are
+required](https://www.lifewire.com/boost-productivity-with-a-second-monitor-2377817)
+[to get any real
+work](https://www.business.com/articles/increasing-productivity-how-dual-monitors-can-save-you-time-and-money/)
 [done,](https://www.howtogeek.com/174452/beginner-geek-how-to-use-multiple-monitors-to-be-more-productive/)
 [especially programming](https://www.entrepreneur.com/article/322640).
-After a year of using my massive display, I started to notice the *large display
-paradox*.
+Although, after a year of using my massive display, I started to tire from the
+*large display paradox*.
 
 <!--more-->
 
