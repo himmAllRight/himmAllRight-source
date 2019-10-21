@@ -1,11 +1,11 @@
 +++
 title  = "My Experience with the Large Display Paradox"
-date   = "2019-10-13"
+date   = "2019-10-21"
 author = "Ryan Himmelwright"
 image  = "img/posts/large-display-paradox/dc-rooftop.jpg"
 caption= "Crimson View Rooftop Bar, Washington DC"
-tags   = ["linux", "homelab", "dotfiles", "security"]
-draft  = "True"
+tags   = ["homelab", "hardware", "monitors"]
+draft  = "False"
 Comments = "True"
 +++
 
@@ -122,82 +122,88 @@ done.
 
 ### Issues
 
-At first, I still didn't see an issue, especially when using it on my personal
-computer. I was mostly on my computer for leisure anyway, so it didn't matter
-as much if I also had a video and chat window next to met personal project.
-However, when I tried to *focus* on a task, the "usefulness" of the large
-screen really started to fall apart. Here are a few issues I started to run up
-against when trying to be productive with what was seemingly one of "the best
-productivity monitors on the market".
+At first, I didn't notice any issues, especially when using it on my personal
+computer which I mostly used for leisure anyway. It didn't matter much if I had
+a video and chat window next to a personal project I was working on.
+
+Regardless, over time I started to notice that when  I tried to actually *focus* on a
+task, the "usefulness" of the large screen really started to fall apart. Below
+are a few issues I started to run up against when trying to be productive with
+what was seemingly one of "the best productivity monitors on the market".
 
 #### Always wanting to fill the space.
 
 The tricky thing about having all that space... is you want to fill it, even if
 you don't *need* to for the task at hand. So for example, if I wanted to work
-on writing a blog post, all I *need* is my text editor. In addition, I like to
-have a preview of the post open in a browser so I can see how the post renders.
-While I sometimes like to also have a photo editor and picture folders also
-open, it is best if I can have them in a separate [virtual
-workspace](https://en.wikipedia.org/wiki/Virtual_workplace). In reality,
-everything beyond my text editor, really starts to detract from my ability to
-focus on *writing* the post.
+on writing a blog post, all I *need* is a text editor. In addition, I like to
+have a preview of the post open in a browser so I can see how it renders.  I
+sometimes like to also have a photo editor and picture folders open, but I find
+it best if I can have them in a separate [virtual
+workspace](https://en.wikipedia.org/wiki/Virtual_workplace). With the large
+display, I would open up *all* those windows on the same screen. In reality,
+having anything beyond my text editor and post preview in front of me, really
+starts to detract from my ability to focus on *writing* the post.
 
 <a href="/img/posts/large-display-paradox/filling-space.jpg">
 <img alt="Filling up the monitor's space" src="/img/posts/large-display-paradox/filling-space.jpg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
 <div class="caption">With so much space, I felt obligated to fill it with
-windows unrelated to the task at hand...</div>
+windows unrelated to the task at hand.</div>
 
-It turns out people really like filling space. How often do you find that a
-particular surface in the house seems to *always* collect random crap? Large
-monitors are the same. Even when I *knew* I only needed a single small terminal
-in from of me... the vast space surrounding it always made me feel uneasy. So I
+People like filling space. How often do you find that a
+surface in the house seems to *always* collect random crap? Large
+monitors are the same. Even when I *knew* I only needed a one small terminal
+in from of me... the vast space surrounding it made me feel uneasy. So, I
 would fill the space by either extending the editor window to a comical size,
 or litter the surround space with random applications, unrelated to the work I
 was trying to focus on.
 
 #### I didn't use the entire space, just focused on what was in my field of view in front of me.
 
-When I had two monitors, I would center myself on one to prevent looking at
+Even though I felt obligated to fill all the space, *I still didn't use all of
+it*. When I had two monitors, I would center myself on one to prevent looking at
 bezels, and then usually only utilize *half* of the secondary monitor, because
 the far end of it was out of my sight. This didn't change with a single large
 monitor. I usually found my self using an "appropriately sized" window, smack
 in the middle of the screen. If I needed to switch to working in a different
-application, I would move *that* application to the center and focus on it.
+application, I would move *that* application to the center and focus on it. The
+outer spaces of the monitor were never fully used.
 
-#### I couldn't fullscreen my windows, or even split screen them really (too big)
+#### I couldn't fullscreen (or even split-screen) my windows
 
 <a href="/img/posts/large-display-paradox/split-screen.png">
 <img alt="Using Split Screen Windows" src="/img/posts/large-display-paradox/split-screen.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
 <div class="caption">Fullscreen, and even split screen windows were unwieldy.
-Moist of the time I just wanted to work from a normal sized window.</div>
+Most of the time I just wanted to work from a normal sized window.</div>
 
 Speaking of focusing on a single application... fullscreen... it isn't really
-an option on such a big monitor. While it might look awesome at first, it
-wasn't very practical for day-to-day use. This issue was compounded by the
-"shadow" that prevented me from seeing the first few characters near the edge
-of the screen. The size of the screen combined with how far I sat from it, mean
-that all but the center was out of my field of view.
+an option on such a big monitor. While a maximized window might look awesome at
+first, it wasn't very practical for day-to-day use. This issue was compounded
+by the "shadow" that prevented me from seeing the first few characters near the
+edge of the screen. The size of the screen combined with how far I sat from it,
+meant that all but the center was out of my field of view. As such, I didn't
+maximize my windows, and usually just wanted a normal-sized one in the center.
 
 #### Bad Keyboard Window Management Experience
 
 Without being able to view windows in full or split screen configurations, all
-of the quick window-snapping key bindings I've become accustomed to fall apart.
-I was forced to switch over to my mouse more than I would like to. While [some
-might point to using window management
+of the quick window-snapping key bindings I've become accustomed to were
+useless.  I was forced to switch over to my mouse more than I would like to.
+While [some might point to using window management
 software](https://www.youtube.com/watch?v=DuIK-NuN3aY), or a [tiling window
 manager](https://jonblack.me/large-display-paradox-resolved/), I don't think
 this would solve *my* issues. You *might* be able to get away with using a
 window manager like [i3-gaps](https://github.com/Airblader/i3) (or
 [sway](https://github.com/swaywm/sway)) on a 1440p ultrawide monitor, but a
-full unscaled 4k space is just too much.
+full unscaled 4k space is just too much. Unless you *always* have 5+ tiled
+windows open at a time, they're just too big.
 
 
 
 ### Conclusion
-I think the large display paradox could be a real modern tech issue. More
-accurately, a [first world
+I think the large display paradox could be a real modern tech issue. Well, more
+accurately, a major [first world
 problem](https://en.wikipedia.org/wiki/First_World_problem). Given the
-increased affordability of large displays, what might seem like an great setup,
-might not actually be optimal, given one's workload. At it's core, technology
-is a tool, and it should be configured to best aid us in the tasks we use it
-for. (bleh. Terrible sentence)
+increased affordability of large displays, what might *seem* like an great setup,
+might not actually be optimal for one's workload. At it's core, technology
+is a tool. When choosing tech hardware, we should always focus on what
+the best tool *for the job* is, and not just what is the best tool.
