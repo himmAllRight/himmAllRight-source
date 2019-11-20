@@ -23,7 +23,7 @@ PygmentsStyle = "monokai"
   #Description = "Software Developer, Open Source and Linux Enthusiast"
   Author = "Ryan Himmelwright"
   email = "ryan@himmelwright.net"
-  postSummariesFrontPage = 5
+  recent_posts_number = 10
   showReadTime = true
 
 [params.header]
