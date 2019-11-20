@@ -1,5 +1,10 @@
 {{ partial "header.html" .}}
 
+
+  {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
+  {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
+  {{ $section_count := len $section }}
+
 <!-- Page Header -->
 <header class="intro-header" style="background-image: url('{{ .Site.BaseURL}}/{{ .Site.Params.header.image }}')">
   <div class="container">
@@ -17,12 +22,14 @@
 <span class="header-caption">{{ .Site.Params.header.Caption }}</span>
     </header>
 
+    {{ $n_posts := $.Param "recent_posts_number" | default 5 }}
+
     <!-- Main Content -->
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           {{ $posts := or .Site.Params.PostSummariesFrontPage 4 }}
-          {{ range first $posts (where .Data.Pages "Type" "post") }}
+          {{ range (first $n_posts $section) }}
               {{ .Render "summary"}}
           {{ end }}
           <!-- Pager -->
