@@ -27,6 +27,7 @@ PygmentsStyle = "monokai"
   showReadTime = true
 
 [params.header]
+  image = "/img/default-header.jpg"
   home_image = "/img/philly-chair.jpg"
   home_caption = "Washington Square West, Philladelphia PA"
 
