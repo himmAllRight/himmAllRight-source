@@ -9,7 +9,7 @@ layout: about-page
 image: img/header-images/park-books.jpg
 ---
 
-<img src="../../img/notch-avatar.jpg" style="width: 45%; float: left; margin: 10px 10px 10px 10px;"/>
+<img src="../../img/about/east_campus.jpeg" style="width: 45%; float: left; margin: 10px 10px 10px 10px;"/>
 
 I am a Quality Engineer at [Red Hat](https://redhat.com),
 living and working in [Durham, NC](https://durhamnc.gov/). Previously,
