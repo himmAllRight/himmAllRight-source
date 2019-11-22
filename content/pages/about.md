@@ -1,6 +1,6 @@
 ---
 title: About
-date: 2018-10-21T07:14:00-04:00
+date: 2019-11-22T06:47:00-04:00
 type: about
 menu :
   main:
@@ -37,12 +37,11 @@ exists to help document the personal projects I work on, and what I've
 learned.
 
 Beyond technology, I love [music](https://bandcamp.com/himmallright),
-[writing](http://ryan.himmelwright.net/post/), the outdoors, and
-swimming (I competitively swam from the age of 8, through college). I
-am married to Rebecca, a first year Duke resident intern
-([Anesthesiology](https://anesthesia.mc.duke.edu/)). We have been
-together for over 12 years and were married on September 17th, 2016
-(the day before our 10th anniversary).
+[writing](http://ryan.himmelwright.net/post/), the outdoors, and swimming (I
+competitively swam from the age of 8, through college). I am married to
+Rebecca, a second year [Anaesthesia](https://anesthesia.mc.duke.edu/) resident
+at Duke. We have been together for over 13 years and were married on September
+17th, 2016 (the day before our 10th anniversary).
 
 Feel free to contact me using any of the methods below.
 
@@ -52,9 +51,5 @@ In addition to the contact icons at the bottom of the website, I can
 be reached via these additional methods:
 
 * Email: [ryan@himmelwright.net](mailto:ryan@himmelwright.net)
-* IRC: I'm often on geekshed and freenode channels as `himmAllRight`
+* IRC: I'm often freenode as `himmAllRight` or `rhimmelw`
 * Telegram: `@himmAllRight`
-* Wire: `@himmallright`
-
-
-
