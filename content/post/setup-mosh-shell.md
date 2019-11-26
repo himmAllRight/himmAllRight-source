@@ -38,9 +38,19 @@ bit more seamless. They can be... by using `mosh`.
 
 #### Mosh Install
 
+Mosh should be in most Linux repos, and is also available on macos or Windows.
+For more information on how to install it on your platform, just head over to
+the [getting mosh](https://mosh.org/#getting) page. For me, it was a simple
+`dnf`/`yum` install to get it on both my laptop and server:
+
+```
+sudo dnf install mosh
+```
 
 #### Open Firewall Ports
 
+After I installed `mosh`... it didn't work. That is because as usual, I forgot
+to first open the required ports.
 
 #### Connect
 
