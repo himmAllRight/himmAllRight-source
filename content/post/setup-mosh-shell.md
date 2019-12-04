@@ -23,6 +23,10 @@ bit more seamless. They can be... by using `mosh`.
 
 #### Mosh
 
+<a href="/img/posts/setup-mosh/ponyta-mosh.png">
+<img alt="Using mosh to conenct to a server" src="/img/posts/setup-mosh/ponyta-mosh.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">Using `mosh` to connect to one of my servers</div>
+
 [Mosh](https://mosh.org) is a more robust replacement for interactive ssh
 terminals. It automatically roams and continues to work even as the computer
 switches networks or is put to sleep. It also responds to typing, even on a bad
@@ -41,16 +45,21 @@ the [getting mosh](https://mosh.org/#getting) page. For me, it was a simple
 sudo dnf install mosh
 ```
 
+*Note: My centos server required me to first enable the epel repos to get
+access to `mosh`. Fedora might also, but I already had it enabled on my
+desktop.
+
+```
+sudo yum install epel-release -y
+sudo yum install mosh -y
+```
+
 
 #### Open Firewall Ports
 
-After I installed `mosh`... it didn't work. That is because as usual, I forgot
-to first open the required ports. Mosh uses UDP ports 60000-61000 for it's
-connections. So, to open them on my internal Centos server:
-
-```
-sudo firewall-cmd --zone=public --permanent --add-port=60000-61000/udp
-```
+After I installing `mosh`... it might not work. If so, it is likely due to
+needing to first open the required ports. Mosh uses UDP ports 60000-61000 for it's
+connections.
 
 *Note: If you want to connect from outside the network, remember to also
 forward these ports on the network.*
@@ -92,13 +101,4 @@ stuff](https://mosh.org/#techinfo) going on under the hood of mosh, but on the
 surface... it is simply useful. To showcase it, I'll leave with two clips
 showcasing what happens when I temporary disconnect the network on a ssh vs
 mosh session. Enjoy!
-
-ssh:
-
-<< Video >>
-
-mosh:
-
-<< Video >>
-
 
