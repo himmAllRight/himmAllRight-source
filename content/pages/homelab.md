@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2019-05-23
+date: 2019-12-08
 type: homelab
 layout: homelab-page
 menu:
@@ -11,9 +11,7 @@ image: img/homelab/new_house3.jpg
 
 This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations).
 
-## Computers
-
-### Ryan (Me)
+## Ryan (Me)
 
 <a href="../../img/homelab/desk_front_night.jpg"><img alt="Home Office" src="../../img/homelab/desk_front_night.jpg" width=100%></a>
 <div class="caption">My Home Office</div>
@@ -22,7 +20,9 @@ This is a page where I maintain the status of the computers in my “Homelab”.
 <div class="caption">My Desk</div>
 
 
-#### - Charmeleon (Main Workstation)
+### Linux Computers
+
+#### - Charmeleon (Desktop Workstation)
 ```
 Ryzen 5 2600 [3.4 GHz (3.9GHz Turbo), 6 Cores, 12 Threads)
 MSI B450 Tomahawk Motherboard
@@ -36,7 +36,7 @@ Fedora 30 (Multiple Desktops)
 *Connected to Periphery devices
 ```
 <a name="kadabra"></a>
-#### - Kadabra (Laptop)
+#### - Kadabra (Linux Laptop)
 ```
 T470 Thinkpad
 Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
@@ -44,6 +44,34 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
 Fedora 30 SilverBlue
+```
+### Interface Devices
+<a name="Venusaur"></a>
+#### - Venusaur (Mac)
+```
+2019 16" Macbook Pro
+Intel i7-9750H (2.6 GHz (4.5 GHz Turbo), 6 Cores, 12 Threads)
+16 GB DDR4 2666 MHz RAM
+512 GB SSD
+Radeon Pro 5300M GPU
+16" 3072x1920 500 nit IPS "Retina" Display
+macOS Catalina
+*Sometimes connected to Periphery devices via usb-c hub
+```
+
+<a name="Ivysaur"></a>
+#### - Ivysaur (Tablet)
+```
+10.5" iPad Pro
+64 GB Storage
+* Can be used as a secondary display for Venusaur
+```
+
+<a name="bulbasaur"></a>
+#### - bulbasaur (Tablet)
+```
+iPhone 11
+64 GB Storage
 ```
 
 <a name="periphery"></a>
@@ -59,8 +87,46 @@ Logitech HD Pro Webcam c920 Widescreen
 Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
+
+## Rebecca (Wife)
+<a href="../../img/homelab/rebecca_desk.jpg"><img alt="Rebecca's Desk" src="../../img/homelab/rebecca_desk.jpg" width=100%></a>
+<div class="caption">Rebecca's Desk (yes, that is my laptop in the dock)</div>
+
+Even though this is my wife's gear... I'm in charge of managing it all. So I
+decided to add it here.
+
+#### - Weepinbell
+```
+Thinkpad T450s
+Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
+12 GB RAM
+256 GB SSD
+14" 1600x900 LED Display
+6-Cell Battery
+CloudReady (a chromiumos spin)
+
+```
+
+#### - Bellsprout
+```
+Macbook Air (2014)
+Intel i5 (1.4 GHz (2.7 GHz Turbo), 3M Cache, 2 Cores, 2 Threads) ?
+4 GB RAM
+128 GB PCIe Flash HD
+13.3” 1440x900 LED Display
+2.96 Lbs and ~0.7” thick
+Mac OS Catalina
+```
+
+#### - Periphery
+```
+Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
+LG 32QK500W, 32" 2560x1440 IPS Monitor
+Bose AE2 Headphones
+```
+
 <a name="servers"></a>
-### Servers & Networking
+## Servers & Networking
 
 <a name="ninetales"></a>
 #### - Ninetales (VM Host / Home Server)
@@ -94,12 +160,18 @@ Netgear Orbi RBK50 Router (In Bedroom)
 Netgear Orbi RBK50 Satellite (In Office)
 ```
 
+#### - UPS
+```
+CyberPower 1500VA/900W UPS
+```
+
 #### - Living Room "TV"
 ```
 LG UD4379-b, 43" IPS UHD (3840x2160px) Monitor
+4k Fire TV Stick
+Nintendo Switch
 ```
 
-#### - CyberPower 1500VA/900W UPS
 
 
 ### Digital Ocean Droplets
@@ -111,50 +183,4 @@ LG UD4379-b, 43" IPS UHD (3840x2160px) Monitor
     1 GB RAM
     20 GB SSD
     Ubuntu 16.04 OS
-
-#### Seafile Server
-
-    Digital Ocean KVM Droplet
-    1 Core
-    1 GB RAM
-    20 GB SSD
-    Centos 7.6 (Core)
-
-
-### Rebecca (Wife)
-<a href="../../img/homelab/rebecca_desk.jpg"><img alt="Rebecca's Desk" src="../../img/homelab/rebecca_desk.jpg" width=100%></a>
-<div class="caption">Rebecca's Desk (yes, that is my laptop in the dock)</div>
-
-Even though this is my wife's gear... I'm in charge of managing it all. So I
-decided to add it here.
-
-#### - Weepinbell
-```
-Thinkpad T450s
-Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
-12 GB RAM
-256 GB SSD
-14" 1600x900 LED Display
-6-Cell Battery
-CloudReady (a chromiumos spin)
-
-```
-
-#### - Periphery
-```
-Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
-LG 32QK500W, 32" 2560x1440 IPS Monitor
-Bose AE2 Headphones
-```
-
-#### - Bellsprout
-```
-Macbook Air (2014)
-Intel i5 (1.4 GHz (2.7 GHz Turbo), 3M Cache, 2 Cores, 2 Threads) ?
-4 GB RAM
-128 GB PCIe Flash HD
-13.3” 1440x900 LED Display
-2.96 Lbs and ~0.7” thick
-Mac OS
-```
 
