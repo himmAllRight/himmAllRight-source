@@ -2,8 +2,8 @@
 title  = "Resolving Issue #26"
 date   = "2019-12-14"
 author = "Ryan Himmelwright"
-image  = "img/posts/setup-mosh/north-buchanan-boulevard.jpeg"
-caption= "North Buchanan Boulevard, Durham, NC"
+image  = "img/posts/issue26/lowes-plants-cart.jpeg"
+caption= "Lowes, Durham, NC"
 tags   = ["website", "hugo"]
 draft  = "False"
 Comments = "True"
