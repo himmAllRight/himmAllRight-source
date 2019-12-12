@@ -19,6 +19,7 @@ and [tmuxinator](/post/setting-up-tmuxinator/) make this less of an issue,
 since I can re-attach my session, but I still wish my remote sessions were a
 bit more seamless. They can be... using `mosh`.
 
+<!--more-->
 
 #### Mosh
 
