@@ -2,8 +2,8 @@
 title  = "Challenge - 30 Days with macOS"
 date   = "2019-12-22"
 author = "Ryan Himmelwright"
-image  = "img/posts/issue26/lowes-plants-cart.jpeg"
-caption= "Lowes, Durham, NC"
+image  = "img/posts/macos-challenge/atc.jpeg"
+caption= "American Tobacco Campus, Durham, NC"
 tags   = ["Hardware", "Apple", "Laptop", "Software"]
 draft  = "True"
 Comments = "True"
@@ -22,10 +22,10 @@ Intro
 ### Observations
 
 
-#### Stuff I liked
-
-
 #### Stuff I didn't like
+
+
+#### Stuff I liked
 
 
 #### Reservations/Fears
