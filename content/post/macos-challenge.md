@@ -13,11 +13,6 @@ Intro
 
 <!--more-->
 
-### Why
-
-
-Actually I wouldn't even consider this if I didn't already ssh into my desktop from any other device already (or in fact technically do that even ON my desktop these days since nearly everything is done in a container.
-
 ### The Challenge
 
 >Using a mac as the interface device for my personal computing for 30 days.
@@ -26,11 +21,13 @@ Here, "interface computer" means the device that I sit at and interact with
 it's GUI.
 For example, I might be sitting at macOS and using it for my web browsing and
 music, but working on a project on my linux workstation via a mosh/tmux session
-in iTerm. I want to dig deep into this setup and see if it's something I should
-think about switching to.
+in iTerm. I can use remote Linux computers as much as I please, but should
+interact with them through macOS.
 
 One thing to note is that I still used Desktop Linux as my "interfacing
 computer" for work.
+
+### Why
 
 Currently, I am really only interesting in using macOS for
 my personal computing. At home, I don't mind iOS and macOS teaming up to make
@@ -46,6 +43,12 @@ Linux works REALLY well for the work I do, especially when it comes to running
 VMs (I love `libvirt`). So, there currently isn't a reason (or even a desire)
 to switch there.
 
+***Side Note:*** I actually wouldn't even consider this challenge if I didn't get to use Linux
+so much at work every day, or if I didn't have my Linux desktop/workstation. I
+already ssh into my desktop to work from any other device. In fact, I technically
+remote into my desktop even when I'm working AT it, since I do
+nearly everything in a container.
+
 ### Observations
 
 
@@ -58,4 +61,4 @@ to switch there.
 #### Reservations/Fears
 
 
-### Conclusion
+### Conclusion/Plans
