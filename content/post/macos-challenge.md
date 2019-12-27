@@ -53,21 +53,26 @@ nearly everything in a container.
 
 
 #### Stuff I didn't like
-- The elephant… it's very proprietary. The ecosystem is great but REALLY locks out anyone not in the high-end market, or willing to buy used, or change their computing paradigm (switching to a more affordable iPad in place of a macbook).
-- At first I had issues getting some applications like Joplin to work. I later learned that it's due issues with signing the applications for Catalina (I think). There apparently is a work-around for this, but I didn't investigate it..
-- There surprisingly isn’t a good replacement for Virt-viewer. I got it installed with home-brew, but have to launch it from the terminal, unless I setup an application I guess (which I haven't figured out how to do yet).
-- It’s *great* that brew exists, but it confuses the hell out of me and is nowhere as nice as the Linux package managers (IMO).
-- Filesystem access is a pain, especially when trying to connect to network devices. I had to install `sshfs` with brew, and  I couldn’t do a normal network connection without first setting up samba or nfs on my Linux computers. While I want to setup a proper samba/nfs server on my desktop/server in the long run, it’s annoying that it couldn’t just mount the system in Finder, using something like `sftp` under the hood like Linux does..
-- Window management isn’t great out of the box. I had to by magnet to snap my windows which is better. Also, I can’t seem to hold a key and click a window anywhere to resize/move like I can in most linux DEs.
-- The Dongle is annoying. Ports and connections worked fine on the air, but now that I’m on the pro and have to use a usb-c for anything, the “cheap” $20 hub I got is very flakey. I wonder if I got an actual thunderbolt one it’d be better…Or even one of the simple HDMI+USB ones but made by apple (that’s all I really need with my usb3 hub). Still. I’ll have to do something better I think. This thing heats up right away and won’t be a great solution long-term if I want to use the MacBook as my interfacing computer at the desk too…
-
+- The elephant in the room… it's very proprietary. Still love open source and
+    using something that's as locked down and secretive as macOS and Apple
+    products in general feels, well... *dirty*.
+- I had trouble getting some applications like [Joplin](/post/switched-to-joplin-notes/) to work. I later learned that it was likely due to issues with signing the applications in Catalina (I think). Apparently, there is a work-around for this, but I haven't investigate it yet...
+- There surprisingly isn’t a good solution for [virt-manager](https://virt-manager.org). I was able to install it using homebrew, but have to launch it from the terminal. I guess I might be able to setup an application launcher for it? Again, I haven't tried that yet. I'm just surprised there isn't a better solution on mac, or at least one that's easy to find...
+- On that note, it is *great* that [brew](https://brew.sh) exists, but it confuses the hell out of me (What's a `cask`? Is it like a [`dnf` group](https://dnf.readthedocs.io/en/latest/command_ref.html#group-command-label) install?). This is most likely because I am new to it, in my (current) opinion, I still think it is nowhere near as nice as default Linux package managers. This is one area where using Linux for so long has spoiled me.
+- Working with filesystems is a pain, especially when connecting to network devices. I couldn’t use Finder to do an easy network connection without first setting up samba or nfs on my Linux computers. I had to install `sshfs` using brew. While I ideally to setup a proper samba/nfs server on my desktop/server in the long run, it’s annoying that it couldn’t just mount the system in the file browser, using something like `sftp` under the hood like Linux does..
+- Window management isn’t great out of the box. I had to buy [magnet](https://apps.apple.com/us/app/magnet/id441258766?mt=12) to snap/tile my windows. (Alternatively for touch-bar mac users, note that [better touch tool](https://folivora.ai) has window snapping and other features built in). Also, I can’t seem to hold a key and click a window anywhere to resize/move like I can in most linux DEs.
+- My desktop workspaces keep changing their order on me XD.
+- Deviating from the stock experience can become painful. For example, if you
+    don't like using a global menubar, and a dock for applications... sorry?
+    I'm sure there are third-party ways to get around it, but it will likely be
+    hacky and not guaranteed to always work across new version of macOS.
 
 #### Stuff I liked
 - I actually am starting the like the CMD-centric shortcuts. They work everywhere and are nice when working with a terminal (which I do all the time).
 - Default keybindings, while different from what I’m used to are actually intuative, and prevalent across the system. Not to many that are crazy/don’t make sense. For example, on Windows/Linux systems, the keybinding to close a window usually defaults to `Alt+F4` so I normally change it to `Super+Shift+Q`. While not the exact same as what I do, the macOS default of `CMD+Q` is close enough that I've been able to easily adapt to it, without feeling the need to figure out how to change it. It's a similar story across most of the default keybindings. They aren't exactly how I've been setting mine up, but close enough I'm fine with accepting them as it.
 - iCloud syncing is nice - photos and messages.
 - I think it’s neat that I can take calls from my iPhone with my computer…
-- - Profiles. Specifically, setting up something like Fastmail in the mail app
+- Profiles. Specifically, setting up something like Fastmail in the mail app
     was SUPER easy because of this. I basically just downloaded the profile
     from fastmail and loaded into mail and everytihng was setup. That's it.
 - The UI really is space respecting. In addition to global menu, title bars are thin and minimal, and I think fonts and everything is just called down which makes me feel at least like I have more working space… especially compared to Gnome.
