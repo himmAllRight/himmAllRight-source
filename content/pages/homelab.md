@@ -128,6 +128,7 @@ Mac OS Catalina
 ```
 Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
 LG 32QK500W, 32" 2560x1440 IPS Monitor
+Apple Air Pod Pros
 Bose AE2 Headphones
 ```
 
