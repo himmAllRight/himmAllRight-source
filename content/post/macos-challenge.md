@@ -1,15 +1,15 @@
 +++
 title  = "Challenge - 30 Days with macOS"
-date   = "2019-12-22"
+date   = "2019-12-30"
 author = "Ryan Himmelwright"
 image  = "img/posts/macos-challenge/atc.jpeg"
 caption= "American Tobacco Campus, Durham, NC"
-tags   = ["Hardware", "Apple", "Laptop", "Software"]
+tags   = ["Hardware", "Apple", "Laptop", "Software", "macOS"]
 draft  = "True"
 Comments = "True"
 +++
 
-Intro
+Throughout my life, I have used all sorts of computing operating systems.
 
 <!--more-->
 
@@ -111,14 +111,31 @@ file browser in Gnome (Linux)</div>
 - Gestures are actually great and intuitive. Even on this old MacBook, that trackpad works amazingly with them
 - Things like screen time settings work across all my “front-end devices”. If I set a downtime for 8:30pm… it basically happens on all my computers and I basically get off. (The TV however … lol)
 
-*--Screenshot of some of the default apps?--*
-
 - Well made core apps (calendar, mail, notes)
 - Photos is easy to do the obnoxious contrast photo editing I like doing
 - Iterm2 is great. Also, mosh works well
 - Privacy does actually seem to be a focus on the system.
 
-#### Reservations/Fears
+### Future Plans
+
+Overall, I'd say this challenge was a success. In fact, it was so successfull,
+that I'm actually writing up this post on a new [base model 16" MacBook
+Pro](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.6-six-core-16-2019-scissor-specs.html)
+(but more on *that* at another time). So, my plan is to use macOS and my iOS
+devices, to handle my interactive/client computing. I've enjoyed having my
+apple devicestake care of all my "normal" person computer needs over the last
+few weeks. It has allowed me to finish up required, but mundane tasks easily
+and efficiently, so I can better focus when diving into iTerm to work on
+complicated Linux server projects.
+
+While I do have some reservations about this plan (mostly that my desktop Linux
+skills will fade, and that I'll loose respect in the Linux community), I don't
+think it should be too much of an issue. At the end of the day, it is most
+important that I am able to spend time learning and building in the areas I
+want to focus on, which is back-end, rather than front-end Linux. I want to
+love all technology, and be able to help people find the best solution to their
+problems, no matter what they use.
+
+### Conclusion
 
 
-### Conclusion/Plans
