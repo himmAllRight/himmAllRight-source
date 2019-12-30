@@ -6,19 +6,25 @@ layout: homelab-page
 menu:
   main:
     weight: -100
-image: img/homelab/new_house3.jpg
+image: /img/homelab/bookshelves.jpeg
 ---
 
-This is a page where I maintain the status of the computers in my “Homelab”. I will list my current systems here (potentially with screenshots of my current desktop setup for my workstations).
+This is a page where I maintain the status of the computers in my “Homelab”
+(basically the tech in our house).
 
 ## Ryan (Me)
+Don't mind the mess. Still a work in progress, but I noticed my photos were *very* out of
+date. I didn't bother to cleanup before taking these pictures. I will when it's closer to
+being 'done'.
 
-<a href="../../img/homelab/desk_front_night.jpg"><img alt="Home Office" src="../../img/homelab/desk_front_night.jpg" width=100%></a>
+<a href="../../img/homelab/home-office.jpeg"><img alt="My Desk" src="../../img/homelab/home-office.jpeg" width=100%></a>
 <div class="caption">My Home Office</div>
 
-<a href="../../img/homelab/desk_night.jpg"><img alt="My Desk" src="../../img/homelab/desk_night.jpg" width=100%></a>
+<a href="../../img/homelab/desk.jpeg"><img alt="Home Office" src="../../img/homelab/desk.jpeg" width=100%></a>
 <div class="caption">My Desk</div>
 
+<a href="../../img/homelab/home-office-daylight.jpeg"><img alt="My Desk" src="../../img/homelab/home-office-daylight.jpeg" width=100%></a>
+<div class="caption">Entrance to  Home Office</div>
 
 ### Linux Computers
 
@@ -122,6 +128,7 @@ Mac OS Catalina
 ```
 Thinkpad Ultra Dock 40A2 (to connect to periphery devices below)
 LG 32QK500W, 32" 2560x1440 IPS Monitor
+Apple Air Pod Pros
 Bose AE2 Headphones
 ```
 
