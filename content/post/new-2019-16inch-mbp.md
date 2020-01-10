@@ -2,8 +2,7 @@
 title  = "My New 16-inch Macbook Pro Initial Thoughts"
 date   = "2020-01-11"
 author = "Ryan Himmelwright"
-image  = "img/posts/new-2019-16inch-mbp/mbp-box.jpeg"
-caption= "American Tobacco Campus, Durham, NC"
+image  = "img/posts/new-2019-16inch-mbp/mbp-desk-website-header.jpeg"
 tags   = ["Hardware", "Apple", "Laptop", "macbook", "macOS"]
 draft  = "True"
 Comments = "True"
@@ -17,6 +16,12 @@ of my first macbook. Here are those thoughts.
 <!--more-->
 
 ### Selection
+<center>
+<a href="/img/posts/new-2019-16inch-mbp/mbp-desk-website.jpeg">
+<img alt="MBP on my desk" src="/img/posts/new-2019-16inch-mbp/mbp-desk-website.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">New 16" MBP on my desk</div>
+</center>
+
 But first, *a word from our sponsor!...* Just kidding. Lets talk about my
 selection of macbook.
 
