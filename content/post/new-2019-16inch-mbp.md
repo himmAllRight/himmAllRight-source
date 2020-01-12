@@ -1,8 +1,8 @@
 +++
-title  = "My New 16-inch Macbook Pro Initial Thoughts"
+title  = "My New 16-inch Macbook Pro: Initial Thoughts"
 date   = "2020-01-11"
 author = "Ryan Himmelwright"
-image  = "img/posts/new-2019-16inch-mbp/mbp-desk-website-header.jpeg"
+image  = "img/posts/new-2019-16inch-mbp/mbp-box-header.jpeg"
 tags   = ["Hardware", "Apple", "Laptop", "macbook", "macOS"]
 draft  = "True"
 Comments = "True"
@@ -36,6 +36,11 @@ shipping to me the first week of December.
 
 #### The Base Model Specs
 
+<center>
+<a href="/img/posts/new-2019-16inch-mbp/mbp-closed.jpeg">
+<img alt="Macbook Pro closed on the table" src="/img/posts/new-2019-16inch-mbp/mbp-closed.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">16" Macbook Pro closed on the table</div>
+</center>
 
 I chose the base-spec MBP (the cheapest one) for several reasons. First, it
 saved me a ton of money because 1) Apple upgrades tend to be expensive, and 2)
@@ -63,6 +68,12 @@ workstation/servers... not on my laptop.
 
 ### Initial Thoughts
 
+<center>
+<a href="/img/posts/new-2019-16inch-mbp/mbp-keyboard.jpeg">
+<img alt="Macbook Pro from above" src="/img/posts/new-2019-16inch-mbp/mbp-keyboard.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">I love both the new keyboard and speakers on the 16"
+Macbook Pro</div>
+</center>
 
 #### Keyboard
 
@@ -88,10 +99,24 @@ workstation/servers... not on my laptop.
 
 ### Issues/Annoyances/Concerns
 
+<center>
+<a href="/img/posts/new-2019-16inch-mbp/mbp-side.jpeg">
+<img alt="Macbook Pro from side" src="/img/posts/new-2019-16inch-mbp/mbp-side.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">As for ports, the 16" Macbook Pro has two USB C/Thunderbolt3 ports and a headphone jack on one side (pictured), and 2 more USB C/Thunderbolt3 ports on the other side.</div>
+</center>
+
 ### Heat
 
 #### Ports/Adaptor Annoyances
 
 ### Wrists Rest
 
-#### New - Cost of AppleCare+
+
+## Conclusion
+
+<center>
+<a href="/img/posts/new-2019-16inch-mbp/mbp-table.jpeg">
+<img alt="Macbook Pro on table" src="/img/posts/new-2019-16inch-mbp/mbp-table.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">The 16" Macbook Pro is a great all in one portable
+workstation</div>
+</center>
