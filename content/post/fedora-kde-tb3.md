@@ -87,6 +87,18 @@ commands, enter `boltctl --help`.
 <div class="caption">Authorizing the device</div>
 </center>
 
+In order to *use* the thunderbolt 3 device, it needs to be authorized. To
+authorize a device, first use a plain `boltctl` command to get the `uuid` of
+the device. Next, call `boltctl authorize` using the `uuid` to authorize it:
+
+```
+boltctl authorize {UUID HERE}
+```
+
+The device should now be authorized. When I authorized mine, some of my devices
+started showing up automatically, while others needed to be reset.
+
+## Enrolling
 
 <center>
 <a href="/img/posts/fedora-kde-tb3/boltctl-enroll.png">
@@ -94,4 +106,22 @@ commands, enter `boltctl --help`.
 <div class="caption">Enrolling the device for permanent use</div>
 </center>
 
+Authorizing a device enables it to be used, but doesn't guarantee persistence.
+While this may be desired to grant temporary authorization to a device, many
+user want their device to *always* connect, without having to manually
+authorize it. In this case, the device should be enrolled (like `systemctl enable`).
+Simply call `boltctl enroll`, using the UUID again:
+
+```
+boltctl enroll {UUID HERE}
+```
+
+Once enrolled, the device's UUID will be recorded and added to the database. By
+default, the device will now automatically be authorized whenever it is
+connected.
+
 ## Conclusion
+
+That's it. While the solution isn't that difficult, it can be frustrating to
+figure out when it appears that the thunderbolt device just isn't working.
+Regardless, I'm glad that I now know about `bolt` and how to use it!
