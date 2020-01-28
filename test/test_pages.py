@@ -1,18 +1,13 @@
+import pytest
 import requests
 
-def test_index(base='http://localhost:1313'):
-    """Checks that the home page is available"""
-    response = requests.get(base)
+def test_page_served(page_url):
+    """Checks that the website pages are available"""
+    response = requests.get(page_url)
     assert response.status_code == 200
 
-
-def test_about_me(base='http://localhost:1313', path='/pages/about/'):
-    """Checks that the about me page is available"""
-    response = requests.get(base + path)
+def test_post_served(post_url):
+    """Checks that the desired posts are available"""
+    response = requests.get(post_url)
     assert response.status_code == 200
 
-
-def test_homelab(base='http://localhost:1313', path='/pages/homelab/'):
-    """Checks that the homelab page is available"""
-    response = requests.get(base + path)
-    assert response.status_code == 200
