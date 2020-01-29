@@ -16,7 +16,7 @@ POST_NAMES = [
     'back-to-solus',
     'charmeleon-desktop-design',
     'create-gitlab-runner',
-    # 'creating-a-git-remote.md',
+    'creating-a-git-remote',
     'custom-neofetch-ascii-art',
     'dabbling-with-go',
     'docker-quickstart',
