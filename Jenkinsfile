@@ -36,6 +36,7 @@ pipeline {
         stage("Collect Test Resuts") {
             steps {
                 archiveArtifacts "himmallright-source-test-report.xml"
+                junit "himmallright-source-test-report.xml"
             }
         }
     }
