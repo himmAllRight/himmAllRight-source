@@ -25,12 +25,12 @@ pipeline {
         stage("Setup Tests") {
             steps {
                 sh 'pip3 install pipenv --user'
-                sh 'pipenv install'
+                sh 'python3 -m pipenv install'
             }
         }
         stage("Run Tests") {
             steps {
-                sh 'pipenv run pytest -v .'
+                sh 'python3 -m pipenv run pytest -v .'
             }
         }
     }
