@@ -24,7 +24,7 @@ pipeline {
         }
         stage("Setup Tests") {
             steps {
-                sh 'pip3 install -y pipenv'
+                sh 'pip3 install pipenv --user'
                 sh 'pipenv install'
             }
         }
