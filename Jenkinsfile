@@ -16,7 +16,6 @@ pipeline {
         }
         stage("Setup Server") {
             steps {
-                git scm
                 sh 'ls -lah'
                 sh 'pwd'
                 sh 'git checkout add-tests'
