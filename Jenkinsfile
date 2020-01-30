@@ -1,18 +1,37 @@
 pipeline {
-    agent {
-	label 'mr-mime'
-    }
-    stages {
-	stage ('build') {
-	    steps{
-		sh 'hugo -D -F -b "http://ryan-drafts.himmelwright.net"'
-	    }
-	}
-	stage ('deploy') {
-            steps{
-		sh 'rsync -r "$WORKSPACE/public/" ryan@ponyta:/usr/share/nginx/html/'
-            }
-	}
+    agent any
 
+//    parameters {
+//    }
+
+    stages {
+        stage("Setup Deps") {
+            steps {
+                sh 'whoami'
+                sh 'pwd'
+                sh 'sudo yum update -y'
+                sh 'sudo yum install -y epel-release'
+                sh 'sudo yum install -y pipenv hugo'
+            }
+        }
+        stage("Setup Server") {
+            steps {
+                git scm
+                sh 'ls -lah'
+                sh 'pwd'
+                sh 'git checkout add-tests'
+                sh 'hugo serve'
+            }
+        }
+        stage("Setup Tests") {
+            steps {
+                sh 'pipenv install'
+            }
+        }
+        stage("Run Tests") {
+            steps {
+                sh 'pipenv run pytest -v .'
+            }
+        }
     }
 }
