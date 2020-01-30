@@ -1,6 +1,8 @@
 pipeline {
-    agent any
-
+#agent any
+    agent {
+        docker { image 'fedora:latest' }
+    }
 //    parameters {
 //    }
 
@@ -9,9 +11,8 @@ pipeline {
             steps {
                 sh 'whoami'
                 sh 'pwd'
-                sh 'sudo yum update -y'
-                sh 'sudo yum install -y epel-release'
-                sh 'sudo yum install -y hugo python36-pytest'
+                sh 'sudo dnf update -y'
+                sh 'sudo dnf install -y hugo python3-pytest'
             }
         }
         stage("Setup Server") {
