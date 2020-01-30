@@ -19,7 +19,7 @@ pipeline {
                 sh 'ls -lah'
                 sh 'pwd'
                 sh 'git checkout add-tests'
-                sh 'hugo serve'
+                sh 'hugo serve &'
             }
         }
         stage("Setup Tests") {
