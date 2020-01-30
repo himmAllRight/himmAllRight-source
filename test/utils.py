@@ -1,5 +1,4 @@
-from os import listdir
-from os import path
+from os import listdir, path
 import re
 
 def get_file_paths(src, extension=None):

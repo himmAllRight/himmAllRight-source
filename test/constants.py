@@ -7,7 +7,7 @@ SITE_PAGES = [
     '/pages/homelab/'
 ]
 
-POST_DIR = '~/Documents/himmAllRight-source/content/post/'
+POST_DIR = './content/post/'
 POST_NAMES = [
     '25-days-of-c',
     'Ansible-On-Pi-Cluster',
