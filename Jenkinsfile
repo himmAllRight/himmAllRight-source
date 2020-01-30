@@ -11,7 +11,7 @@ pipeline {
                 sh 'pwd'
                 sh 'sudo yum update -y'
                 sh 'sudo yum install -y epel-release'
-                sh 'sudo yum install -y pipenv hugo'
+                sh 'sudo yum install -y hugo'
             }
         }
         stage("Setup Server") {
@@ -24,6 +24,7 @@ pipeline {
         }
         stage("Setup Tests") {
             steps {
+                sh 'pip3 install -y pipenv'
                 sh 'pipenv install'
             }
         }
