@@ -11,7 +11,7 @@ pipeline {
                 sh 'pwd'
                 sh 'sudo yum update -y'
                 sh 'sudo yum install -y epel-release'
-                sh 'sudo yum install -y hugo'
+                sh 'sudo yum install -y hugo python36-pytest'
             }
         }
         stage("Setup Server") {
