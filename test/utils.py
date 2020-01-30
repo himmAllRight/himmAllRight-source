@@ -17,6 +17,21 @@ def get_file_paths(src, extension=None):
     return file_list
 
 
+def get_file_names(src, extension=None):
+    """Collects the names of all files of a directory"""
+    file_list = []
+    root_path = path.expanduser(src)
+    for file in listdir(root_path):
+        # If extension provided, check file has that extension
+        if extension:
+            if file.endswith(extension):
+                file_list.append(file)
+        # Otherwise, add everything
+        else:
+            file_list.append(file)
+    return file_list
+
+
 def get_file_content(file_list):
     """Grabs all the content from a list of file paths."""
     content_all_files={}

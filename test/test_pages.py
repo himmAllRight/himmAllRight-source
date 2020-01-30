@@ -11,3 +11,8 @@ def test_post_served(post_url):
     response = requests.get(post_url)
     assert response.status_code == 200
 
+
+def test_non_defined_posts_not_served(non_live_post_url):
+    """Checks that a non-defined post is NOT available"""
+    response = requests.get(non_live_post_url)
+    assert response.status_code != 200
