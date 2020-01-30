@@ -10,8 +10,8 @@ pipeline {
         stage("Setup Deps") {
             steps {
                 sh 'pwd'
-                sh 'sudo dnf update -y'
-                sh 'sudo dnf install -y hugo python3-pytest'
+                sh 'dnf update -y'
+                sh 'dnf install -y hugo python3-pytest'
             }
         }
         stage("Setup Server") {
