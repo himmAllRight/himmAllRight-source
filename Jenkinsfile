@@ -9,7 +9,6 @@ pipeline {
     stages {
         stage("Setup Deps") {
             steps {
-                sh 'whoami'
                 sh 'pwd'
                 sh 'sudo dnf update -y'
                 sh 'sudo dnf install -y hugo python3-pytest'
