@@ -7,8 +7,6 @@ pipeline {
     stages {
         stage("Setup Deps") {
             steps {
-                sh 'whoami'
-                sh 'pwd'
                 sh 'sudo yum update -y'
                 sh 'sudo yum install -y epel-release'
                 sh 'sudo yum install -y hugo python36-pytest'
@@ -16,9 +14,6 @@ pipeline {
         }
         stage("Setup Server") {
             steps {
-                sh 'ls -lah'
-                sh 'pwd'
-                sh 'git checkout add-tests'
                 sh 'hugo serve &'
             }
         }
