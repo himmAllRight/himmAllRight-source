@@ -44,6 +44,16 @@ similar.
 
 ## Setting up the env
 
+For my test framework, I will be using
+[pytest](https://docs.pytest.org/en/latest/contents.html), and to make all the
+python stuff a bit easier to manage, I will be using
+[pipenv](https://github.com/pypa/pipenv). I also tend to be working on a
+[Fedora](https://getfedora.org) computer, or at least in a Fedora
+[podman](https://podman.io) container, so some of my instructions use `dnf`.
+Adjust to your package manager accordingly, if needed.
+
+
+
 - Install `pipenv`
 - Install needed packages inside `pipenv shell`
 
