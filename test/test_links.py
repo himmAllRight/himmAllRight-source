@@ -4,14 +4,12 @@ import requests
 from constants import BASE_URL
 
 
-@pytest.mark.skip
-def test_md_links(post_md_link_pair):
+def test_md_links(post_md_link):
     """Checks that the markdown links are not broken."""
-    md_file = post_md_link_pair[0]
-    if post_md_link[1].startswith("http") or post_md_link[1].startswith("https"):
-        url = post_md_link_pair[1]
+    if post_md_link.startswith("http") or post_md_link.startswith("https"):
+        url = post_md_link
     else:
-        url = BASE_URL + post_md_link_pair[1]
+        url = BASE_URL + post_md_link
 
     response = requests.get(url)
-    assert response.status_code == 200, f"The link {url} in {md_file} is broken."
+    assert response.status_code == 200, f"The link {post_md_link} is broken."

@@ -47,8 +47,8 @@ def get_md_links(content_dict, regex="\[.*?\]\((.*?)\)"):
     p = re.compile(regex)
     all_links = []
     for file in content_dict:
-        content = content_dict[file].replace('\n', '')
+        content = content_dict[file].replace("\n", "")
         match_iter = p.finditer(content)
         for match in match_iter:
-            all_links.append((file, match.group(1)))
+            all_links.append(match.group(1))
     return all_links

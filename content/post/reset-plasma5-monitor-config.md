@@ -17,8 +17,8 @@ scratch. With KDE Plasma 5, you can. Here's how.
 
 ## Issue
 
-While I love having a [dock-able laptop](../my-t470/) and [my 43" 4k LG
-monitor](new-lgud4379b), getting them configured and agreeing with each other
+While I love having a [dock-able laptop](/post/my-t470/) and [my 43" 4k LG
+monitor](/post/new-lgud4379b), getting them configured and agreeing with each other
 can sometimes be a headache. Luckily, KDE Plasma 5 (the desktop environment
 I've been using for awhile now) is fantastic and remembers previous display
 configurations.

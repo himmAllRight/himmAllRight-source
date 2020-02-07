@@ -8,7 +8,7 @@ tags   = ["Website", "Cryogen", "Clojure",]
 Ever since resurrecting my personal website, I have experimented with several
 static website generators. Thus far, I have tried
 [org-page](https://github.com/kelvinh/org-page),
-[Jekyll](http://jekyllrb.com/) (_several_ times), and even (almost) made 
+[Jekyll](http://jekyllrb.com/) (_several_ times), and even (almost) made
 [my own emacs org-page solution](https://github.com/himmAllRight/ryBlog/blob/master/org-blog.el). Now that I have
 started using the [clojure](http://clojure.org/) programming language, I have come across
 [cryogen](http://cryogenweb.org/). As you may have already guessed, this site is now
@@ -32,7 +32,7 @@ writing emacs lisp, so it seemed like a good choice. Overall,
 org-page was a good learning experience, but I found the documentation
 and support to be lacking. It seemed to be more of a
 [personal project](http://kelvinh.github.io/), rather than a fully supported
-framework. while I know [other people](http://cmacr.ae/) were able to
+framework. while I know other people were able to
 get it working, org-page simply wasn't working for me.
 
 
