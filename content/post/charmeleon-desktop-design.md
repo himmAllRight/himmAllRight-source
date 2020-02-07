@@ -110,7 +110,7 @@ Since my last desktop build was named "Charmander", I figured "Charmeleon" was
 fitting. Also, I'm then free to rename it to "Charzard" in the future if I *evolve*
 the build to a next-generation Ryzen 7...
 
-#### CPU: [Ryzen 5 2600](https://www.amd.com/en/products/cpu/amd-ryzen-5-2600)
+#### CPU: [Ryzen 5 2600](https://en.wikichip.org/wiki/amd/ryzen_5/2600)
 
 <a href="../../img/posts/chameleon-desktop-design/ryzen2600.jpg"><img alt="ryzen 2600" src="../../img/posts/charmeleon-desktop-design/ryzen2600.jpg" style="max-width: 40%; float: left;"/></a>
 
