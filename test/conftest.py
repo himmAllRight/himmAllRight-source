@@ -44,7 +44,9 @@ def post_md_links():
     """Returns the md_link object of the md links in all the posts."""
     all_post_files = get_file_paths(POST_DIR)
     all_post_contents = get_file_content(all_post_files)
-    return get_md_links(all_post_contents)
+    all_post_md_links = get_md_links(all_post_contents)
+    # Return de-dup list
+    return list(set(all_post_md_links))
 
 
 @pytest.fixture(params=post_md_links())
