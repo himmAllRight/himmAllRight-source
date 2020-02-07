@@ -42,12 +42,12 @@ def get_file_content(file_list):
     return content_all_files
 
 
-def get_md_links(content_list, regex="\[.*\]\('(.*)'\)"):
-    """Parses the list of content strings, and pulls out the url of any links."""
+def get_md_links(content_dict, regex="\[.*\]\((.*?)\)"):
+    """Parses the dictionary of content strings, and pulls out the url of any links."""
     p = re.compile(regex)
     all_links = []
-    for file in content_list:
-        content = content_list[file]
+    for file in content_dict:
+        content = content_dict[file].replace('\n', '')
         match_iter = p.finditer(content)
         for match in match_iter:
             all_links.append((file, match.group(1)))
