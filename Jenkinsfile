@@ -29,7 +29,7 @@ pipeline {
                     set +e
                     python3 -m pipenv run pytest -v --junit-xml himmallright-source-test-report.xml .
                     set -e
-                ''.stripIndent()'
+                '''.stripIndent()
             }
         }
         stage("Collect Test Resuts") {
