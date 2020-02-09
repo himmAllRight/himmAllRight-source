@@ -79,7 +79,7 @@ really enjoyed it. However, I have recently become frusterated using
 Jekyll (again). It is a great static website generator, but because I
 don't often develop in Ruby (right now), setting up the proper ruby
 gems environment and dependencies on
-[my computers](../../pages/homelab/) makes me want to bang my head against
+[my computers](/pages/homelab/) makes me want to bang my head against
 the wall. Additionally, I have been learning
 [clojure](http://clojure.org/) and while digging through different
 clojure projects, I found [cryogen](http://cryogenweb.org/).

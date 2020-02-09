@@ -9,7 +9,7 @@ draft  = false
 Comments = "True"
 +++
 
-Over the past few years (particularly after moving to the [T470](../my-t470/)
+Over the past few years (particularly after moving to the [T470](/post/my-t470/)
 as my main device), I have been anticipating what my next desktop
 workstation build will look like. For a period of time, I was convinced that
 I would build a [muti-socket, used xeon
@@ -24,7 +24,7 @@ series CPUs...
 <a href="../../img/posts/chameleon-desktop-design/kadabra-cpu-usage.png"><img alt="Full system monitor on Laptop" src="../../img/posts/charmeleon-desktop-design/kadabra-cpu-usage.png" style="max-width: 100%;"/></a>
 <div class="caption">My T470 has been a little tight on resources.</div>
 
-[My](../sold-my-bonobo/) [laptops](../my-t470/) [have](../my-new-used-x230)
+[My](/post/sold-my-bonobo/) [laptops](/post/my-t470/) [have](/post/my-new-used-x230)
 served the majority of my needs these last few years, but I have been feeling
 a bit restricted when trying to do more demanding workloads.
 While I still side with a "*use low-powered, portable computers, and remote
@@ -85,7 +85,7 @@ play the *occasional* game. I don't mind playing games with lower graphic
 settings on my laptops, but I *do mind* that even with the lower settings, the
 CPUs nearly max out, which spikes up the temperature.
 Increased graphics performance would also better support [my large
-monitor](../new-lgud4379b/).  A discrete graphics card would be nice, ideally
+monitor](/post/new-lgud4379b/).  A discrete graphics card would be nice, ideally
 an AMD one due to their recent work on improving their open source drivers.
 
 #### Ability to Upgrade

@@ -1,4 +1,4 @@
-+++ 
++++
 title   = "New Website Theme: Immutable"
 date    = "2017-04-11"
 author  = "Ryan Himmelwright"
@@ -24,7 +24,7 @@ While it may possibly still look dated (I wouldn't know, I'm a backend dev), it 
 <a href="../../img/posts/New-Theme-Immutable/sidebar-changes.png"><img src="../../img/posts/New-Theme-Immutable/sidebar-changes.png" style="max-width: 100%;"/></a>
 *The sidebar components have been distributed to other parts of the site*
 
-I have to be honest here... I originally planned on keeping the side bar when I started to build the theme. I liked how it held all of my links (Github, LinkedIn, etc), recent posts, and tags in one, easy to find, location. I also liked having my avatar picture in the side bar. I felt it made the site more personable (or maybe I'm just egotistical). After working on the base of the theme however, I realized the site might be better off without it. I've relocated the items to other locations of the site. The majority of the links have been relocated to the drop-down menu (more on that  below), and I at least added my picture to the [About Page](../../pages/about/). 
+I have to be honest here... I originally planned on keeping the side bar when I started to build the theme. I liked how it held all of my links (Github, LinkedIn, etc), recent posts, and tags in one, easy to find, location. I also liked having my avatar picture in the side bar. I felt it made the site more personable (or maybe I'm just egotistical). After working on the base of the theme however, I realized the site might be better off without it. I've relocated the items to other locations of the site. The majority of the links have been relocated to the drop-down menu (more on that  below), and I at least added my picture to the [About Page](/pages/about/).
 
 I might reinstate a sidebar in the future, but only if it looks *good* and I can add it *correctly*. The way I implemented the old sidebar caused many of the issues prompting this new theme, and I do not want to bring back those problems.
 
@@ -43,7 +43,7 @@ In the *Immutable* theme, I have fixed the footer and removed the gray bar. The 
 <a href="../../img/posts/New-Theme-Immutable/mobile-changes.png"><img src="../../img/posts/New-Theme-Immutable/mobile-changes.png" style="max-width: 100%;"/></a>
 <div id="caption">Mobile viewing the homepage and a post, on both the old theme and Immutable</div>
 
-The biggest reason for making the new theme was that viewing the website on a mobile device was a poor experience... unusable even. Again, because I implemented the sidebar poorly, it always remained on the side. Even on a narrow mobile screen. There was not enough room for the actual main content section, and pages/posts consisted of a skinny line of text down the side of the phone. Images... well, don't get me started on how well images were displayed. *Immutable* solves these issues. The main content window takes up the majority of the screen, allowing for easy content reading. 
+The biggest reason for making the new theme was that viewing the website on a mobile device was a poor experience... unusable even. Again, because I implemented the sidebar poorly, it always remained on the side. Even on a narrow mobile screen. There was not enough room for the actual main content section, and pages/posts consisted of a skinny line of text down the side of the phone. Images... well, don't get me started on how well images were displayed. *Immutable* solves these issues. The main content window takes up the majority of the screen, allowing for easy content reading.
 
 ### Mobile Navigation
 <a href="../../img/posts/New-Theme-Immutable/mobile-menu.png"><img src="../../img/posts/New-Theme-Immutable/mobile-menu.png" style="max-width: 100%;"/></a>

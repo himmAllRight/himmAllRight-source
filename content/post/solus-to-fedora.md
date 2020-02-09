@@ -6,7 +6,7 @@ image  = "img/posts/solus-to-fedora/fedora26-upgrade-header.png"
 tags   = ["Linux", "Fedora", "KDE", "Solus",]
 +++
 
-For awhile, I have been debating the idea of switching back to Fedora (from Solus). At least on my [main computer](../../pages/homelab/#alakazam). First, let me state this right up front: I am still *very* satisfied with Solus. I think it is one of the best current Linux distros, and I want to still contribute to the project. However, there are a few reasons why Solus isn't the best fit for my needs *right now*, and I will highlight them below.
+For awhile, I have been debating the idea of switching back to Fedora (from Solus). At least on my [main computer](/pages/homelab/#alakazam). First, let me state this right up front: I am still *very* satisfied with Solus. I think it is one of the best current Linux distros, and I want to still contribute to the project. However, there are a few reasons why Solus isn't the best fit for my needs *right now*, and I will highlight them below.
 
 <!--more-->
 
@@ -37,7 +37,7 @@ The first phrase stated on the [Solus Project homepage](https://solus-project.co
 
 As you can see, many of the above items are not desktop based, but really
 *server* based operations. Solus is *not* a server distribution, as it doesn't
-*try* to be one. Which is a good thing. It is focused on its audience. I 
+*try* to be one. Which is a good thing. It is focused on its audience. I
 just happen to not be in that audience at the moment.
 
 Additionally, one of my goals for the near future is to transform my long-time Proxmox server into a [CentOS](https://www.centos.org/) box. Using Fedora on my main workstation does help me get accustom to that environment. It also allows me to more accurately test out ideas before I plan the big move.
@@ -96,17 +96,17 @@ Fedora 25 to 26. Both updates went very smoothly without any issues:
 </center>
 *I upgraded my Fedora 25 Plasma Install to Fedora 26*
 
-Other than some odd issues with the GUI tool, the upgrade from 25 to 26 was 
+Other than some odd issues with the GUI tool, the upgrade from 25 to 26 was
 smooth and uneventful.
 
 >I just upgraded Alakazam from Fedora 25 KDE, to Fedora 26 this morning. I couldn't really get the
 >graphical installer to start, but that could be because I have several desktop environments setup
->(Plasma & Gnome), so it may have been confused (I was using the Gnome Software App in Plasma...) 
+>(Plasma & Gnome), so it may have been confused (I was using the Gnome Software App in Plasma...)
 
 >I just did the upgrade using the (command line) dnf upgrade tool, like I normally use, and it worked
 >wonderfully. It even looks like my nvidia drivers stayed and my monitors were configured correctly
 >after rebooting. The only difference is I don't seem to have the same Plasma animations I had
->before, but that is fine, and likely part of the update. 
+>before, but that is fine, and likely part of the update.
 
 
 So that it. Those are my reasons for switching (for now), and the results of my

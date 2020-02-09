@@ -6,12 +6,12 @@ image  = "img/header-images/cluster-boards.jpg"
 tags   = ["Homelab", "Linux", "Cluster", "Pi", "Devops",]
 +++
 
-I have a Raspberry Pi 2, a Raspberry Pi 3, and a Banana Pi. A while ago, I constructed a small tower to house my pi devices. Since then, I have additionally acquired a power source, and some CAT6 cable to connect them all up to a switch. I hope to use the Pis as a mini clustered environment, where I can learn (and play) with some of the "Devops" technologies/techniques out there. This post will briefly explain the initial setup of [my cluster](../../pages/homelab/#cluster).
+I have a Raspberry Pi 2, a Raspberry Pi 3, and a Banana Pi. A while ago, I constructed a small tower to house my pi devices. Since then, I have additionally acquired a power source, and some CAT6 cable to connect them all up to a switch. I hope to use the Pis as a mini clustered environment, where I can learn (and play) with some of the "Devops" technologies/techniques out there. This post will briefly explain the initial setup of [my cluster](/pages/homelab/#cluster).
 
 <!--more-->
 
 # Setting up the OS Images
-Before doing anything with the hardware, I had to setup the pi "hard drives" (micro SD cards), so they could boot. 
+Before doing anything with the hardware, I had to setup the pi "hard drives" (micro SD cards), so they could boot.
 
 ### Ubuntu for Raspberry PI
 

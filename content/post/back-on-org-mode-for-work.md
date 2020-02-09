@@ -9,7 +9,7 @@ draft  = "False"
 Comments = "True"
 +++
 
-Last month, I wrote about my [switch to Joplin](post/switched-to-joplin-notes/)
+Last month, I wrote about my [switch to Joplin](/post/switched-to-joplin-notes/)
 for both my personal and work notes. While I enjoyed many features in Joplin, I
 also had a few concerns about using the system long-term for all my notes.
 As of last week, I am still using Joplin for all of my personal notes, but have switched

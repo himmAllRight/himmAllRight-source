@@ -35,9 +35,9 @@ I repeated this on each of the nodes, and afterwards was no longer promted for a
 
 <a name="ssh"></a>
 ## Setup SSH Keys
-Well... *almost* happy. 
+Well... *almost* happy.
 
-Ansible's main method of communication is via ssh, which by default, prompts me for a password when connecting. Ansible *really* hates passwords. So, I had to configure ssh to use keys instead. Honestly, this is proabaly a good step to do regardless, now that the `ryan` account no longer uses a password when running `sudo`. To setup key-based logins, I appended the contents of my [main computer](../../pages/homelab/#alakazam)'s ssh public key*, to each pi's `authorized_keys` file. This can all be done using a magic one-line pipe command (x3, one for each pi):
+Ansible's main method of communication is via ssh, which by default, prompts me for a password when connecting. Ansible *really* hates passwords. So, I had to configure ssh to use keys instead. Honestly, this is proabaly a good step to do regardless, now that the `ryan` account no longer uses a password when running `sudo`. To setup key-based logins, I appended the contents of my [main computer](/pages/homelab/#alakazam)'s ssh public key*, to each pi's `authorized_keys` file. This can all be done using a magic one-line pipe command (x3, one for each pi):
 
 ```
 cat ~/.ssh/id_rsa.pub | ssh pi0 "cat >> ~/.ssh/authorized_keys"
@@ -64,11 +64,11 @@ sudo systemctl restart sshd
 
 Afterwards, I was unable to login to the PIs from a computer with unauthorized ssh keys.
 
-<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/blocked-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/blocked-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'" style="max-width: 100%;"/>
 
 But, I was still able to loging from the authorized computer.
 
-<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/accepted-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/accepted-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'" style="max-width: 100%;"/>
 
 
 ## Install Python
