@@ -166,7 +166,7 @@ than a laptop.
 
 ## Recent Discoveries & My New Plan
 
-A while back, I bought a [used x230 Thinkpad](../my-new-used-x230/). Last
+A while back, I bought a [used x230 Thinkpad](/post/my-new-used-x230/). Last
 summer, I finally purchased a [used docking
 station](https://www.ebay.com/itm/Lenovo-Thinkpad-Mini-Docking-Station-Series-3-USB-3-0-T410-L420-L520-X230-T530/272238176342?epid=562055390&hash=item3f62a8e856:g:PbIAAOSw2x1XMPHU:sc:USPSPriority!02703!US!-1)
 for it, so I could try out a docked setup. I loved it. It matched my needs

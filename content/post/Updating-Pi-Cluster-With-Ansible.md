@@ -12,7 +12,7 @@ With Ansible configured on the Pi cluster, it is time to have it do something us
 ### Hosts File
 The first task when using Ansible is to setup the `hosts` file. No, not the normal `/etc/hosts` file, but the *other* one *just* for Ansible, which can be found at `/etc/ansible/hosts`. Configuring the Ansible hosts file is fairly straightforward. Groups of computers are defined using `[brackets]`, with computer ip/hostnames of the group are listed below. For example:
 
-A nice feature of group definitions is that hierical structures can be constructed using the `:child` suffix in order to create groups of groups. For example, for my [homelab](../../pages/homelab), I like to make an ansible hosts file that splits out my servers based on their distribution, and then group those by their packaging type. This makes it easier for me to do generic updates, which is what I mostly use ansible for (at this point). So, for example:
+A nice feature of group definitions is that hierical structures can be constructed using the `:child` suffix in order to create groups of groups. For example, for my [homelab](/pages/homelab), I like to make an ansible hosts file that splits out my servers based on their distribution, and then group those by their packaging type. This makes it easier for me to do generic updates, which is what I mostly use ansible for (at this point). So, for example:
 
 ```
 [ubuntu]
@@ -68,7 +68,7 @@ ansible bpis -m ping
 ansible cluster -m ping
 ```
 
-Assuming the steps of [the last post](../Ansible-On-Pi-Cluster) were done correctly, this should work. If not, double check that post and make sure everything looks correct.
+Assuming the steps of [the last post](/post/Ansible-On-Pi-Cluster) were done correctly, this should work. If not, double check that post and make sure everything looks correct.
 
 ### Playbooks
 After confirming that the hosts file is properly configured, I started to dig into playbooks. Playbooks are Ansible's scripting system used to configure, deploy, and orcistrate systems. They can describe ways in which systems should be configured (ex: enable ssh), or outline a set of steps for an IT task (ex: running updates, restarting a server). As stated in the [playbook documentation](https://docs.ansible.com/ansible/playbooks.html):
@@ -108,7 +108,7 @@ After defining the ping module, I started to get a bit fancier. Well... a little
     update_cache: yes
 ```
 
-The `name:` defines the name of the task, and is the text printed out to the console when executing this step of the playbook. Setting the [`become`](https://docs.ansible.com/ansible/become.html) key to `true` tells Ansible to run the command with privilege escalation (sudo). Lastly, the remaining two lines run the `update_cache:` functionality of the apt module. 
+The `name:` defines the name of the task, and is the text printed out to the console when executing this step of the playbook. Setting the [`become`](https://docs.ansible.com/ansible/become.html) key to `true` tells Ansible to run the command with privilege escalation (sudo). Lastly, the remaining two lines run the `update_cache:` functionality of the apt module.
 
 With the repositories updated on each node, I can have ansible run the updates by adding the following lines to the playbook (after the cache update ones):
 

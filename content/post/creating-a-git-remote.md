@@ -21,8 +21,8 @@ did to migrate my repos.
 <!--more-->
 
 ### SSH Keys
-The *pre* (and somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt for the password of the repo's host user . When using a git service (ex: Github or Gitlab), this is usually unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you 
-do not know how to configure ssh keys, I included a small ssh key how-to [here](../Ansible-On-Pi-Cluster#ssh) in [a previous post](../Ansible-On-Pi-Cluster). Many of the git guides out there call for creating a `git` user and setting up ssh keys with that user. This is a great idea if multiple people need access to the git repo. However, for my purposes I will use my username, as I will be the only one accessing it (which in my case is a good thing). 
+The *pre* (and somewhat optional) step to is to setup ssh key authentication. If ssh keys are not configured, git will prompt for the password of the repo's host user . When using a git service (ex: Github or Gitlab), this is usually unknown, so ssh keys are required. When rolling your own remote git repo, the password will likely be known. Still, setting up ssh authentication makes the process easier and more secure. If you
+do not know how to configure ssh keys, I included a small ssh key how-to [here](/post/Ansible-On-Pi-Cluster/#ssh) in [a previous post](/post/Ansible-On-Pi-Cluster). Many of the git guides out there call for creating a `git` user and setting up ssh keys with that user. This is a great idea if multiple people need access to the git repo. However, for my purposes I will use my username, as I will be the only one accessing it (which in my case is a good thing).
 
 ### Creating Server Repo
 
@@ -40,7 +40,7 @@ git init --bare
 ```
 
 
-This will initialize the repository inside that directory. The `git init` command is used to create a git repository. The `--bare` option flag tells git to treat it as a bare repository. Bare repositories do not contain a working or checked out copy of the source files. Thus, the plain `git init` command creates a *working* repo, while `git init --bare` is used to create a *sharing(server) repo*. This allows the working repositories of many developers to be synced with the server repo. 
+This will initialize the repository inside that directory. The `git init` command is used to create a git repository. The `--bare` option flag tells git to treat it as a bare repository. Bare repositories do not contain a working or checked out copy of the source files. Thus, the plain `git init` command creates a *working* repo, while `git init --bare` is used to create a *sharing(server) repo*. This allows the working repositories of many developers to be synced with the server repo.
 
 
 ### Cloning Repo
@@ -82,5 +82,5 @@ git commit -m "First push to new Remote"
 git push origin master
 ```
 
-And that's it. Enjoy spinning up and using your own personal git repositories! 
+And that's it. Enjoy spinning up and using your own personal git repositories!
 

@@ -137,7 +137,7 @@ confirmed](https://www.youtube.com/watch?v=MMJoLyrWa7E&feature=youtu.be&t=1260) 
 considering the 2400g, I had to switch to the [MSI B450 Gaming Pro Carbon
 AC](https://www.newegg.com/Product/Product.aspx?Item=N82E16813144188), because
 the Tomahawk didn't have a display output that the integrated graphics could
-properly use with [my UHD monitor](../new-lgud4379b/)'s resolution (I need a
+properly use with [my UHD monitor](/post/new-lgud4379b/)'s resolution (I need a
 display port). When I switched to the 2600, I was able to go back to the
 TOMAHAWK, and funnel the cost savings towards getting my GPU.
 

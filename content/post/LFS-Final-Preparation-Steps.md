@@ -6,7 +6,7 @@ tags   = ["Linux", "LFS",]
 image  = "img/header-images/laptop-screen.jpg"
 +++
 
-Now that the *repeated* setup steps have been defined in [my previous LFS post](http://ryan.himmelwright.net/posts/LFS-Repeated-Setup-Steps/), there are a *few* more preparation steps to complete in order to start building the LFS system. I promise... we will start compiling soon. If all goes well, this should be the last preparation post.
+Now that the *repeated* setup steps have been defined in [my previous LFS post](/posts/LFS-Repeated-Setup-Steps/), there are a *few* more preparation steps to complete in order to start building the LFS system. I promise... we will start compiling soon. If all goes well, this should be the last preparation post.
 
 <!-- more -->
 
@@ -31,7 +31,7 @@ chmod -v a+wt $LFS/sources
 
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/wget-sources-play.png'" style="max-width: 100%;"/>
 </center>
 
 To download all of the source packages at once, download [the LFS wget list](http://www.linuxfromscratch.org/lfs/view/stable-systemd/wget-list):
@@ -51,7 +51,7 @@ It should take a few minutes to download everything (or longer if on a poor conn
 
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/sources-md5-play.png'" style="max-width: 100%;"/>
 </center>
 
 
@@ -79,7 +79,7 @@ LFS is built in two main steps. The first step builds a set of temporary tools t
 mkdir -v $LFS/tools
 ```
 
-Next, we will create a `/tools` symlink to the host system. 
+Next, we will create a `/tools` symlink to the host system.
 
 ```
 ln -sv $LFS/tools /
@@ -87,7 +87,7 @@ ln -sv $LFS/tools /
 
 This enables the tool-chain to be compiled so that it always refers to `/tools`, which ensures that the compiler, assembler, and linker will work in both the first, and second steps of the LFS build.
 
-**Update:** *I did this step wrong the first time (I think it failed), and encountered errors later when trying to run tar. If you encounter issues as well, jump to [my next post](../LFS-SBUs-and-Binutils/) to see how I resolved these issues*
+**Update:** *I did this step wrong the first time (I think it failed), and encountered errors later when trying to run tar. If you encounter issues as well, jump to [my next post](/post/LFS-SBUs-and-Binutils/) to see how I resolved these issues*
 
 ### Adding the LFS User
 Running a system as root is a dangerous. Running the wrong command can completely obliterate a system, and having a typo bork the LFS build, or even the host system, would be horrific. To prevent this, the book recommends creating an unprivileged user to build the packages from. To do so, first create an *lfs* group and then create + add a *lfs* user to it using the commands (as root, ironic for this section...):
@@ -96,7 +96,7 @@ Running a system as root is a dangerous. Running the wrong command can completel
 groupadd lfs
 useradd -s /bin/bash -g lfs -m -k /dev/null lfs
 ```
-If you are not familiar with the *useradd* command, then [*RTFM*](https://en.wikipedia.org/wiki/RTFM) by typing `man useradd`. I'm just kidding (although reading the man pages is never a bad idea). Here is a quick summary of what all of the flags mean. 
+If you are not familiar with the *useradd* command, then [*RTFM*](https://en.wikipedia.org/wiki/RTFM) by typing `man useradd`. I'm just kidding (although reading the man pages is never a bad idea). Here is a quick summary of what all of the flags mean.
 
 - `-s /bin/bash` sets our *lfs* user's default shell to *bash*
 - `-g lfs` adds the user to the *lfs* group that was created in the previous command
@@ -104,7 +104,7 @@ If you are not familiar with the *useradd* command, then [*RTFM*](https://en.wik
 - `-k /dev/null` changes the input direction to the special null device to prevent the copying of files from a skeleton directory
 - lastly, `lfs` is the new user's name.
 
-Before logging into the user, the password must be set. 
+Before logging into the user, the password must be set.
 
 ```
 passwd lfs
@@ -131,26 +131,26 @@ su - lfs
 *Note: the "-" tells su to start a login shell, rather than a non-login shell. This mostly ensures that various files are read at login to setup environment variable and other profiles.*
 
 ### Setting up the Build Environment
-Now with the *lfs* user created, we need to setup a proper working environment for that user. To do this, we will create the `.bash_profile` and `.bashrc` files. 
+Now with the *lfs* user created, we need to setup a proper working environment for that user. To do this, we will create the `.bash_profile` and `.bashrc` files.
 
 ##### Creating .bash_profile
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bash-profile.png'" style="max-width: 100%;"/>
 </center>
 
 When logging in as the *lfs* user, the shell first reads the `/etc/profile` of the host, followed by the `.bash_profile`. So, lets start with the `.bash_profile`. Create/open `.bash_profile` and add the following line to it:
 
 ```
 exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
-``` 
+```
 
 This line replaces the running shell with a new one that contains a completely empty environment, except the *HOME*, *TERM*, *PS1* variables. This ensures that there are no stray environment variables, that may interfere with the build environment.
 
 ##### Creating .bashrc
 
 <center>
-<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png" name="pic" onmouseover="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.gif'" onmouseout="this.src='../../img/posts/LFS-Final-Preparation-Steps/set-bashrc.png'" style="max-width: 100%;"/>
 </center>
 
 The new instance of this the shell is a non-login shell, so it does not read the `/etc/profile` or `.bash_profile` files. However, it does read the `.bashrc, so lets go ahead and create that. Open `~/.bashrc` and add the following lines:

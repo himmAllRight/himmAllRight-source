@@ -74,7 +74,7 @@ I got used to it in no time:
 ### Updates
 
 I ran some updates that I thought *might* be problematic, based
-on [previous issues](../back-on-arch/#fedora) I've encountered with Fedora. I
+on [previous issues](/post/back-on-arch/#fedora) I've encountered with Fedora. I
 made sure to note the results as well. The first notable update was from the
 first time I updated the kernel, and the second was  upgrading from
 Fedora 25 to 26. Both updates went very smoothly without any issues:
