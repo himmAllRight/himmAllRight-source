@@ -86,6 +86,6 @@ I have a confession. So, you know how I have been fun and cheery by anthropomorp
 sudo eopkg it ansible
 ```
 
-I used `eopkg` because I am currently running [Solus](https://solus-project.com). You might use `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distro you are using.
+I used `eopkg` because I am currently running [Solus](https://getsol.us). You might use `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distro you are using.
 
 That's all for *setting up* Ansible. I'll cut this post off here, but in the next post, I'll walk through the steps on how to get Ansible to be useful.

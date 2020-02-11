@@ -17,7 +17,7 @@ For awhile, I have been debating the idea of switching back to Fedora (from Solu
 *The Solus (Left) and Fedora (right) Project Logos*
 
 
-The first phrase stated on the [Solus Project homepage](https://solus-project.com) is "Solus is an operating system that is designed for **home computing**." I find this to be true, and Solus does a great job at it. The Linux community needs a few good, focused, distros. While I have been using Solus for my "*home*" computing, the computing tasks I've focused on recently do not fall into the category of standard *home computing* use. Recently, my main top computing activities and goals are:
+The first phrase stated on the [Solus Project homepage](https://getsol.us) is "Solus is an operating system that is designed for **home computing**." I find this to be true, and Solus does a great job at it. The Linux community needs a few good, focused, distros. While I have been using Solus for my "*home*" computing, the computing tasks I've focused on recently do not fall into the category of standard *home computing* use. Recently, my main top computing activities and goals are:
 
 - Writing (okay... but still)
 - Running all sorts of VMs

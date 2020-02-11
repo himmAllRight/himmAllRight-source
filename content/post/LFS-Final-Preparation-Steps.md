@@ -6,7 +6,7 @@ tags   = ["Linux", "LFS",]
 image  = "img/header-images/laptop-screen.jpg"
 +++
 
-Now that the *repeated* setup steps have been defined in [my previous LFS post](/posts/LFS-Repeated-Setup-Steps/), there are a *few* more preparation steps to complete in order to start building the LFS system. I promise... we will start compiling soon. If all goes well, this should be the last preparation post.
+Now that the *repeated* setup steps have been defined in [my previous LFS post](/post/LFS-Repeated-Setup-Steps/), there are a *few* more preparation steps to complete in order to start building the LFS system. I promise... we will start compiling soon. If all goes well, this should be the last preparation post.
 
 <!-- more -->
 
