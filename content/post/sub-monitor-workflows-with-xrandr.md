@@ -49,7 +49,7 @@ desktops](https://en.wikipedia.org/wiki/Virtual_desktop)).
 <div class="caption">I actually wrote most of the draft for this post in i3</div>
 
 Second, when working (especially programming), I often like to use tiling
-window managers ([i3 for example](/post/started-using-i3blocks/)). This lets me
+window managers ( [i3 for example](/post/started-using-i3blocks/) ). This lets me
 *work* without having to manually move around the windows, or even leave my
 keyboard. In tiling window managers, applications tend to open up full screen by
 default, which again... is just obnoxious on such a large display.

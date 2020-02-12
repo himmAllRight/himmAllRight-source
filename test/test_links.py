@@ -10,6 +10,5 @@ def test_md_links(post_md_link):
         url = post_md_link
     else:
         url = BASE_URL + post_md_link.lower()
-
     response = requests.get(url)
     assert response.status_code == 200, f"The link {post_md_link} is broken."

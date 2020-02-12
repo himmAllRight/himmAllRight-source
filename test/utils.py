@@ -50,5 +50,7 @@ def get_md_links(content_dict, regex="\[.*?\]\((.*?)\)"):
         content = content_dict[file].replace("\n", "")
         match_iter = p.finditer(content)
         for match in match_iter:
-            all_links.append(match.group(1))
+            # Regex can't properly match urls with parens in them, so skip.
+            if "(" not in match.group(1):
+                all_links.append(match.group(1))
     return all_links
