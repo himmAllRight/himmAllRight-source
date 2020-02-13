@@ -17,7 +17,7 @@ I have some experience with C++ from my software engineering course I took durin
 
 ## The Plan
 
-In the last few weeks, I have set up and started looking at [Learn C the Hard Way](http://c.learncodethehardway.org/book/). I read the first section or two, but haven't been consistent with working through it.
+In the last few weeks, I have set up and started looking at Learn C the Hard Way. I read the first section or two, but haven't been consistent with working through it.
 
 Now that it is December, I thought I should maybe start a new monthly challenge, or even a "12/25 days till something". I was thinking about things I've been trying to constantly work on the last few months, and C popped into my head. Learn C the Hard Way fits particularly well because it is broken down nicely into small segments that I can maybe commit to being able to finish 1 per day.
 

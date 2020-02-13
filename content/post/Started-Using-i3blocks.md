@@ -109,7 +109,7 @@ Over the past few weeks, it seems to work well enough. As I continued to *tweak*
 <img alt="New Color Scheme for rofi launcher" src="../../img/posts/starting-i3/rofi-run.png" style="max-width: 100%;"/>
 <div id="caption">New color scheme for rofi launcher</div>
 
-When I started using i3 several years ago, I used [dmenu](http://tools.suckless.org/dmenu/) as my launcher (it's the launcher used in [dwm](http://dwm.suckless.org/), another tiling window manager I used to use). I eventually switched to [rofi](https://davedavenport.github.io/rofi/) after seeing it used in some very nice window manager setups (sound familiar?). However, I always used the plain default theme and never bothered to improve it. With all the work I did making i3bars look nice, I thought I should at least make rofi match. Making the color theme wasn't nearly as hard as I anticipated it to be. That's mostly because I found and used the [rofi theme generator](https://davedavenport.github.io/rofi/p11-Generator.html).
+When I started using i3 several years ago, I used [dmenu](http://tools.suckless.org/dmenu/) as my launcher (it's the launcher used in [dwm](http://dwm.suckless.org/), another tiling window manager I used to use). I eventually switched to rofi after seeing it used in some very nice window manager setups (sound familiar?). However, I always used the plain default theme and never bothered to improve it. With all the work I did making i3bars look nice, I thought I should at least make rofi match. Making the color theme wasn't nearly as hard as I anticipated it to be. That's mostly because I found and used the rofi theme generator.
 
 <center>
 <img alt="New rofi window switcher" src="../../img/posts/starting-i3/rofi-window.png" style="max-width: 100%;"/>

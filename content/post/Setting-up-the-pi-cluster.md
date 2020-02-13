@@ -19,7 +19,7 @@ Before doing anything with the hardware, I had to setup the pi "hard drives" (mi
 
 After mucking around with Rapsbian and Hypriot one Sunday, I decided to just go with a plain Ubuntu image for the Raspberry Pis. I don't have anything against these specific OSes, but I am mostly setting up this cluster to simulate what I would do on a "real" system. For me, that often means using a straight OS like Ubuntu.
 
-Luckily, Canonical makes special [Ubuntu ARM images](https://wiki.ubuntu.com/ARM/RaspberryPi), specifically for the Raspberry Pi. I download the 16.04 server version for both the [raspberry pi 2](http://cdimage.ubuntu.com/ubuntu/releases/16.04/release/ubuntu-16.04.2-preinstalled-server-armhf+raspi2.img.xz) and [raspberry pi 3](http://www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz). The process to write these images to the microSD card differs slightly from ones I've used in the past. It still uses `dd`, but the image is first piped through `xzcat`, as such:
+Luckily, Canonical makes special [Ubuntu ARM images](https://wiki.ubuntu.com/ARM/RaspberryPi), specifically for the Raspberry Pi. I download the 16.04 server version for both the raspberry pi 2 and [raspberry pi 3](http://www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz). The process to write these images to the microSD card differs slightly from ones I've used in the past. It still uses `dd`, but the image is first piped through `xzcat`, as such:
 
 
 ```

@@ -31,7 +31,7 @@ was _very_ appealing and I wanted to gain a more experience
 writing emacs lisp, so it seemed like a good choice. Overall,
 org-page was a good learning experience, but I found the documentation
 and support to be lacking. It seemed to be more of a
-[personal project](http://kelvinh.github.io/), rather than a fully supported
+personal project, rather than a fully supported
 framework. while I know other people were able to
 get it working, org-page simply wasn't working for me.
 
