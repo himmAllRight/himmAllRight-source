@@ -6,7 +6,7 @@ image  = "img/posts/back-to-solus/install-header.png"
 tags   = ["Linux", "Solus", "Fedora",]
 +++
 
-Well, that was faster than I expected. This past weekend, I wiped the Fedora installation on my main computer, and replaced it with Solus. My Fedora install broke, and I needed to use a Fedora Live CD to fix it. I thought that if I had to use a live CD to fix the issue, I might as well just do a clean install. With the idea of a clean install in my head... I thought (possibly influenced by my recent [motivation](http://ryan.himmelwright.net/posts/dabbling-with-go/#motivation) to play with Go), that I might as well do the clean install with [Solus](https://getsol.us/)...
+Well, that was faster than I expected. This past weekend, I wiped the Fedora installation on my main computer, and replaced it with Solus. My Fedora install broke, and I needed to use a Fedora Live CD to fix it. I thought that if I had to use a live CD to fix the issue, I might as well just do a clean install. With the idea of a clean install in my head... I thought (possibly influenced by my recent [motivation](/posts/dabbling-with-go/#motivation) to play with Go), that I might as well do the clean install with [Solus](https://getsol.us/)...
 
 <!--more-->
 

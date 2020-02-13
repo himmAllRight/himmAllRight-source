@@ -7,7 +7,7 @@ caption  = "Portland, ME USA"
 tags     = ["Dev", "GO", "Programming",]
 +++
 
-After spending most of this month's dedicated learning time working on [system](http://ryan.himmelwright.net/posts/solus-to-fedora/), [server](http://ryan.himmelwright.net/posts/creating-a-git-remote/), and [network](http://ryan.himmelwright.net/posts/issues-setting-up-ubiquiti-network/) activities,  I have been itching to start some home programming again. To motivate myself, I even considered dabbling with a new programming language... and with very little internal debate, I decided to just [Gopher](https://golang.org) it (I'm so sorry).
+After spending most of this month's dedicated learning time working on [system](/post/solus-to-fedora/), [server](/post/creating-a-git-remote/), and [network](/posts/issues-setting-up-ubiquiti-network/) activities,  I have been itching to start some home programming again. To motivate myself, I even considered dabbling with a new programming language... and with very little internal debate, I decided to just [Gopher](https://golang.org) it (I'm so sorry).
 
 <!--more-->
 

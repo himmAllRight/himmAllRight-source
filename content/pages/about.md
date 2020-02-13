@@ -32,12 +32,12 @@ I am a self-taught learner and continue to study computer science and
 IT topics by working on [personal
 projects](https://github.com/himmAllRight?tab=repositories), taking
 courses, and maintaining my
-[homelab](http://ryan.himmelwright.net/pages/homelab/). This website
+[homelab](/pages/homelab/). This website
 exists to help document the personal projects I work on, and what I've
 learned.
 
 Beyond technology, I love [music](https://bandcamp.com/himmallright),
-[writing](http://ryan.himmelwright.net/post/), the outdoors, and swimming (I
+[writing](/post/), the outdoors, and swimming (I
 competitively swam from the age of 8, through college). I am married to
 Rebecca, a second year [Anaesthesia](https://anesthesia.mc.duke.edu/) resident
 at Duke. We have been together for over 13 years and were married on September

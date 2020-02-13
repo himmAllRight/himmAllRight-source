@@ -15,7 +15,7 @@ Android, and even chromeOS. While I am familiar with using macOS
 (I often used the school Macs in college, and my wife had a Macbook Air
 throughout medical school), it is the one OS I have never tried as my *personal*
 daily driver. After switching to an iPhone and [getting an
-iPad](http://ryan.himmelwright.net/post/getting-an-ipad/) this year... I
+iPad](/post/getting-an-ipad/) this year... I
 decided to give macOS a spin.
 
 <!--more-->

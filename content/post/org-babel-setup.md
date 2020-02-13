@@ -164,7 +164,7 @@ the content, instead of defaulting to the raw org text.
 While I have always maintained my emacs configuration in [my dotfiles
 repo](https://github.com/himmAllRight/dotfiles), org-babel has helped
 me step up my game. My current [dotfile
-system](http://ryan.himmelwright.net/post/new-dotfiles/) has all of my
+system](/post/new-dotfiles/) has all of my
 emacs files in a separate `emacs` folder. On Github, each directory in
 a repo can contain a `README` file (or.... a symlink to *another*
 file...)  to be displayed below the list of files.

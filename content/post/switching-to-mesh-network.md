@@ -20,7 +20,7 @@ coverage throughout the entire house. The real motivator
 ### History
 
 About two years ago, I [replaced my Linksys wifi
-router(s)](http://ryan.himmelwright.net/post/upgrading-network-to-ubiquiti/)
+router(s)](/post/upgrading-network-to-ubiquiti/)
 with the tiny-but-mighty [Ubiquity Edge Router
 X](https://store.ui.com/products/edgerouter-x), paired with an [Ubiqui AP AC
 lite](https://www.ui.com/unifi/unifi-ap-ac-lite/) wifi access point. I loved

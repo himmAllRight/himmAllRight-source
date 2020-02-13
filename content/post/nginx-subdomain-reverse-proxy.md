@@ -37,7 +37,7 @@ port-forwarding.
 <a href="../../img/posts/nginx-reverse-proxy/tangela.png"><img
 src="../../img/posts/nginx-reverse-proxy/tangela.png" style="max-width:
 50%; float: right; margin: 0px 0px 0px 0px;" alt="Example snippet of
-my org-babel config.org file" /></a> 
+my org-babel config.org file" /></a>
 
 ## Setup Server
 
@@ -45,7 +45,7 @@ my org-babel config.org file" /></a>
 
 To get started, configure a server/container/droplet that will host
 nginx. I'm using a CentOS 7 minimal install VM on
-[Nintales](http://ryan.himmelwright.net/pages/homelab/#ninetales) (my
+[Nintales](/pages/homelab/#ninetales) (my
 home server). I don't have a bunch of traffic (well, I *shouldn't*), so I'm
 just giving it 1 core and 512MB RAM.
 
@@ -54,7 +54,7 @@ just giving it 1 core and 512MB RAM.
 
 ### Setup Nginx
 
-Next, it's time to setup and install Nginx.  
+Next, it's time to setup and install Nginx.
 
 *Note*: the rest of the post will be focused on using a CentOS 7 base,
 since that is what I am using. Adjust for your distro accordingly.
@@ -74,7 +74,7 @@ sudo systemctl reload firewalld
 
 Start and enable nginx:
 
-```bash 
+```bash
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
@@ -94,7 +94,7 @@ proceeding:
 include /etc/nginx/conf.d/*.conf;
 ```
 That line basically states that any *.conf file inside the `/etc/nginx/conf.d/`
-directory will also be loaded and used by nginx. This allows us to add our own configuration file in the next step. 
+directory will also be loaded and used by nginx. This allows us to add our own configuration file in the next step.
 
 ## Configure Proxy
 
@@ -161,7 +161,7 @@ CentOS and it may be an issue with SELinux. It was.
 One "*fix*" is to just disable SELinux. A *better* solution is to use
 setools to allow the http connections:
 
-```bash 
+```bash
 sudo yum install -y setools
 setsebool -P httpd_can_network_connect true
 ```

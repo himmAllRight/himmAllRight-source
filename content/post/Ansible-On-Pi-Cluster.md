@@ -6,7 +6,7 @@ image  = "img/header-images/pi-board.jpg"
 tags = ["Homelab", "Cluster", "Pi", "DevOps", "Ansible", "SSH",]
 +++
 
-In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-cluster/), I pieced together my [pi cluster](http://ryan.himmelwright.net/pages/homelab/#cluster), and installed variations of Ubuntu 16.04 Server on each of its nodes. With the cluster built, I quickly needed an easy way to maintain and interact with the system as a whole. This, is where [Ansible](https://www.ansible.com/) comes in. In this post, I will walk through the steps I took to setup Ansible on my Cluster.
+In my [previous post](/post/Setting-up-the-pi-cluster/), I pieced together my [pi cluster](/pages/homelab/#cluster), and installed variations of Ubuntu 16.04 Server on each of its nodes. With the cluster built, I quickly needed an easy way to maintain and interact with the system as a whole. This, is where [Ansible](https://www.ansible.com/) comes in. In this post, I will walk through the steps I took to setup Ansible on my Cluster.
 
 <!--more-->
 

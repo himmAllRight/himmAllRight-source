@@ -38,7 +38,7 @@ image: img/header-images/park-books.jpg
 
 ### Setting up an RSS Feed
 
-It turns out that [Hugo ships with its own RSS 2.0 template](https://gohugo.io/templates/rss/) by default. When I first saw this, I thought that I may still have to dash off a layout or markdown page for the feed, but even that was unnecessary. Each "content" section (*ex: post or pages*) has an RSS automatically generated at `/section-name/index.rss`. I don't need a feed for my static pages, so I just found the [feed for my posts](http://ryan.himmelwright.net/post/index.xml). To make it easily accessible, I added a menu link.  Without a defined markdown file for the rss feed page, I needed another way to add to the navigation menu. I accomplished this by adding the following code to the bottom of my `config.toml` file:
+It turns out that [Hugo ships with its own RSS 2.0 template](https://gohugo.io/templates/rss/) by default. When I first saw this, I thought that I may still have to dash off a layout or markdown page for the feed, but even that was unnecessary. Each "content" section (*ex: post or pages*) has an RSS automatically generated at `/section-name/index.rss`. I don't need a feed for my static pages, so I just found the [feed for my posts](/post/index.xml). To make it easily accessible, I added a menu link.  Without a defined markdown file for the rss feed page, I needed another way to add to the navigation menu. I accomplished this by adding the following code to the bottom of my `config.toml` file:
 
 ```yaml
 [[menu.main]]
