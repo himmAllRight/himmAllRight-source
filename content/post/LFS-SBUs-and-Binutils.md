@@ -28,7 +28,7 @@ For example, systems with multiple cores can run "parallel make" using the `-j` 
 ### My Encountered Issues with tar...
 
 <img alt="Tar issues" src="../../img/posts/LFS-SBUs-Binutils/tar-error.png" style="max-width: 100%;"/>
- 
+
 The first time I attempted to make binutils, I encountered a few errors. The gist of it was that I was not able untar the package correctly, at least from the *lfs* user. Everything worked fine from the *root* or even *ryan* user accounts, but running tar on *lfs* returned the following error:
 
 ```
@@ -37,7 +37,7 @@ tar (child): Error is not recoverable: exiting now
 tar: Child returned status 2
 tar: Error is not recoverable: exiting now
 ```
-I searched around but much of the initial advice didn't help my problem. It often indicated that my /usr/bin/bzip2 might be a symlink and should be altered. That wasn't the case. Then tried something that illuminated the issue: I removed the `/tools/bin` from the begging of the `path` variable (defined in the *lfs* `.bashrc` file). That temporarily fixed the issues. So I knew the problem was related to the symlink I setup in [the previous LFS post](../LFS-Final-Preparation-Steps), specifically the `ln -sv $LFS/tools /` command. It must have failed and I wasn't paying attention.
+I searched around but much of the initial advice didn't help my problem. It often indicated that my /usr/bin/bzip2 might be a symlink and should be altered. That wasn't the case. Then tried something that illuminated the issue: I removed the `/tools/bin` from the begging of the `path` variable (defined in the *lfs* `.bashrc` file). That temporarily fixed the issues. So I knew the problem was related to the symlink I setup in [the previous LFS post](/post/LFS-Final-Preparation-Steps), specifically the `ln -sv $LFS/tools /` command. It must have failed and I wasn't paying attention.
 
 Now that I was knew what the problem was, I was able to fix it by running the following commands (some of them might need to be run from a *root/sudo* account):
 
@@ -77,7 +77,7 @@ cd build
 ### Making & Executing a Build Script
 
 <center>
-<img src="../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-script-start-play.png'" style="max-width: 100%;"/>
 </center>
 
 Now it is time to build. Normally, this would best be done by sequentially performing a series of *configure*, *make*, and *make install* commands, but for the first binutils compilation, we want to get an accurate reading on how long it takes (to determine our SBU time). To accomplish this easily, I put all of the commands into a bash script. This way, I could execute the script, and easily time the whole process using the `time` utility. To create the script, I wrote the following commands into a file (`build-binutils.sh`):
@@ -112,13 +112,13 @@ The various options of the `configure` command mean the following:
 
 Also, the `case` statement creates a symlink to ensure the sanity of the tool chain, if building on a *x86_64* architecture.
 
-To runs the script, first make it executable, 
+To runs the script, first make it executable,
 
 ```
 chmod +x build-binutils.sh
 ```
 
-Finally, time and execute the script: 
+Finally, time and execute the script:
 
 ```
 time ./build-binutils.sh
@@ -131,7 +131,7 @@ Once I had my standard single-thread SBU value, I wanted to do a run with the `-
 ### Checking the Build
 
 <center>
-<img src="../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png" name="pic" onmouseover="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check.gif'" onmouseout="this.src='../../img/posts/LFS-SBUs-Binutils/binutils-check-play.png'" style="max-width: 100%;"/>
 </center>
 
 After the build is complete, it is a good idea to run the tests, *especially* for binutils. In this case, use the make command:

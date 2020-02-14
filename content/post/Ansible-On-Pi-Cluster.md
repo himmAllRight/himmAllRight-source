@@ -6,7 +6,7 @@ image  = "img/header-images/pi-board.jpg"
 tags = ["Homelab", "Cluster", "Pi", "DevOps", "Ansible", "SSH",]
 +++
 
-In my [previous post](http://ryan.himmelwright.net/posts/Setting-up-the-pi-cluster/), I pieced together my [pi cluster](http://ryan.himmelwright.net/pages/homelab/#cluster), and installed variations of Ubuntu 16.04 Server on each of its nodes. With the cluster built, I quickly needed an easy way to maintain and interact with the system as a whole. This, is where [Ansible](https://www.ansible.com/) comes in. In this post, I will walk through the steps I took to setup Ansible on my Cluster.
+In my [previous post](/post/Setting-up-the-pi-cluster/), I pieced together my [pi cluster](/pages/homelab/#cluster), and installed variations of Ubuntu 16.04 Server on each of its nodes. With the cluster built, I quickly needed an easy way to maintain and interact with the system as a whole. This, is where [Ansible](https://www.ansible.com/) comes in. In this post, I will walk through the steps I took to setup Ansible on my Cluster.
 
 <!--more-->
 
@@ -35,9 +35,9 @@ I repeated this on each of the nodes, and afterwards was no longer promted for a
 
 <a name="ssh"></a>
 ## Setup SSH Keys
-Well... *almost* happy. 
+Well... *almost* happy.
 
-Ansible's main method of communication is via ssh, which by default, prompts me for a password when connecting. Ansible *really* hates passwords. So, I had to configure ssh to use keys instead. Honestly, this is proabaly a good step to do regardless, now that the `ryan` account no longer uses a password when running `sudo`. To setup key-based logins, I appended the contents of my [main computer](../../pages/homelab/#alakazam)'s ssh public key*, to each pi's `authorized_keys` file. This can all be done using a magic one-line pipe command (x3, one for each pi):
+Ansible's main method of communication is via ssh, which by default, prompts me for a password when connecting. Ansible *really* hates passwords. So, I had to configure ssh to use keys instead. Honestly, this is proabaly a good step to do regardless, now that the `ryan` account no longer uses a password when running `sudo`. To setup key-based logins, I appended the contents of my [main computer](/pages/homelab/#alakazam)'s ssh public key*, to each pi's `authorized_keys` file. This can all be done using a magic one-line pipe command (x3, one for each pi):
 
 ```
 cat ~/.ssh/id_rsa.pub | ssh pi0 "cat >> ~/.ssh/authorized_keys"
@@ -64,11 +64,11 @@ sudo systemctl restart sshd
 
 Afterwards, I was unable to login to the PIs from a computer with unauthorized ssh keys.
 
-<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/blocked-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/blocked-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'" style="max-width: 100%;"/>
 
 But, I was still able to loging from the authorized computer.
 
-<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/accepted-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'" style="max-width: 100%;"/> 
+<img src="../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png" name="pic" onmouseover="this.src='../../img/posts/setting-up-ansible-pi-cluster/accepted-ssh-attempt.gif'" onmouseout="this.src='../../img/posts/setting-up-ansible-pi-cluster/terminal-play.png'" style="max-width: 100%;"/>
 
 
 ## Install Python
@@ -86,6 +86,6 @@ I have a confession. So, you know how I have been fun and cheery by anthropomorp
 sudo eopkg it ansible
 ```
 
-I used `eopkg` because I am currently running [Solus](https://solus-project.com). You might use `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distro you are using.
+I used `eopkg` because I am currently running [Solus](https://getsol.us). You might use `sudo apt-get install ansible`, `sudo dnf install ansible`, or `pacaur -S ansible` depending on whatever distro you are using.
 
 That's all for *setting up* Ansible. I'll cut this post off here, but in the next post, I'll walk through the steps on how to get Ansible to be useful.

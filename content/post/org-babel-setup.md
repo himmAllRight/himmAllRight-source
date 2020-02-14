@@ -9,7 +9,7 @@ Comments = "True"
 draft    = false
 +++
 
-In my [previous post](../emacs-update-evil-usepackage/), I completely
+In my [previous post](/post/emacs-update-evil-usepackage/), I completely
 redid my emacs configuration from scratch, building it around the use
 of evil mode and use-package. As I was wrapping up, I learned of yet
 *another* emacs package that wil forever change how I maintain my
@@ -48,7 +48,7 @@ a small header section at the top... because why not?
 #+TITLE: My Emacs Configuration
 #+AUTHOR: Ryan Himmelwright
 #+EMAIL: ryan@himmelwright.net
-#+OPTIONS: num:nil 
+#+OPTIONS: num:nil
 ```
 
 After that, I broke down my file by creating org headings for the
@@ -72,7 +72,7 @@ org text, and wrapped the `emacs-lisp` inside an org code block.
 To create a code block, use the `#+BEGIN_SRC emacs-lisp` and
 `#+END_SRC` org tags to encapsulate the `emacs-lisp` code. Continue to
 do this until all of the desired emacs-lisp code is contained inside
-org code blocks. 
+org code blocks.
 
 
 
@@ -164,7 +164,7 @@ the content, instead of defaulting to the raw org text.
 While I have always maintained my emacs configuration in [my dotfiles
 repo](https://github.com/himmAllRight/dotfiles), org-babel has helped
 me step up my game. My current [dotfile
-system](http://ryan.himmelwright.net/post/new-dotfiles/) has all of my
+system](/post/new-dotfiles/) has all of my
 emacs files in a separate `emacs` folder. On Github, each directory in
 a repo can contain a `README` file (or.... a symlink to *another*
 file...)  to be displayed below the list of files.
@@ -181,7 +181,7 @@ markdown.</div>
 In the emacs section of my dotfiles, I have created a symlink,
 `README.org`, to my `config.org` file:
 
-```bash 
+```bash
 sudo ln -s config.org README.org
 ```
 

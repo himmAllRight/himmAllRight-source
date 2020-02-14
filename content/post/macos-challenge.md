@@ -15,7 +15,7 @@ Android, and even chromeOS. While I am familiar with using macOS
 (I often used the school Macs in college, and my wife had a Macbook Air
 throughout medical school), it is the one OS I have never tried as my *personal*
 daily driver. After switching to an iPhone and [getting an
-iPad](http://ryan.himmelwright.net/post/getting-an-ipad/) this year... I
+iPad](/post/getting-an-ipad/) this year... I
 decided to give macOS a spin.
 
 <!--more-->
@@ -144,8 +144,7 @@ I hate talking on the phone. Oddly
 
 Overall, I'd say this challenge was a success. In fact, it was so successfull,
 that I'm actually writing up this post on a new [base model 16" MacBook
-Pro](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.6-six-core-16-2019-scissor-specs.html)
-(but more on *that* at another time).
+Pro](/post/new-2019-16inch-mbp/) (but more on *that* at another time).
 
 *[ Well, I'm really writing it on my desktop, but from the macbook pro ;) ]*
 

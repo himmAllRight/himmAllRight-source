@@ -1,13 +1,13 @@
 +++
-title   = "LIA 1.0 Beta Released" 
-date    = "2017-04-17" 
-author  = "Ryan Himmelwright" 
+title   = "LIA 1.0 Beta Released"
+date    = "2017-04-17"
+author  = "Ryan Himmelwright"
 tags    = ["Dev", "Python", "Ledger",]
 caption = "World's End, Hingham, MA USA"
 image   = "img/header-images/worlds-end-rocks.jpg"
 +++
 
-I have released the 1.0 Beta version for a personal project of mine: the **L**edger **I**mport **A**ssistant, or [LIA](https://github.com/himmALlRight/LIA/). This post will talk briefly about the background of LIA, what it does, and explain the beta release. 
+I have released the 1.0 Beta version for a personal project of mine: the **L**edger **I**mport **A**ssistant, or [LIA](https://github.com/himmALlRight/LIA/). This post will talk briefly about the background of LIA, what it does, and explain the beta release.
 <!--more-->
 
 ## What is LIA?
@@ -16,7 +16,7 @@ I have released the 1.0 Beta version for a personal project of mine: the **L**ed
 
 *Example Cred Card Statement CSV File*
 
-A while ago, I discovered [Ledger](http://www.ledger-cli.org), the command line double-entry accounting application. Its powerful, yet simple design attracted me, and I wanted to try it out. To use it effectively however, I needed a method to import our bank and credit card statements into ledger journals. Then, I could use ledger to analyze the finances. However, there was an issue. While there are several great ledger convert/import options out there, many were more complicated than what I was looking for. So...I wrote my own. 
+A while ago, I discovered [Ledger](http://www.ledger-cli.org), the command line double-entry accounting application. Its powerful, yet simple design attracted me, and I wanted to try it out. To use it effectively however, I needed a method to import our bank and credit card statements into ledger journals. Then, I could use ledger to analyze the finances. However, there was an issue. While there are several great ledger convert/import options out there, many were more complicated than what I was looking for. So...I wrote my own.
 
 <img alt= "Example Ledger Journal File" src="../../img/posts/LIA-1-0-Beta-Released/ledger-journal.png" style="max-width: 100%;"/>
 
@@ -32,7 +32,7 @@ When I started writing LIA, I just wanted a python script that could help me con
 LIA executes the core functionality that originally prompted me to write it: converting bank/credit card statement csv files into ledger journal files. Beyond that basic functionality,  LIA has a few nice features that help the user manually convert these files in an enjoyable way. By going through each transaction manually, the user has full control to make sure data is being input correctly. However, LIA helps make this otherwise dull process fast and efficient. Some of LIA's features that help accomplish this are:
 
 - Data order is recognized by a header mechanism
-- Prompts the user to potentially edit the transaction information 
+- Prompts the user to potentially edit the transaction information
 - Sets default transaction information from the values of the csv file
 - Manual transaction entries when needed (No input file)
 - Supports multiple destination accounts
@@ -55,4 +55,4 @@ The main functionality of LIA has been implemented for a while now. Being a pyth
 Sort of. Until now, I have been developing, but not using LIA day to day. I want to spend some time actually *using* the application to see if there are any remaining issues. Also, I have not confirmed that it fully does what is needed for ledger. I want to get a few ledger users to quickly look at it and let me know if they see any issues. After testing it for a bit, I will release it as the official 1.0 release. This will mean it should be stable enough for people to use, if they so choose to.
 
 ## More Information
-To test out LIA, read some documentation, or find out more  [check it out](https://github.com/himmAllRight/lia/) on [my github page](https://github.com/himmAllRight). I plan to continue to develop it further in the future. If you have a suggestion, or even some code you'd like to contribute, feel free to let me know, either on github or my [other contact methods](../../pages//about/). Enjoy!
+To test out LIA, read some documentation, or find out more  [check it out](https://github.com/himmAllRight/lia/) on [my github page](https://github.com/himmAllRight). I plan to continue to develop it further in the future. If you have a suggestion, or even some code you'd like to contribute, feel free to let me know, either on github or my [other contact methods](/pages/about/). Enjoy!

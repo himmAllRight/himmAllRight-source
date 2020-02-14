@@ -177,12 +177,11 @@ of the sub-folders I wanted to sync on my machine.
   workflow, rather than forcing me to make *it be* my workflow.
 
 - **Encrypted Libraries** - When creating a new library, it is possible to
-  make an [encrypted
-  one](https://www.seafile.com/en/help/encrypted_libraries/). These libraries
-  use client-side, end-to-end encryption and require a password. The file
-  *contents* (Note: not directory or file *names*) are encrypted on the client
-  side, and not on the server. This means that even the server admin cannot access the file
-  contents on the server. This is a feature I'd like to see in more applications.
+  make an encrypted one. These libraries use client-side, end-to-end encryption
+  and require a password. The file *contents* (Note: not directory or file
+  *names*) are encrypted on the client side, and not on the server. This means
+  that even the server admin cannot access the file contents on the server.
+  This is a feature I'd like to see in more applications.
 
 <a href="../../img/posts/trying-out-seafile/encrypt-library.png"><img
 src="../../img/posts/trying-out-seafile/encrypt-library.png" style="max-width:
@@ -215,11 +214,8 @@ src="../../img/posts/trying-out-seafile/encrypt-library.png" style="max-width:
 ### Future Plans
 
 To summarize, I have been loving seafile, and I think I have only scratched the
-surface. I haven't even tried playing with features like [History and
-Snapshots](https://www.seafile.com/en/help/snapshot/), [Full Text File
-Search](https://www.seafile.com/en/help/search/), [Sharing
-File](https://www.seafile.com/en/help/share/), or [Locking
-Files](https://www.seafile.com/en/help/file_lock/) yet. My plan is to continue
-experimenting a bit more, and then switch to it as my main syncing system when I
-redo my main server setup in a couple of weeks. If you haven't given seafile a
-try recently, I recommend it.
+surface. I haven't even tried playing with features like History and Snapshots,
+Full Text File Search, or yet. My plan is to continue experimenting a bit more,
+and then switch to it as my main syncing system when I redo my main server
+setup in a couple of weeks. If you haven't given seafile a try recently, I
+recommend it.

@@ -7,7 +7,7 @@ image  = "img/posts/back-on-arch/abra-screen-header.png"
 +++
 
 
-In the last few weeks, I have started my CS masters classes, and needed to setup a productive work environment on my portable laptop ([abra](../../homelab)). Also, while I love Fedora, the Nvidia stuff was being a pain on my main computer ([alakazam](../../homelab)), and I was looking for a replacement there as well. So, after a long, drawn out battle trying nearly all of my favorite Linux distros, I have found myself once again using [Arch Linux](https://www.archlinux.org/) on both of my personal computers.
+In the last few weeks, I have started my CS masters classes, and needed to setup a productive work environment on my portable laptop (abra). Also, while I love Fedora, the Nvidia stuff was being a pain on my main computer (alakazam), and I was looking for a replacement there as well. So, after a long, drawn out battle trying nearly all of my favorite Linux distros, I have found myself once again using [Arch Linux](https://www.archlinux.org/) on both of my personal computers.
 
 <!--more-->
 
@@ -15,15 +15,15 @@ In the last few weeks, I have started my CS masters classes, and needed to setup
 ## From Fedora...
 <img alt="Fedora" src="../../img/posts/back-on-arch/fedora-logo.png" style="max-width: 100%;"/>
 
-When I started my journey, I had Fedora on both of my computers. I really like the [Fedora Project](https://www.getfedora.org) and I think Fedora is a great distribution with a lot of innovative new features. I seems that the Fedora Project is aiming to be the Linux Distro for developers, and I feel that they are really starting to hit that target.
+When I started my journey, I had Fedora on both of my computers. I really like the [Fedora Project](https://getfedora.org) and I think Fedora is a great distribution with a lot of innovative new features. I seems that the Fedora Project is aiming to be the Linux Distro for developers, and I feel that they are really starting to hit that target.
 
 There is one remaining big issue I had while running Fedora on my main computer. Nvidia drivers. They are just a pain to maintain, and kept breaking my system during updates. I know the [RPM Fusion Repos](http://rpmfusion.org/) are supposed to help, but they just aren't there yet. With my classes starting, I needed something that was a bit more stable (and would hopefully support installing VMWare Workstation 9).
 
 <a name="ubuntu"></a>
-## The 'Easy Stability' of Ubuntu-based? 
+## The 'Easy Stability' of Ubuntu-based?
 <img alt="Ubuntu Mate" src="../../img/posts/back-on-arch/ubuntu-mate-logo.png" style="max-width: 100%;"/>
 
-Guided by desires to have a "stable" distro, I decided that the *obvious* answer would be to use an [Ubuntu](http://www.ubuntu.com/)-based distro. So, I went with [Ubuntu Mate](https://ubuntu-mate.org/), based on the _awesome_ work the team has done recently. I've used Ubuntu Mate in the past on several different computers, and in fact, still have it running on [charmander](../../homelab/). I had some issues installing Ubuntu Mate on alakazam for some reason, but using a simple `nomodeset` at boot seemed work.
+Guided by desires to have a "stable" distro, I decided that the *obvious* answer would be to use an [Ubuntu](http://www.ubuntu.com/)-based distro. So, I went with [Ubuntu Mate](https://ubuntu-mate.org/), based on the _awesome_ work the team has done recently. I've used Ubuntu Mate in the past on several different computers, and in fact, still have it running on (charmander). I had some issues installing Ubuntu Mate on alakazam for some reason, but using a simple `nomodeset` at boot seemed work.
 
 After I got it installed, I was able to install the nvidia drivers, but I had other random issues here and there. I also tried installing VMWare, but had issues at every step. To be completely honest, I really wasn't feeling using an Ubuntu distro on alakazam. If I was going to be replacing Fedora, I wanted to make up for it by using something that gave me more power (I've started to get the itch to try out Gentoo again. Spoiler, I am not using Gentoo. At least until my class is over...). While Ubuntu could easily support my needs being the well supported and advanced distro that it is ... I craved something else.
 
@@ -41,9 +41,9 @@ Leap was a solid and extensive distribution. Ultimately though, that was the big
 
 Which brings me to [Antergos](https://antergos.com/). By this point, I was no longer able to hide the fact that I was starting to severely miss many features a distribution like [Arch Linux](https://www.archlinux.org/) provides. I love that you can easily customize just about _anything_. I also appreciate that if I want to try something new, 99% of the time the latest version is already in the official repos or the [AUR](https://aur.archlinux.org/). Additionally, when I am trying a new application, or customizing my setup, the [Arch Wiki](https://wiki.archlinux.org/) has some of _the best documentation_ in the Linux ecosystem. However, I wanted something that I could just install and have working. I didn't feel like going through a full vanilla Arch install. So I installed Antergos. Antergos has a simple but thorough installer that pulls down all the latest packages during the installation. This leaves the user with an up-to-date and _gorgeous_ setup after installation.
 
-Unfortunately, the "simplicity" of Antergos (which is sort of the antithesis to the definition of _simplicity_ in [The Arch Way](https://wiki.archlinux.org/index.php/Arch_Linux#Simplicity)) always seems to bite me in the end. Eventually, _something_ breaks, and I have a hard time figuring out _what_. While it might be a pain to install _everything_ in vanilla Arch, the user _"has a much fuller understanding of his or her system_" as a result. A few years ago, when I first started using Arch, I thought this argument just stupid gray beard nonsense. Now, I appreciate the benefits of this sentiment, and even agree with it (I've also learned to [script](https://github.com/himmAllRight/dotfiles/blob/master/archInstallScript.sh) my post install process, so it is less of a pain :P).
+Unfortunately, the "simplicity" of Antergos (which is sort of the antithesis to the definition of _simplicity_ in [The Arch Way](https://wiki.archlinux.org/index.php/Arch_Linux#Simplicity)) always seems to bite me in the end. Eventually, _something_ breaks, and I have a hard time figuring out _what_. While it might be a pain to install _everything_ in vanilla Arch, the user _"has a much fuller understanding of his or her system_" as a result. A few years ago, when I first started using Arch, I thought this argument just stupid gray beard nonsense. Now, I appreciate the benefits of this sentiment, and even agree with it (I've also learned to script my post install process, so it is less of a pain :P).
 
-After a few days of fighting with Antegeros, I decided to just bite the bullet and install Vanilla Arch. I still think Antegros is a great distribution that works for a bunch of people. It is great for users that want to experience the power of arch Linux, without having to go through all the overhead. Antegeros is actually how I started to learn Arch Linux. Nowadays though, I seem to prefer _simplicity_ of vanilla Arch. 
+After a few days of fighting with Antegeros, I decided to just bite the bullet and install Vanilla Arch. I still think Antegros is a great distribution that works for a bunch of people. It is great for users that want to experience the power of arch Linux, without having to go through all the overhead. Antegeros is actually how I started to learn Arch Linux. Nowadays though, I seem to prefer _simplicity_ of vanilla Arch.
 
 <a name="arch"></a>
 ## All Roads Lead to Arch

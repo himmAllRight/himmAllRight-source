@@ -6,7 +6,7 @@ image  = "img/posts/back-to-solus/install-header.png"
 tags   = ["Linux", "Solus", "Fedora",]
 +++
 
-Well, that was faster than I expected. This past weekend, I wiped the Fedora installation on my main computer, and replaced it with Solus. My Fedora install broke, and I needed to use a Fedora Live CD to fix it. I thought that if I had to use a live CD to fix the issue, I might as well just do a clean install. With the idea of a clean install in my head... I thought (possibly influenced by my recent [motivation](http://ryan.himmelwright.net/posts/dabbling-with-go/#motivation) to play with Go), that I might as well do the clean install with [Solus](solus-project.com/)...
+Well, that was faster than I expected. This past weekend, I wiped the Fedora installation on my main computer, and replaced it with Solus. My Fedora install broke, and I needed to use a Fedora Live CD to fix it. I thought that if I had to use a live CD to fix the issue, I might as well just do a clean install. With the idea of a clean install in my head... I thought (possibly influenced by my recent [motivation](/post/dabbling-with-go/#motivation) to play with Go), that I might as well do the clean install with [Solus](https://getsol.us/)...
 
 <!--more-->
 
@@ -32,6 +32,6 @@ Anyway, I quickly realized that at the very least, I would have to boot up and l
 
 With the Fedora live environment all booted and ready, I started downloading the latest Solus ISO (Budgie) on my other laptop. Once the ISO image was mounted to a drive, I booted it up and started installing Solus. After the install, I immediately updated because I knew there have been a TON of updates since the last ISO snapshot (mid-April). When I rebooted, I absolutely loved what I saw. It is amazing how much Solus and Budgie have improved, even during my short distro-hopping vacation.
 
-Looking at my post history, it may appear as though I used Fedora for a few days, became fed up with it, and came running back to Solus. That is not entirely true. The reality is that I sat on writing my [Fedora post](../solus-to-fedora/) for a long time. I used Fedora for about a month, and it was generally a great experience. If it didn't break, I probably would have stayed for a bit longer. When considering a new install though, I realized that I had missed Solus.
+Looking at my post history, it may appear as though I used Fedora for a few days, became fed up with it, and came running back to Solus. That is not entirely true. The reality is that I sat on writing my [Fedora post](/post/solus-to-fedora/) for a long time. I used Fedora for about a month, and it was generally a great experience. If it didn't break, I probably would have stayed for a bit longer. When considering a new install though, I realized that I had missed Solus.
 
 As of now, my plan is to keep using Solus, at least on my main computer. I am also hoping to get more involved with the project, and start packing up some software again. Maybe I can even help with some debugging and development. We shall see...
