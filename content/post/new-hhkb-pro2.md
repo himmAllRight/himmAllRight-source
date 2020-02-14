@@ -23,7 +23,7 @@ I started using Linux during my senior year of high school. In college, I starte
 
 ## Time for a Mechanical Keyboard
 
-After years of using the standard rubber dome HHKB lite, I wanted to finally switch to a true mechanical keyboard. I searched long and hard, looking at different layouts designs, and learning about the various switch types (mostly the commony [cherry MX switches](https://en.wikipedia.org/wiki/Cherry_(keyboards))). After purchasing and playing with a [switch tester](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=1620), I confirmed that I would likely enjoy MX clear switches best. They are quiet enough I could still reasonably use them in an office, but still had the nice tactile bump that I love (more than what I experienced on the Browns). Additionally, I knew that I wanted to stick with a small, minimalist layout, so I exclusively looked at [60% keyboards](https://deskthority.net/wiki/60%25), with the occasional [40%](https://deskthority.net/wiki/40%25) board catching my eye.
+After years of using the standard rubber dome HHKB lite, I wanted to finally switch to a true mechanical keyboard. I searched long and hard, looking at different layouts designs, and learning about the various switch types (mostly the commony [cherry MX switches](https://en.wikipedia.org/wiki/Cherry_(keyboards))). After purchasing and playing with a switch tester, I confirmed that I would likely enjoy MX clear switches best. They are quiet enough I could still reasonably use them in an office, but still had the nice tactile bump that I love (more than what I experienced on the Browns). Additionally, I knew that I wanted to stick with a small, minimalist layout, so I exclusively looked at [60% keyboards](https://deskthority.net/wiki/60%25), with the occasional [40%](https://deskthority.net/wiki/40%25) board catching my eye.
 
 
 <a href="https://i.ytimg.com/vi/8wjW-Or1jg8/maxresdefault.jpg"><img alt="The Pok3r Keyboard" src="../../img/posts/new-hhkb-pro2/pok3r.jpg" style="max-width: 100%;"/></a>
@@ -42,7 +42,7 @@ After joining, I purchased a soldering kit so that I could construct the keyboar
 
 ## Deciding on the HHKB Pro
 
-With my planck order canceled, and a refund imminent, I started to look at other options again. The main contender was still the Pok3r. I started researching it again and learning about how I could program the layers to have a layout I would like... and eventually realized I just kept re-creating the infamous HHKB layout. 
+With my planck order canceled, and a refund imminent, I started to look at other options again. The main contender was still the Pok3r. I started researching it again and learning about how I could program the layers to have a layout I would like... and eventually realized I just kept re-creating the infamous HHKB layout.
 
 So I started to consider the HHKB again. My main reasons for not getting it originally was that it is a good bit more expensive than the majority of mechanical keyboards on the market. However, after waiting months for the planck, and noticing I kept comparing everything to the HHKB, I realized I would eventually end up with an HHKB anyway, and decided to just go for it now. Decision made.
 
@@ -53,7 +53,7 @@ So I started to consider the HHKB again. My main reasons for not getting it orig
 
 Once I decided on the HHKB, (and it was approved by my wife :P ), I purchased it on Amazon. The one thing I did contemplate about was which color to get. I didn't know if I wanted to get the black or white model. I knew I wanted printed key-caps, and that made the white board very appealing. The printed keys on it look *so crisp*. Eventually, I decided on the dark gray because it matches everything else I own, whereas the white board would drastically stick out.
 
-I placed the order and within a few days, it was on my doorstep (well, the neighbor's, but that's an issue with our post...). 
+I placed the order and within a few days, it was on my doorstep (well, the neighbor's, but that's an issue with our post...).
 
 ## What I like
 
@@ -63,7 +63,7 @@ I placed the order and within a few days, it was on my doorstep (well, the neigh
 As already mentioned, I love they HHKB layout. It was a bit tricky to get accustomed to at first, but that was *several years* ago at this point. The HKKB Pro does have a few difference in layout when compared to the lite version (the pro does not have a bottom left `fn` key, or any dedicated arrow keys). However, I had prepared myself for this change over the last few years by only using the right `fn` key and the `fn` arrow keys. The hardest thing to adjust to was the slightly different sized `alt` and `super` keys on the left (due to the missing `fn` key).
 
 I have learned to appreciate all the little HHKB layout differences. This includes the "delete" by default backspace key, with the `~` key above it, and the `ESC` key next to `1`. Last but not least, **the CTRL in the CAPS location** *(with CAPs still available as `fn` + `Tab`)*. I honestly think this should be the standard keyboard layout.
- 
+
 #### PBT key-caps
 
 I didn't expect the PBT key-caps to be such a big deal, but I absolutely love them. I could tell from images that they would *look* better (especially the white ones), but I didn't anticipate how great they would feel. They are solid, but with a soft touch, and are a *much* better improvement over every keyboard I have previously owned/used.
