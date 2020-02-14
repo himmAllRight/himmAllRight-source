@@ -6,8 +6,8 @@ image   = "img/header-images/st-lucia-cannon.jpg"
 caption = "Fort Rodney, St Lucia"
 tags    = ["Website", "Hugo", "Go",]
 +++
- 
-In my [last post](../website-transition-to-hugo/), I stated that *within a few days*, I would officially generate and publish the website using [Hugo](https://gohugo.io). I then proceeded to publish *that* post using Hugo. Close enough. If I remember correctly, I ended that post listing off a few tasks that I wanted to complete *before* switching the site (oops). Well... they're complete *now*. Here's how.
+
+In my [last post](/post/website-transition-to-hugo/), I stated that *within a few days*, I would officially generate and publish the website using [Hugo](https://gohugo.io). I then proceeded to publish *that* post using Hugo. Close enough. If I remember correctly, I ended that post listing off a few tasks that I wanted to complete *before* switching the site (oops). Well... they're complete *now*. Here's how.
 
 <!--more-->
 
@@ -26,7 +26,7 @@ With the templates made, I  constructed a new `/content/pages/` category, and ad
 title: About
 date: 2017-08-28T09:51:18-04:00
 type: about
-menu : 
+menu :
   main:
     weight: -150
 layout: about-page
@@ -36,9 +36,9 @@ image: img/header-images/park-books.jpg
 ```
 
 
-### Setting up an RSS Feed 
+### Setting up an RSS Feed
 
-It turns out that [Hugo ships with its own RSS 2.0 template](https://gohugo.io/templates/rss/) by default. When I first saw this, I thought that I may still have to dash off a layout or markdown page for the feed, but even that was unnecessary. Each "content" section (*ex: post or pages*) has an RSS automatically generated at `/section-name/index.rss`. I don't need a feed for my static pages, so I just found the [feed for my posts](http://ryan.himmelwright.net/post/index.xml). To make it easily accessible, I added a menu link.  Without a defined markdown file for the rss feed page, I needed another way to add to the navigation menu. I accomplished this by adding the following code to the bottom of my `config.toml` file:
+It turns out that [Hugo ships with its own RSS 2.0 template](https://gohugo.io/templates/rss/) by default. When I first saw this, I thought that I may still have to dash off a layout or markdown page for the feed, but even that was unnecessary. Each "content" section (*ex: post or pages*) has an RSS automatically generated at `/section-name/index.rss`. I don't need a feed for my static pages, so I just found the [feed for my posts](/post/index.xml). To make it easily accessible, I added a menu link.  Without a defined markdown file for the rss feed page, I needed another way to add to the navigation menu. I accomplished this by adding the following code to the bottom of my `config.toml` file:
 
 ```yaml
 [[menu.main]]
@@ -52,9 +52,9 @@ This is how both the `Home` and `Archives` links were already been added to the 
 
 ### Check how the posts display
 
-One task I needed to complete was going through and editing each post. The main issue that requiring a fix, which I [explained in the previous post](../website-transition-to-hugo/#image-size), was that the image tags needed to be switched from markdown to html syntax. While I originally planned to set a `width=100%` parameter for the image tags, I learned that using a `max-width: 100%;` worked much better for my use-case. I know this can be handled in the overall css file, but I like explicitly defining how to handle each image when I write a post.
+One task I needed to complete was going through and editing each post. The main issue that requiring a fix, which I [explained in the previous post](/post/website-transition-to-hugo/#image-size), was that the image tags needed to be switched from markdown to html syntax. While I originally planned to set a `width=100%` parameter for the image tags, I learned that using a `max-width: 100%;` worked much better for my use-case. I know this can be handled in the overall css file, but I like explicitly defining how to handle each image when I write a post.
 
-While editing the posts, I noticed that the [post summaries](../website-transition-to-hugo/#summary-setup) weren't displaying the content that I intended them to. I have hugo configured so that I manually cut off the summary location using a `more` tag in the markdown.But it didn't appear to be doing that.
+While editing the posts, I noticed that the [post summaries](/post/website-transition-to-hugo/#summary-setup) weren't displaying the content that I intended them to. I have hugo configured so that I manually cut off the summary location using a `more` tag in the markdown.But it didn't appear to be doing that.
 
 <a href="../../img/posts/website-switched-to-hugo/summary-fix-spread.png"><img alt="Hugo Logo" src="../../img/posts/website-switched-to-hugo/summary-fix-spread.png" style="width: 100%; float: right; margin: 0px 15px 5px 5px;"/></a>
 
@@ -62,7 +62,7 @@ While editing the posts, I noticed that the [post summaries](../website-transiti
 - *B: The extra content of the post that was included in the summary*.
 - *C: The corrected post summary.*
 
-  
+
 Some of the summaries seemed to extend beyond the cutoff point, still including the next section header, and some of the section's content. After further inspection, I noticed that I had a space on either side of the "more" in the tag. So, I had to go through and delete the extra spaces in each post.
 
 

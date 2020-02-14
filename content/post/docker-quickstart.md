@@ -23,7 +23,7 @@ just a few minutes. Lets get started.
 
 <img src="../../img/posts/docker-quickstart/docker-logo.png" style="max-width: 100%; width: 400px; float: right; margin: 0px 15px 5px 5px;" alt="Docker Logo" />
 
-Installing docker on [Solus](https://solus-project.com) was easy enough. I just
+Installing docker on [Solus](https://getsol.us) was easy enough. I just
 had to install the package, and then enable the service:
 
 ``` bash
@@ -94,7 +94,7 @@ The `inspect` command will dump the xml for all the low level information of the
 container/docker object. The output contains basically *everything* about the
 container: Full ID, time created, state, volumes, network information...
 everything. It can be useful to pipe the output of `inspect` to grep, in order
-to get specific information about the container quickly. 
+to get specific information about the container quickly.
 
 ``` bash
 docker inspect container_name | grep IPAddress
@@ -109,7 +109,7 @@ For example, the above command will grab and return only the lines which contain
 <div class="caption">Using the docker help command flags.</div>
 
 Last but not least, don't forget about the `help` command. To see all the
-available docker commands, run `docker help`. 
+available docker commands, run `docker help`.
 
 Additionally, when using each of those specific commands, (`inspect` for
 example), a description and possible options can be shown using the `--help`
@@ -252,7 +252,7 @@ added benefit that when exiting, only the shell exits, and *not* the entire
 container.
 
 
-## Ports & Volumes 
+## Ports & Volumes
 
 As mentioned earlier, docker containers can be built and run using many specific
 commands to tailor the container and how it interfaces with the host system.
@@ -294,7 +294,7 @@ machine will be directed to the nginx web server inside the container.
 Lastly, by design docker containers are mean to be expendable. They are run, and then
 disposed. It should not be assumed that *any* data inside the container will
 be preserved by default. That is, unless
-[volumes](https://docs.docker.com/storage/volumes/) are used. 
+[volumes](https://docs.docker.com/storage/volumes/) are used.
 
 <a href="../../img/posts/docker-quickstart/docker-volume.png"><img src="../../img/posts/docker-quickstart/docker-volume.png" style="max-width: 100%; float: center;" alt="Creating an nginx container, forwarding port 80 to he host's 8081" /></a>
 <div class="caption">Creating an nginx container, forwarding it's port 80 to the host's port 8081</div>
@@ -304,7 +304,7 @@ runs, and are specified using the `-v` flag. Similar to setting ports, volumes
 can be created by providing either a single path, or two separated by a `:`.
 When a single path is provided, as in `-v /Data`, docker will create a volume
 and bind it to that location within the container. Two locations can be provided
-to bind a directory on the host system, to the volume inside to container. 
+to bind a directory on the host system, to the volume inside to container.
 
 ```
 docker run -d --name testsite -v /home/ryan/testsite/:/usr/share/nginx/html nginx:latest
@@ -316,7 +316,7 @@ directory of the host system, as a volume located at `/usr/share/nginx/html`
 inside the container. This means that the container will server the website
 files, which are located (and can be easily edited), on the host system.
 
-## In Conclusion 
+## In Conclusion
 
 So, this has been... a rather long post. However, when it comes to Docker, this
 *really is just the tip of the iceberg*. With any luck though, you should now

@@ -6,12 +6,12 @@ image  = "img/header-images/cluster-boards.jpg"
 tags   = ["Homelab", "Linux", "Cluster", "Pi", "Devops",]
 +++
 
-I have a Raspberry Pi 2, a Raspberry Pi 3, and a Banana Pi. A while ago, I constructed a small tower to house my pi devices. Since then, I have additionally acquired a power source, and some CAT6 cable to connect them all up to a switch. I hope to use the Pis as a mini clustered environment, where I can learn (and play) with some of the "Devops" technologies/techniques out there. This post will briefly explain the initial setup of [my cluster](../../pages/homelab/#cluster).
+I have a Raspberry Pi 2, a Raspberry Pi 3, and a Banana Pi. A while ago, I constructed a small tower to house my pi devices. Since then, I have additionally acquired a power source, and some CAT6 cable to connect them all up to a switch. I hope to use the Pis as a mini clustered environment, where I can learn (and play) with some of the "Devops" technologies/techniques out there. This post will briefly explain the initial setup of [my cluster](/pages/homelab/#cluster).
 
 <!--more-->
 
 # Setting up the OS Images
-Before doing anything with the hardware, I had to setup the pi "hard drives" (micro SD cards), so they could boot. 
+Before doing anything with the hardware, I had to setup the pi "hard drives" (micro SD cards), so they could boot.
 
 ### Ubuntu for Raspberry PI
 
@@ -19,7 +19,7 @@ Before doing anything with the hardware, I had to setup the pi "hard drives" (mi
 
 After mucking around with Rapsbian and Hypriot one Sunday, I decided to just go with a plain Ubuntu image for the Raspberry Pis. I don't have anything against these specific OSes, but I am mostly setting up this cluster to simulate what I would do on a "real" system. For me, that often means using a straight OS like Ubuntu.
 
-Luckily, Canonical makes special [Ubuntu ARM images](https://wiki.ubuntu.com/ARM/RaspberryPi), specifically for the Raspberry Pi. I download the 16.04 server version for both the [raspberry pi 2](http://cdimage.ubuntu.com/ubuntu/releases/16.04/release/ubuntu-16.04.2-preinstalled-server-armhf+raspi2.img.xz) and [raspberry pi 3](http://www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz). The process to write these images to the microSD card differs slightly from ones I've used in the past. It still uses `dd`, but the image is first piped through `xzcat`, as such:
+Luckily, Canonical makes special [Ubuntu ARM images](https://wiki.ubuntu.com/ARM/RaspberryPi), specifically for the Raspberry Pi. I download the 16.04 server version for both the raspberry pi 2 and [raspberry pi 3](http://www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz). The process to write these images to the microSD card differs slightly from ones I've used in the past. It still uses `dd`, but the image is first piped through `xzcat`, as such:
 
 
 ```
@@ -47,7 +47,7 @@ After adding the "hard drives", I connected each PI to my network switch, via Et
 
 Lastly, plug in the power connectors. Pi devices can be very finicky when not properly powered, so it is a good idea to use an capable USB charging device. I have had trouble in the past with my devices not working correctly due to insufficient power (especially the bpi). I knew this problem would be an even more pronounced with the cluster because I planned to connect a HD to the bpi with a SATA connector. So, I picked up an [Anker Power Port 5](https://www.amazon.com/Anker-Charger-PowerPort-Multi-Port-Samsung/dp/B00VH8ZW02/ref=sr_1_1?ie=UTF8&qid=1493860165&sr=8-1&keywords=Anker+power+port+5) and it has been working great.
 
-Lastly, two nice features of the banana pi is that it has a 1 GB ethernet port, *and* a SATA connector with power. So, to utilize this functionality, and get the most out of the bpi, I ordered [the appropriate SATA connector](https://www.amazon.com/JBtek-Connectors-Banana-Supply-Terminals/dp/B00ZP0L0VS/ref=sr_1_1?ie=UTF8&qid=1493860481&sr=8-1&keywords=banana+pi+sata) from amazon for a few bucks. When it arrived, I connected it to the SATA and SATA power ports on the pi, and then to an old 300GB laptop HD I had laying around (it was the drive that came with [my x230](../my-new-used-x230/)). After the drive was connected, running `lsblk` on the bpi automatically showed a `/dev/sda` device, in addition to the typical `mmcblk0` microSD device. I  mounted the drive to a folder using the following command to test it out:
+Lastly, two nice features of the banana pi is that it has a 1 GB ethernet port, *and* a SATA connector with power. So, to utilize this functionality, and get the most out of the bpi, I ordered [the appropriate SATA connector](https://www.amazon.com/JBtek-Connectors-Banana-Supply-Terminals/dp/B00ZP0L0VS/ref=sr_1_1?ie=UTF8&qid=1493860481&sr=8-1&keywords=banana+pi+sata) from amazon for a few bucks. When it arrived, I connected it to the SATA and SATA power ports on the pi, and then to an old 300GB laptop HD I had laying around (it was the drive that came with [my x230](/post/my-new-used-x230/)). After the drive was connected, running `lsblk` on the bpi automatically showed a `/dev/sda` device, in addition to the typical `mmcblk0` microSD device. I  mounted the drive to a folder using the following command to test it out:
 
 ```
 sudo mount /dev/sda1 Data

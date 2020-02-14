@@ -83,7 +83,7 @@ Macbook Pro</div>
 - **Keyboard** - Well, I’m surprised. I think I actually *really* like it. The
 first few minutes were a little weird, because I was used to the (2014) MacBook
 Air (Also, I had been using [my
-HHKB](http://ryan.himmelwright.net/post/new-hhkb-pro2/) all day). After using
+HHKB](/post/new-hhkb-pro2/) all day). After using
 it for about an hour now, I think it feels close to the air (which I like),
 with *enough* travel. It definitely does not have as much travel as my
 Thinkpads, but it is acceptable. The keys feel like they “pop” as I type on

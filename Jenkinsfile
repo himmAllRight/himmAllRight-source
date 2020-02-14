@@ -25,7 +25,11 @@ pipeline {
         }
         stage("Run Tests") {
             steps {
-                sh 'python3 -m pipenv run pytest -v --junit-xml himmallright-source-test-report.xml .'
+                sh '''
+                    set +e
+                    python3 -m pipenv run pytest -v --junit-xml himmallright-source-test-report.xml .
+                    set -e
+                '''.stripIndent()
             }
         }
         stage("Collect Test Resuts") {

@@ -8,7 +8,7 @@ tags   = ["Website", "Cryogen", "Clojure",]
 Ever since resurrecting my personal website, I have experimented with several
 static website generators. Thus far, I have tried
 [org-page](https://github.com/kelvinh/org-page),
-[Jekyll](http://jekyllrb.com/) (_several_ times), and even (almost) made 
+[Jekyll](http://jekyllrb.com/) (_several_ times), and even (almost) made
 [my own emacs org-page solution](https://github.com/himmAllRight/ryBlog/blob/master/org-blog.el). Now that I have
 started using the [clojure](http://clojure.org/) programming language, I have come across
 [cryogen](http://cryogenweb.org/). As you may have already guessed, this site is now
@@ -31,8 +31,8 @@ was _very_ appealing and I wanted to gain a more experience
 writing emacs lisp, so it seemed like a good choice. Overall,
 org-page was a good learning experience, but I found the documentation
 and support to be lacking. It seemed to be more of a
-[personal project](http://kelvinh.github.io/), rather than a fully supported
-framework. while I know [other people](http://cmacr.ae/) were able to
+personal project, rather than a fully supported
+framework. while I know other people were able to
 get it working, org-page simply wasn't working for me.
 
 
@@ -79,7 +79,7 @@ really enjoyed it. However, I have recently become frusterated using
 Jekyll (again). It is a great static website generator, but because I
 don't often develop in Ruby (right now), setting up the proper ruby
 gems environment and dependencies on
-[my computers](../../pages/homelab/) makes me want to bang my head against
+[my computers](/pages/homelab/) makes me want to bang my head against
 the wall. Additionally, I have been learning
 [clojure](http://clojure.org/) and while digging through different
 clojure projects, I found [cryogen](http://cryogenweb.org/).

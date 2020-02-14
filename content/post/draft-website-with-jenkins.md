@@ -25,8 +25,8 @@ website. Here is how that idea was Instantiated...
 src="../../img/posts/draft-website-jenkins/jenkins-logo.png" style="max-width:
 50%; float: left; margin: 0px 12px 0px 0px;" alt="Jenkins Logo" /></a>
 
-I have previously [described](../website-transition-to-hugo/) how my
-website is [currently generated](../website-switched-to-hugo/), using
+I have previously [described](/post/website-transition-to-hugo/) how my
+website is [currently generated](/post/website-switched-to-hugo/), using
 the [Hugo](https://gohugo.io) static website generator. To organize
 this system, I have two git repos: One that consists of all the hugo
 source files (where I write content), and one that contains the
@@ -50,7 +50,7 @@ src="../../img/posts/draft-website-jenkins/mr-mime.png" style="max-width:
 I had previously created a dedicated Jenkins server on my home network
 (Mr. Mime), using a CentOS 7 VM hosted on my home server. However, any
 Jenkins setup should work for this project (including a [docker
-container](on my home network)). To get started, checkout the [Jenkins
+container](https://hub.docker.com/_/jenkins/)). To get started, checkout the [Jenkins
 Website](https://jenkins.io/download/), and be sure to take advantage
 of the [the documentation](https://jenkins.io/doc/) for help.
 

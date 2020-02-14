@@ -6,16 +6,16 @@ image   = "img/header-images/st-lucia-fort1.jpg"
 caption = "Fort Rodney, St Lucia"
 tags    = ["Website", "Hugo", "Cryogen", "Go",]
 +++
- 
+
  While I have loved using [Cryogen](http://cryogenweb.org) to create this website for over a year and a half now, I have started the transition to using another static website generator. Specifically, I have been experimenting with [Hugo](https://gohugo.io). This post will detail why I am switching, what I have ported over thus far, and what still needs to be completed before generating the official site with hugo.
- 
+
 <!--more-->
- 
+
 ### From Cryogen to Hugo
 
-My departure from Cryogen really has nothing to do with the project itself. It is a prime example of what [clojure](https://clojure.org/) is capable of, and I feel that more people should give it a shot. Recently though, I've been itching to switch up my website's theme a bit. While I fancy my [Immutable Theme](../new-theme-immutable/) I created a couple months ago, it isn't quite doing what I had hoped for. I love dark themes, but the type of posts I've been creating really don't look good with them. I like to add diagrams, code snippets, and images to all of my posts. Diagram posts look wonderful with a white background, but are garbage in a dark theme. This difference was glaring last week as I switched between my markdown editor's preview window (default white theme), and the website's live preview view, while writing my [reverse tunnels](../simple-reverse-ssh-tunnel/) post.
+My departure from Cryogen really has nothing to do with the project itself. It is a prime example of what [clojure](https://clojure.org/) is capable of, and I feel that more people should give it a shot. Recently though, I've been itching to switch up my website's theme a bit. While I fancy my [Immutable Theme](/post/new-theme-immutable/) I created a couple months ago, it isn't quite doing what I had hoped for. I love dark themes, but the type of posts I've been creating really don't look good with them. I like to add diagrams, code snippets, and images to all of my posts. Diagram posts look wonderful with a white background, but are garbage in a dark theme. This difference was glaring last week as I switched between my markdown editor's preview window (default white theme), and the website's live preview view, while writing my [reverse tunnels](/post//simple-reverse-ssh-tunnel/) post.
 
-Similar to the logic I employed earlier this month when [switching back to Solus](../back-to-solus/), I thought that if I was going to scrap my theme and start from scratch, I might as well check out different website generator. I had been keeping an eye on the various site generators, but the one I considered the most (and even dabbled with a bit last month), was [Hugo](https://gohugo.io). 
+Similar to the logic I employed earlier this month when [switching back to Solus](/post/back-to-solus/), I thought that if I was going to scrap my theme and start from scratch, I might as well check out different website generator. I had been keeping an eye on the various site generators, but the one I considered the most (and even dabbled with a bit last month), was [Hugo](https://gohugo.io).
 ### What I've Done So Far
 
 I started the process of transporting my website from cryogen to hugo. So far, my experience with Hugo has been great. Here is what I've done:
@@ -47,7 +47,7 @@ hugo serve -D
 
 #### Setup a Theme and started tweaking it
 
-With the hugo site generated, I wanted to setup a proper theme. After sampling a handful of demo sites from hugo's [theme page](https://gohugo.io/themes/), I decided on the [startbootstrap-clean-theme](https://themes.gohugo.io/startbootstrap-clean-blog/). I've seen it used on other sites, and I think it is a commonly used theme with other site generators. However, it is clean and simple, with a white-background base like I wanted. Additionally, I love having header images for posts and pages. It lets me better personalize the website by exclusively using images I've photographed myself.
+With the hugo site generated, I wanted to setup a proper theme. After sampling a handful of demo sites from hugo's [theme page](https://gohugo.io/themes/), I decided on the startbootstrap-clean-theme. I've seen it used on other sites, and I think it is a commonly used theme with other site generators. However, it is clean and simple, with a white-background base like I wanted. Additionally, I love having header images for posts and pages. It lets me better personalize the website by exclusively using images I've photographed myself.
 
 To get the theme, I cloned it from git:
 
@@ -90,7 +90,7 @@ with post summaries:
             {{ .Summary }}
         </div>
     </p>
-    <p class="post-meta"> 
+    <p class="post-meta">
         <a href="{{ .Permalink }}"> Click to Read More --></a>
     </p>
 </div>
@@ -121,7 +121,7 @@ Unfortunately, I immediately noticed that some images in the posts were massive,
 
 #### Made a bunch of header images
 
-After fixing my in-post images, I started to play with post/page header images. I figured out where they were located in the theme, and added two of my own to replace the defaults. I read that a header image can be set with the `image == "..."` option in a post/page's font matter... so I went a little crazy. I stayed up late browsing through some of my photos, and converting them to header images (I did this by shading them a just a tad, so the overlaying text is legible). 
+After fixing my in-post images, I started to play with post/page header images. I figured out where they were located in the theme, and added two of my own to replace the defaults. I read that a header image can be set with the `image == "..."` option in a post/page's font matter... so I went a little crazy. I stayed up late browsing through some of my photos, and converting them to header images (I did this by shading them a just a tad, so the overlaying text is legible).
 
 
 ### What Needs to be Done

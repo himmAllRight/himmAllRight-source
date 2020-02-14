@@ -35,11 +35,10 @@ category, or both. I would also
 
 As I worked on each task, I could quickly add time-stamped notes using the
 built-in [logbook drawer](https://orgmode.org/manual/Drawers.html) shortcut. In
-these notes, I would ramble, or paste a [code
-snippet](https://orgmode.org/manual/Working-with-source-code.html) to save for
-later. As work on each item progressed, I could set the `TODO` status to
-`Working On` `Finished`, `Removed`, or any other state I had pre-defined.
-Eventually, I [wrote an emacs-lisp
+these notes, I would ramble, or paste a code snippet to save for later. As work
+on each item progressed, I could set the `TODO` status to `Working On`
+`Finished`, `Removed`, or any other state I had pre-defined.  Eventually, I
+[wrote an emacs-lisp
 script/package](https://github.com/himmAllRight/ry-org-scrum) that took the
 `todo` items in my `org` file, and dumped them into a SCRUM board at the top of
 the file.

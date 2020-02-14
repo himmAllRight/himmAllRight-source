@@ -21,12 +21,11 @@ Here's why.
 
 ## The Issue
 
-Due to a NVIDIA Quadro M1000M in my [lenovo
-P50](https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-p/ThinkPad-P50/p/22TP2WPWP50)
-work laptop, I've been using Gnome with Wayland, because that combination seems
-to have the least amount of annoying trade-offs. While doing a system refresh,
-I figured I would see if things are any different with a clean Fedora 31 Plasma
-install (they weren't, but that's beyond this post).
+Due to a NVIDIA Quadro M1000M in my lenovo P50 work laptop, I've been using
+Gnome with Wayland, because that combination seems to have the least amount of
+annoying trade-offs. While doing a system refresh, I figured I would see if
+things are any different with a clean Fedora 31 Plasma install (they weren't,
+but that's beyond this post).
 
 <center>
 <a href="/img/posts/fedora-kde-tb3/gnome-tb3-settings.png">

@@ -133,14 +133,14 @@ running.
 <a href="/img/posts/getting-an-ipad/firetablet.png"><img alt="Amazon Fire Tablet" src="/img/posts/getting-an-ipad/firetablet.png" style="max-width: 100%; width: 300px; float: right; margin: 15px 15px 15px 15px; "/></a>
 
 In contrast to the pixel slate, at the low end of the tablet market was the
-[Amazon Fire Tablet Family](https://www.amazon.com/Amazon-Fire-Tablet-Family/).
-These devices are quite affordable and would work well for anyone that just
-wants to read/watch video on a tablet (especially Amazon content). However, I
-just felt that the Fire tablet might be a bit too limiting for me, as I tend to
-push technology as far as I can.  Beyond that, the cheaper iterations of each
-tablet are the "special offers" ones, which show amazon ads on the tablet. By
-the time I had selected a 10" tablet *without* special offers, the price point
-started approaching (well... almost) another contender... the 2018 iPad.
+Amazon fire tablet family.  These devices are quite affordable and would work
+well for anyone that just wants to read/watch video on a tablet (especially
+Amazon content). However, I just felt that the Fire tablet might be a bit too
+limiting for me, as I tend to push technology as far as I can.  Beyond that,
+the cheaper iterations of each tablet are the "special offers" ones, which show
+amazon ads on the tablet. By the time I had selected a 10" tablet *without*
+special offers, the price point started approaching (well... almost) another
+contender... the 2018 iPad.
 
 ## Why an iPad?
 <a href="/img/posts/getting-an-ipad/ipod-video.png"><img alt="Pocket Logo" src="/img/posts/getting-an-ipad/ipod-video.png" style="max-width: 100%; width: 200px; float: left; margin: 20px 20px 10px 10px;"/></a>

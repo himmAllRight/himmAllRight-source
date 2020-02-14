@@ -53,13 +53,12 @@ even purposefully picked a 1600x900 resolution screen over a FHD one when
 buying her Thinkpad for the same reason.
 
 Lastly, while it is scaled up a bit on a physically larger display, these
-monitors still provide a 2560x1440 resolution. Recently, I have decided that this
-particular resolution, may be the best for productivity , at least in the type
-of workflows I use. I even figured out how to [configure a 2560x1440
-"sub-monitor" on my 43" QHD
-monitor](http://192.168.1.5:1313/post/sub-monitor-workflows-with-xrandr/) when
-I need to _focus_. Having an _actual_ 2560x1440 monitor in the house would be
-wonderful for both my wife's and my own productivity.
+monitors still provide a 2560x1440 resolution. Recently, I have decided that
+this particular resolution, may be the best for productivity , at least in the
+type of workflows I use. I even figured out how to [configure a 2560x1440
+"sub-monitor" on my 43" QHD monitor](/post/sub-monitor-workflows-with-xrandr/)
+when I need to _focus_. Having an _actual_ 2560x1440 monitor in the house would
+be wonderful for both my wife's and my own productivity.
 
 ### Selection
 

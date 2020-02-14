@@ -1,6 +1,6 @@
 +++
 title  = "Creating Tests For This Website: Pages"
-date   = "2020-02-09"
+date   = "2020-02-16"
 author = "Ryan Himmelwright"
 image  = "img/posts/fedora-kde-tb3/leaves.jpeg"
 caption = "Durham, NC"
@@ -114,3 +114,4 @@ Adjust to your package manager accordingly, if needed.
 
 - Wrap it up!
 - Maybe hint at the next post in this serries
+
