@@ -2,29 +2,31 @@
 title  = "Creating Tests For This Website: Pages"
 date   = "2020-02-16"
 author = "Ryan Himmelwright"
-image  = "img/posts/fedora-kde-tb3/leaves.jpeg"
-caption = "Durham, NC"
+image  = "img/posts/creating-website-tests-pages/pnc-arena.jpeg"
+caption = "PNC Arena, Raleigh NC"
 tags   = ["website", "hugo", "dev", "python", "testing"]
 draft  = "True"
 Comments = "True"
 +++
 
-As I grow this website, there are more and more moving parts. More pages, more
-posts, more images, and more links. I've gotten better about breaking work up
-into separate branches (instead of doing everything in `master`), but even that
+As this website grows, there is an increasing amount of complexity. More posts,
+more images, and more links. I've gotten better about breaking work up into
+separate branches (instead of doing everything in `master`), but even that
 isn't enough to ensure everything works as expected when generating this staic
-website. Then it hit me... I could write some simple testing... for my website.
+website. Then it hit me... I could write some simple testing... for my website
+source.
 
 <!--more-->
 
 ## What to Test
 
-When editing a page on this website, or publishing a new post, I often wonder
-"How can I be *sure* everything is working"? I worry if every post file is *actually*
-being served as a web page, or worse... what if a post that isn't *ready* to be
-published is *accidentally* pushed with a website fix? (By the way, this is a
-completely unreasonable fear, given that ALL of my website source files, drafts included are
-publicly hosted on Github. Nonetheless, the fear exists).
+After editing a page, or drafting a new post, I often wonder "how can I be
+*sure* everything will still work when I publish this change"? I worry if every
+post file is *actually* being served as a web page, or worse... what if a post
+that isn't *ready* to be published is *accidentally* pushed with a website fix?
+(By the way, this is a completely unreasonable fear, given that ALL of my
+website source files, drafts included are publicly hosted on Github.
+Nonetheless, the fear exists).
 
 I also wonder if all the images and links I've referenced in my posts over the
 years... still work. However, solving that issue is for another post. In this
