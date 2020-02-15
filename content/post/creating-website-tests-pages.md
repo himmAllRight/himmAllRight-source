@@ -13,24 +13,25 @@ As this website grows, there is an increasing amount of complexity. More posts,
 more images, and more links. I've gotten better about breaking work up into
 separate branches (instead of doing everything in `master`), but even that
 isn't enough to ensure everything works as expected when generating this staic
-website. Then it hit me... I could write some simple testing... for my website
-source.
+website. Then the obvious hit me... I could write some simple testing... for my
+website.
 
 <!--more-->
 
 ## What to Test
 
 After editing a page, or drafting a new post, I often wonder "how can I be
-*sure* everything will still work when I publish this change"? I worry if every
-post file is *actually* being served as a web page, or worse... what if a post
-that isn't *ready* to be published is *accidentally* pushed with a website fix?
-(By the way, this is a completely unreasonable fear, given that ALL of my
-website source files, drafts included are publicly hosted on Github.
-Nonetheless, the fear exists).
+*sure* everything will still work when I publish this change"? I question if
+every post file is *actually* being served as a web page. Or worse... I fear
+that a post that isn't *ready* to be published might *accidentally* get pushed
+with an unrelated website fix.
 
-I also wonder if all the images and links I've referenced in my posts over the
-years... still work. However, solving that issue is for another post. In this
-post, we are going to focus on:
+*(Yes, this is a completely unreasonable fear given that ALL of my
+website source files, drafts included, are publicly hosted on Github.
+Nonetheless, the fear exists)*
+
+As this will likely be a multi-post serries, In this post, we are going to
+focus on:
 
 - Setting up the test environment
 - Building the testing framework
@@ -40,33 +41,89 @@ post, we are going to focus on:
 
 As my website is currently compiled using [hugo](https://gohugo.io), the tests
 will be centered around that framework. However, most of the information can be
-applied to testing most statically generated websites, as they are all quite
-similar.
+applied to testing websites using other static website generators, are they are
+all quite similar.
 
 
 ## Setting up the env
 
 For my test framework, I will be using
-[pytest](https://docs.pytest.org/en/latest/contents.html), and to make all the
-python stuff a bit easier to manage, I will be using
-[pipenv](https://github.com/pypa/pipenv). I also tend to be working on a
-[Fedora](https://getfedora.org) computer, or at least in a Fedora
-[podman](https://podman.io) container, so some of my instructions use `dnf`.
-Adjust to your package manager accordingly, if needed.
+[pytest](https://docs.pytest.org/en/latest/contents.html). To make all the
+python stuff a bit easier to manage, I will also be using
+[pipenv](https://github.com/pypa/pipenv). Lastly, I usually work on a
+[Fedora](https://getfedora.org) computer, VM, or at the very least in a Fedora
+[podman](https://podman.io) container. So, some of my instructions use `dnf`,
+but feel free to adjust to your package manager accordingly.
+
+#### Install `pipenv`
+
+```
+sudo dnf install pipenv
+```
 
 
+#### Install needed packages inside `pipenv shell`
 
-- Install `pipenv`
-- Install needed packages inside `pipenv shell`
+Create a pipenv shell and enter it:
+
+```
+pipenv shell
+```
+
+Install pytest in the shell, and (maybe) `requests`:
+
+```
+pip install pytest requests
+```
 
 
 ## Creating the Test Framework
 
+With the environment setup, we can start building up the test framework. We
+will start by defining come constants, then use those when building some helper
+functions. Lastly, we will use those helper functions to piece together out
+`conftest.py` and `test_pages.py` files.
+
 
 ### Defining Constants
 
-- Create and define the `constants.py` file
-- Maybe only define or partially fill in some of them, and come back later?
+First, lets define some constants we can use throughout our test framework. In
+the future, I might switch these to be optionally set using  CLI arguments, but
+for now... they're just static constant variables defined in a file.
+
+So first, create a new file in the `tests` directory named `constants.py`. In
+that file, lets dump our contants:
+
+```
+BASE_URL = "http://localhost:1313"
+
+SITE_PAGES = ["/", "/pages/about/", "/pages/homelab/"]
+
+POST_DIR = "./content/post/"
+POST_NAMES = [
+    "25-days-of-c",
+    ...
+    <Removed middle of list because it's long>
+    ...
+    "ZFS-Backups-To-LUKS-External",
+]
+```
+
+As you can see, in my `constants.py` file I have 4 constants defined:
+
+- `BASE_URL`: this is the base url for the website when running `hugo serve`.
+    For most, this will default to `http://localhost:1313`, but I have this as
+    a constant because I usually run my `hugo serve` command with the `-b` to
+    change it to an ip address so I can view it from other computers.
+- `SITE_PAGES`: This is the paths that come *after* the baseurl for pages that
+    we well be testing. For example, I want to make sure that my "about me"
+    page is being served, which is at `baseurl/pages/about/`, so
+    `/pages/about/` is one of the values in this constant.
+- `POST_DIR`: This is the directory for where the post *files* are located.
+- `POST_NAMES`: This is a list of the names of the post *files* (without the
+    `.md`)
+
+Add in your values for the variables, and remember to save the file.
 
 ### Writing Some Helper Utility Functions
 
