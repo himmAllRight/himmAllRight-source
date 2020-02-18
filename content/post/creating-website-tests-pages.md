@@ -57,7 +57,7 @@ but feel free to adjust to your package manager accordingly.
 
 #### Install `pipenv`
 
-```
+``` bash
 sudo dnf install pipenv
 ```
 
@@ -66,13 +66,13 @@ sudo dnf install pipenv
 
 Create a pipenv shell and enter it:
 
-```
+```bash
 pipenv shell
 ```
 
 Install pytest in the shell, and (maybe) `requests`:
 
-```
+```bash
 pip install pytest requests
 ```
 
@@ -94,7 +94,7 @@ for now... they're just static constant variables defined in a file.
 So first, create a new file in the `tests` directory named `constants.py`. In
 that file, lets dump our contants:
 
-```
+```python
 BASE_URL = "http://localhost:1313"
 
 SITE_PAGES = ["/", "/pages/about/", "/pages/homelab/"]
@@ -127,9 +127,68 @@ Add in your values for the variables, and remember to save the file.
 
 ### Writing Some Helper Utility Functions
 
-- Create and define the `utils.py` file
-- Define the file helper functions and explain why we will need them
+With those constants defined, we should be ready to write some helper
+functions. These are normal python functions that will be called from tests or
+even test fixture functions.
 
+First, lets create `utils.py`. The helper functions will need to use the
+`listdir`, as well as the `path` functions from the `os` module, in addition to
+the regex functions. So, lets make those imports at the top of the file:
+
+```python
+from os import listdir, path
+import re
+```
+
+#### get_file_paths
+
+Now, lets define our first helper function, `get_file_paths`:
+
+```python
+def get_file_paths(src, extension=None):
+    """Collects the paths of all files of a directory"""
+    file_list = []
+    root_path = path.expanduser(src)
+    for file in listdir(root_path):
+        # If extension provided, check file has that extension
+        if extension:
+            if file.endswith(extension):
+                file_list.append(path.join(root_path, file))
+        # Otherwise, add everything
+        else:
+            file_list.append(path.join(root_path, file))
+    return file_list
+```
+
+When provided a file path (`src`), this function will return a list of all the
+file paths in that directoy. Optionally, the `extension` parameter can be
+supplied to only return files of that extension type (for example, `md`). This
+will be used to grab the paths of all of the website page/post source files.
+
+#### get_file_names
+
+Next, lets define `get_file_names`, which is the same as `get_file_paths` but
+returns just the file *name* rather than the full *path*.
+```python
+def get_file_names(src, extension=None):
+    """Collects the names of all files of a directory"""
+    file_list = []
+    root_path = path.expanduser(src)
+    for file in listdir(root_path):
+        # If extension provided, check file has that extension
+        if extension:
+            if file.endswith(extension):
+                file_list.append(file)
+        # Otherwise, add everything
+        else:
+            file_list.append(file)
+    return file_list
+```
+
+(In fact, the two functions are *so similar*, I'll probably combine the
+functionality into one... for now, please just deal with the redundancy)
+
+... and that's all we need in `utils.py` for now!
 
 ### Conftest
 
