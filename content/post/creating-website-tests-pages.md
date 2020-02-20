@@ -182,6 +182,10 @@ from constants import BASE_URL, SITE_PAGES, POST_DIR, POST_NAMES
 from utils import get_file_names
 ```
 
+The imports include the `os.path()` function, some of the constants we
+defined, and the `get_file_names()` helper function. Oh, And of course
+`pytest` ;) .
+
 ```python
 @pytest.fixture(params=SITE_PAGES)
 def page_url(request):
@@ -189,12 +193,21 @@ def page_url(request):
     return BASE_URL + request.param
 ```
 
+The first fixture, `page_url`, is very basic. It creates a list of all of the
+website pages (not posts), by combining the `BASE_URL` with each of the values
+defined in the `SITE_PAGES` constant. This list will later be used to
+paramaterize a single test across all of the page links.
+
+
 ```python
 @pytest.fixture(params=POST_NAMES)
 def post_url(request):
     """Returns the post urls for testing."""
     return BASE_URL + "/post/" + request.param.lower()
 ```
+
+The next fixture, `post_url` is basically the same as `page_url`, except it
+
 
 ```python
 def non_live_post_urls():
