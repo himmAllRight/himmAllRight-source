@@ -207,7 +207,22 @@ def post_url(request):
 ```
 
 The next fixture, `post_url` is basically the same as `page_url`, except it
+creates a list of all the *posts* using the `POST_NAMES` constant. Again, this
+will be used to expand a single test into many, one for each post.
 
+
+
+```python
+@pytest.fixture(params=non_live_post_urls())
+def non_live_post_url(request):
+    """Returns the url of a non-defined post file"""
+    return BASE_URL + "/post/" + request.param.lower()
+```
+
+Lastly, we have `non_live_post_url` with its accompanying helper function,
+`non_live_post_urls`. This pair creates a list of posts that we have a markdown
+file for in the `/post/` directory, but are *not* listed in the `POST_NAMES`
+constant (so theoretically, not really to be published).
 
 ```python
 def non_live_post_urls():
@@ -220,14 +235,15 @@ def non_live_post_urls():
     return list(non_live_post_names)
 ```
 
-```python
-@pytest.fixture(params=non_live_post_urls())
-def non_live_post_url(request):
-    """Returns the url of a non-defined post file"""
-    return BASE_URL + "/post/" + request.param.lower()
-```
+First, `non_live_post_urls` the list of non-listed post files. That returned
+list is then used in `non_live_post_url` as the `pytest.fixture(params)`
+object, much like `SITE_PAGES` and `POST_NAMES` were for the previous
+fixtures.
+
 
 ### Finally... Some Tests!
+
+Phew. Okay. With *all of that* defined... lets create the first test file.
 
 - Briefly explain how pytest test files work
 - Create and define `test_pages.py`
