@@ -1,6 +1,6 @@
 +++
 title  = "Creating Tests For This Website: Pages"
-date   = "2020-02-16"
+date   = "2020-02-21"
 author = "Ryan Himmelwright"
 image  = "img/posts/creating-website-tests-pages/pnc-arena.jpeg"
 caption = "PNC Arena, Raleigh NC"
@@ -140,31 +140,6 @@ from os import listdir, path
 import re
 ```
 
-#### get_file_paths
-
-Now, lets define our first helper function, `get_file_paths`:
-
-```python
-def get_file_paths(src, extension=None):
-    """Collects the paths of all files of a directory"""
-    file_list = []
-    root_path = path.expanduser(src)
-    for file in listdir(root_path):
-        # If extension provided, check file has that extension
-        if extension:
-            if file.endswith(extension):
-                file_list.append(path.join(root_path, file))
-        # Otherwise, add everything
-        else:
-            file_list.append(path.join(root_path, file))
-    return file_list
-```
-
-When provided a file path (`src`), this function will return a list of all the
-file paths in that directoy. Optionally, the `extension` parameter can be
-supplied to only return files of that extension type (for example, `md`). This
-will be used to grab the paths of all of the website page/post source files.
-
 #### get_file_names
 
 Next, lets define `get_file_names`, which is the same as `get_file_paths` but
@@ -188,17 +163,56 @@ def get_file_names(src, extension=None):
 (In fact, the two functions are *so similar*, I'll probably combine the
 functionality into one... for now, please just deal with the redundancy)
 
-... and that's all we need in `utils.py` for now!
+... and that's all we need in `utils.py`... for now!
 
 ### Conftest
 
-- Create and define the `conftest.py` file
-- Explain briefly what the conftest is
-- Define each of my pytest fixtures, and any helper functions
-  - `page_url`
-  - `post_url`
-  - `non_live_post_url` and `non_live_post_urls` helper function
+Now lets start digging into test-related stuff, by first creating a
+`conftest.py` file. This file will mostly hold the fixtures we will use for our
+tests. In our particular setup, they will gather lists of pages to run multiple
+runs of each test against by using `@pytest.fixture(params)`.
 
+But first, lets import a few things at the top of `conftest.py`:
+
+```python
+import pytest
+from os import path
+
+from constants import BASE_URL, SITE_PAGES, POST_DIR, POST_NAMES
+from utils import get_file_names
+```
+
+```python
+@pytest.fixture(params=SITE_PAGES)
+def page_url(request):
+    """Returns the page urls for testing."""
+    return BASE_URL + request.param
+```
+
+```python
+@pytest.fixture(params=POST_NAMES)
+def post_url(request):
+    """Returns the post urls for testing."""
+    return BASE_URL + "/post/" + request.param.lower()
+```
+
+```python
+def non_live_post_urls():
+    """Returns the urls of md files that should not be live."""
+    all_post_md_names = list(
+        map(lambda name: name.lower().split(".md")[0], get_file_names(POST_DIR))
+    )
+    live_post_names = list(map(lambda name: name.lower(), POST_NAMES))
+    non_live_post_names = set(all_post_md_names).difference(set(live_post_names))
+    return list(non_live_post_names)
+```
+
+```python
+@pytest.fixture(params=non_live_post_urls())
+def non_live_post_url(request):
+    """Returns the url of a non-defined post file"""
+    return BASE_URL + "/post/" + request.param.lower()
+```
 
 ### Finally... Some Tests!
 

@@ -22,6 +22,32 @@ Comments = "True"
 (I accidentally wrote these for the last post before realizing they weren't
 needed for those tests)
 
+#### get_file_paths
+
+Now, lets define our first helper function, `get_file_paths`:
+
+```python
+def get_file_paths(src, extension=None):
+    """Collects the paths of all files of a directory"""
+    file_list = []
+    root_path = path.expanduser(src)
+    for file in listdir(root_path):
+        # If extension provided, check file has that extension
+        if extension:
+            if file.endswith(extension):
+                file_list.append(path.join(root_path, file))
+        # Otherwise, add everything
+        else:
+            file_list.append(path.join(root_path, file))
+    return file_list
+```
+
+When provided a file path (`src`), this function will return a list of all the
+file paths in that directoy. Optionally, the `extension` parameter can be
+supplied to only return files of that extension type (for example, `md`). This
+will be used to grab the paths of all of the website page/post source files.
+
+
 #### get_file_content
 
 Now lets define `get_file_content`. This function will take the file lists
