@@ -334,16 +334,27 @@ pytest -v .
 The `-v` flag runs pytest in *'verbose'* mode, which I like to do as it shows
 the results for each test run, rather than each *file*.
 
-<< Insert Pass tests video >>
+<center>
+<video style="max-width:100%;" controls>
+  <source src="../../img/posts/creating-website-tests-pages/passing-tests.mp4" type="video/mp4">
+</video>
+<div id="caption">Connecting to a remote server's filesystem from the
+file browser in Gnome (Linux)</div>
+</center>
 
 So it looks like all the tests are passing! Lets do a quick check though to
 make sure they work as expected... I'll mark this post with `draft = "False"`,
 but *not* add it to the approved lists, and the test for this page *should*
 fail...
 
-<< Insert failed test video >>
+<center>
+<a href="/img/posts/creating-website-tests-pages/failed-test.png">
+<img alt="Macbook Pro on table" src="/img/posts/creating-website-tests-pages/failed-test.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">The 16" Macbook Pro is a great all in one portable
+workstation</div>
+</center>
 
-Awesome! So, I guess all there is left to do is to finish up this post, so I
+Awesome, it failed! So, I guess all there is left to do is to finish up this post, so I
 can added it to the posts lists and publish it! Stay tuned, as I am not yet
 done setting up tests for my website. This was just step 1 :D .
 
