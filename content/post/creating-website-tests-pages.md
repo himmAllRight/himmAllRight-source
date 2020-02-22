@@ -323,13 +323,27 @@ functions fool you, they should generate over 80 test results when run!
 
 ### Lets Run Some Tests!
 
-- Show how to run tests using `pipenv run` or from `pipenv shell`
-- Run the tests, and show the output
-- Maybe purposely show a failed test as an example
+Finally, we should be able to run the tests. To do so, first ensure that you
+are in the pipenv by running `pipenv shell`, *or* you can run the tests from
+outside the pipenv using `pipenv run`. Next, simply call:
 
+```shell
+pytest -v .
+```
 
-## Conclusion
+The `-v` flag runs pytest in *'verbose'* mode, which I like to do as it shows
+the results for each test run, rather than each *file*.
 
-- Wrap it up!
-- Maybe hint at the next post in this serries
+<< Insert Pass tests video >>
+
+So it looks like all the tests are passing! Lets do a quick check though to
+make sure they work as expected... I'll mark this post with `draft = "False"`,
+but *not* add it to the approved lists, and the test for this page *should*
+fail...
+
+<< Insert failed test video >>
+
+Awesome! So, I guess all there is left to do is to finish up this post, so I
+can added it to the posts lists and publish it! Stay tuned, as I am not yet
+done setting up tests for my website. This was just step 1 :D .
 
