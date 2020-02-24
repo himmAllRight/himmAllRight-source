@@ -18,4 +18,77 @@ and automate it.
 
 <!--more-->
 
+## What I'm Using/Plan
+
+## Jenkinsfile
+### Stages
+#### Setup Deps
+
+```groovy
+stage("Setup Deps") {
+    steps {
+        sh 'sudo yum update -y'
+        sh 'sudo yum install -y epel-release'
+        sh 'sudo yum install -y hugo python36-pytest'
+    }
+}
+```
+
+#### Setup Server
+
+```groovy
+stage("Setup Server") {
+    steps {
+        sh 'hugo serve &'
+    }
+}
+```
+
+#### Setup Tests
+
+```groovy
+stage("Setup Tests") {
+    steps {
+        sh 'pip3 install pipenv --user'
+        sh 'python3 -m pipenv install'
+    }
+}
+```
+
+#### Run Tests
+
+```groovy
+stage("Run Tests") {
+    steps {
+        sh '''
+            set +e
+            python3 -m pipenv run pytest -v --junit-xml himmallright-source-test-report.xml .
+            set -e
+        '''.stripIndent()
+    }
+}
+```
+
+#### Collect Test Results
+
+```groovy
+stage("Collect Test Resuts") {
+    steps {
+        archiveArtifacts "himmallright-source-test-report.xml"
+        junit "himmallright-source-test-report.xml"
+    }
+}
+```
+
+
+### Creating a Multi-Branch Pipeline
+
+
+## Running Pipelines
+
+
+## Viewing Results
+
+
+## Conclusion
 
