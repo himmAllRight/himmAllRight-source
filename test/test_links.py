@@ -2,8 +2,10 @@ import pytest
 import requests
 
 from constants import BASE_URL
+from flaky import flaky
 
 
+@flaky
 def test_md_links(post_md_link):
     """Checks that the markdown links are not broken."""
     if post_md_link.startswith("http") or post_md_link.startswith("https"):
