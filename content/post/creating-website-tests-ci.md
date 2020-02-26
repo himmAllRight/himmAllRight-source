@@ -20,6 +20,11 @@ and automate it.
 
 ## What I'm Using/Plan
 
+<center>
+<a href="/img/posts/creating-website-tests-ci/jenkins-logo.png">
+<img alt="Jenkins Logo" src="/img/posts/creating-website-tests-ci/jenkins-logo.png" style="float: right; max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+</center>
+
 While I have started using [Gitlab](https://gitlab.com) for more of my projects
 recently, I decided to keep my website source hosted on Github for the time
 being, so I won't be using Gitlab's CI/CD tools for this. However, I wanted it
@@ -253,6 +258,28 @@ on that page, or using *Blue Ocean* (Reccomended).
 
 ## Viewing Results
 
+<center>
+<a href="/img/posts/creating-website-tests-ci/test-results.png">
+<img alt="The overview page of a single branch" src="/img/posts/creating-website-tests-ci/test-results.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">The overview page of a single branch.</div>
+</center>
+
+Personally, I prefer to always view the test results using the Blue Ocean
+viewer. Once a job completes, simply select the *Tests* tab at the top of the
+viewer to see the collected test results (this is what the junit steps in our
+pipeline does). If All the tests passed, the page will be green and list all
+the completed tests. If some failed, it will be yellow or red. When there are
+failed tests, they can be clicked, and the row will be expanded to show the
+failed test's error message and stack trace. For my test set, this makes it
+easy to see which page failed, and even know what status code was *actually*
+returned in the response (by looking at the stack trace). Very helpful!
+
 
 ## Conclusion
 
+There we go! Not only do we have the website tests automated as a pipeline, but
+a *multibranch* pipeline. This should help automatically ensure that nothing
+breaks as I edit and add to the website. It will even run the tests against all
+my PRs, so I can be confident that when I merge to master, it won't slowly
+degrade my website over time. I have one more post about these tests planned,
+but in the meantime... enjoy Jenkins!
