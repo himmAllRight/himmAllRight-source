@@ -167,11 +167,88 @@ That should be it for the pipeline file! Commit and push it to the git repo,
 and we can start working with it in Jenkins!
 
 
+## Multibranch Pipelines
 
-## Creating a Multi-Branch Pipeline
+With the `Jenkinsfile` in the repo, we can create the pipeline! Specifically,
+we will be creating a mult-branch pipeline. A multi-branch scans a git project,
+and creates a separate pipeline for each branch or PR in the repo. This is
+beneficial for testing, as it will automatically run the tests when a PR is
+created, so we can verify the change won't break before merging into the
+`master` branch. Additionally, it lets us make sure we aren't breaking anything
+while working in a new branch.
+
+
+#### Creating the Pipeline
+
+<center>
+<a href="/img/posts/creating-website-tests-ci/new-job.png">
+<img alt="Creating a new Jenkins Item" src="/img/posts/creating-website-tests-ci/new-job.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">Select Multibranch Pipeline from the new item menu in Jenkins.</div>
+</center>
+
+To create a Multi-Branch pipeline, select *New Item* in the menu on the left.
+Next, enter a name for the pipeline and select *Multibranch Pipeline* at the
+bottom. Click *Ok*.
+
+
+#### Configuring the Pipeline
+
+<center>
+<a href="/img/posts/creating-website-tests-ci/multipipeline-config-options.png">
+<img alt="Multibranch pipeline config options" src="/img/posts/creating-website-tests-ci/multipipeline-config-options.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">Configuration options when creating the multibranch
+pipeline.</div>
+</center>
+
+On the pipelines configuration page, start by filling out the *Display Name*
+and *Description* text boxes. Next, go down to *Branch Sources* and click on
+*Add source*. My website is currently hosted on Github, so I will select that.
+However, select *Git* if your project is hosted on another `git` service.
+
+Add the Repository URL and choose the pipeline Behaviors. The Behaviors define
+how the pipeline will split up branches. For example, it can be selected to
+only discover branches that are also PRs.
+
+Next, in the *Build Configuration* section, be sure that the *Script Path*
+defines the path where the `Jenkinsfile` is located. If it's in the root
+directory (and named `Jenkinsfile`), the default should work.
+
+Lastly, select an interval to automatically check the repo for changes in the
+*Scan Repository Triggers* section. This step is optional, but I highly
+recommend it.
+
+That's all we *need* to setup, but feel free to research more options. I mostly
+have defaults selected for the rest. When complete, hit *Save*.
 
 
 ## Running Pipelines
+
+<center>
+<a href="/img/posts/creating-website-tests-ci/multibranch-pipeline-overview.png">
+<img alt="The multibranch pipeline overview page" src="/img/posts/creating-website-tests-ci/multibranch-pipeline-overview.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">The multibranch pipeline overview page.</div>
+</center>
+
+Once the multibranch pipeline is created, it should scan the repo to try to
+detect any branches or pull requests that have defined `Jenkinsfile`s. It will
+create an job item in the list for each branch/PR it detects (and kick off runs
+the first time).
+
+To start runs, select *Scan Repository Now* in the menu on the left, and
+it will scan all the branches again looking for changes, and kicking off a
+pipeline run for any branch or pr that has changes.
+
+<center>
+<a href="/img/posts/creating-website-tests-ci/branch-overview.png">
+<img alt="The overview page of a single branch" src="/img/posts/creating-website-tests-ci/branch-overview.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">The overview page of a single branch.</div>
+</center>
+
+To manually a specific branch run, click on the branch name to enter the
+branch's job overview page. Then, simply click *Build Now* on the left. Once
+the run starts, it runs like a normal jenkins job and can be viewed by clicking
+the job's run number to the bottom left. The job's progress can then be viewed
+on that page, or using *Blue Ocean* (Reccomended).
 
 
 ## Viewing Results
