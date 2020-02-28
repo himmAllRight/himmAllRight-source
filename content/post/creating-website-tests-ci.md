@@ -10,11 +10,12 @@ Comments = "True"
 +++
 
 In the [last post](/post/creating-website-tests-pages/), I setup some simple
-testing to ensure pages were being served correctly. However, the problem is
-that I can't trust myself to want to run the tests before merging a branch into
-`master`. Luckily, I  can have [Jenkins](https://jenkins.io) do all that
-*responsible* stuff for me. In this post, we will take that test framework...
-and automate it.
+testing for my website builds to that ensure that pages were being served
+correctly.  However, I can't trust myself to always manually run the tests
+before merging a branch into `master`. Luckily, I have
+[Jenkins](https://jenkins.io) to take care of all the "*responsible*" tasks. In
+this post, we will take the test framework created in the previous post...  and
+automate it.
 
 <!--more-->
 
@@ -25,16 +26,16 @@ and automate it.
 <img alt="Jenkins Logo" src="/img/posts/creating-website-tests-ci/jenkins-logo.png" style="float: right; max-width: 100%; padding: 5px 15px 10px 10px"/></a>
 </center>
 
-While I have started using [Gitlab](https://gitlab.com) for more of my projects
-recently, I decided to keep my website source hosted on Github for the time
-being, so I won't be using Gitlab's CI/CD tools for this. However, I wanted it
+I have started using [Gitlab](https://gitlab.com) for more of my projects
+recently, but have decided to keep my website source hosted on Github for the time
+being. So, I won't be using Gitlab's CI/CD tools for *this*, but I wanted it
 to be known that this automation is *very* straight forward and could be easily
-accomplished there as well (I tested it out there too).
+accomplished there as well.
 
-For this project though, since my website is hosted on Github, and I already
+For this project, because my website is hosted on Github, and I *already*
 have [my own Jenkins server](/post/extending-vm-hd/) configured... I will be
-using a basic Jenkins pipeline. First, we will create the pipeline file to add
-to the git repo, and then we will use the pipeline to configure a new
+using a Jenkins pipeline. First, we will create the pipeline file to add
+to the git repo. Then, we will use the pipeline to configure a new
 *multi-branch* pipeline in Jenkins.
 
 
