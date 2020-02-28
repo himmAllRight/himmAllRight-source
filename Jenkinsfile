@@ -12,12 +12,12 @@ pipeline {
                 sh 'sudo yum install -y hugo python36-pytest'
             }
         }
-        stage("Setup Server") {
+        stage("Start Hugo Server") {
             steps {
                 sh 'hugo serve &'
             }
         }
-        stage("Setup Tests") {
+        stage("Setup Python") {
             steps {
                 sh 'pip3 install pipenv --user'
                 sh 'python3 -m pipenv install'
