@@ -1,11 +1,11 @@
 +++
 title  = "Creating Tests For This Website: CI"
-date   = "2020-02-29"
+date   = "2020-02-28"
 author = "Ryan Himmelwright"
 image  = "img/posts/creating-website-tests-ci/pnc-arena2.jpeg"
 caption = "PNC Arena, Raleigh NC"
 tags   = ["website", "hugo", "dev", "python", "testing", "jenkins"]
-draft  = "True"
+draft  = "False"
 Comments = "True"
 +++
 
@@ -146,10 +146,10 @@ in the pipenv virtual environment.
 Two things to note here:
 
 - The `--junit-xml` flag defines a xml filename to write the junit test report
-    to. This will be used for Jenkins to collect the test results.
-- The test command is wrapped between comments `set +e` and `set -e`. This
-    allows tests to fail, without triggering a failure in Jenkins, which is
-    what we want. This way even if tests fail, we make it all the way through
+    to. This will be used by Jenkins to collect the test results.
+- The test command is wrapped between `set +e` and `set -e` commands, which
+    allows tests to fail but without triggering a *pipeline* failure in
+    Jenkins.  This way even if tests fail, we make it all the way through
     collection so we can see *what* tests failed and *why*.
 
 #### Collect Test Results
@@ -163,9 +163,10 @@ stage("Collect Test Resuts") {
 }
 ```
 
-Lastly, we archive the junit report xml file as a Jenkins artifact, and then
-have `junit` read it. This requires the
-[junit](https://plugins.jenkins.io/junit/) plugin.
+Next, we archive the junit report xml file as a Jenkins artifact (just in
+case). Finally, we have the [junit](https://plugins.jenkins.io/junit/) plugin
+collect the report.
+
 
 
 ### Save & Commit
@@ -177,12 +178,12 @@ and we can start working with it in Jenkins!
 ## Multibranch Pipelines
 
 With the `Jenkinsfile` in the repo, we can create the pipeline! Specifically,
-we will be creating a mult-branch pipeline. A multi-branch scans a git project,
-and creates a separate pipeline for each branch or PR in the repo. This is
-beneficial for testing, as it will automatically run the tests when a PR is
-created, so we can verify the change won't break before merging into the
-`master` branch. Additionally, it lets us make sure we aren't breaking anything
-while working in a new branch.
+we will be creating a mult-branch pipeline. A *multi-branch* job scans a git
+project, and creates a separate pipeline for each branch or PR in the repo.
+This is beneficial for testing, as it will automatically instantiate a test
+pipeline against a newly created PR, so we can verify that the PR passes the
+tests before merging it into the `master` branch. Additionally, it lets us make
+sure we aren't breaking anything *while* working in a new branch.
 
 
 #### Creating the Pipeline
@@ -236,14 +237,14 @@ have defaults selected for the rest. When complete, hit *Save*.
 <div class="caption">The multibranch pipeline overview page.</div>
 </center>
 
-Once the multibranch pipeline is created, it should scan the repo to try to
-detect any branches or pull requests that have defined `Jenkinsfile`s. It will
-create an job item in the list for each branch/PR it detects (and kick off runs
-the first time).
+Once the multibranch pipeline is created, it should scan the repo to detect any
+branches or pull requests that have defined `Jenkinsfile`s. It will create an
+job item in the list for each branch/PR it detects (and kick off runs for
+each).
 
-To start runs, select *Scan Repository Now* in the menu on the left, and
-it will scan all the branches again looking for changes, and kicking off a
-pipeline run for any branch or pr that has changes.
+To manually start a scan, select *Scan Repository Now* in the menu on the left,
+and it will scan all the branches again, looking for changes, and kicking off
+pipeline runs for any branch or pr that has changed.
 
 <center>
 <a href="/img/posts/creating-website-tests-ci/branch-overview.png">
@@ -251,11 +252,11 @@ pipeline run for any branch or pr that has changes.
 <div class="caption">The overview page of a single branch.</div>
 </center>
 
-To manually a specific branch run, click on the branch name to enter the
+To manually start a specific branch run, click on the branch name to enter the
 branch's job overview page. Then, simply click *Build Now* on the left. Once
 the run starts, it runs like a normal jenkins job and can be viewed by clicking
 the job's run number to the bottom left. The job's progress can then be viewed
-on that page, or using *Blue Ocean* (Reccomended).
+on that page, or using *Blue Ocean* (Recommended).
 
 
 ## Viewing Results
@@ -267,21 +268,21 @@ on that page, or using *Blue Ocean* (Reccomended).
 </center>
 
 Personally, I prefer to always view the test results using the Blue Ocean
-viewer. Once a job completes, simply select the *Tests* tab at the top of the
-viewer to see the collected test results (this is what the junit steps in our
-pipeline does). If All the tests passed, the page will be green and list all
-the completed tests. If some failed, it will be yellow or red. When there are
-failed tests, they can be clicked, and the row will be expanded to show the
-failed test's error message and stack trace. For my test set, this makes it
-easy to see which page failed, and even know what status code was *actually*
-returned in the response (by looking at the stack trace). Very helpful!
+viewer. Once a job completes, select the *Tests* tab at the top of the viewer
+to see the collected test results (this is what the junit steps in our pipeline
+does). If all the tests passed, the page will be green and list all the
+completed tests. If some failed, it will be yellow. When there are failed
+tests, they can be clicked, and the row will expand to show the failed test's
+error message and stack trace. For my test set, this makes it easy to see which
+page failed, and even know what status code was *actually* returned in the
+response (by looking at the stack trace). Very helpful!
 
 
 ## Conclusion
 
-There we go! Not only do we have the website tests automated as a pipeline, but
-a *multibranch* pipeline. This should help automatically ensure that nothing
-breaks as I edit and add to the website. It will even run the tests against all
-my PRs, so I can be confident that when I merge to master, it won't slowly
-degrade my website over time. I have one more post about these tests planned,
-but in the meantime... enjoy Jenkins!
+There we go! Not only do we now have the website tests automated as a pipeline,
+but as a *multibranch* pipeline. This should help automatically ensure that
+nothing breaks as I edit and add to the website. It will even run the tests
+against all my PRs, so I can be confident that when I merge to master, it won't
+slowly degrade my website over time. I have one more post about these tests
+planned, but in the meantime... enjoy Jenkins!

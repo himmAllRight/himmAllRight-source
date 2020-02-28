@@ -13,6 +13,7 @@ POST_NAMES = [
     "charmeleon-desktop-design",
     "create-gitlab-runner",
     "creating-a-git-remote",
+    "creating-website-tests-ci",
     "creating-website-tests-pages",
     "custom-neofetch-ascii-art",
     "dabbling-with-go",
