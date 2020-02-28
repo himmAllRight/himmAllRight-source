@@ -41,9 +41,9 @@ to the git repo. Then, we will use the pipeline to configure a new
 
 ## Jenkinsfile
 
-First, lets start by creating the Jenkinsfile. Create a new file named
-`Jenkinsfile` in the git repo. Next, lets create a new pipeline and get ready
-to add stages:
+Lets start by creating the Jenkinsfile. Create a new file named `Jenkinsfile`
+in the project directory. Next, lets create a new pipeline and get ready to add
+stages:
 
 ```groovy
 pipeline {
@@ -62,12 +62,12 @@ pipeline {
 
 ### Stages
 
-Now, lets add the stages. A stage is basically a functional chunk of our
-pipeline, and will help keep the steps organized, as well as make it easier to
-follow while running.
+Now, lets add the stages. A stage is a named, functional chunk in our pipeline.
+Breaking the pipeline into stages will help keep all the various steps
+organized, as well as make it easier to follow along as the pipeline runs.
 
-Each of these stages will be listed inside the `stages { .. }` section we
-defined, one after the other (In the order I have them listed below!).
+Each of the following stage definitions will be placed inside the `stages { ..
+}` section we defined above (*in the same order as they are listed!*).
 
 #### Setup Deps
 
@@ -102,8 +102,8 @@ stage("Start Hugo Server") {
 
 With `hugo` installed (and presumably being inside the website's git repo...),
 we can start the web server. This is done with `hugo serve`. The `&` is used to
-have the server run as a background process, which allows the pipeline to
-continue on, without killing the server process.
+have the server run as a background process so that it won't be killed when the
+pipeline to continues on.
 
 *Note: Make sure the tests are set to point to `localhost:1313`, as that is
 where `hugo` will try to serve the website by default.*
@@ -120,9 +120,10 @@ stage("Setup Tests") {
 }
 ```
 
-Next, lets setup `python` by installing the packages we need. Here, I use
-`pip3` to install `pipenv`. Then I have `pipenv` install the tests' required
-python packages, which are defined in the repo's `Pipfile`.
+Next, lets configure `python` by setting up an environment and installing the
+packages we need in it. First, I use `pip3` to install `pipenv`. Then, I have
+`pipenv` install the tests' required python packages, which are defined in the
+repo's `Pipfile`.
 
 #### Run Tests
 
