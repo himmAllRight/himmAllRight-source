@@ -13,8 +13,7 @@ pipeline {
         stage("Setup Deps") {
             steps {
                 sh 'sudo yum update -y'
-                sh 'sudo yum install -y epel-release'
-                sh 'sudo yum install -y hugo python36-pytest'
+                sh 'sudo yum install -y hugo python3-pytest'
             }
         }
         stage("Start Hugo Server") {
