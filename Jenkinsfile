@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'fedora:31'
+            args '-u 0:0'
+        }
+    }
 
 //    parameters {
 //    }
