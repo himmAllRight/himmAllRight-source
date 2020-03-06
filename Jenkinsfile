@@ -12,8 +12,8 @@ pipeline {
     stages {
         stage("Setup Deps") {
             steps {
-                sh 'sudo dnf update -y'
-                sh 'sudo dnf install -y hugo pytest'
+                sh 'dnf update -y'
+                sh 'dnf install -y hugo pytest git which'
             }
         }
         stage("Start Hugo Server") {
