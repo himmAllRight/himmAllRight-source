@@ -6,9 +6,6 @@ pipeline {
         }
     }
 
-//    parameters {
-//    }
-
     stages {
         stage("Setup Deps") {
             steps {
