@@ -1,15 +1,16 @@
 pipeline {
-    agent any
-
-//    parameters {
-//    }
+    agent {
+        docker {
+            image 'fedora:31'
+            args '-u 0:0'
+        }
+    }
 
     stages {
         stage("Setup Deps") {
             steps {
-                sh 'sudo yum update -y'
-                sh 'sudo yum install -y epel-release'
-                sh 'sudo yum install -y hugo python36-pytest'
+                sh 'dnf update -y'
+                sh 'dnf install -y hugo pytest git which'
             }
         }
         stage("Start Hugo Server") {
