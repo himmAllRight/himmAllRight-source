@@ -1,6 +1,6 @@
 +++
 title  = "Creating Tests For This Website: Links"
-date   = "2020-03-08"
+date   = "2020-03-15"
 author = "Ryan Himmelwright"
 image  = "img/posts/creating-website-tests-pages/pnc-arena.jpeg"
 caption = "PNC Arena, Raleigh NC"
@@ -9,6 +9,8 @@ draft  = "True"
 Comments = "True"
 +++
 
+In my previous two posts, I started a [test framework for my website](/post/creating-website-tests-pages/), and
+[automated it using Jenkins](/post/creating-website-tests-ci/).
 
 <!--more-->
 
@@ -82,4 +84,65 @@ Lastly, lets define `get_md_links`. This function take the content dictonary
 that `get_file_content` returns, and uses some [regular
 expression](https://en.wikipedia.org/wiki/Regular_expression) magic to match
 
+```python
+def get_md_links(content_dict, regex="\[.*?\]\((.*?)\)"):
+    """Parses the dictionary of content strings, and pulls out the url of any links."""
+    p = re.compile(regex)
+    all_links = []
+    for file in content_dict:
+        content = content_dict[file].replace("\n", "")
+        match_iter = p.finditer(content)
+        for match in match_iter:
+            # Regex can't properly match urls with parens in them, so skip.
+            if "(" not in match.group(1):
+                all_links.append(match.group(1))
+    return all_links
+```
 
+### Adding to conftest.py
+
+
+```python
+def post_md_links():
+    """Returns the md_link object of the md links in all the posts."""
+    all_post_files = get_file_paths(POST_DIR)
+    all_post_contents = get_file_content(all_post_files)
+    all_post_md_links = get_md_links(all_post_contents)
+    # Return de-dup list
+    return list(set(all_post_md_links))
+```
+
+```python
+@pytest.fixture(params=post_md_links())
+def post_md_link(request):
+    """Returns the md_link object for a md link found in a post."""
+    return request.param
+```
+
+
+### Writing the markdown link test
+
+```python
+def test_md_links(post_md_link):
+    """Checks that the markdown links are not broken."""
+    if post_md_link.startswith("http") or post_md_link.startswith("https"):
+        url = post_md_link
+    else:
+        url = BASE_URL + post_md_link.lower()
+    response = requests.get(url)
+    assert response.status_code != 404, f"The link {post_md_link} is not found."
+    assert response.status_code != 403, f"The link {post_md_link} is forbidden."
+```
+
+
+#### (Optional) Marking test with @flaky
+
+```python
+from flaky import flaky
+
+
+@flaky
+def test_md_links(post_md_link):
+```
+
+## Conclusion
