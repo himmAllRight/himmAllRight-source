@@ -128,7 +128,8 @@ returned.
 ### Adding to conftest.py
 
 With our new utility functions defined, we can add a new fixture (and it's
-helper function), to the `conftest.py` file.
+helper function), to the `conftest.py` file. Lets start with the fixture's
+helper function, `post_md_link()`:
 
 ```python
 def post_md_links():
@@ -138,7 +139,16 @@ def post_md_links():
     all_post_md_links = get_md_links(all_post_contents)
     # Return de-dup list
     return list(set(all_post_md_links))
-```returns
+```
+
+This function uses all the utility functions we just wrote above, to extract
+all of the markdown links from all of the markdown files found at the location
+our `POST_DIR` constant specifies. It then returns a de-duplicated list of all
+the links.
+
+
+With that helper function to generate the markdown links list, we can define
+the fixture, `post_md_link`:
 
 ```python
 @pytest.fixture(params=post_md_links())
@@ -147,8 +157,15 @@ def post_md_link(request):
     return request.param
 ```
 
+Similar to the fixtures in the [pages
+tests](post/creating-website-tests-pages/), this one will allow tests to map
+across all the links found in the markdown pages, so a test will run for each
+link.
+
 
 ### Writing the markdown link test
+
+Finally, time to write the *one and only test function* in this post:
 
 ```python
 def test_md_links(post_md_link):
@@ -162,19 +179,56 @@ def test_md_links(post_md_link):
     assert response.status_code != 403, f"The link {post_md_link} is forbidden."
 ```
 
+Because I link to both internal and external links in my posts, I have to prep
+my urls a bit. So, I first check if the link starts with `http` (which would
+also match ones starting with `https`). If it does, we don't have to do
+anything. If it doesn't, we can assume the link is an ineternal one (ex:
+`/post/creating-website-tests-links/`), and we need to prepend it with the
+`BASE_URL` constant.
 
-#### (Optional) Marking test with @flaky
+With a proper url, we can use the `requests.get()` to attempt retrieve a
+response code from the page. If we get a response, I then assert that the
+`status_code` is *not* `404` or `403`.
 
-```python
-from flaky import flaky
+Note: I started by asserting that each link returned a `200` status, but
+quickly learned that because I was testing mostly external links, it was a bad
+idea. I never got all the tests to pass because they would often return odd
+500-level errors for issues that quite frankly, doesn't matter to me. For
+example, one site kept return a 500-level error I think because their servers
+were 'under slightly higher load'... but when I went to the link, the page
+loaded fine.
 
+In the end, I decided I wasn't testing the issues the websites I linked to were
+having, but instead just wanted to make sure my links weren't *broken*. So, I
+now just ensure I'm not getting `404` or `403`'s, and I'm happy with that.
 
-@flaky
-def test_md_links(post_md_link):
-```
 
 ## Limitations
 
-- Cannot match urls with parens
+While I am very happy with the coverage these tests provide, they do have some
+limitations to keep in mind:
+
+- They cannot match urls with parens
+- Currently only checking pages are not `403` and `404` errors. This means I
+    could possibly still have broken links due to permission errors and such. I
+    plan to expand this assert list in the future to cover issues better.
+- I'm currently only testing markdown links. This doesn't grab and html links I
+    have in my posts.
+    - On a similar note, because I link most of my images with html, it also
+        isn't testing if my images are broken.
+    - I'd like to eventually add tests for both of these issues eventually, but
+        decided testing the markdown links was the best place to start.
+- Sometimes tests fail because a site is down. No biggie, just consider waiting
+    a bit and running them again before deciding to remove the link.
 
 ## Conclusion
+
+That's it. By adding a few easy helper functions, a new fixture, and a *single*
+test function, We've expanded my test results from 70 to over 420 test results
+(and growing).
+
+More important that the number of tests, is *what* those results
+tell us. In this case, a failing test tells me that one of my markdown links
+*might* be broken. These tests have *already* been beneficial to me, as I ended
+updating/removing probably about 100 or so bad links from my posts while
+adding these tests. So, I'd say it was worthwhile!
