@@ -158,7 +158,7 @@ def post_md_link(request):
 ```
 
 Similar to the fixtures in the [pages
-tests](post/creating-website-tests-pages/), this one will allow tests to map
+tests](/post/creating-website-tests-pages/), this one will allow tests to map
 across all the links found in the markdown pages, so a test will run for each
 link.
 
