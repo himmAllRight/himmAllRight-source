@@ -23,6 +23,8 @@ working. Well, at least the
 
 ## What to Test
 
+*Image of a 404 page error?*
+
 For this test set, we will be scanning all of our post's markdown files, and
 grabbing all of the markdown link defined in them. With then links known, we
 will then proceed to make a request to each one to check its availablity. If we
@@ -222,6 +224,12 @@ limitations to keep in mind:
     a bit and running them again before deciding to remove the link.
 
 ## Conclusion
+
+<center>
+<a href="/img/posts/creating-website-tests-links/passing-links-tests.png">
+<img alt="Passing tests, including new link tests" src="/img/posts/creating-website-tests-links/passing-link-tests.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">Passing tests, including the new markdown link tests</div>
+</center>
 
 That's it. By adding a few easy helper functions, a new fixture, and a *single*
 test function, We've expanded my test results from 70 to over 420 test results
