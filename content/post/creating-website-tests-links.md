@@ -1,6 +1,6 @@
 +++
 title  = "Creating Tests For This Website: Links"
-date   = "2020-03-15"
+date   = "2020-03-29"
 author = "Ryan Himmelwright"
 image  = "img/posts/creating-website-tests-links/pnc-arena3.jpeg"
 caption = "PNC Arena, Raleigh NC"
@@ -9,14 +9,14 @@ draft  = "True"
 Comments = "True"
 +++
 
-In my previous two posts, I started a [test framework for my
+In my previous two posts, I created a [test framework for my
 website](/post/creating-website-tests-pages/), and [automated it using
 Jenkins](/post/creating-website-tests-ci/). But we can do better. One of the
 most annoying things when maintaining (or even reading) something on the
-internet, is broken links. While we cannot control the availablity of content
-outside our website, we *can* choose to remove links if they are broken. So, in
-this post, we will setup tests that will ensure that links in our posts are
-working. Well, at least the
+internet, are broken links. While I cannot control the *availability* of
+content outside the website, I *can* choose to remove links if they are
+broken. So, in this post, we will add tests to ensure that links in our posts
+are working. Well, at least the
 [markdown](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf) ones.
 
 <!--more-->
@@ -25,18 +25,15 @@ working. Well, at least the
 
 *Image of a 404 page error?*
 
-For this test set, we will be scanning all of our post's markdown files, and
-grabbing all of the markdown link defined in them. With then links known, we
-will then proceed to make a request to each one to check its availablity. If we
-can connect, the test passes. If not (we get a 404 or something), it fails.
+For this test set, we will be scanning the content files of all of the posts, and
+grabbing every markdown link defined in them. With the links known, we
+will then make a request to each one to check the its availability. If we
+can connect, the test passes. If not (ex: we get a 404 or something), it fails.
 
 
-## Adding to the Test Framework
+### Adding Utility Functions
 
-
-### Utility Functions
-
-Before we are able to write the test function, we first need to expand out
+Before we are able to write the test function, we first need to add to the
 utility functions. These will allow us to get the post's file paths, grab their
 content, and extract all the markdown links from that content.
 
@@ -117,10 +114,10 @@ def get_md_links(content_dict, regex="\[.*?\]\((.*?)\)"):
 ```
 
 First, the function compiles the regular expression defined by the `regex`
-parameter. Next, it loops through all the data in the content dictionary, and
+parameter. Next, it loops through all the data in the content dictionary,
 strips the newline characters, and then grabs all the regex matches.
 
-Unfortunately, our regex expression can't properly match markdown formated urls
+Unfortunately, the regex expression can't properly match markdown formated urls
 with parenthesis in them, so we have to check if each match has a `(` in it. If
 it does, the url is thrown away because we cannot be sure we matched the full
 `url`. If there are no parenthesis, the url as added to our saved list. After
