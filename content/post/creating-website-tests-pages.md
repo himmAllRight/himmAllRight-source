@@ -2,7 +2,7 @@
 title  = "Creating Tests For This Website: Pages"
 date   = "2020-02-23"
 author = "Ryan Himmelwright"
-image  = "img/posts/creating-website-tests-pages/pnc-arena.jpeg"
+image  = "img/posts/creating-website-tests-pages/pnc-arena1.jpeg"
 caption = "PNC Arena, Raleigh NC"
 tags   = ["website", "hugo", "dev", "python", "testing"]
 draft  = "False"
