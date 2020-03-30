@@ -23,7 +23,11 @@ are working. Well, at least the
 
 ## What to Test
 
-*Image of a 404 page error?*
+<center>
+<a href="/img/posts/creating-website-tests-links/google-404-error.png">
+<img alt="Google 404 Error Page" src="/img/posts/creating-website-tests-links/google-404-error.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">Google 404 Error Page</div>
+</center>
 
 For this test set, we will be scanning the content files of all of the posts, and
 grabbing every markdown link defined in them. With the links known, we
