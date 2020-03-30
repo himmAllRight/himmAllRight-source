@@ -1,11 +1,11 @@
 +++
 title  = "Creating Tests For This Website: Links"
-date   = "2020-03-29"
+date   = "2020-03-30"
 author = "Ryan Himmelwright"
 image  = "img/posts/creating-website-tests-links/pnc-arena3.jpeg"
 caption = "PNC Arena, Raleigh NC"
 tags   = ["website", "hugo", "dev", "python", "testing"]
-draft  = "True"
+draft  = "False"
 Comments = "True"
 +++
 
@@ -31,8 +31,8 @@ are working. Well, at least the
 
 For this test set, we will be scanning the content files of all of the posts, and
 grabbing every markdown link defined in them. With the links known, we
-will then make a request to each one to check the its availability. If we
-can connect, the test passes. If not (ex: we get a 404 or something), it fails.
+will then make a request to each one to check that it is available. If we
+can connect, the test passes. If not (ex: we get a 404), it fails.
 
 
 ### Adding Utility Functions
@@ -61,8 +61,8 @@ def get_file_paths(src, extension=None):
     return file_list
 ```
 
-When provided a file path (`src`), this function will return a list of all the
-file paths in that directoy. Optionally, the `extension` parameter can be
+When provided a directory path (`src`), this function will return a list of all the
+file paths in that directory. Optionally, the `extension` parameter can be
 supplied to only return files of that extension type (in our case, `md`). This
 will be used to grab the paths of all of the website post source files.
 
@@ -124,14 +124,14 @@ strips the newline characters, and then grabs all the regex matches.
 Unfortunately, the regex expression can't properly match markdown formated urls
 with parenthesis in them, so we have to check if each match has a `(` in it. If
 it does, the url is thrown away because we cannot be sure we matched the full
-`url`. If there are no parenthesis, the url as added to our saved list. After
+`url`. If there are no parenthesis, the url is added to our saved list. After
 parsing all the values of the content dictionary, a list of the matched urls is
 returned.
 
 ### Adding to conftest.py
 
-With our new utility functions defined, we can add a new fixture (and it's
-helper function), to the `conftest.py` file. Lets start with the fixture's
+With our new utility functions defined, we can next add a new fixture (and it's
+helper function) to the `conftest.py` file. Lets start with the fixture's
 helper function, `post_md_link()`:
 
 ```python
@@ -144,14 +144,13 @@ def post_md_links():
     return list(set(all_post_md_links))
 ```
 
-This function uses all the utility functions we just wrote above, to extract
-all of the markdown links from all of the markdown files found at the location
-our `POST_DIR` constant specifies. It then returns a de-duplicated list of all
+This function uses the utility functions we just wrote above, to extract
+all of the markdown links from the post files found at the
+`POST_DIR` constant location. It then returns a de-duplicated list of all
 the links.
 
 
-With that helper function to generate the markdown links list, we can define
-the fixture, `post_md_link`:
+Now, we can define the fixture, `post_md_link`:
 
 ```python
 @pytest.fixture(params=post_md_links())
@@ -182,28 +181,29 @@ def test_md_links(post_md_link):
     assert response.status_code != 403, f"The link {post_md_link} is forbidden."
 ```
 
-Because I link to both internal and external links in my posts, I have to prep
+Because I link to both internal and external pages in my posts, I have to prep
 my urls a bit. So, I first check if the link starts with `http` (which would
-also match ones starting with `https`). If it does, we don't have to do
-anything. If it doesn't, we can assume the link is an ineternal one (ex:
+also match ones starting with `https`). If it does, we can leave the link as
+is. If it doesn't, we can assume the link is an internal one (ex:
 `/post/creating-website-tests-links/`), and we need to prepend it with the
 `BASE_URL` constant.
 
-With a proper url, we can use the `requests.get()` to attempt retrieve a
+With a proper url, we can use `requests.get()` to attempt to retrieve a
 response code from the page. If we get a response, I then assert that the
 `status_code` is *not* `404` or `403`.
 
-Note: I started by asserting that each link returned a `200` status, but
-quickly learned that because I was testing mostly external links, it was a bad
-idea. I never got all the tests to pass because they would often return odd
-500-level errors for issues that quite frankly, doesn't matter to me. For
+*Side Note:* I started by asserting that each link returned a `200` status, but
+quickly learned that it was a bad idea, because I was testing mostly external
+links.  I never got all the tests to pass because they would often return
+odd 500-level errors for issues that quite frankly, doesn't matter to me. For
 example, one site kept return a 500-level error I think because their servers
-were 'under slightly higher load'... but when I went to the link, the page
+were 'under a slightly higher load'... but when I went to the link, the page
 loaded fine.
 
-In the end, I decided I wasn't testing the issues the websites I linked to were
-having, but instead just wanted to make sure my links weren't *broken*. So, I
-now just ensure I'm not getting `404` or `403`'s, and I'm happy with that.
+In the end, I decided I wasn't trying to test the issues the websites I linked
+to were having, but instead just wanted to make sure that *my links* weren't
+*broken*.  So, I now just ensure that I'm not getting `404` or `403`'s, and I'm
+happy with that.
 
 
 ## Limitations
@@ -211,18 +211,19 @@ now just ensure I'm not getting `404` or `403`'s, and I'm happy with that.
 While I am very happy with the coverage these tests provide, they do have some
 limitations to keep in mind:
 
-- They cannot match urls with parens
-- Currently only checking pages are not `403` and `404` errors. This means I
-    could possibly still have broken links due to permission errors and such. I
-    plan to expand this assert list in the future to cover issues better.
-- I'm currently only testing markdown links. This doesn't grab and html links I
+- They cannot match urls with parentheses
+- Currently, they only check that pages do not return `403` and `404` errors. This means I
+    could possibly still have broken links due to permission errors or other
+    issues. I plan to expand this assert list in the future to cover more
+    cases.
+- I'm currently only testing markdown links. This doesn't grab any html links I
     have in my posts.
     - On a similar note, because I link most of my images with html, it also
         isn't testing if my images are broken.
-    - I'd like to eventually add tests for both of these issues eventually, but
+    - I'd like to add tests for both of these issues eventually, but
         decided testing the markdown links was the best place to start.
-- Sometimes tests fail because a site is down. No biggie, just consider waiting
-    a bit and running them again before deciding to remove the link.
+- Sometimes tests fail because a site is down. No biggie. I just usually wait
+    a bit and then run the tests again before deciding to remove the link.
 
 ## Conclusion
 
@@ -233,11 +234,11 @@ limitations to keep in mind:
 </center>
 
 That's it. By adding a few easy helper functions, a new fixture, and a *single*
-test function, We've expanded my test results from 70 to over 420 test results
-(and growing).
+test function, We've expanded my test results from 70 to over 420 tests (and
+growing).
 
-More important that the number of tests, is *what* those results
-tell us. In this case, a failing test tells me that one of my markdown links
-*might* be broken. These tests have *already* been beneficial to me, as I ended
-updating/removing probably about 100 or so bad links from my posts while
-adding these tests. So, I'd say it was worthwhile!
+More important than the number of tests, is *what* the results tell us. A
+failing test tells me that one of my markdown links *might* be broken. These
+tests have *already* been beneficial to me, as I ended updating/removing
+probably about 100 or so bad links from my archived posts while implementing
+this test. So, I'd say it was worthwhile!
