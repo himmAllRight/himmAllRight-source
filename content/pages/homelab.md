@@ -74,7 +74,7 @@ macOS Catalina
 ```
 
 <a name="bulbasaur"></a>
-#### - bulbasaur (Phone)
+#### - Bulbasaur (Phone)
 ```
 iPhone 11
 64 GB Storage
