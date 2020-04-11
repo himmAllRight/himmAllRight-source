@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2020-04-01
+date: 2020-04-11
 type: homelab
 layout: homelab-page
 menu:
@@ -13,9 +13,6 @@ This is a page where I maintain the status of the computers in my “Homelab”
 (basically the tech in our house).
 
 ## Ryan (Me)
-Don't mind the mess. Still a work in progress, but I noticed my photos were *very* out of
-date. I didn't bother to cleanup before taking these pictures. I will when it's closer to
-being 'done'.
 
 <a href="../../img/homelab/home-office.jpeg"><img alt="My Desk" src="../../img/homelab/home-office.jpeg" width=100%></a>
 <div class="caption">My Home Office</div>
@@ -23,7 +20,7 @@ being 'done'.
 <a href="../../img/homelab/desk.jpeg"><img alt="Home Office" src="../../img/homelab/desk.jpeg" width=100%></a>
 <div class="caption">My Desk</div>
 
-<a href="../../img/homelab/home-office-daylight.jpeg"><img alt="My Desk" src="../../img/homelab/home-office-daylight.jpeg" width=100%></a>
+<a href="../../img/homelab/office-entrance.jpeg"><img alt="My Desk" src="../../img/homelab/office-entrance.jpeg" width=100%></a>
 <div class="caption">Entrance to  Home Office</div>
 
 ### Linux Computers
@@ -50,6 +47,7 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
 Fedora 31
+*Can Connect to Periphery devices via Thunderbolt 3 Dongle
 ```
 ### Interface Devices
 <a name="Venusaur"></a>
@@ -62,7 +60,7 @@ Intel i7-9750H (2.6 GHz (4.5 GHz Turbo), 6 Cores, 12 Threads)
 Radeon Pro 5300M GPU
 16" 3072x1920 500 nit IPS "Retina" Display
 macOS Catalina
-*Sometimes connected to Periphery devices via usb-c hub
+*Can Connect to Periphery devices via Thunderbolt 3 Dongle
 ```
 
 <a name="Ivysaur"></a>
@@ -81,16 +79,14 @@ iPhone 11
 ```
 
 <a name="periphery"></a>
-##### Periphery
+### Periphery Devices
 ```
 Dell 27" 2560x1440 IPS Monitor (Dell u2717d)
 Happy Hacking Keyboard Pro2
 Audioengine A2+ Speakers & Stands
 Audio Technica M50x Headphones
-Bose AE2 Headphones
 Blue Yeti Microphone - Backout Edition
 Logitech HD Pro Webcam c920 Widescreen
-Inateck USB 3.0 to SATA Dual-Bay Hard Drive Docking Station
 ```
 
 
