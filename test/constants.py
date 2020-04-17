@@ -15,6 +15,7 @@ POST_NAMES = [
     "create-gitlab-runner",
     "creating-a-git-remote",
     "creating-website-tests-ci",
+    "creating-website-tests-docker-nodes",
     "creating-website-tests-links",
     "creating-website-tests-pages",
     "custom-neofetch-ascii-art",
