@@ -1,5 +1,5 @@
-#BASE_URL = "http://192.168.1.5:1313"
-BASE_URL = "http://localhost:1313"
+BASE_URL = "http://192.168.1.5:1313"
+#BASE_URL = "http://localhost:1313"
 
 SITE_PAGES = ["/", "/pages/about/", "/pages/homelab/"]
 
@@ -15,6 +15,7 @@ POST_NAMES = [
     "create-gitlab-runner",
     "creating-a-git-remote",
     "creating-website-tests-ci",
+    "creating-website-tests-docker-nodes",
     "creating-website-tests-links",
     "creating-website-tests-pages",
     "custom-neofetch-ascii-art",
@@ -68,6 +69,7 @@ POST_NAMES = [
     "tmpfs-mount-ramdisk",
     "Trying-out-plasma5",
     "trying-out-seafile",
+    "tsqa-2020",
     "Updating-Pi-Cluster-With-Ansible",
     "upgrading-network-to-ubiquiti",
     "website-switched-to-cryogen",

@@ -10,7 +10,7 @@ pipeline {
         stage("Setup Deps") {
             steps {
                 sh 'dnf update -y'
-                sh 'dnf install -y hugo pytest git which'
+                sh 'dnf install -y hugo pytest git which python3-pip'
             }
         }
         stage("Start Hugo Server") {
