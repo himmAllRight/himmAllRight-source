@@ -1,5 +1,4 @@
-BASE_URL = "http://192.168.1.5:1313"
-#BASE_URL = "http://localhost:1313"
+BASE_URL = "http://localhost:1313"
 
 SITE_PAGES = ["/", "/pages/about/", "/pages/homelab/"]
 
