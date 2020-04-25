@@ -5,9 +5,20 @@ author = "Ryan Himmelwright"
 image  = "img/posts/tsqa-2020/tsqa-2020-convention.jpeg"
 caption = "TSQA 2020 - Durham Convention Center, Durham NC"
 tags   = ["dev", "linux","devops", "ansible",]
-draft  = "True"
+draft  = "False"
 Comments = "True"
 +++
+
+A couple weeks ago I was going to give a co-worker of mine a brief run down of
+the very basics of ansible. I want to quickly share enough information, so that
+someone could easily get up and going writing some basic playbooks that have
+tasks organized with under ansible [roles](). While I briefly talked about
+setting up ansible [a long time ago](/post/ansible-on-pi-cluster), it part of
+another post and not a great full introduction to the basics of ansible. After
+hashing out some examples into my notes, I realized this would actually make a
+great post, and could be shared with anyone who would benefit from it.
+
+<!--more-->
 
 
 ## Installing
@@ -25,6 +36,7 @@ Note, in order for ansible to connect to a node, that node usually needs 2 thing
 
 1) Python installed
 2) Often, it needs passwordless sudo abilities... This can be done using:
+3) `ssh` keys configured (if running against remote hosts)
 
 ```shell
 sudo visudo
@@ -41,6 +53,8 @@ And then uncommenting the following line near the bottom:
 ... or optionall copy the uncommented line and apply it with another group, like I have...
 
 Please *be careful* when doing this though. Remember, this is enabling a group of accounts the permission to use `sudo` *WITHOUT* a password!
+
+#### ssh
 
 ## Basics
 
