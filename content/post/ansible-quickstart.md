@@ -2,8 +2,8 @@
 title  = "Ansible Quickstart"
 date   = "2020-04-28"
 author = "Ryan Himmelwright"
-image  = "img/posts/tsqa-2020/tsqa-2020-convention.jpeg"
-caption = "TSQA 2020 - Durham Convention Center, Durham NC"
+image  = "img/posts/ansible-quickstart/park-sky.jpeg"
+caption = "Duke Park, Durham NC"
 tags   = ["dev", "linux","devops", "ansible",]
 draft  = "False"
 Comments = "True"
