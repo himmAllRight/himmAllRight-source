@@ -22,27 +22,47 @@ great post, and could be shared with anyone who would benefit from it.
 
 
 ## Installing
-*Linux*
-`sudo dnf install ansible`
 
-*MacOS*
-No idea, I `ssh` to Linux boxes on my macbook XD. It can be installed with `pip` though, so possibly:
+First lets install ansible. It should be in most distro's main repos these
+days:
+
+*Fedota Linux*: `sudo dnf install ansible`
+
+*MacOS*: No idea. I `ssh` to Linux boxes on my macbook XD. It can be installed
+with `pip` though, so possibly:
 
 `pip install ansible`
 
-### Node Requirements
+### Remote Node Requirements
 
-Note, in order for ansible to connect to a node, that node usually needs 2 things:
+In order for ansible to connect to a node, that node usually needs 3 things:
 
-1) Python installed
-2) Often, it needs passwordless sudo abilities... This can be done using:
-3) `ssh` keys configured (if running against remote hosts)
+ - 1) Python installed
+ - 2) Often, it needs passwordless sudo abilities... This can be done using:
+ - 3) `ssh` keys configured (if running against remote hosts. Not needed if
+     just running playbooks against `localhost`)
+
+#### python
+
+Python should already be installed on most systems. If not, I'm probably not
+the best source of how to do it, so I'll leave this step up to you. Don't
+worry, you got this!
+
+#### Passwordless `sudo`
+
+Now lets setup passwordless sudo. This will allow your user to run `sudo`
+commands, without having to type in a password each time. Now, I shouldn't have
+to say this, but... use with care.
+
+This is most easily accomplished with `visudo`:
 
 ```shell
 sudo visudo
 ```
 
-And then uncommenting the following line near the bottom:
+This command will open up the `sudo` settings in your `$EDITOR`. Once opened,
+find the following line and uncomment it (it's usually near the bottom of the
+file).
 
 ```shell
 ## Same thing without a password
@@ -50,56 +70,60 @@ And then uncommenting the following line near the bottom:
 %ryan   ALL=(ALL)       NOPASSWD: ALL
 ```
 
-... or optionall copy the uncommented line and apply it with another group, like I have...
+You can also optionally copy the uncommented line and apply it with a more
+limited group than `wheel`. This is my preferred method (And what I have done
+in the example).
 
-Please *be careful* when doing this though. Remember, this is enabling a group of accounts the permission to use `sudo` *WITHOUT* a password!
 
 #### ssh
 
+Lastly, copy ssh-keys. The easiest way is to use the `ssh-copy-id` command as
+such:
+
+```shell
+ssh-copy-id username@hostname
+```
+
 ## Basics
+
+Now lets quickly get into the basics of ansible.
 
 #### Hosts Inventory
 
-Yaml file that defines hosts to connect to in ansible. Default is located at `/etc/ansible/hosts`. Another inventory file can be provided with the `-i` flag.
+A host inventory file is a yaml file that defines hosts to connect to in
+ansible. The default is located at `/etc/ansible/hosts`. Another inventory file can
+be provided with the `-i` flag.
 
 
 Example:
 
 ```yaml
 [VMs]
-## Charmeleon VMs
-192.168.1.20
-192.168.1.74
-192.168.1.120
-192.168.1.122
-## Ninetales VMs
-192.168.1.52
-192.168.1.77
-192.168.1.114
+## Server VMs
+192.168.10.50
+192.168.10.71
+192.168.10.118
 
 [Hosts]
 ## Hosts
-192.168.1.38
+192.168.10.12
 
 [cluster]
-192.168.1.205
-192.168.1.206
-192.168.1.207
-
-[Cloud]
-## Cloud
-cloud.himmelwright.net
+192.168.112.205
+192.168.112.206
+192.168.112.207
 ```
 
 #### Modules/Roles
 
 Premade functionality used in ansible. In playbooks, these are sort of like functions called for task blocks. They do something you want done. Some examples are `ping`, `dnf`, `apt`, `redhat_subscription`.
 
-Feel free to search the [ansible documentation](https://docs.ansible.com) for more!
+Feel free to search the [ansible documentation](https://docs.ansible.com) to learn more.
 
-#### Straight Ansible Commands (ad-hoc commands)
+#### Ad-hoc Ansible Commands
 
-Simple and straight ansible commands can be called with `ansible`, and usually with a module, called with `-m`. For example, ping:
+Simple and straight ansible commands can be called with the `ansible` command,
+and usually with a module, called using the `-m` flag. For example, ping:
 
 ```shell
 ansible -m ping localhost
@@ -115,7 +139,7 @@ This module requires some parameters to know what to do. We are able to supply t
 
 Also, since the `dnf` module requires root permissions to function, we supply the `--become` flag, to become root.
 
-Note, if I want to run this against another machine (beyond `localhost`, it has to be defined in whatever inventory file we are using.
+Note, if I want to run this against another machine (beyond `localhost`), it has to be defined in whatever inventory file we are using.
 
 So, if I define an inventory (`./hosts.yaml`) like this:
 
@@ -390,11 +414,17 @@ Still works :)
 
 ### ansible.cfg
 
-Note, if you are using roles, you do need to tell `ansible` where to find them. The easiest way to do this is to define an `ansible.cfg` file. For example:
+One last thing to note, if you are using roles, you do need to tell `ansible` where to find them. The easiest way to do this is to define an `ansible.cfg` file. For example:
 
 ```
 [defaults]
 roles_path = roles/
 ```
 
+# Conclusion
 
+So while only this tip of the ice-burg, I think I have covered the majority of
+things you need to know to get *something* useful. I have been able to create
+several useful roles and playbooks using this limited knowledge of Ansible in
+both my personal and work life. But don't let that stop you from learning even
+more! Good luck!
