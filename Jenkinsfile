@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'fedora:31'
+            image 'fedora:32'
             args '-u 0:0'
         }
     }
