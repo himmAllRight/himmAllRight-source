@@ -5,7 +5,7 @@ author = "Ryan Himmelwright"
 image  = "img/posts/ansible-quickstart/park-sky.jpeg"
 caption = "Duke Park, Durham NC"
 tags   = ["dev", "linux","devops", "ansible",]
-draft  = "False"
+draft  = "True"
 Comments = "True"
 +++
 
