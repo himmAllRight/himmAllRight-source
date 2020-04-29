@@ -222,15 +222,20 @@ inventory file.
 
 #### local connections
 
-If the playbook is to run only locally, the connection type can be set to `local` (by default, it is set to `ssh`.)
+If the playbook is only to run locally, the connection type can be set to
+`local` (by default, it is set to `ssh`.)
 ```
   hosts: 127.0.0.1
   connection: local
 ```
 
-After the header information, we can define a set of `tasks:` to run. In the `tasks` section, define a block for each task, usually by calling a module with parameters. It is best practice to name each tag using `name:`.
+Below the header information, we can define a set of `tasks` to run. In the
+`tasks` section, a block is defined for each task, usually by calling a module
+with parameters. It is best practice to name each tag using `name:`. This will
+make it easier to trace the logs.
 
-For example, if I also wanted to add our `ping` module so we had more than one task....
+For example, lets add the`ping` module to the playbook so we had more than one
+task....
 
 ```yaml
 ---
@@ -248,30 +253,34 @@ For example, if I also wanted to add our `ping` module so we had more than one t
         state: latest
 ```
 
-and it will run both tasks, using the "name" as the header for the output of each one:
+Now it will run both tasks, using the `name` as the header for the output of each one:
 
 ```bash
 ➜  /tmp ansible-playbook install-htop.yaml
 
-PLAY [all] *****************************************************************************************************
+PLAY [all] ****************************************
 
-TASK [Gathering Facts] *****************************************************************************************
+TASK [Gathering Facts] ****************************************
 ok: [192.168.1.5]
 
-TASK [Ping host first...] **************************************************************************************
+TASK [Ping host first...] ****************************************
 ok: [192.168.1.5]
 
-TASK [Install Htop] ********************************************************************************************
+TASK [Install Htop] ****************************************
 ok: [192.168.1.5]
 
-PLAY RECAP *****************************************************************************************************
+PLAY RECAP ****************************************
 192.168.1.5                : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
 
 ##### Variables
 
-We can define other sections beyond `tasks` in a playbook. Another section we can define is variables, with `vars:`. To illistrate, lets replace the hard-coded `htop` in our playbook to a variable named `package`. We can even swap it out in our `name`, and the output will dynamically change.
+We can define sections other than `tasks` in a playbook.  A useful section to
+add is `vars:`, which defines variables for in the playbook. To illustrate,
+lets replace the hard-coded `htop` in our playbook to a variable named
+`package`. We can even use the `package` variable in the `name` string to
+dynamically change the output in the log:
 
 
 ```yaml
@@ -298,42 +307,44 @@ And the output:
 ```bash
 ➜  ansible-playbook install-htop.yaml
 
-PLAY [127.0.0.1] ***********************************************************************************************
+PLAY [127.0.0.1] ****************************************
 
-TASK [Gathering Facts] *****************************************************************************************
+TASK [Gathering Facts] ****************************************
 ok: [127.0.0.1]
 
-TASK [Ping host first...] **************************************************************************************
+TASK [Ping host first...] ****************************************
 ok: [127.0.0.1]
 
-TASK [Install htop] ********************************************************************************************
+TASK [Install htop] ****************************************
 changed: [127.0.0.1]
 
-PLAY RECAP *****************************************************************************************************
+PLAY RECAP ****************************************
 127.0.0.1                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-The best thing about variables... is they can be swapped out when calling the playbook. The `-e` flag allows you to provide your own value for a variable. For example, lets say we want to install `nano` instead of `htop`:
+One great feature of variables... is they can be swapped out when calling the
+playbook. The `-e` flag allows you to provide an alternative value for a
+variable.  For example, lets say we want to install `nano` instead of `htop`:
 
 ```bash
 ➜  ansible-playbook install-htop.yaml -e package=nano
 
-PLAY [127.0.0.1] ***********************************************************************************************
+PLAY [127.0.0.1] ****************************************
 
-TASK [Gathering Facts] *****************************************************************************************
+TASK [Gathering Facts] ****************************************
 ok: [127.0.0.1]
 
-TASK [Ping host first...] **************************************************************************************
+TASK [Ping host first...] ****************************************
 ok: [127.0.0.1]
 
-TASK [Install nano] ********************************************************************************************
+TASK [Install nano] ****************************************
 changed: [127.0.0.1]
 
-PLAY RECAP *****************************************************************************************************
+PLAY RECAP ****************************************
 127.0.0.1                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-Fun right?
+Note how the task name has changed accordingly in the output! Fun, right?
 
 
 ## Creating some structure
