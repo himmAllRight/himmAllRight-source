@@ -464,21 +464,21 @@ Easy. Let's run it:
 [WARNING]: Ansible is being run in a world writable directory (/tmp), ignoring it as an ansible.cfg source. For more information see
 https://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-world-writable-dir
 
-PLAY [127.0.0.1] *****************************************************************************************************************************
+PLAY [127.0.0.1] ****************************************
 
-TASK [Gathering Facts] ***********************************************************************************************************************
+TASK [Gathering Facts] ****************************************
 ok: [127.0.0.1]
 
-TASK [install-htop : include_tasks] **********************************************************************************************************
+TASK [install-htop : include_tasks] ****************************************
 included: /tmp/roles/install-htop/tasks/ping.yaml for 127.0.0.1
 
-TASK [install-htop : Ping host first...] *****************************************************************************************************
+TASK [install-htop : Ping host first...] ****************************************
 ok: [127.0.0.1]
 
-TASK [install-htop : Install htop] ***********************************************************************************************************
+TASK [install-htop : Install htop] ****************************************
 ok: [127.0.0.1]
 
-PLAY RECAP ***********************************************************************************************************************************
+PLAY RECAP ****************************************
 127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
