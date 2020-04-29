@@ -123,13 +123,14 @@ Example:
 192.168.112.207
 ```
 
-#### Modules/Roles
+#### Modules
 
-Modules/roles are premade functionality used in ansible. Roles can be imported
-into a play book define variables, or run tasks.  They do something you want
-done. Some examples are `ping`, `dnf`, `apt`, `redhat_subscription`.
+Modules are premade functionality used in ansible that can be imported into a
+playbook.  They do something you want done. Some examples are `ping`, `dnf`,
+`apt`, `redhat_subscription`.
 
-Feel free to search the [ansible documentation](https://docs.ansible.com) to learn more.
+Feel free to search the [ansible documentation](https://docs.ansible.com) to
+learn more.
 
 #### Ad-hoc Ansible Commands
 
@@ -349,13 +350,21 @@ Note how the task name has changed accordingly in the output! Fun, right?
 
 ## Creating some structure
 
-### roles
+### Roles
 
-As nice as scripts are, they don't scale well. So, we break things down into things called `roles`. Roles are collections o tasks, varilables, and other resources that can be mixed and matched in playbooks. A role is defined by a directory of it's name, and usually contains a `tasks` sub-directory, were all of it's tasks are defined. At the vary least, there is a task file named `tasks/main.yml` that contains tasks.
+As nice as scripts are, they don't scale well. To combat impending chaos, we
+break functionality down into `roles`. Roles are collections of tasks,
+variables, and other resources that can be mixed and matched in playbooks. A
+role is defined by a directory of it's name, and usually contains a `tasks`
+sub-directory, were all of it's tasks are defined. At the vary least, there is
+a task file named `tasks/main.yml` which can tasks.
 
-If there are a BUNCH of tasks defined, they can be broken out into seperate files, and included in the `main.yml` taks file.
+If there are a BUNCH of tasks defined, they can be broken out into seperate
+files, and included in the `main.yml` taks file.
 
-In addition to `tasks`, a role might include a `defaults` or `vars` sub directory. These are again structured with a `main.yml` file that may or may not import other files, depending on the size and organization.
+In addition to `tasks`, a role might include a `defaults` or `vars` sub
+directory. These are again structured with a `main.yml` file that may, or may
+not, import other files, depending on the size and organization.
 
 ```bash
 ## Example structure of a 'subscriptions' role
@@ -368,26 +377,45 @@ roles
         └── main.yml
 ```
 
-It is important to note that these yaml files contain *just* their item. For example, the tasks files, contain just tasks, like *tasks* section of a playbook. This is because when a role is imported in a playbook, the tasks are basically inserted into the tasks section of it.
+It is important to note that these yaml files contain *just* their item. For
+example, the tasks files, contain just tasks. This is because when a role is
+imported into a playbook, its items simply inserted accordingly.
+
+### ansible.cfg
+
+Before we start writing some roles, it is important to know that if you are using
+roles, you need to tell `ansible` where to find them. The easiest way to do
+this is to define an `ansible.cfg` file in the directory you will run
+`ansible-playbook` from. For example:
+
+```
+[defaults]
+roles_path = roles/
+```
 
 #### Our role
 
-So... I guess we can convert the tasks and variables in our playbook to a role?
+As it stands, our example playbook is a *massive 13 lines long*! I can hardly
+open the file without getting dizzy. So, lets try to break up the functionality
+into roles.
 
-First, lets make the dirs:
+First, lets make the directories:
 
 ```bash
 mkdir -p roles/install-htop/{tasks,defaults}
 ```
 
-Next, lets add our variables to a defaults file, `roles/install-htop/defaults/main.yml`:
+Next, we can add our variables to a default file,
+`roles/install-htop/defaults/main.yml`:
 
 ```yaml
 ---
 package: htop
 ```
 
-Next, lets create the tasks. To demonstrate including other files in the `main.yml`, I'm going to be overly-complicated and extract our `ping` task to it's own file, and include it in the main.
+With the `package` variable set, lets create the tasks. To demonstrate
+including other files in the `main.yml`, I'm going to be overly-complicated and
+extract our `ping` task to its own file, and then include it in the `main.yaml`.
 
 So first, `roles/install-htop/tasks/ping.yaml`
 
@@ -397,7 +425,8 @@ So first, `roles/install-htop/tasks/ping.yaml`
   ping:
 ```
 
-And now, `roles/install-htop/tasks/main.yaml`, which will also include our `dnf` install task...
+And then, `roles/install-htop/tasks/main.yaml`, which will also include our
+`dnf` install task...
 
 ```yaml
 ---
@@ -409,12 +438,13 @@ And now, `roles/install-htop/tasks/main.yaml`, which will also include our `dnf`
     state: latest
 ```
 
-Now, we should have an `install-htop` role defined!
+Congrats, we have an `install-htop` role defined!
 
 
 ### Including roles in playbooks
 
-Just as we included `vars` and `tasks` in a playbook, if we already have a bunch of tasks and vars defined in a *role*, instead we can just include that *role*:
+Just as we included `vars` and `tasks` in the playbook, if we already have
+tasks and vars defined in a *role*, we can instead just include that *role*:
 
 
 ```yaml
@@ -453,21 +483,13 @@ PLAY RECAP *********************************************************************
 ```
 
 
-Still works :)
-
-### ansible.cfg
-
-One last thing to note, if you are using roles, you do need to tell `ansible` where to find them. The easiest way to do this is to define an `ansible.cfg` file. For example:
-
-```
-[defaults]
-roles_path = roles/
-```
+and it still works :)
 
 # Conclusion
 
-So while only this tip of the ice-burg, I think I have covered the majority of
-things you need to know to get *something* useful. I have been able to create
-several useful roles and playbooks using this limited knowledge of Ansible in
-both my personal and work life. But don't let that stop you from learning even
-more! Good luck!
+While only the tip of the ice-burg, I think I have covered enough basics
+required to make *something* useful. Using this small amount of Ansible
+knowledge, I have been able to create playbooks that configure applications,
+update all my computers, and setup each of my machines when I reformat them.
+However, don't let that stop you from learning even more! Ansible is a powerful
+tool and worth any amount of time invested into it. Enjoy!
