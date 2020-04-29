@@ -1,6 +1,6 @@
 +++
 title  = "Ansible Quickstart"
-date   = "2020-04-28"
+date   = "2020-04-29"
 author = "Ryan Himmelwright"
 image  = "img/posts/ansible-quickstart/park-sky.jpeg"
 caption = "Duke Park, Durham NC"
@@ -9,27 +9,38 @@ draft  = "False"
 Comments = "True"
 +++
 
-A couple weeks ago I was going to give a co-worker of mine a brief run down of
-the very basics of ansible. I want to quickly share enough information, so that
-someone could easily get up and going writing some basic playbooks that have
-tasks organized with under ansible [roles](). While I briefly talked about
-setting up ansible [a long time ago](/post/ansible-on-pi-cluster), it part of
-another post and not a great full introduction to the basics of ansible. After
-hashing out some examples into my notes, I realized this would actually make a
-great post, and could be shared with anyone who would benefit from it.
+A *long* time ago, I briefly explained how to configure ansible in [a post
+about configuring a raspberry pi cluster](/post/ansible-on-pi-cluster/). All in
+all... it was by no means a great full introduction to the basics of ansible.
+
+
+A month ago, I drafted a progression of examples with notes to teach a
+co-worker the *basics* of writing and using ansible roles and playbooks. After
+I reading through them in my notes, I realized it wouldn't take much to turn
+them into an *actual* Ansible quickstart post. So here we are.
 
 <!--more-->
+
+I am not an Ansible guru, and this post will not make you one either. However,
+the goal of this post is to provide enough understating to get started writing
+some ansible playbooks, with tasks organized into roles.
 
 
 ## Installing
 
-First lets install ansible. It should be in most distro's main repos these
+Lets start by installing ansible. It should be in most distro's main repos these
 days:
 
-*Fedota Linux*: `sudo dnf install ansible`
+Fedora Linux:
+```
+sudo dnf install ansible
+```
 
-*MacOS*: No idea. I `ssh` to Linux boxes on my macbook XD. It can be installed
-with `pip` though, so possibly:
+MacOS:
+
+... I have no idea. I usually always `ssh` to Linux boxes from my macbook.
+
+I think it can be installed with `pip` though, so possibly:
 
 `pip install ansible`
 
@@ -38,61 +49,59 @@ with `pip` though, so possibly:
 In order for ansible to connect to a node, that node usually needs 3 things:
 
  - 1) Python installed
- - 2) Often, it needs passwordless sudo abilities... This can be done using:
+ - 2) password-less sudo permissions
  - 3) `ssh` keys configured (if running against remote hosts. Not needed if
      just running playbooks against `localhost`)
 
 #### python
 
-Python should already be installed on most systems. If not, I'm probably not
-the best source of how to do it, so I'll leave this step up to you. Don't
-worry, you got this!
+Python should already be installed on most systems. If not, check your package
+manager, or try searching the documentation on [python.org](https://python.org).
 
 #### Passwordless `sudo`
 
-Now lets setup passwordless sudo. This will allow your user to run `sudo`
-commands, without having to type in a password each time. Now, I shouldn't have
-to say this, but... use with care.
+This will allow your user to run `sudo` commands, without having to type in a
+password each time. I shouldn't have to say this, but... *please use with care!*
 
-This is most easily accomplished with `visudo`:
+Granting password-less sudo permissions are most easily accomplished using
+`visudo`:
 
 ```shell
 sudo visudo
 ```
 
-This command will open up the `sudo` settings in your `$EDITOR`. Once opened,
-find the following line and uncomment it (it's usually near the bottom of the
-file).
+This will up the `sudo` settings in your `$EDITOR`. Once opened, find the
+following line and uncomment it (it's usually near the bottom of the file).
 
 ```shell
 ## Same thing without a password
-# %wheel        ALL=(ALL)       NOPASSWD: ALL
+%wheel        ALL=(ALL)       NOPASSWD: ALL
+```
+
+You can also optionally copy the uncommented line and apply it to a more
+limited group than `wheel`. This is my preferred method.
+
+```shell
 %ryan   ALL=(ALL)       NOPASSWD: ALL
 ```
 
-You can also optionally copy the uncommented line and apply it with a more
-limited group than `wheel`. This is my preferred method (And what I have done
-in the example).
-
-
 #### ssh
 
-Lastly, copy ssh-keys. The easiest way is to use the `ssh-copy-id` command as
-such:
+Lastly, exchange ssh-keys with the remote node. This will allow ansible to ssh
+to the node without having to deal with those pesky passwords. The easiest way
+to exchange keys is using the `ssh-copy-id` command as such:
 
 ```shell
 ssh-copy-id username@hostname
 ```
 
-## Basics
-
-Now lets quickly get into the basics of ansible.
+## Ansible Basics
 
 #### Hosts Inventory
 
 A host inventory file is a yaml file that defines hosts to connect to in
-ansible. The default is located at `/etc/ansible/hosts`. Another inventory file can
-be provided with the `-i` flag.
+ansible. The default file is located at `/etc/ansible/hosts`. Another inventory
+file may be provided using the `-i` flag.
 
 
 Example:
@@ -116,17 +125,24 @@ Example:
 
 #### Modules/Roles
 
-Premade functionality used in ansible. In playbooks, these are sort of like functions called for task blocks. They do something you want done. Some examples are `ping`, `dnf`, `apt`, `redhat_subscription`.
+Modules/roles are premade functionality used in ansible. Roles can be imported
+into a play book define variables, or run tasks.  They do something you want
+done. Some examples are `ping`, `dnf`, `apt`, `redhat_subscription`.
 
 Feel free to search the [ansible documentation](https://docs.ansible.com) to learn more.
 
 #### Ad-hoc Ansible Commands
 
-Simple and straight ansible commands can be called with the `ansible` command,
-and usually with a module, called using the `-m` flag. For example, ping:
+Simple and straight ansible commands can be called with the `ansible` command.
+Ad-hoc commands are usually called with a module, using the `-m` flag. For
+example, ping:
 
 ```shell
-ansible -m ping localhost
+➜  ansible -m ping localhost
+localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
 ```
 
 For a more complicated example, lets use the `dnf` module to install `htop`:
@@ -135,13 +151,17 @@ For a more complicated example, lets use the `dnf` module to install `htop`:
 ansible -m dnf -a "name=htop state=latest" localhost --become
 ```
 
-This module requires some parameters to know what to do. We are able to supply them using the `-a` flag, followed by a string of the key/values.
+This module requires some parameters to be defined. We are able to supply
+them using the `-a` flag, followed by a string of the key/values pairs.
 
-Also, since the `dnf` module requires root permissions to function, we supply the `--become` flag, to become root.
+Also, because the `dnf` module requires root permissions to function, we supply
+the `--become` flag, to become root.
 
-Note, if I want to run this against another machine (beyond `localhost`), it has to be defined in whatever inventory file we are using.
+Note, if I want to run this against another machine (beyond `localhost`), it
+has to be defined in whatever inventory file we are using.
 
-So, if I define an inventory (`./hosts.yaml`) like this:
+So, if I define an inventory file (`./hosts.yaml`) containing my desktop
+computer:
 
 ```yaml
 [charmelon]
@@ -157,26 +177,32 @@ ansible -i hosts.yaml -m dnf -a "name=htop state=latest" charmeleon --become
 ... and it works!
 
 ```
-192.168.1.5 | SUCCESS => {
+192.168.1.5 | CHANGED => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
     },
-    "changed": false,
-    "msg": "Nothing to do",
+    "changed": true,
+    "msg": "",
     "rc": 0,
-    "results": []
+    "results": [
+        "Installed: htop-2.2.0-8.fc32.x86_64"
+    ]
 }
 ```
 
-#### Playbooks
+### Playbooks
 
-As you can imagine, doing everything from the command line isn't always helpful or easily reproducable. That's where playbooks come in. Playbooks are basically ansible scripts. They are a yaml file that ansible is able to run, instead of running the straight ansible commands we showed above.
+As you can imagine, doing everything from the command line isn't always
+helpful, or easily reproducible. That's what playbooks are for. In a nutshell,
+playbooks are ansible scripts. They are a yaml file which ansible runs, instead
+of running the straight ansible commands we showed above.
 
-As an examble, lets convert the `dnf` command from above to a simple playbook (named `install-htop.yaml`).
+To demonstrate, lets convert the `dnf` command from above to a simple playbook
+(named `install-htop.yaml`).
 
 ```yaml
 ---
-- hosts: all
+- hosts: charmeleon
   become: true
 
   tasks:
@@ -186,9 +212,15 @@ As an examble, lets convert the `dnf` command from above to a simple playbook (n
         state: latest
 ```
 
-Being a `yaml` file, the first line starts with `---`. Next, we define some meta information for the entire playbook. For example, this is were we state our `--become` flag, by turning it into a `become: true`. This is also where we state that hosts the playbook will run against. If I'm providing a hosts file, I can use `hosts: all` to run against all hosts in the inventory file.
+Being a `yaml` file, the first line starts with `---`. Next, we define some
+meta information for the entire playbook. For example, this is were we put the
+`--become` flag, by turning it into `become: true`. This is also where we
+define what hosts the playbook will run against. If I'm providing a hosts file,
+I can alternatively use `hosts: all` to run against *all* hosts defined in the
+inventory file.
 
 
+#### local connections
 
 If the playbook is to run only locally, the connection type can be set to `local` (by default, it is set to `ssh`.)
 ```
