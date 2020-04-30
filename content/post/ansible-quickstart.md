@@ -5,7 +5,7 @@ author = "Ryan Himmelwright"
 image  = "img/posts/ansible-quickstart/ansible-balcony.jpeg"
 caption = "Ansible Office Balcony, Durham NC"
 tags   = ["dev", "linux","devops", "ansible",]
-draft  = "True"
+draft  = "False"
 Comments = "True"
 +++
 
@@ -22,8 +22,8 @@ them into an *actual* Ansible quickstart post. So here we are.
 
 <!--more-->
 
-I am not an Ansible guru, and reading this will not make you one either. However,
-the goal of this post is to provide enough understating to get started writing
+I am not an Ansible genius, and reading this will not make you one either. However,
+the goal of this post is to provide enough understating to get started with writing
 some ansible playbooks.
 
 
@@ -83,13 +83,6 @@ following line and uncomment it (it's usually near the bottom of the file).
 %wheel        ALL=(ALL)       NOPASSWD: ALL
 ```
 
-You can also optionally copy the uncommented line and apply it to a more
-limited group than `wheel`. This is my preferred method.
-
-```shell
-%ryan   ALL=(ALL)       NOPASSWD: ALL
-```
-
 #### ssh
 
 Lastly, exchange ssh-keys with the remote node. This will allow ansible to ssh
@@ -106,7 +99,7 @@ ssh-copy-id username@hostname
 
 A host inventory file is a yaml file that defines hosts ansible can connect to.
 The default file is located at `/etc/ansible/hosts`. An alternative inventory
-file may also be provided using the `-i` flag.
+file may be provided using the `-i` flag.
 
 
 Example file:
@@ -202,7 +195,7 @@ ansible -i hosts.yaml -m dnf -a "name=htop state=latest" charmeleon --become
 As you can imagine, doing everything from the command line isn't always
 helpful, or easily reproducible. That's what playbooks are for. In a nutshell,
 playbooks are ansible scripts. They are a yaml file which ansible runs, instead
-of running the ad-hoc ansible commands we showed above.
+of running a serries of ad-hoc commands.
 
 To demonstrate, lets convert the `dnf` command from above, into a simple
 playbook named `install-htop.yaml`.
@@ -238,10 +231,10 @@ If the playbook is to run only locally, the connection type can be set to
 
 #### tasks
 
-Below the header information, we can define a set of `tasks` to run. In the
+Below the header information, we can define a set of tasks to run. In the
 `tasks` section, a block is defined for each task, usually by calling a module
-with parameters. It is best practice to name each task using `name:`. This will
-make it easier to trace the logs.
+with parameters. It is best practice to describe each task using `name:`. This
+will make it easier to trace the logs.
 
 For example, lets add the`ping` module to the playbook so we have more than one
 task....
@@ -262,7 +255,8 @@ task....
         state: latest
 ```
 
-Now the playbook will run both tasks, using the `name` as the header for the output of each one:
+Now the playbook will run both tasks, using `name` as the header for the output
+of each one:
 
 ```bash
 ➜  /tmp ansible-playbook install-htop.yaml
@@ -285,11 +279,11 @@ PLAY RECAP ****************************************
 
 ##### Variables
 
-We can define sections other than `tasks` in a playbook.  A useful section to
-add is `vars:`, which defines variables for use in the playbook. To illustrate,
-lets replace the hard-coded `htop` in the `dnf` task, to a variable named
-`package`. We can even use the `package` variable in the `name` string, to
-dynamically change the output in the log:
+We can define sections other than `tasks`.  A useful section to add is `vars:`,
+which defines variables for use in the playbook. To illustrate, lets replace
+the hard-coded `htop` in the `dnf` task, to a variable named `package`. We can
+even use the `package` variable in the `name` string, to dynamically change the
+output in the log:
 
 
 ```yaml
@@ -498,7 +492,7 @@ and it still works :)
 
 # Conclusion
 
-While only the tip of the ice-burg, I think we have covered enough basics
+While only the tip of the iceburg, I think we have covered enough basics
 to make *something* useful. Using this small amount of Ansible
 knowledge, I have been able to create playbooks that configure applications,
 update all my computers, and setup each of my machines when I reformat them.
