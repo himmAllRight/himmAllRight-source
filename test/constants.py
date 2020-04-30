@@ -5,6 +5,7 @@ SITE_PAGES = ["/", "/pages/about/", "/pages/homelab/"]
 POST_DIR = "./content/post/"
 POST_NAMES = [
     "25-days-of-c",
+    "ansible-quickstart",
     "Ansible-On-Pi-Cluster",
     "ato2019",
     "back-on-arch",
