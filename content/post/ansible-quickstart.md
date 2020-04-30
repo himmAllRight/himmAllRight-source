@@ -1,29 +1,30 @@
 +++
 title  = "Ansible Quickstart"
-date   = "2020-04-29"
+date   = "2020-04-30"
 author = "Ryan Himmelwright"
-image  = "img/posts/ansible-quickstart/park-sky.jpeg"
-caption = "Duke Park, Durham NC"
+image  = "img/posts/ansible-quickstart/ansible-balcony.jpeg"
+caption = "Ansible Office Balcony, Durham NC"
 tags   = ["dev", "linux","devops", "ansible",]
 draft  = "True"
 Comments = "True"
 +++
 
-A *long* time ago, I briefly explained how to configure ansible in [a post
-about configuring a raspberry pi cluster](/post/ansible-on-pi-cluster/). All in
-all... it was by no means a great full introduction to the basics of ansible.
+A *long* time ago, I briefly explained how to configure
+[Ansible](https://www.ansible.com), in [a post about building a raspberry pi
+cluster](/post/ansible-on-pi-cluster/). All in all... it was by no means a
+great introduction to the basics of ansible.
 
 
-A month ago, I drafted a progression of examples with notes to teach a
+A month ago, I drafted a progression of examples with notes, to teach a
 co-worker the *basics* of writing and using ansible roles and playbooks. After
-I reading through them in my notes, I realized it wouldn't take much to turn
+reading through them, I realized it wouldn't take much to turn
 them into an *actual* Ansible quickstart post. So here we are.
 
 <!--more-->
 
-I am not an Ansible guru, and this post will not make you one either. However,
+I am not an Ansible guru, and reading this will not make you one either. However,
 the goal of this post is to provide enough understating to get started writing
-some ansible playbooks, with tasks organized into roles.
+some ansible playbooks.
 
 
 ## Installing
@@ -42,11 +43,14 @@ MacOS:
 
 I think it can be installed with `pip` though, so possibly:
 
-`pip install ansible`
+```
+pip3 install ansible
+```
 
 ### Remote Node Requirements
 
-In order for ansible to connect to a node, that node usually needs 3 things:
+In order for ansible to connect to a remote node, that node usually needs 3
+things:
 
  - 1) Python installed
  - 2) password-less sudo permissions
@@ -56,21 +60,22 @@ In order for ansible to connect to a node, that node usually needs 3 things:
 #### python
 
 Python should already be installed on most systems. If not, check your package
-manager, or try searching the documentation on [python.org](https://python.org).
+manager, or try searching the documentation on [python.org](https://python.org)
+to learn the best install method for your system.
 
 #### Passwordless `sudo`
 
-This will allow your user to run `sudo` commands, without having to type in a
+This will allow a user to run `sudo` commands, without having to type in a
 password each time. I shouldn't have to say this, but... *please use with care!*
 
-Granting password-less sudo permissions are most easily accomplished using
+Granting password-less sudo permissions are most easily accomplished with
 `visudo`:
 
 ```shell
 sudo visudo
 ```
 
-This will up the `sudo` settings in your `$EDITOR`. Once opened, find the
+This will open up the `sudo` settings in your `$EDITOR`. Once opened, find the
 following line and uncomment it (it's usually near the bottom of the file).
 
 ```shell
@@ -88,8 +93,8 @@ limited group than `wheel`. This is my preferred method.
 #### ssh
 
 Lastly, exchange ssh-keys with the remote node. This will allow ansible to ssh
-to the node without having to deal with those pesky passwords. The easiest way
-to exchange keys is using the `ssh-copy-id` command as such:
+into the node without having to deal with those pesky passwords. The easiest way
+to exchange keys is using the `ssh-copy-id` command, as such:
 
 ```shell
 ssh-copy-id username@hostname
@@ -97,14 +102,14 @@ ssh-copy-id username@hostname
 
 ## Ansible Basics
 
-#### Hosts Inventory
+#### Hosts File
 
-A host inventory file is a yaml file that defines hosts to connect to in
-ansible. The default file is located at `/etc/ansible/hosts`. Another inventory
-file may be provided using the `-i` flag.
+A host inventory file is a yaml file that defines hosts ansible can connect to.
+The default file is located at `/etc/ansible/hosts`. An alternative inventory
+file may also be provided using the `-i` flag.
 
 
-Example:
+Example file:
 
 ```yaml
 [VMs]
@@ -126,20 +131,21 @@ Example:
 #### Modules
 
 Modules are premade functionality used in ansible that can be imported into a
-playbook.  They do something you want done. Some examples are `ping`, `dnf`,
-`apt`, `redhat_subscription`.
+playbook. Simply, they *do* what you want *done*. Some examples are `ping`,
+`dnf`, `apt`, `redhat_subscription`.
 
 Feel free to search the [ansible documentation](https://docs.ansible.com) to
 learn more.
 
 #### Ad-hoc Ansible Commands
 
-Simple and straight ansible commands can be called with the `ansible` command.
+Simple and straight ansible executions can be called with the `ansible` command.
 Ad-hoc commands are usually called with a module, using the `-m` flag. For
-example, ping:
+example, `ping`:
 
 ```shell
 ➜  ansible -m ping localhost
+
 localhost | SUCCESS => {
     "changed": false,
     "ping": "pong"
@@ -156,7 +162,7 @@ This module requires some parameters to be defined. We are able to supply
 them using the `-a` flag, followed by a string of the key/values pairs.
 
 Also, because the `dnf` module requires root permissions to function, we supply
-the `--become` flag, to become root.
+the `--become` flag, to become `root`.
 
 Note, if I want to run this against another machine (beyond `localhost`), it
 has to be defined in whatever inventory file we are using.
@@ -169,7 +175,7 @@ computer:
 192.168.1.5
 ```
 
-I can install `htop` on *it*, using:
+I can install `htop` on *my desktop*, using:
 
 ```bash
 ansible -i hosts.yaml -m dnf -a "name=htop state=latest" charmeleon --become
@@ -196,10 +202,10 @@ ansible -i hosts.yaml -m dnf -a "name=htop state=latest" charmeleon --become
 As you can imagine, doing everything from the command line isn't always
 helpful, or easily reproducible. That's what playbooks are for. In a nutshell,
 playbooks are ansible scripts. They are a yaml file which ansible runs, instead
-of running the straight ansible commands we showed above.
+of running the ad-hoc ansible commands we showed above.
 
-To demonstrate, lets convert the `dnf` command from above to a simple playbook
-(named `install-htop.yaml`).
+To demonstrate, lets convert the `dnf` command from above, into a simple
+playbook named `install-htop.yaml`.
 
 ```yaml
 ---
@@ -223,19 +229,21 @@ inventory file.
 
 #### local connections
 
-If the playbook is only to run locally, the connection type can be set to
+If the playbook is to run only locally, the connection type can be set to
 `local` (by default, it is set to `ssh`.)
 ```
   hosts: 127.0.0.1
   connection: local
 ```
 
+#### tasks
+
 Below the header information, we can define a set of `tasks` to run. In the
 `tasks` section, a block is defined for each task, usually by calling a module
-with parameters. It is best practice to name each tag using `name:`. This will
+with parameters. It is best practice to name each task using `name:`. This will
 make it easier to trace the logs.
 
-For example, lets add the`ping` module to the playbook so we had more than one
+For example, lets add the`ping` module to the playbook so we have more than one
 task....
 
 ```yaml
@@ -254,7 +262,7 @@ task....
         state: latest
 ```
 
-Now it will run both tasks, using the `name` as the header for the output of each one:
+Now the playbook will run both tasks, using the `name` as the header for the output of each one:
 
 ```bash
 ➜  /tmp ansible-playbook install-htop.yaml
@@ -278,9 +286,9 @@ PLAY RECAP ****************************************
 ##### Variables
 
 We can define sections other than `tasks` in a playbook.  A useful section to
-add is `vars:`, which defines variables for in the playbook. To illustrate,
-lets replace the hard-coded `htop` in our playbook to a variable named
-`package`. We can even use the `package` variable in the `name` string to
+add is `vars:`, which defines variables for use in the playbook. To illustrate,
+lets replace the hard-coded `htop` in the `dnf` task, to a variable named
+`package`. We can even use the `package` variable in the `name` string, to
 dynamically change the output in the log:
 
 
@@ -323,7 +331,7 @@ PLAY RECAP ****************************************
 127.0.0.1                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-One great feature of variables... is they can be swapped out when calling the
+One great feature of variables is that they can be swapped out when calling the
 playbook. The `-e` flag allows you to provide an alternative value for a
 variable.  For example, lets say we want to install `nano` instead of `htop`:
 
@@ -345,7 +353,7 @@ PLAY RECAP ****************************************
 127.0.0.1                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-Note how the task name has changed accordingly in the output! Fun, right?
+Note how the task name has changed accordingly in the output. So Fancy!
 
 
 ## Creating some structure
@@ -354,17 +362,20 @@ Note how the task name has changed accordingly in the output! Fun, right?
 
 As nice as scripts are, they don't scale well. To combat impending chaos, we
 break functionality down into `roles`. Roles are collections of tasks,
-variables, and other resources that can be mixed and matched in playbooks. A
-role is defined by a directory of it's name, and usually contains a `tasks`
-sub-directory, were all of it's tasks are defined. At the vary least, there is
-a task file named `tasks/main.yml` which can tasks.
+variables, and other resources that can be mixed and matched in playbooks.
+
+A role is defined by a directory of it's name, and usually contains a `tasks`
+sub-directory, where all of it's tasks are defined. Each sub-directory requires
+a `main.yml` to be the root file for that directory. So, at the vary least, a
+tasks directory will have a file named `tasks/main.yml` which contains the
+role's tasks.
 
 If there are a BUNCH of tasks defined, they can be broken out into seperate
-files, and included in the `main.yml` taks file.
+files, and included in the `main.yml` task file.
 
 In addition to `tasks`, a role might include a `defaults` or `vars` sub
 directory. These are again structured with a `main.yml` file that may, or may
-not, import other files, depending on the size and organization.
+not, import other files, depending on the size and organization of the role.
 
 ```bash
 ## Example structure of a 'subscriptions' role
@@ -378,8 +389,8 @@ roles
 ```
 
 It is important to note that these yaml files contain *just* their item. For
-example, the tasks files, contain just tasks. This is because when a role is
-imported into a playbook, its items simply inserted accordingly.
+example, the task files contain just tasks. This is because when a role is
+imported into a playbook, its items are simply inserted accordingly.
 
 ### ansible.cfg
 
@@ -396,8 +407,8 @@ roles_path = roles/
 #### Our role
 
 As it stands, our example playbook is a *massive 13 lines long*! I can hardly
-open the file without getting dizzy. So, lets try to break up the functionality
-into roles.
+open the file without crashing my text editor. So, lets try to break up the
+functionality into roles.
 
 First, lets make the directories:
 
@@ -415,7 +426,7 @@ package: htop
 
 With the `package` variable set, lets create the tasks. To demonstrate
 including other files in the `main.yml`, I'm going to be overly-complicated and
-extract our `ping` task to its own file, and then include it in the `main.yaml`.
+extract our `ping` task into its own file, and then include it in the `main.yaml`.
 
 So first, `roles/install-htop/tasks/ping.yaml`
 
@@ -444,7 +455,7 @@ Congrats, we have an `install-htop` role defined!
 ### Including roles in playbooks
 
 Just as we included `vars` and `tasks` in the playbook, if we already have
-tasks and vars defined in a *role*, we can instead just include that *role*:
+tasks and vars defined in a *role*, we can instead include that *role*:
 
 
 ```yaml
@@ -487,8 +498,8 @@ and it still works :)
 
 # Conclusion
 
-While only the tip of the ice-burg, I think I have covered enough basics
-required to make *something* useful. Using this small amount of Ansible
+While only the tip of the ice-burg, I think we have covered enough basics
+to make *something* useful. Using this small amount of Ansible
 knowledge, I have been able to create playbooks that configure applications,
 update all my computers, and setup each of my machines when I reformat them.
 However, don't let that stop you from learning even more! Ansible is a powerful
