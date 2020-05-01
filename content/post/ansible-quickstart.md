@@ -171,7 +171,7 @@ computer:
 I can install `htop` on *my desktop*, using:
 
 ```bash
-ansible -i hosts.yaml -m dnf -a "name=htop state=latest" charmeleon --become
+ansible -i ./hosts -m dnf -a "name=htop state=latest" charmeleon --become
 ```
 
 ... and it works!
@@ -360,15 +360,15 @@ variables, and other resources that can be mixed and matched in playbooks.
 
 A role is defined by a directory of it's name, and usually contains a `tasks`
 sub-directory, where all of it's tasks are defined. Each sub-directory requires
-a `main.yml` to be the root file for that directory. So, at the vary least, a
-tasks directory will have a file named `tasks/main.yml` which contains the
+a `main.yaml` to be the root file for that directory. So, at the vary least, a
+tasks directory will have a file named `tasks/main.yaml` which contains the
 role's tasks.
 
 If there are a BUNCH of tasks defined, they can be broken out into seperate
-files, and included in the `main.yml` task file.
+files, and included in the `main.yaml` task file.
 
 In addition to `tasks`, a role might include a `defaults` or `vars` sub
-directory. These are again structured with a `main.yml` file that may, or may
+directory. These are again structured with a `main.yaml` file that may, or may
 not, import other files, depending on the size and organization of the role.
 
 ```bash
@@ -376,10 +376,10 @@ not, import other files, depending on the size and organization of the role.
 roles
 └── subscriptions
     ├── defaults
-    │   └── main.yml
+    │   └── main.yaml
     ├── README.md
     └── tasks
-        └── main.yml
+        └── main.yaml
 ```
 
 It is important to note that these yaml files contain *just* their item. For
@@ -411,7 +411,7 @@ mkdir -p roles/install-htop/{tasks,defaults}
 ```
 
 Next, we can add our variables to a default file,
-`roles/install-htop/defaults/main.yml`:
+`roles/install-htop/defaults/main.yaml`:
 
 ```yaml
 ---
@@ -419,7 +419,7 @@ package: htop
 ```
 
 With the `package` variable set, lets create the tasks. To demonstrate
-including other files in the `main.yml`, I'm going to be overly-complicated and
+including other files in the `main.yaml`, I'm going to be overly-complicated and
 extract our `ping` task into its own file, and then include it in the `main.yaml`.
 
 So first, `roles/install-htop/tasks/ping.yaml`
