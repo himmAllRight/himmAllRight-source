@@ -35,7 +35,7 @@ Sapphire Radeon Pulse RX 580 8GB GPU
 250 GB Samsung 850 EVO SATA SSD
 Fractal Design Meshify C Dark TG ATX Mid Tower Case
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
-Fedora 31
+Fedora 32
 *Connected to Periphery devices
 ```
 <a name="kadabra"></a>
@@ -46,7 +46,7 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
 500 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
-Fedora 31
+Fedora 32
 *Can Connect to Periphery devices via Thunderbolt 3 Dongle
 ```
 ### Interface Devices
