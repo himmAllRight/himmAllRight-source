@@ -195,7 +195,7 @@ ansible -i ./hosts -m dnf -a "name=htop state=latest" charmeleon --become
 As you can imagine, doing everything from the command line isn't always
 helpful, or easily reproducible. That's what playbooks are for. In a nutshell,
 playbooks are ansible scripts. They are a yaml file which ansible runs, instead
-of running a serries of ad-hoc commands.
+of running a series of ad-hoc commands.
 
 To demonstrate, lets convert the `dnf` command from above, into a simple
 playbook named `install-htop.yaml`.
