@@ -67,7 +67,7 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
     .navbar-custom {
-        background: 0 0;
+        background: rgba(0, 0, 0, 0.20);
         border-bottom: 1px solid transparent
     }
     .navbar-custom .navbar-brand {
@@ -253,6 +253,7 @@ hr.small {
     font-weight: 700
 }
 .header-caption {
+    background: rgba(0, 0, 0, 0.25);
     text-align: right;
     color: #fff;
     font-size: 14px;
