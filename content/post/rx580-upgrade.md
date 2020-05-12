@@ -2,8 +2,7 @@
 title  = "Rx-580 Upgrade"
 date   = "2020-05-14"
 author = "Ryan Himmelwright"
-image  = "img/posts/ansible-quickstart/ansible-balcony.jpeg"
-caption = "Ansible Office Balcony, Durham NC"
+image  = "img/posts/rx580-upgrade/holding-rx580.jpeg"
 tags   = ["linux","hardware", "homelab"]
 draft  = "False"
 Comments = "True"
