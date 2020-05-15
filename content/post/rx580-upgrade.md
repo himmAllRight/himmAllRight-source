@@ -4,7 +4,7 @@ date   = "2020-05-15"
 author = "Ryan Himmelwright"
 image  = "img/posts/rx580-upgrade/holding-rx580.jpeg"
 tags   = ["linux","hardware", "homelab"]
-draft  = "False"
+draft  = "True"
 Comments = "True"
 +++
 
