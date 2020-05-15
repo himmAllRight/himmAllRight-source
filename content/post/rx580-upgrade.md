@@ -1,6 +1,6 @@
 +++
 title  = "Rx-580 Upgrade"
-date   = "2020-05-14"
+date   = "2020-05-15"
 author = "Ryan Himmelwright"
 image  = "img/posts/rx580-upgrade/holding-rx580.jpeg"
 tags   = ["linux","hardware", "homelab"]
@@ -19,7 +19,7 @@ old rx560.
 <!--more-->
 
 ## Old Card - RX560
-### Why I got it
+### Recap: Why I got it
 #### I wanted an AMD GPU
 When I [designed and built my desktop](/post/charmeleon-desktop-design/), I
 knew I wanted to get and AMD GPU because I had heard the state of their open
@@ -39,6 +39,12 @@ stated that while I wasn't a big pc gamer, I did enjoy the *occasional* game.
 	- I dont the the absolute best GPU performance
 
 #### Plans to eventually upgrade
+<center>
+<a href="/img/posts/rx580-upgrade/side-by-side-photo.jpeg">
+<img alt="The rx560 and 580 side-by-side" src="/img/posts/rx580-upgrade/side-by-side-photo.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">The rx560 (bottom) next to the rx580 (top)</div>
+</center>
+
 - AMD cards were still just starting to come down in price from crypto miners
 -
 	- Possibly to the rx580
@@ -53,6 +59,12 @@ stated that while I wasn't a big pc gamer, I did enjoy the *occasional* game.
 	- The 560 worked fine for me, but might of heated up a bit because it was startign to be pushed
 	- The 580 should be able to handle all the games I play perfectly
     - Wasn't too different that the 570 in price, so worth the bump up
+
+<center>
+<a href="/img/posts/rx580-upgrade/rx580-price-history.png">
+<img alt="rx580 price history" src="/img/posts/rx580-upgrade/rx580-price-history.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">rx580 price history</div>
+</center>
 - Prices have gone down a bit on it since I built Charmeleon
 	- When I build it prices had just started to come down from the bitcoin mining
 	- Plust it's an older card now
@@ -60,6 +72,7 @@ stated that while I wasn't a big pc gamer, I did enjoy the *occasional* game.
 
 ## Conclusion
 
-I'm loving it so far. It's handling all the games I play just fine and seems to even doing it cooler for most of them.
+I'm loving it so far. It's handling all the games I play just fine and seems to
+even doing it cooler for most of them.
 
 
