@@ -1,14 +1,12 @@
 +++
 title  = "Rx-580 Upgrade"
-date   = "2020-05-15"
+date   = "2020-05-22"
 author = "Ryan Himmelwright"
 image  = "img/posts/rx580-upgrade/holding-rx580.jpeg"
 tags   = ["linux","hardware", "homelab",]
 draft  = "True"
 Comments = "True"
 +++
-
-HBU?
 
 At the start of the year, I noticed that my desktop wouldn't connect to my
 display. Using it mostly as a server, and thus through `ssh`, I didn't really
@@ -42,17 +40,9 @@ stated that while I wasn't a big pc gamer, I did enjoy the *occasional* game.
 
 #### Plans to eventually upgrade
 
-But will this text render?
-
 <center>
-<a href="/img/posts/new-2019-16inch-mbp/mbp-desk-website.jpeg">
-<img alt="MBP on my desk" src="/img/posts/new-2019-16inch-mbp/mbp-desk-website.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
-<div class="caption">New 16" MBP on my desk</div>
-</center>
-
-<center>
-<a href="/img/post/rx580-upgrade/side-by-side-photo.jpeg">
-<img alt="The rx560 and 580 side-by-side" src="/img/post/rx580-upgrade/side-by-side-photo.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<a href="/img/posts/rx580-upgrade/side-by-side-photo.jpeg">
+<img alt="The rx560 and 580 side-by-side" src="/img/posts/rx580-upgrade/side-by-side-photo.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
 <div class="caption">The rx560 (bottom) next to the rx580 (top)</div>
 </center>
 
