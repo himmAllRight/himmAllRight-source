@@ -4,7 +4,7 @@ date   = "2020-05-22"
 author = "Ryan Himmelwright"
 image  = "img/posts/rx580-upgrade/holding-rx580.jpeg"
 caption = "My new rx580"
-tags   = ["linux","hardware", "homelab",]
+tags   = ["linux","hardware", "homelab", "gpu",]
 draft  = "True"
 Comments = "True"
 +++
@@ -22,7 +22,10 @@ old rx560.
 ## Old Card - RX560
 ### Recap: Why I got it in the first place
 #### I wanted an AMD GPU
-<< Insert AMD Log on side? >>
+<center>
+<a href="/img/posts/rx580-upgrade/amd_radeon_logo.png">
+<img alt="rx580 price history" src="/img/posts/rx580-upgrade/amd_radeon_logo.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+</center>
 
 When I [designed and built my desktop](/post/charmeleon-desktop-design/), I
 knew I wanted to get and AMD GPU because I had heard the state of their open
@@ -32,7 +35,6 @@ over the years messing around with the proprietary Nvidia drivers.
 I remain very pleased with this decision. With the AMD GPU, I simply install my
 linux distro of choice, install steam, and I'm playing games. No hassle. :w
 
-### Why the 560?
 #### Needed a card to handle *modest* gaming
 In the post about my desktop, I stated that while I wasn't a big pc gamer, but
 did enjoy the *occasional* game. I play some games on consoles (especially ones
@@ -66,9 +68,38 @@ lower. I figured I could always upgrade to an rx580, or an even newer card if
 needed.
 
 ### Issue with my RX560
-- no displays when attached
-- Computer worked fine to ssh in and my VMs always started up fine
-- I wan't really able to re-install a distro if I had to (or most distros at least) without a display, and was worried something might break and I'd be stuck without my main VM host...
+#### Debugging
+At the beggining of the year, I noticed that my desktop wouldn't connect to my
+monitor. However, when I `ssh`ed into it, everything worked as normal, and all
+of my VMs and containers spun up like there was nothing wrong. I did some more
+testing and confirmed I couldn't get a signal on *any* monitor in the house,
+using a large assortment of cables.
+
+Investigating further, I noticed in the logs during boot-up the `$DISPLAY`
+trying to connect via all the various inputs (DVI, HDMI, etc), but eventually
+failing stating that there was `No Display Attached`, even when it was plugged
+in. I opened up the case, ensured everything was connected properly, tried
+different cables, and even attempted to boot into live cds and os installs.
+However, the system wouldn't even display the BIOS when it started.
+
+#### The Possible Solution
+I eventually narrowed the problem being caused by issues with the GPU, despite
+it showing up fine in my pci devices. If it wasn't the GPU, it was likely the
+motherboard.... So I figured the next best (and easier) step was to swap in
+another card and see if it worked. Not having a spare graphics card on hand,
+and not being able to borrow one easily due to COVID lockdown, my option was to
+order one.
+
+Fixing the display issues on my workstation was an *urgent* issue. In fact,
+because I wasn't playing any PC games and I already exclusively worked on the
+desktop via `ssh` from laptops, I likely didn't notice the issue for weeks.
+However, without the ability to connect to a display I couldn't easily
+re-install or debug my system if something went wrong. This was compounded by
+the fact that I was running [Fedora Silverblue](), and I needed to hold my
+breath and reboot every time I wanted to update my packages. Lastly, I didn't
+know what availability or shipping times would be given the pandemic. So, I
+decided it was best to just order a new card right away, rather than wait until
+the problem *did become* urgent.
 
 ## The RX-580
 - Capable of what I need it for
