@@ -52,16 +52,16 @@ for my use case).
 
 #### I planned to eventually upgrade
 
-One of the reasons I wanted to build a desktop computer again was for
-the ability to easily upgrade it over time. I build I designed seemed like it
-had enough power to fit all of my needs, but I set it up so that if part of it
-lacked enough performance over time, I could upgrade it.
-
 <center>
 <a href="/img/posts/rx580-upgrade/side-by-side-photo.jpeg">
 <img alt="The rx560 and 580 side-by-side" src="/img/posts/rx580-upgrade/side-by-side-photo.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
 <div class="caption">The rx560 (bottom) next to my new rx580 (top)</div>
 </center>
+
+One of the reasons I wanted to build a desktop computer again was for
+the ability to easily upgrade it over time. I build I designed seemed like it
+had enough power to fit all of my needs, but I set it up so that if part of it
+lacked enough performance over time, I could upgrade it.
 
 I knew one of the components I might *eventually* want to upgrade would be the
 GPU. I knew that the rx560 should last me for awhile, but if I started playing
@@ -76,6 +76,12 @@ monitor. However, when I `ssh`ed into it, everything worked as normal, and all
 of my VMs and containers spun up like there was nothing wrong. I did some more
 testing and confirmed I couldn't get a signal on *any* monitor in the house,
 using a large assortment of cables.
+
+<center>
+<a href="/img/posts/rx580-upgrade/no_display.jpeg">
+<img alt="Displays would not connect" src="/img/posts/rx580-upgrade/no_display.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">No display would 'connect', even when plugged in</div>
+</center>
 
 Investigating further, I noticed in the logs during boot-up the `$DISPLAY`
 trying to connect via all the various inputs (DVI, HDMI, etc), but eventually
@@ -106,6 +112,12 @@ the problem *did become* urgent.
 
 ## My New Card: The RX-580
 
+<center>
+<a href="/img/posts/rx580-upgrade/rx580_box.jpeg">
+<img alt="The rx560 box arrived a few days later" src="/img/posts/rx580-upgrade/rx580_box.jpeg" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
+<div class="caption">The rx580 box arrived a few days after ordering</div>
+</center>
+
 After some brief researching, I decided on the rx580. I also considered the 570
 and 590, as well as glanced at some of the newer AMD cards. The truth is, my
 rx560 honestly worked fine for what I needed, but if I was getting a new card,
@@ -131,7 +143,9 @@ price and performance are perfect.
 
 ## Conclusion
 
-I'm loving it so far. It's handling all the games I play just fine and seems to
-even doing it cooler for most of them.
-
-
+So far, I'm loving it. It does everything that I need it to and honestly
+doesn't give me any problems. Once again, I was able to plug in the card, boot
+up the computer, open Steam, and start playing my games. On Linux. I am very
+happy with the purchase, and it has once again reminded me why I truly do love
+having a desktop/workstation under my desk, even if it is used as a server
+*most* of the time.
