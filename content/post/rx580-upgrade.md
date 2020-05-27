@@ -1,6 +1,6 @@
 +++
 title  = "Rx-580 Upgrade"
-date   = "2020-05-22"
+date   = "2020-05-27"
 author = "Ryan Himmelwright"
 image  = "img/posts/rx580-upgrade/holding-rx580.jpeg"
 caption = "My new rx580"
@@ -19,8 +19,10 @@ old rx560.
 
 <!--more-->
 
-## Old Card - RX560
-### Recap: Why I got it in the first place
+## My Old Card - RX560 Recap
+
+So why did I select the rx560 in the first place? What did I like about it?
+
 #### I wanted an AMD GPU
 <center>
 <a href="/img/posts/rx580-upgrade/amd_radeon_logo.png">
@@ -35,7 +37,7 @@ over the years messing around with the proprietary Nvidia drivers.
 I remain very pleased with this decision. With the AMD GPU, I simply install my
 linux distro of choice, install steam, and I'm playing games. No hassle. :w
 
-#### Needed a card to handle *modest* gaming
+#### I needed a card to handle *modest* gaming
 In the post about my desktop, I stated that while I wasn't a big pc gamer, but
 did enjoy the *occasional* game. I play some games on consoles (especially ones
 I play with my wife), but PC gaming is still my favorite. However, I don't need
@@ -67,7 +69,7 @@ more games, I could easily get a better one, and hopefully prices would be
 lower. I figured I could always upgrade to an rx580, or an even newer card if
 needed.
 
-### Issue with my RX560
+### Issues
 #### Debugging
 At the beggining of the year, I noticed that my desktop wouldn't connect to my
 monitor. However, when I `ssh`ed into it, everything worked as normal, and all
@@ -82,7 +84,7 @@ in. I opened up the case, ensured everything was connected properly, tried
 different cables, and even attempted to boot into live cds and os installs.
 However, the system wouldn't even display the BIOS when it started.
 
-#### The Possible Solution
+#### The Possible 'Solution'
 I eventually narrowed the problem being caused by issues with the GPU, despite
 it showing up fine in my pci devices. If it wasn't the GPU, it was likely the
 motherboard.... So I figured the next best (and easier) step was to swap in
@@ -95,27 +97,37 @@ because I wasn't playing any PC games and I already exclusively worked on the
 desktop via `ssh` from laptops, I likely didn't notice the issue for weeks.
 However, without the ability to connect to a display I couldn't easily
 re-install or debug my system if something went wrong. This was compounded by
-the fact that I was running [Fedora Silverblue](), and I needed to hold my
+the fact that I was running [Fedora
+Silverblue](https://silverblue.fedoraproject.org), and I needed to hold my
 breath and reboot every time I wanted to update my packages. Lastly, I didn't
 know what availability or shipping times would be given the pandemic. So, I
 decided it was best to just order a new card right away, rather than wait until
 the problem *did become* urgent.
 
-## The RX-580
-- Capable of what I need it for
-	- The 560 worked fine for me, but might of heated up a bit because it was startign to be pushed
-	- The 580 should be able to handle all the games I play perfectly
-    - Wasn't too different that the 570 in price, so worth the bump up
+## My New Card: The RX-580
+
+After some brief researching, I decided on the rx580. I also considered the 570
+and 590, as well as glanced at some of the newer AMD cards. The truth is, my
+rx560 honestly worked fine for what I needed, but if I was getting a new card,
+a slight spec bump would be nice. The 580 seemed to provide great performance
+for a very reasonable price.
+
+So far, my experience seems to confirm that. I am able to play all of my games
+(mostly Divinity Original Sin II, Minecraft, City Skylines, right now)
+generally above 60 fps at mostly high settings. Additionally, because the card
+isn't being *too* taxed during gameplay, it doesn't seem to be heating up too
+badly... which I also appreciate.
 
 <center>
 <a href="/img/posts/rx580-upgrade/rx580-price-history.png">
 <img alt="rx580 price history" src="/img/posts/rx580-upgrade/rx580-price-history.png" style="max-width: 100%; padding: 5px 15px 10px 10px"/></a>
 <div class="caption">rx580 price history</div>
 </center>
-- Prices have gone down a bit on it since I built Charmeleon
-	- When I build it prices had just started to come down from the bitcoin mining
-	- Plust it's an older card now
 
+Lastly, the card has come down in price since I built my desktop. I purchased
+the rx580 for only slightly more than I originally paid for the rx560, and over
+$100 cheaper than what it cost when I built the desktop. For what I need, the
+price and performance are perfect.
 
 ## Conclusion
 
