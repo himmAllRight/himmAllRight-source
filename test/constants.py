@@ -49,6 +49,7 @@ POST_NAMES = [
     "org-babel-setup",
     "replace-zfs-mirror-drive",
     "reset-plasma5-monitor-config",
+    "rx580-upgrade",
     "scripting-tmux-workspaces",
     "self2019",
     "setting-up-pass",
