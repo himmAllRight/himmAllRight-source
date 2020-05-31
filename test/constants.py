@@ -66,6 +66,7 @@ POST_NAMES = [
     "sub-monitor-workflows-with-xrandr",
     "switched-to-joplin-notes",
     "switching-to-bitwarden",
+    "switching-hugo-md-handler",
     "switching-to-mesh-network",
     "tmpfs-mount-ramdisk",
     "Trying-out-plasma5",
