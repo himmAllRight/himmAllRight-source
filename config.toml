@@ -22,7 +22,7 @@ PygmentsStyle = "monokai"
 
 [params]
   DateForm = "Mon, Jan 2, 2006"
-  #Description = "Software Developer, Open Source and Linux Enthusiast"
+  #Description = "Software Quality Engineer, Open Source and Technology Enthusiast"
   Author = "Ryan Himmelwright"
   email = "ryan@himmelwright.net"
   recent_posts_number = 10
@@ -30,8 +30,8 @@ PygmentsStyle = "monokai"
 
 [params.header]
   image = "/img/default-header.jpg"
-  home_image = "/img/philly-chair.jpg"
-  home_caption = "Washington Square West, Philladelphia PA"
+  home_image = "atc-tower.jpeg"
+  home_caption = "American Tobacco Campus - Durham, NC"
 
 [[params.social]]
   title = "github"
