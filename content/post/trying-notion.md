@@ -17,13 +17,18 @@ work notes](/post/back-on-org-mode-for-work/), also [trello](https://trello.com)
 
 ## Quick History
 
+*Images of Joplin, Emacs, Trello (spread out) -- Joplin?*
+
 ### Previous System
+*Images of Joplin, Emacs, Trello (spread out) -- trello?*
 - Trello for planning weekly tasks/longer term goals, habit tracking
 - Emacs org-mode for the same things as trello but specifically for my work
     tasks/log
 - Joplin for both my personal and work collection of notes.
 
 ### Issues with system
+*Images of Joplin, Emacs, Trello (spread out) -- Emacs??*
+*Images of Joplin, Emacs, Trello (spread out)*
 - Have to setup everything on every device
 - Emacs wasn't available on mobile devices
 - Couldn't share items across systems (ex: linking to a note from a task card)
@@ -37,19 +42,22 @@ work notes](/post/back-on-org-mode-for-work/), also [trello](https://trello.com)
 - Easy to jump in, add a log note, and get out
 
 ## Notion
-
+*Picture of Notion*
 
 ### What I like so far
 - FLEXIBLE
+*Picture of Notion - @now log*
 - Easy logging using `@now` (like I had in org-mode)
+*Picture of Notion - Database (list + Dashboard views?)*
 - Databases
     - Multiple views of same data
     - Linkable
+*Picture of Notion - iOS views*
 - Have it on all my devices, or online
 - Free trial, and affordable for pro
 
 ### Downsides/Concerns
-
+*Picture of Notion -- Something confusing?, or maybe export options*
 - All my eggs in one basket/not open or hosted (but neither was trello)
 - Can take a bit of time to learn how to best use it (but hey, I'm coming
     mostly from emacs XD )
