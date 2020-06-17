@@ -17,18 +17,29 @@ work notes](/post/back-on-org-mode-for-work/), also [trello](https://trello.com)
 
 ## Quick History
 
-*Images of Joplin, Emacs, Trello (spread out) -- Joplin?*
+<a href="/img/posts/back-on-org-mode-for-work/joplin-gui.png">
+<img alt="Joplin GUI" src="/img/posts/back-on-org-mode-for-work/joplin-gui.png" style="max-width: 100%;"/></a>
+<div class="caption">Joplin Notes</div>
+
 
 ### Previous System
-*Images of Joplin, Emacs, Trello (spread out) -- trello?*
+
+<a href="/img/posts/trying-notion/trello_weekly_board.png">
+<img alt="Trello Weekly Board" src="/img/posts/trying-notion/trello_weekly_board.png" style="max-width: 100%;"/></a>
+<div class="caption">My Trello Weekly Task Board</div>
+
 - Trello for planning weekly tasks/longer term goals, habit tracking
 - Emacs org-mode for the same things as trello but specifically for my work
     tasks/log
 - Joplin for both my personal and work collection of notes.
 
 ### Issues with system
-*Images of Joplin, Emacs, Trello (spread out) -- Emacs??*
-*Images of Joplin, Emacs, Trello (spread out)*
+
+<a href="/img/posts/back-on-org-mode-for-work/scrum-board.png">
+<img alt="Joplin Android GUI" src="/img/posts/back-on-org-mode-for-work/scrum-board.png" style="max-width: 100%;"/></a>
+<div class="caption">I love emacs and org mode... but it really isn't an option
+on mobile OSes</div>
+
 - Have to setup everything on every device
 - Emacs wasn't available on mobile devices
 - Couldn't share items across systems (ex: linking to a note from a task card)
@@ -46,18 +57,25 @@ work notes](/post/back-on-org-mode-for-work/), also [trello](https://trello.com)
 
 ### What I like so far
 - FLEXIBLE
-*Picture of Notion - @now log*
+<a href="/img/posts/trying-notion/now_timestamp.png">
+<img alt="logging using @now" src="/img/posts/trying-notion/now_timestamp.png" style="max-width: 100%;"/></a>
+<div class="caption">Easy logging using `@now`</div>
 - Easy logging using `@now` (like I had in org-mode)
 *Picture of Notion - Database (list + Dashboard views?)*
 - Databases
     - Multiple views of same data
     - Linkable
+- Templates
+
 *Picture of Notion - iOS views*
+
 - Have it on all my devices, or online
-- Free trial, and affordable for pro
+- Free trial, and affordable for pro -- updated. Free for personal :)
 
 ### Downsides/Concerns
+
 *Picture of Notion -- Something confusing?, or maybe export options*
+
 - All my eggs in one basket/not open or hosted (but neither was trello)
 - Can take a bit of time to learn how to best use it (but hey, I'm coming
     mostly from emacs XD )
