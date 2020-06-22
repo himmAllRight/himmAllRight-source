@@ -3,9 +3,8 @@ title   = "Trying out Notion"
 date    = "2020-06-24"
 author  = "Ryan Himmelwright"
 image   = "img/posts/trying-notion/journals.jpeg"
-caption = "Duke Park, Durham NC"
 tags    = ["notes","organization", "applications",]
-draft   = "False"
+draft   = "True"
 Comments = "True"
 +++
 
