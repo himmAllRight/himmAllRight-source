@@ -1,8 +1,8 @@
 +++
 title   = "Trying out Notion"
-date    = "2020-06-14"
+date    = "2020-06-24"
 author  = "Ryan Himmelwright"
-image   = "img/posts/switching-hugo-md-handler/duke-park-sky.jpeg"
+image   = "img/posts/trying-notion/journals.jpeg"
 caption = "Duke Park, Durham NC"
 tags    = ["notes","organization", "applications",]
 draft   = "False"
@@ -53,7 +53,9 @@ on mobile OSes</div>
 - Easy to jump in, add a log note, and get out
 
 ## Notion
-*Picture of Notion*
+<a href="/img/posts/trying-notion/notion_window.png">
+<img alt="Notion in iOS" src="/img/posts/trying-notion/notion_window.png" style="max-width: 100%;"/></a>
+<div class="caption">Notion window in macOS, displaying my page for this page. The UI looks the same on the web and in my 'Nativfier' app in Linux.</div>
 
 ### What I like so far
 - FLEXIBLE
@@ -67,7 +69,13 @@ on mobile OSes</div>
     - Linkable
 - Templates
 
-*Picture of Notion - iOS views*
+
+
+<a href="/img/posts/trying-notion/ios_notion.png">
+<img alt="Notion in iOS" src="/img/posts/trying-notion/ios_notion.png" style="max-width: 100%;"/></a>
+<div class="caption">Notion views in iOS. Navigation, my 'Areas' card views,
+daily log page properties, and a task 'board' view.</div>
+
 
 - Have it on all my devices, or online
 - Free trial, and affordable for pro -- updated. Free for personal :)
