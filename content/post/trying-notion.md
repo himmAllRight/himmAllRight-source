@@ -21,6 +21,8 @@ be able to change, as I've started using [Notion](https://notion.so).
 
 ## Quick History
 
+Before diving into my experience with Notion, lets first describe the system
+I'm coming from, highlighting some of it features and pitfalls.
 
 ### Previous System
 
@@ -28,10 +30,18 @@ be able to change, as I've started using [Notion](https://notion.so).
 <img alt="Trello Weekly Board" src="/img/posts/trying-notion/trello_weekly_board.png" style="max-width: 100%;"/></a>
 <div class="caption">My Trello Weekly Task Board</div>
 
-- Trello for planning weekly tasks/longer term goals, habit tracking
-- Emacs org-mode for the same things as trello but specifically for my work
+Most recently, personal and professional notes & task planning system consisted
+of three applications: Trello, Emacs (org-mode), and Joplin. They broke down as
+follows:
+
+**Trello**: for planning weekly tasks/longer term goals, habit tracking
+
+
+**Emacs org-mode**: for the same things as trello but specifically for my work
     tasks/log
-- Joplin for both my personal and work collection of notes.
+
+
+**Joplin**: for both my personal and work collection of notes.
 
 ### Issues with system
 
@@ -40,9 +50,9 @@ be able to change, as I've started using [Notion](https://notion.so).
 <div class="caption">I love emacs and org mode... but it really isn't an option
 on mobile OSes</div>
 
-- Have to setup everything on every device
-- Emacs wasn't available on mobile devices
-- Couldn't share items across systems (ex: linking to a note from a task card)
+- **Have to setup everything on every device**:
+- **Emacs wasn't available on mobile devices**:
+- **Couldn't share items across systems**: (ex: linking to a note from a task card)**:
 
 ### Desires
 
