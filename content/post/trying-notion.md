@@ -8,17 +8,18 @@ draft   = "True"
 Comments = "True"
 +++
 
-[trying joplin notes](/post/switched-to-joplin-notes/) [back to org-mode for
-work notes](/post/back-on-org-mode-for-work/), also [trello](https://trello.com)
-[notion](https://notion.so)
+The past year or two has been a whirlwind of trying various notes and planning
+systems. I started by attempting to switch everything to [joplin
+notes](/post/switched-to-joplin-notes/) only to switch [back to org-mode for my
+work notes](/post/back-on-org-mode-for-work/) a few months later. Around that
+same time, I also started using [trello](https://trello.com) to organize my
+personal and home life into task boards. This system worked well, but felt very
+disjointed, spreading my notes, goals, and tasks all over the place. However, that all might
+be able to change, as I've started using [Notion](https://notion.so).
 
 <!--more-->
 
 ## Quick History
-
-<a href="/img/posts/back-on-org-mode-for-work/joplin-gui.png">
-<img alt="Joplin GUI" src="/img/posts/back-on-org-mode-for-work/joplin-gui.png" style="max-width: 100%;"/></a>
-<div class="caption">Joplin Notes</div>
 
 
 ### Previous System
@@ -44,6 +45,10 @@ on mobile OSes</div>
 - Couldn't share items across systems (ex: linking to a note from a task card)
 
 ### Desires
+
+<a href="/img/posts/back-on-org-mode-for-work/joplin-gui.png">
+<img alt="Joplin GUI" src="/img/posts/back-on-org-mode-for-work/joplin-gui.png" style="max-width: 100%;"/></a>
+<div class="caption">Joplin Notes</div>
 
 - Consolidate to one system
 - Cross platform (mobile too)
