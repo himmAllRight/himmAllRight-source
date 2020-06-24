@@ -62,9 +62,52 @@ single card or task has been stored in Joplin.
 <div class="caption">I love emacs and org mode... but it really isn't an option
 on mobile OSes</div>
 
-- **Have to setup everything on every device**:
-- **Emacs wasn't available on mobile devices**:
-- **Couldn't share items across systems**: (ex: linking to a note from a task card)**:
+While this system has *worked* for a bit now, it does have it's issues.
+
+#### Couldn't share items across systems
+The biggest issue I had with this system was that it was made from several
+disconnected systems. This meant that my notes and information were spread all
+over the place. I tried to keep notes and task 'logs' separate, but I started
+to fine that while working on projects, I wanted to create a longer, organized,
+reference 'note' about a subject.
+
+The biggest problem with seperate systems was that once I split information, I
+wasn't able to link it. If the genesis of a note spurred from logs I took
+working on a task, it would be conceivable that the two should be linked. With
+seperate systems however, this wasn't easy and even if implemented was messy.
+
+
+#### Have to setup everything on every device
+
+*(I know this complaint is a very minor one. But when thinking of my systems, I
+want to make them better, even if that means finding even the slightest rough
+edge to smooth out)*
+
+Another issue using multiple systems was that *all three* had to be setup and
+configured, *on every device*. While I have [automated my emacs
+setup](http://ryan.himmelwright.net/post/org-babel-setup/), both joplin and
+emacs required me configuring their sync solution, every time.
+
+On the surface, Trello's setup makes it appear as though I wouldn't have this
+setup issue if I used 3 web apps. Just login. Sure, but even then having to log
+into multiple apps during the setup of a new device is a pain, especially
+because this is usually done while trying to also login to *everything else*.
+On a computer it isn't that bad... but on a phone...
+
+Additional, I tend to make many of my most used web-apps into fake desktop apps
+using [Nativefier](https://github.com/jiahaog/nativefier). Which yes, would
+mean 3x nativefier setups even if it was all webapps.
+
+
+#### Not accessible outside my systems
+
+Lastly, my main issue was that apart from Trello, these systems weren't really
+accessable from devices beside my own. In addition, Emacs wasn't even available
+on my mobile devices. While good from a security standpoint, I don't like
+having all my notes and information only available when I sit down at a
+desktop. If I'm working on a family member's machine, or helping configure
+something elsewhere, I want to be able to access my notes on my phone, or even
+a private browser tab on their machine.
 
 ### Desires
 
