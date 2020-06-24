@@ -34,14 +34,26 @@ Most recently, personal and professional notes & task planning system consisted
 of three applications: Trello, Emacs (org-mode), and Joplin. They broke down as
 follows:
 
-**Trello**: for planning weekly tasks/longer term goals, habit tracking
+**Trello**: I had several boards for planning my weekly, monthly, and
+quarterly personal and home tasks.I also had a few boards to keep track of
+projects ideas (for example, post ideas, books to read, online courses to take,
+etc).
 
 
-**Emacs org-mode**: for the same things as trello but specifically for my work
-    tasks/log
+**Emacs org-mode**: I continued to use emacs org-mode for basically all the
+things I just said I used trello for... but for my professional work life.
+During my day job, I like to break my work down into tasks, and often logs
+quick thoughts and notes under each task while I am doing it. While I could log
+notes into Trello cards, it wasn't nearly as easy to open up and record stream
+of consciousness as it is in org mode.
 
-
-**Joplin**: for both my personal and work collection of notes.
+**Joplin**: I previously attempted to make Joplin my universal planning system,
+but it failed. It was a bit too messy for my goal and task planning compared to
+something like Trello or even org mode (with my
+[ry-org-scrum](https://github.com/himmAllRight/ry-org-scrum) package installed
+;) ). However, it was a great cross-platform notes application... so I've been
+using it for that. Any personal or work 'note' that isn't directly related to a
+single card or task has been stored in Joplin.
 
 ### Issues with system
 
