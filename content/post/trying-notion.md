@@ -1,6 +1,6 @@
 +++
 title   = "Trying out Notion"
-date    = "2020-06-24"
+date    = "2020-06-26"
 author  = "Ryan Himmelwright"
 image   = "img/posts/trying-notion/journals.jpeg"
 tags    = ["notes","organization", "applications",]
@@ -111,15 +111,25 @@ a private browser tab on their machine.
 
 ### Desires
 
+With these issues defined, what is it that I actually want to see in my note
+taking and task organization system?
+
 <a href="/img/posts/back-on-org-mode-for-work/joplin-gui.png">
 <img alt="Joplin GUI" src="/img/posts/back-on-org-mode-for-work/joplin-gui.png" style="max-width: 100%;"/></a>
 <div class="caption">Joplin Notes</div>
 
-- Consolidate to one system
-- Cross platform (mobile too)
-- Kanban board support
-- ... BUT normal notes too
-- Easy to jump in, add a log note, and get out
+- **Consolidated into one system**: I don't want to have to setup multiple apps
+    and logins on all my systems.
+- **Cross platform (mobile too)**: Despite only wanting once system, I want it
+    supported on all my devices, including mobile.
+- **Kanban board support**: I really enjoy moving and displaying  my task items
+    in a board view.
+- **Normal notes too**: In addition to task cards, I also want support for
+    traditional, long-form permanent notes. Ideally tasks *can* be linked to
+    notes, but the notes don't *have* to be task-bound.
+- **Easy to jump in, add a log note, and get out**: Lastly is a feature that
+    I love in org-mode. I want to be able to quickly jump into a note, hit a
+    keyboard shortcut to drop in a timestamp, and take a quick log note.
 
 ## Notion
 <a href="/img/posts/trying-notion/notion_window.png">
