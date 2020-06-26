@@ -172,7 +172,17 @@ past several week, I think agree.
         the linked databases have their own views, which can be used for
         example to apply filters to the data.
 - **Templates**: Templates are the second powerful tool behind an efficient
-    notion setup.
+    notion setup. I can setup a template for a particular page layout that I
+    like, and use it whenever I want to create a new one. For example, I have
+    weekly and daily templates which contain all the tasks, and linked
+    databases with views configured. So, when setting up a new week, I can
+    simply create a new page from the template and fill in some information.
+    Even more, I can set the filters of my linked database, to the *template*,
+    so that when a page is instantiated from it, the value will automatically
+    be set to *itself*. (This is how I have my linked databases automatically
+    only display the tasks linked to that week/day).
+
+    ^^^ Wow, too large. Please trim during edits... ^^^
 
 - **Accessible from all my devices**:
 <a href="/img/posts/trying-notion/ios_notion.png">
@@ -180,21 +190,36 @@ past several week, I think agree.
 <div class="caption">Notion views in iOS. Navigation, my 'Areas' card views,
 daily log page properties, and a task 'board' view.</div>
 
-- Free trial, and affordable for pro -- updated. Free for personal :)
+    Notion is a webapp, but also has desktop applications for mac and window, and
+    apps for Andriod and iOS. However, I made a
+    [nativefier](https://github.com/jiahaog/nativefier) build of it for my Linux
+    systems and it works wonderfully.
+
+- **Free, and affordable for pro**: When I started using notion, the free tier
+    was limited to 1000 blocks, but since then they have made the personal use
+    *free* without a limit! There is still a Pro version with fancy features
+    (like revision history), but even that is a reasonable price.
 
 ### Downsides/Concerns
 
-*Picture of Notion -- Something confusing?, or maybe export options*
+<a href="/img/posts/trying-notion/notion-export.png">
+<img alt="Notion in iOS" src="/img/posts/trying-notion/notion-export.png" style="max-width: 100%;"/></a>
+<div class="caption">Notion makes it easy to export an entire workspace.</div>
 
-- All my eggs in one basket/not open or hosted (but neither was trello)
-- Can take a bit of time to learn how to best use it (but hey, I'm coming
-    mostly from emacs XD )
-- Cost for pro (that could raise in price) (but technically was trello, I just
-    didn't think it was worth it since it only did part of what I needed. Also,
-    my hosting for joplin notes was being provided by a service I pay for
-    [fastmail], which I happened to already use for something else.)
-- No command-line client (Honestly for this type of system, it's less and less
-    important for me, especially if there is a webapp. I tend to not run my
-    laptops without xorg or a windowing system anymore.
+- **All my eggs in one basket**: My biggest concern is that I now have all my
+    eggs in this one service I'm relying on. That's a real risk. Fortunately,
+    Notion makes it extremely easy to [export an entire
+    workspace](https://www.notion.so/Workspace-settings-security-b0a64a148cad461cb6e9df74f7372ecf#23a9194abf324cb7a222ede243fdcb5b), which eases
+    my fears a bit. I need to test this out, and maybe make it a habit to
+    periodically do it as a backup.
+- **Can take a bit of time to learn how to best use it**: All the flexability
+    and power means it can take a bit of trial and error to figure out a system
+    that works for you. It can be a bit overwhelming at first. But hey, I *am* coming
+    mostly from emacs, remember? :P
+- **Lacks cheap 'Family' Plan**: I'm ecstatic that they made the personal plan
+    free, but I'd love to see a 'Family' plan that would allow my wife and I to
+    have shared collaborative pages. I know this is what the enterprise version
+    provides, but we wouldn't need any of the other features, and the price
+    ends up being a bit steep for what we would need.
 
 ## Conclusion
