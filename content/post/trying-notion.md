@@ -104,16 +104,16 @@ taking and task organization system?
 
 - **Consolidated into one system**: I don't want to have to setup multiple apps
     and logins on all my systems.
-- **Cross platform (mobile too)**: Despite only wanting once system, I want it
+- **Cross platform (mobile too)**: Despite only wanting a single system, I want it
     supported on all my devices, including mobile.
-- **Kanban board support**: I really enjoy moving and displaying  my task items
+- **Task board support**: I really enjoy moving and displaying  my task items
     in a board view.
 - **Normal notes too**: In addition to task cards, I also want support for
-    traditional, long-form permanent notes. Ideally tasks *can* be linked to
+    traditional, long-form, stand-alone notes. Ideally tasks *can* be linked to
     notes, but the notes don't *have* to be task-bound.
-- **Easy to jump in, add a log note, and get out**: Lastly is a feature that
-    I love in org-mode. I want to be able to quickly jump into a note, hit a
-    keyboard shortcut to drop in a timestamp, and take a quick log note.
+- **Easy to jump in, add a log note, and get out**: I love this in org-mode. I need
+    the ability to quickly jump into a task, hit a keyboard shortcut to auto-insert
+    a time-stamp, and write a log note.
 
 ## Notion
 <a href="/img/posts/trying-notion/notion_window.png">
@@ -123,8 +123,8 @@ taking and task organization system?
 
 Notion might be my solution. The [Notion website](https://notion.so) states
 that it is an "*All-in-one workspace.  Write, plan, collaborate, and get
-organized — all in one tool*". After using it as my all-in-one system over the
-past several week, I think agree.
+organized — all in one tool*". Having used it as my lone system over the
+past several weeks, I think agree.
 
 ### What I like so far
 - **FLEXIBLE**: This cannot be understated. Notion is *extremely* flexible,
