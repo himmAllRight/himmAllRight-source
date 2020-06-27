@@ -127,34 +127,36 @@ organized — all in one tool*". Having used it as my lone system over the
 past several weeks, I think agree.
 
 ### What I like so far
-- **FLEXIBLE**: This cannot be understated. Notion is *extremely* flexible,
-    providing you with the *tools* to setup your own system, rather than being
-    a system itself. Want just a pile of markdown-ish notes? Fine. Want to
-    create a pile of relational databases of notes link them all together? Go
-    ahead. It is basically the Emacs org-mode for '"normal" (i.e. resonable)
-    people.
+- **FLEXIBLE**: This cannot be emphasized enough. Notion is *extremely*
+    flexible, providing the *tools* to setup your own system, rather than being
+    a defined system itself. Want just a pile of markdown-ish notes? Fine. Want
+    to create endless clusters  of relational databases? Go ahead. This endless
+    flexibility makes Notion what I would consider to be the Emacs org-mode for
+    ~~normal~~ *reasonable* people.
+
 - **Easy logging using `@now`**:
 <a href="/img/posts/trying-notion/now_timestamp.png">
 <img alt="logging using @now" src="/img/posts/trying-notion/now_timestamp.png" style="max-width: 100%;"/></a>
 <div class="caption">Easy logging using `@now`</div>
-    Notion has an 'easy logging' feature that I
+    Notion has the 'easy logging' feature I
     wanted. I just have to type `@now`, hit enter, and it auto auto-inserts a
     dynamic date and time (the 'today' changes to 'yesterday', and eventually
     the date as time passes).
-- **Databases**: Databases are a powerful tool that are the backbone of a good
-    notion setup. They allow collections of data to be linked, sorted, and
-    viewed. Databases themselves have several notable features:
-    - **Multiple views styles of same data**: Database items can be displayed in
-        different 'views'. Some examples include table, board, cards, and list
-        views.
-    - **Views can also be filtered and sorted**: They can also have properties
-        hidden. All of these properties can be saved as a particular 'view', so
-        it can be easily selected later.
-    - **Linkable**: A database can be added to a page as a 'linked database'.
-        This means that it points to all the data in an already existing
-        database, and any changes to it also occur in the master DB. However,
-        the linked databases have their own views, which can be used for
-        example to apply filters to the data.
+- **Databases**: Databases are a compelling tool that are the backbone of a
+    powerful notion setup. They allow collections of data to be linked, sorted,
+    and filtered. Databases themselves have several notable features worth
+    mentioning:
+    - **Multiple view types of same data**: Database items can be displayed in
+        different *views*. Examples include tables, boards, galleries,
+        calendar, and lists.
+    - **Views can be filtered and sorted using property rules**:
+        Properties can be also marked as hidden, and any custom
+        changes to the data view can be saved. This makes it easy to flip
+        through different views to get a better picture of the information.
+    - **Linkable**: A database can be embedded in a page as a 'linked database'.
+        This is a database that points to an already existing
+        database, and any changes to it also occur in the original DB. However,
+        the linked databases have their own saved and default views.
 - **Templates**: Templates are the second powerful tool behind an efficient
     notion setup. I can setup a template for a particular page layout that I
     like, and use it whenever I want to create a new one. For example, I have
