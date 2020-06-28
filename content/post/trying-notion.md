@@ -157,18 +157,13 @@ past several weeks, I think agree.
         This is a database that points to an already existing
         database, and any changes to it also occur in the original DB. However,
         the linked databases have their own saved and default views.
-- **Templates**: Templates are the second powerful tool behind an efficient
-    notion setup. I can setup a template for a particular page layout that I
-    like, and use it whenever I want to create a new one. For example, I have
-    weekly and daily templates which contain all the tasks, and linked
-    databases with views configured. So, when setting up a new week, I can
-    simply create a new page from the template and fill in some information.
-    Even more, I can set the filters of my linked database, to the *template*,
-    so that when a page is instantiated from it, the value will automatically
-    be set to *itself*. (This is how I have my linked databases automatically
-    only display the tasks linked to that week/day).
 
-    ^^^ Wow, too large. Please trim during edits... ^^^
+- **Templates**: Templates are another convenient feature. A specific page
+    layout can be defined as a template, which new pages can then be created
+    from. For example, I have weekly templates that
+    contain all the tasks and linked databases for that week automatically
+    configured. So, when setting up a new week, I can simply create a new page
+    from the template and fill in some information. Done.
 
 - **Accessible from all my devices**:
 <a href="/img/posts/trying-notion/ios_notion.png">
@@ -176,15 +171,16 @@ past several weeks, I think agree.
 <div class="caption">Notion views in iOS. Navigation, my 'Areas' card views,
 daily log page properties, and a task 'board' view.</div>
 
-    Notion is a webapp, but also has desktop applications for mac and window, and
-    apps for Andriod and iOS. However, I made a
-    [nativefier](https://github.com/jiahaog/nativefier) build of it for my Linux
-    systems and it works wonderfully.
+    Notion has desktop applications for macOS and Windows, as well as
+    mobile apps for iOS and Andriod. Additionally, it functions well as a webapp, which
+    made it easy for me to create a
+    [nativefier](https://github.com/jiahaog/nativefier) build of it to run on my Linux
+    systems.
 
 - **Free, and affordable for pro**: When I started using notion, the free tier
-    was limited to 1000 blocks, but since then they have made the personal use
-    *free* without a limit! There is still a Pro version with fancy features
-    (like revision history), but even that is a reasonable price.
+    was limited to 1000 blocks, but since then they have made the personal tier
+    free *without* a use limit! There is still a Pro version with fancy features
+    (like revision history), but even that is offered at a reasonable price.
 
 ### Downsides/Concerns
 
