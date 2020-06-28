@@ -69,6 +69,7 @@ POST_NAMES = [
     "switching-hugo-md-handler",
     "switching-to-mesh-network",
     "tmpfs-mount-ramdisk",
+    "trying-notion",
     "Trying-out-plasma5",
     "trying-out-seafile",
     "tsqa-2020",
