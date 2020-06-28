@@ -1,6 +1,6 @@
 +++
 title   = "Trying out Notion"
-date    = "2020-06-26"
+date    = "2020-06-28"
 author  = "Ryan Himmelwright"
 image   = "img/posts/trying-notion/journals.jpeg"
 tags    = ["notes","organization", "applications",]
@@ -188,20 +188,24 @@ daily log page properties, and a task 'board' view.</div>
 <img alt="Notion in iOS" src="/img/posts/trying-notion/notion-export.png" style="max-width: 100%;"/></a>
 <div class="caption">Notion makes it easy to export an entire workspace.</div>
 
-- **All my eggs in one basket**: My biggest concern is that I now have all my
-    eggs in this one service I'm relying on. That's a real risk. Fortunately,
-    Notion makes it extremely easy to [export an entire
-    workspace](https://www.notion.so/Workspace-settings-security-b0a64a148cad461cb6e9df74f7372ecf#23a9194abf324cb7a222ede243fdcb5b), which eases
+- **All my eggs in one basket**: My biggest concern with Notion, is that I am
+    throwing everything into a single service which I now rely on. That's a *real risk*. Fortunately,
+    Notion does make it extremely easy to [export](https://www.notion.so/Workspace-settings-security-b0a64a148cad461cb6e9df74f7372ecf#23a9194abf324cb7a222ede243fdcb5b) a workspace, which eases
     my fears a bit. I need to test this out, and maybe make it a habit to
     periodically do it as a backup.
-- **Can take a bit of time to learn how to best use it**: All the flexability
+- **A bit of a steep learning curve**: All the flexibility
     and power means it can take a bit of trial and error to figure out a system
-    that works for you. It can be a bit overwhelming at first. But hey, I *am* coming
-    mostly from emacs, remember? :P
+    that works for you. While overwhelming at first, it's not that big of an
+    problem. I *am* coming from using mostly emacs after all :P
 - **Lacks cheap 'Family' Plan**: I'm ecstatic that they made the personal plan
-    free, but I'd love to see a 'Family' plan that would allow my wife and I to
-    have shared collaborative pages. I know this is what the enterprise version
-    provides, but we wouldn't need any of the other features, and the price
-    ends up being a bit steep for what we would need.
+    free, but I would still love to see a 'Family' plan that would allow my
+    wife and I to have shared collaborative pages. I know this is what the
+    teams version provides, but we don't need all the other advanced features,
+    and the price ends up being a bit steep for what we would want.
 
 ## Conclusion
+
+In summary, I've found Notion to be amazing. I've had to redo my setup twice
+already as I've started to better understand more powerful features, but every
+time has been worth it. Notion appears to be fitting my needs perfectly, and
+keeps getting better every day as I continue to tweak and perfect it.
