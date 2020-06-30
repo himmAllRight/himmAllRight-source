@@ -2,7 +2,8 @@
 title   = "My Three Required Gnome Extensions"
 date    = "2020-06-30"
 author  = "Ryan Himmelwright"
-image   = "img/posts/trying-notion/journals.jpeg"
+image   = "img/posts/three-required-gnome-extensions/reading-corner.jpeg"
+caption = "My home office reading corner, Durham NC"
 tags    = ["Fedora","Linux", "Gnome", "Customization",]
 draft   = "False"
 Comments = "True"
