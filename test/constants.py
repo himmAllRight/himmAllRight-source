@@ -68,6 +68,7 @@ POST_NAMES = [
     "switching-to-bitwarden",
     "switching-hugo-md-handler",
     "switching-to-mesh-network",
+    "three-required-gnome-extensions",
     "tmpfs-mount-ramdisk",
     "trying-notion",
     "Trying-out-plasma5",
