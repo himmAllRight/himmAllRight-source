@@ -19,13 +19,13 @@ are three that I don't think I could live with out.
 
 <!--more-->
 
-<a href="/img/posts/trying-notion/trello_weekly_board.png">
-<img alt="Trello Weekly Board" src="/img/posts/trying-notion/trello_weekly_board.png" style="max-width: 100%;"/></a>
-<div class="caption">My Trello Weekly Task Board</div>
-
 ## Gnome Extensions
 
-*Image of an extension page?*
+<center>
+<a href="/img/posts/three-required-gnome-extensions/gnome-extensions.png">
+<img alt="Gnome Extensions Website" src="/img/posts/three-required-gnome-extensions/gnome-extensions.png" style="max-width: 100%;"/></a>
+<div class="caption">The Gnome Extensions website</div>
+</center>
 
 If you didn't know, Gnome extensions are installable enhancements to the Gnome
 desktop environment.  They are installed by going to [the gnome extensions
@@ -35,8 +35,8 @@ desired extensions to "On". Extensions and then be further configured using the
 
 ## My Must-Have 3
 
+
 ### Caffine
-*Image of Caffine*
 
 My first required extension is Caffine, which sets a little coffee cup icon in
 the status bar. When the cup is empty, the system behaves as normal. However,
@@ -50,7 +50,12 @@ repeatedly logging me out. I can quickly temporarily pause my sleep settings,
 without having to actually go in and change them.
 
 ### Top Icons Plus
-*Image of my top icons*
+<center>
+<a href="/img/posts/three-required-gnome-extensions/top-bars.png">
+<img alt="Gnome top bars with and without extensions enabled" src="/img/posts/three-required-gnome-extensions/top-bars.png" style="max-width: 100%;"/></a>
+<div class="caption">The right side of my top bar, without extensions (top),
+and with the *caffeine* and *top icons plus* extensions enabled (bottom)</div>
+</center>
 
 Many applications still expect an icon to be visible in a task bar to store
 settings in. However, Gnome will often hide these icons, making them less
@@ -64,7 +69,12 @@ where in the bar I want them located, but I still usually set them to the
 
 
 ### Sound Input & Output Device Chooser
-*Image of the input options*
+
+<a href="/img/posts/three-required-gnome-extensions/drop-downs.png">
+<img alt="Dropdown Menu, with and without sound device chooser" src="/img/posts/three-required-gnome-extensions/drop-downs.png" style="max-width: 100%;"/></a>
+<div class="caption">Top bar dropdown menu, with (right) and without (left) the
+*Sound Input & Output Device Chooser* extension enabled</div>
+</center>
 
 Lastly, the Sound Input & Output Device Chooser plugin adds a drop-down menu to
 the top bar when audio input and output devices can be easily switched.
