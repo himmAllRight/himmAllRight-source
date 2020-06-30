@@ -5,7 +5,7 @@ author  = "Ryan Himmelwright"
 image   = "img/posts/three-required-gnome-extensions/reading-corner.jpeg"
 caption = "My home office reading corner, Durham NC"
 tags    = ["Fedora","Linux", "Gnome", "Customization",]
-draft   = "False"
+draft   = "True"
 Comments = "True"
 +++
 
