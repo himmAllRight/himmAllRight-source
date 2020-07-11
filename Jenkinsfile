@@ -1,10 +1,10 @@
 pipeline {
-    agent {
-        docker {
-            image 'fedora:32'
-            args '-u 0:0'
-        }
-    }
+    agent any //{
+//        docker {
+//            image 'fedora:32'
+//            args '-u 0:0'
+//        }
+//    }
 
     stages {
         stage("Setup Deps") {
