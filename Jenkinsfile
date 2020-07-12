@@ -9,8 +9,6 @@ pipeline {
     stages {
         stage("Setup Deps") {
             steps {
-                sh 'whoami'
-                sh 'pwd'
                 sh 'sudo dnf update -y'
                 sh 'sudo dnf install -y hugo pytest git which python3-pip'
             }
@@ -40,6 +38,11 @@ pipeline {
                 archiveArtifacts "himmallright-source-test-report.xml"
                 junit "himmallright-source-test-report.xml"
             }
+        }
+    }
+    post {
+        always {
+            cleanWs()
         }
     }
 }
