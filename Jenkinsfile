@@ -1,16 +1,11 @@
 pipeline {
-    agent {
-        docker {
-            image 'fedora:32'
-            args '-u 0:0'
-        }
-    }
+    agent any
 
     stages {
         stage("Setup Deps") {
             steps {
-                sh 'dnf update -y'
-                sh 'dnf install -y hugo pytest git which python3-pip'
+                sh 'sudo dnf update -y'
+                sh 'sudo dnf install -y hugo pytest git which python3-pip'
             }
         }
         stage("Start Hugo Server") {
