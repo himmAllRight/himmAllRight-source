@@ -9,20 +9,24 @@ draft   = "True"
 Comments = "True"
 +++
 
-I have a nodejs server application that run in a virtual machine on my network.
-I execute the application in a `tmux` session, with a `node` command line call,
-which works well enough. However, if that VM restarts, or the applications
-crashes, I don't want to have to ssh in to start it up again. So, I created a
-systemd service file.
+Recently, I've been hosting a [Foundry VTT](http://foundryvtt.com) server
+(nodejs app) in a virtual machine on my home network. Previously, I would
+start the application in a `tmux` session, by executing a command in the cli
+which worked... fine.  However, if the VM restarted or the applications
+crashed, I had to ssh in and manually start it up again. So, I created a
+systemd unit file to automate the foundry server as a service. Here's how.
 
 <!--more-->
 
-### Intro
+### Unit Files
 
-Years ago, I used to use `cron` to automate when applications should run (for
-example, nightly backups). However, with many distributions utilizing
-[systemd](https://en.wikipedia.org/wiki/Systemd), using unit files have become
-a new standard for auto-starting, or re-starting, applications on Linux.
+Years ago, I used to use `cron` to automate when my applications and scripts
+should run. For example, I had `rsync` scripts that would kick off nightly to
+backup my hard drive. With many distributions utilizing
+[systemd](https://en.wikipedia.org/wiki/Systemd), unit files have also become
+a new standard for auto-starting, or re-starting, applications on Linux. Simply
+put, unit files are used to define a *service* (among other things) to be
+controlled by systemd.
 
 ### Creating the service file
 
