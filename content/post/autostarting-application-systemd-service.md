@@ -9,28 +9,29 @@ draft   = "True"
 Comments = "True"
 +++
 
-Recently, I've been hosting a [Foundry VTT](http://foundryvtt.com) server
-(nodejs app) in a virtual machine on my home network. Previously, I would
-start the application in a `tmux` session, by executing a command in the cli
-which worked... fine.  However, if the VM restarted or the applications
-crashed, I had to ssh in and manually start it up again. So, I created a
-systemd unit file to automate the foundry server as a service. Here's how.
+Recently, I've been hosting a [Foundry VTT](http://foundryvtt.com) server (a
+nodejs app) in a virtual machine on my home network. I would start the
+application inside a
+[`tmux`](http://ryan.himmelwright.net/post/setting-up-tmuxinator/) session, by
+executing a CLI command which worked... fine.  However, if the VM restarted or
+the applications crashed, I had to ssh in and manually run the command again. So,
+to better automate this tedious task, I created a unit file to
+define the foundry server as a systemd service. Here's how.
 
 <!--more-->
 
 ### Unit Files
 
-Years ago, I used to use `cron` to automate when my applications and scripts
-should run. For example, I had `rsync` scripts that would kick off nightly to
-backup my hard drive. With many distributions utilizing
-[systemd](https://en.wikipedia.org/wiki/Systemd), unit files have also become
-a new standard for auto-starting, or re-starting, applications on Linux. Simply
-put, unit files are used to define a *service* (among other things) to be
-controlled by systemd.
+ With so many distributions utilizing
+[systemd](https://en.wikipedia.org/wiki/Systemd), unit files have become a new
+standard for auto-starting, or re-starting, applications on Linux. Simply put,
+unit files are used to define resources to be managed by systemd. This includes
+*services*, so to run FoundryVTT as a service, we need to create a new systemd
+`.service` unit file.
 
 ### Creating the service file
 
-To create a systemd unit file for a service, I create a file at
+To create a systemd unit file, I create a file at
 `/lib/systemd/system/foundryvtt.service` and filled it with the following
 contents:
 
@@ -52,28 +53,29 @@ WantedBy=multi-user.target
 ```
 
 This file tells systemd all the information it needs to run the service. The
-items that are important for this file in particular are:
+contents of the `[Unit]` section define some basic information about the unit
+file. The variables which define our *service*, are appropriately listed in the
+`[Service]` section and include:
 
-- `User=ryan` which tells the service to run under the `ryan` user
-- `ExecStart` which defines the command to execute when the service is started
-    (this is the command I use to manually type into `tmux`)
+- `Environment=NODE_PORT=30000` sets an environment variable
+- `Type=simple` states that our service is executing a single command, and is
+    "started" when that command runs.
+- `User=ryan` tells the service to run under the `ryan` user
+- `ExecStart` defines the command to run run when the service is started
+    (this is the command I had to manually type in `tmux`)
 - `Restart=on-failure` will have the service automatically restart on any
     failures.
 
-Lastly, we include `Environment=NODE_PORT=30000` to set the environment
-variable, `NODE_PORT` to the value of `30000`.
-
-
 ### Start and Enable the Service
 
-With the unit file created, we can start the service:
+With the unit file created, the service file can be started:
 
 ```bash
 sudo systemctl start foundryvtt
 ```
 
-In addition to starting the service, I also *enabled* it so it will
-automatically start up again whenever the system reboots:
+In addition to starting the service, I also *enabled* it so that it will
+automatically start up whenever the system reboots:
 
 
 ```bash
@@ -82,8 +84,7 @@ sudo systemctl enable foundryvtt
 
 ### Stopping, Restarting, and Status
 
-To check that the service is running, the command `systemctl status foundryvtt`
-can be used:
+To check that the service is running, use the command `systemctl status foundryvtt`:
 
 ```bash
 sudo systemctl status foundryvtt
@@ -99,15 +100,15 @@ sudo systemctl status foundryvtt
      CGroup: /system.slice/foundryvtt.service
              └─1070 /usr/bin/node /home/ryan/foundryvtt/resources/app/main.js --dataPath=/home/ryan/foundrydata
 
-... Logs...
+... *A Bunch of Logs I removed*...
 ```
 
-In the output, we can see `Active: active (running)`, which means it is
+The output contains `Active: active (running)`, which means the service is
 running. We can also restart or stop the service using the `systemctl restart
 foundryvtt` and `systemctl stop foundryvtt` commands, respectively.
 
 For example, I can stop the service and then check the status to verify it is
-stopped (Note the `Active: inactive (dead)`).
+stopped (*Note the `Active: inactive (dead)` in the status output*).
 
 ```bash
 [ryan@magmar]$ sudo systemctl stop foundryvtt
@@ -122,5 +123,5 @@ stopped (Note the `Active: inactive (dead)`).
 
 That's about it. Systemd unit files seem extremely complicated at first, but
 after writing one they really aren't bad. Additionally, it turns out that using
-automation to create them isn't difficult either... but I'll show that in
+automation to *create* them isn't too difficult either... but I'll show that in
 another post. Until then, enjoy!
