@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2020-04-11
+date: 2020-07-15
 type: homelab
 layout: homelab-page
 menu:
@@ -32,10 +32,10 @@ MSI B450 Tomahawk Motherboard
 32 GB (2x16GB) DDR4-3200 Mhz RAM
 Sapphire Radeon Pulse RX 580 8GB GPU
 500 GB Samsung 970 EVO NVME SSD
-250 GB Samsung 850 EVO SATA SSD
+500 GB Samsung 850 EVO SATA SSD
 Fractal Design Meshify C Dark TG ATX Mid Tower Case
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
-Fedora 32
+Fedora 32 (KDE Plasma)
 *Connected to Periphery devices
 ```
 <a name="kadabra"></a>
@@ -44,9 +44,9 @@ Fedora 32
 T470 Thinkpad
 Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
-500 GB Samsung EVO SSD
+250 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
-Fedora 32
+Fedora Silverblue 32
 *Can Connect to Periphery devices via Thunderbolt 3 Dongle
 ```
 ### Interface Devices
