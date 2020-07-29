@@ -27,6 +27,7 @@ POST_NAMES = [
     "exporting-proxmox-vms",
     "extending-vm-hd",
     "fedora-kde-tb3",
+    "foundryvtt-service-ansible-role",
     "getting-an-ipad",
     "how-i-asked-my-groomsmen",
     "issue26",
