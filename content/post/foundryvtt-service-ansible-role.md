@@ -11,9 +11,10 @@ Comments = "True"
 
 In my [previous post](/post/autostarting-application-systemd-service/), I
 created a systemd unit file to define an application as a service, and
-auto-start on my server. Recently, I've made a big push to define the provision
-and setup of all my homelab machines/VMs in automation. Fortunately, it turns
-out that creating a systemd unit file is quite easy to do with
+configured it to auto-start on my server. I've been making a big push to define
+the provisioning of all my homelab machines/VMs using automation. So the last
+step in setting up my FoundryVTT server is to *automate* the process.
+Fortunately, creating a systemd unit file is quite easy to do with
 [ansible](https://www.ansible.com).
 
 <!--more-->
@@ -28,14 +29,14 @@ cd roles
 mkdir -p foundryvtt/{defaults,tasks,templates}
 ```
 
-One difference from some of the roles I've created previously, is that this one
-contains a `tempaltes` directory. This is because it will use a `j2` tempalate
-to define the systemd unit file, but more on that later.
+One difference from roles I've created previously, is that this one contains a
+`templates` directory. That is because *this* role will use a `j2` template to
+define the systemd unit file, but more on that later.
 
 ## Defining Variables
 
-With the directories, lets create the files, starting with the default
-variables. So, open `roles/defaults/main.yaml` and add the following:
+Lets create some files, starting with one to define the default variables.
+Open `roles/foundryvtt/defaults/main.yaml` and add the following:
 
 ```yaml
 ---
@@ -52,8 +53,8 @@ not specified.
 ## Making a Template
 
 Now that the varibles are defined, we can create the unit file template. So,
-open a new files (`roles/templates/foundryvtt.service.j2` in my case), and
-insert the unit file from the previous post.
+open a new file (`roles/foundryvtt/templates/foundryvtt.service.j2` in my
+case), and insert the unit file from the previous post.
 
 Next, walk through the file and substitute any values for the variables defined
 in the previous section:
@@ -80,22 +81,22 @@ Great! This template is now ready to be used in our role.
 
 ## Ansible Tasks
 
-Last but not least, lets write some Ansible tasks to create and start the
-service. Open a new file, `roles/tasks/main.yaml` and lets start by adding any
-additional tasks the *particular* role needs, outside the service file. For my
-example, this includes creating the defined data directories, unzipping the
-source package, and opening required ports in the firewall, ect:
+Last but not least, time to write some Ansible tasks. Open a new file
+(`roles/foundryvtt/tasks/main.yaml`), and lets start by adding any additional
+tasks *this particular role* needs, outside of the service file. For my example,
+this includes creating the defined data directories, unzipping the application source
+package, and opening required ports in the firewall:
 
 ```yaml
 ## Note, you likely don't need these tasks. They are just for my particular
 ## example...
-- name: Create foundryvtt dir at /home/{{ user }}/foundryvtt
+- name: Create foundryvtt dir at {{ foundryvtt_dir }}
   become_user: "{{ user }}"
   file:
     path: "{{ foundryvtt_dir }}"
     state: directory
 
-- name: Create foundrydata dir at /home/{{ user }}/foundrydata
+- name: Create foundrydata dir at {{ foundrydata_dir }}
   become_user: "{{ user }}"
   file:
     path: "{{ foundrydata_dir }}"
@@ -130,7 +131,7 @@ source package, and opening required ports in the firewall, ect:
     state: reloaded
 ```
 
-With all that defined, we can next define a task to create our unit file from
+With all that defined, lets finally define a task to create our unit file using
 the template:
 
 ```yaml
@@ -140,12 +141,12 @@ the template:
     dest: /lib/systemd/system/foundryvtt.service
 ```
 
-The `src` is set to the relative location for the role of the template we
+The `src` is set to the relative location (to the role) of the template we
 defined earlier, and the `dest` is set to where we would like the generated
 file to be copied to. This template is a unit file for a systemd service, so
 I'm going to copy it to `/lib/systemd/system/foundryvtt.service`.
 
-Last but not least, with the service defined, lets start it:
+Last but not least, lets start the newly created service:
 
 ```yaml
 - name: Start foundryvtt service
@@ -154,13 +155,13 @@ Last but not least, with the service defined, lets start it:
     state: started
 ```
 
-That's it, our role is finished!
+... and... our role is finished!
 
 ## Playbook
 
 To run the role, it is easiest to have it run in a playbook. I try to define
-the provisioning of all my systems in their own playbooks, including my Foundry
-Server, so I call this role there. Just remember to call it in a `roles:`
+the provisioning of all my systems in their own playbooks, including my foundry
+server, so I use this role there. Just remember to call it in a `roles:`
 section of the playbook, like so:
 
 ```yaml
@@ -173,4 +174,5 @@ section of the playbook, like so:
 That's it. We've easily automated setting up the systemd unit file from the
 previous post using ansible. This makes defining and reproducing unit roles
 very simple. In addition, knowing how to use templates in ansible is *very*
-powerful, so don't be afraid to go crazy. Enjoy!
+powerful, and I will definitely by utilizing the much more moving forward.
+Enjoy!
