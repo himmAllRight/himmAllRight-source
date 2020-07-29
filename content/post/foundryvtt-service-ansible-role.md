@@ -1,11 +1,11 @@
 +++
 title   = "Creating Systemd Unit Files using Ansible"
-date    = "2020-07-30"
+date    = "2020-07-29"
 author  = "Ryan Himmelwright"
 image   = "img/posts/foundryvtt-service-ansible-role/unc-campus.jpeg"
 caption = "UNC-Chapel Hill Campus, Chapel Hill, NC"
 tags    = ["Linux", "systemd", "Customization", "ansible"]
-draft   = "True"
+draft   = "False"
 Comments = "True"
 +++
 
@@ -13,16 +13,16 @@ In my [previous post](/post/autostarting-application-systemd-service/), I
 created a systemd unit file to define an application as a service, and
 configured it to auto-start on my server. I've been making a big push to define
 the provisioning of all my homelab machines/VMs using automation. So the last
-step in setting up my FoundryVTT server is to *automate* the process.
-Fortunately, creating a systemd unit file is quite easy to do with
+step in setting up my FoundryVTT server, is to *automate* the process.
+Fortunately, creating a systemd unit file is quite easy to do using
 [ansible](https://www.ansible.com).
 
 <!--more-->
 
 ## Creating the Ansible Role
-Let's first start by creating a role (if you don't know what an ansible role
+Let's start by creating a role (if you don't know what an ansible role
 is, checkout [this guide](/post/ansible-quickstart/) I wrote not too long ago).
-Lets start by creating the directories:
+First, create some directories:
 
 ```bash
 cd roles
@@ -46,7 +46,7 @@ foundryvtt_dir: "/home/{{ user }}/foundryvtt/"
 foundrydata_dir: "/home/{{ user }}/foundrydata"
 ```
 This defines a few default veriables that will be used in the service file
-template, as well as in the tasks file. These variables can optionally be
+template, as well as in the tasks file. The variables can optionally be
 over-ridden when running a playbook, but they will default to these values if
 not specified.
 
@@ -174,5 +174,5 @@ section of the playbook, like so:
 That's it. We've easily automated setting up the systemd unit file from the
 previous post using ansible. This makes defining and reproducing unit roles
 very simple. In addition, knowing how to use templates in ansible is *very*
-powerful, and I will definitely by utilizing the much more moving forward.
+powerful, and I will definitely be utilizing them much more moving forward.
 Enjoy!
