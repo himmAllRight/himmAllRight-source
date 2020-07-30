@@ -9,6 +9,7 @@ verify_ssl = true
 flaky = "*"
 pytest = "*"
 requests = "*"
+pytest-parallel = "*"
 
 [requires]
 python_version = "3"
