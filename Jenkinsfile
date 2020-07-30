@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                     set +e
-                    python3 -m pipenv run pytest --workers 10 -v --junit-xml himmallright-source-test-report.xml .
+                    python3 -m pipenv run pytest --workers 12 -v --junit-xml himmallright-source-test-report.xml .
                     set -e
                 '''.stripIndent()
             }
