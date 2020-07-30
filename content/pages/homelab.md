@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2020-07-15
+date: 2020-07-30
 type: homelab
 layout: homelab-page
 menu:
@@ -25,6 +25,9 @@ This is a page where I maintain the status of the computers in my “Homelab”
 
 ### Linux Computers
 
+<a href="../../img/homelab/charmeleon-guts.jpeg"><img alt="My Desk" src="../../img/homelab/charmeleon-guts.jpeg" width=100%></a>
+<div class="caption">My workstation, Charmeleon</div>
+
 #### - Charmeleon (Linux Workstation/VM Host/Gaming Computer)
 ```
 Ryzen 5 2600 [3.4 GHz (3.9GHz Turbo), 6 Cores, 12 Threads)
@@ -33,8 +36,10 @@ MSI B450 Tomahawk Motherboard
 Sapphire Radeon Pulse RX 580 8GB GPU
 500 GB Samsung 970 EVO NVME SSD
 500 GB Samsung 850 EVO SATA SSD
-Fractal Design Meshify C Dark TG ATX Mid Tower Case
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
+Fractal Design Meshify C Dark TG ATX Mid Tower Case
+2 x Noctua NF-A14 PWM 140mm Fans
+1 x Noctua NF-F12 PWM 120mm Fan
 Fedora 32 (KDE Plasma)
 *Connected to Periphery devices
 ```
