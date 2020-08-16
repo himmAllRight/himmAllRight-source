@@ -49,7 +49,7 @@ POST_NAMES = [
     "New-Theme-Immutable",
     "nginx-subdomain-reverse-proxy",
     "org-babel-setup",
-    "pytest-parallel-website-tests".
+    "pytest-parallel-website-tests",
     "replace-zfs-mirror-drive",
     "reset-plasma5-monitor-config",
     "rx580-upgrade",
