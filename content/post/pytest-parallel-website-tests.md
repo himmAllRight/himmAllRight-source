@@ -5,12 +5,12 @@ author  = "Ryan Himmelwright"
 image   = "img/posts/pytest-parallel-website-tests/mushroom.jpeg"
 caption = "Durham, NC"
 tags    = ["website", "hugo", "testing", "python", "jenkins",]
-draft   = "False"
+draft   = "True"
 Comments = "True"
 +++
 
 Not too long ago, I added some basic testing for my website. When I make
-changes to my website's source repo, [automated](/post/creating-tests-ci)
+changes to my website's source repo, [automated](/post/creating-website-tests-ci)
 tests run to verify that the site's [pages are being
 served](/post/creating-website-tests-pages/), and that the (markdown) [links
 are not broken](/post/creating-website-tests-links). It works well enough
