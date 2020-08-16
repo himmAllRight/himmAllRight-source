@@ -1,0 +1,32 @@
+image: fedora:latest
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+
+before_script:
+  - dnf install -y hugo
+
+pages:
+  stage: deploy
+  script:
+    - hugo
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+
+test:
+  stage: test
+  script:
+    - dnf install -y pipenv
+    - pipenv install
+    - hugo serve -b http://localhost &
+    - pipenv run pytest -v --workers 2 --junitxml=report.xml .
+  artifacts:
+    reports:
+      junit: report.xml
+
+  rules:
+    - if: '$CI_COMMIT_BRANCH != "master"'
