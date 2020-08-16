@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("Setup Deps") {
             steps {
-                sh 'apt update -y'
+                //sh 'apt update -y'
                 sh 'apt install -y hugo pytest git which python3-pip'
             }
         }
