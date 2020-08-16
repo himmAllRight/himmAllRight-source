@@ -23,7 +23,7 @@ test:
     - dnf install -y pipenv
     - pipenv install
     - hugo serve -b http://localhost &
-    - pipenv run pytest -v --workers 4 --junitxml=report.xml .
+    - pipenv run pytest -v --workers 2 --junitxml=report.xml .
   artifacts:
     reports:
       junit: report.xml
