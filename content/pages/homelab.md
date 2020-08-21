@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2020-07-30
+date: 2020-08-21
 type: homelab
 layout: homelab-page
 menu:
@@ -102,31 +102,31 @@ Logitech HD Pro Webcam c920 Widescreen
 Even though this is my wife's gear... I'm in charge of managing it all. So I
 decided to add it here.
 
-#### Vileplume
+#### Vileplume (Macbook)
 ```
 Macbook Pro 13" (2020)
-1.4GHz quad‑core 8th‑gen Intel Core i5, Turbo Boost up to 3.9GHz, with 128MB of eDRAM
+1.4GHz quad‑core 8th‑gen Intel Core i5, Turbo Boost up to 3.9GHz
 8 GB 2133MHz DDR3 RAM
 256 GB PCIe Flash HD
 Intel Iris Plug Graphics 645
-13.3” 2560x1600 IPS LED Display
+13.3” 2560x1600 IPS LED Display (1440x900 scaled)
 3.1 Lbs and ~0.6” thick
 Apple Magic Keyboard
 Mac OS Catalina
 ```
 
-#### Gloom
+#### Gloom (Tablet)
 ```
 iPad (6th Gen)
-* Can be used as a secondary display for
+* Can be used as a secondary display for Vileplume
 ```
 
-#### Oddish
+#### Oddish (Phone)
 ```
 iPhone 8 Plus
 ```
 
-#### - Weepinbell
+#### - Weepinbell (Desktop Laptop)
 ```
 Thinkpad T450s
 Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
@@ -136,17 +136,6 @@ Intel i5-5300u [2.3 GHz (2.90 GHz Turbo), 2 Cores, 4 Threads]
 6-Cell Battery
 CloudReady (a chromiumos spin)
 * Ususally docked to be used as a desktop
-```
-
-#### - Bellsprout -- Old
-```
-Macbook Air (2014)
-Intel i5 (1.4 GHz (2.7 GHz Turbo), 3M Cache, 2 Cores, 2 Threads) ?
-4 GB RAM
-128 GB PCIe Flash HD
-13.3” 1440x900 LED Display
-2.96 Lbs and ~0.7” thick
-Mac OS Catalina
 ```
 
 #### - Periphery
