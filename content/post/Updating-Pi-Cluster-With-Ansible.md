@@ -88,7 +88,7 @@ When writing a playbook to update the pi cluster, I first needed to declare what
 ...
 ```
 
-After the hosts are defined, modules can be added to update the nodes. To list the tasks, I used the `taks:` key, with the same indentation as the `hosts:` keyword. Instead of using a single value, I provided the `tasks:` keyword with a list of things to do. The first task I want to do when updating the nodes is to check that they running and connected. This can be accomplised with the [ping module](https://docs.ansible.com/ansible/ping_module.html) that I used earlier in the post. The ping module will try to connect to each node, verify that a usable python is installed, and return `pong` upon success. To add the module, I added `- ping: ~`, indented, to the line below `tasks:`:
+After the hosts are defined, modules can be added to update the nodes. To list the tasks, I used the `taks:` key, with the same indentation as the `hosts:` keyword. Instead of using a single value, I provided the `tasks:` keyword with a list of things to do. The first task I want to do when updating the nodes is to check that they running and connected. This can be accomplised with the [ping module](https://docs.ansible.com/ansible/latest/modules/ping_module.html) that I used earlier in the post. The ping module will try to connect to each node, verify that a usable python is installed, and return `pong` upon success. To add the module, I added `- ping: ~`, indented, to the line below `tasks:`:
 
 ```
 ---
@@ -99,7 +99,7 @@ After the hosts are defined, modules can be added to update the nodes. To list t
 ```
 
 ### Apt Module
-After defining the ping module, I started to get a bit fancier. Well... a little bit fancier. Each node in my pi cluster is running some verison of Ubuntu, which uses apt as it's package manager. If I wanted to ssh into each node and update them manually, the steps I would follow would be to 1) run the command `sudo apt-get update` to update the repository cache, and 2) run `sudo apt-get upgrade` to actually install the updates. To recreate these commands in the playbook, I used the [apt module](https://docs.ansible.com/ansible/apt_module.html). To start with updating the repository cache, I added the following lines to my playbook:
+After defining the ping module, I started to get a bit fancier. Well... a little bit fancier. Each node in my pi cluster is running some verison of Ubuntu, which uses apt as it's package manager. If I wanted to ssh into each node and update them manually, the steps I would follow would be to 1) run the command `sudo apt-get update` to update the repository cache, and 2) run `sudo apt-get upgrade` to actually install the updates. To recreate these commands in the playbook, I used the [apt module](https://docs.ansible.com/ansible/latest/modules/apt_module.html). To start with updating the repository cache, I added the following lines to my playbook:
 
 ```
 - name: Update APT package manager repositories cache
