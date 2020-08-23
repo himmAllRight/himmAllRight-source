@@ -1,16 +1,9 @@
 +++
 title   = "PIA Interfering with Podman Containers"
-<<<<<<< HEAD
 date    = "2020-08-23"
 author  = "Ryan Himmelwright"
 image   = "img/posts/pia-client-podman-issues/grass_jamesville_mirror.jpeg"
 caption = "U.S. Route 64, Jamesville, NC"
-=======
-date    = "2020-08-20"
-author  = "Ryan Himmelwright"
-image   = "img/posts/pytest-parallel-website-tests/mushroom.jpeg"
-caption = "Durham, NC"
->>>>>>> 0d7b72f30efea2c48bce832d1a6580b39f9e5f40
 tags    = ["linux", "network", "containers", "fedora",]
 draft   = "True"
 Comments = "True"
