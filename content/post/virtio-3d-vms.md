@@ -2,8 +2,8 @@
 title   = "Running VMs with VirtIO 3D Acceleration"
 date    = "2020-09-07"
 author  = "Ryan Himmelwright"
-image   = "img/posts/pia-client-podman-issues/grass_jamesville_mirror.jpeg"
-caption = "U.S. Route 64, Jamesville, NC"
+image   = "img/posts/virtio-3d-vms/obx-sunrise.jpeg"
+caption = "Kitty Hawk, NC"
 tags    = ["linux", "Homelab", "KVM", "fedora",]
 draft   = "True"
 Comments = "True"
@@ -23,7 +23,7 @@ Comments = "True"
 ## Setup
 
 ### Create a VM
-- Create a VM in `virt-manager` 
+- Create a VM in `virt-manager`
 - Finish the full install process like normal, login, and shutdown
 
 
