@@ -85,42 +85,77 @@ projects website:
 
 >Virgil is a research project to investigate the possibility of creating a virtual 3D GPU for use inside qemu virtual machines, that allows the guest operating system to use the capabilities of the host GPU to accelerate 3D rendering. The plan is to have a guest GPU that is fully independent of the host GPU.
 
+So, Virgil basically allows libvirt to create *virtual 3D GPUs* to use in VMs.
+This means, that I *should* be able to get high performing VMs, including the
+graphics, on my Linux desktop.
+
 ## Setup
 
+Enabling virgil for a VM using virt-manager actually ended up be much easier
+that I expected it to be.
+
 ### Create a VM
-**Image of Fedora VM Created?**
 
-- Create a VM in `virt-manager`
-- Finish the full install process like normal, login, and shutdown
+<center>
+<a href="img/posts/virtio-3d-vms/new_fedora_vm.png">
+<img alt="Newly Created Fedora VM" src="/img/posts/virtio-3d-vms/new_fedora_vm.png" style="max-width: 100%;"/></a>
+<div class="caption">Newly created Fedora VM</div>
+</center>
 
+First, create and install a new virtual machine using `virt-manager`. I
+recommend going through your normal install process and then boot into the
+installed system once, just to ensure that everything works as expected. If
+things look good, shutdown the VM and open up the settings window.
 
 ### Enable VirtIO and 3D Acceleration
-- Switch the Video settings
 
-**Image of Video Settings**
-<center>
+#### Spice Settings
+
+In the settings menu, open up the *Display Spice* section.
+
+<center> <a href="img/posts/virtio-3d-vms/display_spice_config_post.png">
+<img alt="Virt-manager's Spice settings for a VM" src="/img/posts/virtio-3d-vms/display_spice_config_post.png" style="max-width: 100%;"/></a>
+<div class="caption">In the VM's 'Display Spice' config, select 'None' for
+Listen type, and check the box for OpenGL</div>
+</center>
+
+Select `Spice server` for `Type:`, and `None` for `Listen type:` (virgil only
+works on local VMs right now). Lastly, make sure that the `OpenGL` checkbox
+*is* checked. Hit `Apply`.
+
+#### Virtio Settings
+
+Next, select the *Video Virtio* section.
+
 <a href="img/posts/virtio-3d-vms/video_config_post.png">
 <img alt="Virt-manager's Video settings for a VM" src="/img/posts/virtio-3d-vms/video_config_post.png" style="max-width: 100%;"/></a>
 <div class="caption">In the VM's video settings, switch to Virtio and select 3D
 acceleration</div>
 </center>
 
-**Image of Spice Settings**
-<center>
-<a href="img/posts/virtio-3d-vms/display_spice_config_post.png">
-<img alt="Virt-manager's Spice settings for a VM" src="/img/posts/virtio-3d-vms/display_spice_config_post.png" style="max-width: 100%;"/></a>
-<div class="caption">In the VM's 'Display Spice' config, select 'None' for
-Listen type, and check the box for OpenGL</div>
-</center>
-
+Switch to `Virtio` for `Model:`, and make sure to check the `3D acceleration`
+checkbox. That's it! Start up the VM and check that it is working okay.
 
 ## Testing and Comparisons
 
 ### Youtube Video Playback
 
+While configuring this for the first time, there were a few benchmarks I used
+to tell if and how well it was working. The first one, was simply opening up
+Firefox and trying to play a fullscreen Youtube Video (at 1440p).
+
+Now to be fair, the video playback was still *okay* before I made this change.
+However, the playback was *great* after it. Still, this wasn't a good measure,
+but rather an initial test.
+
 
 ### Unigine Heaven Benchmark
-**Image of Host Benchmark**
+
+My next step was to give the VM a *real* GPU test, so I downloaded the [Unigine
+Heaven Benchmark](https://benchmark.unigine.com/heaven). First I got my
+baseline by running the benchmark directly on my host system. *It should be
+noted, I did have other applications running during these bench marks*.
+
 <center>
 <a href="img/posts/virtio-3d-vms/unigine_heaven_score_host_export.png">
 <img alt="Unigine Heaven Benchmark - Host" src="/img/posts/virtio-3d-vms/unigine_heaven_score_host_export.png" style="max-width: 100%;"/></a>
@@ -128,7 +163,8 @@ Listen type, and check the box for OpenGL</div>
 desktop)</div>
 </center>
 
-**Image of VM Benchmark**
+So not bad, and roughly what I expected. Next, I tried running it in the VM...
+
 <center>
 <a href="img/posts/virtio-3d-vms/unigine_heaven_score_vm_export.png">
 <img alt="Unigine Heaven Benchmark - VM" src="/img/posts/virtio-3d-vms/unigine_heaven_score_vm.png" style="max-width: 100%;"/></a>
@@ -136,16 +172,29 @@ desktop)</div>
 *shared* graphics</div>
 </center>
 
+While not as good of a result as on the host, it is a *very* respectable
+result. One thing to note, is that the VM did have less cores and RAM assigned
+to it compared to the host.
+
+Additionally, my default VM basically *wouldn't even run* the benchmark. I was
+able to open it, but the load screen ran frame-by-frame.
+
 
 ### Portal 2
 
-**Image of Game Looking at ground?**
+With the Unigine Heaven bench mark running in my test VM, I decided to try the
+next step... running a game. Now, I have *zero* intentions of running games in
+my VMs, but this is the most common use case for having a GPU-passthrough
+setup.
 
-- I first tried and was immediately that I was in a VM... that my mouse wasn't
-    passed through to.
+I thought a would try running a classic game: Portal 2. It's not a very heavy
+resource game, but one that most certainly does *not* normally run in my VMs.
+So, I installed the game, opened it, and started a level... and immediately was
+looking at the ground.
 
-
-**Image of VM Game**
+That was when I indeed knew I was in a VM, because it  didn't actually have my
+mouse capture. It just used my window input clicks from my host, which wasn't
+enough to actually play the game.
 
 <center>
 <a href="img/posts/virtio-3d-vms/portal2_window.png">
@@ -154,20 +203,29 @@ desktop)</div>
 VM.(I had it full screen but windowed it to show it was indeed in the VM)</div>
 </center>
 
-- After passing in the mouse, it worked well enough
+However, one shutdown and usb mouse pasthrough later... and I was playing
+Portal 2! It was a little glitchy the first few seconds, but after that ran
+fine enough. I think this is likely due to hitting the *virtualized* disk
+during the initial load. Again, this is better performance than what I *need*,
+so I am more than happy with it.
+
 
 
 ## Drawbacks/Limitations
 
-### Need to pass through devices for some things
-... like a mouse when gaming XD
+While I'm very happy with the performance of my virtio VM, there are a few
+drawbacks and limitations to keep in mind:
 
-### Linux Guests Only?
-- I've seen conference talks about getting it working on Windows, but I don't *think* that is default or fully working yet? Again... I'm new to this...
+**Need to pass through devices for some things**: ... like a mouse when gaming
+XD, or maybe a full HD if you need high IO.
+
+**Linux Guests Only:** While researching, I saw [conference talks about getting
+birgil working on Windows](https://www.youtube.com/watch?v=aBgYNDLXuyg) , but I
+*think* currently this really only works with Linux guests.
 
 ### Even on Linux some Distros might freak out a bit
 
-**Side-by-side Image of Manjaro and Pop working?**
+*Side-by-side Image of Manjaro and Pop working?*
 
 - I've had weird issues switching it on while on some of my work RHEL 8 VMs. Not sure why
 - I have tried it with Pop_OS! and Manjaro VMs and they seem to work.
