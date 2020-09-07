@@ -223,15 +223,27 @@ XD, or maybe a full HD if you need high IO.
 birgil working on Windows](https://www.youtube.com/watch?v=aBgYNDLXuyg) , but I
 *think* currently this really only works with Linux guests.
 
-### Even on Linux some Distros might freak out a bit
+<center>
+<a href="img/posts/virtio-3d-vms/other_working_distros.png">
+<img alt="Both Manjaro and Pop_OS! worked fine" src="/img/posts/virtio-3d-vms/other_working_distros.png" style="max-width: 100%;"/></a>
+<div class="caption">Both my Manjaro and Pop_OS! VMs worked just fine with
+virgl</div>
+</center>
 
-*Side-by-side Image of Manjaro and Pop working?*
+**Even on Linux some Distros might freak out a bit**:
 
 - I've had weird issues switching it on while on some of my work RHEL 8 VMs. Not sure why
 - I have tried it with Pop_OS! and Manjaro VMs and they seem to work.
 - Fedora, my main use case works great.Creating a VM
 
-### Not entirely sure about hardware support
+<center>
+<a href="img/posts/virtio-3d-vms/glitch_t470_fedora.png">
+<img alt="My Fedora VMs didn't work on my T470 Thinkpad" src="/img/posts/virtio-3d-vms/glitchy_t470_fedora.png" style="max-width: 100%;"/></a>
+<div class="caption">My Fedora VMs on my T470 Thinkpad (intel graphics only)
+didn't seem to like virgl</div>
+</center>
+
+**Not entirely sure about hardware support**:
 - So far mostly used on my desktop, which has a AMD RX580 GPU it uses for this
 - Tried it on my T470 Thinkpad with integrated intel graphics, and a normal Fedora guest worked (I think?)
     - By Silverblue didn't seem to like it at all. Not sure if that was a Silverblue issue or being on the intel gpu issue... (verify on desktop)
