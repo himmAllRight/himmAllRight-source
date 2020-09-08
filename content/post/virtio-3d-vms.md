@@ -9,25 +9,22 @@ draft   = "True"
 Comments = "True"
 +++
 
-<!--more-->
-
-
-## Background
-
-### Motivaton
-
 When I was on vacation the other week, I only brought my [macbook
 pro](http://ryan.himmelwright.net/post/new-2019-16inch-mbp/), but I
 wanted to still be able to jump into Linux while I was away. I've tried
-VirtualBox in the past, kand while it's *fine* for running headless installs, I
+VirtualBox in the past, and while it's *fine* for running headless installs, I
 find that it's really not a great experience on macOS when running full desktop
 environments. So, I downloaded the free trial of [parallels desktopi
 15](https://www.parallels.com/blogs/just-released-parallels-desktop-for-mac/)
-for the mac, and honestly... it was great.
+for the mac, and honestly... it was great. Afterwards, I knew I needed to
+figure out a way to improve the graphics performance on my  desktop's VMs.
+
+<!--more-->
+
 
 *Screenshot of Parallels/Product logo?*
 
-It handled graphics on both my Windows and Linux guests wonderfully. I could
+Parallels  handled graphics on both my Windows and Linux guests wonderfully. I could
 full screen, and felt like I was running that OS on my macbook. I was sad when
 the trial was over, and decided not to buy the subscription. My main reason
 being... I am a Linux user and my VM computer is *not* my macbook, it's my
@@ -214,14 +211,14 @@ so I am more than happy with it.
 ## Drawbacks/Limitations
 
 While I'm very happy with the performance of my virtio VM, there are a few
-drawbacks and limitations to keep in mind:
+drawbacks or limitations to keep in mind:
 
 **Need to pass through devices for some things**: ... like a mouse when gaming
-XD, or maybe a full HD if you need high IO.
+XD. Or maybe a full HD if you need high IO in the VM.
 
 **Linux Guests Only:** While researching, I saw [conference talks about getting
-birgil working on Windows](https://www.youtube.com/watch?v=aBgYNDLXuyg) , but I
-*think* currently this really only works with Linux guests.
+virgl working on Windows](https://www.youtube.com/watch?v=aBgYNDLXuyg) , but I
+*think* currently it really only works with Linux guests.
 
 <center>
 <a href="img/posts/virtio-3d-vms/other_working_distros.png">
@@ -230,11 +227,12 @@ birgil working on Windows](https://www.youtube.com/watch?v=aBgYNDLXuyg) , but I
 virgl</div>
 </center>
 
-**Even on Linux some Distros might freak out a bit**:
-
-- I've had weird issues switching it on while on some of my work RHEL 8 VMs. Not sure why
-- I have tried it with Pop_OS! and Manjaro VMs and they seem to work.
-- Fedora, my main use case works great.Creating a VM
+**Even on Linux some Distros might freak out a bit**: I had weird issues
+switching it on while on some of my RHEL 8 VMs. The mouse pointer wouldn't show
+and the screen would glitch and flicker when running high graphics tasks. I'm
+Not sure why it's happening, but I'm guessing it might be related to older
+software packages/kernel. I have tried it with Pop_OS! and Manjaro VMs and they
+seem to work just fine.
 
 <center>
 <a href="img/posts/virtio-3d-vms/glitch_t470_fedora.png">
@@ -243,9 +241,17 @@ virgl</div>
 didn't seem to like virgl</div>
 </center>
 
-**Not entirely sure about hardware support**:
-- So far mostly used on my desktop, which has a AMD RX580 GPU it uses for this
-- Tried it on my T470 Thinkpad with integrated intel graphics, and a normal Fedora guest worked (I think?)
-    - By Silverblue didn't seem to like it at all. Not sure if that was a Silverblue issue or being on the intel gpu issue... (verify on desktop)
+**Not entirely sure about hardware support**: So far my working VMs have mostly
+just been on my desktop, which has a AMD RX580 GPU. I tried it on
+my T470 Thinkpad with integrated intel graphics, and a Fedora guest, but the
+graphics were all glitch at the login screen. So I don't know what hardware
+supports it and what doesn't. It's possible that different hardware might just
+need different settings selected.
 
 ## Conclusion
+
+Overall, I love this setup. It allows me to use my desktop to it's full
+potential, by running full screen VMs I can get sucked into and forget I'm in a
+guest os. This works really well for helping to test fedora packages, or
+maintaining a [Rawhide]() machine. Virgl is a awesome projects and I hope it
+continues to progress over time. If you haven't tried it yet, give it a shot!
