@@ -1,6 +1,6 @@
 +++
 title   = "Running VMs with VirtIO 3D Acceleration"
-date    = "2020-09-07"
+date    = "2020-09-10"
 author  = "Ryan Himmelwright"
 image   = "img/posts/virtio-3d-vms/obx-sunrise.jpeg"
 caption = "Kitty Hawk, NC"
@@ -22,7 +22,11 @@ figure out a way to improve the graphics performance on my  desktop's VMs.
 <!--more-->
 
 
-*Screenshot of Parallels/Product logo?*
+<center>
+<a href="img/posts/virtio-3d-vms/parallels.png">
+<img alt="Parallels Desktop on MacOS" src="/img/posts/virtio-3d-vms/parallels.png" style="max-width: 100%;"/></a>
+<div class="caption">Parallels desktop on MacOS</div>
+</center>
 
 Parallels  handled graphics on both my Windows and Linux guests wonderfully. I could
 full screen, and felt like I was running that OS on my macbook. I was sad when
