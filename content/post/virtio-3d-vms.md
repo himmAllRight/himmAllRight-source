@@ -9,15 +9,17 @@ draft   = "True"
 Comments = "True"
 +++
 
-When I was on vacation the other week, I only brought my [macbook
-pro](http://ryan.himmelwright.net/post/new-2019-16inch-mbp/), but I
-wanted to still be able to jump into Linux while I was away. I've tried
-VirtualBox in the past, and while it's *fine* for running headless installs, I
-find that it's really not a great experience on macOS when running full desktop
-environments. So, I downloaded the free trial of [parallels desktopi
-15](https://www.parallels.com/blogs/just-released-parallels-desktop-for-mac/)
-for the mac, and honestly... it was great. Afterwards, I knew I needed to
-figure out a way to improve the graphics performance on my  desktop's VMs.
+While on vacation the other week, the only laptop I brought with was my
+[macbook pro](http://ryan.himmelwright.net/post/new-2019-16inch-mbp/). That
+being said, I still wanted the ability to jump into Linux while I was away. So,
+I needed to virtualize. I've used VirtualBox in the past, and while it's *fine*
+for running headless installs, I find that it is not a great experience on
+macOS when trying to run a full desktop environment. So, I downloaded the free
+trial of [parallels desktop
+15](https://www.parallels.com/blogs/just-released-parallels-desktop-for-mac/),
+and honestly... it was great. Afterwards, I knew I needed to figure out a way
+to catch up and improve the graphics performance of the VMs on my (Linux)
+*desktop*.
 
 <!--more-->
 
@@ -28,15 +30,15 @@ figure out a way to improve the graphics performance on my  desktop's VMs.
 <div class="caption">Parallels desktop on MacOS</div>
 </center>
 
-Parallels  handled graphics on both my Windows and Linux guests wonderfully. I could
-full screen, and felt like I was running that OS on my macbook. I was sad when
+Parallels handled graphics of both my Windows and Linux guests wonderfully. I could
+full screen the VM, and felt like I was running that OS on my macbook. I was sad when
 the trial was over, and decided not to buy the subscription. My main reason
-being... I am a Linux user and my VM computer is *not* my macbook, it's my
+being... my VM computer is *not* my macbook, it's my
 Linux desktop.
 
 I love libvirt and virt-manager, but using parallels showed me that I really
-needed to figure out who to improve the graphics situation of my VMs to catch
-up. I wanted to be able to work in guest VMs full screen, without lagging
+needed to figure out how to improve the graphics situation of my VMs to catch
+up. I wanted to be able to work in guest VMs full screen, without a lagging
 UI or feeling like I was *in* a VM.
 
 ### VFIO - GPU Passthrough
@@ -49,46 +51,47 @@ ago from the "X Gamers, 1 CPU" serries of videos Linux Tech Tips made.
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LuJYMCbIbPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div class="caption">The first video of the serries, 2 Gaming PCS 1 Tower</div>
+<div class="caption">The first video of the serries, 2 Gaming PCs 1 Tower</div>
 </center>
 
 
-I was able to temporarily run
-Proxmox and Unraid on my desktop, and pass my gpu directly to Fedora VMs.
-While it was a neat experiment, I realized the setup it can be a bit of a pain.
+I was able to temporarily run both Proxmox and Unraid on my desktop, and pass
+my gpu directly to Fedora VMs.  While it was a neat experiment, I realized it
+can be a quite a pain.
 
 I currently only have one GPU in my desktop, so to pass it to the VM I had to
-disable it from the host, and pass it along. This meant that I had to start the
-VMs from another device (which isn't *that* bad), but worse, the gpu would
-often get stuck while being passed around so I always had to reboot my hoest
-whenever the VM restarted... which defeated the point.
+disable it from the host. Not having a GPU for the host system meant that I had
+to start the VMs from another device, which honestly isn't *that* bad. The much
+worse issue however, was that the gpu would often get stuck while being passed
+around, so I had to reboot my host whenever the VM restarted... which defeated
+the point.
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6T_-HMkgxt0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
 
-So to *really* utilize VFIO and have a more stable setup, I would want a second
-GPU. Honestly though, I realized this setup wasn't what I was looking for. KVM
-gpu passthrough is a great option if you run Linux as your main computer, but
-want to be able to boot into a Windows VM to play games, but VFIO is slowly
-becoming overkill even for *that*, as gaming support on Linux just keeps
-getting better.
+So to *properly* utilize VFIO and have a more stable setup, I would want a
+second GPU. I truth though, I realized this setup wasn't what I was looking
+for. KVM gpu passthrough is a great option if you run Linux as your main
+computer, but want to be able to boot into a Windows VM to play games. But GPU
+passthrough is slowly becoming overkill even for *that*, as gaming support on
+Linux keeps getting better.
 
-Aside from having an occasional Windows VM to play around with, I mostly wanted
-to just run Linux VMs on a Linux host. I needed to figure out how to let my VMs
-utilize the power of my GPU, without the complications of GPU passthrough...
+Aside from having an occasional Windows VM to play around with, I mostly want
+to run Linux VMs on a Linux host. I needed to figure out how to let my VMs
+utilize the *power* of my GPU, without the complications of GPU passthrough...
 
 ### Virgil
 
-Let me introduce, [virgil](https://virgil3d.github.io). According to the
-projects website:
+Introducing, [virgil](https://virgil3d.github.io). According to the
+project's website:
 
 >Virgil is a research project to investigate the possibility of creating a virtual 3D GPU for use inside qemu virtual machines, that allows the guest operating system to use the capabilities of the host GPU to accelerate 3D rendering. The plan is to have a guest GPU that is fully independent of the host GPU.
 
-So, Virgil basically allows libvirt to create *virtual 3D GPUs* to use in VMs.
-This means, that I *should* be able to get high performing VMs, including the
-graphics, on my Linux desktop.
+So, Virgil essentially allows libvirt to create *virtual 3D GPUs*, that work
+with the host GPU for 3D acceleratuon.  This means, that I *should* be able to
+get high performing VMs, including the graphics, on my Linux desktop.
 
 ## Setup
 
@@ -155,7 +158,7 @@ but rather an initial test.
 My next step was to give the VM a *real* GPU test, so I downloaded the [Unigine
 Heaven Benchmark](https://benchmark.unigine.com/heaven). First I got my
 baseline by running the benchmark directly on my host system. *It should be
-noted, I did have other applications running during these bench marks*.
+noted, I did have other applications running during all of these benchmarks*.
 
 <center>
 <a href="img/posts/virtio-3d-vms/unigine_heaven_score_host_export.png">
@@ -173,29 +176,30 @@ So not bad, and roughly what I expected. Next, I tried running it in the VM...
 *shared* graphics</div>
 </center>
 
-While not as good of a result as on the host, it is a *very* respectable
+While not as good as on the host, it is a *very* respectable
 result. One thing to note, is that the VM did have less cores and RAM assigned
 to it compared to the host.
 
-Additionally, my default VM basically *wouldn't even run* the benchmark. I was
-able to open it, but the load screen ran frame-by-frame.
+Additionally, my default VM *wouldn't even run* the benchmark. I was
+able to open it, but the load screen ran frame-by-frame. So, turning on the
+virgl settings definitely made a difference.
 
 
 ### Portal 2
 
-With the Unigine Heaven bench mark running in my test VM, I decided to try the
-next step... running a game. Now, I have *zero* intentions of running games in
+With the Unigine Heaven benchmark working in my test VM, I decided to attempt the
+next test... playing a game. Now, I have *zero* intentions of running games in
 my VMs, but this is the most common use case for having a GPU-passthrough
-setup.
+setup, so I wanted to see how this system compared.
 
-I thought a would try running a classic game: Portal 2. It's not a very heavy
-resource game, but one that most certainly does *not* normally run in my VMs.
-So, I installed the game, opened it, and started a level... and immediately was
-looking at the ground.
+I thought a would try running a classic game: Portal 2. It's not a very
+resource intensive game, but one that most certainly does *not* normally run
+well in my VMs.  So, I installed the game, opened it, and started a level...
+and was immediately forced to stare at the ground.
 
-That was when I indeed knew I was in a VM, because it  didn't actually have my
-mouse capture. It just used my window input clicks from my host, which wasn't
-enough to actually play the game.
+That reminded me that I was indeed playing in a VM, because the game  didn't
+actually have my proper mouse capture. It just used the input clicks from my
+host to the VM spice window, which wasn't enough to actually play the game.
 
 <center>
 <a href="img/posts/virtio-3d-vms/portal2_window.png">
@@ -204,11 +208,11 @@ enough to actually play the game.
 VM.(I had it full screen but windowed it to show it was indeed in the VM)</div>
 </center>
 
-However, one shutdown and usb mouse pasthrough later... and I was playing
-Portal 2! It was a little glitchy the first few seconds, but after that ran
-fine enough. I think this is likely due to hitting the *virtualized* disk
-during the initial load. Again, this is better performance than what I *need*,
-so I am more than happy with it.
+Anyway, one VM shutdown and usb mouse pasthrough later... I was playing Portal
+2! It was a little glitchy for the first few seconds, but afterwards ran well.
+I initial lag was likely due to the system heavily hitting the *virtualized*
+disk during the initial load. Again, this is better performance than what I
+*need*, so I am more than happy with it.
 
 
 
@@ -217,12 +221,13 @@ so I am more than happy with it.
 While I'm very happy with the performance of my virtio VM, there are a few
 drawbacks or limitations to keep in mind:
 
-**Need to pass through devices for some things**: ... like a mouse when gaming
-XD. Or maybe a full HD if you need high IO in the VM.
+**Need to pass through any devices**: ... like a mouse when gaming XD. This
+could also be a webcam, microphone, flash drive, or even a full ssd if you need
+better IO in the VM.
 
 **Linux Guests Only:** While researching, I saw [conference talks about getting
 virgl working on Windows](https://www.youtube.com/watch?v=aBgYNDLXuyg) , but I
-*think* currently it really only works with Linux guests.
+*think* it currently only works with Linux guests.
 
 <center>
 <a href="img/posts/virtio-3d-vms/other_working_distros.png">
@@ -232,7 +237,7 @@ virgl</div>
 </center>
 
 **Even on Linux some Distros might freak out a bit**: I had weird issues
-switching it on while on some of my RHEL 8 VMs. The mouse pointer wouldn't show
+after switching it for some of my RHEL 8 VMs. The mouse pointer wouldn't show
 and the screen would glitch and flicker when running high graphics tasks. I'm
 Not sure why it's happening, but I'm guessing it might be related to older
 software packages/kernel. I have tried it with Pop_OS! and Manjaro VMs and they
@@ -245,17 +250,18 @@ seem to work just fine.
 didn't seem to like virgl</div>
 </center>
 
-**Not entirely sure about hardware support**: So far my working VMs have mostly
-just been on my desktop, which has a AMD RX580 GPU. I tried it on
-my T470 Thinkpad with integrated intel graphics, and a Fedora guest, but the
-graphics were all glitch at the login screen. So I don't know what hardware
-supports it and what doesn't. It's possible that different hardware might just
-need different settings selected.
+**Not entirely sure about hardware support**: So far my working VMs have just
+been on my desktop, which has an AMD RX580 GPU. I tried using a Fedora guest
+on my T470 Thinkpad which has integrated Intel graphics, but the screen was
+all crazy at the login screen. So, I don't know what hardware supports it and
+what doesn't. It's possible that different hardware might just need different
+settings selected.
 
 ## Conclusion
 
 Overall, I love this setup. It allows me to use my desktop to it's full
-potential, by running full screen VMs I can get sucked into and forget I'm in a
-guest os. This works really well for helping to test fedora packages, or
-maintaining a [Rawhide]() machine. Virgl is a awesome projects and I hope it
-continues to progress over time. If you haven't tried it yet, give it a shot!
+potential, by running full screen VMs I can jump into and forget that I am in a
+vitalized system. This works well when testing fedora packages, or maintaining
+a [Rawhide](https://fedoraproject.org/wiki/Releases/Rawhide) machine. Virgl is
+an awesome projects and I hope it continues to progress over time. If you
+haven't tried it yet, give it a shot!
