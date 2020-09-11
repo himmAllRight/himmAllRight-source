@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2020-08-21
+date: 2020-09-10
 type: homelab
 layout: homelab-page
 menu:
@@ -87,6 +87,7 @@ iPhone 11
 ### Periphery Devices
 ```
 Dell 27" 2560x1440 IPS Monitor (Dell u2717d)
+Ergodox EZ Glow w/ Cherry MX Brown Switches
 Happy Hacking Keyboard Pro2
 Audioengine A2+ Speakers & Stands
 Audio Technica M50x Headphones
