@@ -176,7 +176,7 @@ it appeared to have [good
 thermals](https://www.fractal-design.com/home/product/cases/meshify/meshify-c),
 which I liked. This was my easiest part to pick.
 
-#### PSU: EVGA - [SuperNOVA G4 650W 80+ Gold, fully modular ATX PSU](https://www.evga.com/products/product.aspx?pn=120-g1-0650-xr)
+#### PSU: EVGA - [SuperNOVA G4 650W 80+ Gold, fully modular ATX PSU](https://web.archive.org/web/20181102223931/https://www.evga.com/Products/Product.aspx?pn=120-G1-0650-XR)
 
 <a href="../../img/posts/chameleon-desktop-design/psu.png"><img alt="The KDE Plasma 5 extend display GUI" src="../../img/posts/charmeleon-desktop-design/psu.png" style="max-width: 35%; float: right; margin-bottom: 10px;"/></a>
 

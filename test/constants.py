@@ -80,6 +80,7 @@ POST_NAMES = [
     "tsqa-2020",
     "Updating-Pi-Cluster-With-Ansible",
     "upgrading-network-to-ubiquiti",
+    "virtio-3d-vms",
     "website-switched-to-cryogen",
     "website-switched-to-hugo",
     "website-transition-to-hugo",
