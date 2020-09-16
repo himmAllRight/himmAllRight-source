@@ -2,8 +2,8 @@
 title   = "Setup Optfine with Minecraft Flatpak Install"
 date    = "2020-09-20"
 author  = "Ryan Himmelwright"
-image   = "img/posts/pia-client-podman-issues/grass_jamesville_mirror.jpeg"
-caption = "U.S. Route 64, Jamesville, NC"
+image   = "img/posts/setup-optifine-minecraft-flatpak/obx-pier-post.jpeg"
+caption = "Kitty Hawk, NC"
 tags    = ["linux", "flatpak", "fedora",]
 draft   = "True"
 Comments = "True"
