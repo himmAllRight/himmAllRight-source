@@ -40,10 +40,26 @@ Open up the launcher, and login to verify that everything is working.
 ### Optifine
 #### Background info
 
+[Optifine]() is a Minecraft optimiziation mod which supports installing shader
+and texture packs. These can either help minecraft look better, and some can
+actually help the game perform better. I use shaders that help some of the
+textures look a bit better from the default, but nothing too fancy.
+
 #### Download
+
+*Image of Optifine download page?*
+
+To obtain optifine, go to the [download page](https://optifine.net/downloads)
+and download the version which corresponds to the minecraft version you are
+running. If you are running a version which is more recent, you might have to
+run a *Preview version* of optifine, which in my experience is fine.
 
 ### Install Optifine
 #### Finding the minecraft folder
+Before we install Optifine, there is one bit of information we need to know for
+the install process: the `.minecraft` folder location. This is where running a
+flatpak verion differs from a normal minecraft install, as the folder will not
+be at `~/.minecraft/`.
 
 #### Install Optifine
 
