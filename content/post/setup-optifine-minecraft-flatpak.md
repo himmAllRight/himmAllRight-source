@@ -61,7 +61,30 @@ the install process: the `.minecraft` folder location. This is where running a
 flatpak verion differs from a normal minecraft install, as the folder will not
 be at `~/.minecraft/`.
 
+This is because flatpak applications are sandboxed from the system. While this
+is good for security, it means that the *'home directory'* seen inside the
+application is different from the user's (it's sort of like a `chroot`).
+
+*Screenshot of my actual .minecraft folder?*
+
+On my computer, the flatpak applications are located at
+`/home/ryan/.var/app/`, making my *minecraft* folder actually at
+`/home/ryan/.var/app/com.mojang.Minecraft/data/minecraft/`, instead of
+`~/.minecraft/`. Find and remember this location.
+
 #### Install Optifine
+
+*Image of install window, adding in custom minecraft folder location*
+
+To install optifine which is a `jar` file, open a terminal, navigate to the
+download, and run it with java:
+
+```bash
+cd ~/Downloads
+java -jar preview_OptiFine_1.16.3_HD_U_G3_pre1.jar
+```
+
+This will open the installer.
 
 ### Configure in Launcher
 
