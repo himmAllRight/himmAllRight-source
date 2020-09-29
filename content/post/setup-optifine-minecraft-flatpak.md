@@ -1,6 +1,6 @@
 +++
 title   = "Setup Optfine with Minecraft Flatpak Install"
-date    = "2020-09-20"
+date    = "2020-09-29"
 author  = "Ryan Himmelwright"
 image   = "img/posts/setup-optifine-minecraft-flatpak/obx-pier-post.jpeg"
 caption = "Kitty Hawk, NC"
@@ -35,7 +35,9 @@ Minecraft:
 flatpak install com.mojang.Minecraft
 ```
 
-Open up the launcher, and login to verify that everything is working.
+Open up the launcher, and login to verify that everything is working. (Also,
+logging in to the official launcher at least once is required to install
+Optifine in the later steps).
 
 ### Optifine
 #### Background info
@@ -85,6 +87,8 @@ java -jar preview_OptiFine_1.16.3_HD_U_G3_pre1.jar
 ```
 
 This will open the installer.
+
+*Screenshot of installer, w/ custom link*
 
 ### Configure in Launcher
 
