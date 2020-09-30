@@ -78,8 +78,8 @@ this location. *(Hint: it should be similar to mine)*
 
 *Image of install window, adding in custom minecraft folder location*
 
-To install optifine which is a `jar` file, open a terminal, navigate to the
-download, and run it with java:
+To install the optifine `jar` file, open a terminal, navigate to the
+downloaded file, and run it with java:
 
 ```bash
 cd ~/Downloads
@@ -94,12 +94,12 @@ This will open the installer.
 <div class="caption">The Optifine installer window</div>
 </center>
 
-Switch the folder to the `minecraft` one we found previously, and click
+Switch the *Folder* to the `minecraft` one we found previously, and click
 *Install*. Note: If the official minecraft launcher was not already logged
 into, this step will *not* work as it will fail to find minecraft (the launcher
 downloads content on the first login).
 
-### Configure in Launcher
+### Configure The Optifine Launcher
 
 <center>
 <a href="/img/posts/setup-optifine-minecraft-flatpak/select_optifine.png">
@@ -109,7 +109,7 @@ downloads content on the first login).
 
 With Optifine installed, we need to configure it in the minecraft launcher. If
 Optifine was correctly installed, it should now be a selectable option at the
-bottom left of the window (Next to settings)
+bottom left of the window (Next to settings).
 
 #### Add your own installation
 
@@ -125,23 +125,23 @@ launcher, and hit the *New* button. From that window, give the install a name
 and select your latest Optifine version from the drop-down menu. If optifine
 isn't an option, then it wasn't installed correctly or in the right location.
 
-Lastly, remember to switch the *Game Directory* to the location of the flatpak
-minecraft directory we've been using. Hit *Create* and switch to it.
+Lastly, remember to once again switch the *Game Directory* to the location of
+the flatpak minecraft folder we've been using. Hit *Create* and switch to it.
 
 ### Shaders
 
-The main motivation behind the hassel to install Optifine, is to be able to use
-shader (at least for me). So, with Optifine all configured, what's finish what
+The main motivation behind adding Optifine, is to be able to use
+shaders. With Optifine all configured, what's finish what
 we came here for.
 
 #### Download
 
-First, obtain some shader. I've mostly been using the [BSL] shader pack and
-loving them. They keep a more 'classic' minecraft style without changing too
-much, but improve things like the lighting, water, and add swaying plants.
+First, obtain a shader. I have mostly been using the [BSL](https://bitslablab.com/bslshaders/) shader pack and
+loving it. It keeps a more 'classic' minecraft style without changing too
+much, but improves key visuals like the lighting, water, and  swaying plants.
 
 When you find a shader you want, just download the package and move it to the
-*shaders* folder in our flatpak minecraft folder. [Here is]() where I
+*shaders* folder in our flatpak minecraft folder. [Here is](https://bitslablab.com/bslshaders/#download) where I
 downloaded the one I use.
 
 *FYI, not every shader I tried worked.*
