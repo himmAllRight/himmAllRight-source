@@ -88,12 +88,62 @@ java -jar preview_OptiFine_1.16.3_HD_U_G3_pre1.jar
 
 This will open the installer.
 
-*Screenshot of installer, w/ custom link*
+<center>
+<a href="/img/posts/setup-optifine-minecraft-flatpak/optifine_install.png">
+<img alt="The optifine installer" src="/img/posts/setup-optifine-minecraft-flatpak/optifine_install.png" style="max-width: 100%;"/></a>
+<div class="caption">The Optifine installer window</div>
+</center>
+
+Switch the folder to the `minecraft` one we found previously, and click
+*Install*. Note: If the official minecraft launcher was not already logged
+into, this step will *not* work as it will fail to find minecraft (the launcher
+downloads content on the first login).
 
 ### Configure in Launcher
 
+<center>
+<a href="/img/posts/setup-optifine-minecraft-flatpak/select_optifine.png">
+<img alt="The minecraft launcher, selecting optifine" src="/img/posts/setup-optifine-minecraft-flatpak/select_optifine.png" style="max-width: 100%;"/></a>
+<div class="caption">Select Optifine in the Minecraft Launcher</div>
+</center>
+
+With Optifine installed, we need to configure it in the minecraft launcher. If
+Optifine was correctly installed, it should now be a selectable option at the
+bottom left of the window (Next to settings)
+
+#### Add your own installation
+
+<center>
+<a href="/img/posts/setup-optifine-minecraft-flatpak/diy_launcher.png">
+<img alt="Creating a new minecraft launcher install" src="/img/posts/setup-optifine-minecraft-flatpak/diy_launcher.png" style="max-width: 100%;"/></a>
+<div class="caption">Select Optifine in the Minecraft Launcher</div>
+</center>
+
+If for some reason optifine *is not* an option, a custom installer can be
+added. To create a new install, click *Installations* at the top of the
+launcher, and hit the *New* button. From that window, give the install a name
+and select your latest Optifine version from the drop-down menu. If optifine
+isn't an option, then it wasn't installed correctly or in the right location.
+
+Lastly, remember to switch the *Game Directory* to the location of the flatpak
+minecraft directory we've been using. Hit *Create* and switch to it.
+
 ### Shaders
+
+The main motivation behind the hassel to install Optifine, is to be able to use
+shader (at least for me). So, with Optifine all configured, what's finish what
+we came here for.
+
 #### Download
+
+First, obtain some shader. I've mostly been using the [BSL] shader pack and
+loving them. They keep a more 'classic' minecraft style without changing too
+much, but improve things like the lighting, water, and add swaying plants.
+
+When you find a shader you want, just download the package. [Here is]() where I
+downloaded the one I use.
+
+*FYI, not every shader I tried worked.*
 
 #### Move to Location
 
