@@ -1,6 +1,6 @@
 +++
 title   = "Setup Optfine with Minecraft Flatpak Install"
-date    = "2020-09-29"
+date    = "2020-09-30"
 author  = "Ryan Himmelwright"
 image   = "img/posts/setup-optifine-minecraft-flatpak/obx-pier-post.jpeg"
 caption = "Kitty Hawk, NC"
@@ -140,14 +140,46 @@ First, obtain some shader. I've mostly been using the [BSL] shader pack and
 loving them. They keep a more 'classic' minecraft style without changing too
 much, but improve things like the lighting, water, and add swaying plants.
 
-When you find a shader you want, just download the package. [Here is]() where I
+When you find a shader you want, just download the package and move it to the
+*shaders* folder in our flatpak minecraft folder. [Here is]() where I
 downloaded the one I use.
 
 *FYI, not every shader I tried worked.*
 
-#### Move to Location
-
 ### Enable in game
 
+<center>
+<a href="/img/posts/optifine-minecraft-flatpak/minecraft_video_settings.png">
+<img alt="Minecraft Video Settings" src="/img/posts/setup-optifine-minecraft-flatpak/minecraft_video_settings.png" style="max-width: 100%;"/></a>
+<div class="caption">Minecraft Video Settings</div>
+</center>
+
+With the shader package in place, we should be able to enable it in game. Fire
+up minecraft (the optifine instal), and select *Options*, then the *Video
+Settings*. From there, you should now see a newly available *Shaders* option.
+Click it to open up the shaders menu.
+
+<center>
+<a href="/img/posts/optifine-minecraft-flatpak/minecraft_shader_settings.png">
+<img alt="Minecraft Shader Settings" src="/img/posts/setup-optifine-minecraft-flatpak/minecraft_shader_settings.png" style="max-width: 100%;"/></a>
+<div class="caption">Minecraft Shader Settings</div>
+</center>
+
+If the shader package was moved to the correct location, it *should* show up
+here now. If so, select the desired shader (the laucher might restart when
+a new shader isselected). If not, open the *Shaders Folder*
+to double check the location.
+
+After selecting the shader, hit *Done* and try it out in game!
 
 ### Conlusion
+
+<center>
+<a href="/img/posts/optifine-minecraft-flatpak/minecraft_with_shaders.png">
+<img alt="Minecraft with Shaders" src="/img/posts/setup-optifine-minecraft-flatpak/minecraft_with_shaders.png" style="max-width: 100%;"/></a>
+<div class="caption">Minecraft using the BLS Shaders</div>
+</center>
+
+Much better! Shaders bring playing minecraft up to a new level. While they
+might seem difficult to use with a flatpak install, it really isn't bad *if*
+you know (and remember) where to look. Enjoy!
