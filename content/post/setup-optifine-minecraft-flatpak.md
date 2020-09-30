@@ -9,13 +9,12 @@ draft   = "True"
 Comments = "True"
 +++
 
-Over the last couple of months I have started playing Minecraft (Java) on my
-desktop again. With my [graphics card update](), I wanted to start using some
-shaders. Nothing fancy, but something to bring the game up to the next level.
-However, unlike when I was in college, these days I can install and play
-minecraft using a [flatpak](). This makes it convienient to install, but can
-make figuring out how to install something like mods or Optifine a bit more
-complicated. So here's how to do it.
+Over last few months, I picked up Minecraft (Java) on my desktop again. After
+[upgrading my graphics card](/post/rx580-upgrade), I wanted to start using
+shaders. However, unlike when I was in college, these days I can install and
+play minecraft as a [flatpak](http://flatpak.org). While using the flatpak
+makes installing minecraft convenient, it also complicates installing a mod
+like Optifine. So here's how to do it.
 
 <!--more-->
 
@@ -25,27 +24,28 @@ that paths and locations may differ on other distros*.
 
 ### Install Minecraft Flatpak
 
-*Image of Minecraft Launcher?*
+*Image of Minecraft Flathub Page?*
 
-First, if minecraft isn't already installed as a flatpak, lets do that first.
-Make sure [flathub is enabled]() and then run the following command to install
-Minecraft:
+First, lets install the minecraft flatpak. Ensure that [flathub is
+enabled](https://flatpak.org/setup/Fedora/) and then run the following command
+to install Minecraft:
 
 ```bash
 flatpak install com.mojang.Minecraft
 ```
 
-Open up the launcher, and login to verify that everything is working. (Also,
-logging in to the official launcher at least once is required to install
-Optifine in the later steps).
+Open up the launcher, and login to verify that everything is working.
+
+*(Logging into the official launcher at least once is required to install
+Optifine in the later steps).*
 
 ### Optifine
 #### Background info
 
-[Optifine]() is a Minecraft optimiziation mod which supports installing shader
-and texture packs. These can either help minecraft look better, and some can
-actually help the game perform better. I use shaders that help some of the
-textures look a bit better from the default, but nothing too fancy.
+[Optifine](https://optifine.net/home) is a Minecraft optimiziation mod which
+supports installing shader and texture packs. These help minecraft look better,
+but some can actually help the game *perform* better. I use shaders that render
+some textures a bit more realistically from the default, but nothing too fancy.
 
 #### Download
 
@@ -53,26 +53,26 @@ textures look a bit better from the default, but nothing too fancy.
 
 To obtain optifine, go to the [download page](https://optifine.net/downloads)
 and download the version which corresponds to the minecraft version you are
-running. If you are running a version which is more recent, you might have to
-run a *Preview version* of optifine, which in my experience is fine.
+using. If you are running a version which is more recent, you might have to try
+a *Preview version* of optifine, which in my experience, usually works fine.
 
 ### Install Optifine
 #### Finding the minecraft folder
-Before we install Optifine, there is one bit of information we need to know for
-the install process: the `.minecraft` folder location. This is where running a
-flatpak verion differs from a normal minecraft install, as the folder will not
-be at `~/.minecraft/`.
+Before we install Optifine, there is one piece of information we need to know:
+the `.minecraft` folder location. This is where running a flatpak verion
+differs from a normal minecraft install, as the folder will not be at
+`~/.minecraft/`.
 
-This is because flatpak applications are sandboxed from the system. While this
-is good for security, it means that the *'home directory'* seen inside the
-application is different from the user's (it's sort of like a `chroot`).
+This is because flatpak applications are sandboxed from the system. While good
+for security, it means that the *'home directory'* seen inside the application
+is different from the user's (it's like a `chroot`).
 
 *Screenshot of my actual .minecraft folder?*
 
-On my computer, the flatpak applications are located at
-`/home/ryan/.var/app/`, making my *minecraft* folder actually at
-`/home/ryan/.var/app/com.mojang.Minecraft/data/minecraft/`, instead of
-`~/.minecraft/`. Find and remember this location.
+On my computer, the flatpak applications are located at `/home/ryan/.var/app/`,
+making my `/home/ryan/.minecraft/` folder *actually* at
+`/home/ryan/.var/app/com.mojang.Minecraft/data/minecraft/`. Find and remember
+this location. *(Hint: it should be similar to mine)*
 
 #### Install Optifine
 
