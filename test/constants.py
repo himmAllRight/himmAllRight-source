@@ -60,6 +60,7 @@ POST_NAMES = [
     "Setting-up-the-pi-cluster",
     "setting-up-tmuxinator",
     "setup-mosh-shell",
+    "setup-optifine-minecraft-flatpak",
     "shell-stuff-find-grep-sub",
     "simple-reverse-ssh-tunnel",
     "snapd-on-arch",
