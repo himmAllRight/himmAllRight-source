@@ -1,10 +1,10 @@
 +++
-title   = "Setup Optfine with Minecraft Flatpak Install"
+title   = "My new Ergox Keyboard -- Initial Thoughts"
 date    = "2020-10-15"
 author  = "Ryan Himmelwright"
 image   = "img/posts/setup-optifine-minecraft-flatpak/obx-pier-post.jpeg"
 caption = "Kitty Hawk, NC"
-tags    = ["linux", "flatpak", "fedora",]
+tags    = ["hardware", "keyboards", "hhkb", "ergodox",]
 draft   = "False"
 Comments = "True"
 +++
@@ -51,3 +51,27 @@ Comments = "True"
 
 
 ## Getting used to and learning the board
+
+
+## What I like
+
+### Customizeability
+
+
+### Ortholinear
+
+
+### Split Design
+
+
+### Thumb keys
+
+
+## What I don't love
+There's honestly not I don't *like*, but here is a thing or two that I maybe
+don't *love*..
+
+### Brown switches are a bit sensitive?
+
+
+### Learning curve
