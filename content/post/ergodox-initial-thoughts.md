@@ -2,8 +2,8 @@
 title   = "My new Ergox Keyboard -- Initial Thoughts"
 date    = "2020-10-15"
 author  = "Ryan Himmelwright"
-image   = "img/posts/setup-optifine-minecraft-flatpak/obx-pier-post.jpeg"
-caption = "Kitty Hawk, NC"
+image   = "img/posts/ergodox_initial_thoughts/ergodox_header.jpeg"
+caption = "Durham, NC"
 tags    = ["hardware", "keyboards", "hhkb", "ergodox",]
 draft   = "False"
 Comments = "True"
@@ -51,17 +51,22 @@ cancled planck kit from mass.com. When the order was mistakenly canceled
 
 ### Moonlander
 
+*Picture of Moonlander?*
+
 
 ### Ergodox
 
 
 ## Ordering and shipping
 
+*Picture of Ergodox Box*
 
 ## Customizing
 
 
 ### Some issues with Wally
+
+*Picture of Ergodox on Mac?*
 
 
 ### Some changes I have now
