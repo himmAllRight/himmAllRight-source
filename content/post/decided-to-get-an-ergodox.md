@@ -1,8 +1,8 @@
 +++
 title   = "Decided to get an Ergodox"
-date    = "2020-10-15"
+date    = "2020-10-19"
 author  = "Ryan Himmelwright"
-image   = "img/posts/decided_to_get_an_ergodox/ergodox_header.jpeg"
+image   = "img/posts/decided_to_get_an_ergodox/ergodox_box_header.jpeg"
 caption = "Durham, NC"
 tags    = ["hardware", "keyboards", "hhkb", "ergodox",]
 draft   = "True"
@@ -65,12 +65,6 @@ keyboard was the ability to customize and program the layers and layouts.
 
 ### I started to learn proper touch typing and wanted to try ortholinear again
 
-<center>
-<a href="/img/posts/decided_to_get_an_ergodox/touch_type_diagram.jpg">
-<img alt="The Minecraft Flathub Page" src="/img/posts/decided_to_get_an_ergodox/touch_type_diagram.jpg" style="max-width: 100%;"/></a>
-<div class="caption">The Moonlander</div>
-</center>
-
 Working in mostly the same space for much of this year, I've started to notice
 that my wrists and arms have really started to tighten up again thoughout the
 week. So, I put my foot down and decided it was time again to try to force
@@ -78,6 +72,13 @@ myself to use *proper* tough typing... with all my fingers. I normally slide
 my hands across the board and have just a few fingers do the bulk of the work.
 This not only creates unnessicary movement, but also over strains parts of my
 hands, building tension on my wrists.
+
+<center>
+<a href="/img/posts/decided_to_get_an_ergodox/touch_type_diagram.jpg">
+<img alt="The Minecraft Flathub Page" src="/img/posts/decided_to_get_an_ergodox/touch_type_diagram.jpg" style="max-width: 100%;"/></a>
+<div class="caption">'Proper' finger placement for touch typing on a standard
+layout</div>
+</center>
 
 As I started typing with proper finger use, I noticed my hands *really* have a
 hard time hitting some keys... particually the bottom row, especially with my
@@ -147,4 +148,27 @@ of the well-known (to keyboard nerds...),
 [open-source](https://github.com/Ergodox-io), split keyboard, the
 [ergodox](https://deskthority.net/wiki/ErgoDox).
 
+While I *really* loved the Moonlander's features and design, I ultimately
+decided to go with the ergodox-ez for a couple of reasons:
 
+* The Moonlander is brand-new and there wasn't a whole lot of feedback for it
+    yet, whereas the ergodox-ez had a *ton* of *very positive* feedback.
+
+* On a similar note, because the ergodox has been a popular design for a good
+    while now, 3rd party parts like new keycaps can be found on [mass.com]() and
+    [other locations](). This just made seem a bit more customizable at the
+    moment than the Moonlander.
+
+* The ergodox seemed like a great starting board for testing out the
+    orthlinear-split design. If there were parts of it I really hated over the
+    next few years, I could always switch to a moonlander or other split board,
+    based on what I learned with the ergodox.
+
+* If however I instead love the ergodox design and want *another* in a few
+    years for some reason, I have the option to *build* one XD.
+
+### Conclusion
+
+So, that it. I picked the Ergodox and have actually had it for a over a month
+now. If you are wondering what configuration I selected, as well as what do I
+think about it so far... stay tuned for my next post ;) .
