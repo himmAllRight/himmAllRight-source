@@ -2,7 +2,7 @@
 title   = "Decided to get an Ergodox"
 date    = "2020-10-15"
 author  = "Ryan Himmelwright"
-image   = "img/posts/ergodox_initial_thoughts/ergodox_header.jpeg"
+image   = "img/posts/decided_to_get_an_ergodox/ergodox_header.jpeg"
 caption = "Durham, NC"
 tags    = ["hardware", "keyboards", "hhkb", "ergodox",]
 draft   = "True"
@@ -17,7 +17,10 @@ that I am mostly comfortable on it... here are my initial thoughts.
 
 ## Previous Keyboard
 
-*Picture of my HHKB?*
+<a href="../../img/posts/new-hhkb-pro2/got-hhkb.jpg"><img alt="Getting the HHKB
+Keyboard" src="../../img/posts/new-hhkb-pro2/got-hhkb.jpg" style="max-width:
+100%;"/></a>
+<div class="caption">My Happy Hacking Pro Keyboard</div>
 
 For the past few years, I have been using a [Happy Hacking Pro]() keyboard.
 Before that, I was on a [Happy Hacking Lite](), which I started using while I
@@ -60,9 +63,13 @@ now allow the ability to remap their keyboards using open firmware
 keyboard was the ability to customize and program the layers and layouts.
 
 
-### I was starting to learn proper touch typing and wanted ortholinear again
+### I started to learn proper touch typing and wanted to try ortholinear again
 
-*Ortholinear/Touch Typing diagram?*
+<center>
+<a href="/img/posts/decided_to_get_an_ergodox/touch_type_diagram.jpg">
+<img alt="The Minecraft Flathub Page" src="/img/posts/decided_to_get_an_ergodox/touch_type_diagram.jpg" style="max-width: 100%;"/></a>
+<div class="caption">The Moonlander</div>
+</center>
 
 Working in mostly the same space for much of this year, I've started to notice
 that my wrists and arms have really started to tighten up again thoughout the
@@ -104,8 +111,8 @@ recommended.
 ### Moonlander
 
 <center>
-<a href="/img/posts/ergodox_initial_thoughts/moonlander.png">
-<img alt="The Minecraft Flathub Page" src="/img/posts/ergodox_initial_thoughts/moonlander.png" style="max-width: 100%;"/></a>
+<a href="/img/posts/decided_to_get_an_ergodox/moonlander.png">
+<img alt="The Minecraft Flathub Page" src="/img/posts/decided_to_get_an_ergodox/moonlander.png" style="max-width: 100%;"/></a>
 <div class="caption">The Moonlander</div>
 </center>
 
@@ -126,6 +133,13 @@ more and more about the ergodox...
 
 
 ### Ergodox-EZ
+
+<center>
+<a href="/img/posts/decided_to_get_an_ergodox/ergodox_configurator.png">
+<img alt="The Minecraft Flathub Page" src="/img/posts/decided_to_get_an_ergodox/ergodox_configurator.png" style="max-width: 100%;"/></a>
+<div class="caption">The Ergodox-EZ Configurator</div>
+</center>
+
 
 So the moonlander seems to be a respin of the classic keyboard ZSA also sells,
 the [ergodox-ez](https://ergodox-ez.com). The ergodox-ez is a pre-built version
