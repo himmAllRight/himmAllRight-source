@@ -30,21 +30,22 @@ an amazing keyboard. The years I spent on HKBs are why I think *every* keyboard
 should have `ctrl` instead of a `caps` key, or at least switch to two.
 
 
-## Motivations for a new one
+## Rationale for a new one
 
 While I love my HHKB and had no *real* complaints, there were a few things that
-motivated me to start looking at new boards again.
+pushed me to start looking at new boards again.
 
 
-### I was getting the itch to build one again
+### I was getting the itch to build one
 
-My initial reason was the slow, expanding itch to build a mechanical keyboard.
-It is an itch that I've felt before. I actually purchased my HHKB Pro as a backup plan
-when my order of planck kit from mass.com was unfortunately cancelled. My goal
-was to learn how to soder (I even brought my iron then), and build the keyboard
-from scratch. By buying the HHKB, I never got to scratch that itch. While I
-*technically* still haven't...  this is what had me looking at keyboards and
-browsing
+My initial motivation was the slow, expanding itch to build a mechanical
+keyboard.  It is an itch that I've felt before. I purchased my HHKB Pro as a
+*backup* plan when my order for a
+[planck](https://olkb.com/collections/planck) keyboard kit via  mass.com was
+unfortunately cancelled. My *original* intention was to learn how to soder (I
+brought my iron then), and build the keyboard from scratch. Ultimately buying the
+HHKB, I never got to scratch that itch. While I *technically* still haven't...
+this is what had me looking at keyboards and browsing
 [/r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards/) in the
 first place...
 
@@ -56,24 +57,25 @@ first place...
 
 
 More importantly than *physically* building a keyboard, I wanted to be able to
-*programatically* build it, i.e. play with custom firmware. This is something
-that my HHKB doesn't really have, that the plank did. Even the pok3r which I've
-considered in the past had programmable layers. Even some of [System76's
-laptops](https://system76.com/laptops)
-now allow the ability to remap their keyboards using open firmware
-(which is awesome!). So, probably the *biggest* thing I wanted in a new
-keyboard was the ability to customize and program the layers and layouts.
+*programatically* build it, that is, play with custom firmware. This is
+something that my HHKB doesn't really have, but the plank did. The
+[pok3r](https://mechanicalkeyboards.com/shop/index.php?l=product_list&c=165),
+which I've considered in the past, also had programmable layers. Even some of
+[System76's laptops](https://system76.com/laptops) now allow the ability to
+remap their keyboards using open firmware (which is awesome!). So, the
+*biggest* thing I wanted from a new keyboard was the ability to customize and
+program the layers and layouts.
 
 
-### I started to learn proper touch typing and wanted to try ortholinear again
+### I started to learn proper touch typing and wanted to try an ortholinear layout
 
-Working in mostly the same space for much of this year, I've started to notice
-that my wrists and arms have really started to tighten up again thoughout the
-week. So, I put my foot down and decided it was time again to try to force
-myself to use *proper* tough typing... with all my fingers. I normally slide
-my hands across the board and have just a few fingers do the bulk of the work.
-This not only creates unnessicary movement, but also over strains parts of my
-hands, building tension on my wrists.
+Working in mostly the same space for much of this year, I've noticed that my
+wrists and arms have really started to tighten up again. So, I put my foot down
+and decided it was time once again to try and force myself to use *proper*
+touch typing... using all my fingers. I normally slide my hands across the board
+and have just a few fingers do the bulk of the work.  This not only creates
+unnessicary movement, but also over strains parts of my hands, building tension
+in my wrists.
 
 <center>
 <a href="/img/posts/decided_to_get_an_ergodox/touch_type_diagram.jpg">
@@ -83,12 +85,13 @@ layout</div>
 </center>
 
 As I started typing with proper finger use, I noticed my hands *really* have a
-hard time hitting some keys... particually the bottom row, especially with my
-left hand. My other fingers just seem to block the path the "correct" finger
-needs to get to the key. It seemed obvious why I naturally adapted to sliding
-across the board over the years. I wondered if an
-[ortholinear layout]() would better allow me to touch type properly, using all
-of my fingers.
+hard time hitting some keys... in particular the bottom row, and especially
+with my left hand. My other fingers seem to block the path that the "correct"
+finger needs to reach a key. It became obvious why I naturally adapted to
+sliding across the board over the years. I wondered if an ortholinear layout
+would better allow me to touch type properly, using all of my fingers. My hope
+was that the straight grid would allow my fingers a more direct slide up and
+down to the other rows, with out crossing over in the way of my other fingers.
 
 
 ### My shoulders started really having issues
