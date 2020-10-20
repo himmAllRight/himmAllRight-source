@@ -1,6 +1,6 @@
 +++
 title   = "Decided to get an Ergodox"
-date    = "2020-10-19"
+date    = "2020-10-20"
 author  = "Ryan Himmelwright"
 image   = "img/posts/decided_to_get_an_ergodox/ergodox_box_header.jpeg"
 caption = "Durham, NC"
@@ -10,9 +10,9 @@ Comments = "True"
 +++
 
 For the past month, I have been learning to type on... my new keyboard. A few
-weeks ago, I purchased an [ergodox-ex]() and have been using it ever since. Now
-that I am mostly comfortable on it... here are my initial thoughts.
-
+weeks ago, I purchased an [ergodox-ex](https://ergodox-ez.com) and have been
+using it ever since. Why did I want to get a new keyboard (I mean, I still
+*love* [my HHKB](/post/new-hhkb-pro2/))? And why... the ergodox?
 <!--more-->
 
 ## Previous Keyboard
@@ -22,27 +22,29 @@ Keyboard" src="../../img/posts/new-hhkb-pro2/got-hhkb.jpg" style="max-width:
 100%;"/></a>
 <div class="caption">My Happy Hacking Pro Keyboard</div>
 
-For the past few years, I have been using a [Happy Hacking Pro]() keyboard.
-Before that, I was on a [Happy Hacking Lite](), which I started using while I
-was in college. I love the HHK and still think it's an amazing keyboard. (It's
-why I think *every* keyboard should have `ctrl` instead of a `caps` key, or at
-least switch to two...)
+For a few years, I have been gladly using a [Happy Hacking Pro
+2](https://www.hhkeyboard.com/uk/products/pro2/) keyboard.  Before that, I was
+on a [Happy Hacking Lite](https://deskthority.net/wiki/HHKB_Lite), which I
+started using while in college. I love the layout of HHK and still think it's
+an amazing keyboard. The years I spent on HKBs are why I think *every* keyboard
+should have `ctrl` instead of a `caps` key, or at least switch to two.
 
 
 ## Motivations for a new one
 
-While I love my HHKB and had no real complaints, there were a few things that
-motivated me to get a new keyboard.
+While I love my HHKB and had no *real* complaints, there were a few things that
+motivated me to start looking at new boards again.
 
 
-### Was getting the itch to build one again
+### I was getting the itch to build one again
 
-The first reason was that I was slowly getting the itch to build a mechanical
-keyboard again. When I purchased my HHKB Pro, it was actually as a result of a
-canceled planck kit from mass.com. My goal was to learn how to soder (I even
-brought my iron then), and build the keyboard from scratch. By buying the HHKB,
-I never got to scratch that itch. While I *technically* still haven't... this
-is what had me looking at keyboards and browsing
+My initial reason was the slow, expanding itch to build a mechanical keyboard.
+It is an itch that I've felt before. I actually purchased my HHKB Pro as a backup plan
+when my order of planck kit from mass.com was unfortunately cancelled. My goal
+was to learn how to soder (I even brought my iron then), and build the keyboard
+from scratch. By buying the HHKB, I never got to scratch that itch. While I
+*technically* still haven't...  this is what had me looking at keyboards and
+browsing
 [/r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards/) in the
 first place...
 
