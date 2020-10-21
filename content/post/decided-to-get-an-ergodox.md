@@ -96,23 +96,25 @@ down to the other rows, with out crossing over in the way of my other fingers.
 
 ### My shoulders started really having issues
 
-The last straw that switched my keyboard urgency to something I *needed* to
-order *now*, was that my shoulder was starting to hurt... all the time. When I
-was split keyboards in my search, I realized they could probably help a lot to
-alleviate some of my pain. Being able to type with my arms out at any width
-would at least allow me to move the shoulder angle around as it got sore. So, I
-switched from looking at DIY planck and similar kits, and started looking at
-pre-built split keyboards that I could have shipped, quicker than taking months
-to order and build.
+The last straw, promoting my keyboard urgency to something I *needed* to order
+*now*, was that my shoulder was starting to hurt... all the time. During my
+search, I started taking notice of split keyboards and realized they coul
+potentially help to alleviate some of my pain. The ability to type with my arms
+out at any width would at least allow me to move the shoulder angle around as
+it got sore. So, I switched from looking at DIY kits to pre-built split
+keyboards that I could have shipped and under my fingers much quicker than I
+could order and build.
+
 
 ## Considerations
 
-With the requirements figured out, I started searching for my keyboard. Both
-keyboards I considered are actually made and sold from
-[ZSA](https://zsa.io). I chose them because giving the
-shoulder problems I was having, I wanted something that would arrive soonish
-and already built. Plus, they have very good reviews and seem to be highly
-recommended.
+With requirements decided, I started searching for my keyboard. Both keyboards
+that I considered are made and sold from the same company,
+[ZSA](https://zsa.io). From what I read online, people rated their
+products and customer service well, and they were usually highly recommended.
+Personally, I loved reading about their focus on
+[sustainability](https://ergodox-ez.com/pages/sustainability) and creating open
+source products.
 
 ### Moonlander
 
@@ -122,12 +124,12 @@ recommended.
 <div class="caption">The Moonlander</div>
 </center>
 
-The first keyboard I considered was actually the new
-[Moonlander](https://www.zsa.io/moonlander/). It had *just* been released. I
-loved how it looked with it's floating keys, and slim profile. It was
-apparently more portable, coming with it own carrying case. It seemed to
-be a fresh new take on the classic ergodox, with a neat folding design and
-newer features like usb-c connection.
+The first keyboard that caught my eye was the new
+[Moonlander](https://www.zsa.io/moonlander/). When I first saw it, it had
+*just* been released. I loved how it's floating keys and slim profile looked.
+It was apparently designed to be at least somewhat portable, coming with it own
+carrying case. It seemed to be a fresh new take on the classic ergodox, with a
+clever folding design and newer features like usb-c connection.
 
 <center>
 <iframe width="720" height="405" src="https://www.youtube.com/embed/mWu-_ACpSgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -147,33 +149,35 @@ more and more about the ergodox...
 </center>
 
 
-So the moonlander seems to be a respin of the classic keyboard ZSA also sells,
+The moonlander is sort of a re-spin of one of the other keyboards ZSA sells,
 the [ergodox-ez](https://ergodox-ez.com). The ergodox-ez is a pre-built version
 of the well-known (to keyboard nerds...),
 [open-source](https://github.com/Ergodox-io), split keyboard, the
 [ergodox](https://deskthority.net/wiki/ErgoDox).
 
-While I *really* loved the Moonlander's features and design, I ultimately
+I loved the Moonlander's features and design, but I ultimately
 decided to go with the ergodox-ez for a couple of reasons:
 
-* The Moonlander is brand-new and there wasn't a whole lot of feedback for it
-    yet, whereas the ergodox-ez had a *ton* of *very positive* feedback.
+* The Moonlander is brand-new and there wasn't much feedback for it
+    yet, [whereas](https://www.youtube.com/watch?v=LALQsqZP1nA) [there](https://www.youtube.com/watch?v=1GPHiJMS7eo) [is](https://www.nytimes.com/wirecutter/reviews/comfortable-ergo-keyboard/) [plenty](https://thenextweb.com/insider/2016/03/03/why-this-300-ergonomic-keyboard-might-actually-be-worth-the-money/) [of](https://www.rtings.com/keyboard/reviews/ergodox/ez) [information](https://www.mmorpg.com/hardware-reviews/ergodox-ez-this-is-what-powerful-looks-like-2000107228) [about](https://matteeyah.com/ergodox-ez-keyboard) the ergodox-ez.
 
 * On a similar note, because the ergodox has been a popular design for a good
-    while now, 3rd party parts like new keycaps can be found on [mass.com]() and
-    [other locations](). This just made seem a bit more customizable at the
-    moment than the Moonlander.
+    while now, 3rd party parts like new keycaps specifically for the ergodox
+    can easily be found on [mass.com](https://www.mass.com/) and [other
+    websites](http://www.mechsupply.co.uk). This makes the ergodox a bit easier
+    to customize than the moonlander, at least currently.
 
-* The ergodox seemed like a great starting board for testing out the
-    orthlinear-split design. If there were parts of it I really hated over the
-    next few years, I could always switch to a moonlander or other split board,
-    based on what I learned with the ergodox.
+* The ergodox is great starting board for testing out the
+    orthlinear+split design. If there were parts of it I really hated over the
+    next few years, I could always switch to a moonlander or another split board that better fits my needs,
+    based on what I learn from the ergodox.
 
-* If however I instead love the ergodox design and want *another* in a few
-    years for some reason, I have the option to *build* one XD.
+* However, if I instead *love* the ergodox design and want *another* in a few
+    years for some reason, I still have the option to *build* one.. and *finally*
+    scratch that itch XD.
 
 ### Conclusion
 
-So, that it. I picked the Ergodox and have actually had it for a over a month
-now. If you are wondering what configuration I selected, as well as what do I
-think about it so far... stay tuned for my next post ;) .
+I ordered the Ergodox-ez and have had it for a over a month now. If you are
+wondering what configuration I selected, and what I think about it so far...
+stay tuned for my next post ;) .
