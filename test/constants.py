@@ -21,6 +21,7 @@ POST_NAMES = [
     "creating-website-tests-pages",
     "custom-neofetch-ascii-art",
     "dabbling-with-go",
+    "decided-to-get-an-ergodox",
     "docker-quickstart",
     "draft-website-with-jenkins",
     "emacs-update-evil-usepackage",
