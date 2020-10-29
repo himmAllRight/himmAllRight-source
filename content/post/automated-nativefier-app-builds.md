@@ -2,7 +2,7 @@
 title   = "Automated Nativefier App builds"
 date    = "2020-10-30"
 author  = "Ryan Himmelwright"
-image   = "img/posts/ergodox_initial_thoughts/ergodox_header.jpeg"
+image   = "img/posts/automated-nativefier-app-builds/troll_header.jpeg"
 caption = "Durham, NC"
 tags    = ["Linux", "containers", "Fedora", "Ansible",]
 draft   = "True"
