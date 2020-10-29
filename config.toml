@@ -30,8 +30,10 @@ PygmentsStyle = "monokai"
 
 [params.header]
   image = "/img/default-header.jpg"
-  home_image = "atc-tower.jpeg"
-  home_caption = "American Tobacco Campus - Durham, NC"
+#  home_image = "atc-tower.jpeg"
+   home_image = "/img/durham-eno1-header.jpeg"
+  #home_caption = "American Tobacco Campus - Durham, NC"
+  home_caption = "Eno River State Park, Durham, NC"
 
 [[params.social]]
   title = "github"
