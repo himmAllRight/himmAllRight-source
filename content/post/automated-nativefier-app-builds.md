@@ -32,7 +32,7 @@ desktop apps I got used to using on Linux.
 
 ### What Apps I use it for
 
-**Screenshot of one of my nativefier app?**
+*Screenshot of one of my nativefier app?*
 
 Basically, I use nativefier for all of the web services with a missing linux
 client, or tools that I use a lot. Most days, I usually use the following:
@@ -49,12 +49,26 @@ These are both apps that exist on other desktops but don't have a Linux build.
 
 ### How I make them like normal apps
 
+THere are a few thing I do to help make these apps *feel* more like a normal,
+native application.
+
 #### Desktop Files
 
-**Screenshot of apps being listed in search?**
+*Screenshot of apps being listed in search?*
+
+The first, and argualy most important step I take is creating a [desktop
+entity](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html)
+for each nativefier build. A desktop entity defines something as an application
+in Gnome and KDE Plasma environments, allowing it to show up in menus and
+launchers. Defining an entity for the nativefier builds tells the system to to
+treat the build as a normal application, which is what the want.
 
 #### Icons
 
+The second thing I've more recently started doing is making sure that I use
+proper icons when I run nativefier. I already needed the icon for creating the
+desktop entity, but I noticed it wouldn't always match in the dock once the
+application opened. This extra step help everything look more cohesive.
 
 ### How I usually create them
 
