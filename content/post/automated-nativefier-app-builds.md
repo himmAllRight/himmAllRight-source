@@ -9,17 +9,16 @@ draft   = "True"
 Comments = "True"
 +++
 
-Intro talking about how I love and use nativefier... but it's a pain to setup.
+Many applications we use today are just fancy web pages wrapped up in a desktop
+shell. Most people even skip the shell and just run 'webapps' as another tab in
+the web browser. Personally, I prefer to have dedicated app windows opened for
+my essential tools. So, I love [nativefier]() to create desktop versions of my
+favorite web tools. My only problem with it... is that it can be a pain to
+setup. Lets fix that.
 
 <!--more-->
 
 ## How I use nativefier
-
-Many applications we use today are really just fancy web pages wrapped up in a
-desktop shell. Some even forego the deskop wrapper and are straigt webapps used
-in the web browser. Personally, I prefer to have dedicated apps windows opened
-for my essential computing tools, rather than browsing through a bunch of tabs
-in the browser.
 
 So, I use nativefier. This is particularly being a linux user. While MacOS has
 some applications in the AppStore that I don't have an equivelant for, they are
@@ -275,20 +274,109 @@ entry files to point to them by adding this final task:
   loop: "{{ nativefier_apps }}"
 ```
 
+And there we go, that's it! Well... sort of.
+
 ## Selinux woes
+
+While this initially *worked on my computer*, when I tested it on my laptop and
+in some VMs... it failed.
 
 ### Issues
 
+Every time I ran the playbook, I hit this error:
+
+```bash
+Error during build. Run with --verbose for details. [Error: EACCES: permission denied, mkdir '/target/linux-x64-template'] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'mkdir',
+  path: '/target/linux-x64-template'
+}
+```
+
+I was able to tell it was happening while running the podman container. I
+assumed it might be `selinux` related but was unable to sort out a solution
+right away.
+
 ### The Fix
 
+Eventually after browsing the internet, I learned that my easiest solution was
+to add the option `--security-opt label=disable` to my `podman run` command to
+turn off label separation for the container. I'm sure there is a better, more
+secure soltion I could do, but I figured this one was a good compromise of
+being easy to implement, but more secure than the common (and wrong) suggestion
+to "*just disable selinux*".
+
+### One last fix...
+
+```bash
+drwxr-xr-x. 1 100999 100999  560 Oct 25 20:40 jellyfin-linux-x64
 ```
---security-opt label=disable
+
+Lastly, I wanted to add one more cleanup task. My builds usually had the ugly uid/gid
+pair of `100999 100999`, so I added one more task to change ownership to the
+`user`:
+
+```yaml
+- name: Change Permissons of Nativefier Dirs
+  become: True
+  file:
+    path: "{{ nativefier_dir }}/{{ item.name }}-linux-x64"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+  loop: "{{ nativefier_apps }}"
 ```
+
+After that change:
+
+```bash
+drwxr-xr-x. 1 ryan ryan  560 Oct 25 20:40 jellyfin-linux-x64
+```
+
+Much better!
 
 ## Example adding it to my playbooks
 
+With the role complete, it is *finally* time to add it to a playbook. I define
+playbooks to provision all of my machines, so I will just at it those. To do
+so, first make sure the role is added to the list of roles used by the plabook.
+For example:
+
 ```
-code
+  roles:
+    - apps/nativefier
 ```
 
+Next, define a new var named `nativefier_apps`. This variable is a list of
+dictionaries, with each dictionary providing the variavles for a different
+nativefier application. Each nativefier build requires three values:
+
+- `name`: The name of the application
+- `icon`: The filename (including ext) of the icon file to for the application
+- `url`: The address for the webpage to build as a nativefier app
+
+So, to build my `pocket`, `fastmail`, and `homeassistant`  I added the
+following var to my playbook:
+
+```yaml
+nativefier_apps:
+  - name: pocket
+    icon: pocket.png
+    url: "https://app.getpocket.com"
+  - name: fastmail
+    icon: fastmail.png
+    url: "https://www.fastmail.com"
+  - name: homeassistant
+    icon: homeassistant.png
+    url: "http://homeassistant.local:8123"
+```
+
+That should be it. Run the playbook and enjoy!
+
 ## Conclusion
+
+*Last screenshot of some apps?*
+
+I have wanted to create this role for a very long time and I am glad I finally
+did. Nativefier is such an amazing tool that I love using. Paring it with
+podman and ansible has somehow managed to make it magnitudes better. Enjoy!
