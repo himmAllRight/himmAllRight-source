@@ -95,25 +95,25 @@ nativefier app, I usually have to:
     - Adding the icon path
 - Verify it works (something is usually missing)
 
-To save some time when setting up a new system, I will often copy the builds
+To save some time when setting up a new system, I often copy the build
 directories along with the desktop and icon files. However, even that can be
-quite tedious to move all the files to the correct space, and often changing
-all the path values if they differ at all. For example, if the new system has a
-different username, I have to update all of the desktop files.
+quite tedious. For example, if the new system uses a different username (`ryan` vs
+`rhimmew`), I have to update all of the desktop files to reflect the change.
 
-So... lets automate the process.
+We can do better. Lets automate it.
 
 ## Using a podman container instead
 
-Before automating the steps, there's one more improvement to my normal steps I
-want to make. Instead of installing nativefier from a normal `npm` install, I
-want to switch to building with an ephemeral nativefier container. This have
-several benefits, including not having to install dependencies, and always
-using the latest version for the automation. Plus, containers are fun.
+But first, before diving into the automating the steps, there is one improvement
+to my normal process I want to make. Instead of installing nativefier from a
+`npm` install, I want to switch to using an ephemeral nativefier
+container for the builds. This have several benefits, including not having to install
+dependencies, and always using the latest version for the automation. Plus...
+containers are fun.
 
-After some tweaking, I was able to get a nativefier container building apps on
-my desktop using podman, by tweaking the suggested [docker instructions]() into
-the following command:
+After tweaking some of the suggested [docker
+instructions](https://github.com/jiahaog/nativefier#usage-with-docker), I was
+able to get a nativefier container building apps on my desktop using podman:
 
 ```bash
 # Pull the Image
@@ -124,30 +124,31 @@ podman run --rm  -v ICONS_DIR src -v NATIVEFIER_BUILD_DIR target jiahaog/nativef
 ```
 This command had a few parameters that need to be swapped:
 
-- `ICONS_DIR`: the directory that contains the desired application icon to build
+- `ICONS_DIR`: the directory that contains the application icons to build
 with.
-- `NATIVEFIER_BUILD_DIR`: the directory to save the application builds.
+- `NATIVEFIER_BUILD_DIR`: the directory to save the application builds to
 - `ICON`: The filename of the image to use for the icon
-- NAME: The name of the application (ex: `pocket` or `homeassistant`)
+- `NAME`: The name of the application (ex: `pocket` or `homeassistant`)
 - `URL`: The *url* of the webapp to build
 
-This spins up a podman container, passes our variables through, and builds a
+This command spins up a podman container, passes our variables through, and builds a
 nativefier app. After finishng, the container automatically deletes itself.
 
 ## Automating the process
 
 Now that we've figured out how to run nativefier with podman, we can focus on
-writing the automation. Like I have [done in the past](), I will be
-implementing the automation by added in a new role to use in my ansible
-playbooks. If you are unfamilary with roles, you might want to checkout the
-[quickstart post]() I wrote earlier this year.
+writing the automation. Like I have [done in the
+past](/post/foundryvtt-service-ansible-role/), I will be implementing the
+automation by creating a new role to use in my ansible playbooks. If you are
+unfamilar with roles, checkout the [ansible quickstart
+post](/post/ansible-quickstart/) I wrote earlier this year.
 
-To start, I'll create a new role, with `tasks`, `defaults`, `files`, and
-`template` sub directories.
+To start, I'll create a folder for the new role, with `tasks`, `defaults`, `files`, and
+`templates` sub directories.
 
 ### Vars
 
-To start, lets define the default variables we will use in tasks and template:
+First, lets define default values for the variables we will use in tasks and template file:
 
 ```yaml
 user: "{{ ansible_user_id }}"  # User to run as
@@ -162,9 +163,9 @@ talk about that later when we add the role to a playbook.
 
 ### Templates
 
-Now, lets create the one template we need for this role: the generic
+Next, lets create the one template file we need for this role: an
 `application.desktop` file. Create a new file in the `templates` directory
-named `nativefier.desktop.j2` and paste the following contents:
+named `nativefier.desktop.j2` and paste in the following contents:
 
 ```ini
 [Desktop Entry]
@@ -191,19 +192,18 @@ playbook, and use them to fill out a desktop file for each app.
 </center>
 
 Before writing tasks, there is one more role directory to fill: `files`. For
-this role, we might want to include the icon files we intend to use for the
-applicatons. So, create a `files` directory in the role, and fill it with the
-logo files to use (likely `png`).
+this role, we want to include the icon files for each application. So,  fill
+the `files` sub directory with the icon files to use (likely `png`s).
 
 
 ### Tasks
 
-Lastly, lets write some tasks. So, create and open up a `main.yml` file under the
+Time to write the tasks. Create and open up a `main.yml` file in the
 tasks sub directory.
 
-The first tasks will just check and ensure that the directories we intend to
-use exist. This is generally good practice to prevent playbooks breaking from
-missing directories:
+The first few tasks will check and ensure that the directories we intend to use
+exist. This is generally good practice to prevent playbooks from breaking due
+to missing folders:
 
 ```yaml
 - name: "Ensure Icon dir exists"
@@ -230,7 +230,7 @@ missing directories:
 
 #### Managing Icon Files
 
-Next, lets add a small task that will copy the icons we included with the role,
+Next, add a small task that will copy the icons we included with the role,
 to the user's local icon folder:
 
 ```yaml
@@ -246,7 +246,7 @@ nativefier app and the `.deskop` files.
 #### Automating the podman builds
 
 We can now define a few tasks that will pull and run the nativefier container
-using podman. *(Note: This could be done with docker... but I use podman XD)*:
+using podman. *(Note: This could be done with docker... but I prefer podman XD)*:
 
 ```yaml
 - name: Pull down nativefier container image
@@ -270,14 +270,12 @@ using podman. *(Note: This could be done with docker... but I use podman XD)*:
   loop: "{{ nativefier_apps }}"
 ```
 
-This will pull down the latest nativefier image, and then use our variables
-to build each application to the build directory. The tasks will also move the
-built app to the final location.
+These tasks also move the built app to the final location.
 
 #### Manaing Application Files
 
 Lastly, with icons in place and the application builds complete, we can create the application
-entry files to point to them by adding this final task:
+entry files by adding this final task:
 
 ```yaml
 - name: Generate Application Desktop Files
@@ -291,7 +289,7 @@ And there we go, that's it! Well... sort of.
 
 ## Selinux woes
 
-While this initially *worked on my computer*, when I tested it on my laptop and
+While this '*worked on my computer*', when I tested it on my laptop and
 in some VMs... it failed.
 
 ### Issues
@@ -308,17 +306,17 @@ Error during build. Run with --verbose for details. [Error: EACCES: permission d
 ```
 
 I was able to tell it was happening while running the podman container. I
-assumed it might be `selinux` related but was unable to sort out a solution
+assumed it might be `selinux` related, but was unable to sort out a solution
 right away.
 
 ### The Fix
 
 Eventually after browsing the internet, I learned that my easiest solution was
-to add the option `--security-opt label=disable` to my `podman run` command to
+to add the option `--security-opt label=disable` to my `podman run` command, to
 turn off label separation for the container. I'm sure there is a better, more
-secure soltion I could do, but I figured this one was a good compromise of
+secure soltion I could do, but I figured this was at least a good compromise of
 being easy to implement, but more secure than the common (and wrong) suggestion
-to "*just disable selinux*".
+of "*just disable selinux*".
 
 ### One last fix...
 
@@ -351,9 +349,9 @@ Much better!
 ## Example adding it to my playbooks
 
 With the role complete, it is *finally* time to add it to a playbook. I define
-playbooks to provision all of my machines, so I will just at it those. To do
-so, first make sure the role is added to the list of roles used by the plabook.
-For example:
+playbooks to provision all of my machines, so I will just add it to them. First
+make sure the role is added to the list of roles used by the plabook.  For
+example:
 
 ```
   roles:
@@ -361,15 +359,16 @@ For example:
 ```
 
 Next, define a new var named `nativefier_apps`. This variable is a list of
-dictionaries, with each dictionary providing the variavles for a different
-nativefier application. Each nativefier build requires three values:
+dictionaries, with each dictionary providing the values for a different
+nativefier application. Each nativefier build requires three variables to be
+defined:
 
 - `name`: The name of the application
 - `icon`: The filename (including ext) of the icon file to for the application
 - `url`: The address for the webpage to build as a nativefier app
 
 So, to build my `pocket`, `fastmail`, and `homeassistant`  I added the
-following var to my playbook:
+following to my playbook:
 
 ```yaml
 nativefier_apps:
@@ -384,7 +383,8 @@ nativefier_apps:
     url: "http://homeassistant.local:8123"
 ```
 
-That should be it. Run the playbook and enjoy!
+That should be it! After that, my playbooks start building and configuring all
+my nativefier applications automatically!
 
 ## Conclusion
 
@@ -394,6 +394,6 @@ That should be it. Run the playbook and enjoy!
 <div class="caption">My desktop covered in some of my nativefier apps.</div>
 </center>
 
-I have wanted to create this role for a very long time and I am glad I finally
-did. Nativefier is such an amazing tool that I love using. Paring it with
-podman and ansible has somehow managed to make it magnitudes better. Enjoy!
+I have wanted to create this role for a very long time and I am did. Nativefier
+is such an amazing tool, and paring it with podman and ansible has somehow
+managed to make it shine even more. Enjoy!
