@@ -1,6 +1,6 @@
 +++
 title   = "Automated Nativefier App builds"
-date    = "2020-10-30"
+date    = "2020-10-31"
 author  = "Ryan Himmelwright"
 image   = "img/posts/automated-nativefier-app-builds/troll_closeup.jpeg"
 caption = "Kill Devil Hills, NC"
@@ -9,81 +9,90 @@ draft   = "True"
 Comments = "True"
 +++
 
-Many applications we use today are just fancy web pages wrapped up in a desktop
-shell. Most people even skip the shell and just run 'webapps' as another tab in
-the web browser. Personally, I prefer to have dedicated app windows opened for
-my essential tools. So, I love [nativefier]() to create desktop versions of my
-favorite web tools. My only problem with it... is that it can be a pain to
+Most applications we use today are fancy web pages, wrapped up in a desktop
+shell. Many people even forgo desktop builds, instead opting to run 'webapps'
+straight from the website as another tab in their web browser (Ex: Slack,
+Discord, Notion). Personally, I prefer to have dedicated windows opened for my
+essential tools. As a result, I love using
+[nativefier](https://github.com/jiahaog/nativefier) to create desktop versions
+of my favorite web-based tools. The only problem is... it can be a pain to
 setup. Lets fix that.
 
 <!--more-->
 
 ## How I use nativefier
 
-So, I use nativefier. This is particularly being a linux user. While MacOS has
-some applications in the AppStore that I don't have an equivelant for, they are
-usually just a wrapper around the same functionality that the webpage has, that
-I can save in the dock. Using nativefier, I am able to have "desktop" versions
-of these apps on other platforms that don't have a Linux desktop version, *or*
-even create desktop versions for web applications that do not have a desktop
-version on *any* platform. I have even used nativefier on my Mac to create
-desktop apps I got used to using on Linux.
-
 ### What Apps I use it for
 
-*Screenshot of one of my nativefier app?*
+<a href="../../img/posts/automated-nativefier-app-builds/pocketcasts.png"><img alt="Using Pocketcasts as a nativefier build" src="../../img/posts/automated-nativefier-app-builds/pocketcasts.png" style="max-width:
+100%;"/></a>
+<div class="caption">Using the Pocketcasts web app in a desktop window via
+nativefier</div>
 
-Basically, I use nativefier for all of the web services with a missing linux
-client, or tools that I use a lot. Most days, I usually use the following:
+I use nativefier for all of the web services that are missing a Linux client,
+or web tools that I use a lot and want a dedicated desktop app for. On most days,
+I use the following web services via a nativefier desktop application:
 
-- Pocket - to read articles
-- Pocketcasts - to listend to synced podcasts between my phone and computer
-- Fastmail - For my personal email and calendar
-- homeassistant - To control parts of my house (mostly lights and temp)
-- Notion - My [notes and planning tool]()
-- Soundcloud - For music while working
+- **Pocket** - to read articles
+- **Pocketcasts** - to listend to synced podcasts between my phone and computer
+- **Fastmail** - For my personal email and calendar
+- **homeassistant** - To control parts of my house (mostly lights and temp)
+- **Notion** - My [notes and planning tool]()
+- **Soundcloud** - For music while working
 
-Also, while not used every day, I have made notion apps for twitch and icloud.
-These are both apps that exist on other desktops but don't have a Linux build.
+Also, while not used every day, I have made nativefier builds for **twitch** and
+**icloud**.  These are both apps that exist on other desktops but don't have an
+official Linux build.
 
-### How I make them like normal apps
+### How I make them *feel* like normal apps
 
-THere are a few thing I do to help make these apps *feel* more like a normal,
-native application.
+There are a few steps I take to help make these applications *feel* more like a normal,
+native ones.
 
 #### Desktop Files
 
-*Screenshot of apps being listed in search?*
+<center>
+<a href="../../img/posts/automated-nativefier-app-builds/nativefier_krunner.png"><img alt="The builds show up as normal applications" src="../../img/posts/automated-nativefier-app-builds/nativefier_krunner.png" style="max-width:
+100%;"/></a>
+<div class="caption">The Pocket and Pocketcasts builds showing as normal
+applications in search</div>
+</center>
 
-The first, and argualy most important step I take is creating a [desktop
+The first, and argualy most important step I take, is creating a [desktop
 entity](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html)
-for each nativefier build. A desktop entity defines something as an application
+for each nativefier build. A desktop entity defines an application
 in Gnome and KDE Plasma environments, allowing it to show up in menus and
 launchers. Defining an entity for the nativefier builds tells the system to to
 treat the build as a normal application, which is what the want.
 
 #### Icons
 
-The second thing I've more recently started doing is making sure that I use
-proper icons when I run nativefier. I already needed the icon for creating the
-desktop entity, but I noticed it wouldn't always match in the dock once the
-application opened. This extra step help everything look more cohesive.
+The second action I've started doing more recently is making sure that I use
+proper icons when I *run* nativefier. I already needed the icon for creating
+the desktop entity, but I noticed the icon used once the app was running often
+didn't match the one defined in the desktop file. This extra step resolved this
+issue and helps make everything look more cohesive.
 
 ### How I usually create them
 
-*Not sure what image to put here...*
+<center>
+<a href="../../img/posts/automated-nativefier-app-builds/desktop-app-edit.png"><img alt="Coping to a new computer often requires editing all the application files" src="../../img/posts/automated-nativefier-app-builds/desktop-app-edit.png" style="max-width:
+100%;"/></a>
+<div class="caption">Coping to a new computer often requires editing all the application files</div>
+</center>
 
-While the extra works helps to make them really feel like desktop applications,
-it add a bunch of steps to the creation process. When I want to make a new
+While these additional steps help nativefier builds behave like real desktop applications,
+it adds a bunch extra work to the creation process. When I want to make a new
 nativefier app, I usually have to:
 
 - Install nativefier and it's dependencies (usually in a podman container)
 - Build the application to a Build directory
-- Find an icon for the application and add it to my `~/.local/share/icons/` dir
-- Create a new `.desktop` file for the application.
-    - Fill out the description
-    - Change the exec paths.
-    - Add the icon path
+- Find an icon for the application and add it to my `~/.local/share/icons/`
+    folder
+- Create a new `.desktop` file for the application, which involves:
+    - Filling out the description
+    - Changing the exec paths.
+    - Adding the icon path
 - Verify it works (something is usually missing)
 
 To save some time when setting up a new system, I will often copy the builds
@@ -175,7 +184,11 @@ playbook, and use them to fill out a desktop file for each app.
 
 ### Files
 
-*Screenshot of icon folder?*
+<center>
+<a href="../../img/posts/automated-nativefier-app-builds/icons.png"><img alt="The icons folder" src="../../img/posts/automated-nativefier-app-builds/icons.png" style="max-width:
+100%;"/></a>
+<div class="caption">The role's files folder, containing the app icons</div>
+</center>
 
 Before writing tasks, there is one more role directory to fill: `files`. For
 this role, we might want to include the icon files we intend to use for the
@@ -375,7 +388,11 @@ That should be it. Run the playbook and enjoy!
 
 ## Conclusion
 
-*Last screenshot of some apps?*
+<center>
+<a href="../../img/posts/automated-nativefier-app-builds/nativefier-windows.png"><img alt="My desktop covered in nativefier apps" src="../../img/posts/automated-nativefier-app-builds/nativefier-windows.png" style="max-width:
+100%;"/></a>
+<div class="caption">My desktop covered in some of my nativefier apps.</div>
+</center>
 
 I have wanted to create this role for a very long time and I am glad I finally
 did. Nativefier is such an amazing tool that I love using. Paring it with
