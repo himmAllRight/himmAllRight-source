@@ -13,19 +13,20 @@ Comments = "True"
 
 *Picture of Ergodox Box*
 
-## Customizing
+## Setup
 
 
 ### Some issues with Wally
 
-*Picture of Ergodox on Mac?*
+<a href="../../img/posts/ergodox-ez-initial-review/ergodox_macbook.jpeg"><img alt="Using the ergodox with my Macbook Pro" src="../../img/posts/ergodox-ez-initial-review/ergodox_macbook.jpeg" style="max-width:
+100%;"/></a>
+<div class="caption">Using the ergodox-ez with my MacBook Pro</div>
 
 *Fixed*, and working on my computer with a fresh install too.
 
 
 ### Some changes I have now
 
-*Picture of some of my layout options?*
 
 
 ## Getting used to and learning the board
@@ -48,6 +49,9 @@ Going to break this into two paragraphs, or maybe two sub sections if each
 item needs more than a single para
 
 #### Firmware
+
+*Picture of some of my layout options?*
+
 - I've already hinted about the ability to customize the layouts and I have
     done so.
 - Tweaking it has slowed down, but even today I realized I wanted a key on one
@@ -59,6 +63,9 @@ item needs more than a single para
         think I had a 'delete' key. So I added one. Done.
 
 #### Hardware
+
+*Picture of switch under keycap*
+
 - In addition to the firmware, It's nice to know the extent to what I can
     *physically* change about my keyboard.
 - I've looked around at some of the parts I could tweak on my board in a year
@@ -78,9 +85,14 @@ swap everything out. I *love* that I can though.
 
 ### Split Design
 
+*Picture using ergodox w/ next stand*
+
 Having a split keyboard, specifically one that is completely split, is so nice
 from an ergonimic use. I can basically lay my arms on my desk in whichever way
 is most comfortable... and move my keyboard to match it.
+
+Additionally, the split design allows it to pair nicely with laptop stands, as
+I can have them sit closer to me, which helps with the smaller screen.
 
 ### Thumb keys
 
