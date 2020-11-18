@@ -11,7 +11,9 @@ Comments = "True"
 
 ## Ordering and shipping
 
-*Picture of Ergodox Box*
+<a href="../../img/posts/ergodox-ez-initial-review/both_boxes.jpeg"><img alt="The Boxes my ergdox came in" src="../../img/posts/ergodox-ez-initial-review/both_boxes.jpeg" style="max-width:
+100%;"/></a>
+<div class="caption">The boxes my ergodox-ez shipped in</div>
 
 ## Setup
 
@@ -95,6 +97,9 @@ Additionally, the split design allows it to pair nicely with laptop stands, as
 I can have them sit closer to me, which helps with the smaller screen.
 
 ### Thumb keys
+<a href="../../img/posts/ergodox-ez-initial-review/ergodox_wood.jpeg"><img alt="ergodox on wood desk" src="../../img/posts/ergodox-ez-initial-review/ergodox_wood.jpeg" style="max-width:
+100%;"/></a>
+<div class="caption">The thumb cluster of keys has allowed me to better utilize my thumbs, which has been a nice change</div>
 
 
 ## What I don't love
@@ -113,4 +118,8 @@ don't *love*..
 ### It's difficult to switch back to my HHKB...
 
 ## Conclusion
+
+<a href="../../img/posts/ergodox-ez-initial-review/ergodox_office.jpeg"><img alt="The ergodox in my home office" src="../../img/posts/ergodox-ez-initial-review/ergodox_office.jpeg" style="max-width:
+100%;"/></a>
+<div class="caption">The ergodox-ez in my home office</div>
 
