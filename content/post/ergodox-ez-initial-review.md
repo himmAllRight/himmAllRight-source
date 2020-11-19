@@ -66,7 +66,10 @@ item needs more than a single para
 
 #### Hardware
 
-*Picture of switch under keycap*
+<a href="../../img/posts/ergodox-ez-initial-review/key_switches.jpeg"><img alt="Key switches" src="../../img/posts/ergodox-ez-initial-review/key_switches.jpeg" style="max-width:
+100%;"/></a>
+<div class="caption">I like that I can customize the hardware, including
+hot-swapping out the switches</div>
 
 - In addition to the firmware, It's nice to know the extent to what I can
     *physically* change about my keyboard.
@@ -87,7 +90,9 @@ swap everything out. I *love* that I can though.
 
 ### Split Design
 
-*Picture using ergodox w/ next stand*
+<a href="../../img/posts/ergodox-ez-initial-review/laptop_stand.jpeg"><img alt="Ergodox around a laptop stand" src="../../img/posts/ergodox-ez-initial-review/laptop_stand.jpeg" style="max-width:
+100%;"/></a>
+<div class="caption">A split design keyboard pairs nicely with a laptop stand.</div>
 
 Having a split keyboard, specifically one that is completely split, is so nice
 from an ergonimic use. I can basically lay my arms on my desk in whichever way
