@@ -60,6 +60,26 @@ computer.
 
 ### Initial Layout Changes
 
+<a href="../../img/posts/ergodox-ez-initial-review/ergodox_defalut_layout.png"><img alt="The ergodox default layout" src="../../img/posts/ergodox-ez-initial-review/ergodox_default_layout.png" style="max-width: 100%;"/></a>
+<div class="caption">The default ergodox layout</div>
+
+I say *stuff*, because I wasn't able to truely pick up the board, adjust to the
+layout in 20 seconds, and feel 100% comfortable like one might with a "normal"
+keyboard. There was definately a learning curve I knew I would have to face
+(more on that later). However, the immediate impediment was that I didn't even
+know what the default layout of the board was. The back-lit QWERTY keys were
+labeled, but all of the modifier keys on the sides and in the thumb clusters
+were not. So, I navigated to the [oryx
+configurator](https://ergodox-ez.com/pages/oryx) on the erogox-ez website with
+two goals in mind:
+
+* To learn the standard layout that the board shipped with was, and
+* To make any initial changes to the layout I *knew* I would want (ctrl in caps
+    lock location, for example)
+
+After a few minutes of scanning the layout, and adding a tweak here and there,
+I had my first layout to flash to the board. So I downloaded the file... and
+hit the one issue I've experienced with the ergodox...
 
 ### Some issues with Wally
 
@@ -67,9 +87,28 @@ computer.
 100%;"/></a>
 <div class="caption">Using the ergodox-ez with my MacBook Pro</div>
 
-*Fixed*, and working on my computer with a fresh install too.
+While I was able to flash the firmware using my macbook, for some reason my
+Fedora laptops and desktops had issues at first. I would open up
+[wally](https://ergodox-ez.com/pages/wally) (ZSA's firmware flashing tool), load the
+firmware file, and press the tiny 'reset' button on my keyboard with a
+paperclip... and it would freeze. The backlights would stop their magical
+dancing, key presses rendered no response, and I would just wait. The only way
+to get the board to respond again was to unplug and replug it back in.
 
+I had heard that ZSA had good support, so I shot them and email about my issue.
+They responded right away and helped me try to debug what might be happening.
+It appeared to be some sort of permissions issues, although to this day I'm not
+100% sure what it actually was. Eventually, it started working. Since then I
+have updated most of my computers to Fedora 33, and I use a newer version of
+Wally and it seems to work out of the box.
 
+Oh well, problem resolved I guess. My main takeaways from it were that wally
+deffinately requires `sudo`, and the ZSA's customer support really is great.
+Oh, and that [open source firmware](https://github.com/zsa/wally) is awesome,
+but I already knew that.
+
+(ZSA has since updated the Linux README instructions to contain the udev
+instructions they gave me)
 
 
 ## Getting used to and learning the board
@@ -152,16 +191,30 @@ I can have them sit closer to me, which helps with the smaller screen.
 There's honestly not I don't *like*, but here is a thing or two that I maybe
 don't *love*..
 
-### Brown switches are a bit sensitive?
 
 
 ### Learning curve
 
+The biggest con to getting a keyboard like the ergodox is the learning curve.
+It isn't something you will be able to pick up and immediately start using. You
+will have to sit down and play typing games daily to really start to feel
+comfortable.
+
+ZSA Trainer
 
 ### Cost
 
+It is expensive, especially for a unique board you might hate. That being said,
+if the ergodox works for you, it actually isn't that bad of a deal. While
+expensive, the ergodox-ez is a solid board, with the ability to customize both
+it's hardware and firmware to fit your needs over a span of many years. When
+compared to other 'ergonomic' keyboards, it isn't really even priced that bad.
+
 
 ### It's difficult to switch back to my HHKB...
+
+Laptop keyboards are fine. For whatever reason however... my HHKB feels so
+squished.
 
 ## Conclusion
 
