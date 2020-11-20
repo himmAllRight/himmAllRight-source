@@ -9,13 +9,56 @@ draft   = "True"
 Comments = "True"
 +++
 
+A few posts ago, I wrote about how I [decided to purchase an ergodox-ez] split
+keyboard. However, in that post I omitted all of the juicy details about what
+configuration I ordered... as well as what I even *though* about the board, now
+that I have been an ergodoc owner for... wow, almost two months now. Okay, I
+guess this post is due, here are my '*initial*' thoughts of the ergodox-ez...
+
+<!--more-->
+
+
 ## Ordering and shipping
 
 <a href="../../img/posts/ergodox-ez-initial-review/both_boxes.jpeg"><img alt="The Boxes my ergdox came in" src="../../img/posts/ergodox-ez-initial-review/both_boxes.jpeg" style="max-width:
 100%;"/></a>
 <div class="caption">The boxes my ergodox-ez shipped in</div>
 
+So, what ergodox specifically did I order? After much debate and repeatedly changing my
+mind, I eventually settled on an ergodox-ez *glow* (backlit keys), with a
+black body and black printed (LED Compatible) key caps. With a narrowed
+selection of key-cap options (for backlit key compatibility), I landed on
+Cherry MX Browns likely being my best option. I knew I wanted a noticable
+tactile bump, but didn't want "click-y" keys (I prefer a lower "*Clack*", while
+typing and find the higher pitch of MX Blues annoying). I decided that if
+I might as well go all in, so I also ordered the tenting poles and the black
+wrist rests.
+
+With all of my options decided, I placed my order and prepared myself to wait
+in anticipated glee for... an average of 3 weeks shipping time ಠ_ಠ. *Luckily*,
+I was fortunate and about a week later, I have a long, flat box show up at my
+door.
+
+<a href="../../img/posts/ergodox-ez-initial-review/ergodox_box_plastic.jpeg"><img alt="Opened the ergodox box" src="../../img/posts/ergodox-ez-initial-review/ergodox_box_plastic.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">Opening the ergodox box</div>
+
+Overall, everything was very well packaged. The keyboard came in one box and
+the wrist rests had their own, which matched in width as the big box. Lifting
+the lid on the keyboard box, I was greeted by the keyboard looking back at me
+through a plastic panel, with it's accessories (cables, key switch pulled,
+screws) neatly pinned around it.
+
 ## Setup
+
+The initial *physical* setup was quite simple. I took everything out of the
+box, connected the two haves of the board together with the included TRRS
+cable, and then used the mini usb cable (also included) to connect right half
+of the board, to my laptop's usb port. I set down the wrists, rests and acted
+tweaked the tenting poles to some arbitrary position, as if I knew what I was
+doing. That was it. At that point, I was able to type... *stuff*... into my
+computer.
+
+### Initial Layout Changes
 
 
 ### Some issues with Wally
@@ -26,8 +69,6 @@ Comments = "True"
 
 *Fixed*, and working on my computer with a fresh install too.
 
-
-### Some changes I have now
 
 
 
