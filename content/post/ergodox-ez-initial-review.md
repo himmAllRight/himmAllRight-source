@@ -167,6 +167,12 @@ swap everything out. I *love* that I can though.
 
 ### Ortholinear
 
+While it was more difficult to get used to than I expected, I have found using
+an orthlinear layout to be *so* much easier to type on. My fingers don't fight
+and trip over each other like Black-Friday shoppers trying to grab the last
+hot-ticket item in the store. It broke me, really. I
+wish it would become a standard option when buying laptops: ISO or ANSI, Ortho
+or Staggard? Unfortunately I don't see that happening anytime soon.
 
 ### Split Design
 
