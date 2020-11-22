@@ -132,7 +132,8 @@ item needs more than a single para
 
 #### Firmware
 
-*Picture of some of my layout options?*
+<a href="../../img/posts/ergodox-ez-initial-review/ergodox_layout.png"><img alt="Ergodox layout" src="../../img/posts/ergodox-ez-initial-review/ergodox_layout.png" style="max-width: 100%;"/></a>
+<div class="caption">One of my custom layer layouts</div>
 
 - I've already hinted about the ability to customize the layouts and I have
     done so.
@@ -200,6 +201,11 @@ don't *love*..
 
 
 ### Learning curve
+
+<center>
+<a href="../../img/posts/ergodox-ez-initial-review/typing_test.png"><img alt="typing test results" src="../../img/posts/ergodox-ez-initial-review/typing_test.png" style="max-width: 100%;"/></a>
+<div class="caption">One of my custom layer layouts</div>
+</center>
 
 The biggest con to getting a keyboard like the ergodox is the learning curve.
 It isn't something you will be able to pick up and immediately start using. You
