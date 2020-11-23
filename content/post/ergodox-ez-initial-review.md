@@ -1,6 +1,6 @@
 +++
 title   = "My new Ergox-EZ Keyboard -- Initial Thoughts"
-date    = "2020-11-21"
+date    = "2020-11-23"
 author  = "Ryan Himmelwright"
 image   = "img/posts/ergodox-ez-initial-review/ergodox_header.jpeg"
 caption = "Durham, NC"
@@ -234,3 +234,11 @@ squished.
 100%;"/></a>
 <div class="caption">The ergodox-ez in my home office</div>
 
+Overall, I love this keyboard and am very happy with my choice. Now that I am
+used to it, I feels great to type on and I really don't have to think too much
+about it. The Split design and ortholinear layout truly make it the most
+natural feeling and comfortable board I have typed on, and my body thanks it.
+Additionally, any little niggles I have with where a key is can be stomped out
+with a 2 minute config change and flash, ensuring that I should *continue* to
+love this board for years to come, even as my preferences and uses continue to
+change.
