@@ -54,9 +54,9 @@ switch pulled, screws) neatly pinned around it.
 The initial *physical* setup was quite simple. I took everything out of the
 box, connected the two haves of the board together with the included TRRS
 cable, and then used the mini usb cable (also included) to connect right half
-of the board, to my laptop's usb port. I set down the wrists, rests and acted
-tweaked the tenting poles to some arbitrary position, as if I knew what I was
-doing. That was it. At that point, I was able to type... *stuff*... into my
+of the board to my laptop's usb port. I positoned the wrist-rests and tweaked
+the tenting poles to some arbitrary position, acting as if I knew what I was
+doing.  That was it. After that point, I was able to type... *stuff*... into my
 computer.
 
 ### Initial Layout Changes
@@ -64,51 +64,50 @@ computer.
 <a href="../../img/posts/ergodox-ez-initial-review/ergodox_defalut_layout.png"><img alt="The ergodox default layout" src="../../img/posts/ergodox-ez-initial-review/ergodox_default_layout.png" style="max-width: 100%;"/></a>
 <div class="caption">The default ergodox layout</div>
 
-I say *stuff*, because I wasn't able to truely pick up the board, adjust to the
+I say *stuff*, because I wasn't able to just pick up the board, adjust to the
 layout in 20 seconds, and feel 100% comfortable like one might with a "normal"
-keyboard. There was definately a learning curve I knew I would have to face
-(more on that later). However, the immediate impediment was that I didn't even
-know what the default layout of the board was. The back-lit QWERTY keys were
-labeled, but all of the modifier keys on the sides and in the thumb clusters
-were not. So, I navigated to the [oryx
-configurator](https://ergodox-ez.com/pages/oryx) on the erogox-ez website with
-two goals in mind:
+keyboard. There was definitely a learning curve (more on that later).  However,
+the pressing barrier was that I didn't even know the default layout. The
+back-lit QWERTY keys were labeled, but all of the modifier keys on the sides
+and in the thumb clusters were not. So, I navigated online to the [oryx
+configurator](https://ergodox-ez.com/pages/oryx) with two goals in mind:
 
 * To learn the standard layout that the board shipped with was, and
-* To make any initial changes to the layout I *knew* I would want (ctrl in caps
+* To make any initial changes to the layout I *knew* I would want (ctrl in the caps
     lock location, for example)
 
-After a few minutes of scanning the layout, and adding a tweak here and there,
-I had my first layout to flash to the board. So I downloaded the file... and
-hit the one issue I've experienced with the ergodox...
+After a few minutes of scanning and tweaking, I had my first layout to flash.
+So I downloaded the file... and hit the only true issue I've experienced with the
+ergodox...
 
-### Some issues with Wally
+### Issues with Wally
 
 <a href="../../img/posts/ergodox-ez-initial-review/ergodox_macbook.jpeg"><img alt="Using the ergodox with my Macbook Pro" src="../../img/posts/ergodox-ez-initial-review/ergodox_macbook.jpeg" style="max-width:
 100%;"/></a>
 <div class="caption">Using the ergodox-ez with my MacBook Pro</div>
 
 While I was able to flash the firmware using my macbook, for some reason my
-Fedora laptops and desktops had issues at first. I would open up
+Fedora laptops and desktop had issues at first. I would open up
 [wally](https://ergodox-ez.com/pages/wally) (ZSA's firmware flashing tool), load the
 firmware file, and press the tiny 'reset' button on my keyboard with a
-paperclip... and it would freeze. The backlights would stop their magical
-dancing, key presses rendered no response, and I would just wait. The only way
+paperclip... and it would freeze. The backlights stopped their magical
+dancing and key presses rendered no response. The only way
 to get the board to respond again was to unplug and replug it back in.
 
-I had heard that ZSA had good support, so I shot them and email about my issue.
-They responded right away and helped me try to debug what might be happening.
+I had heard that ZSA had good support, so I emailed them about my issue.
+They responded right away and helped to debug what might be happening.
 It appeared to be some sort of permissions issues, although to this day I'm not
 100% sure what it actually was. Eventually, it started working. Since then I
 have updated most of my computers to Fedora 33, and I use a newer version of
-Wally and it seems to work out of the box.
+Wally. I haven't had the issue pop up again, even on fresh OS installs. It just
+works.
 
-Oh well, problem resolved I guess. My main takeaways from it were that wally
-deffinately requires `sudo`, and the ZSA's customer support really is great.
-Oh, and that [open source firmware](https://github.com/zsa/wally) is awesome,
-but I already knew that.
+Oh well, problem resolved I guess? My main takeaways from the experience were
+that 1) wally definitely requires `sudo` permissions, and 2) the ZSA's customer
+support is wonderful.  Oh, and [open source
+firmware](https://github.com/zsa/wally)* is the best, but I already knew that.
 
-(ZSA has since updated the Linux README instructions to contain the udev
+(*ZSA has since updated the Linux README instructions to contain the udev
 instructions they gave me)
 
 
