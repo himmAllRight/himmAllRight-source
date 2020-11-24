@@ -1,6 +1,6 @@
 +++
 title   = "My new Ergox-EZ Keyboard -- Initial Thoughts"
-date    = "2020-11-23"
+date    = "2020-11-24"
 author  = "Ryan Himmelwright"
 image   = "img/posts/ergodox-ez-initial-review/ergodox_header.jpeg"
 caption = "Durham, NC"
@@ -113,16 +113,25 @@ instructions they gave me)
 
 ## Getting used to and learning the board
 
-- When I got it I did a fair bit of typing practice
-- Within a few days, I was at a passable typing speed, and a few more and I was
-    at a decent speed.
-- I haven't been doing any typing practice the last few weeks and some of my
-    bad habits have crept in.
-- I'm not sure if I'm *faster* than on my old keyboard, but it is much more
-    pleasent to type on, even when going faster (I could really only *burst*
-    speed type on the HHKB because of my poor form).
-- I want to start practicing again (Doesn't zsh have a typing trainer? If so
-    link here)
+As previously stated, I knew I would have to put some effort into learning how
+to type on the ergodox. When I got it, I did a fair bit of
+[typing](https://www.keybr.com) [practice](https://play.typeracer.com/) and
+used it for work everyday. Within a few days, I was at a passable typing speed,
+and after a few more and I was at a *decent* speed. I am not sure if I am any
+*faster* than on my old keyboard, but I can type faster for much longer (I
+could only burst speed type on the HHKB and start to cramp up, mostly due to
+poor form).
+
+<a href="../../img/posts/ergodox-ez-initial-review/oryx_trainer.png"><img alt="Oryx Training Tool" src="../../img/posts/ergodox-ez-initial-review/oryx_trainer.png" style="max-width: 100%;"/></a>
+<div class="caption">Oryx Training Tool</div>
+
+I haven't done any typing practice the last few weeks and I've started to
+notice *some* of my bad habits have creeping back. I want to start practicing
+again and might try to use the trainer that is included in the Oryx tool. It is
+able to connect to the keyboard to show your layout, and provides several types
+of content to type through (code, books, symbols). I might try to use to to
+create an optimized coding layer where that has my most used symbols in easy to
+reach places.
 
 ## What I like
 
