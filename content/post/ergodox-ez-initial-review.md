@@ -1,6 +1,6 @@
 +++
 title   = "My new Ergox-EZ Keyboard -- Initial Thoughts"
-date    = "2020-11-24"
+date    = "2020-11-25"
 author  = "Ryan Himmelwright"
 image   = "img/posts/ergodox-ez-initial-review/ergodox_header.jpeg"
 caption = "Durham, NC"
@@ -135,54 +135,59 @@ reach places.
 
 ## What I like
 
-### Customizeability
-Going to break this into two paragraphs, or maybe two sub sections if each
-item needs more than a single para
+### Customizability
+
+This board is fully customizable on both the hardware *and* software side.
 
 #### Firmware
 
 <a href="../../img/posts/ergodox-ez-initial-review/ergodox_layout.png"><img alt="Ergodox layout" src="../../img/posts/ergodox-ez-initial-review/ergodox_layout.png" style="max-width: 100%;"/></a>
 <div class="caption">One of my custom layer layouts</div>
 
-- I've already hinted about the ability to customize the layouts and I have
-    done so.
-- Tweaking it has slowed down, but even today I realized I wanted a key on one
-    of my layers so I popped open the tools, and had the fix in about a minute.
-- It sort of reminds me of when I use to use vanilla arch linux. You can go
-    weeks and think you have everything installed and then all of sudden, you
-    realize your missing a key, or it could be better positioned in the layers.
-    - For example, last week while clipping a video, I noticed that I didn't
-        think I had a 'delete' key. So I added one. Done.
+Being able to tweak the layout of multiple layers means there are an endless
+amount of ways I can tailor my keyboard to fit my needs. My tweaking it has
+slowed down a bit, but I love that I can make quick changes to my layout if I
+decide there is a better way to do something. For example, today I realized I wanted to add
+a key on one of my alternate layers, so I popped open oryx and wally, and had
+the change finished in about a minute.
+
+Using open firmware reminds me of when I used vanilla arch linux. I would go
+weeks assuming I had everything required for a typical desktop environment when
+all of sudden, I would try to open a pdf and realize I never installed a pdf
+reader... or a file browser. Last week while clipping a video, I noticed that
+my ergodox layout didn't have a 'delete' key. So I quickly added one. Done.
 
 #### Hardware
 
 <a href="../../img/posts/ergodox-ez-initial-review/key_switches.jpeg"><img alt="Key switches" src="../../img/posts/ergodox-ez-initial-review/key_switches.jpeg" style="max-width:
 100%;"/></a>
-<div class="caption">I like that I can customize the hardware, including
-hot-swapping out the switches</div>
+<div class="caption">Testing swapping out a switch with one from my switch
+tester</div>
 
-- In addition to the firmware, It's nice to know the extent to what I can
-    *physically* change about my keyboard.
-- I've looked around at some of the parts I could tweak on my board in a year
-    or two if I want to mix things up (without actually getting a different
-    board).
-- I wouldn't be against possibly swapping to mx clears for example. The main
-    issue is the backglow lights shouldn't shine through then...
-    - Which isn't that big of an issue though, because many of the alternative
-        keycaps I like are solid (link?)
-- Despite talking about all the hardware upgrades I can make, I actually like
-it's current configuration. I love the board as it is, and am in no rush to
-swap everything out. I *love* that I can though.
+In addition to the firmware, It's nice to know that there is quite a bit I can
+    *physically* change about my keyboard. Specifically, the key caps can be
+    changed and the switches themselves are hot-swappable.
+
+
+I've already looked around for some of the parts I could swap out on my board
+in a few years I want to mix things up. I wouldn't be against swapping to mx
+clear switches for example. The main issue is the back glow lights would not
+shine through anymore. I guess that wouldn't be too big of an issue though,
+because many of the alternative keycaps I like are solid.
+
+*Anyway*... Despite talking about all the hardware upgrades I can make, I
+actually do enjoy it's current configuration. But I do love that I change it
+over time.
 
 
 ### Ortholinear
 
 While it was more difficult to get used to than I expected, I have found using
-an orthlinear layout to be *so* much easier to type on. My fingers don't fight
-and trip over each other like Black-Friday shoppers trying to grab the last
-hot-ticket item in the store. It broke me, really. I
-wish it would become a standard option when buying laptops: ISO or ANSI, Ortho
-or Staggard? Unfortunately I don't see that happening anytime soon.
+an orthlinear layout to be considerably easier to type on. My fingers no longer
+fight and trip over each other like Black-Friday shoppers trying to grab the
+last hot-ticket item. The worst thing about using an ortholinear layout, is
+that I want it to become a *standard* option when buying laptops: ISO or ANSI,
+Ortho or Staggard? Unfortunately I don't see that happening anytime soon...
 
 ### Split Design
 
@@ -190,17 +195,28 @@ or Staggard? Unfortunately I don't see that happening anytime soon.
 100%;"/></a>
 <div class="caption">A split design keyboard pairs nicely with a laptop stand.</div>
 
-Having a split keyboard, specifically one that is completely split, is so nice
-from an ergonimic use. I can basically lay my arms on my desk in whichever way
-is most comfortable... and move my keyboard to match it.
+Like the ortholinear layout, having a split keyboard, particularly one that is
+completely split in two, is a considerable ergonomic boost. I can lay my arms
+on the desk in whichever way is most comfortable... and then position the keyboard
+to match *them*.
 
-Additionally, the split design allows it to pair nicely with laptop stands, as
-I can have them sit closer to me, which helps with the smaller screen.
+As a bonus, the split design allows it to pair nicely with laptop stands,
+allowing me to slide the stand closer, which helps with viewing the smaller
+screen.
 
-### Thumb keys
+### Thumb cluster keys
 <a href="../../img/posts/ergodox-ez-initial-review/ergodox_wood.jpeg"><img alt="ergodox on wood desk" src="../../img/posts/ergodox-ez-initial-review/ergodox_wood.jpeg" style="max-width:
 100%;"/></a>
 <div class="caption">The thumb cluster of keys has allowed me to better utilize my thumbs, which has been a nice change</div>
+
+Another feature I immediately miss on other keyboards, is thumb keys. It is a
+relief to allow my thumbs control more keys than just the spacebar. The thumb
+clusters allow me to offload responsibility for backspace, tab, enter, delete,
+and a few other keys from my weakest fingers (pinkies), to my strongest
+(thumbs). While also tricky to get used to at first, this makes a huge
+difference while typing, and is probably the biggest issue I have when
+switching to a laptop keyboard from my ergodox (I find my self smashing the
+spacebar when trying to backsapce or enter).
 
 
 ## What I don't love
@@ -221,7 +237,6 @@ It isn't something you will be able to pick up and immediately start using. You
 will have to sit down and play typing games daily to really start to feel
 comfortable.
 
-ZSA Trainer
 
 ### Cost
 
@@ -234,8 +249,9 @@ compared to other 'ergonomic' keyboards, it isn't really even priced that bad.
 
 ### It's difficult to switch back to my HHKB...
 
-Laptop keyboards are fine. For whatever reason however... my HHKB feels so
-squished.
+Switching to my Laptop keyboards is mostly fine, but for whatever reason
+however... my HHKB feels so squished. I'm sure if I dedicated a few hours to
+using the HHKB this would go away, but I haven't done that yet.
 
 ## Conclusion
 
