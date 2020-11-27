@@ -141,7 +141,7 @@ properly use with [my UHD monitor](/post/new-lgud4379b/)'s resolution (I need a
 display port). When I switched to the 2600, I was able to go back to the
 TOMAHAWK, and funnel the cost savings towards getting my GPU.
 
-#### GPU: [Sapphire 1024 4GB PULSE Radeon RX 560](http://www.sapphiretech.com/productdetial.asp?pid=3ECEAD87-2972-477A-A3BE-480194D9FD6E&lang=eng)
+#### GPU: [Sapphire 1024 4GB PULSE Radeon RX 560](https://www.techpowerup.com/gpu-specs/sapphire-pulse-rx-560-oc-4-gb.b4627)
 
 <a href="../../img/posts/chameleon-desktop-design/rx560.png"><img alt="The KDE Plasma 5 extend display GUI" src="../../img/posts/charmeleon-desktop-design/rx560.png" style="max-width: 35%; float: left;"/></a>
 

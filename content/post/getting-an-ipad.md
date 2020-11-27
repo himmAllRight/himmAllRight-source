@@ -52,7 +52,7 @@ Netflix, more often from my phone. This usually occurred when the TV was in use,
 or I simply wanted to watch from a different location (ex: my bed). Having a
 small screen and tinny speakers, watching video on a phone is terrible.
 This is especially true on my [Blackberry
-KEYone's](https://blackberrymobile.com/us/product/blackberry-keyone/) *even
+KEYone's](https://www.gsmarena.com/blackberry_keyone-8508.php) *even
 smaller* screen (Which I choose because it is a great *communication device*, with a long
 battery life. Regardless, even on a large, bezel-less phone screen, watching video
 on a smart phone is still sub-optimal).
