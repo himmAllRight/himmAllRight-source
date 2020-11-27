@@ -1,6 +1,6 @@
 +++
 title   = "My new Ergox-EZ Keyboard -- Initial Thoughts"
-date    = "2020-11-25"
+date    = "2020-11-27"
 author  = "Ryan Himmelwright"
 image   = "img/posts/ergodox-ez-initial-review/ergodox_header.jpeg"
 caption = "Durham, NC"
@@ -73,7 +73,7 @@ and in the thumb clusters were not. So, I navigated online to the [oryx
 configurator](https://ergodox-ez.com/pages/oryx) with two goals in mind:
 
 * To learn the standard layout that the board shipped with was, and
-* To make any initial changes to the layout I *knew* I would want (ctrl in the caps
+
     lock location, for example)
 
 After a few minutes of scanning and tweaking, I had my first layout to flash.
@@ -220,9 +220,9 @@ spacebar when trying to backsapce or enter).
 
 
 ## What I don't love
-There's honestly not I don't *like*, but here is a thing or two that I maybe
-don't *love*..
-
+Honestly, there is not much that I don't *like* about the ergodox-ez. That
+being said, if forced to be picky, here is a thing or two that I don't *love*
+about it...
 
 
 ### Learning curve
@@ -233,25 +233,30 @@ don't *love*..
 </center>
 
 The biggest con to getting a keyboard like the ergodox is the learning curve.
-It isn't something you will be able to pick up and immediately start using. You
-will have to sit down and play typing games daily to really start to feel
-comfortable.
+It isn't something that you will be able to pick up and immediately start
+using.  It will require time and deliberate daily practice to really start to
+feel comfortable. If you know this going into it, it isn't that bad but can be
+extremely frustrating at first.
 
 
 ### Cost
 
-It is expensive, especially for a unique board you might hate. That being said,
-if the ergodox works for you, it actually isn't that bad of a deal. While
-expensive, the ergodox-ez is a solid board, with the ability to customize both
-it's hardware and firmware to fit your needs over a span of many years. When
-compared to other 'ergonomic' keyboards, it isn't really even priced that bad.
+It is expensive. Especially for a unique board that you might end up hating.
+With that said, if the ergodox works for you, the cost isn't as bad as it might
+initially appear.  While expensive, the ergodox-ez is a solid board, with the
+ability to customize both it's hardware and firmware over a span of many years.
+On top of that, when compared to [other 'ergonomic' split
+keyboards](https://kinesis-ergo.com/products/#advantage2), the ergodox is
+priced rather fairly.
 
 
 ### It's difficult to switch back to my HHKB...
 
-Switching to my Laptop keyboards is mostly fine, but for whatever reason
-however... my HHKB feels so squished. I'm sure if I dedicated a few hours to
-using the HHKB this would go away, but I haven't done that yet.
+Switching to the keyboards on my laptops is mostly fine, but for whatever
+reason ... I can't type on my HHKB. It feels so squished, and I can't seem to
+naturally position my fingers on the correct keys anymore. I'm sure if I
+dedicate a few hours to using the HHKB this might go away, but I haven't done
+that yet.
 
 ## Conclusion
 
@@ -259,11 +264,10 @@ using the HHKB this would go away, but I haven't done that yet.
 100%;"/></a>
 <div class="caption">The ergodox-ez in my home office</div>
 
-Overall, I love this keyboard and am very happy with my choice. Now that I am
-used to it, I feels great to type on and I really don't have to think too much
-about it. The Split design and ortholinear layout truly make it the most
-natural feeling and comfortable board I have typed on, and my body thanks it.
-Additionally, any little niggles I have with where a key is can be stomped out
-with a 2 minute config change and flash, ensuring that I should *continue* to
-love this board for years to come, even as my preferences and uses continue to
-change.
+Overall, I love this keyboard and am very happy with my choice. Now that used
+to it, I feels normal to type on and I don't have to think too much about it.
+The Split design and ortholinear layout truly make it the most natural feeling
+and comfortable board I have used. As a bonus, any layout issues can be stomped
+out with a 2 minute config change and flash, ensuring that I should *continue*
+to love this board, even as my preferences change. As long as you are aware of
+what you are getting into, I highly recommend this keyboard.
