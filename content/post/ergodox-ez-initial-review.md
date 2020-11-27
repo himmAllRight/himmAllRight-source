@@ -5,7 +5,7 @@ author  = "Ryan Himmelwright"
 image   = "img/posts/ergodox-ez-initial-review/ergodox_header.jpeg"
 caption = "Durham, NC"
 tags    = ["hardware", "keyboards", "hhkb", "ergodox",]
-draft   = "True"
+draft   = "False"
 Comments = "True"
 +++
 
@@ -23,12 +23,12 @@ due. Here are my '*initial*' thoughts of the ergodox-ez...
 
 <a href="../../img/posts/ergodox-ez-initial-review/both_boxes.jpeg"><img alt="The Boxes my ergdox came in" src="../../img/posts/ergodox-ez-initial-review/both_boxes.jpeg" style="max-width:
 100%;"/></a>
-<div class="caption">The boxes my ergodox-ez shipped in</div>
+<div class="caption">The boxes the ergodox-ez shipped in</div>
 
 So, what ergodox did I order? After a few hours toggling the
 configuration tool and endless internal debating, I eventually settled on an
-ergodox-ez *glow* (backlit keys), with a black body, and black printed (LED
-Compatible) key caps.  With a narrowed selection of switch options (to maintain
+ergodox-ez *glow* (backlit keys), with a black body, and black printed, LED
+compatible, key caps.  With a narrowed selection of switch options (to maintain
 backlit key compatibility), I landed on Cherry MX Browns as my best choice. I
 wanted a noticeable tactile bump, but didn't want "click-y" keys. I prefer a
 lower "*Clack*", while typing and find the higher pitch of MX Blues annoying.
@@ -44,7 +44,7 @@ door!
 <div class="caption">Opening the main box</div>
 
 Everything was very well packaged. The keyboard came in one box, and the wrist
-rests had their own. The two boxes matched in width so they could be shipped
+rests had their own. The two boxes had the same width, so they could be shipped
 as one unit. Lifting the lid on the larger box, I was greeted by the keyboard
 looking back at me through a plastic panel, with it's accessories (cables, key
 switch pulled, screws) neatly pinned around it.
@@ -54,7 +54,7 @@ switch pulled, screws) neatly pinned around it.
 The initial *physical* setup was quite simple. I took everything out of the
 box, connected the two haves of the board together with the included TRRS
 cable, and then used the mini usb cable (also included) to connect right half
-of the board to my laptop's usb port. I positoned the wrist-rests and tweaked
+of the board to my laptop's usb port. I positioned the wrist-rests and tweaked
 the tenting poles to some arbitrary position, acting as if I knew what I was
 doing.  That was it. After that point, I was able to type... *stuff*... into my
 computer.
@@ -65,7 +65,7 @@ computer.
 <div class="caption">The default ergodox layout</div>
 
 I say *stuff*, because I wasn't able to just pick up the board
-and feel 100% comfortable within 20 seconds like one might with a "normal"
+and feel 100% comfortable like one might with a "normal"
 keyboard. There was definitely a learning curve (more on that later).  However,
 the main problem was that I didn't even know the *default layout*. The
 back-lit QWERTY keys were labeled, but all of the modifier keys on the sides
@@ -89,11 +89,11 @@ While I was able to flash the firmware using my macbook, for some reason my
 Fedora laptops and desktop had issues at first. I would open up
 [wally](https://ergodox-ez.com/pages/wally) (ZSA's firmware flashing tool), load the
 firmware file, and press the tiny 'reset' button on my keyboard with a
-paperclip... and it would freeze. The backlights stopped their magical
+paper-clip... and it would freeze. The back lights stopped their colorful
 dancing and key presses rendered no response. The only way
 to get the board to respond again was to unplug and replug it back in.
 
-I had heard that ZSA had good support, so I emailed them about my problem.
+I had heard that ZSA had good customer support, so I emailed them about my problem.
 They responded right away and helped to debug what might be happening.  It
 appeared to be some sort of permissions issue, although to this day I'm not
 100% sure what it actually was. Eventually, it started working. Since then I
@@ -116,19 +116,19 @@ to type on the ergodox. When I got it, I did a fair bit of
 [typing](https://www.keybr.com) [practice](https://play.typeracer.com/) and
 used it for work everyday. Within a few days, I was at a passable typing speed,
 and after a few more, and I reached a *decent* speed. I am not sure if I am any
-*faster* than on my old keyboard, but I can type faster for much longer (I
-could only burst speed type on the HHKB before starting to cramp up, mostly due to
+*faster* than on my old keyboard, but I can type fast for much longer (I
+could only burst speed-type on the HHKB before starting to cramp up, mostly due to
 poor form).
 
 <a href="../../img/posts/ergodox-ez-initial-review/oryx_trainer.png"><img alt="Oryx Training Tool" src="../../img/posts/ergodox-ez-initial-review/oryx_trainer.png" style="max-width: 100%;"/></a>
-<div class="caption">Oryx Training Tool</div>
+<div class="caption">The Oryx Training Tool</div>
 
 I haven't done any typing practice the last few weeks and I've started to
-notice *some* of my bad habits creeping back in. I want to start practicing
+notice *some* of my bad habits creeping back in. I want to start up
 again and might try to use the trainer that is included in the Oryx tool. It is
 able to connect to the keyboard to show your layout, and provides several types
-of content to type through (code, books, symbols). I might use to to
-create an optimized coding layer that has my most used symbols in easy to
+of content to type through (code, books, symbols). I might use it to
+help determine an optimized coding layer places my most used symbols in easy to
 reach places.
 
 ## What I like
@@ -172,12 +172,13 @@ In addition to the firmware, It's nice to know that there is quite a bit I can
 
 
 I've already looked around for some of the parts I could swap out on my board
-in a few years if I want to mix things up. I wouldn't be against swapping to mx
-clear switches for example. The main issue is the lights would not
-shine through anymore. I guess that wouldn't be too big of an issue though,
-because many of the alternative keycaps I like are opaque ツ.
+in a few years if I want to mix things up. For example, I am interesting in
+swapping to mx clear switches someday. The problem with clears is the lights
+would not (ironically) shine through anymore. I guess that wouldn't be too big
+of an issue though, because many of the alternative key caps I like are opaque
+ツ.
 
-*Anyway*... Despite talking about all the hardware upgrades I could make, I
+*Anyway*... Despite talking about all the hardware upgrades I *could* make, I
 actually do enjoy it's current configuration. But I do love that I have the
 option to change it over time.
 
@@ -197,10 +198,9 @@ Ortho or Staggard? Unfortunately I don't see that happening anytime soon...
 100%;"/></a>
 <div class="caption">A split design keyboard pairs nicely with a laptop stand.</div>
 
-Like the ortholinear layout, a split keyboard, particularly one that splits
-completely into two, is a considerable ergonomic boost. I can lay my arms on the
-desk in whichever way is most comfortable... and then position the keyboard to
-match *them*.
+Like the ortholinear layout, a fully split keyboard is a considerable
+ergonomic boost.  I can lay my arms on the desk in whichever way is most
+comfortable... and then position the keyboard to match *them*.
 
 As a bonus, the split design pairs nicely with laptop stands, allowing me to
 slide the stand closer. This makes it easier to view smaller screens at a
@@ -215,10 +215,9 @@ Another feature I immediately miss on other keyboards, is thumb keys. It is a
 relief to provide my thumbs control over more keys than just the spacebar. The
 thumb clusters enable me to offload responsibility for backspace, tab, enter,
 delete, and a few other keys from my weakest fingers (pinkies), to my strongest
-(thumbs). While also tricky to get used to at first, this makes a huge
-difference while typing, and is probably the biggest issue I have when
-switching to a laptop keyboard from my ergodox. I keep finding myself smashing
-the spacebar when trying to backspace or enter.
+(thumbs). This makes a huge difference while typing, but is probably the
+biggest difficulty I have when switching to a laptop keyboard from my ergodox.
+I keep finding myself smashing the spacebar when trying to backspace or enter.
 
 
 ## What I don't love
