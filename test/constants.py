@@ -26,6 +26,7 @@ POST_NAMES = [
     "docker-quickstart",
     "draft-website-with-jenkins",
     "emacs-update-evil-usepackage",
+    "ergodox-ez-initial-review",
     "exporting-proxmox-vms",
     "extending-vm-hd",
     "fedora-kde-tb3",
