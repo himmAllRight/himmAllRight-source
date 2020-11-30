@@ -1,6 +1,6 @@
 +++
 title   = "Opening Ports with firewall-cmd"
-date    = "2020-11-29"
+date    = "2020-11-30"
 author  = "Ryan Himmelwright"
 image   = "img/posts/firewall-cmd-open-ports/emerald-outback-log-header.jpeg"
 caption = "Beech Mountain, NC"
@@ -17,16 +17,39 @@ As I host more container servies like [jellyfin] and [minecraft servers] on my w
 
 *Image of browser I can't connect to?*
 
+### Determine Zones
+
+Show all active zones and which devices are tied to each one:
+
+```bash
+sudo firewall-cmd --get-active-zones
+```
+
+What I used to see the zone I should actually use?
+
+```bash
+sudo firewall-cmd --list-all
+```
+
 ### Open Port
 
 *Code to open the port*
+```bash
+sudo firewall-cmd --zone=public --add-port=1313/tcp
+```
 
 ### Reload?
 
 *code to reload/restart firewall config*
 
+```bash
+sudo systemctl restart firewalld
+```
+
 ### Make it Persistant
 
-*Code with command containing the --permanent flag*
+```bash
+sudo firewall-cmd --zone=public --permanent --add-port=1313/tcp
+```
 
 ### Conclusion
