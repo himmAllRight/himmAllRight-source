@@ -47,12 +47,12 @@ Everything was very well packaged. The keyboard came in one box, and the wrist
 rests had their own. The two boxes had the same width, so they could be shipped
 as one unit. Lifting the lid on the larger box, I was greeted by the keyboard
 looking back at me through a plastic panel, with it's accessories (cables, key
-switch pulled, screws) neatly pinned around it.
+switch puller, screws) neatly pinned around it.
 
 ## Setup
 
 The initial *physical* setup was quite simple. I took everything out of the
-box, connected the two haves of the board together with the included TRRS
+box, connected the two halves of the board together with the included TRRS
 cable, and then used the mini usb cable (also included) to connect right half
 of the board to my laptop's usb port. I positioned the wrist-rests and tweaked
 the tenting poles to some arbitrary position, acting as if I knew what I was
