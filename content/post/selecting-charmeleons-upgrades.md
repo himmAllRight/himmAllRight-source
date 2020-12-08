@@ -19,10 +19,20 @@ selected and why.
 
 ## Background
 
+Over two years ago, I [build and designed
+charmeleon](post/charmeleon-desktop-design/), my linux desktop computer. In
+that post, I explain how I did eventually want to upgrade charmeleon over
+time. Since the initial build, I have only upgraded a few single items: a new
+m.2 ssd and a [gpu upgrade](/post/rx580-upgrade/) when my origonal one
+Stopped working several months ago. The next 'single part' I wanted to upgrade was some more RAM... but, as I started down that path, things became a bit more... complicated...
 
 ## Part Selection
 
 ### RAM
+
+<a href="../../img/posts/selecting-charmeleon-upgrades/ripjaws_ram.jpeg"><img alt="Two 32GB sticks of DDR4 3200 ram in" src="../../img/posts/selecting-charmeleon-upgrades/ripjaws_ram.jpeg" style="max-width:
+100%;"/></a>
+<div class="caption">RAM upgrade: 2x32 GB of 3200Mhz DDR4, CL 16</div>
 
 * One of the easy upgrades I prepped for was RAM. My motherboard had 4 slots, with a max capacity of 64GB, and I populated it with 2x16gb sticks so I could easily double it down the road when RAM was cheaper.
 * But... Ryzen 3000 made it a bit complicated. All of a sudden, those cpus could support 128gb, even in my MB...
@@ -30,6 +40,10 @@ selected and why.
 * The problem was, RAM suddenly stopped being a 'simple' whenever upgrade. Not only because the price double, but if I did want to get new max dimm sizes, I couldn't use it until I had a 3000+ series cpu
 
 ### CPU
+
+<a href="../../img/posts/selecting-charmeleon-upgrades/ryzen9_box.jpeg"><img alt="Ryzen 9 3900x Box" src="../../img/posts/selecting-charmeleon-upgrades/ryzen9_box.jpeg" style="max-width:
+100%;"/></a>
+<div class="caption">CPU upgrade: Ryen 9 3900x, 12 core/24 thread cpu</div>
 
 * the *origonal* plan when I built charmeleon was to get the 2600 for a but until I could upgrade to an 8 core from the same 2000 series or even a rumored cpu with even more cores
 * I made sure my motherboard had good VRMs for it's cost to support a future higher core upgrade.
