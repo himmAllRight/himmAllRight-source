@@ -19,6 +19,9 @@ selected and why.
 
 ## Background
 
+<a href="../../img/posts/selecting-charmeleon-upgrades/pre_upgrades.jpeg"><img alt="Inside charmeleon before upgrades" src="../../img/posts/selecting-charmeleon-upgrades/pre_upgrades.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">Charmeleon Internals before upgrades</div>
+
 Over two years ago, I [build and designed
 charmeleon](post/charmeleon-desktop-design/), my linux desktop computer. In
 that post, I explain how I did eventually want to upgrade charmeleon over
@@ -60,11 +63,17 @@ Stopped working several months ago. The next 'single part' I wanted to upgrade w
 
 ### CPU Cooler
 
+<a href="../../img/posts/selecting-charmeleon-upgrades/noctua_box.jpeg"><img alt="Noctua nh-u14s box" src="../../img/posts/selecting-charmeleon-upgrades/noctua_box.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">CPU Cooler upgrade: Noctua NH-U14s</div>
+
 * I always knew I'd get a noctua cooler, although I did second guess if I wanted an AIO for like an hour one day.
 * I actually wanted to get one when I got my noctual fans over the summer, but figured if I was going to swap the cpu *eventually,* I might as well wait till then to prevent the hassel of repasting and everything.
 * I switched the model once or twice being confused about compatibility, I didn't want the massive one and found it wouldn't actually cool much more than the single heat sink ones. I wanted the 140mm fan one because I much prefer their lower sounding woosh. After I confirmed it should fit in the Meshify C and with my ram (and anticipated ram) knew what I'd get.
 
 ### Motherboard
+
+<a href="../../img/posts/selecting-charmeleon-upgrades/mb_box.jpeg"><img alt="x570 Aorus Elite Wifi Box" src="../../img/posts/selecting-charmeleon-upgrades/mb_box.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">Motherboard upgrade: x570 Aorus Elite Wifi</div>
 
 * I never intended to get a new motherboard. In fact, I stated previously that one of the reasons I got the b450 tomahawk was that it's VRMs suposidly should be able to support a higher core ryzen upgrade.
 * However, when I was looking at getting a 5000s cpu, I knew my MB wouldn't get the bios upgrade it needed until January maybe... and it might not be reversable which I didn't like
@@ -78,7 +87,10 @@ Stopped working several months ago. The next 'single part' I wanted to upgrade w
     * I went back and forth between the elite wifi, pro, ultra... and sometimes still master for weeks
     * Eventually when I started making purchases and the elite wifi went on sale though, I decided to grab it. It had everything I needed, and most of the upgraded features on the other boards I either wouldn't use or were just small nice to haves
 
-### GPU?
+### GPU
+
+<a href="../../img/posts/selecting-charmeleon-upgrades/gpu_box.jpeg"><img alt="rx550 box" src="../../img/posts/selecting-charmeleon-upgrades/gpu_box.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">Second GPU: RX 550 4GB</div>
 
 * With a MB that supported iommu I wanted to get a smaller gpu that I could use for host graphics if I got VFIO working.
 * I heard that both the rx550 and 1030gt were good, and were sub $100
@@ -89,3 +101,6 @@ Stopped working several months ago. The next 'single part' I wanted to upgrade w
         * I had actually read several gpu passthrough guides using this exact pairing so I guessed it was a safe bet.
 
 ## Conclusion
+
+<a href="../../img/posts/selecting-charmeleon-upgrades/post_upgrades.jpeg"><img alt="Inside charmeleon after upgrades" src="../../img/posts/selecting-charmeleon-upgrades/post_upgrades.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">Charmeleon Internals after upgrades</div>
