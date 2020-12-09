@@ -2,7 +2,7 @@
 title   = "Selecting Charmeleon's Upgrades"
 date    = "2020-12-14"
 author  = "Ryan Himmelwright"
-image   = "img/posts/selecting-charmeleon-upgrades/cpu_pins_header.jpeg"
+image   = "img/posts/selecting-charmeleon-upgrades/mb_header.jpeg"
 caption = "Durham, NC"
 tags    = ["hardware", "linux", "ryzen", "homelab", "vfio"]
 draft   = "True"
