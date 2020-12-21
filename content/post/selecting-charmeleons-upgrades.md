@@ -9,11 +9,11 @@ draft   = "True"
 Comments = "True"
 +++
 
-After years of planning and months of keeping my eye on prices while
-conducting deep research... I have upgrade a bunch of components in
-Charmeleon, my Linux workstation. What started as a cpu + ram upgrade
-eventually also included a new motherboard and secondary gpu. Here is what I
-selected and why.
+After months following prices while
+planning... I have upgrade several major components in
+my Linux workstation, Charmeleon. What started as an eventual cpu + ram upgrade
+has now also included a new motherboard and secondary gpu. Here is what I
+selected for each part, and why.
 
 <!--more-->
 
@@ -24,10 +24,12 @@ selected and why.
 
 Over two years ago, I [build and designed
 charmeleon](post/charmeleon-desktop-design/), my linux desktop computer. In
-that post, I explain how I did eventually want to upgrade charmeleon over
-time. Since the initial build, I have only upgraded a few single items: a new
-m.2 ssd and a [gpu upgrade](/post/rx580-upgrade/) when my origonal one
-Stopped working several months ago. The next 'single part' I wanted to upgrade was some more RAM... but, as I started down that path, things became a bit more... complicated...
+that post, I explain how I wanted to eventually upgrade charmeleon over time,
+and designed it with that in mind. Since the initial build, I have only added
+or swapped a few parts: I added a new m.2 nvme ssd and 
+[upgraded my gpu](/post/rx580-upgrade/) after the origonal one stopped working 
+months ago. The next coponent part I wanted to upgrade was adding some more RAM.
+However, as I started down that path, things became a bit more... complicated...
 
 ## Part Selection
 
@@ -37,10 +39,14 @@ Stopped working several months ago. The next 'single part' I wanted to upgrade w
 100%;"/></a>
 <div class="caption">RAM upgrade: 2x32 GB of 3200Mhz DDR4, CL 16</div>
 
-* One of the easy upgrades I prepped for was RAM. My motherboard had 4 slots, with a max capacity of 64GB, and I populated it with 2x16gb sticks so I could easily double it down the road when RAM was cheaper.
-* But... Ryzen 3000 made it a bit complicated. All of a sudden, those cpus could support 128gb, even in my MB...
-* So I wondered if I should fill those blank spaces with the new max size
-* The problem was, RAM suddenly stopped being a 'simple' whenever upgrade. Not only because the price double, but if I did want to get new max dimm sizes, I couldn't use it until I had a 3000+ series cpu
+One of the easy upgrades I prepared for during the inital build was RAM. My motherboard had 4 slots, with a max capacity of 64GB.I made sure to populate it with 2x16gb sticks instead of 4x8gb ones so I could easily double it down the road when RAM was cheaper.
+But... the release of Ryzen 3000 cpus changed things. Magically overnight those
+cpus, along with my motherboard, could support 128gb of RAM.
+
+This had me wondering if I should now instead fill those blank spaces with the *new* max dimm size sticks.
+The only problem was, RAM was no longer a 'simple, cheap' upgrade. If I wanted to upgrade the RAM to the new max, I needed to upgrade the CPU to support it, *and* buy twice the capacity of RAM.
+
+Spoiler alert, I did buy a new cpu so I could max the RAM. I eventually setteled on a Ripjaws V 2x32GB 3200Mhz kit with 16-18-18-38 timings. It selected this kit because there wasn't a 2x32gb kit that matched my origonal RAM, and this one matched all the timings of my origonal one, while still being cheaper than the others that matched. This bring my computer to a total of 96GB of RAM, which is total overkill for most uses. However, I tend to do some weird testing with large VM depooyemnts and often use my `/tmp/` dir as a working folder for crap I intend to blow away on reboot.
 
 ### CPU
 
