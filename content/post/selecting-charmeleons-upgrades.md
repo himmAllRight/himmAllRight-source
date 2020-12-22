@@ -112,31 +112,40 @@ waiting, I wanted a 5900x, but you can't buy them. After being tempted by the
 <a href="../../img/posts/selecting-charmeleon-upgrades/noctua_box.jpeg"><img alt="Noctua nh-u14s box" src="../../img/posts/selecting-charmeleon-upgrades/noctua_box.jpeg" style="max-width: 100%;"/></a>
 <div class="caption">CPU Cooler upgrade: Noctua NH-U14s</div>
 
-Over the summer, I upgraded all the fans in my case to Noctua one, and love
-them. I wanted to also get a new noctua cpu cooler to match, but with plans
-to upgrade my cpu soon, I figured I'd wait and get both at the same time, so
-I wouldn't have to repase twice. I switched the model once or twice being
-confused about compatibility, I didn't want the massive one and found it
-wouldn't actually cool much more than the single heat sink ones. I wanted the
-140mm fan one because I much prefer their lower sounding woosh. After I
-confirmed it should fit in the Meshify C and with my ram (and anticipated
-ram) knew what I'd get.
+Over the summer I upgraded all the fans in my case to Noctua ones and love
+them. At the time, I wanted to also get a new cpu cooler to match, but with plans
+to upgrade my cpu soon, I figured I would wait and order both at the same time, so
+I wouldn't have to go through the hassel of repasting the CPU twice. 
 
-**TLDR:** I wanted a new CPU Cooler. I love Noctua.
+I switched what specific model I wanted once or twice, after being confused about
+compatibility. I didn't want the massive NH-D15, and learned that it wouldn't actually
+cool much more than the single heat sink ones. I did want a cooler that used a 140mm fan instead of a 120mm one, because I much prefer their lower sounding woosh. After I confirmed it should
+fit in the Meshify C and with my RAM, I selected the NH-U14s.
+
+**TLDR:** I wanted a new CPU Cooler with a 140mm fan. I love Noctua.
 
 ### Motherboard
 
 <a href="../../img/posts/selecting-charmeleon-upgrades/mb_box.jpeg"><img alt="x570 Aorus Elite Wifi Box" src="../../img/posts/selecting-charmeleon-upgrades/mb_box.jpeg" style="max-width: 100%;"/></a>
 <div class="caption">Motherboard upgrade: x570 Aorus Elite Wifi</div>
 
-* I never intended to get a new motherboard. In fact, I stated previously that one of the reasons I got the b450 tomahawk was that it's VRMs suposidly should be able to support a higher core ryzen upgrade.
-* However, when I was looking at getting a 5000s cpu, I knew my MB wouldn't get the bios upgrade it needed until January maybe... and it might not be reversable which I didn't like
-* So I started looking into x570 boards.
-    * I liked their gen4 support
-    * I really liked their iommu groupings and wanted to dabble with vfio some more
-    * There were some other features I realized I would like to have on my MB, like a second m.2 (So I could get a larger one but not loose the old one), more sata ports (2 of mine were disabled because I used the m.2), wifi (mostly for bluetooth), and just more pcie lanes
-    * I realized x570 fit my need a bit better, even when compared to b550 (which I think most people should probably get). Esp if I was doing a big upgrade with more powerful components
-* Looked at mother boards for months. Eventually settled on one of the Aorus ones
+Unlike the CPU and RAM, I never intended to get a new motherboard when
+building Charmeleon. However, when I was looking at getting a 5000s cpu, I
+knew my B450 thomahawk wouldn't get the required bios upgrade until January... maybe.
+I also knew the upgrade might not be reversable which I didn't like, so I started looking at B550 and x570 boards.
+
+I realized x570 fit my need a bit better when compared to my b450, and even
+the new b550 (which I think most people should probably get). The x570 was a
+good match considering the other upgrades I was making. Particular features that made me want to upgrade my b450 to a x570 motherboard were:
+
+* Gen4 PCIe support
+* Better iommu groupings for VFIO passthrough
+* Often had a second m.2 
+* More *usable* sata ports (2 of mine were disabled because they shared lanes with my m.2), 
+* wifi (mostly for bluetooth)
+* In general, more pcie lanes
+
+Looked at mother boards for months. Eventually settled on one of the Aorus ones
     * The Master was rated REALLY well, but was very expensive
     * I went back and forth between the elite wifi, pro, ultra... and sometimes still master for weeks
     * Eventually when I started making purchases and the elite wifi went on sale though, I decided to grab it. It had everything I needed, and most of the upgraded features on the other boards I either wouldn't use or were just small nice to haves
