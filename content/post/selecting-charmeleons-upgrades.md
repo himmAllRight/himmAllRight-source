@@ -39,14 +39,30 @@ However, as I started down that path, things became a bit more... complicated...
 100%;"/></a>
 <div class="caption">RAM upgrade: 2x32 GB of 3200Mhz DDR4, CL 16</div>
 
-One of the easy upgrades I prepared for during the inital build was RAM. My motherboard had 4 slots, with a max capacity of 64GB.I made sure to populate it with 2x16gb sticks instead of 4x8gb ones so I could easily double it down the road when RAM was cheaper.
-But... the release of Ryzen 3000 cpus changed things. Magically overnight those
+One of the easy upgrades I prepared for during the inital build was RAM. My
+motherboard had 4 slots, with a max capacity of 64GB.I made sure to populate
+it with 2x16gb sticks instead of 4x8gb ones so I could easily double it down
+the road when RAM was cheaper. But... the release of Ryzen 3000 cpus changed
+things. Magically overnight those
 cpus, along with my motherboard, could support 128gb of RAM.
 
-This had me wondering if I should now instead fill those blank spaces with the *new* max dimm size sticks.
-The only problem was, RAM was no longer a 'simple, cheap' upgrade. If I wanted to upgrade the RAM to the new max, I needed to upgrade the CPU to support it, *and* buy twice the capacity of RAM.
+This had me wondering if I should now instead fill those blank spaces with
+the *new* max dimm size sticks. The only problem was, RAM was no longer a
+'simple, cheap' upgrade. If I wanted to upgrade the RAM to the new max, I
+needed to upgrade the CPU to support it, *and* buy twice the capacity of RAM.
 
-Spoiler alert, I did buy a new cpu so I could max the RAM. I eventually setteled on a Ripjaws V 2x32GB 3200Mhz kit with 16-18-18-38 timings. It selected this kit because there wasn't a 2x32gb kit that matched my origonal RAM, and this one matched all the timings of my origonal one, while still being cheaper than the others that matched. This bring my computer to a total of 96GB of RAM, which is total overkill for most uses. However, I tend to do some weird testing with large VM depooyemnts and often use my `/tmp/` dir as a working folder for crap I intend to blow away on reboot.
+Spoiler alert, I did buy a new cpu so I could max the RAM. I eventually
+setteled on a Ripjaws V 2x32GB 3200Mhz kit with 16-18-18-38 timings. It
+selected this kit because there wasn't a 2x32gb kit that matched my origonal
+RAM, and this one matched all the timings of my origonal one, while still
+being cheaper than the others that matched. This bring my computer to a total
+of 96GB of RAM, which is total overkill for most uses. However, I tend to do
+some weird testing with large VM depooyemnts and often use my `/tmp/` dir as
+a working folder for crap I intend to blow away on reboot.
+
+**TLDR:** I always planned to upgrade RAM. Ryzen 3000 allowed an even higher
+*max RAM in my MB, but I would have to also upgrade my CPU. I upgraded both, 
+and now have 96GB of RAM.
 
 ### CPU
 
@@ -54,27 +70,59 @@ Spoiler alert, I did buy a new cpu so I could max the RAM. I eventually setteled
 100%;"/></a>
 <div class="caption">CPU upgrade: Ryen 9 3900x, 12 core/24 thread cpu</div>
 
-* the *origonal* plan when I built charmeleon was to get the 2600 for a but until I could upgrade to an 8 core from the same 2000 series or even a rumored cpu with even more cores
-* I made sure my motherboard had good VRMs for it's cost to support a future higher core upgrade.
-* Months later, after all the 3000 cpus launched, I was rather set on getting a 3900x.
-* However I knew AMD was going to be releasing the '4000' (lol) cpus in the Fall, so I figured I'd wait until they were released and either get a new one or discount old one.
-* 5000 was released, and I thought the 5900x would be perfect.
-* But then it was impossible to buy them, and I didn't feel like waiting even longer, and I don't actually *need* the increased performance. Particularly the gaming performance increases... I'm rocking an rx580 and am clearly gpu bottlenecked 😆
-* So I started looking at older crazier options, like the 3950x
-    * It was awesome, and honestly I'd still love to have one.
-    * However, even if I *could* get it on sale... it would still cost a ton and I couldn't justify the price difference. 16 cores is amazing, but 12 should easily still fit my needs
-    * The money *saved* on the price difference could then be used to get my ram upgrade (the thing that started everything) so I wouldn't have to wait a few months to save for it.
-    * So, I looked at the 3900x and wondered if it would go on sale.
-    * It did intermittently, but it seemed like it might actually start to have shortage issues with people jumping to it after not being able to get a 5900x. The next time I saw it go on sale I grabbed it right before they sold out again. It's not the *cheapest* it's ever been, but it's not far off either. And it was *much* cheaper than it remained for the remainder of the holiday shopping week
+My *origonal* plan when I built charmeleon was to get the 2600, and later
+upgrade to an 8 core from the same 2000 series or even a rumored 3000 cpu
+with potentially even more cores. I made sure my motherboard had good VRMs
+for the cost so it could support a future upgrade with more cores.
+
+Months later the 3000 cpus launched, I was set on getting a 3900x.
+However, I didn't *need* a new cpu and I knew AMD was going to be releasing
+the '4000' (lol) cpus in the Fall. I figured I would wait until they were
+released and either get a new one, or a discountted 3000 one.
+
+When the 5000 series cpus were released, and I thought the 5900x would be
+perfect. But, like ever other tech release in 2020, it was impossible to buy
+one. I didn't feel like waiting even longer, and I don't actually *need* the
+increased performance. The new ryzen cpus performance increases are patically
+seen in gamming... I'm rocking an rx580 and am clearly gpu bottlenecked
+anyway 😆
+
+With the 5900x not available anytime soon, I started being tempted at some
+crazier options... like the 3950x. The 3950x is an amazing cpu, and honestly
+I'd still love to have one. However, even if I *could* get it on sale... I
+knew it would still cost a ton and I couldn't justify the price difference. A
+16 core cpu is amazing, but 12 should still easily fit my needs. The money
+*"saved"* on the price difference could then be used to get the bigger ram
+upgrade so I wouldn't have to wait a few months to save for it.
+
+So, I looked back at the 3900x and wondered if it would go on sale. It did
+intermittently, but it seemed like it might actually start to have shortage
+issues with people jumping to *it* after not being able to get a 5900x. The
+next time I saw it go on sale I grabbed it right before they sold out again.
+I didn't get it for the cheapest it's *ever* been, but the sale was quite
+close to the all time low. And it was *much* cheaper than what it has
+remained at ever since.
+
+**TLDR:** I planned to eventually upgrade to a higher core count CPU. After
+waiting, I wanted a 5900x, but you can't buy them. After being tempted by the
+3950x, I purchased the more reasonably priced 3900x on sale.
 
 ### CPU Cooler
 
 <a href="../../img/posts/selecting-charmeleon-upgrades/noctua_box.jpeg"><img alt="Noctua nh-u14s box" src="../../img/posts/selecting-charmeleon-upgrades/noctua_box.jpeg" style="max-width: 100%;"/></a>
 <div class="caption">CPU Cooler upgrade: Noctua NH-U14s</div>
 
-* I always knew I'd get a noctua cooler, although I did second guess if I wanted an AIO for like an hour one day.
-* I actually wanted to get one when I got my noctual fans over the summer, but figured if I was going to swap the cpu *eventually,* I might as well wait till then to prevent the hassel of repasting and everything.
-* I switched the model once or twice being confused about compatibility, I didn't want the massive one and found it wouldn't actually cool much more than the single heat sink ones. I wanted the 140mm fan one because I much prefer their lower sounding woosh. After I confirmed it should fit in the Meshify C and with my ram (and anticipated ram) knew what I'd get.
+Over the summer, I upgraded all the fans in my case to Noctua one, and love
+them. I wanted to also get a new noctua cpu cooler to match, but with plans
+to upgrade my cpu soon, I figured I'd wait and get both at the same time, so
+I wouldn't have to repase twice. I switched the model once or twice being
+confused about compatibility, I didn't want the massive one and found it
+wouldn't actually cool much more than the single heat sink ones. I wanted the
+140mm fan one because I much prefer their lower sounding woosh. After I
+confirmed it should fit in the Meshify C and with my ram (and anticipated
+ram) knew what I'd get.
+
+**TLDR:** I wanted a new CPU Cooler. I love Noctua.
 
 ### Motherboard
 
@@ -93,6 +141,10 @@ Spoiler alert, I did buy a new cpu so I could max the RAM. I eventually setteled
     * I went back and forth between the elite wifi, pro, ultra... and sometimes still master for weeks
     * Eventually when I started making purchases and the elite wifi went on sale though, I decided to grab it. It had everything I needed, and most of the upgraded features on the other boards I either wouldn't use or were just small nice to haves
 
+**TLDR:** Looking at Ryzen 5000 CPUs had me looking at newer motherboards.
+Even after dropping back down to a 3000 CPU, I still wanted a motherboard
+upgrade for better VFIO support and expandability.
+
 ### GPU
 
 <a href="../../img/posts/selecting-charmeleon-upgrades/gpu_box.jpeg"><img alt="rx550 box" src="../../img/posts/selecting-charmeleon-upgrades/gpu_box.jpeg" style="max-width: 100%;"/></a>
@@ -105,6 +157,10 @@ Spoiler alert, I did buy a new cpu so I could max the RAM. I eventually setteled
     * I had actually considered the 550 when I first built charmeleon, but ended up picking the rx550.
     * This time, I picked the rx550 to pair with my rx580.
         * I had actually read several gpu passthrough guides using this exact pairing so I guessed it was a safe bet.
+
+**TLDR:** I wanted an easier time with VFIO GPU passthrough. Having a second
+card for the host or a second VM makes this easier. The rx550 is a common card
+for this use.
 
 ## Conclusion
 
