@@ -145,10 +145,20 @@ good match considering the other upgrades I was making. Particular features that
 * wifi (mostly for bluetooth)
 * In general, more pcie lanes
 
-Looked at mother boards for months. Eventually settled on one of the Aorus ones
-    * The Master was rated REALLY well, but was very expensive
-    * I went back and forth between the elite wifi, pro, ultra... and sometimes still master for weeks
-    * Eventually when I started making purchases and the elite wifi went on sale though, I decided to grab it. It had everything I needed, and most of the upgraded features on the other boards I either wouldn't use or were just small nice to haves
+Looked at mother boards for months. Eventually decided I wanted one of the
+Gigabyte Aorus ones. The Aorus Master seemed to be one of the defacto
+reccomened board for VFIO builds, but was very expensive. Much of what made
+it good however seemed to still be present in the cheaper models. In
+particular, the Aorus motherboards had good iommu groupings and support,
+*and* a bios feature that allows you to select which x16 slot to use for the
+primary gpu. This makes it easier to boot into a secondary gpu, saving the
+bigger one to pass through to VMs.
+
+I went back and forth trying to decide between the elite wifi, pro, ultra...
+and sometimes still master for weeks. Eventually when I started making
+purchases, the elite wifi went on sale and I decided to grab it. It had
+everything I needed, and most of the upgraded features on the other boards I
+either wouldn't use or were just small nice to haves.
 
 **TLDR:** Looking at Ryzen 5000 CPUs had me looking at newer motherboards.
 Even after dropping back down to a 3000 CPU, I still wanted a motherboard
@@ -159,13 +169,15 @@ upgrade for better VFIO support and expandability.
 <a href="../../img/posts/selecting-charmeleon-upgrades/gpu_box.jpeg"><img alt="rx550 box" src="../../img/posts/selecting-charmeleon-upgrades/gpu_box.jpeg" style="max-width: 100%;"/></a>
 <div class="caption">Second GPU: RX 550 4GB</div>
 
-* With a MB that supported iommu I wanted to get a smaller gpu that I could use for host graphics if I got VFIO working.
-* I heard that both the rx550 and 1030gt were good, and were sub $100
-    * I wasn't thrilled about using a nvida cpu, particularly the one that would be the linux host, but I loved how small it was
-    * However the 550 seemed to have slightly more power, was amd, and well rated.
-    * I had actually considered the 550 when I first built charmeleon, but ended up picking the rx550.
-    * This time, I picked the rx550 to pair with my rx580.
-        * I had actually read several gpu passthrough guides using this exact pairing so I guessed it was a safe bet.
+With a MB that better supported iommu, I wanted to get a smaller gpu that I
+could use for host machine graphics. I read that rx550 and 1030gt were both
+good, sub $100 gpus often used for the host.
+ 
+I wasn't thrilled about using a nvida gpu on a linux host, but I loved how
+small it was (although that could translate more fan moise). In comparison,
+the 550 seemed to be slightly more powerful, was amd, and well rated. In
+fact, I had read several gpu passthrough guides using the rx550 and passing
+through a rx580 (my current gpu). I purchased the 550.
 
 **TLDR:** I wanted an easier time with VFIO GPU passthrough. Having a second
 card for the host or a second VM makes this easier. The rx550 is a common card
@@ -175,3 +187,30 @@ for this use.
 
 <a href="../../img/posts/selecting-charmeleon-upgrades/post_upgrades.jpeg"><img alt="Inside charmeleon after upgrades" src="../../img/posts/selecting-charmeleon-upgrades/post_upgrades.jpeg" style="max-width: 100%;"/></a>
 <div class="caption">Charmeleon Internals after upgrades</div>
+
+Overall, I am extremely happy with my selections. It's sureal how powrful a
+machien can be built at a modest budget these days. With the upgrades,
+Charmelon's specs stand at:
+
+```
+Ryzen 9 3900x [3.8 GHz (4.6GHz Boost), 12 Cores, 24 Threads)
+Noctua NH-U14s CPU Cooler
+Aorus Elite Wifi x570 Motherboard
+96 GB (2x16GB, 2x32GB) DDR4-3200 Mhz, CL 16 RAM
+Sapphire Radeon Pulse RX 580 8GB GPU
+Sapphire Radeon Pulse RX 550 4GB GPU
+500 GB Samsung 970 EVO NVME SSD
+500 GB Samsung 850 EVO SATA SSD
+120 GB Kingston SSD (Dedicated windows VM)
+EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
+Fractal Design Meshify C Dark TG ATX Mid Tower Case
+2 x Noctua NF-A14 PWM 140mm Fans
+1 x Noctua NF-F12 PWM 120mm Fan
+Fedora 33 (KDE Plasma)
+```
+
+Not only have these changes drastically improved the performance of my
+workstation, but they have allowed me to run virtual machines at the next
+level. When passing hardware directly to my VMs, I cannot tell that the
+computer I'm sitting at is virtualized. I have been living inside Vms, and I
+love it.
