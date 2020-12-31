@@ -30,10 +30,12 @@ This is a page where I maintain the status of the computers in my “Homelab”
 
 #### - Charmeleon (Linux Workstation/VM Host/Gaming Computer)
 ```
-Ryzen 5 2600 [3.4 GHz (3.9GHz Turbo), 6 Cores, 12 Threads)
-MSI B450 Tomahawk Motherboard
-32 GB (2x16GB) DDR4-3200 Mhz RAM
+Ryzen 9 3900x [3.8 GHz (4.6GHz Boost), 12 Cores, 24 Threads)
+Noctua NH-U14s CPU Cooler
+Aorus Elite Wifi x570 Motherboard
+96 GB (2x16GB, 2x32GB) DDR4-3200 Mhz, CL 16 RAM?
 Sapphire Radeon Pulse RX 580 8GB GPU
+Sapphire Radeon Pulse RX 550 4GB GPU
 500 GB Samsung 970 EVO NVME SSD
 500 GB Samsung 850 EVO SATA SSD
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
