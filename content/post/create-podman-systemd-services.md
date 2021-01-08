@@ -2,8 +2,8 @@
 title   = "Create Podman Systemd Services"
 date    = "2021-01-07"
 author  = "Ryan Himmelwright"
-image   = "img/posts/selecting-charmeleon-upgrades/mb_header.jpeg"
-caption = "Durham, NC"
+image   = "img/posts/create-podman-systemd-services/moss_tree_header1.jpeg"
+caption = "Emerald Outback, Beech Mountain, NC"
 tags    = ["linux", "podman", "containers", "systemd"]
 draft   = "False"
 Comments = "True"
@@ -63,7 +63,7 @@ systemctl --user start jellyfin.service
 systemctl --user status jellyfin.service
 ```
 
-## Caveats 
+## Caveats
 
 Running as a user service, it doesn't seem like it will start until the user
 has logged in. This makes sense, and can be as simple as quickly ssh'ing into
