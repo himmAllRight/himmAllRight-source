@@ -1,6 +1,6 @@
 +++
 title   = "Create Podman Systemd Services"
-date    = "2021-01-07"
+date    = "2021-01-14"
 author  = "Ryan Himmelwright"
 image   = "img/posts/create-podman-systemd-services/moss_tree_header1.jpeg"
 caption = "Emerald Outback, Beech Mountain, NC"
@@ -50,25 +50,61 @@ user to generate a systemd service file, which I saved to my user local
 systemd location
 
 ```bash
-podman generate systemd jellyfin >> ~/.config/systemd/user/jellyfin.service
+podman generate systemd jellyfin > ~/.config/systemd/user/jellyfin.service
 ```
 
 
 ## Starting & Enabling the Service
 
-Afterwards, I was able to start the service using the `--user` flag...
+Afterwards, I was able to start the service using the `--user` flag. After
+starting, I checked the status to confirm the service started up without
+issue.
 
 ```bash
 systemctl --user start jellyfin.service
 systemctl --user status jellyfin.service
 ```
 
+I then used `podman` to see that the contaienr was running:
+
+```bash
+podman ps -a
+```
+
+With the container *running*... I opened up my web browser to confirm that
+jellyfin was actually *working*... and it was!
+
+Lastly, I `enabled` the service, again with the `--user` flag so that it
+would automatically start on boot:
+
+
+```bash
+systemctl --user enable jellyfin.service
+```
+
+
 ## Caveats
 
-Running as a user service, it doesn't seem like it will start until the user
-has logged in. This makes sense, and can be as simple as quickly ssh'ing into
-the machine. However, it should be known and worked around if using something
-like a WOL startup, as sending the magic packet won't be enough to get the
-services up and running.
+While this solution works for the most part, I did hit two niggles that while
+annoying, aren't enough to be deal breakers:
+
+1. Running as a user service, it doesn't seem like it will start until the
+user has logged in. This makes sense, and can be as simple as quickly ssh'ing
+into the machine. However, it should be known and worked around if using
+something like a WOL startup, as sending the magic packet won't be enough to
+get the services up and running.
+
+2. If something breaks with the container and it has to be reset, the service
+file should also be regenerated and replaced. The file references container
+`uuid`s, and if that changes, the file needs to reflect that. It's not a big
+problem, containers break and that's okay (remember, they're designed to be
+ephemerial). Just remember to remove and regenerate the service file. 
 
 ## Conclusion
+
+That's all there is. When I set out to write this post, I though there would
+be a bit more to it, requiring me to create the service file manually.
+However, I quickly stumbled on the `podman generate systemd` command and I am
+glad I did. It is one more feature to add to the ever-growing list of reasons
+while I love podman and the other [container
+commandos](https://docs.fedoraproject.org/en-US/fedora-silverblue/_attachments/container-commandos.pdf).
