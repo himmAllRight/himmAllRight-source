@@ -38,28 +38,35 @@ it for it to work with the service file.
 
 ## Root vs User containers?
 
-*This need to be re-done. I need to provide some information about root v.
-user containers, but this note to myself need to be presented more
-imformatively.*
+Before getting started, I just want to mention user vs. root containers. The
+first attempted to start podman containers with systemd, I hit some errors
+and then I realized... *systemd* was running as *root* but the container ran
+under my username. For example, running `sudo podman ps -a` didn't list my
+container, but `podman ps -a` did.
 
-The first attempt at this gave me errors and then I realized... systemd was
-running as root but the container runs under my username. Once solution could
-be to simply run the container as root, but that doesn't feel right. Podman
-runs rootless, so I might as well use it!
+Once solution could be to switch over and run the container as root using
+sudo, but that didn't feel right. A benefit of podman is that it is able to
+run rootless, and to not take advantage of that feature would be a shame. So,
+I started running the systemd steps as the user, but providing the `--user`
+flag and it resolved my issues.
 
 
 ## Creating the Service File
 
-Then I read an example from [this web page](https://www.redhat.com/sysadmin/podman-shareable-systemd-services).
-
-It reminded me that there's actually a `podman generate systemd` command that
-will generate and spit out a service file for a container, so I ran it as
-user to generate a systemd service file, which I saved to my user local
-systemd location
+At first, I started creating the systemd service files manually, as I have
+done [in previous posts](/post/autostarting-application-systemd-service/). After reading an example from [this web
+page](https://www.redhat.com/sysadmin/podman-shareable-systemd-services)
+however, I was reminded that there's actually a `podman generate systemd`
+command that will generate a service file for a container. I ran it, and
+generated a systemd service file, which I saved to my user local systemd
+location.
 
 ```bash
 podman generate systemd jellyfin > ~/.config/systemd/user/jellyfin.service
 ```
+
+Simple! This file could be altered if needed, but after quickly skimming, it
+seemed to contain everything I needed.
 
 
 ## Starting & Enabling the Service
