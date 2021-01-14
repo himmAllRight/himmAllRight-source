@@ -9,36 +9,44 @@ draft   = "False"
 Comments = "True"
 +++
 
-I have started to host some services, like [jellyfin](https://jellyfin.org/)
-in podman containers on main Linux workstation. However, as there usually
-isn't anything I need the computer to be running over night (I run those
-services, like our home automation, on a small server), I have also shutting
-my computer down when I go to bed. When I boot my computer up the next
-morning however, my containers automatically start up, and I *always* forget
-to do it. Let's fix that, using systemd.
+On my Linux worstation, I have started to host a
+[jellyfin](https://jellyfin.org/) server using podman. However, I have also
+started to shut down my computer down when I go to bed, as all of our
+important services (ex: home automation) are hosted on my home server. The
+one remaining problem with this setup is that when I boot my computer up the
+next morning, my containers do not automatically start up... and I *always*
+forget to start them up myself. Let's fix that, using systemd.
 
 <!--more-->
 
 ## Create the container
 
-In order to create a service for a container, it needs to already be created
-and running. This can be accomplished using the `podman run` command. For example, to startup my jellyfin server, I use the following lengthy command:
+In order to define a systemd service for a container, the container needs to
+already be created and running. The `podman run` command can be used to start
+up our container. For example, to run my jellyfin server, I used the
+following command:
 
 ```bash
 podman run --name jellyfin -d -v /home/ryan/Network/jellyfin/config:/config -v /home/ryan/Network/jellyfin/cache:/cache -v /home/ryan/Music:/media/music:ro -v /home/ryan/Videos:/media/videos:ro --net=host --privileged jellyfin/jellyfin:latest
 ```
 
 It should be noted, that because we will want the container to persist, even
-if it is stopped, that the `--rm` flag should not be used when running the
-container (I normally use it to keeps things clean, but had to remove it for
-this use case).
+if it is stopped, the `--rm` flag should *not* be used when running the
+container. I normally use this flag to keeps things clean, but had to remove
+it for it to work with the service file.
+
 
 ## Root vs User containers?
+
+*This need to be re-done. I need to provide some information about root v.
+user containers, but this note to myself need to be presented more
+imformatively.*
 
 The first attempt at this gave me errors and then I realized... systemd was
 running as root but the container runs under my username. Once solution could
 be to simply run the container as root, but that doesn't feel right. Podman
 runs rootless, so I might as well use it!
+
 
 ## Creating the Service File
 
