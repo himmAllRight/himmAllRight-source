@@ -15,6 +15,7 @@ POST_NAMES = [
     "back-to-solus",
     "charmeleon-desktop-design",
     "create-gitlab-runner",
+    "create-podman-systemd-services",
     "creating-a-git-remote",
     "creating-website-tests-ci",
     "creating-website-tests-docker-nodes",
