@@ -60,6 +60,7 @@ POST_NAMES = [
     "reset-plasma5-monitor-config",
     "rx580-upgrade",
     "scripting-tmux-workspaces",
+    "selecting-charmeleons-upgrades",
     "self2019",
     "setting-up-pass",
     "Setting-up-the-pi-cluster",
