@@ -60,7 +60,7 @@ compromise.
 
 Lastly, a half-reason is gaming. I'm not a huge gamer so I didn't opt for a
 crazy graphics card when I [designed and built my
-desktop](http://localhost:1313/post/charmeleon-desktop-design/). When I *do*
+desktop](/post/charmeleon-desktop-design/). When I *do*
 game, I usually play in windowed-mode (which
 is usually a better experience anyway... again for field of view reasons).
 However, sometimes a game won't support windowed mode, or I want to
@@ -94,7 +94,7 @@ out do not show up in the display settings. This makes sense, as *most* people
 won't be selecting `21:9` resolutions on a `16:9` panel. I needed to add
 new options using `xrandr`.
 
-After spending sometime in a terminal with `xrandr`, (and with some help from [this post](http://www.arunviswanathan.com/node/53)), I was able to create new `xrandr` modes, and set my monitor to use them.
+After spending sometime in a terminal with `xrandr`, I was able to create new `xrandr` modes, and set my monitor to use them.
 
 #### Creating a new xrandr mode
 

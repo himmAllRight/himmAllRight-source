@@ -21,7 +21,7 @@ motherboard and a secondary gpu. Let me explain...
 <div class="caption">Charmeleon Internals before the upgrades</div>
 
 Over two years ago, I [built and designed
-charmeleon](post/charmeleon-desktop-design/), my Linux desktop computer. In
+charmeleon](/post/charmeleon-desktop-design/), my Linux desktop computer. In
 that post, I explained how I wanted to upgrade charmeleon over time, and
 designed it with that in mind. Since the initial build, I have only made a
 few minor enhancements: I added a nvme ssd and [upgraded the
