@@ -55,7 +55,7 @@ It should take a few minutes to download everything (or longer if on a poor conn
 </center>
 
 
-Ever since LFS-7.0, a [md5sums file](http://www.linuxfromscratch.org/lfs/view/stable-systemd/md5sums) is provided, which can be downloaded and used to verify the integrity of downloaded packages. Download this file, again with *wget*:
+Ever since LFS-7.0, a md5sums file is provided, which can be downloaded and used to verify the integrity of downloaded packages. Download this file, again with *wget*:
 
 ```
 wget http://www.linuxfromscratch.org/lfs/view/stable-systemd/md5sums
