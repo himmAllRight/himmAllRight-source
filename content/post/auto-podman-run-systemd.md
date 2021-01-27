@@ -2,7 +2,7 @@
 title   = "Automatically Create and Run Podman Container Using Systemd"
 date    = "2021-01-30"
 author  = "Ryan Himmelwright"
-image   = "img/posts/create-podman-systemd-services/moss_tree_header1.jpeg"
+image   = "img/posts/auto-podman-run-systemd/mosstree2.jpeg"
 caption = "Emerald Outback, Beech Mountain, NC"
 tags    = ["linux", "podman", "containers", "systemd"]
 draft   = "True"
