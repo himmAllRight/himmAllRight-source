@@ -1,6 +1,6 @@
 +++
 title   = "Automatically Create and Run a Podman Container Using Systemd"
-date    = "2021-01-30"
+date    = "2021-01-31"
 author  = "Ryan Himmelwright"
 image   = "img/posts/auto-podman-run-systemd/mosstree2.jpeg"
 caption = "Emerald Outback, Beech Mountain, NC"
@@ -9,59 +9,58 @@ draft   = "True"
 Comments = "True"
 +++
 
-No, this isn't the same thing as the [last
-post](/post/create-podman-systemd-services/), although it does build off of
-it. While that basic solution demonstrated in that post works for many
-cases... it didn't for my jellyfin server. So, I made a small tweak that
-seems to be working a bit better.
+No, this is not the *same* as [my last
+post](/post/create-podman-systemd-services/), but is a continuation of
+it. While the basic `podman generate systemd` generated file works for many
+cases... it didn't long-term for my jellyfin container. So, I made a small tweak that
+appears to be more stable.
 
 <!--more-->
 
 ## The Issue
 
-Essentially, the issue was that the container work, but then
-occasionally break. Something would just get messed up and it would make more
-sense to blow away the container and start a new one. By itself, that's fine.
-containers are designed to be ephemeral and arguably *should* be blown away
-and instantiated again. However, the problem was that creating a new
-container resulted in having to edit the container uuids in the service file,
-otherwise the service would break... which seemed to sometimes mess with the
-container. 
+My issue was that the container initially worked, but would occasionally
+break when it grew old. By itself, it isn't a problem. Containers are
+designed to be ephemeral, and arguably *should* be blown away before being
+instantiated again. The difficulty is that creating a new container
+results in having to edit the container uuids in the service file, otherwise
+the service breaks... which seems to sometimes break the new container.
 
-*Example of the the issue or something??? Need a visual here to break up the text/ balance the examples*
+<a href="../../img/posts/auto-podman-run-systemd/jellyfin-failed-webpage.png"><img alt="Failed Jellyfin Webpage" src="../../img/posts/auto-podman-run-systemd/jellyfin-failed-webpage.png" style="max-width: 100%;"/></a>
 
-So I would have to *disable* the service, blow-away and make the new
+This means I have to then *disable* the service, blow-away and make the new
 container, update the service file, and then finally start the service. This
-wasn't a great method for what I needed.
+is not a great method for what I need.
 
 ##  A Different Approach
 
-I started to think about how I could better the process. I knew the container
-worked each time if it was *newly* created, as I used the `--rm` flag when
+I started to think about how I could better the process. I knew that a
+*newly* created container seemed to work each time, as I previously used the
+*`--rm` flag when
 starting it manually. From there, I wondered if I could write *my own*
-systemd service file using the *podman run* command instead. This command
-would both create and kick off a *new* container after boot, instead of
-starting a persistent one.
+systemd service file using the `podman run` command instead. This would both
+create and kick off a *new* container after boot, instead of re-starting a
+persistent one.
 
 
 ## Another Shortened Post...
 
-To just test out the theory, I decided to edit the file I generated in the
-previous post using `podman generate` command, and go from there. So, I
-opened the service file (`~/.config/systemd/user/jellyfin.service`) in my
-editor and changed the following line under the `[Service]` section:
+To test out my plan, I decided to edit the file created by the `podman
+generate system` command in the last post and go from there. I opened
+the service file (`~/.config/systemd/user/jellyfin.service`) in my editor and
+changed the following line under the `[Service]` section:
 
 ```ini
 ExecStart=/usr/bin/podman start 2ba0f86b0fc53cb2fe43abb20215680982800c1bf53421e1a3a90855fa79f030
 ```
 
-To instead use my manual `podman run` command, with a `--rm` flag:
+I instead set `ExecStart` to use my manual `podman run` command, with a `--rm` flag:
 
 ```ini
 ExecStart=/usr/bin/podman run --name jellyfin --rm -d -v /home/ryan/Network/jellyfin/config:/config -v /home/ryan/Network/jellyfin/cache:/cache -v /home/ryan/Music:/media/music:ro -v /home/ryan/Videos:/media/videos:ro --net=host --privileged jellyfin/jellyfin:latest
 ```
 
-I also edited the `ExecStop` and `ExecStopPost` commands:
+I also edited the `ExecStop` and `ExecStopPost` values:
 
 
 ```ini
@@ -69,7 +68,7 @@ ExecStop=/usr/bin/podman stop -t 10 2ba0f86b0fc53cb2fe43abb20215680982800c1bf534
 ExecStopPost=/usr/bin/podman stop -t 10 2ba0f86b0fc53cb2fe43abb20215680982800c1bf53421e1a3a90855fa79f030
 ```
 
-To use the container name (`jellyfin`) instead of the uuids:
+I switched them to use the container name (`jellyfin`) instead of uuids:
 
 ```ini
 ExecStop=/usr/bin/podman stop -t 10 jellyfin
@@ -77,21 +76,19 @@ ExecStopPost=/usr/bin/podman stop -t jellyfin
 ```
 
 After saving the changes, I removed my old jellyfin container, reloaded the
-unit files (as described in the previous post), and restarted to machine to
-figure out what needed to be modified for my service file.
+unit files (using `systemctl --user daemon-reload`, as described in the
+previous post), and restarted the machine to determine what would need tweaking
+when writing *my* service file.
 
 However, I never made my own service file, or even edited the generated one
-again. It appears to work just fine after making those few tweaks. So, this
-has been my second post that ended up having a much smaller scope than
-expected, thanks to the tooling around `podman`.
-
+again. It appeared to work just fine after making those few tweaks. For the
+second time in a row, I have a much simpler post than originally intended,
+due to the tooling around `podman`. I'm okay with that.
 
 ## Conclusion
 
 While the solution still isn't 100% *perfect* (containers sometimes don't
 destroy themselves, and I still have to login for the service to auto start
-up) it has been working great for me. Using `run --rm` to start new
-containers every time, and destroy themselves at shutdown, means I no longer
-have to worry about uuids. When I encounter an issue, I just stop the
-container, and it kills itself, allowing the service to bring up a fresh one
-online. Simple.
+up) it has overall been working great for me. I no longer have to worry about uuids,
+so when I encounter an issue, I stop the container, and it kills itself,
+and then the service to bring up a fresh one online. Fast and simple.
