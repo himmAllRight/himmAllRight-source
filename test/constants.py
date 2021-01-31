@@ -8,6 +8,7 @@ POST_NAMES = [
     "ansible-quickstart",
     "Ansible-On-Pi-Cluster",
     "ato2019",
+    "auto-podman-run-systemd",
     "automated-nativefier-app-builds",
     "autostarting-application-systemd-service",
     "back-on-arch",
