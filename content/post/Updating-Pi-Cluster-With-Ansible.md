@@ -71,13 +71,13 @@ ansible cluster -m ping
 Assuming the steps of [the last post](/post/Ansible-On-Pi-Cluster) were done correctly, this should work. If not, double check that post and make sure everything looks correct.
 
 ### Playbooks
-After confirming that the hosts file is properly configured, I started to dig into playbooks. Playbooks are Ansible's scripting system used to configure, deploy, and orcistrate systems. They can describe ways in which systems should be configured (ex: enable ssh), or outline a set of steps for an IT task (ex: running updates, restarting a server). As stated in the [playbook documentation](https://docs.ansible.com/ansible/playbooks.html):
+After confirming that the hosts file is properly configured, I started to dig into playbooks. Playbooks are Ansible's scripting system used to configure, deploy, and orcistrate systems. They can describe ways in which systems should be configured (ex: enable ssh), or outline a set of steps for an IT task (ex: running updates, restarting a server). As stated in the [playbook documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html):
 
 <div id="post-quote">
 *"If Ansible modules are the tools in your workshop, playbooks are your instruction manuals, and your inventory of hosts are your raw material."*
 </div>
 
-Playbook files are expressed using [YAML syntax](https://docs.ansible.com/ansible/YAMLSyntax.html), which is easy to read, but still powerful. The first step when creating a new playbook, being a YAML file, is to set the header and footer. The header consists of three `-`'s at the top of the file, and the footer ends the file with three periods (`.`). This indicates the start and end of the document.
+Playbook files are expressed using [YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html), which is easy to read, but still powerful. The first step when creating a new playbook, being a YAML file, is to set the header and footer. The header consists of three `-`'s at the top of the file, and the footer ends the file with three periods (`.`). This indicates the start and end of the document.
 
 When writing a playbook to update the pi cluster, I first needed to declare what systems the playbook is used with. To do that, I used the `hosts` key, and provided it with the `cluster` group name, which is defined in my `/etc/ansible/hosts` file, as the value.
 
@@ -108,7 +108,7 @@ After defining the ping module, I started to get a bit fancier. Well... a little
     update_cache: yes
 ```
 
-The `name:` defines the name of the task, and is the text printed out to the console when executing this step of the playbook. Setting the [`become`](https://docs.ansible.com/ansible/become.html) key to `true` tells Ansible to run the command with privilege escalation (sudo). Lastly, the remaining two lines run the `update_cache:` functionality of the apt module.
+The `name:` defines the name of the task, and is the text printed out to the console when executing this step of the playbook. Setting the `become` key to `true` tells Ansible to run the command with privilege escalation (sudo). Lastly, the remaining two lines run the `update_cache:` functionality of the apt module.
 
 With the repositories updated on each node, I can have ansible run the updates by adding the following lines to the playbook (after the cache update ones):
 
