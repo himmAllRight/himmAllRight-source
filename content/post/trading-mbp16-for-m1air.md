@@ -2,7 +2,7 @@
 title   = 'Trading my 2019 16" Macbook Pro for a M1 Macbook Air'
 date    = "2021-02-15"
 author  = "Ryan Himmelwright"
-image   = "img/posts/selecting-charmeleon-upgrades/mb_header.jpeg"
+image   = "img/posts/trading-mbp16-for-m1air/both_macbooks.jpeg"
 caption = "Durham, NC"
 tags    = ["hardware", "apple", "laptop", "macbook", "macos"]
 draft   = "True"
@@ -13,14 +13,19 @@ Comments = "True"
 
 ## Background
 
+*Picture of either Rebecca's MBA, or my 16?*
+
 - I did a macOS challenge and liked it a bit for my "normal" computing
 - I ended up getting my first mac over a year ago
 - I picked the 16" MBP mostly because it was the only one with the new keyboard at the time (a hard req. for me), and because I figured it could be my good 'workstation' mac/laptop. And it was. 
 
+*Screenshot of Turbo Boost Switcher?*
 
 - However, I don't use my mbp to it's fullest, as I'm very noise and heat aware, and actually *disable turbo boost* on my mbp... Talk about wasted power...
 
 ## The M1 is released
+
+*Stock Photo of M1?*
 
 - I was intrigued by the M1's when they were announced thought about doing the switch then.
 - However, I didn't know what the support would be like
@@ -29,10 +34,17 @@ Comments = "True"
 
 ## What I use/need my macbook for
 
+*Photo/Screenshot of normal mac apps opened?*
+
 - But then I started to think about what I *actually* need/use my mac for.
 - I try to use appropriate hardware for my uses (to an extent), and it really felt bad to use a $2000+ laptop when I used it like I did. I did *not* need it, even though I loved the speakers and screen. If it was my main machine, it would be perfect. But it isn't. I have a powerful linux workstation for my heavy lifting. Hell, macOS isn't even my power OS. When I heavy compute, it's on Linux... even if it's *from* my mac (I `ssh` into my workstation for nearly everything... even writing these posts).
 - I don't need a massive MBP for a web browser, macos apps, and a dumb terminal.
 
+*I could possibly have photos of it in these scenarios...*
+
+Maybe give some example uses and then go through them with some of this
+explanation? (ex, portable laptop (ex couch), portable workstation (ex: table
+not my desk), my mac (hooked up to desk))
 
 ### MBP vs. Air
 
