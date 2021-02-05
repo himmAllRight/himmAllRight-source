@@ -23,7 +23,7 @@ Comments = "True"
 
 - However, I don't use my mbp to it's fullest, as I'm very noise and heat aware, and actually *disable turbo boost* on my mbp... Talk about wasted power...
 
-## The M1 is released
+## The M1 Macs are Released
 
 *Stock Photo of M1?*
 
@@ -32,19 +32,38 @@ Comments = "True"
 - Also... the MBP is still an AMAZING laptop, and I could easily wait until the M1 versions of the new 16" came out
 
 
-## What I use/need my macbook for
+## How I use a Mac
+
+
+### What I use a Mac For
 
 *Photo/Screenshot of normal mac apps opened?*
 
 - But then I started to think about what I *actually* need/use my mac for.
+    - Apple environment computer and tools (Notes, Photoes, GarageBand, Reminders)
+    - Web Browsing/Learning
+    - SSH (I do coding, writing, and all those other tasks on my workstation, remotely from my macbook)
+    - Planning/organizing, emails
+    - Listen to podcasts, musics, watch videos and livestreams
+    - Chat with Friends and Family
+    - *Maybe* a light game if I'm on the go or something
+
+### Where I use a MacBook
+- I also thought about *where* I need to use a MacbBook:
+ - Portable: I use it as my portable machine, in a few types of locations:
+    - Sitting on the couch, as. LAPTOP
+    - At a Table
+    - At a table on a stand w/ Keyboard, and possibly other external displays
+- As my single AIO portable workstation if I visit family or something
+- As my Mac computer, at my desk on a stand and connected to all my devices
+
+
+### Best Tool for the Job
 - I try to use appropriate hardware for my uses (to an extent), and it really felt bad to use a $2000+ laptop when I used it like I did. I did *not* need it, even though I loved the speakers and screen. If it was my main machine, it would be perfect. But it isn't. I have a powerful linux workstation for my heavy lifting. Hell, macOS isn't even my power OS. When I heavy compute, it's on Linux... even if it's *from* my mac (I `ssh` into my workstation for nearly everything... even writing these posts).
 - I don't need a massive MBP for a web browser, macos apps, and a dumb terminal.
 
 *I could possibly have photos of it in these scenarios...*
 
-Maybe give some example uses and then go through them with some of this
-explanation? (ex, portable laptop (ex couch), portable workstation (ex: table
-not my desk), my mac (hooked up to desk))
 
 ### MBP vs. Air
 
@@ -56,6 +75,8 @@ not my desk), my mac (hooked up to desk))
 
 
 ## Decided to Go for it
+
+*Screenshot of Current MBP Trade-In Value*
 
 - I'm slowly getting less and less value for my MBP
 
@@ -72,4 +93,11 @@ the MBP to send back.
 
 - The 16 was and still is an amazing machine, and I will miss it. However,
 the m1 air is also a remarkable machine, and actually fits my current needs a
-bit better. But more on those thoughts later...
+bit better. 
+
+- I need it as my portable laptop, *secondary* computer, and my mac. I think
+the m1 air will fill all of those roles amazingly. If I needed a laptop to be my *main* machine... I would probably be waiting for newer M1s to be released.
+
+- Ultimately, it was the combination of the M1 macs being *very* good, combined with the fact that an air-like laptop actually fit my use case better (assuming it was good), is what finalized this decision.
+
+But more on those thoughts later...

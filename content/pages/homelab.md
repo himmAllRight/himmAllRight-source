@@ -56,17 +56,17 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 Fedora Silverblue 32
 *Can Connect to Periphery devices via Thunderbolt 3 Dongle
 ```
-### Interface Devices
+### Apple Hardware
 <a name="Venusaur"></a>
-#### - Venusaur (Mac)
+#### - Venusaur (MacBook)
 ```
-2019 16" Macbook Pro
-Intel i7-9750H (2.6 GHz (4.5 GHz Turbo), 6 Cores, 12 Threads)
-16 GB DDR4 2666 MHz RAM
+2020 Macbook Air
+M1 (8 CPU Cores [4 efficiency, 4 performance], 8 gpu cores)
+16 GB RAM
 512 GB SSD
-Radeon Pro 5300M GPU
-16" 3072x1920 500 nit IPS "Retina" Display
-macOS Catalina
+13.3" 2560x1600 400 nit IPS "Retina" Display
+Fan-less
+macOS Big Sur
 *Can Connect to Periphery devices via Thunderbolt 3 Dongle
 ```
 
