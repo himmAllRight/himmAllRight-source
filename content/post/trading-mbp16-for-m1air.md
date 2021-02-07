@@ -9,19 +9,54 @@ draft   = "True"
 Comments = "True"
 +++
 
+It has been over a year since I bought [my first MacBook](), a base model
+2019 16" Macbook Pro. Honestly, with it's 'retina' display, *acceptable*
+keyboard, and truely *amazing* speakers, it might be the most pleasurable
+laptop I have owned. However, recently I decided to trade it in... for a
+MacBook *air*. Here's why.
+
 <!--more-->
 
 ## Background
 
-*Picture of either Rebecca's MBA, or my 16?*
+<a href="../../img/posts/trading-mbp16-for-m1air/mac_challenge.jpeg"><img alt="Installing macOS Cataline on old air" src="../../img/posts/trading-mbp16-for-m1air/mac_challenge.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">Installing macOS Catalina on my wife's old macbook air for a mac challenge</div>
 
-- I did a macOS challenge and liked it a bit for my "normal" computing
-- I ended up getting my first mac over a year ago
-- I picked the 16" MBP mostly because it was the only one with the new keyboard at the time (a hard req. for me), and because I figured it could be my good 'workstation' mac/laptop. And it was. 
+During the Fall of 2019, I decided to do a [30 day
+macOS](/post/macos-challenge/) challenge. My take
+away was that while I think Linux is still my go-to and must-have OS, I did
+enjoy having a mac available for doing more [normal
+computing](https://www.youtube.com/watch?v=oKiAnxjM8Nc). You know, working on email, calendars, browsing, personal finance, planning home projects with the wife, ssh'ing into your servers... that type of stuff.
 
-*Screenshot of Turbo Boost Switcher?*
+After the challenge, I decided to get a mac for myself. I picked the 16" MBP
+*mostly* because it was the only macbook with the new keyboard at the time.
+This was a hard requirement for me. I wouldn't have even considered buying a
+macbook if it had a butterfly keyboard. Also, as my *only* Mac, I wanted it
+to be powerful enough to be my 'workstation' mac/laptop. And it was.
 
-- However, I don't use my mbp to it's fullest, as I'm very noise and heat aware, and actually *disable turbo boost* on my mbp... Talk about wasted power...
+<a href="../../img/posts/trading-mbp16-for-m1air/mbp_cooling.png"><img alt="the mbp had better cooling" src="../../img/posts/trading-mbp16-for-m1air/mbp_cooling.png" style="max-width: 100%;"/></a>
+<div class="caption">While the 16" MacBook Pro did improve cooling compared to it's predecessor, it was still too warm for my tastes</div>
+
+There was problem with having that power... I didn't use it. As I discovered
+[the last time I had a more "workstation laptop"](/post/sold-my-bonobo/), I
+don't like when my computers heat up and turn up their fans. The 16" macbook
+was relatively thin for the amount of power it had (did you see the size of
+my previous workstaion laptop!?!?). However, that sleek design came at a
+cost. While the re-designed cooling on the 16" was considered quite good for
+a macbook... it didn't meet my standards.
+
+<a href="../../img/posts/trading-mbp16-for-m1air/mbp_photoimport_turboboost.png"><img alt="Importing photos, turbo boost made temps 100c" src="../../img/posts/trading-mbp16-for-m1air/mbp_photoimport_turboboost.png" style="max-width: 100%;"/></a>
+<div class="caption">While using the CPU (importing photos), the temps stayed at 80C with turbo boost (still to high!). After enabling it, the temps shot up to 100C!</div>
+
+I eventually purchased and installed [turbo boost
+switcher](http://tbswitcher.rugarciap.com) a couple months ago, to *disable
+the turbo boost on my cpu* This ran the cpu at it's base clock, without
+boosting it up for more 'bursty' performance. This didn't seem to hinder my
+small day-to-day usage, and in my mind was more than worth the trade to keep
+the computer a little bit cooler, and prevent the fans from spinning up all
+the time. It was just such a shame to pay so much money for that powerful of
+a computer... and then purposefully hinder it.
+
 
 ## The M1 Macs are Released
 
