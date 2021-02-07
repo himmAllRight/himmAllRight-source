@@ -60,12 +60,21 @@ a computer... and then purposefully hinder it.
 
 ## The M1 Macs are Released
 
-*Stock Photo of M1?*
+<a href="../../img/posts/trading-mbp16-for-m1air/m1_released.png"><img alt="Apple's M1 Announcement" src="../../img/posts/trading-mbp16-for-m1air/m1_released.png" style="max-width: 100%;"/></a>
+<div class="caption">Apple announced it's first Apple Silicon CPU, the M1</div>
 
-- I was intrigued by the M1's when they were announced thought about doing the switch then.
-- However, I didn't know what the support would be like
-- Also... the MBP is still an AMAZING laptop, and I could easily wait until the M1 versions of the new 16" came out
+Then, this past November, Apple announced the new M1 Macs, the first
+computers in the company's planned 2 transition to switch from Intel CPUs to
+Apple's own "Apple Silicon" arm processors. And they were a hit.
 
+While I was skeptical about the smoothness of a cpu architecture switch early
+reviewers indicated that Apple had handled it extremely well. This had me
+tempted to immediately swap my MBP in for one of the newer ones. I decided to
+hold out for a bit, considering that my 16" computer was still an *amazing*
+laptop that was more than capable of what I needed it for.
+
+That being said, the seeds of question *how* I use a mac, and *what for* had
+been planted.
 
 ## How I use a Mac
 
