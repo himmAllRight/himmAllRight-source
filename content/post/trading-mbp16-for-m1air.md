@@ -1,5 +1,5 @@
 +++
-title   = 'Trading my 2019 16" Macbook Pro for a M1 Macbook Air'
+title   = 'Traded my 2019 16" Macbook Pro for a M1 Macbook Air'
 date    = "2021-02-15"
 author  = "Ryan Himmelwright"
 image   = "img/posts/trading-mbp16-for-m1air/both_macbooks.jpeg"
@@ -78,70 +78,117 @@ been planted.
 
 ## How I use a Mac
 
+I started to map out what my Mac use-cases in two broad categories: *What* I use my mac for, and *Where* I use it. After some brainstorming, I had the following lists:
 
-### What I use a Mac For
 
-*Photo/Screenshot of normal mac apps opened?*
+#### What I use a Mac For
 
-- But then I started to think about what I *actually* need/use my mac for.
-    - Apple environment computer and tools (Notes, Photoes, GarageBand, Reminders)
-    - Web Browsing/Learning
-    - SSH (I do coding, writing, and all those other tasks on my workstation, remotely from my macbook)
-    - Planning/organizing, emails
-    - Listen to podcasts, musics, watch videos and livestreams
-    - Chat with Friends and Family
-    - *Maybe* a light game if I'm on the go or something
+I most commonly use my Mac for:
 
-### Where I use a MacBook
-- I also thought about *where* I need to use a MacbBook:
+- Utilizing Apple ecosystem apps and services (Notes, Reminders, Photos, GarageBand, Music, Etc)
+- Web Browsing
+- Online Courses
+- SSH and/or VS Code (I do coding, writing, and all those other tasks on my workstation, and remote in when on my macbook)
+- Personal Planning/organizing, emails
+- Listen to podcasts or music
+- Watching videos or livestreams
+- Chating with Friends and Family
+- *Maybe* a light game if I'm on the go or not at my desk 
+
+
+#### Where I use a MacBook
+
+<a href="../../img/posts/trading-mbp16-for-m1air/macbook_stand.jpeg"><img alt="Macbook on a stand" src="../../img/posts/trading-mbp16-for-m1air/macbook_stand.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">As my main laptop, my MacBook occasionally has to serve as my portable workstation</div>
+
+
+Being both my *only* Mac, as well as my main portable computer, there is actually quite a range of *where* and *how* I use my macbook. Some examples include:
+
  - Portable: I use it as my portable machine, in a few types of locations:
-    - Sitting on the couch, as. LAPTOP
+    - Sitting on the couch
     - At a Table
     - At a table on a stand w/ Keyboard, and possibly other external displays
-- As my single AIO portable workstation if I visit family or something
-- As my Mac computer, at my desk on a stand and connected to all my devices
+- As my single portable workstation if I visit family or something
+- As my Mac desktop, conected to all the devices at my desk via a thunderbolt hub.
 
 
 ### Best Tool for the Job
-- I try to use appropriate hardware for my uses (to an extent), and it really felt bad to use a $2000+ laptop when I used it like I did. I did *not* need it, even though I loved the speakers and screen. If it was my main machine, it would be perfect. But it isn't. I have a powerful linux workstation for my heavy lifting. Hell, macOS isn't even my power OS. When I heavy compute, it's on Linux... even if it's *from* my mac (I `ssh` into my workstation for nearly everything... even writing these posts).
-- I don't need a massive MBP for a web browser, macos apps, and a dumb terminal.
 
-*I could possibly have photos of it in these scenarios...*
+*This section really need to be trimmed and possible a picture added*
+
+The discrepancy that really stood out to me while makings these lists, was
+that I generally try to use appropriate hardware for my uses (for the most
+part). Looking over what I wrote it really felt bad to have a $2000+ laptop
+for what I use it for. I did *not* need that much for my *secondary
+computer*, even if I loved the speakers and screen. If this was my *main*
+compouter, it would be perfect. But it isn't. I have a powerful linux
+workstation for my heavy lifting and complicated, virtual workloads. Hell,
+macOS isn't even my power OS. I do all my power user computing on Linux...
+even if it's *from* my mac (I `ssh` into my workstation for nearly
+everything... even writing these posts). To summarize, I realized that while
+it *meets* my computing needs, I don't need a massive MBP to run a web
+browser, macos apps, and a dumb terminal.
 
 
 ### MBP vs. Air
 
-- While I do occasionally use and have intentions to use some of the mac's heavier software (garageband/logic, imovie/final cut, and others), the performance of the M1 is more than enough than what I would need it for, and even beats my intel mbp. 
-- It also wouldn't benefit me too much to wait for more powerful M1s, because my needs are already passed for this device.
-- The dedicated GPU in the mbp also doesn't benefit me, as I do my gaming in a windows VM on my workstation. In fact, it actually hurts my experience by generating excess heat and kicking up the fans
-    - The air's gpu is also enough for what I need, as it seems to even handle the occasional low end game (which are what I mostly play).
-- Overall, the Air is able to do most things at right around the same level, or sometimes, in the case of portability and noise for example, **much** better.
+<a href="../../img/posts/trading-mbp16-for-m1air/both_macs_closed.jpeg"><img alt="Both Macs, closed on table" src="../../img/posts/trading-mbp16-for-m1air/both_macs_closed.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">The 2019 16" MacBook Pro and the 2020 M1 Macbook Air</div>
+
+After hammering out my macbook use-cases, I theorized how a M1 macbook air
+might compare to my mbp in meeting these needs. I came up with the following
+conclusions:
+
+- While I do occasionally use some of the mac's heavier software (garageband,
+imovie, Photos, and others), the performance of the M1 is more than enough
+than what I would need it for, and even beats my intel mbp.
+- It wouldn't benefit me too much to wait for more powerful M1s, because my
+needs are already passed for what I need this device to do.
+- The dedicated GPU in the mbp also doesn't benefit me, as I do all my gaming
+in a windows VM on my workstation. In fact, it actually *hurts* my experience
+by generating excess heat and kicking up the fans.
+    - The air's gpu is also enough for what I need, as it seems to even
+    handle the occasional low end game (which are what I mostly play).
+    - And on that note... the air doesn't even *have* a fan to spin up...
+
+Overall, the Air is able to do most things at right around the same level,
+or sometimes, in the case of portability and noise for example, **much**
+better than my macbook pro. Most of the things the mbp is better at, aren't
+actually as important for my use.
 
 
 ## Decided to Go for it
 
-*Screenshot of Current MBP Trade-In Value*
+<a href="../../img/posts/trading-mbp16-for-m1air/trade-in-value.png"><img alt="Current trade-in-value" src="../../img/posts/trading-mbp16-for-m1air/trade-in-value.png" style="max-width: 100%;"/></a>
+<div class="caption">I knew my trade-in value would only get worse, and I didn't *need* to wait for the new 16" Pro to come out</div>
 
-- I'm slowly getting less and less value for my MBP
+Eventually, I decided to do the trade-in. My reasons were mainly that:
 
-- I figure once the M1 16" MBP is released, the value of mine will plummit,
-possibly even with Apple trade-in since it would no longer be the "current"
-model...
+1. The current trade in price would cover the price of the "higher end" M1
+Macbook Air, and I would only have to pay tax and for any other updgrades I
+wanted to make.
 
-- So I ordered the air, but bumped up a few specs so it matched my mbp's 16GB
-RAM and 512GB ssd. I at least wanted that the same if I was going to already
-be "downgrading" from a mbp to an air...
+2. With that said, I knew I was m slowly getting less and less value for my
+MBP. I figured once the M1 16" MBP was released, the value for mine would
+plummet.
 
-- It took almost a month to arrive, but now it's here, and I'm shipping up
+So I ordered the air, but bumped up a few specs so it matched my mbp's 16GB
+RAM and 512GB ssd. If I was going to be be "downgrading" from a mbp to an
+air, I at least wanted to keep the same amount of RAM and storage that I had
+before. It took almost a month to arrive, but now it's here, and I'm shipping up
 the MBP to send back.
 
-- The 16 was and still is an amazing machine, and I will miss it. However,
-the m1 air is also a remarkable machine, and actually fits my current needs a
-bit better. 
+I need this *secondary computer* to function as my portable laptop, and my
+only Mac. I think the m1 air will fill all of these roles amazingly. If I
+needed a laptop to be my *main* machine... I would probably keep the MBP and wait for
+the newer Apple Silicon version to be released, and upgrade then.
 
-- I need it as my portable laptop, *secondary* computer, and my mac. I think
-the m1 air will fill all of those roles amazingly. If I needed a laptop to be my *main* machine... I would probably be waiting for newer M1s to be released.
+## Conclusion
 
-- Ultimately, it was the combination of the M1 macs being *very* good, combined with the fact that an air-like laptop actually fit my use case better (assuming it was good), is what finalized this decision.
+<a href="../../img/posts/trading-mbp16-for-m1air/mbp16.jpeg"><img alt="My mbp." src="../../img/posts/trading-mbp16-for-m1air/mbp16.jpeg" style="max-width: 100%;"/></a>
+<div class="caption">My old 16" MacBook Pro</div>
 
-But more on those thoughts later...
+The 2019 16" MacBook Pro was and still is an amazing machine, and I will miss
+it. Ultimately though, it was the combination of the M1 macs being *very*
+good, and the fact that a *good* air-like laptop actually fit my use case
+better is what finalized this decision.
