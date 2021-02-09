@@ -9,37 +9,39 @@ draft   = "True"
 Comments = "True"
 +++
 
-It has been over a year since I bought [my first MacBook](), a base model
-2019 16" Macbook Pro. Honestly, with it's 'retina' display, *acceptable*
-keyboard, and truely *amazing* speakers, it might be the most pleasurable
-laptop I have owned. However, recently I decided to trade it in... for a
-MacBook *air*. Here's why.
+Over a year has passed since I purchased a [base model 2019 16" Macbook
+Pro](/post/new-2019-16inch-mbp/). My first Mac. With it's large "retina"
+display, resurrected magic keyboard, and truly *amazing* speakers, it might
+be the most pleasurable laptop I have ever owned. However, I decided to trade
+it in... for a new MacBook *air*. Here's why.
 
 <!--more-->
 
 ## Background
 
 <a href="../../img/posts/trading-mbp16-for-m1air/mac_challenge.jpeg"><img alt="Installing macOS Cataline on old air" src="../../img/posts/trading-mbp16-for-m1air/mac_challenge.jpeg" style="max-width: 100%;"/></a>
-<div class="caption">Installing macOS Catalina on my wife's old macbook air for a mac challenge</div>
+<div class="caption">Installing macOS Catalina on my wife's old macbook air for my mac challenge</div>
 
-During the Fall of 2019, I decided to do a [30 day
-macOS](/post/macos-challenge/) challenge. My take
-away was that while I think Linux is still my go-to and must-have OS, I did
-enjoy having a mac available for doing more [normal
-computing](https://www.youtube.com/watch?v=oKiAnxjM8Nc). You know, working on email, calendars, browsing, personal finance, planning home projects with the wife, ssh'ing into your servers... that type of stuff.
+In the Fall of 2019, I decided to do a [30 day macOS](/post/macos-challenge/)
+challenge. During the challenge, I learned that while I think Linux is still
+my go-to and *indispensable* OS, I did enjoy having a mac available for doing
+more ["normal life computing"](https://www.youtube.com/watch?v=oKiAnxjM8Nc).
+Web browsing, writing emails, managing calendars, personal finance, planning
+home projects with my wife, ssh'ing into your servers to code... that type of
+stuff.
 
-After the challenge, I decided to get a mac for myself. I picked the 16" MBP
-*mostly* because it was the only macbook with the new keyboard at the time.
-This was a hard requirement for me. I wouldn't have even considered buying a
-macbook if it had a butterfly keyboard. Also, as my *only* Mac, I wanted it
+After the challenge, I decided to acquire a mac for myself. I choose the 16" MBP
+*mostly* because it was the only macbook at the time with the new keyboard.
+That was a hard requirement I had. I wouldn't even consider buying a
+butterfly keyboard macbook. Keyboard aside, as my *only* Mac, I did want it
 to be powerful enough to be my 'workstation' mac/laptop. And it was.
 
 <a href="../../img/posts/trading-mbp16-for-m1air/mbp_cooling.png"><img alt="the mbp had better cooling" src="../../img/posts/trading-mbp16-for-m1air/mbp_cooling.png" style="max-width: 100%;"/></a>
 <div class="caption">While the 16" MacBook Pro did improve cooling compared to it's predecessor, it was still too warm for my tastes</div>
 
-There was problem with having that power... I didn't use it. As I discovered
+After a few month of use, a problem emerged from having that power... I didn't use it. As I discovered
 [the last time I had a more "workstation laptop"](/post/sold-my-bonobo/), I
-don't like when my computers heat up and turn up their fans. The 16" macbook
+don't like when my computers heat up and spin up their fans. The 16" macbook
 was relatively thin for the amount of power it had (did you see the size of
 my previous workstaion laptop!?!?). However, that sleek design came at a
 cost. While the re-designed cooling on the 16" was considered quite good for
