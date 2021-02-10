@@ -39,10 +39,10 @@ to be powerful enough to be my 'workstation' mac/laptop. And it was.
 <a href="../../img/posts/trading-mbp16-for-m1air/mbp_cooling.png"><img alt="the mbp had better cooling" src="../../img/posts/trading-mbp16-for-m1air/mbp_cooling.png" style="max-width: 100%;"/></a>
 <div class="caption">While the 16" MacBook Pro did improve cooling compared to it's predecessor, it was still too warm for my tastes</div>
 
-After a few month of use, a problem emerged from having that power... I didn't use it. As I discovered
+After a few months of use, a problem emerged regarding that power... I didn't utilize it. As I discovered
 [the last time I had a more "workstation laptop"](/post/sold-my-bonobo/), I
-don't like when my computers heat up and spin up their fans. The 16" macbook
-was relatively thin for the amount of power it had (did you see the size of
+don't like when my computers overheat and spin up their fans. The 16" macbook
+was relatively thin for its specs (did you see the size of
 my previous workstaion laptop!?!?). However, that sleek design came at a
 cost. While the re-designed cooling on the 16" was considered quite good for
 a macbook... it didn't meet my standards.
@@ -51,12 +51,12 @@ a macbook... it didn't meet my standards.
 <div class="caption">While using the CPU (importing photos), the temps stayed at 80C with turbo boost (still to high!). After enabling it, the temps shot up to 100C!</div>
 
 I eventually purchased and installed [turbo boost
-switcher](http://tbswitcher.rugarciap.com) a couple months ago, to *disable
-the turbo boost on my cpu* This ran the cpu at it's base clock, without
+switcher](http://tbswitcher.rugarciap.com), to *disable
+turbo boost on my cpu* This runs the cpu at it's base clock, without
 boosting it up for more 'bursty' performance. This didn't seem to hinder my
 small day-to-day usage, and in my mind was more than worth the trade to keep
 the computer a little bit cooler, and prevent the fans from spinning up all
-the time. It was just such a shame to pay so much money for that powerful of
+the time. It was just a shame to pay so much money for such powerful of
 a computer... and then purposefully hinder it.
 
 
@@ -65,17 +65,17 @@ a computer... and then purposefully hinder it.
 <a href="../../img/posts/trading-mbp16-for-m1air/m1_released.png"><img alt="Apple's M1 Announcement" src="../../img/posts/trading-mbp16-for-m1air/m1_released.png" style="max-width: 100%;"/></a>
 <div class="caption">Apple announced it's first Apple Silicon CPU, the M1</div>
 
-Then, this past November, Apple announced the new M1 Macs, the first
+Then, in November, Apple announced the new M1 Macs, the first
 computers in the company's planned 2 transition to switch from Intel CPUs to
 Apple's own "Apple Silicon" arm processors. And they were a hit.
 
-While I was skeptical about the smoothness of a cpu architecture switch early
-reviewers indicated that Apple had handled it extremely well. This had me
+While I was skeptical about the smoothness of a cpu architecture switch, early
+reviewers indicated that Apple handled it extremely well. This had me
 tempted to immediately swap my MBP in for one of the newer ones. I decided to
-hold out for a bit, considering that my 16" computer was still an *amazing*
+hold out for a bit, reasoning that my 16" computer was still an *amazing*
 laptop that was more than capable of what I needed it for.
 
-That being said, the seeds of question *how* I use a mac, and *what for* had
+That being said, the seeds of questioning *how* I use a mac, and *what for* had
 been planted.
 
 ## How I use a Mac
