@@ -151,27 +151,27 @@ conclusions:
 
 - While I do occasionally use some of the mac's heavier software (garageband,
 imovie, Photos, and others), the performance of the M1 is more than enough
-than what I would need it for, and even *beats* my intel mbp.
-- It wouldn't benefit me too much to wait for more powerful M1s, because my
-needs are already passed for what I need this device to do. Even if an Apple
-Silicon 16" MBP was available, while tempted, I've already established it
-isn't a good fit for this device.
+for what I would need it to do, and even *beats* my intel mbp on some tasks.
+- It wouldn't benefit me to wait for more powerful Apple Silicon Macs,
+because my needs are already passed for what I need this device to do. Even
+if an Apple Silicon 16" MBP *was* available, tempting as it might be, I've
+already established it isn't a good fit for this device.
 - While I would miss the screen space and speakers, the air would be *much*
-more portable, not only for traveling, but even to just pick it up with one
-hand and take it into the other room.
-- The dedicated GPU in the mbp also doesn't benefit me, as I do all my gaming
-in a windows VM on my workstation. In fact, it actually *hurts* my experience
-by generating excess heat and kicking up the fans.
+more portable. Not only would this be great when traveling, but would also be
+appreciated when picking it up with one hand to take into another room.
+- The dedicated GPU in the mbp doesn't really benefit me, as I do all my
+gaming in a windows VM on my workstation. In fact, it actually *hurts* my
+experience by generating excess heat and kicking up the fans.
 - And on that note... the air doesn't even *have* a fan to spin up, and
-reportedly doesn't get too warm either. Unlike the M1 mbp, it *will* throttle
+doesn't appear to get too warm either. Unlike the M1 mbp, it *will* throttle
 to cool the CPU during sustained workloads, but we've already established
-that I am *already* doing that on my 16" ☺︎.
+that I am *currently* doing that on my 16" anyway ☺︎.
 
-Overall, it appeared that the Air would be able to do most of the tasks my
-16" MBP could, at around the same level, if not better. In the case of
-portability and noise, the air would be **much** better suited than my
-macbook pro. Additionally, most of the things the MBP *is* better at, aren't
-actually as important for my needs.
+Overall, I concluded that the Air should be able to do most of the tasks my
+16" MBP does, at around the same level of perfomrance, if not better. In the
+case of portability and noise, the air would be **much** better suited than
+my macbook pro. Additionally, most of the workloads the MBP *is* better at,
+aren't as important for my needs.
 
 
 ## Decided to Go for it
@@ -179,33 +179,33 @@ actually as important for my needs.
 <a href="../../img/posts/trading-mbp16-for-m1air/trade-in-value.png"><img alt="Current trade-in-value" src="../../img/posts/trading-mbp16-for-m1air/trade-in-value.png" style="max-width: 100%;"/></a>
 <div class="caption">I knew my trade-in value would only get worse, and I didn't *need* to wait for the new 16" Pro to come out</div>
 
-Eventually, I decided to do the trade-in. My reasons were mainly that:
+Eventually, I decided to make the trade-in. My main reasons were:
 
-1. The current trade in price would cover the price of the "higher end" M1
+1. The current trade-in price would cover the price of the "higher end" M1
 Macbook Air, and I would only have to pay tax and for any other updgrades I
 wanted to make.
 
-2. With that said, I knew I was m slowly getting less and less value for my
-MBP. I figured once the M1 16" MBP was released, the value for mine would
-plummet.
+2. I knew I would slowly get less and less value for my MBP. I figured
+once a new 16" MBP was released, the value for mine would likely plummet.
 
-So I ordered the air, but bumped up a few specs so it matched my mbp's 16GB
-RAM and 512GB ssd. If I was going to be be "downgrading" from a mbp to an
-air, I at least wanted to keep the same amount of RAM and storage that I had
-before. It took almost a month to arrive, but now it's here, and I'm shipping up
-the MBP to send back.
+So I ordered the higher tier air ( with 8gpu cores + 512GB of storage),
+and bumped up the ram to 16GB. If I was going to be be "downgrading"
+from a MBP to an air, I wanted to at least keep the same amount of RAM and
+storage that I had before. It took almost a month to arrive, but now it's
+here, and I'm packing up the MBP to send back.
 
-I need this *secondary computer* to function as my portable laptop, and my
-only Mac. I think the m1 air will fill all of these roles amazingly. If I
-needed a laptop to be my *main* machine... I would probably keep the MBP and wait for
-the newer Apple Silicon version to be released, and upgrade then.
+I need this secondary computer to function as my portable laptop, and
+(physica) only Mac. I think the m1 air will fill both of these roles
+extremely well. If I needed a laptop to be my *main* machine... I would
+probably keep the MBP and upgrade after a newer Apple Silicon version is
+released.
 
 ## Conclusion
 
 <a href="../../img/posts/trading-mbp16-for-m1air/mbp16.jpeg"><img alt="My mbp." src="../../img/posts/trading-mbp16-for-m1air/mbp16.jpeg" style="max-width: 100%;"/></a>
 <div class="caption">My old 16" MacBook Pro</div>
 
-The 2019 16" MacBook Pro was and still is an amazing machine, and I will miss
-it. Ultimately though, it was the combination of the M1 macs being *very*
-good, and the fact that a *good* air-like laptop actually fit my use case
-better is what finalized this decision.
+The 2019 16" MacBook Pro was and still is an amazing machine. I *will* miss
+it. Ultimately though, a combination of the M1 Macs being *very* good, and
+the fact that a smaller, thin, and light laptop fit my use case best,
+finalized my decision to switch.
