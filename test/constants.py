@@ -82,6 +82,7 @@ POST_NAMES = [
     "switching-to-mesh-network",
     "three-required-gnome-extensions",
     "tmpfs-mount-ramdisk",
+    "trading-mbp16-for-m1air",
     "trying-notion",
     "Trying-out-plasma5",
     "trying-out-seafile",
