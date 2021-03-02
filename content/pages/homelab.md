@@ -1,6 +1,6 @@
 ---
 title: "Homelab"
-date: 2020-09-10
+date: 2021-02-17
 type: homelab
 layout: homelab-page
 menu:
@@ -25,7 +25,7 @@ This is a page where I maintain the status of the computers in my “Homelab”
 
 ### Linux Computers
 
-<a href="../../img/homelab/charmeleon-guts.jpeg"><img alt="My Desk" src="../../img/homelab/charmeleon-guts.jpeg" width=100%></a>
+<a href="../../img/homelab/charmeleon_inside.jpeg"><img alt="My Workstation" src="../../img/homelab/charmeleon_inside.jpeg" width=100%></a>
 <div class="caption">My workstation, Charmeleon</div>
 
 #### - Charmeleon (Linux Workstation/VM Host/Gaming Computer)
@@ -34,15 +34,16 @@ Ryzen 9 3900x [3.8 GHz (4.6GHz Boost), 12 Cores, 24 Threads)
 Noctua NH-U14s CPU Cooler
 Aorus Elite Wifi x570 Motherboard
 96 GB (2x16GB, 2x32GB) DDR4-3200 Mhz, CL 16 RAM?
-Sapphire Radeon Pulse RX 580 8GB GPU
-Sapphire Radeon Pulse RX 550 4GB GPU
-500 GB Samsung 970 EVO NVME SSD
-500 GB Samsung 850 EVO SATA SSD
+Sapphire Radeon Pulse RX 580 8GB GPU (VM Passthrough GPU)
+Sapphire Radeon Pulse RX 550 4GB GPU (Host GPU)
+500 GB Samsung 970 EVO NVME SSD (Linux Host Install)
+2 TB Samsung 850 EVO SATA SSD (Linux /Data drive)
+500 GB Samsung 850 EVO SATA SSD (Windows VM Install)
 EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
 Fractal Design Meshify C Dark TG ATX Mid Tower Case
 2 x Noctua NF-A14 PWM 140mm Fans
 1 x Noctua NF-F12 PWM 120mm Fan
-Fedora 32 (KDE Plasma)
+Fedora 33 (KDE Plasma)
 *Connected to Periphery devices
 ```
 <a name="kadabra"></a>
@@ -53,7 +54,7 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 16 GB RAM
 250 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
-Fedora Silverblue 32
+Fedora 33 (KDE Plasma)
 *Can Connect to Periphery devices via Thunderbolt 3 Dongle
 ```
 ### Apple Hardware

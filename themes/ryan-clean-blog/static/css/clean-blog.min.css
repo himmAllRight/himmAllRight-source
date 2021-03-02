@@ -196,10 +196,12 @@ hr.small {
     font-family: Lora, 'Times New Roman', serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 20px
+    font-size: 20px;
+/*    background: rgba(0, 0, 0, 0.2) */
 }
 .intro-header .post-heading .meta a {
-    color: #fff
+    color: #fff;
+/*    background: rgba(0, 0, 0, 0.2) */
 }
 @media only screen and (min-width: 768px) {
     .intro-header .post-heading h1 {
