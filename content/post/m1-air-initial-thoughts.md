@@ -1,6 +1,6 @@
 +++
 title   = '2020 M1 Macbook Air Initial Thoughts'
-date    = "2021-03-01"
+date    = "2021-03-02"
 author  = "Ryan Himmelwright"
 image   = "img/posts/m1-air-initial-thoughts/m1_air_header.jpeg"
 caption = "Durham, NC"
@@ -11,7 +11,7 @@ Comments = "True"
 
 As discussed in my [previous post](/post/trading-mbp16-for-m1air/), I decided
 to trade-in my 2019 16" MacBook Pro and replace it with a new 2020 M1 MacBook
-Air. So far, I think making the swap was a great idea. Here are
+Air. So far, I think making the swap was a terrific idea. Here are
 my initial thoughts...
 
 <!--more-->
@@ -21,10 +21,10 @@ my initial thoughts...
 <a href="../../img/posts/m1-air-initial-thoughts/m1_air_box.jpeg"><img alt="The M1 Air Box" src="../../img/posts/m1-air-initial-thoughts/m1_air_box.jpeg" style="max-width: 100%;"/></a>
 <div class="caption">The MacBook Air Box</div>
 
-To recap, I got the 'second tier' model 2020 M1 MacBook Air (Silver, 8 gpu
+To recap, I got the 'second tier' 2020 M1 MacBook Air (Silver, 8 gpu
 cores, 512GB ssd) and upgraded the RAM to 16Gb. I wanted to maintain the same
-RAM and storage that my MBP had. After way too many weeks (3+), the air
-showed up at my door.
+RAM and storage that my MBP had. After an eternity (3+ weeks), the air
+was delivered.
 
 
 ## What I Like
@@ -37,13 +37,13 @@ showed up at my door.
 First, lets start with the good. There is a lot to say here, but these are my
 main thoughts:
 
-- It's cool and ~~quiet~~ *silent*. It hardly heat up, and when
+- It's cool and ~~quiet~~ *silent*. It hardly heats up, and when
 it does, it is *barely* noticeable.
 
-- It very portable. I can easily pick it up with one had and open it up on my
+- It is very portable. I can easily pick it up with one hand, and set it on my
 lap nearly anywhere.
 
-- I like having physical function keys again, especially now that I learned
+- I like having physical function keys again. I even learned
 how to utilize [BetterTouchTool](https://folivora.ai) for window management
 using keyboard shortcuts, instead of the touch bar.
 
@@ -56,22 +56,23 @@ Your browser does not support the video tag.
 <div id="caption">The instant wake is nicer than I thought it would be</id>
 </center>
 
-- Instant wake is actually delightful. I honestly thought my sleep settings were
-misconfigured, and the laptop simply wasn't turning off when I shut the lid. It's a
-feature that I thought "who cares" when it was announced, but after I tried
-it, my 16" suddenly felt unbearably slow for the few days I had both.
+- Instant wake is actually delightful. I initially thought my sleep settings
+were misconfigured, and that the laptop wasn't turning off when I shut
+the lid. It's a feature that I thought "*who cares*" when it was announced, but
+after I tried it, my 16" suddenly felt unbearably slow for the few days I had
+both.
 
 - Rosetta II is amazing at what it does. Most apps just work because of it,
 even if they haven't been ported to Apple Silicon yet. This has made the transition
 rather seamless.
 
-- It works surprisingly well at my desk on the stand. Possibly even better
-than the 16". The laptop is about the same size of by stand, so I'm able to
-push it further back, out of the way, and it is much sturdier. The smaller
-screen hasn't been an issue with the content I usually on it at my desk
-(background videos or nothing usually). With how cool it runs, I also feel
-safer closing it to focus solely on my external monitor, almost as if I was
-using a mac mini.
+- It works surprisingly well at my desk on the laptop stand, possibly even
+better than the 16". The laptop is about the same size as the stand, so I'm
+able to push it further back, out of the way, and it is much sturdier. The
+smaller screen hasn't been an issue with the content I usually play on it at
+my desk (background videos or music). With how cool it runs, I also feel
+safer closing it to focus solely on my external monitor, as if I was using a
+mac mini.
 
 <center>
 <video style="max-width:100%;" controls>
@@ -79,7 +80,7 @@ using a mac mini.
   <source src="movie.ogg" type="video/ogg">
 Your browser does not support the video tag.
 </video>
-<div id="caption">New tabs in my terminal lagged for some reason on the MBP. Not on the Air though!</id>
+<div id="caption">New tabs in my terminal lagged for some reason on the MBP. Not on the Air.<id>
 </center>
 
 
@@ -88,7 +89,7 @@ a second to load the shell prompt in iterm with my config. On the air,
 it is instant.
 
 - Garage band works much better. It opens immediately and is ready. My 16"
-would take forever to load, and then often beach-ball and crash.
+would freeze while loading, then sometimes beach-ball and crash.
 
 - The battery life is great. I don't really think about it.
 
@@ -119,28 +120,28 @@ major installation issues.
 <a href="../../img/posts/m1-air-initial-thoughts/keyboard.jpeg"><img alt="The M1 Air Keyboard" src="../../img/posts/m1-air-initial-thoughts/keyboard.jpeg" style="max-width: 100%;"/></a>
 <div class="caption">The MacBook Air does not have a touchbar</div>
 
-There were a few things that we neither good nor bad, just *different* coming
+There were a few things that were neither good nor bad, just *different* coming
 from an Intel 16" MBP:
-
-- The Efficiency cores are weird at first. I would look at my CPU usage when
-only running background tasks and wonder why the first four cores had such
-high usage, especially when compared to the other four. Eventually I
-realized, it was because the tasks were running mostly using the efficiency
-cores. So while it *looked* like there was a heavy load that it wasn't being
-properly balanced across the cores... the work was actually shifted to be
-more efficient. This is the desired functionality, but weird to get used to
-at first if you're someone that is constantly watching CPU usage like I to.
 
 - Surprisingly, not having the touch bar. Not that I *miss* it, but I
 apparently got used to checking the time there and had to slowly break that
 habit.
 
+- The Efficiency cores are weird at first. I would look at my CPU usage when
+only running background tasks and wonder why the first four cores had such
+high usage, especially when compared to the other four. Eventually, I
+realized it was because the tasks were running using mostly the efficiency
+cores. So while it *looked* like there was a heavy load that it wasn't being
+properly balanced across the cores... the work was actually shifted to be
+more efficient. This is the desired functionality, but weird to get used to
+at first if you're someone that is constantly watching CPU usage like I do.
+
 - The smaller screen space. I got used to the smaller screen quicker than I
 anticipated, and I think the trade-off is worth it for the portability of
-this laptop. But it is different.
+this laptop. But it *is* different.
 
-- I miss the speakers on the 16". The air has *great* speakers... but the 16"
-had *amazing* speakers. Like the screen resolution, this is mostly a physical
+- The speakers. The air has *great* speakers... but the 16"
+had *truely amazing* speakers. Like the screen resolution, this is mostly a physical
 size limitation, and I think the trade-off is well worth it here as well.
 
 
@@ -151,10 +152,9 @@ size limitation, and I think the trade-off is well worth it here as well.
 
 This laptop has been remarkable. It reminds me of some of my previous
 *portable* laptops, like the x230 thinkpad and my x201e. That is a good thing.
-*I
-loved both of those computers and their ability to be thrown in a bag on the
-go. It is a setup that pairs nicely with a powerful workstation, which [I
+I *loved* both of those computers and their ability to be thrown in a bag on
+the go. It is a setup that pairs nicely with a powerful workstation, which [I
 currently have](/post/selecting-charmeleons-upgrades/). While the air has
 about the same footprint as both of those previous laptops, it is thinner,
-has more screen space, and is
+lighter, has more screen space, and is
 *magnitudes* more powerful. I can't complain with that.
