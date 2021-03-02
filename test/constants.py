@@ -1,4 +1,4 @@
-BASE_URL = "http://localhost:1313"
+BASE_URL = "http://10.0.7.5:1313"
 
 SITE_PAGES = ["/", "/pages/about/", "/pages/homelab/"]
 
@@ -44,6 +44,7 @@ POST_NAMES = [
     "LFS-repeated-setup-steps",
     "LFS-SBus-and-binutils",
     "LIA-1-0-beta-released",
+    "m1-air-initial-thoughts",
     "macos-challenge",
     "my-new-used-x230",
     "my-t470",
