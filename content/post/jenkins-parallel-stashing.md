@@ -9,6 +9,12 @@ draft   = "True"
 Comments = "True"
 +++
 
+Recently at work, I hit a snag while creating a Jenkins pipeline. I was
+having trouble having metadata files persist across the entire pipeline. In
+the end, the solution was for me to just use the stash feature, as it is
+intended XD. However, I found little support for my issue online, so I
+figured I might as well write a short post about my experience in case
+someone else experiences a similar problem in the future.
 
 <!--more-->
 
