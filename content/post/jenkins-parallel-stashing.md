@@ -20,7 +20,8 @@ someone else experiences a similar problem in the future.
 
 ## Background
 
-*Screenshot of example pipeline*
+<a href="../../img/posts/jenkins-parallel-stashing/pipeline.png"><img alt="Pipeline stages" src="../../img/posts/jenkins-parallel-stashing/pipeline.png" style="max-width: 100%;"/></a>
+<div class="caption">Pipeline stages</div>
 
 So, this pipeline is basically running an integration test suite I am working
 on. It contains mostly sequential stages, but there are occasional parallel
@@ -64,14 +65,20 @@ directory that the stages could all write to. My thought was that I could
 then stash it, and unstash it at the begging of the first stage in each
 subsequent node.
 
-*Code snippets of stash and unstash calls*
+```groovy
+sh "mkdir metadata"
+sh "touch metadata/metadata_init" // Stash won't work with empty dirs
+stash includes: 'metadata/', name: 'metadata', allowEmpty: true
+```
+
+```groovy
+unstash 'metadata'
+```
 
 So, I added in the stash calls, having everything write to a `metadata`
 stash. It was a good idea, but there was a problem...
 
 ## *My* Problem
-
-*Code snippet of latest output?*
 
 Because of how the stash is done in parallel, and individually, it meant that
 only the files of the *latest* parallel stage was being saved and stored.
@@ -83,7 +90,18 @@ I really did was swapped my stash call to use the feature
 *as intended*. Still, I had trouble finding *anything* online talking about
 *using stash the way I needed to, so I thought I'd share.
 
-*Code Snippet of fixed solution*
+```groovy
+// Stash each builder's metadata if success
+stash includes: 'metadata/', name: 'metadata-${testLabel}', allowEmpty: true
+```
+
+```groovy
+// Un-stash all successful builder metadata into single dir
+for(label in testLabel) {
+    unstash "metadata-${label}"
+}
+```
+
 
 My solution was to continue to use the single directory method, but *dynamically
 change the name of the stash* during that initial parallel stage. It turns out,
