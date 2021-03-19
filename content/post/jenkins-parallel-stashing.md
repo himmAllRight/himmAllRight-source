@@ -1,69 +1,60 @@
 +++
 title   = "Jenkins Parallel Stashing"
-date    = "2021-03-15"
+date    = "2021-03-19"
 author  = "Ryan Himmelwright"
-image   = "img/posts/m1-air-initial-thoughts/m1_air_header.jpeg"
-caption = "Durham, NC"
+image   = "img/posts/jenkins-parallel-stashing/pennsburg_sky.jpeg"
+caption = "Pennsburg, PA"
 tags    = ["jenkins", "devops", "containers"]
 draft   = "True"
 Comments = "True"
 +++
 
-Recently at work, I hit a snag while creating a Jenkins pipeline. I was
-having trouble having metadata files persist across the entire pipeline. In
-the end, the solution was for me to just use the stash feature, as it is
-intended XD. However, I found little support for my issue online, so I
-figured I might as well write a short post about my experience in case
-someone else experiences a similar problem in the future.
+I recently hit a snag while creating a Jenkins pipeline at work. I was having
+difficulty preserving files across the entire pipeline run. In the end, my
+solution was to use the stash feature. However, I found little support for my
+specific type of issue online, so I figured I might as well write a short
+post about my experience. 
 
 <!--more-->
 
 ## Background
 
+The pipeline runs an integration test suite I am working on. It contains
+mostly sequential stages, but there are a few that run in parallel.
+Specifically, there are provisioning and tear-down stages, that each run in
+across the number of components we want to run the integration
+testing with.
+
 <a href="../../img/posts/jenkins-parallel-stashing/pipeline.png"><img alt="Pipeline stages" src="../../img/posts/jenkins-parallel-stashing/pipeline.png" style="max-width: 100%;"/></a>
 <div class="caption">Pipeline stages</div>
 
-So, this pipeline is basically running an integration test suite I am working
-on. It contains mostly sequential stages, but there are occasional parallel
-stages. Specifically, there is a provisioning and tear-down stage, and each
-runs in parallel across the number of components we want to run integration
-testing on.
-
-Aditionally, our Jenkins instance is hosted on
+The Jenkins instance is hosted on
 [Openshift](https://www.openshift.com), and uses containers for the job
-nodes. The containers being used change across different stages, which means
-that the local filesystem does not persist throughout the entire pipeline.
-This created a problem, as we wanted to keep metadata from the each
-provisioning stage, to use for dynamic tests, as well as the tear down stages
+nodes. The pipeline uses several containers across the different stages,
+which means that the local filesystem does not persist throughout the entire
+pipeline. This was a problem, because we wanted to maintain the metadata files
+from each of the provisioning stages, to use during the dynamic tests, as well
+as during each tear down stage.
 
 The issue is further complicated by the parallel provisioning stages. Each
-provisioner runs in it's own container, all at the same time. On top of that,
-*which* provisioner stages that runs can be different during each pipeline
-execution, as they are dynamic. The pipeline might run using data
-provisioners *A*, *C*, and *D*, in one run, and *A*, *B*, *C*, *G*, and *H*
-for the next, depending on what integration tests we want to run. This means
-that my solution couldn't be one that only worked with a static environment.
-
+provisioner runs in its own container, all at the same time. On top of that,
+the number of provisioner/tear-down stages is dynamic. The pipeline might run
+using data provisioners for components `A`, `C`, and `D`, in one run, and
+`A`, `B`, `C`, `G`, and `H` for during next. It all depends on what
+integration tests we want to perform. This meant that my solution also had to be dynamic and flexible.
 
 ## My Plan
 
-I had two initial approaches to try out:
-
-1) Set up the containers to use persistent volumes
-
-2) Use the Jenkins stash/unstash functionality
-
-I looked very briefly into changing the volume configuration, but my proof of
-concept pipeline hit an un-expressive issues right away (it hung forever
-without any log or indication why). I decided to come back to that *if* the
-stashing method didn't work. I thought the volumes might be more complicated
-to implement with our infrastructure.
+I looked briefly into changing the containers' volume configuration, but my
+proof of concept pipeline hit a silent failure right away (the pipeline would
+endlessly hang, with no error). I decided to revisit that approach *if*
+my next plan, implementing stash and un-stash, didn't work.
 
 To simplify *what* to stash, and to have it work with the dynamically
-changing parallel stages, I decided to try and stash a *single* `metadata`
-directory that the stages could all write to. My thought was that I could
-then stash it, and unstash it at the begging of the first stage in each
-subsequent node.
+changing parallel stages, I decided to try a *single* stash location. I made
+a `metadata` directory that the stages could all write to and stashed it. My
+thought was that I could then unstash it at the begging of the first stage in
+each subsequent node, and re-stash the contents at the end of a node.
 
 ```groovy
 sh "mkdir metadata"
@@ -75,13 +66,13 @@ stash includes: 'metadata/', name: 'metadata', allowEmpty: true
 unstash 'metadata'
 ```
 
-So, I added in the stash calls, having everything write to a `metadata`
-stash. It was a good idea, but there was a problem...
+I added the calls to my pipeline, having everything write to a
+`metadata` stash. It was a good idea, but there was a problem...
 
 ## *My* Problem
 
-Because of how the stash is done in parallel, and individually, it meant that
-only the files of the *latest* parallel stage was being saved and stored.
+Because the stash is executed individually in parallel, only the files from
+the *latest* parallel stage were being saved and stored.
 
 
 ## The Solution
