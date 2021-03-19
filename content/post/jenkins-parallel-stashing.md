@@ -76,10 +76,21 @@ the *latest* parallel stage were being saved and stored.
 
 
 ## The Solution
-As most solutions in software, the fix wasn't genius or even complicated. All
-I really did was swapped my stash call to use the feature
+As many issues in software, both the problem *and* the fix were rather simple. All
+I really did was swtiched my stash call to use the feature
 *as intended*. Still, I had trouble finding *anything* online talking about
-*using stash the way I needed to, so I thought I'd share.
+*using* stash the way I needed to, so I thought I'd share.
+
+
+My solution was to continue to use the single directory method, but
+*dynamically change the name of the stash* during that initial parallel
+stage. It turns out, that the data was overwritten because each stash call had the same *stash name*, not because it was stashing the same directory. 
+
+I only needed to parallel stash during the initial parallel stage, as the
+second one was at the end of the pipleline where the metadata would no longer
+be appended. So my plan was to dynamically stash each provisioner metadata,
+and then merge all the stashes into a single *metadata* stash to be used
+throughout the rest of the pipeline.
 
 ```groovy
 // Stash each builder's metadata if success
@@ -93,38 +104,28 @@ for(label in testLabel) {
 }
 ```
 
-
-My solution was to continue to use the single directory method, but *dynamically
-change the name of the stash* during that initial parallel stage. It turns out,
-that it only overwrote because they had the same stash name. I only needed to
-parallel stash during the initial parallel stage, as the second one was at the end of
-the pipleline where the metadata would no longer be appended. 
-
-I guessed I could have multiple stashes, one for each para stage, and then
-merge them into one location, that becomes *the* stash for the rest of the
-pipeline. I thought merging shouldn't be too hard, and I could even write a
-function to do it.
-
 Before making things complicated by unmerging to a different location from
 where I wanted `metadata` to be, I first decided to see what happens if I
-just `unstashed` everything directly to the `metadata` dir. Luckily,
-everything wrote to it fine, and merged itself with no overwrites. So... I
-didn't have to do anything else. Problem Solved
+simply `unstashed` everything directly to the `metadata` dir. Luckily,
+everything merged just fine with no overwrites. I even didn't have to write
+a merging function. Problem solved!
 
 ## Conclusion
 
 So that's it. Often, the solution to a seemingly complicated problem is a
 simple one. This can be made more difficult if all of the online discussion
-seems tangential, but not exactly what you need. In those cases, it is
+seems tangential, but not exactly what you need. In those moments, it is
 probably best to pull aside a buddy to bounce ideas off of. Even if they
 don't know how to immediately solve your problem, they can highlight problem
-areas that you might be able to find a solution in. This is how this solution
-surfaced. My buddy [Elyezer](https://elyezer.com) pointed out that the
-stashes were being over-written *because* they had the same stash name. Even
-though I *knew* that, having him re-emphasize it to me zoned my in and helped
-me surface the idea of dynamically making different stashes and then merging
-them for the rest of the pipeline.
+areas that you might be able to find a solution in. 
 
-Teamwork. It really effective! 
+That is exactly how this solution surfaced. My buddy
+[Elyezer](https://elyezer.com) pointed out that the stashes were likely being
+over-written *because* they had the same stash name. Even though I *knew*
+that, having him re-emphasize it helped me zone my in and work out the idea
+of dynamically making different stashes and merging them for the rest of the
+pipeline.
+
+Teamwork. It makes a difference.
 
 (P.S. Thanks Elyezer!)
