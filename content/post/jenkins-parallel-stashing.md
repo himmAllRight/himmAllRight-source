@@ -5,15 +5,15 @@ author  = "Ryan Himmelwright"
 image   = "img/posts/jenkins-parallel-stashing/pennsburg_sky.jpeg"
 caption = "Pennsburg, PA"
 tags    = ["jenkins", "devops", "containers"]
-draft   = "True"
+draft   = "False"
 Comments = "True"
 +++
 
-I recently hit a snag while creating a Jenkins pipeline at work. I was having
-difficulty preserving files across the entire pipeline run. In the end, my
-solution was to use the stash feature. However, I found little support for my
-specific type of issue online, so I figured I might as well write a short
-post about my experience. 
+I recently hit a snag while developing a Jenkins pipeline at work. I was
+having difficulty preserving files across the entire pipeline run. In the
+end, my solution was to use the stash feature. However, I found little
+support for my *specific* type of issue online, so I figured I might as well
+write a short post about my experience.
 
 <!--more-->
 
@@ -21,9 +21,8 @@ post about my experience.
 
 The pipeline runs an integration test suite I am working on. It contains
 mostly sequential stages, but there are a few that run in parallel.
-Specifically, there are provisioning and tear-down stages, that each run in
-across the number of components we want to run the integration
-testing with.
+Specifically, there are provisioning and tear-down stages, one for each 
+of the components we want to use during the testing.
 
 <a href="../../img/posts/jenkins-parallel-stashing/pipeline.png"><img alt="Pipeline stages" src="../../img/posts/jenkins-parallel-stashing/pipeline.png" style="max-width: 100%;"/></a>
 <div class="caption">Pipeline stages</div>
@@ -32,8 +31,8 @@ The Jenkins instance is hosted on
 [Openshift](https://www.openshift.com), and uses containers for the job
 nodes. The pipeline uses several containers across the different stages,
 which means that the local filesystem does not persist throughout the entire
-pipeline. This was a problem, because we wanted to maintain the metadata files
-from each of the provisioning stages, to use during the dynamic tests, as well
+pipeline. This was a problem, because we wanted to maintain metadata files
+from each of the provisioning stages, to use in dynamic tests, as well
 as during each tear down stage.
 
 The issue is further complicated by the parallel provisioning stages. Each
@@ -48,12 +47,12 @@ integration tests we want to perform. This meant that my solution also had to be
 I looked briefly into changing the containers' volume configuration, but my
 proof of concept pipeline hit a silent failure right away (the pipeline would
 endlessly hang, with no error). I decided to revisit that approach *if*
-my next plan, implementing stash and un-stash, didn't work.
+my next plan (implementing stash and un-stash) didn't work.
 
 To simplify *what* to stash, and to have it work with the dynamically
 changing parallel stages, I decided to try a *single* stash location. I made
-a `metadata` directory that the stages could all write to and stashed it. My
-thought was that I could then unstash it at the begging of the first stage in
+a `metadata` directory that the stages could all write to, and stashed it. My
+thought was that I could then un-stash it at the start of the first stage in
 each subsequent node, and re-stash the contents at the end of a node.
 
 ```groovy
@@ -76,9 +75,10 @@ the *latest* parallel stage were being saved and stored.
 
 
 ## The Solution
-As many issues in software, both the problem *and* the fix were rather simple. All
-I really did was swtiched my stash call to use the feature
-*as intended*. Still, I had trouble finding *anything* online talking about
+
+As many issues in software, both the problem *and* the fix were rather
+simple. All I really did was change my stash call to used
+*as documented*. Still, I had trouble finding *anything* online talking about
 *using* stash the way I needed to, so I thought I'd share.
 
 
@@ -86,7 +86,7 @@ My solution was to continue to use the single directory method, but
 *dynamically change the name of the stash* during that initial parallel
 stage. It turns out, that the data was overwritten because each stash call had the same *stash name*, not because it was stashing the same directory. 
 
-I only needed to parallel stash during the initial parallel stage, as the
+I only need to parallel stash during the initial parallel stage, as the
 second one was at the end of the pipleline where the metadata would no longer
 be appended. So my plan was to dynamically stash each provisioner metadata,
 and then merge all the stashes into a single *metadata* stash to be used
@@ -106,9 +106,9 @@ for(label in testLabel) {
 
 Before making things complicated by unmerging to a different location from
 where I wanted `metadata` to be, I first decided to see what happens if I
-simply `unstashed` everything directly to the `metadata` dir. Luckily,
+simply `unstash`ed everything directly to the `metadata` dir. Luckily,
 everything merged just fine with no overwrites. I even didn't have to write
-a merging function. Problem solved!
+a merging function! Problem solved.
 
 ## Conclusion
 
@@ -119,10 +119,10 @@ probably best to pull aside a buddy to bounce ideas off of. Even if they
 don't know how to immediately solve your problem, they can highlight problem
 areas that you might be able to find a solution in. 
 
-That is exactly how this solution surfaced. My buddy
+That is exactly how this solution surfaced. My friend
 [Elyezer](https://elyezer.com) pointed out that the stashes were likely being
 over-written *because* they had the same stash name. Even though I *knew*
-that, having him re-emphasize it helped me zone my in and work out the idea
+that, having him re-emphasize it helped me zone in and work out the idea
 of dynamically making different stashes and merging them for the rest of the
 pipeline.
 

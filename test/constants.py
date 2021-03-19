@@ -38,6 +38,7 @@ POST_NAMES = [
     "how-i-asked-my-groomsmen",
     "issue26",
     "issues-setting-up-ubiquiti-network",
+    "jenkins-parallel-stashing",
     "large-display-paradox",
     "LFS-Final-Preparation-Steps",
     "LFS-getting-started",
