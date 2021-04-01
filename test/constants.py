@@ -92,6 +92,7 @@ POST_NAMES = [
     "Updating-Pi-Cluster-With-Ansible",
     "upgrading-network-to-ubiquiti",
     "virtio-3d-vms",
+    "vscode-remote",
     "website-switched-to-cryogen",
     "website-switched-to-hugo",
     "website-transition-to-hugo",
