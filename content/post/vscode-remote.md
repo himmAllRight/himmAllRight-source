@@ -5,18 +5,17 @@ author  = "Ryan Himmelwright"
 image   = "img/posts/remote-vscode/duke_campus_header.jpeg"
 caption = "Duke University, Durham NC"
 tags    = ["linux", "macos", "applications", "ssh"]
-draft   = "True"
+draft   = "False"
 Comments = "True"
 +++
 
-I have previously stated that I mostly work on [my
-desktop](/post/selecting-charmeleons-upgrades/), but usually *from* another
-computer. For example, I work from my
-[laptop](/post/m1-air-initial-thoughts/) most mornings. The most common
+I mostly work on [my desktop](/post/selecting-charmeleons-upgrades/), but
+usually *from* another computer, like my
+[laptop](/post/m1-air-initial-thoughts/). Historically, the most common
 method I use for this has been combining `neovim` and `tmux` (with
-[tmuxp](https://github.com/tmux-python/tmuxp), for ease). However, more 
-often than not, I now find myself using [VS Code](https://code.visualstudio.com) with it's
-[remote development
+[tmuxp](https://github.com/tmux-python/tmuxp), for ease). However, more often
+than not, I now find myself using [VS Code](https://code.visualstudio.com)
+with it's [remote development
 plugin](https://code.visualstudio.com/docs/remote/remote-overview). Here's
 how.
 
@@ -60,10 +59,12 @@ Your browser does not support the video tag.
 
 With the remote plugin installed, we can now connect to a remote machine. I
 mostly do this using `ssh`. Make sure you first have ssh keys copied to the
-device you want to link to. Then, open the command pallet (`CMD/CTRL-Shift-P`), and search for the `Remote-SSH: Connect to Host...` command to run.
+device you want to link to. Then, open the command pallet (`CMD/CTRL-Shift-P`), and search for the `Remote-SSH: Connect to Host...` command, and run it.
 
 This will prompt you for an ssh host to connect to. Just enter a `host` like
-you would when using `ssh`. For example, `ryan@example.com`. If it's the first time adding a host, the plugin will ask where to keep the config file for all the hosts. I usually just select one of the defaults it offers me.
+you would when using `ssh`. For example, `ryan@example.com`. If it's the
+first time adding a host, the plugin will ask where it can save a config file
+for the hosts. I usually just select one of the defaults it offers me.
 
 <center>
 <a href="../../img/posts/remote-vscode/remote_window_status.png"><img alt="Remote Window connected status" src="../../img/posts/remote-vscode/remote_window_status.png" style="max-width: 100%;"/></a>
@@ -71,8 +72,8 @@ you would when using `ssh`. For example, `ryan@example.com`. If it's the first t
 </center>
 
 When connecting to a remote machine, VS code will usually pop open a new
-window. To verify, the ip address of the machine the window is connected to
-can be found in lower left corner.
+window. To verify, the ip address of the machine that the window is connected
+to can be found in lower left corner.
 
 ## Working on Projects, Remotely
 
@@ -81,23 +82,23 @@ can be found in lower left corner.
 <div class="caption">Opening a directory in the remote window</div>
 </center>
 
-When working in a remote VS Code window, everything is piped through from the
+When working in a remote VS Code window, everything is passed on from the
 remote machine, as if you were sitting down at that computer. When opening a
 new file or folder, you browse the contents of the *remote filesystem*, not
 the local one.
 
 Even the built in terminal runs on the remote machine. I still work in
 `tmux`, so I have my vscode terminal attach whatever `tmux` session I need.
-This provides me with the flexibility to switch to a new machine, and to
-pickup where I left off. Using this setup, I get a full graphical IDE window,
-while still reaping the benefits of `vim` + `tmux`.
+This provides me with the flexibility to switch to a new machine and pickup
+where I left off. Using this setup, I get a full graphical IDE window, while
+still reaping the benefits of `vim` + `tmux`.
 
 <center>
 <a href="../../img/posts/remote-vscode/working_remote_window.png"><img alt="Working on a post in vs code with vim and tmux opened in the shell" src="../../img/posts/remote-vscode/working_remote_window.png" style="max-width: 100%;"/></a>
 <div class="caption">Working on this post, with `vim` opened in `tmux` in the built-in terminal</div>
 </center>
 
-And yes... you *can* run `vim`, *inside* `tmux`, *in* VScode's built-in
+And yes... you *can* run `vim`, *inside* `tmux`, *in* the built-in VScode
 terminal, *in* a VScode remote window. This is something I actually do quite
 often XD.
 
