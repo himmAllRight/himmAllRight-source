@@ -2,8 +2,8 @@
 title   = "Using Remote VSCode"
 date    = "2021-03-31"
 author  = "Ryan Himmelwright"
-image   = "img/posts/jenkins-parallel-stashing/pennsburg_sky.jpeg"
-caption = "Pennsburg, PA"
+image   = "img/posts/remote-vscode/duke_campus_header.jpeg"
+caption = "Duke University Main Campus, Durham NC"
 tags    = ["dev", "linux", "macos", "applications"]
 draft   = "True"
 Comments = "True"
@@ -30,7 +30,7 @@ flathub](https://flathub.org/apps/details/com.visualstudio.code)
 
 <center>
 <video style="max-width:100%;" controls>
-  <source src="../../img/posts/remote-vscode/install_remote_vscode.webm" type="video/webm">
+  <source src="/img/posts/remote-vscode/install_remote_vscode.mp4" type="video/mp4">
   <source src="movie.ogg" type="video/ogg">
 Your browser does not support the video tag.
 </video>
@@ -51,7 +51,7 @@ just the one you need.
 
 <center>
 <video style="max-width:100%;" controls>
-  <source src="../../img/posts/remote-vscode/remote_vscode_config.mp4" type="video/mp4">
+  <source src="/img/posts/remote-vscode/install_remote_vscode.mp4" type="video/mp4">
   <source src="movie.ogg" type="video/ogg">
 Your browser does not support the video tag.
 </video>
