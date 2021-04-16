@@ -2,8 +2,8 @@
 title   = "Setting up NFS"
 date    = "2021-04-18"
 author  = "Ryan Himmelwright"
-image   = "img/posts/remote-vscode/duke_campus_header.jpeg"
-caption = "Duke University, Durham NC"
+image   = "img/posts/setup-nfs/kill_devil_hills_beach_header.jpeg"
+caption = "Kill Devil Hills, NC"
 tags    = ["linux", "filesystem", "homelab"]
 draft   = "True"
 Comments = "True"
