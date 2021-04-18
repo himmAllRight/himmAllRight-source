@@ -2,8 +2,8 @@
 title   = "Setting up NFS"
 date    = "2021-04-18"
 author  = "Ryan Himmelwright"
-image   = "img/posts/setup-nfs/kill_devil_hills_beach_header.jpeg"
-caption = "Kill Devil Hills, NC"
+image   = "img/posts/setup-nfs/pocosin_lakes_wildlife_header.jpeg"
+caption = "Pocosin Lakes Wildlife Refuge, NC"
 tags    = ["linux", "filesystem", "homelab"]
 draft   = "True"
 Comments = "True"
