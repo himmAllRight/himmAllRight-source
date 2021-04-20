@@ -1,6 +1,6 @@
 +++
 title   = "Setting up NFS"
-date    = "2021-04-18"
+date    = "2021-04-20"
 author  = "Ryan Himmelwright"
 image   = "img/posts/setup-nfs/pocosin_lakes_wildlife_header.jpeg"
 caption = "Pocosin Lakes Wildlife Refuge, NC"
@@ -40,7 +40,7 @@ steups on the *host* machine.
 Being on a Fedora host, I was able to install the dependencies using the following `dnf` command:
 
 ```bash
-
+sudo dnf -y install nfs-utils 
 ```
 
 ### Define the Exports File
@@ -59,8 +59,10 @@ I don't have to set it up on each VM).
 Each line breaks down as follows:
 
 - The directory location to share (ex: `/home/ryan/Music`)
-- The address space that are allowed to access the share (I use `10.0.7.0/24`, which allows any device on my home network)
-- The properties fir each share in `()`. I use `rw` to allow read and write permissions.
+- The address space that are allowed to access the share (I use
+`10.0.7.0/24`, which allows any device on my home network)
+- The properties fir each share in `()`. I use `rw` to allow read and write
+permissions.
 
 That should be it. Feel free to dig deeper into all the nfs share settings if
 you need them, especially if you need to be a bit more secure in your setup!
@@ -70,15 +72,26 @@ you need them, especially if you need to be a bit more secure in your setup!
 After creating the exports file, we need to allow the service in the
 firewall. To do so, permanently open the nfs service ports:
 
+```bash
+sudo systemctl enable --now rpcbind nfs-server
+sudo firewall-cmd --add-service=nfs --permanent
 ```
 
-```
 
 Don't forget to reload the firewall!
 
+```bash
+sudo firewall-cmd --reload
+```
+
 ### Start the service?
 
-Last but not least, make sure the nfs service is started and (optionially) enabled to autostart after a reboot.
+Last but not least, make sure the nfs service is started and enabled to
+autostart after a reboot.
+
+```
+sudo systemctl enable --now rpcbind nfs-server
+```
 
 ## VM Client Setup
 
@@ -89,6 +102,9 @@ Last but not least, make sure the nfs service is started and (optionially) enabl
 
 ### Mount
 
+```bash
+sudo mount -t nfs 10.0.7.82:/home/ryan/Music /home/ryan/Network/Music
+```
 
 ### (Optional) Add to FStab
 
