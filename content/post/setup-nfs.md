@@ -21,7 +21,10 @@ how.
 
 ## The Problem
 
-*Screenshot of missing music error in VM lollypop? (Or large folder sizes?)*
+<center>
+<a href="../../img/posts/setup-nfs/no_music.png"><img alt="Not Music in the VM" src="../../img/posts/setup-nfs/no_music.png" style="max-width: 100%;"/></a>
+<div class="caption">There's no music files in the VM and the player errors looking for the missing files.</div>
+</center>
 
 My desktop is my main workstation. It is the hub that hold all of the files
 and data I want to use, including documents, music, and videos. When I am working in a VM, I often want to access this data. For example, I may want to listen to music while I work.
@@ -42,6 +45,16 @@ Being on a Fedora host, I was able to install the dependencies using the followi
 ```bash
 sudo dnf -y install nfs-utils 
 ```
+
+### Configure Domain Name
+
+Open up the file `/etc/idmapd.conf ` and make sure that the `Domain = ...`
+line (usually line 5) is un-commented, and set to your machine's hostname. If not, edit it:
+
+```ini
+Domain = charmeleon
+```
+
 
 ### Define the Exports File
 
@@ -73,7 +86,6 @@ After creating the exports file, we need to allow the service in the
 firewall. To do so, permanently open the nfs service ports:
 
 ```bash
-sudo systemctl enable --now rpcbind nfs-server
 sudo firewall-cmd --add-service=nfs --permanent
 ```
 
@@ -84,7 +96,7 @@ Don't forget to reload the firewall!
 sudo firewall-cmd --reload
 ```
 
-### Start the service?
+### Start the service
 
 Last but not least, make sure the nfs service is started and enabled to
 autostart after a reboot.
@@ -95,17 +107,38 @@ sudo systemctl enable --now rpcbind nfs-server
 
 ## VM Client Setup
 
-
-
-### Permissions?
-
+With the server setup, we should be able to mount the share in our VM client
+now. Just, make sure the `nfs-utils` package is installed here too.
 
 ### Mount
+
+Now, you should be able to mount the share using the `mount` command with `-t
+nfs`:
 
 ```bash
 sudo mount -t nfs 10.0.7.82:/home/ryan/Music /home/ryan/Network/Music
 ```
 
-### (Optional) Add to FStab
+If you experience weird issues trying to mount, sometime a `reboot` might
+help. I occasionally hit permissions issues that seem to resolve after a
+restart.
+
+#### fstab
+
+Just an FYU, it is possible to add the share to your `/etc/fstab` file, so
+that it automounts during boot. However, I don't usually do this as in my
+experience, it isn't worth it. Plus I like to make the conscious decision of
+when I am mounting data from the host machine, as I don't always need it
+available in the VMs.
 
 ## Conclusion
+
+<center>
+<a href="../../img/posts/setup-nfs/vm_music.png"><img alt="Listening to mounted Music in the VM" src="../../img/posts/setup-nfs/vm_music.png" style="max-width: 100%;"/></a>
+<div class="caption">Listening to music in a VM, mounted from a nfs share on the host</div>
+</center>
+
+That's about it. This really is just the basics of setting up and using an
+nfs share, and I'm sure I'm doing something "wrong", but so far it was worked
+great for my simple need of sharing data between the host and guests of the
+same computer. Enjoy!
