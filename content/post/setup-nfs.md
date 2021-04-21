@@ -5,15 +5,15 @@ author  = "Ryan Himmelwright"
 image   = "img/posts/setup-nfs/pocosin_lakes_wildlife_header.jpeg"
 caption = "Pocosin Lakes Wildlife Refuge, NC"
 tags    = ["linux", "filesystem", "homelab"]
-draft   = "True"
+draft   = "False"
 Comments = "True"
 +++
 
 Thanks to VFIO passthrough, I find myself sitting in front for a virtualized
-Linux system, on a daily basis. While this setup is unbelievable, it does
-come with a few complications. One such hurdle is sharing files on the
-host system with the VMs. After trying a few methods, I determined that nfs was the
-simplest to get up and running. Here's how.
+Linux system on a daily basis. While this setup is unbelievable, it does come
+with a few complications. One such hurdle is sharing files located on the
+host system with the VMs. After trying a few methods, I determined that nfs
+was the simplest to get up and running. Here's how.
 
 <!--more-->
 
@@ -26,15 +26,14 @@ simplest to get up and running. Here's how.
 
 My desktop is my main workstation. It is the hub that holds all of the data I
 use, including documents, music, and videos. When I am working in a VM, I
-often want access to that data. For example, I like listening to my music
-while I work in a VM.
+often want access to that data. I like listening to my music
+while working in VMs 😉.
 
 It would be inefficient, both in time and disk space, to copy all the files I
-desired to each VM that I used. So, setting up a network filesystem is an
-ideal solution. After trying a few methods, I eventually came to the
-conclusion that for *my use* (linux guests on a linux host), NFS worked. If
-you want to share with Windows guests, something like samba might work
-better.
+desired to each VM that I use. Setting up a network filesystem is an can get
+around this. After some trial and error, I eventually concluded that for *my
+use* (linux guests on a linux host), NFS worked. If you want to share with
+Windows guests, something like samba might work better.
 
 
 ## Server Setup
@@ -51,7 +50,7 @@ Being on a Fedora host, I installed the dependencies using the following
 sudo dnf -y install nfs-utils 
 ```
 
-### Configure Domain Name
+### Configure The Domain Name
 
 Next, open up the file `/etc/idmapd.conf ` and make sure that the `Domain =
 ...` line (usually line 5) is un-commented, and set to your machine's
@@ -64,7 +63,7 @@ Domain = charmeleon
 
 ### Define the Exports File
 
-After we everything is installed, we need to create the *exports* file. This
+After everything is installed, we need to create the *exports* file. This
 file will define all of the nfs shares we want to make available. Create and
 open the file `/etc/exports`, and add something similar for each directory
 you want to share:
@@ -146,7 +145,7 @@ as I don't always need it available in the VMs.
 <div class="caption">Listening to music in a VM, mounted from a nfs share on the host</div>
 </center>
 
-That's about it. This was just the basics of setting up a
-nfs share, and I'm sure I'm doing *something* wrong, but so far... it has worked
-great for my simple use case of sharing data between the host and guests of the
-same computer. Enjoy!
+That's about it. This was just the basics of setting up a nfs share, and I'm
+sure I do *something* wrong, but so far... it has worked great for my simple
+use case of sharing data between the host and guests on the same computer.
+Enjoy!
