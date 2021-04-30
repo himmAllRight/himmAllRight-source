@@ -22,15 +22,15 @@ use. This would not have been possible without the open source tool,
 In order to clean up my music library, I needed a method to edit the metadata
 tags of the files. Music applications use these tags to grab information about a
 song. For example, a song's title, artist, album name, and release year are all
-contained in the a music file's audio tags.  Using this information, a music
+contained in the a music file's tags.  Using this information, a music
 player is able to organize and sort the music by artist, album, year, genre, or
-by any other bit of data it has.
+by any other bit of data it knows.
 
-In the past, I had used a tool called eztag to edit the metadata of my files.
-However, when I quickly searched the Fedora repos, it didn't turn up. So, I
-started to look for a new tool. Ideally, I needed something that would be easy
-to learn, as I didn't want to spend a bunch of time learning a complicated new
-tool. After very minimal searching, I found [kid3](https://kid3.kde.org).
+In the past, I used a tool called `easytag` to edit the metadata of my files.
+However, after not being able to initially find it (I had the wrong name 😆), I
+started to look for a new tool. I desired something easy to use, as I did not
+want to waste a bunch of time learning a complicated new tool. After very
+little searching, I found [kid3](https://kid3.kde.org).
 
 ## Kid3
 
@@ -39,19 +39,17 @@ tool. After very minimal searching, I found [kid3](https://kid3.kde.org).
 <div class="caption">kid3 window</div>
 </center>
 
-As a [Fedora Plasma](https://spins.fedoraproject.org/kde/) use, I was happy
-to learn that kid3 appears to actually be made by the KDE team. It is an
-application that I think I had used before, but I didn't realize how easy it
-actually was to use. To use, you can just drag and drop the files into it,
-and then add/edit any of the data in the tags, and save. New tags can even be
-added if they don't exist.
+As a [Fedora Plasma](https://spins.fedoraproject.org/kde/) user, I was happy to
+learn that kid3 appears to be maintained directly by the KDE team.  To use kid3,
+just drag and drop the files into it, add/edit any of the tag info, and save.
+New tags can also be added if they aren't listed.
 
 I started using kid3 on my Linux desktop, but one night wanted to work in the
-other room on my macBook, and thought that I would probably have to find a
-different tool to use on macOS. While searching for tools, I learned that
-kid3 actually has a macOS build! In fact, in addition to Linux, the KDE team
-has official kid3 builds for macOS, Windows, and Android! I love when a good
-tool is truly cross-platform.
+other room on my macBook. I sadly assumed I would have to find a different tool
+to use on macOS. However, while searching a new tool, I learned that kid3 has a
+macOS build! In fact, in addition to Linux, the KDE team has official kid3
+builds for macOS, Windows, and Android! I love a good cross-platform tool.
+
 
 ## Efficiently Editing Album Tags
 
@@ -61,9 +59,9 @@ tool is truly cross-platform.
 </center>
 
 After using kid3 it for a bit, I fell into a workflow that made the tedious task
-of editing multiple files into a single album easier do. In particular, I
-learned that I could select multiple files, and edited a field for all of the
-selected items at one time.  Using this technique, I was able to write the
+of grouping multiple files into single albums easier do. In particular, I
+learned that I could select multiple files, and edit a field to apply to all of
+the selected items at one time.  Using this technique, I was able to write the
 artist, album, and year only once, instead of 10+ times for each album. This
 made it *much more* efficient than methods I had previously used while editing
 metadata.
@@ -75,7 +73,7 @@ metadata.
 <div class="caption">A 'home-made' file tagged in kid3, now properly sorted in my music player</div>
 </center>
 
-That's it. This was a short post, but I think it was worth it. I love when I
-find a great open source, cross platform tool that does *exactly* what I
-need. Kid3 is one of those gems applications. If you need to edit some audio
+That's all I have. This was a short post, but I think it was worth it. I love
+when I find a great open source, cross platform tool that does *exactly* what I
+need. Kid3 is a gem application. If you need to edit some audio
 tags, check it out. It certainly made my life much easier 🙂.
