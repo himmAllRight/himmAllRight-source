@@ -36,7 +36,10 @@ tool. After very minimal searching, I found [kid3](https://kid3.kde.org).
 
 ## Kid3
 
-*Screenshot of kid3?*
+<center>
+<a href="../../img/posts/using-kid3/kid3.png"><img alt="kid3 window" src="../../img/posts/using-kid3/kid3.png" style="max-width: 100%;"/></a>
+<div class="caption">kid3 window</div>
+</center>
 
 As a [Fedora Plasma](https://spins.fedoraproject.org/kde/) use, I was happy to
 learn that kid3 appears to actually be made by the KDE team. It is an application that I think I had used before, but I didn't realize how easy it actually was to use. To use, you can just drag and drop the files into it, and then add/edit any of the data in the tags, and save. New tags can even be added if they don't exist.
@@ -49,7 +52,10 @@ official kid3 builds for macOS, Windows, and Android! I love when a good tool is
 
 ## Efficiently Editing Album Tags
 
-*screenshot of editing multiple files at once*
+<center>
+<a href="../../img/posts/using-kid3/multi-edit.png"><img alt="Editing multiple files in kid3" src="../../img/posts/using-kid3/multi-edit.png" style="max-width: 100%;"/></a>
+<div class="caption">Editing multiple files in kid3</div>
+</center>
 
 After using kid3 it for a bit, I fell into a workflow that made the tedious task
 of editing multiple files into a single album easier do. In particular, I
@@ -61,6 +67,12 @@ metadata.
 
 ### Conclusion
 
-*Screenshot showing my cleaned library*
+<center>
+<a href="../../img/posts/using-kid3/tagged_music.png"><img alt="A custom album tagged in kid3" src="../../img/posts/using-kid3/tagged_music.png" style="max-width: 100%;"/></a>
+<div class="caption">A 'home-made' file tagged in kid3, now properly sorted in my music player</div>
+</center>
 
-That's it. This was a short post, but I think it was worth it. I love when I find a great open source, cross platform tool that does *exactly* what I need. Kid3 is one of those gems applications. If you need to edit some audio tags, check it out. It certainly made my life much easier 🙂.
+That's it. This was a short post, but I think it was worth it. I love when I
+find a great open source, cross platform tool that does *exactly* what I
+need. Kid3 is one of those gems applications. If you need to edit some audio
+tags, check it out. It certainly made my life much easier 🙂.
