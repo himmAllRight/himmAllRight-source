@@ -9,24 +9,22 @@ draft   = "True"
 Comments = "True"
 +++
 
-Over the past few months, I have set out on the task of cleaning up and
-organizing my Music library. My goal was to get rid of all the random files,
-and ensure that every item had the proper metadata so that it would
-self-organize properly in the various music players I use. This task, would
-not have been possible without the amazing open source (and cross-platform!)
-tool, [kid3](https://kid3.kde.org).
+A few months ago, I set out to finally clean up and organize my music library.
+My goal was to get rid of all the random files, and ensure that every item was
+properly tagged so that it would accurately self-organize in the music players I
+use. This would not have been possible without the open source tool,
+[kid3](https://kid3.kde.org).
 
 <!--more-->
 
 ## The Problem
 
-*Maybe example of messy files/poorly tagged ones in music library?*
-
-In order to properly clean up the files in my music library, I needed a way to
-edit the metadata tags of the files themselves. Music applications use these
-tags grab a information about a song, like it's title, artist, album, ect from
-the file. With this information, they are able to organize and sort everything
-by artist, album, year, genre, or by any other bit of data.
+In order to clean up my music library, I needed a method to edit the metadata
+tags of the files. Music applications use these tags to grab information about a
+song. For example, a song's title, artist, album name, and release year are all
+contained in the a music file's audio tags.  Using this information, a music
+player is able to organize and sort the music by artist, album, year, genre, or
+by any other bit of data it has.
 
 In the past, I had used a tool called eztag to edit the metadata of my files.
 However, when I quickly searched the Fedora repos, it didn't turn up. So, I
@@ -41,14 +39,19 @@ tool. After very minimal searching, I found [kid3](https://kid3.kde.org).
 <div class="caption">kid3 window</div>
 </center>
 
-As a [Fedora Plasma](https://spins.fedoraproject.org/kde/) use, I was happy to
-learn that kid3 appears to actually be made by the KDE team. It is an application that I think I had used before, but I didn't realize how easy it actually was to use. To use, you can just drag and drop the files into it, and then add/edit any of the data in the tags, and save. New tags can even be added if they don't exist.
+As a [Fedora Plasma](https://spins.fedoraproject.org/kde/) use, I was happy
+to learn that kid3 appears to actually be made by the KDE team. It is an
+application that I think I had used before, but I didn't realize how easy it
+actually was to use. To use, you can just drag and drop the files into it,
+and then add/edit any of the data in the tags, and save. New tags can even be
+added if they don't exist.
 
 I started using kid3 on my Linux desktop, but one night wanted to work in the
 other room on my macBook, and thought that I would probably have to find a
-different tool to use on macOS. While searching for tools, I learned that kid3
-actually has a macOS build! In fact, in addition to Linux, the KDE team has
-official kid3 builds for macOS, Windows, and Android! I love when a good tool is truly cross-platform.
+different tool to use on macOS. While searching for tools, I learned that
+kid3 actually has a macOS build! In fact, in addition to Linux, the KDE team
+has official kid3 builds for macOS, Windows, and Android! I love when a good
+tool is truly cross-platform.
 
 ## Efficiently Editing Album Tags
 
