@@ -92,6 +92,7 @@ POST_NAMES = [
     "tsqa-2020",
     "Updating-Pi-Cluster-With-Ansible",
     "upgrading-network-to-ubiquiti",
+    "using-kid3",
     "virtio-3d-vms",
     "vscode-remote",
     "website-switched-to-cryogen",
