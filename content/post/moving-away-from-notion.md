@@ -2,45 +2,81 @@
 title   = "Moving Away From Notion"
 date    = "2021-05-16"
 author  = "Ryan Himmelwright"
-image   = "img/posts/using-kid3/dunes_trail_header.jpeg"
-caption = "Jockey's Ridge Stage Park, Nags Head, NC"
+image   = "img/posts/moving-away-from-notion/obx_pipe_algae.jpeg"
+caption = "Kill Devil Hills, NC"
 tags    = ["Application", "Organization", "Notes"]
 draft   = "True"
 Comments = "True"
 +++
 
+After using [Notion](https://notion.so) for all of my notes and planning over
+the [last year](/post/trying-notion/), there are a few issues with it that have
+worn on me.  In fact, over time my uneasiness on the topic has built up to the
+point where I am now working to move off of Notion completely. Here's why.
 
 <!--more-->
 
 ## Background
 
-*A screenshot of my Notion Setup*
+*A screenshot of my Notion Setup (Dashboard)*
 
-- I've loved using Notion
-- After a few iterations of my system, I have it setup in a way that really
-worked for me
-    - I had stuff linked in sperate DBs (Areas, Projects, Tasks), and had items
-    in them associated with them
-    - I eventually also moved from having daily items, to just using dashboards
-    and filters to see everything within a time window
-    - I used this to plan out my goals, tasks, and projects, and link them all
-    to each other with associated notes.
-- Except for when it didn't
-    - More on that later...
+Before getting into I, I want to state that for the most part, that I have loved
+using Notion. It took a few iterations of figuring out how I wanted to organize
+everything, but after the most recent system overhaul, I have it setup in a way
+that really works for me.
 
-## What I like about Notion
-- These might echo my original notion post...
+In short, have everything stored in a handful of databases: Areas, Projects,
+Tasks, and Notes.  The items in each of these DBs, are all linked together where
+appropriate. For example, *tasks* and *notes* are usually contained in a
+*project*, which is associated with a particular *area*.
+
+*A screenshot of the tasks in a goal?*
+
+In the most recent iteration, I also moved away from linking tasks to a daily
+journal objects. Instead, I just assigned *everything* a date, and used date
+filters and dashboards to see *Weekly* and *Daily* spreads of my task boards. I
+also was able to plan out monthly goals and link tasks to them, so at the end of
+the month, I was able to go back and see *exactly* when I had completed a task
+for that goal.
+
+All in all, it was a really slick system that worked amazingly... except for
+when it didn't (but more on that later)...
+
+## What I liked about Notion
+
+*Screenshot of My notion templates?*
+
+I'll go through these quickly, as many of them echo my [original notion
+post](/post/trying-notion/)...
+
 ### Easy to use and setup. 
-- I can have it on all my devices, just by install the app logging in (or just
-in the browser if needed)
-### All my thoughts and ideas can be linked. 
-- I can see what tasks are part of a project, and what notes are also associated
-with them.
-### Templates. 
-- My commonly setup items can be templated to save me time when trying to record
-new stuff into my system.
+I can have it easily configured on all my devices. I just by install the app and
+log in. I even have the option to access it in a web browser, if I cannot
+install it on a device.
 
-## What I don't like about Notion
+### The flexibility
+As described in the *Background* section above, the flexability of Notion really
+allowed me to customize it to whatever I needed. It wasn't as much of a system
+itself, as much as it was a tool that let me build my *own* system (much like
+what I've experience with emacs org-mode in the past).
+
+### Templates. 
+With such a malleable system, it helps if the more intricate components can be
+automated and simplified with templates. Luckily, the template system in Notion
+was very powerful, and is what really allowed me to build  up my own system. My
+commonly setup items were all templated to save me time when entering new items
+into my system. Without them, Notion would have been a giant pain to maintain.
+
+### All my thoughts and ideas can be linked. 
+I loved being able to link everything together. Being able to see all the tasks
+linked to a project, and all of the associated notes of the project from a
+dashboard was game changing in how I think about organizing my goals, 
+plans, and notes in a system.
+
+## What I didn't like about Notion
+
+*Screenshot of being unable to connect? Or something with data issues...*
+
 Most of these problems relate from notion be online and rather closed
 
 ### Availability to data relies on their servers being available
@@ -82,6 +118,8 @@ encryption.
     - I spent the rest of my vacation day researching alternatives for Notion. (and trying to export my data... but I already said how that went 😖)
 
 ## Conclusion
+
+*Just a Notion Screenshot I guess?*
 
 So in conclusion, I think Notion is a great product, with a bunch of issues. I
 recognize that many of the items that I feel strongly about, won't be problems
