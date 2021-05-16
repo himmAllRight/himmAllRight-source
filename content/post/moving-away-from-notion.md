@@ -87,18 +87,13 @@ Because I use notion for my tasks, notes, and everything else, it meant if it we
 *link to article about outage?*
 
 ### Access to the data
-- In a similar issue, all of the data and content in my Notion is controlled
-entirely by Notion.
-- This means any important data-related responsibility fall's entirely on
-Notion's shoulders, and I can't do anything to assist them. For example...
-encryption.
-    - To add salt to the wound... Notion doesn't end-to-end encrypt the data
-    (*TODO: Verify this is still true and link to it*)
-- All the data is in a proprietary format in the databases
-    - The only way to see the content, is through notion. There's no files I can view (even in a bad format), or convert.
-    - Also, if Notion every disbands as a company, or is even acquired that shifts their direction over time... I'm stuck
-    - If I want to move onto a new system, I can't easily reformat/import this into a new system.
-- They have an exporting system, but every time I tried to use it, it froze. I tried this on several computers, many times, and with both export types available to me.
+
+A similar issue to everything being hosted by Notion, is that all of the data and content is controlled by Notion, and in a non-standard format. This means any important data-related responsibility fall's entirely on
+their shoulders, and I have to accept whatever level of security they want to do.
+
+While data security is very important, the problem that most concerns me is that all the data is in a non-standard format in the databases. While the page content is in markdown-ish format, the only way to see everything organized properly in the databases (without hassel, as far as I know), is in notion. There are no raw files I can easily view or convert. They have an exporting system, but every time I tried to use it, it froze. I tried this on several computers, many times, and with both export types available to me. So even while in theory you *can* export everything to `md`... I couldn't.
+
+What has me most concerned about this data formatting, is that if Notion every disbands as a company, or is acquired by a company that slowly shifts their direction over time (or honestly, if Notion themselves shift how they work over time)... I'm stuck. If I want to move to a different system, I can't easily reformat/import my data into a new system either. This reason alone has been a hesitancy in the back of my head, my entire time using Notion.
 
 ### Buggy Issues, particularly with templates
 - Some of my favorite features, were the ones that seemed the buggiest and most often game me problems
