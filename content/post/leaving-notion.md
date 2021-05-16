@@ -1,8 +1,8 @@
 +++
-title   = "Moving Away From Notion"
+title   = "Leaving Notion For My Notes"
 date    = "2021-05-16"
 author  = "Ryan Himmelwright"
-image   = "img/posts/moving-away-from-notion/obx_pipe_algae.jpeg"
+image   = "img/posts/leaving-notion/obx_pipe_algae.jpeg"
 caption = "Kill Devil Hills, NC"
 tags    = ["Application", "Organization", "Notes"]
 draft   = "True"
@@ -18,7 +18,11 @@ point where I am now working to move off of Notion completely. Here's why.
 
 ## Background
 
-*A screenshot of my Notion Setup (Dashboard)*
+*A screenshot of my  Setup (Dashboard)*
+<center>
+<a href="../../img/posts/leaving-notion/dahsboard.png"><img alt="my notion dashboard" src="../../img/posts/leaving-notion/dashboard.png" style="max-width: 100%;"/></a>
+<div class="caption">My Notion Dashboard Page</div>
+</center>
 
 Before getting into I, I want to state that for the most part, that I have loved
 using Notion. It took a few iterations of figuring out how I wanted to organize
@@ -29,8 +33,6 @@ In short, have everything stored in a handful of databases: Areas, Projects,
 Tasks, and Notes.  The items in each of these DBs, are all linked together where
 appropriate. For example, *tasks* and *notes* are usually contained in a
 *project*, which is associated with a particular *area*.
-
-*A screenshot of the tasks in a goal?*
 
 In the most recent iteration, I also moved away from linking tasks to a daily
 journal objects. Instead, I just assigned *everything* a date, and used date
@@ -44,7 +46,10 @@ when it didn't (but more on that later)...
 
 ## What I liked about Notion
 
-*Screenshot of My notion templates?*
+<center>
+<a href="../../img/posts/leaving-notion/project_tasks.png"><img alt="My tasks of a goal" src="../../img/posts/leaving-notion/project_tasks.png" style="max-width: 100%;"/></a>
+<div class="caption">My tasks in a goal project</div>
+</center>
 
 I'll go through these quickly, as many of them echo my [original notion
 post](/post/trying-notion/)...
@@ -92,9 +97,12 @@ would also happen whenever my internet went out, or I was traveling and didn't
 have a connection. Combined, this meant I faced this issue often enough to be
 annoyed/concerned by it.
 
-*link to article about outage?*
-
 ### Access to the data
+
+<center>
+<a href="../../img/posts/leaving-notion/exporting_data.png"><img alt="Exporting Notion Data" src="../../img/posts/leaving-notion/exporting_data.png" style="max-width: 100%;"/></a>
+<div class="caption">Exporting Notion Data</div>
+</center>
 
 A similar issue to everything being hosted by Notion, is that all of the data
 and content is controlled by Notion, and in a non-standard format. This means
@@ -118,6 +126,12 @@ reformat/import my data into a new system either. This reason alone has been a
 hesitancy in the back of my head, my entire time using Notion.
 
 ### Buggy Issues, particularly with templates
+
+<center>
+<a href="../../img/posts/leaving-notion/templates.png"><img alt="My Notion templates" src="../../img/posts/leaving-notion/templates.png" style="max-width: 100%;"/></a>
+<div class="caption">My Notion templates when creating a new page</div>
+</center>
+
 The problem that ultimate pushed me to the edge, making me actually decide to
 switch away from Notion, was just the annoying bugs glitches I kept
 experiencing. Unfortunately, some of my favorite features, were the ones that
@@ -144,7 +158,10 @@ belonged to (ex: health, home, learning)... were missing. Nothing was linked.
 
 ## Conclusion
 
-*Just a Notion Screenshot I guess?*
+<center>
+<a href="../../img/posts/leaving-notion/task_board.png"><img alt="Notion task board" src="../../img/posts/leaving-notion/task_board.png" style="max-width: 100%;"/></a>
+<div class="caption">My Notion Task Board</div>
+</center>
 
 So in conclusion, I think Notion is a great product, but with a  few trade-offs.
 I recognize that many of the items that I feel strongly about, won't be concerns
