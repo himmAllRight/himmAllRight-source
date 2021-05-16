@@ -55,7 +55,7 @@ log in. I even have the option to access it in a web browser, if I cannot
 install it on a device.
 
 ### The flexibility
-As described in the *Background* section above, the flexability of Notion really
+As described in the *Background* section above, the flexibility of Notion really
 allowed me to customize it to whatever I needed. It wasn't as much of a system
 itself, as much as it was a tool that let me build my *own* system (much like
 what I've experience with emacs org-mode in the past).
@@ -77,20 +77,14 @@ plans, and notes in a system.
 
 *Screenshot of being unable to connect? Or something with data issues...*
 
-Most of these problems relate from notion be online and rather closed
-
 ### Availability to data relies on their servers being available
-- While this is what makes it nice and convenient, it has problems
-- This coupled with no offline support is a bad combo
-- If Notion goes down, I can't use it... at all
-- Because I use notion for my tasks, notes, and everything, it means if it goes
-down I can't even check what I had recorded as my TODOs for a day, or quickly
-jot a note down for something I'm working on. I have to do everything elsewhere,
-and then transfer it over when the service comes back up (or I have internet
-again)
-- This doesn't happen often, but there are times my internet goes out, or I am
-traveling without a connection for a bit
-- Also, Notion did have an outage a bit back *link to article about outage?*
+Notion is completely hosted online. While this can be *convenient*, Notion also
+does not currently have a viable solution for [working
+offline](https://www.notion.so/How-can-I-use-Notion-offline-de55148f97c84de3b6e71aa058906be4). This means that if the Notion service goes down... I can't access *anything.
+
+Because I use notion for my tasks, notes, and everything else, it meant if it went down, I couldn't even check what I had TODOs I had recorded for the day, or quickly jot a note down about something I was working on. I had to record everything somewhere, and go back and transfer it into Notion whenever the service came back up. While *the service* didn't go down often, this problem would also happen whenever my internet went out, or I was traveling and didn't have a connection. Combined, this meant I faced this issue often enough to be annoyed/concerned by it.
+
+*link to article about outage?*
 
 ### Access to the data
 - In a similar issue, all of the data and content in my Notion is controlled
@@ -124,6 +118,8 @@ encryption.
 So in conclusion, I think Notion is a great product, with a bunch of issues. I
 recognize that many of the items that I feel strongly about, won't be problems
 for others. In fact, I was able to overlook many of them *because* of how great Notion was. 
+
+-- Notion is a good tool if you can manage not always having access to it, and if you are okay with the chance it could be lost/go away someday. --
 
 Over the past year however, the concern and guilt has been building up in the
 back of my mind. No matter how great it is, if I can't access the system
