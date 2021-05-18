@@ -1,6 +1,6 @@
 +++
 title   = "Leaving Notion"
-date    = "2021-05-16"
+date    = "2021-05-20"
 author  = "Ryan Himmelwright"
 image   = "img/posts/leaving-notion/obx_pipe_algae.jpeg"
 caption = "Kill Devil Hills, NC"
@@ -46,34 +46,34 @@ all, it was a remarkably efficient system... except for when it wasn't...
 <div class="caption">My tasks in a goal project</div>
 </center>
 
-I'll go through these quickly, as many of them echo my [original notion
-post](/post/trying-notion/)...
+I'll run through these quickly, as many of the statements echo my [original
+notion post](/post/trying-notion/)...
 
-### Easy to use and setup. 
-I can have it easily configured on all my devices. I just by install the app and
-log in. I even have the option to access it in a web browser, if I cannot
-install it on a device.
+### Easy to use and setup
+I can have Notion easily configured on *all* my devices. All I have to do for
+setup, is install the app and log in. I even have the option to access it in a
+web browser, if I cannot install it as an app on a device.
 
 ### The flexibility
-As described in the *Background* section above, the flexibility of Notion really
-allowed me to customize it to whatever I needed. It wasn't as much of a system
-itself, as much as it was a tool that let me build my *own* system (much like
-what I've experience with emacs org-mode in the past).
+As described in the *Background* section above, the flexibility of Notion 
+allowed me to tailor it to whatever I needed. Notion wasn't as much of a
+*system* itself, as much as it was a *tool* that let me build my *own* system.
+It felt like a modern evolution of emacs org-mode, which is a good thing.
 
-### Templates. 
-With such a malleable system, it helps if the more intricate components can be
-automated and simplified with templates. Luckily, the template system in Notion
-was very powerful, and is what really allowed me to build  up my own system. My
-commonly setup items were all templated to save me time when entering new items
-into my system. Without them, Notion would have been a giant pain to maintain.
+### Templates
+With such a malleable system, it helps when the more intricate components can be
+automated and simplified. Luckily, Notion has a template system, which is what
+really allowed me to custom system *usable*. My frequent tasks were all
+templated to save me time when entering them into the system. Without them,
+Notion would have been a giant pain to maintain.
 
-### All my thoughts and ideas can be linked. 
-I loved being able to link everything together. Being able to see all the tasks
-linked to a project, and all of the associated notes of the project from a
-dashboard was game changing in how I think about organizing my goals, plans, and
-notes in a system. For example, I planned out monthly goals and linked each
-tasks to them, so at the end of the month, I was able to go back and see
-*exactly* if and when I had completed each task for that goal.
+### Everything can be linked
+I loved being able to link everything together. Seeing all the associated tasks
+and notes of a project in a dashboard was game changing for how I think about
+organizing information in a system. As an example, I would plan out monthly
+goals and link each task to it. This way, at the end of a month I was able
+to go back and see *exactly* if and when I had completed each task for that
+goal.
 
 
 ## What I didn't like about Notion
