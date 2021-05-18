@@ -1,5 +1,5 @@
 +++
-title   = "Leaving Notion For My Notes"
+title   = "Leaving Notion"
 date    = "2021-05-16"
 author  = "Ryan Himmelwright"
 image   = "img/posts/leaving-notion/obx_pipe_algae.jpeg"
@@ -9,40 +9,35 @@ draft   = "True"
 Comments = "True"
 +++
 
-After using [Notion](https://notion.so) for all of my notes and planning over
+After using [Notion](https://notion.so) for my notes and daily planning over
 the [last year](/post/trying-notion/), there are a few issues with it that have
-worn on me.  In fact, over time my uneasiness on the topic has built up to the
-point where I am now working to move off of Notion completely. Here's why.
+worn on me.  Over time, my uneasiness with the application has built up to the
+point where I have decided to switch away Notion completely. Here's why.
 
 <!--more-->
 
 ## Background
 
-*A screenshot of my  Setup (Dashboard)*
 <center>
 <a href="../../img/posts/leaving-notion/dahsboard.png"><img alt="my notion dashboard" src="../../img/posts/leaving-notion/dashboard.png" style="max-width: 100%;"/></a>
 <div class="caption">My Notion Dashboard Page</div>
 </center>
 
-Before getting into I, I want to state that for the most part, that I have loved
-using Notion. It took a few iterations of figuring out how I wanted to organize
-everything, but after the most recent system overhaul, I have it setup in a way
-that really works for me.
+Before getting into it, I want to state that for the most part, I have *loved*
+using Notion. It took a few iterations of figuring out how I wanted everything
+organized, but after my most recent system overhaul, I have it arranged perfectly.
 
-In short, have everything stored in a handful of databases: Areas, Projects,
-Tasks, and Notes.  The items in each of these DBs, are all linked together where
-appropriate. For example, *tasks* and *notes* are usually contained in a
-*project*, which is associated with a particular *area*.
+In have everything stored in a handful of databases: Areas, Projects, Tasks, and
+Notes.  The items in each of these DBs are then all connected together. For
+example, *tasks* and *notes* are usually linked in a
+*project*, which is all associated with a particular *area* (`Home`, `Learning`,
+*`Social`, and so on).
 
-In the most recent iteration, I also moved away from linking tasks to a daily
-journal objects. Instead, I just assigned *everything* a date, and used date
-filters and dashboards to see *Weekly* and *Daily* spreads of my task boards. I
-also was able to plan out monthly goals and link tasks to them, so at the end of
-the month, I was able to go back and see *exactly* when I had completed a task
-for that goal.
+In the most recent iteration, I moved away from linking tasks to a daily journal
+object. Instead, I assigned *everything* a date, and created dashboard pages
+with date filters to see the *Weekly* and *Daily* boards of my tasks.  All in
+all, it was a remarkably efficient system... except for when it wasn't... 
 
-All in all, it was a really slick system that worked amazingly... except for
-when it didn't (but more on that later)...
 
 ## What I liked about Notion
 
@@ -75,12 +70,13 @@ into my system. Without them, Notion would have been a giant pain to maintain.
 ### All my thoughts and ideas can be linked. 
 I loved being able to link everything together. Being able to see all the tasks
 linked to a project, and all of the associated notes of the project from a
-dashboard was game changing in how I think about organizing my goals, 
-plans, and notes in a system.
+dashboard was game changing in how I think about organizing my goals, plans, and
+notes in a system. For example, I planned out monthly goals and linked each
+tasks to them, so at the end of the month, I was able to go back and see
+*exactly* if and when I had completed each task for that goal.
+
 
 ## What I didn't like about Notion
-
-*Screenshot of being unable to connect? Or something with data issues...*
 
 ### Availability to data relies on their servers being available
 Notion is completely hosted online. While this can be *convenient*, Notion also
@@ -124,6 +120,14 @@ direction over time (or honestly, if Notion themselves shift how they work over
 time)... I'm stuck. If I want to move to a different system, I can't easily
 reformat/import my data into a new system either. This reason alone has been a
 hesitancy in the back of my head, my entire time using Notion.
+
+<center>
+<a href="../../img/posts/leaving-notion/export_in_obsidian.png"><img alt="Exported data in Obsidian" src="../../img/posts/leaving-notion/export_in_obsidian.png" style="max-width: 100%;"/></a>
+<div class="caption">Exported Notion Data in Obsidian Notes</div>
+</center>
+
+**Update**: So while taking screenshots, I tried again to export the data, and
+this time it made it all the way through successfully. I was able to then take the data and run it through the [Notion-to-Obsidian-Converter script](https://github.com/connertennery/Notion-to-Obsidian-Converter) (spoiler for what I'm using now 😆), and then import it into a notion vault. While this is nice to have as an archive, by default it isn't very useful in how it's formatted. This is partly due to how I've organized by Notion notes, but still... it's just a bunch of linked items, that I am not really even sure how it's linked.
 
 ### Buggy Issues, particularly with templates
 
