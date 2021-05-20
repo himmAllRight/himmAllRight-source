@@ -40,6 +40,7 @@ POST_NAMES = [
     "issues-setting-up-ubiquiti-network",
     "jenkins-parallel-stashing",
     "large-display-paradox",
+    "leaving-notion",
     "LFS-Final-Preparation-Steps",
     "LFS-getting-started",
     "LFS-repeated-setup-steps",
