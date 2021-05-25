@@ -4,7 +4,7 @@ date   = "2019-02-28"
 author = "Ryan Himmelwright"
 image  = "img/header-images/ipad-pro-box.jpg"
 caption= "My Desk, Durham, NC"
-tags   = ["Hardware","iPad",]
+tags   = ["Hardware","iPad","Apple"]
 draft  = "False"
 Comments = "True"
 +++
