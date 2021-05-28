@@ -4,7 +4,7 @@ date    = "2021-05-28"
 author  = "Ryan Himmelwright"
 image   = "img/posts/upgrading-ipad-pro-2021/bodie_island_lighthouse.jpeg"
 caption = "Bodie Island Lighthouse, Nags Head, NC"
-tags    = ["Hardware", "ipad", "Apple"]
+tags    = ["Hardware", "ipad", "Apple", "ipadOS"]
 draft   = "True"
 Comments = "True"
 +++
@@ -19,7 +19,10 @@ upgrade. Here's why.
 
 ## History
 
-*Image of 10.5" iPad Pro, or even 2018?*
+<center>
+<a href="../../img/posts/upgrading-ipad-pro-2021/10.5_pro_box.png"><img alt="The box of my 10.5 iPad Pro" src="../../img/posts/upgrading-ipad-pro-2021/10.5_pro_box.png" style="max-width: 100%;"/></a>
+<div class="caption">The box of my 10.5" iPad Pro</div>
+</center>
 
 When I got my 10.5" iPad Pro, the 2018 iPad Pro refresh had already been
 released. However, I didn't think the extra features justified the price of the
@@ -34,7 +37,7 @@ the future after I knew what I did and did not like/need from an iPad.
 
 ##  Why upgrade?
 
-*Picture of a gen 2 Apple Pencil*
+<a href="/img/posts/upgrading-ipad-pro-2021/apple_pencil_tall.png"><img alt="Apple Pencil" src="/img/posts/upgrading-ipad-pro-2021/apple_pencil_tall.png" style="max-width: 100%; width: 250px; float: right;"/></a>
 
 After using my ipad for several months, I started to be able to understand how
 the improved features on the 2018 pro would be nice. In particular, the USB C
@@ -57,7 +60,10 @@ the Pencil until it was time to upgrade my device. Now feels like a good time.
 
 ## Why this generation?
 
-*Picture of a feature from the 2021*
+<center>
+<a href="../../img/posts/upgrading-ipad-pro-2021/front_camera.png"><img alt="new ipad pro cameras" src="../../img/posts/upgrading-ipad-pro-2021/front_camera.png" style="max-width: 100%;"/></a>
+<div class="caption">The 2021 iPad Pro includes a ultra wide front camera, to use with the new center stage feature</div>
+</center>
 
 There are a few factors that had me decide to upgrade with this generation of
 the iPad Pro. First, I still can get a good bit of trade-in value for it, and
@@ -88,7 +94,10 @@ assuming Apple can fix the OS).
 
 ## Why the 11" over the 12.9"?
 
-*Picture of both the 11" and 12.9"?*
+<center>
+<a href="../../img/posts/upgrading-ipad-pro-2021/size_and_weight.png"><img alt="iPad Pro Size Comparison" src="../../img/posts/upgrading-ipad-pro-2021/size_and_weight.png" style="max-width: 100%;"/></a>
+<div class="caption">The iPad Pro Size Comparison</div>
+</center>
 
 Over the past few years, whenever I would think about upgrading my iPad Pro, I
 always thought I would switch to the 12.9" version. So, now that I decided on getting
@@ -110,7 +119,10 @@ Pro](/post/new-2019-16inch-mbp/)!
 
 ##  Why not the new iPad Air?
 
-*Picture of a new iPad Air*
+<center>
+<a href="../../img/posts/upgrading-ipad-pro-2021/buy_ipad_air_colors.png"><img alt="iPad Air Colors" src="../../img/posts/upgrading-ipad-pro-2021/buy_ipad_air_colors.png" style="max-width: 100%;"/></a>
+<div class="caption">The iPad Air Color Options</div>
+</center>
 
 Lastly, if I am looking at the 11" iPad Pro, why not consider the 2020 iPad Air?
 I struggled with this decision for awhile, especially before the latest
@@ -157,7 +169,10 @@ LiDar would help the iPad improve in all those tasks.
 
 ## Conclusion
 
-*Picture of a 2021 pro, or maybe even my processing/shipped status page?*
+<center>
+<a href="../../img/posts/upgrading-ipad-pro-2021/order_status.png"><img alt="My ipad pro order status: processing" src="../../img/posts/upgrading-ipad-pro-2021/order_status.png" style="max-width: 100%;"/></a>
+<div class="caption">My iPad Pro order status: Processing</div>
+</center>
 
 That's it. Those were *most* of my reasons of why I devicded to finally trade in
 my 10.5" iPad Pro, for a new 2021 version. I have ordered the 2021 11" iPad Pro
