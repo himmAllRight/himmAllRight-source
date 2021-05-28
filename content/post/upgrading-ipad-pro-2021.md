@@ -112,17 +112,55 @@ Pro](/post/new-2019-16inch-mbp/)!
 
 *Picture of a new iPad Air*
 
--  I struggled with this decision for awhile, especially before the latest generation pro was announced
--  While I think the air would be *fine* in suiting my needs, with the new pro, I think the features you get for the $200 difference is actually worth it for *me*.
-    -  I like having the 120 hz pro-motion display. I read a lot on my ipad, and I love how smooth it is. I would probably be fine without it, but it is something I enjoy, and If my plan is to get a pencil right away with it, that high refresh rate will be appreciated (especially because I'm used to it with mine). 
-        -  Also, not a big deal, but the screen is a little brighter, which is nice when I want to read outside
-    -  As I said, the ultrawide front camera is nice for FaceTime, as it is my FaceTime device
-    -   Better speakers. I love having nice speakers on my systems, especially my travel devices like laptop and tablet. I've already downgraded my speakers going from the 16" to the m1 air, and I don't want to do it again going from the 4 to 2 speaks between my 10.5" and the 
-    -   TB3 is nice, if I wan't to play around with testing an ipad as a "modular computer" (link?) at all, I already have docks and have them setup to use daily.
-    -   Higher base storage. The base version of the pro has twice as much storage as the air. I didn't think this was an issue, but then I looked at my usage on my ipad and say I was using nearly 60 of my 64gb... Which I assume will just be higher if I start actually using my ipad to sketch diagrams and stuff more often. To upgrade the air, you have to jump to 256gb which is probably more than I need, and after the upgrade, makes the air less than $50 from the price of the pro... and everything else I've listed is deff worth that cost to me
-    -   LiDar is deff. more of a novelty than a feature for most people still, but as someone that does like the idea of playing more with AR, or using an iPad to help scan a home floor plan/taking measurements, it would make the device much better at those tasks.
-    -   M1 is nice, but honestly more than enough for what ever I will put this ipad through
+Lastly, if I am looking at the 11" iPad Pro, why not consider the 2020 iPad Air?
+I struggled with this decision for awhile, especially before the latest
+generation pro was announced. In general, I think the air would be *fine* in
+suiting my needs. The reality is that *both* of these devices are currently
+overkill for *most* iPad tasks. *With that said*... I think the additional
+features you get in the 2021 pro for the $200 difference is actually worth it
+for *my* ipad use cases. Here are a few of those feature differences, and my
+justificatoin for each:
+
+-  **The Display**: I like the 120hz pro-motion display. I read all the time on
+my ipad, and I love how smooth it is. In addition, if my plan is to get an Apple
+pencil right away, the high refresh rate will help make *that* device perform
+better.
+    -  (Also, not a big deal, but the screen is a little brighter, which is nice
+    when I want to read outside)
+
+-  **Cameras**: As I said above, the ultrawide front camera is great for
+FaceTime, as it is my FaceTime device
+
+-   **Better speakers**: I love having nice speakers on my systems, especially
+my travel devices. I've already downgraded my speakers going [from the 16" to
+the m1 air](/post/trading-mbp16-for-m1air/), and I don't want to do it again.
+(The pro ipads have 4 spearks, whereas the air only has 2)
+
+-   **Thunderbolt**: Not a deal breaker, but if I want to play around with testing an
+[ipad as a modular
+computer](https://www.macstories.net/stories/modular-computer/) at all, I
+already have TB3 docks setup to use daily.
+
+-   **Storage**: The base version pro has twice as much storage as the air. I
+didn't think this was an issue, but then I looked at the usage on my ipad and
+saw I was using 60/64GB... Which I assume will only continue to grow if I start
+actually using the ipad to sketch diagrams and notes more often. To upgrade the
+air, you have to jump to 256gb which is more than I need.  After that upgrade,
+the air is less than $50 aways from the price of the pro.  Considering
+everything else I listed above, I think it is definitely worth that additional
+cost to me.
+
+-   **LiDar** (seriously 😆): This is more of a novelty than a feature for most
+people. Still, as someone that wants to play more with AR, or use their iPad to
+help scan floor plan of their ohome, or just taking rough measurements... the
+LiDar would help the iPad improve in all those tasks.
 
 ## Conclusion
 
 *Picture of a 2021 pro, or maybe even my processing/shipped status page?*
+
+That's it. Those were *most* of my reasons of why I devicded to finally trade in
+my 10.5" iPad Pro, for a new 2021 version. I have ordered the 2021 11" iPad Pro
+(in silver), and selected to trade in my old one with the purchage. Now, all I
+can do is wait for it to ship. It's been stuck *processing* for over a week, but
+could *arrive* as early as two days ago 😐. Hopefully it ships soon...
