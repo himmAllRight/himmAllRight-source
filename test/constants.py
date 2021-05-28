@@ -92,6 +92,7 @@ POST_NAMES = [
     "trying-out-seafile",
     "tsqa-2020",
     "Updating-Pi-Cluster-With-Ansible",
+    "upgrading-ipad-pro-2021",
     "upgrading-network-to-ubiquiti",
     "using-kid3",
     "virtio-3d-vms",
