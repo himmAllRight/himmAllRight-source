@@ -9,11 +9,10 @@ draft   = "True"
 Comments = "True"
 +++
 
-A few years ago, [I purchased my first iPad](/post/getting-an-ipad/), a 10.
-iPad Pro. The portability and versatility of the iPad ensure that it is a
-devices that I use just about every single day. With the release of the newest
-2021 iPad Pro last week, I decided it was finally time to trade mine in for an
-upgrade. Here's why.
+A few years ago, [I purchased my first iPad](/post/getting-an-ipad/), a 10.5"
+iPad Pro. I use it just about every day. With the release of the newest 2021
+iPad Pro, I decided it was finally time to trade mine in for an upgrade. Here's
+why.
 
 <!--more-->
 
@@ -24,38 +23,40 @@ upgrade. Here's why.
 <div class="caption">The box of my 10.5" iPad Pro</div>
 </center>
 
-When I got my 10.5" iPad Pro, the 2018 iPad Pro refresh had already been
-released. However, I didn't think the extra features justified the price of the
-new iPad *for me*, *at that time*. Instead, I the discount on the *old* pro was
-way more appealing, especially because I was already upselling myself, after
-originally looking into the base (non-pro) iPad.
+When I got my 10.5" iPad Pro, the 2018 11" iPad Pro had already been released.
+However, at the time, I didn't think the extra features justified the increased
+price of the new iPad. The discount price on the *old* pro was more appealing to
+me. I was already up-selling myself, after originally looking into the base
+(non-pro) iPad, so the discounted 10.5" seemed like a good compromise between
+features and price.
 
-I figured a discounted 10.5" pro was a nice sweet spot to start for my first
-iPad, as it was a great device, but not too over the top in case I didn't
-actually use it often. If I *did* use it, I could always upgrade/swap it out in
-the future after I knew what I did and did not like/need from an iPad.
+I figured the 10.5" pro was a good starting point for my first
+iPad. It was a great device, but not too over the top in case I didn't
+actually use it. If I *did* use it, I could always upgrade/swap it out in
+the future.
 
 ##  Why upgrade?
 
 <a href="/img/posts/upgrading-ipad-pro-2021/apple_pencil_tall.png"><img alt="Apple Pencil" src="/img/posts/upgrading-ipad-pro-2021/apple_pencil_tall.png" style="max-width: 100%; width: 250px; float: right;"/></a>
 
-After using my ipad for several months, I started to be able to understand how
-the improved features on the 2018 pro would be nice. In particular, the USB C
-port, smaller bezels, and FaceID were all very appealing. However, my 10.5"
-suited my needs just fine. I did realize though that I *would* likely upgrade my
-iPad sometime in the future.
+After having my ipad for several months, I started to understand how the
+improved features of the 2018 pro could be nice to have. In particular, the
+USB-C port, smaller bezels, and FaceID were all very appealing to me.  Still, my
+10.5" suited my needs just fine. I did decide though that I *would* likely
+upgrade my iPad sometime in the future. I enjoyed having it.
 
 Which brings me to the one thing I *did* want to get for my iPad: the Apple
-Pencil.  Being able to write is a special feature unique to tablet computers
-that I cannot do with any of my other devices. It's a foundational reason to
-even *consider* owning a tablet. Additionally, in the years since I purchased my
-iPad, new iPadOS releases have really started to polish the use of the 'magic'
+Pencil.  Being able to hand draw is a special feature unique to tablet computers
+that I cannot easily reproduce on my other devices. It's a foundational reason
+to even *consider* owning a tablet. Additionally, in the years since I purchased
+my iPad, new iPadOS releases have started to polish the use of the 'magic'
 pencil with the iPad.
 
-However, my 10.5" ipad only supported the 1st generation Apple Pencil. Knowing
-that I would *eventually* upgrade my iPad, I didn't want to buy an old pencil,
-only to have to *also* replace it when I upgraded. So, I decided to wait to get
-the Pencil until it was time to upgrade my device. Now feels like a good time.
+Unfortunately, my 10.5" ipad only supported the 1st generation Apple Pencil.
+Knowing that I would *eventually* upgrade my iPad, I didn't want to buy an old
+pencil, only to have to *also* replace it when I upgraded. So, I decided to wait
+to get the Pencil until it was time to upgrade my device. Now feels like a good
+time.
 
 
 ## Why this generation?
@@ -65,7 +66,7 @@ the Pencil until it was time to upgrade my device. Now feels like a good time.
 <div class="caption">The 2021 iPad Pro includes a ultra wide front camera, to use with the new center stage feature</div>
 </center>
 
-There are a few factors that had me decide to upgrade with this generation of
+There are a few factors leading me to upgrade with this generation of
 the iPad Pro. First, I still can get a good bit of trade-in value for it, and
 I'm not sure how long that will last with my iPad. If I want to trade it in with
 Apple, I am limited to their store. While I could use the credit on a
