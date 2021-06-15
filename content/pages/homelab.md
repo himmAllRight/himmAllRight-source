@@ -1,12 +1,12 @@
 ---
 title: "Homelab"
-date: 2021-02-17
+date: 2021-06-15
 type: homelab
 layout: homelab-page
 menu:
   main:
     weight: -100
-image: /img/homelab/bookshelves.jpeg
+image: /img/homelab/inside_charmeleon.jpeg
 ---
 
 This is a page where I maintain the status of the computers in my “Homelab”
@@ -33,7 +33,7 @@ This is a page where I maintain the status of the computers in my “Homelab”
 Ryzen 9 3900x [3.8 GHz (4.6GHz Boost), 12 Cores, 24 Threads)
 Noctua NH-U14s CPU Cooler
 Aorus Elite Wifi x570 Motherboard
-96 GB (2x16GB, 2x32GB) DDR4-3200 Mhz, CL 16 RAM?
+96 GB (2x16GB, 2x32GB) DDR4-3200 Mhz, CL 16 RAM
 Sapphire Radeon Pulse RX 580 8GB GPU (VM Passthrough GPU)
 Sapphire Radeon Pulse RX 550 4GB GPU (Host GPU)
 500 GB Samsung 970 EVO NVME SSD (Linux Host Install)
@@ -43,11 +43,24 @@ EVGA SuperNOVA G4 650w 80+ Gold, fully modular PSU
 Fractal Design Meshify C Dark TG ATX Mid Tower Case
 2 x Noctua NF-A14 PWM 140mm Fans
 1 x Noctua NF-F12 PWM 120mm Fan
-Fedora 33 (KDE Plasma)
+Fedora Silverblue 34
 *Connected to Periphery devices
 ```
+
+#### - Tauros (Work-issued Laptop)
+```
+x1 Carbon Thinkpad (gen7)
+Intel i7-8665U [1.9 Ghz (4.8 Ghz Turbo), 2 cores, 8 threads]
+16 GB RAM
+250 GB NVME SSD
+14" 1920x1080 
+Fedora Silveblue 34
+*Connected to Thinkpad Thunderbolt Dock
+```
+
+
 <a name="kadabra"></a>
-#### - Kadabra (Linux Laptop)
+#### - Kadabra (Personal Linux/Test Laptop)
 ```
 T470 Thinkpad
 Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
@@ -55,11 +68,11 @@ Intel i5-7200u [2.5 GHz (3.1 GHz Turbo), 2 Cores, 4 Threads]
 250 GB Samsung EVO SSD
 14" 1920x1080 IPS Display
 Fedora 33 (KDE Plasma)
-*Can Connect to Periphery devices via Thunderbolt 3 Dongle
+*Can Connect to Periphery devices via Thunderbolt Dock
 ```
 ### Apple Hardware
-<a name="Venusaur"></a>
-#### - Venusaur (MacBook)
+<a name="Raichu"></a>
+#### - Raichu (MacBook)
 ```
 2020 Macbook Air
 M1 (8 CPU Cores [4 efficiency, 4 performance], 8 gpu cores)
@@ -68,19 +81,23 @@ M1 (8 CPU Cores [4 efficiency, 4 performance], 8 gpu cores)
 13.3" 2560x1600 400 nit IPS "Retina" Display
 Fan-less
 macOS Big Sur
-*Can Connect to Periphery devices via Thunderbolt 3 Dongle
+*Can Connect to Periphery devices via Thunderbolt Dock
 ```
 
-<a name="Ivysaur"></a>
-#### - Ivysaur (Tablet)
+<a name="Pikachu"></a>
+#### - Pikachu (Tablet)
 ```
-10.5" iPad Pro
-64 GB Storage
-* Can be used as a secondary display for Venusaur
+2021 11" iPad Pro
+M1 CPU
+8GB RAM
+128 GB Storage
+11" ProMotion Retina (2388x1668-pixel) Display
+* Can be used as a secondary display for Raichu
+*Can Connect to Periphery devices via Thunderbolt Dock
 ```
 
-<a name="bulbasaur"></a>
-#### - Bulbasaur (Phone)
+<a name="pichu"></a>
+#### - Pichu (Phone)
 ```
 iPhone 11
 64 GB Storage
@@ -94,6 +111,7 @@ Ergodox EZ Glow w/ Cherry MX Brown Switches
 Happy Hacking Keyboard Pro2
 Audioengine A2+ Speakers & Stands
 Audio Technica M50x Headphones
+Sony WH-1000xm4 Bluetooth Headphones
 Blue Yeti Microphone - Backout Edition
 Logitech HD Pro Webcam c920 Widescreen
 ```
