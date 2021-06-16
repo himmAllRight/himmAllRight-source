@@ -18,12 +18,32 @@ work-around, I'll document it in a post even though it's a unique case.
 
 <!--more-->
 
-## Install Try Icons: Reloaded extension
+### Install Try Icons: Reloaded extension
+
+*Screenshot of extension webpage*
+
+The first step is to install an extension that allows application tray icons.
+One extenstion that seems to "work" as of now (with a catch, more on that
+below), is [Tray Icons: Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/). 
 
 
-## Switch to an Xorg Session (this is the step I always forget)
+### (Optionally) Install Gnome Extensions app
+
+*Screenshot of Extensions in Software Center*
+
+### Switch to an Xorg Session 
+
+*Screenshot of session switch*
+
+(this is the step I always forget)
 
 
-## Use the now visible Seafile desktop icon to open it's settings, and disable the notifications
+### Use the now visible Seafile desktop icon to open it's settings, and disable the notifications
 
+*Screenshot of toolbar item*
 
+### Seafile Settings
+
+*Screenshot of un-checking setting*
+
+## Conclustion
