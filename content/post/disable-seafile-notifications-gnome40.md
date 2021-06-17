@@ -41,7 +41,7 @@ below), is [Tray Icons:
 Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/). So,
 to install it, open up the page in
 [Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com),
-and click the slider tab on the top right of the page, to switch it from `OFF` to `ON`.
+and click the slider tab on the top right, to switch it from `OFF` to `ON`.
 
 *Note: If this is the first extension being installed, Firefox may ask you to
 install a plugin. This is normal. Just hit accept and it will do it for you.*
@@ -54,7 +54,7 @@ install a plugin. This is normal. Just hit accept and it will do it for you.*
 <div class="caption">Installing the Gnome extensions app</div>
 </center>
 
-Next, while possibly optional, it is ideal to have the *Gnome Extensions* app
+Next, while optional, it is ideal to have the *Gnome Extensions* app
 installed. So, open up Software Center, and install it from there. 
 Alternatively, install it as a flatpak from the command line:
 
@@ -69,7 +69,7 @@ likely won't show up yet, even with the extension enabled*.
 ### Switch to an Xorg Session 
 
 <center>
-<a href="../../img/posts/disable-seafile-notifications-gnome40/switch-to-xorg.png"><img alt="Swithing to Xorg Session" src="../../img/posts/disable-seafile-notifications-gnome40/switch-to-xorg.png" style="max-width: 100%;"/></a>
+<a href="../../img/posts/disable-seafile-notifications-gnome40/switch-to-xorg.png"><img alt="Switching to Xorg Session" src="../../img/posts/disable-seafile-notifications-gnome40/switch-to-xorg.png" style="max-width: 100%;"/></a>
 <div class="caption">Switching to Xorg Session</div>
 </center>
 
@@ -93,7 +93,7 @@ To open up the Seafile settings, right click on the icon and select `Settings`.
 <div class="caption">Changing notification setting</div>
 </center>
 
-From there, notifications can be **disabled** by **unchecking** the `Notify when libraries are synchronized` checkbox. Hit `OK`, and that's it. Feel free to log out and back in under a `Wayland` 🙂.
+From there, notifications can be **disabled** by **unchecking** the `Notify when libraries are synchronized` checkbox. Hit `OK`, and that's it. Feel free to log out and back into a `Wayland` session 🙂.
 
 ## Conclusion
 
