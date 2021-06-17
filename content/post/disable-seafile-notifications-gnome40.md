@@ -4,45 +4,47 @@ date    = "2021-06-17"
 author  = "Ryan Himmelwright"
 image   = "img/posts/disable-seafile-notifications-gnome40/the-dunes-sound-header.jpeg"
 caption = "Jockey's Ridge Stage Park, Nags Head, NC"
-tags    = ["Linux", "seafile", "Gnome"]
-draft   = "True"
+tags    = ["Linux", "seafile", "Gnome", "Fedora", "obsidian"]
+draft   = "False"
 Comments = "True"
 +++
 
-This should be a short and quick post. Basically, I keep figuring out and then
-forgetting how to disable Seafile notifications on Gnome (which doesn't allow
-tray icons). This time, I'm recording the process.
+Quick post here. Basically, I keep figuring out and then forgetting how to
+disable Seafile notifications on Gnome, because it doesn't allow tray icons.
+This time, I'm recording the process.
 
 <!--more-->
 
 ## Background
 
-Hold up. Why do I need to disable *Seafile* notications specifically? Well
-because I sync my obsidian vaults using Seafile. However, unfortunately this
-means is that every second that I type obsidian, seafile... uh... *politely
-notifies me*, that it has synced my ongoing notes. Which is increadibly
-annouying, to say the least. 
+First, why do I need to disable *Seafile* notifications specifically?  Because I
+sync my [obsidian](https://obsidian.md) vaults using
+[Seafile](/post/trying-out-seafile/). While this sync method 
+works wonderfully, it unfortunately has the side effect of whenever I type
+in obsidian, seafile... uh... *politely notifies me*... that it has synced my
+changing notes. Which is incredibly annoying, to say the least. 
 
-However, I don't want to simply disable *all* system notifications, just
-*Seafile*. Luckily, Seafile has a setting to do this... if you can get to them.
+However, I don't want to solve the problem by simply disabling *all* system
+notifications. Luckily, seafile has a setting to do this... if you can get to
+it.
 
 ### Install Tray Icons: Reloaded extension
 
 <center>
 <a href="../../img/posts/disable-seafile-notifications-gnome40/install-extension.png"><img alt="Installing the gnome extension" src="../../img/posts/disable-seafile-notifications-gnome40/install-extension.png" style="max-width: 100%;"/></a>
-<div class="caption">Installing 'Tray Icons: Reloaded' from Gnome extensions website</div>
+<div class="caption">Installing 'Tray Icons: Reloaded' from the Gnome extensions website</div>
 </center>
 
 The first step is to install an extension that allows application tray icons.
-One extenstion that seems to "work" currently (with a catch, more on that
+One such extension that seems to "work" currently (with a catch, more on that
 below), is [Tray Icons:
 Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/). So,
 to install it, open up the page in
-[[Firefox]](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com),
-and click the slider tab from `OFF` to `ON` in the top right of the page.
+[Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com),
+and click the slider tab on the top right of the page, to switch it from `OFF` to `ON`.
 
 *Note: If this is the first extension being installed, Firefox may ask you to
-*install a plugin. Just hit accept and it will do it for you.*
+install a plugin. This is normal. Just hit accept and it will do it for you.*
 
 
 ### (Optionally) Install Gnome Extensions app
@@ -52,16 +54,17 @@ and click the slider tab from `OFF` to `ON` in the top right of the page.
 <div class="caption">Installing the Gnome extensions app</div>
 </center>
 
-Next, while *possibly* optional, it is ideal to have the *Gnome Extensions* app installed. So, open up the Software Center, and install it there, or as a flatpak from the command line:
+Next, while possibly optional, it is ideal to have the *Gnome Extensions* app
+installed. So, open up Software Center, and install it from there. 
+Alternatively, install it as a flatpak from the command line:
 
 ```bash
 sudo flatpak install org.gnome.Extensions
 ```
 
-This just allows you to configure and enable an extenstion, in case it isn't on
-by default. With Gnome Extensions opened, make sure `Tray Icons: Reloaded` is
-turned on. *Note, icons likely won't show up still, even with the extension
-enabled*.
+This app allows you to configure and enable gnome extensions. With Gnome
+Extensions opened, make sure `Tray Icons: Reloaded` is turned on. *Note, icons
+likely won't show up yet, even with the extension enabled*.
 
 ### Switch to an Xorg Session 
 
@@ -73,8 +76,7 @@ enabled*.
 This is the step I always forget (and hence why I'm writing this post). While
 `Top Icons: Reloaded` "works" in Gnome 40... it only does in Xorg sessions. So,
 log out, switch the session to `GNOME on Xorg` (gear icon at the bottom right of
-the login screen), and log back in. Once logged in, the top icons should be
-working, *hopefully* displaying the Seafile icon among them (assuming
+the login screen), and log back in. Once logged in, the top icons extension should now work, *hopefully* displaying the Seafile icon (assuming
 `seafile-client` is running).
 
 
@@ -95,4 +97,6 @@ From there, notifications can be **disabled** by **unchecking** the `Notify when
 
 ## Conclusion
 
-That's it. Short post, but I forgot how to do it twice now, so I wrote a post. Hopefully this helps that one other person also experiencing this issue, or at least a few more that are confused for similar reasons. Enjoy! 
+Short post, but I forgot how to do this simple process twice now, so I wrote it.
+Hopefully this helps that *one* other person also experiencing this issue, or at
+least a few more that are confused for similar reasons. Enjoy! 
