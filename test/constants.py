@@ -25,6 +25,7 @@ POST_NAMES = [
     "custom-neofetch-ascii-art",
     "dabbling-with-go",
     "decided-to-get-an-ergodox",
+    "disable-seafile-notifications-gnome40",
     "docker-quickstart",
     "draft-website-with-jenkins",
     "emacs-update-evil-usepackage",
