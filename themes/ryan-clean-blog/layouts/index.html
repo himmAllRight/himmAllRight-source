@@ -5,7 +5,7 @@
   {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
   {{ $section_count := len $section }}
   {{ $config_header_image := .Site.Params.header.home_image | default .Site.Params.header.image }}
-  {{ $home_header_url := $config_header_image | default "/img/default-header.jpg" }}
+  {{ $home_header_url := $config_header_image | default "{{ .Site.BaseURL }}/img/default-header.jpg" }}
 
 <!-- Page Header -->
 <header class="intro-header" style="background-image: url('{{ $home_header_url }}')">
