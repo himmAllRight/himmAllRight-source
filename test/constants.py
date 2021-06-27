@@ -49,6 +49,7 @@ POST_NAMES = [
     "LIA-1-0-beta-released",
     "m1-air-initial-thoughts",
     "macos-challenge",
+    "multi-hop-ssh-connect",
     "my-new-used-x230",
     "my-t470",
     "new-2019-16inch-mbp",

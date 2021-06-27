@@ -190,7 +190,7 @@ of the quick window-snapping key bindings I've become accustomed to were
 useless.  I was forced to switch over to my mouse more than I would like to.
 While [some might point to using window management
 software](https://www.youtube.com/watch?v=DuIK-NuN3aY), or a [tiling window
-manager](https://jonblack.me/large-display-paradox-resolved/), I don't think
+manager](https://web.archive.org/web/20180320052505/http://www.jonblack.me/large-display-paradox-resolved/), I don't think
 this would solve *my* issues. You *might* be able to get away with using a
 window manager like [i3-gaps](https://github.com/Airblader/i3) (or
 [sway](https://github.com/swaywm/sway)) on a 1440p ultrawide monitor, but a
